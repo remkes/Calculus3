@@ -1,0 +1,100 @@
+\contentsline {chapter}{\numberline {1}Introduction}{4}{chapter.1}% 
+\contentsline {chapter}{\numberline {2}Infinite Series}{5}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Sequences}{6}{section.2.1}% 
+\contentsline {subsection}{\numberline {2.1.1}Definition}{6}{subsection.2.1.1}% 
+\contentsline {subsection}{\numberline {2.1.2}Limits of Sequences}{7}{subsection.2.1.2}% 
+\contentsline {section}{\numberline {2.2}Definition of Infinite Series}{8}{section.2.2}% 
+\contentsline {subsection}{\numberline {2.2.1}Partial Sums and Convergence}{9}{subsection.2.2.1}% 
+\contentsline {subsection}{\numberline {2.2.2}Geometric and $\zeta $ Series}{14}{subsection.2.2.2}% 
+\contentsline {section}{\numberline {2.3}Manipulation of Series}{15}{section.2.3}% 
+\contentsline {section}{\numberline {2.4}Absolute and Conditional Convergence}{16}{section.2.4}% 
+\contentsline {subsection}{\numberline {2.4.1}Alternating Series Test}{16}{subsection.2.4.1}% 
+\contentsline {subsection}{\numberline {2.4.2}The Alternating Harmonic Series}{16}{subsection.2.4.2}% 
+\contentsline {subsection}{\numberline {2.4.3}Conditional Convergence}{18}{subsection.2.4.3}% 
+\contentsline {section}{\numberline {2.5}Decimal Expansions for Real Numbers}{19}{section.2.5}% 
+\contentsline {section}{\numberline {2.6}Convergence Tests}{19}{section.2.6}% 
+\contentsline {section}{\numberline {2.7}Comparison on Series}{19}{section.2.7}% 
+\contentsline {subsection}{\numberline {2.7.1}The Integral Test}{21}{subsection.2.7.1}% 
+\contentsline {subsection}{\numberline {2.7.2}The Ratio and Root Tests}{22}{subsection.2.7.2}% 
+\contentsline {subsection}{\numberline {2.7.3}Testing Strategies}{22}{subsection.2.7.3}% 
+\contentsline {subsection}{\numberline {2.7.4}Testing Examples}{23}{subsection.2.7.4}% 
+\contentsline {section}{\numberline {2.8}Values of Infinite Series}{28}{section.2.8}% 
+\contentsline {chapter}{\numberline {3}Taylor Series}{29}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Series as Functions}{29}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Power Series}{30}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}Definition}{30}{subsection.3.2.1}% 
+\contentsline {subsection}{\numberline {3.2.2}Radii of Convergence}{31}{subsection.3.2.2}% 
+\contentsline {subsection}{\numberline {3.2.3}Properties of Power Series}{33}{subsection.3.2.3}% 
+\contentsline {subsection}{\numberline {3.2.4}Calculus of Power Series}{34}{subsection.3.2.4}% 
+\contentsline {section}{\numberline {3.3}Taylor Series}{35}{section.3.3}% 
+\contentsline {subsection}{\numberline {3.3.1}Analytic Functions}{35}{subsection.3.3.1}% 
+\contentsline {subsection}{\numberline {3.3.2}Calculating Coefficients}{35}{subsection.3.3.2}% 
+\contentsline {section}{\numberline {3.4}Examples}{37}{section.3.4}% 
+\contentsline {section}{\numberline {3.5}Exponentials and Trigonometry}{40}{section.3.5}% 
+\contentsline {section}{\numberline {3.6}Non-Elementary Functions}{41}{section.3.6}% 
+\contentsline {section}{\numberline {3.7}Approximation and Taylor Polynomials}{42}{section.3.7}% 
+\contentsline {section}{\numberline {3.8}Error Analysis of Series}{45}{section.3.8}% 
+\contentsline {chapter}{\numberline {4}Vector Geometry}{48}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Introduction}{48}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Vectors and Matrices}{48}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}The Environment}{50}{section.4.3}% 
+\contentsline {section}{\numberline {4.4}Linear Operations}{52}{section.4.4}% 
+\contentsline {section}{\numberline {4.5}The Dot Product}{55}{section.4.5}% 
+\contentsline {section}{\numberline {4.6}The Cross Product}{56}{section.4.6}% 
+\contentsline {section}{\numberline {4.7}Local Direction Vectors}{58}{section.4.7}% 
+\contentsline {section}{\numberline {4.8}Linear and Affine Subspaces}{59}{section.4.8}% 
+\contentsline {section}{\numberline {4.9}Loci}{60}{section.4.9}% 
+\contentsline {subsection}{\numberline {4.9.1}Intersection}{61}{subsection.4.9.1}% 
+\contentsline {section}{\numberline {4.10}Standard Forms}{61}{section.4.10}% 
+\contentsline {section}{\numberline {4.11}Transformations of Euclidean Spaces}{62}{section.4.11}% 
+\contentsline {section}{\numberline {4.12}Transformations of $\mathbb {R}^2$ or $\mathbb {R}^3$}{64}{section.4.12}% 
+\contentsline {section}{\numberline {4.13}Matrix Representation}{65}{section.4.13}% 
+\contentsline {section}{\numberline {4.14}Matrices in $\mathbb {R}^2$}{66}{section.4.14}% 
+\contentsline {section}{\numberline {4.15}Determinants}{68}{section.4.15}% 
+\contentsline {section}{\numberline {4.16}Calculation of Determinants}{68}{section.4.16}% 
+\contentsline {chapter}{\numberline {5}Non-Linear Coordinate Systems}{72}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Polar Coordinates}{72}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}Spherical and Cylindrical Coordinates}{73}{section.5.2}% 
+\contentsline {chapter}{\numberline {6}Parametric Curves}{76}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}Introduction}{76}{section.6.1}% 
+\contentsline {section}{\numberline {6.2}Vector Valued Functions}{76}{section.6.2}% 
+\contentsline {section}{\numberline {6.3}Parametric Curves}{78}{section.6.3}% 
+\contentsline {subsection}{\numberline {6.3.1}Parametric Curves in Polar Coordinates}{80}{subsection.6.3.1}% 
+\contentsline {section}{\numberline {6.4}Parametrization}{80}{section.6.4}% 
+\contentsline {subsection}{\numberline {6.4.1}Varied Parametrizations}{80}{subsection.6.4.1}% 
+\contentsline {subsection}{\numberline {6.4.2}Reparametrization}{81}{subsection.6.4.2}% 
+\contentsline {subsection}{\numberline {6.4.3}Arc Length}{82}{subsection.6.4.3}% 
+\contentsline {subsection}{\numberline {6.4.4}Parametrization by Arclength}{84}{subsection.6.4.4}% 
+\contentsline {section}{\numberline {6.5}Calculus of Parametric Curves}{86}{section.6.5}% 
+\contentsline {subsection}{\numberline {6.5.1}Tangents}{86}{subsection.6.5.1}% 
+\contentsline {subsection}{\numberline {6.5.2}Tangents in Non-Linear Coordinates}{88}{subsection.6.5.2}% 
+\contentsline {subsection}{\numberline {6.5.3}Arclength and Tangents}{89}{subsection.6.5.3}% 
+\contentsline {subsection}{\numberline {6.5.4}Curvature and Torsion}{90}{subsection.6.5.4}% 
+\contentsline {subsection}{\numberline {6.5.5}Normals}{92}{subsection.6.5.5}% 
+\contentsline {section}{\numberline {6.6}Acceleration and Movement in Space}{96}{section.6.6}% 
+\contentsline {section}{\numberline {6.7}Conics}{97}{section.6.7}% 
+\contentsline {subsection}{\numberline {6.7.1}Eccentricity}{98}{subsection.6.7.1}% 
+\contentsline {section}{\numberline {6.8}Kepler's Laws}{102}{section.6.8}% 
+\contentsline {subsection}{\numberline {6.8.1}Kepler's First Law}{102}{subsection.6.8.1}% 
+\contentsline {subsection}{\numberline {6.8.2}Kepler's Second Law}{106}{subsection.6.8.2}% 
+\contentsline {subsection}{\numberline {6.8.3}Kepler's Third Law}{108}{subsection.6.8.3}% 
+\contentsline {chapter}{\numberline {7}Topology of $\mathbb {R}^n$}{110}{chapter.7}% 
+\contentsline {section}{\numberline {7.1}Open and Closed Sets}{110}{section.7.1}% 
+\contentsline {section}{\numberline {7.2}Intervals}{111}{section.7.2}% 
+\contentsline {chapter}{\numberline {8}Multivariable Functions and Partial Differentiation}{112}{chapter.8}% 
+\contentsline {section}{\numberline {8.1}Definitions}{112}{section.8.1}% 
+\contentsline {section}{\numberline {8.2}Geometry and Graphs of Functions}{113}{section.8.2}% 
+\contentsline {subsection}{\numberline {8.2.1}Contour Plots}{114}{subsection.8.2.1}% 
+\contentsline {section}{\numberline {8.3}Limits of Multivariable Functions}{115}{section.8.3}% 
+\contentsline {section}{\numberline {8.4}Partial Derivatives}{118}{section.8.4}% 
+\contentsline {section}{\numberline {8.5}Partial Differential Equations}{120}{section.8.5}% 
+\contentsline {section}{\numberline {8.6}Gradients}{123}{section.8.6}% 
+\contentsline {section}{\numberline {8.7}Directional Derivatives}{125}{section.8.7}% 
+\contentsline {section}{\numberline {8.8}The Chain Rule}{128}{section.8.8}% 
+\contentsline {section}{\numberline {8.9}Tangent Planes}{129}{section.8.9}% 
+\contentsline {section}{\numberline {8.10}Linear Approximation}{131}{section.8.10}% 
+\contentsline {chapter}{\numberline {9}Extrema and Optimization}{134}{chapter.9}% 
+\contentsline {section}{\numberline {9.1}Extrema}{134}{section.9.1}% 
+\contentsline {subsection}{\numberline {9.1.1}Hessian Matrices}{136}{subsection.9.1.1}% 
+\contentsline {subsection}{\numberline {9.1.2}Global Extrema}{138}{subsection.9.1.2}% 
+\contentsline {section}{\numberline {9.2}Constrained Optimization}{141}{section.9.2}% 
