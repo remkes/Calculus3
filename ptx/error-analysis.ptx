@@ -1,0 +1,147 @@
+<section xml:id="error-analysis">
+  <title>Error Analysis of Series</title>
+  <p>
+    When we truncate a series to get a Taylor polynomial,
+    we obviously change the function.
+    But how much have we changed it?
+    This change is called the error of the Taylor polynomial,
+    so we ask:
+    what is the error introduced by truncating an infinite series?
+    The study of approximations in mathematics is all about understanding and controlling error.
+  </p>
+  <p>
+    For Taylor series,
+    there is a theorem that controls the error of Taylor polynomial approximation.
+    This is sometimes called Taylor's Theorem or the Lagrange Error Bound.
+  </p>
+  <theorem>
+    <statement>
+      <p>
+        Let <m>f</m> be analytic at <m>\alpha</m> with a positive radius of convergence <m>R</m> and let
+        <m>d \in \RR</m> with <m>0\lt d\lt R</m>.
+        Let <m>M \in \RR_{> 0}</m> such that on the interval <m>(\alpha-d, \alpha+d)</m> we have
+        <me>
+          |f^{n+1}(x)| \leq M
+        </me>.
+      </p>
+      <p>
+        The error of the <m>k</m>th Taylor polynomial approximation can be written as
+        <me>
+          R_k = f - \sum_{n=0}^k c_n (x-\alpha)^n = \sum_{n=k+1}^\infty c_n (x-\alpha)^n
+        </me>.
+      </p>
+      <p>
+        Under all these assumptions, the error satisfies an inequality.
+        <me>
+          |R_n(x)| \leq \frac{M}{(n+1)!} |x-a|^{n+1}
+        </me>
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    This is a difficult theorem to understand.
+    The basic idea is that there exists a balance between three pieces:
+    the order of the approximation,
+    the width of the interval, and the size of the error.
+    Higher order approximations are more accurate,
+    but they are also computationally more difficult;
+    to work on computers,
+    we want to use a higher enough order to be accurate,
+    but a low enough order to allow the computer to finish the calculation quickly.
+    Likewise, a small interval minimizes the error,
+    since error tends to be larger the farther we move away from the centre of the series.
+    We would like to work with a large interval,
+    since it means that one series works for many difficult calculations,
+    but we may not have the accuracy we desire on a large interval.
+    To summarize: we want a low order,
+    a large interval and a small error,
+    but it is difficult to achieve all three.
+    Sometimes, one is sacrificed for the others.
+  </p>
+  <example>
+    <statement>
+      <p>
+        Consider <m>f(x) = \sin x</m>.
+        We can take <m>M=1</m>, since the derivatives of <m>\sin x</m> are
+        <m>\pm \sin x</m> and <m>\pm \cos x</m>,
+        all of which are bounded in absolutely value by <m>1</m>.
+        Then we can ask: what order do we need in order to have
+        <m>\frac{1}{10000}</m> precision on <m>(-10,10)</m>?
+        The error calculation looks like:
+        <md>
+          <mrow>\frac{M}{(n+1)!} |x|^{n+1} \amp  \leq \frac{1}{10^4}</mrow>
+          <mrow>\frac{1}{(n+1)!} |10|^{n+1} \amp  \leq \frac{1}{10^4}</mrow>
+        </md>
+      </p>
+      <p>
+        This is actually quite difficult to solve for <m>n</m>.
+        However, we can try some <m>n</m>.
+        Here are some values for <m>n</m> and the error bound:
+        <men>
+          \begin{array}{*4{>{\displaystyle}l}} n=5 \hspace{1cm} \amp  |R_6(x)| \leq \frac{12500}{9} \amp \hspace{2cm} n=10 \hspace{1cm} \amp  |R_{10}(x)| \leq \frac{15625000}{6237} \\[1em] n=15 \hspace{1cm} \amp  |R_{15}(x)| \leq 477 \amp \hspace{2cm} n=18 \hspace{1cm} \amp  |R_{18}(x)| \leq 82.3 \\[1em] n=20 \hspace{1cm} \amp  |R_{20}(x)| \leq 19.6 \amp \hspace{2cm} n=22 \hspace{1cm} \amp  |R_{22}(x)| \leq 3.87 \\[1em] n=24 \hspace{1cm} \amp  |R_{24}(x)| \leq 0.645 \amp \hspace{2cm} n=26 \hspace{1cm} \amp  |R_{26}(x)| \leq 0.0919 \\[1em] n=28 \hspace{1cm} \amp  |R_{28}(x)| \leq 0.0114 \amp \hspace{2cm} n=30 \hspace{1cm} \amp  |R_{30}(x)| \leq 0.00122 \\[1em] n=31 \hspace{1cm} \amp  |R_{31}(x)| \leq 0.000381 \amp \hspace{2cm} n=32 \hspace{1cm} \amp  |R_{32}(x)| \leq 0.000116 \\[1em] n=33 \hspace{1cm} \amp  |R_{33}(x)| \leq 0.0000339 \amp  \amp \end{array}
+        </men>
+      </p>
+      <p>
+        So, finally, when <m>n=33</m> we have the desired accuracy.
+        We need an order <m>33</m> polynomial to achieve the desired precision on the desired interval.
+      </p>
+      <p>
+        What about smaller intervals?
+        Say we only need the interval <m>\left( \frac{-1}{10}, \frac{1}{10} \right)</m>.
+        Let's see how accurate various orders are on this interval.
+        <md>
+          <mrow>n=5 \hspace{1cm} \amp  |R_6(x)| \leq 1.39 \times 10^{-9}</mrow>
+          <mrow>n=10 \hspace{1cm} \amp  |R_{10}(x)| \leq 2.51 \times 10^{-19}</mrow>
+          <mrow>n=15 \hspace{1cm} \amp  |R_{15}(x)| \leq 4.78 \times 10^{-30}</mrow>
+        </md>
+      </p>
+      <p>
+        It is much easier to be precise on this smaller interval.
+      </p>
+    </statement>
+  </example>
+  <example>
+    <statement>
+      <p>
+        Consider the function <m>f(x) = \frac{1}{1-x}</m> on <m>(\frac{-1}{2}, \frac{1}{2})</m>.
+        Look at the pattern of derivatives.
+        <me>
+          f^{(n)}(x) = \frac{n!}{(1-x)^{n+1}}
+        </me>
+      </p>
+      <p>
+        <m>M</m> bounds the <m>n+1</m>st derivative,
+        and the derivatives are increasing functions,
+        so they are maximized at <m>x = \frac{1}{2}</m>.
+        This lets us calculate <m>M</m>.
+        <me>
+          M = \frac{(n+1)!}{(1-\frac{1}{2})^{n+2}} = 2^{n+2}(n+1)!
+        </me>
+      </p>
+      <p>
+        We apply the inequality in the Lagrange Error Bound.
+        <me>
+          R_n \leq \frac{M}{(n+1)!}d^{n+1} = \frac{2^{n+2}(n+1)!}{(n+1)!} \left( \frac{1}{2} \right)^{n+1} = 2
+        </me>
+      </p>
+      <p>
+        This is entirely inconclusive, for any order,
+        showing the potential limitations of the Lagrange Error Bound;
+        sometimes, other methdos are required for special situation.
+        For this example,
+        we must work directly with the series to determine its accuracy.
+        Here is a direct calculation of a bound for the error.
+        <md>
+          <mrow>R_n \amp  = \sum_{k=n+1}^\infty x^k \leq \sum_{k=n+1}^\infty \left( \frac{1}{2} \right)^k = \sum_{k=n+1}^\infty \left( \frac{1}{2} \right)^{k-n-1} \left( \frac{1}{2} \right)^{n+1}</mrow>
+          <mrow>\amp  = \left( \frac{1}{2} \right)^{n+1} \sum_{k=n+1}^\infty \left( \frac{1}{2} \right)^{k-n-1} = \left( \frac{1}{2} \right)^{n+1} \sum_{k=0}^\infty \left( \frac{1}{2} \right)^{k} = \left( \frac{1}{2} \right)^{n+1} \frac{1}{1 - \frac{1}{2}}</mrow>
+          <mrow>\amp  = \left( \frac{1}{2} \right)^{n+1} 2 = \frac{1}{2^n}</mrow>
+        </md>
+      </p>
+      <p>
+        So the error of the <m>n</m>th order can be bounded by <m>\frac{1}{2^n}</m>.
+        For <m>n=10</m>, that is less than a thousandth.
+        For <m>n=20</m>, less than a millionth, and so on.
+      </p>
+    </statement>
+  </example>
+</section>

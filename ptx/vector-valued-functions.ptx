@@ -1,0 +1,114 @@
+<section xml:id="vector-valued-functions">
+  <title>Vector Valued Functions</title>
+  <definition>
+    <statement>
+      <p>
+        Let <m>A</m> be a subset of <m>\RR</m>.
+        A <term>vector valued function</term>
+        is a function <m>f: A \rightarrow \RR^n</m> for <m>n \geq 2</m>.
+        It has a single-variable real input,
+        but outputs a vector in some higher dimensional space.
+        A vector valued function can be written as a vector of individual functions.
+        <me>
+          f(t) = (f_1(t), f_2(t), \ldots, f_n(t))
+        </me>
+      </p>
+      <p>
+        The function <m>f_i</m> are called the
+        <term>component functions</term>
+        of the vector-valued function.
+        In <m>\RR^2</m>,
+        the components will often be written <m>(x(t), y(t))</m>,
+        and similarly in <m>\RR^3</m>,
+        <m>(x(t), y(t), z(t))</m>.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    The single-variable component functions allow us to quickly extend many notions from single-variable calculus to vector-valued functions.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        The <term>limit</term> of a vector valued function is simply the limit of each component.
+        <me>
+          \lim_{t \rightarrow a} f(t) = \left( \lim_{t \rightarrow a} f_1 (t), \lim_{t \rightarrow a} f_2 (t), \ldots, \lim_{t \rightarrow a} f_2 (t) \right)
+        </me>
+      </p>
+    </statement>
+  </definition>
+  <p>
+    Recall that a single variable function <m>f(t)</m> is continuous at <m>a \in \RR</m> if
+    <me>
+      \lim_{x \rightarrow a} f(x) = f(a)
+    </me>.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        A vector-valued function is <term>continuous</term>
+        if and only if each component function is continuous.
+      </p>
+    </statement>
+  </definition>
+  <definition>
+    <statement>
+      <p>
+        The <term>derivative</term> of a vector valued function
+        <m>f: A \rightarrow \RR^n</m> is calculated in each component.
+        <me>
+          \frac{df}{dt} = f^\prime(t) = \left( \frac{df_1}{dt}, \frac{df_2}{dt}, \ldots, \frac{df_n}{dt} \right)
+        </me>
+      </p>
+      <p>
+        We state this explicitly,
+        for <m>f(x) = (x(t),y(t))</m> with values in <m>\RR^2</m>.
+        <me>
+          f^\prime(t) = \frac{d}{dt} f(t) = \left( \frac{dx}{dt}, \frac{dy}{dt}\right)
+        </me>
+      </p>
+      <p>
+        Likewise, we give the explicit form for
+        <m>f(t) = (x(t),
+        y(t),z(t))</m> with values in <m>\RR^3</m>.
+        <me>
+          f^\prime(t) = \frac{d}{dt} f(t) = \left( \frac{dx}{dt}, \frac{dy}{dt}, \frac{dz}{dt} \right)
+        </me>
+      </p>
+    </statement>
+  </definition>
+  <definition>
+    <statement>
+      <p>
+        Similarly, the integral of <m>f</m> is defined componentwise.
+        <me>
+          \int f(t) dt = \left( \int f_1(t) dt, \int f_2(t) dt, \ldots, \int f_n(t) dt \right)
+        </me>
+      </p>
+      <p>
+        We state this explicitly,
+        for <m>f(x) = (x(t),y(t))</m> with values in <m>\RR^2</m>.
+        <me>
+          \int f(t) dt = \left( \int x(t) dt, \int y(t) dt \right)
+        </me>
+      </p>
+      <p>
+        Likewise, we give the explicit form for
+        <m>f(x) = (x(t),y(t),z(t))</m> with values in <m>\RR^3</m>.
+        <me>
+          \int f(t) dt = \left( \int x(t) dt, \int y(t) dt, \int z(t) dt \right)
+        </me>
+      </p>
+    </statement>
+  </definition>
+  <p>
+    The result of a derivative or integral of a vector valued function is still a vector.
+    This may seem odd from the viewpoint of first year calculus,
+    where derivatives and integrals measured quantifiable geometric properties,
+    such as slopes of tangent lines and areas under curves.
+    Since the answers here are vectors instead of scalars,
+    we will eventually reconsider those interpretations.
+    A major challenge in extending calculus to several variables is the need to re-adjust our interpretation and intuition concerning derivatives and integrals.
+    The derivative is no longer the slope of a tangent line.
+  </p>
+</section>

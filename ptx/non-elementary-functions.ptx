@@ -1,0 +1,53 @@
+<section xml:id="non-elementary-functions">
+  <title>Non-Elementary Functions</title>
+  <p>
+    In addition to finding connections between known functions, Taylor series can help us construct entirely new functions.
+    These are often called non-elementary functions
+    (the elementary functions are those which we already have worked with:
+    polynomials, roots, exponentials,
+    logarithms, trig, and hyperbolics).
+  </p>
+  <example>
+    <statement>
+      <p>
+        The Bessel functions of order
+        <m>k \in \NN</m> are given by this series.
+        <me>
+          J_k(x) = \sum_{n=0}^\infty \frac{(-1)^n x^{2n}}{2^{2n+k} ((n+k)!)^2}
+        </me>
+      </p>
+      <p>
+        The Bessel functions are like the trigonometric functions,
+        but the terms in the denominators are larger.
+        They oscilate like trig functions,
+        but with decaying amplitude.
+        They are important for spherical and circular waves,
+        such as sound waves or ripples on a pond.
+      </p>
+    </statement>
+  </example>
+  <example>
+    <statement>
+      <p>
+        The Bessel-Clifford functions are givesn by this series.
+        <me>
+          C_k(x) = \sum_{n=0}^\infty \frac{\pi (k+n) x^n}{n!}
+        </me>
+      </p>
+    </statement>
+  </example>
+  <example>
+    <statement>
+      <p>
+        The Polylogarithm functions are given by this series. (Note that for <m>s=1</m> the polylogarithm is <m>Li_1(x) = -\ln (1-x)</m>,
+        the conventional logarithm).
+        <me>
+          Li_s(x) = \sum_{n=0}^\infty \frac{x^{n}}{n^s}
+        </me>
+      </p>
+    </statement>
+  </example>
+  <p>
+    These three examples are just the very start of a huge world of non-elementary functions.
+  </p>
+</section>

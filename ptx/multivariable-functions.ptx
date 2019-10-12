@@ -1,0 +1,13 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="multivariable-functions">
+  <title>Multivariable Functions and Partial Differentiation</title>
+  <xi:include  href="multivariable-functions-definitions.ptx" />
+  <xi:include  href="graphs.ptx" />
+  <xi:include  href="limits.ptx" />
+  <xi:include  href="partial-derivatives.ptx" />
+  <xi:include  href="pdes.ptx" />
+  <xi:include  href="gradients.ptx" />
+  <xi:include  href="directional-derivatives.ptx" />
+  <xi:include  href="chain-rule.ptx" />
+  <xi:include  href="tangent-planes.ptx" />
+  <xi:include  href="linear-approximation.ptx" />
+</chapter>

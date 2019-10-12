@@ -1,0 +1,12 @@
+<section xml:id="convergence-tests">
+  <title>Convergence Tests</title>
+  <p>
+    When we are using a series, the most pressing problem is convergence.
+    We want to work with actual values,
+    but we are only guaranteed those values when the series converge.
+    Therefore, mathematicians have devised many ways to test a series for convergence.
+    We already have the test for divergence.
+    In this section,
+    we will present several more ways to test a series for convergence.
+  </p>
+</section>

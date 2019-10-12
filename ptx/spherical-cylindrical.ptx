@@ -1,0 +1,58 @@
+<section xml:id="spherical-cylindrical">
+  <title>Spherical and Cylindrical Coordinates</title>
+  <p>
+    In <m>\RR^3</m>, there two are similar coordinate systems.
+    Cylindrical coordinates use polar coordinates in the <m>xy</m> plane and leave the <m>z</m> coordinate unchanaged.
+    The transformations are again given by trigonometry.
+    <md>
+      <mrow>x \amp  = r \cos \theta</mrow>
+      <mrow>y \amp  = r \sin \theta</mrow>
+      <mrow>z \amp  = z</mrow>
+    </md>
+  </p>
+  <p>
+    We can invert the transformation.
+    <md>
+      <mrow>r \amp  = \sqrt{x^2 + y^2}</mrow>
+      <mrow>\theta \amp  = \arctan \left( \frac{y}{x} \right)</mrow>
+      <mrow>z \amp  = z</mrow>
+    </md>
+  </p>
+  <p>
+    These are called cylindrical coordinates since the equation <m>r=c</m> gives rise to a infinitely tall cylinder.
+    <m>r=c</m> in the <m>xy</m> plane is a circle, as before.
+    The <m>z</m> coordinate is left free,
+    so the circle can be located at any <m>z</m> value.
+    That infinitely tall stack of circles is a cylinder.
+  </p>
+  <p>
+    Spherical coordinates uses a sphere the same way that polar coordinates uses a circle.
+    There is a radius term <m>r</m>,
+    which measure the distance from a point to the origin in <m>\RR^3</m>.
+    <m>r</m> determines the size of a sphere on which the point is located.
+    After determining a sphere, to find a specific point on the sphere,
+    we use a system which is similar to the system of longitude and latitude on the surface of the earth.
+    <m>\theta</m> is the same as longitude,
+    but with <m>\theta \in [0, 2\pi)</m> instead of counting positively in both east and west directions.
+    The <m>0</m> line of longitude is the line that passes through the positive <m>x</m> axis.
+    <m>\phi</m> is co-latitude instead of latitude:
+    it starts at <m>0</m> at the top of the sphere and counts down to <m>\pi</m> radians at the bottom of the sphere.
+    The transformations involve some tricky trigonometry in <m>\RR^3</m>.
+    <md>
+      <mrow>x \amp  = r \sin \phi \cos \theta</mrow>
+      <mrow>y \amp  = r \sin \phi \sin \theta</mrow>
+      <mrow>z \amp  = r \cos \phi</mrow>
+    </md>
+  </p>
+  <p>
+    We can invert the transformation.
+    <md>
+      <mrow>r \amp  = \sqrt{x^2 + y^2 + z^2}</mrow>
+      <mrow>\theta \amp  = \arctan \left( \frac{y}{x} \right)</mrow>
+      <mrow>\phi \amp  = \arctan \left( \frac{\sqrt{x^2 + y^2}}{z} \right)</mrow>
+    </md>
+  </p>
+  <p>
+    The equation <m>r=c</m> in spherical coordinates gives a sphere.
+  </p>
+</section>

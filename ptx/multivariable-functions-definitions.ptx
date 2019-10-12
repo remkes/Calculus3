@@ -1,0 +1,135 @@
+<section xml:id="multivariable-functions-definitions">
+  <title>Definitions</title>
+  <p>
+    First year calculus dealt with functions <m>\RR \rightarrow \RR</m>.
+    Parametric curves dealt with functions <m>\RR \rightarrow \RR^n</m>.
+    Multivariable functions are functions <m>\RR^n \rightarrow \RR^m</m>.
+    They having an arbitrary number of inputs and outputs.
+    We can distinguish between two main categories, classified by output.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        A <term>scalar function</term> is a function <m>f: \RR^n \rightarrow \RR</m>.
+      </p>
+    </statement>
+  </definition>
+  <definition>
+    <statement>
+      <p>
+        A <term>vector function</term> is a function <m>f: \RR^n \rightarrow \RR^m</m> for <m>m > 1</m>.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    Vector functions are the most difficult and complicated,
+    since they have both multiple inputs and multiple outputs.
+    The study of vector functions is the major topic of Calculus IV. For the remainder of these notes,
+    we will restrict our attention to scalar functions.
+  </p>
+  <example>
+    <statement>
+      <p>
+        There are many familiar scalar functions.
+        The potential energy due to gravity on an object with mass <m>m</m> and height <m>h</m> above the surface of the earth is
+        <m>PE = mgh</m> is a two variable function.
+        In a circuit,
+        voltage in terms of current and reisistance is <m>V = IR</m> is another two variable function.
+        The force of gravity between two celestial object
+        <m>F = -MmG/r^2</m> is a three-variable functions which depends on both masses,
+        <m>M</m> and <m>m</m>, as well as the distance between them <m>r</m>.
+        Any quantity which can vary in three dimensional space,
+        such a pressure, temperature, humidity,
+        is a functions of the three variables of location <m>(x,y,z)</m>.
+      </p>
+    </statement>
+  </example>
+  <example xml:id="example-multivariable1">
+    <statement>
+      <p>
+        Here are some explicit functions <m>\RR^2 \rightarrow \RR</m>.
+        <md>
+          <mrow>f_1(x,y) \amp  = x-y</mrow>
+          <mrow>f_2(x,y) \amp  = \sin (xy)</mrow>
+          <mrow>f_3(x,y) \amp  = \frac{1}{2} x^y</mrow>
+          <mrow>f_4(x,y) \amp  = x^2 + y^2 - xy</mrow>
+          <mrow>f_5(x,y) \amp  = \sqrt{x} + \sqrt{y}</mrow>
+          <mrow>f_6(x,y) \amp  = \sqrt{4 - x^2 -y^2}</mrow>
+        </md>
+      </p>
+      <p>
+        Any other algebraic expression in <m>x</m> and <m>y</m> would also define a function <m>\RR^2 \rightarrow \RR</m>.
+      </p>
+    </statement>
+  </example>
+  <definition>
+    <statement>
+      <p>
+        The <term>domain</term> of a scalar function
+        <m>f: \RR^n \rightarrow \RR</m> is the subset of <m>\RR^n</m> where the function can be defined.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    Domain has the same kind of restrictions as for single-variable functions:
+    no division by zero, no negative even roots,
+    no negative logarithms, etc.
+    However, now that the domain restrictions may apply to any of the input variables.
+    The domains themselves may be very complicated subsets of <m>\RR^n</m>.
+  </p>
+  <example>
+    <statement>
+      <p>
+        Let's look at the domains of the five explicitly stated functions in the <xref ref="example-multivariable1">Example</xref>
+        <ul>
+          <li>
+            <p>
+              <m>f_1</m> and <m>f_4</m> are polynomials
+              (in two variables),
+              so there are no restrictions.
+              Their domain is <m>\RR^2</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f_2</m> is a sine function,
+              which again imposes no restrictions,
+              so it also has domain <m>\RR^2</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f_5</m> has two square roots,
+              one involving <m>x</m> and one involving <m>y</m>.
+              Therefore, we need <m>x\geq 0</m> and
+              <m>y \geq 0</m> to defined <m>f_5</m>.
+              That domain is the positive <m>x</m> and <m>y</m> quadrant,
+              including the origin and the positive pieces of both axes.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f_6</m> also has a square root.
+              To ensure that the square root has a positive argument,
+              we need <m>4 - x^2 - y^2 \geq 0</m>,
+              or <m>x^2 + y^2 \leq 4</m>.
+              This domain is a a circular disc of radius <m>2</m>, including its boundary.
+            </p>
+          </li>
+          <li>
+            <p>
+              Lastly, <m>f_3</m>, has an strange exponential.
+              This leads to very strange domain behaviour.
+              If <m>y</m> is an integer, <m>x</m> can be any non-zero real number.
+              If <m>y</m> is a fraction,
+              <m>x</m> must be positive is the denominator of <m>y</m> is even,
+              to avoid square roots of negative numbers.
+              If <m>y</m> is irrational, <m>x</m> must be positive.
+              This all leads to a very complicated domain in <m>\RR^2</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+</section>

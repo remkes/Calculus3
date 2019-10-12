@@ -1,0 +1,28 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="topology">
+  <title>Topology of <m>\RR^n</m></title>
+  <introduction>
+    <p>
+      Topology is a branch of mathematics which studies concepts of shape,
+      near-ness and distance.
+      You might think that such a study woulds just be geometry,
+      and you would be partially correct.
+      Topology is like a coarser version of geometry.
+      It cares about broad notions of near and far instead of precise distances,
+      and about types of shapes instead of precisely defined specifics.
+      Though it lacks the precision of other parts of geometry,
+      it is fundamental to modern mathematics.
+    </p>
+    <p>
+      We have already seen some topology of <m>\RR</m> in single variable calculus,
+      mostly notably in the definition of open and closed intervals:
+      <m>(a,b)</m> and <m>[a,b]</m>.
+      Open intervals did not include their endpoints but closed intervals did.
+      Openness and closedness are central to topolgoy.
+      In this brief chapter, we will extend the notions of opennes,
+      closedness and intervals to <m>\RR^n</m>.
+      We will need these notions to understand multivariable functions in the next section.
+    </p>
+  </introduction>
+  <xi:include  href="open-closed.ptx" />
+  <xi:include  href="intervals.ptx" />
+</chapter>

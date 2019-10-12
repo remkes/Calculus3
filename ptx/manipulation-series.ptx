@@ -1,0 +1,50 @@
+<section xml:id="manipulation-series">
+  <title>Manipulation of Series</title>
+  <p>
+    Once we have defined convergent series,
+    we want to be able to work with them algebraically.
+    There are several important manipulations and techniques.
+  </p>
+  <p>
+    First, series are linear as long as the indices match up.
+    This means we can bring out constants and split series over sums.
+    <md>
+      <mrow>c \sum_{n=0}^\infty a_n \amp  = \sum_{n=0}^\infty ca_n</mrow>
+      <mrow>\sum_{n=0}^\infty (a_n \pm b_n) \amp  = \sum_{n=0}^\infty a_n \pm \sum_{n=0}^\infty b_n</mrow>
+    </md>
+  </p>
+  <p>
+    Second, we can remove terms.
+    Since a series is just notation for a sum,
+    we can take out leading terms and write them in conventional notation.
+    <me>
+      \sum_{n=0}^\infty a_n = a_0 + a_1 + a_2 + \sum_{n=3}^\infty a_n
+    </me>
+  </p>
+  <p>
+    Third, we can shift the indices.
+    The key idea here is balance:
+    whatever we do to the index in the bounds,
+    we do the opposite to the index in the terms to balance it out.
+    <me>
+      \sum_{n=0}^\infty a_n = \sum_{n=1}^\infty a_{n-1} = \sum_{n=-1}^\infty a_{n+1}
+    </me>
+  </p>
+  <p>
+    Both techniques are very useful,
+    particularly for combining series.
+  </p>
+  <example>
+    <statement>
+      <p>
+        In this example,
+        we want to add two series which don't have matching indices.
+        We shift the first series to make the indices match and allow the addition.
+        <md>
+          <mrow>\sum_{n=2}^\infty \frac{3^n}{n!} + \sum_{n=0}^\infty \frac{1}{n(n+2)} \amp  = \sum_{n=0}^\infty \frac{3^{n+2}}{(n+2)!} + \sum_{n=0}^\infty \frac{1}{n(n+2)} = \sum_{n=0}^\infty \left( \frac{3^{n+2}}{(n+2)!} + \frac{1}{n(n+2} \right)</mrow>
+          <mrow>\amp  = \sum_{n=0}^\infty \left( \frac{3^{n+2} + (n-1)!(n+1)}{(n+2)!} \right)</mrow>
+        </md>
+      </p>
+    </statement>
+  </example>
+</section>

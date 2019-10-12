@@ -1,0 +1,126 @@
+<section xml:id="loci">
+  <title>Loci</title>
+  <introduction>
+    <definition>
+      <statement>
+        <p>
+          Consider any set of linear equations in the variables <m>x_1, x_2, \ldots, x_n</m>.
+          The <term>locus</term> in <m>\RR^n</m> of this set of equations is the set of vectors which satisfy
+          <term>all</term> of the equations.
+          The plural of locus is <term>loci</term>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      In general, the equations can be of any sort.
+      The unit circle in <m>\RR^2</m> is most commonly defined as the locus of the equation <m>x^2 + y^2 = 1</m>.
+      The graph of a function is the locus of the equation <m>y = f(x)</m>.
+      However, in linear algebra, we exclude curved objects.
+      We're concerned with linear/affine objects:
+      things which are straight and flat.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          A <term>linear equation</term> in variables
+          <m>x_1, x_2, \ldots x_n</m> is an equation of the form
+          <me>
+            a_1 x_1 + a_2 x_2 + \ldots + a_n x_n = c
+          </me>.
+          where <m>a_i</m> and <m>c</m> are real numbers
+        </p>
+      </statement>
+    </definition>
+    <proposition>
+      <statement>
+        <p>
+          Any linear or affine subspace of <m>\RR^n</m> can be described as the locus of some number of linear equations.
+          Likewise, any locus of any number of linear equations is either an affine subspace of <m>\RR^n</m> or the empty set.
+        </p>
+      </statement>
+    </proposition>
+    <p>
+      The best way to think about loci is in terms of restrictions.
+      We start with all of <m>\RR^n</m> as the locus of no equations,
+      or of the equation <m>0=0</m>.
+      There are no restrictions.
+      Then we introduce equations.
+      Each equation is a restriction on the available points.
+      If we work in <m>\RR^2</m>,
+      adding the equation <m>x=3</m> restricts us to a vertical line passing through the <m>x</m>-axis at <img src="MISSINGFILE" width="400" /> . Likewise,
+      if we were to use the equation <m>y=4</m>,
+      we would have a horizontal line passing through the <m>y</m>-axis at <img src="MISSINGFILE" width="400" /> . If we consider the locus of
+      <em>both</em> equations,
+      we have only one point remaining:
+      <img src="MISSINGFILE" width="400" /> is the only point that satisfies both equations.
+    </p>
+    <p>
+      In this way,
+      each additional equation potentially adds an additional restriction and leads to a smaller linear or affine subspace.
+      The next three definitions give familiar names for loci with one equation,
+      hence one restriction.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          A <term>line</term> in <m>\RR^2</m> is the locus of the equation
+          <m>ax + by = c</m> for <m>a,b,c \in \RR</m>.
+          In general, the line is affine.
+          The line is a linear subspace if <m>c=0</m>.
+        </p>
+      </statement>
+    </definition>
+    <definition>
+      <statement>
+        <p>
+          A <term>plane</term> in <m>\RR^3</m> is the locus of the linear equation <m>ax + by + cz = d</m>.
+          In general, the plane is affine.
+          The plane is a linear subspace if <m>d=0</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      If we think of a plane in <m>\RR^3</m> as the locus of one linear equation,
+      then the important dimensional fact about a plane is not that it has dimension two but that it has dimension one less than its ambient space <m>\RR^3</m>.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          A <term>hyperplane</term> in <m>\RR^n</m> is the locus of one linear equation:
+          <m>a_1 x_1 + a_2 x_2 + \ldots + a_n x_n = c</m>.
+          It has dimension <m>n-1</m>.
+          It is, in general, affine.
+          The hyperplane is a linear subspace if <m>c=0</m>.
+        </p>
+      </statement>
+    </definition>
+  </introduction>
+  <subsection xml:id="intersection">
+    <title>Intersection</title>
+    <definition>
+      <statement>
+        <p>
+          If <m>A</m> and <m>B</m> are sets,
+          their intersection <m>A \cap B</m> is the set of all points they have in common.
+          The intersection of affine subspaces is also an affine subspace.
+          If <m>A</m> and <m>B</m> are both linear subspaces,
+          the intersection is also a linear subspace.
+        </p>
+      </statement>
+    </definition>
+    <example>
+      <statement>
+        <p>
+          Loci can easily be understood as intersections.
+          Consider the locus of two equations,
+          say the example we have from <m>\RR^2</m> before:
+          the locus of <m>x=3</m> and <m>y=4</m>.
+          We defined this directly as a single locus.
+          However, we could just as easily think of this as the intersection of the two lines given by <m>x=3</m> and <m>y=4</m> seperately.
+          In this way, it is the intersection of two loci.
+          Similarly, all loci are the intersection of planes or hyperplanes.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+</section>

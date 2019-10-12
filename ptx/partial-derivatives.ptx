@@ -1,0 +1,130 @@
+<section xml:id="partial-derivatives">
+  <title>Partial Derivatives</title>
+  <p>
+    The first of several generalizations of derivatives is the partial derivative.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        Let <m>f: \RR^n \rightarrow \RR</m> be a scalar function.
+        If <m>x</m> is one of the variable,
+        then the derivative of <m>f</m> which pretend that all other variables are constant is called the
+        <term>partial derivative</term>
+        of <m>f</m> in the variable <m>x</m>.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    The notation for partial derivatives resembles Leibniz notation for ordinary derivatives:
+    <m>\frac{df}{dx}</m>.
+    Leibniz style notation is useful since the variable of differentiation is explicit.
+    The partial derivatives of <m>f</m> in terms of <m>x</m>,
+    <m>y</m>,
+    <m>z</m>,
+    or <m>x_i</m> are written with a stylized version of <m>d</m> in Leibniz notation.
+    <me>
+      \frac{\del f}{\del x} \hspace{1cm} \frac{\del f}{\del y} \hspace{1cm} \frac{\del f}{\del z} \hspace{1cm} \frac{\del f}{\del x_1}
+    </me>
+  </p>
+  <p>
+    For interpretation,
+    this gives us the rate of change of <m>f</m> with respect to one of its variables.
+    We don't have a holisitic notion of rate of change,
+    but we can see how it changes in each variable.
+  </p>
+  <p>
+    If we wanted to be formal,
+    pretending that all the other variales are constant is the same as taking limits in one variable.
+    For <m>f: \RR^2 \rightarrow \RR</m>,
+    these limits defined the two partial derivatives.
+    <md>
+      <mrow>\frac{\del f}{\del x} (a,b) \amp  = \lim_{(x,y) \rightarrow (a,b)} \frac{ f(a+h, b) - f(a,b)}{h}</mrow>
+      <mrow>\frac{\del f}{\del y} (a,b) \amp  = \lim_{(x,y) \rightarrow (a,b)} \frac{ f(a, b+h) - f(a,b)}{h}</mrow>
+    </md>
+  </p>
+  <p>
+    Notice that the value of <m>\frac{\del f}{\del x}</m> still depends on <m>y</m>.
+    Different <m>y</m> values identify different point in the domain,
+    where the rate of change with respect to <m>x</m> may differ.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        A function <m>f: \RR^n \rightarrow \RR</m> is
+        <term>differentiable</term> at
+        <m>(a_1, a_2, \ldots,
+        a_n)</m> if <term>all</term> of its partial derivatives
+        <m>\frac{\del f}{\del x_i}</m> exists at that point.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    As we did for single-variable calculus,
+    we use <m>\frac{\del}{\del x}</m> and similar expressions as operators <mdash/> the things that take derivatives.
+  </p>
+  <p>
+    There are various notational conventions for partial derivatives.
+    In addition to <m>\frac{\del f}{\del x}</m>,
+    we can also write this as <m>f_x</m>,
+    <m>\del_x f</m> and <m>D_x f</m>.
+    The first of these is a nice short-hand which we will use frequently.
+  </p>
+  <example>
+    <statement>
+      <md>
+        <mrow>f(x,y) \amp  = x^2 + y^2 \sin x \hspace{2cm}
+        \frac{\del f}{\del x} = 2x + y^2 \cos x \hspace{2cm}
+        \frac{\del f}{\del y} = 2y \sin x</mrow>
+        <mrow>[1em]
+        f(x,y) \amp  = \frac{1}{xy + e^{xy}} \hspace{2cm}
+        \frac{\del f}{\del x} = \frac{-1}{x^2y} + xe^{xy} \hspace{2cm}
+        \frac{\del f}{\del y} = \frac{-1}{xy^2} + ye^{xy}</mrow>
+        <mrow>[1em]
+        f(x,y) \amp  = \frac{x^2y^2+xy}{x^2 + y^2 + 1}</mrow>
+        <mrow>\frac{\del f}{\del x} \amp  = \frac{(2xy^2+y)(x^2 + y^2 -1 ) -
+        (x^2 + y^2 + xy)(2x)}{(x^2 + y^2 + 1)^2}</mrow>
+        <mrow>\frac{\del f}{\del y} \amp  = \frac{(2x^2y + x)(x^2+ y^2 -1 ) -
+        (x^2 y^2 + 2y)(2y)}{(x^2 + y^2 + 1)^2}</mrow>
+      </md>
+    </statement>
+  </example>
+  <example>
+    <statement>
+      <p>
+        We can also take higher partial derivatives.
+        <men>
+          \begin{array}{*4{>{\displaystyle}l}} f(x,y) \amp  = 3x^3 y^2 - xy^4 + x^2 y^3 - 3 \amp  \amp  \\[1em] \frac{\del f}{\del x } \amp  = 9x^2y^2 - y^4 + 2xy^3 \amp \hspace{2cm} \frac{\del f}{\del y } \amp  = 6x^3y - 4xy^3 + 2x^2y \\[1em] \frac{\del^2 f}{\del x^2 } \amp  = 18xy^2 + 2y^3 \amp \hspace{2cm} \frac{\del^2 f}{\del y^2 } \amp  = 6x^3 - 12xy^2 + 2x^2 \\[1em] \frac{\del^3 f}{\del x^3 } \amp  = 18y^2 \amp \hspace{2cm} \frac{\del^3 f}{\del y^3 } \amp  = -24xy \\ [1em] \frac{\del^4 f}{\del x^4 } \amp  = 0 \amp \hspace{2cm} \frac{\del^4 f}{\del y^4 } \amp  = -24x \\[1em] \frac{\del^5 f}{\del x^5 } \amp  = 0 \amp \hspace{2cm} \frac{\del^5 f}{\del y^5 } \amp  = 0 \end{array}
+        </men>
+      </p>
+    </statement>
+  </example>
+  <example>
+    <statement>
+      <p>
+        In addition, we can mix the partial derivatives,
+        first taking the partial in <m>x</m> and the in <m>y</m> or vice-versa.
+        <md>
+          <mrow>\frac{\del}{\del y} \frac{\del f}{\del x} = \frac{\del^2 f}{\del y \del x} = 18x^2y - 4y^3 + 4xy</mrow>
+          <mrow>\frac{\del}{\del x} \frac{\del f}{\del y} = \frac{\del^2 f}{\del x \del y} = 18x^2y - 4y^3 + 4xy</mrow>
+        </md>
+      </p>
+      <p>
+        Curiously, we get the same answer from either order of the mixed partial derivatives.
+        This equality is true in general and is called Clairaut's Theorem.
+        In the statement of the proposition,
+        notice the requirement that the domain is an open set.
+        This is an example of the topological conditions invovled in multivariable calculus.
+      </p>
+    </statement>
+  </example>
+  <proposition>
+    <statement>
+      <p>
+        Let <m>f(x,y)</m> be a function <m>\RR^2 \rightarrow \RR</m>.
+        If all the partial derivatives <m>f_{xx}</m>, <m>f_{yy}</m>,
+        <m>f_{xy}</m> and <m>f_{yx}</m> exists and are continuous on an open set <m>D</m>,
+        then <m>f_{xy} = f_{yx}</m> on that set.
+      </p>
+    </statement>
+  </proposition>
+</section>

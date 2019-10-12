@@ -1,0 +1,79 @@
+<section xml:id="polar-coordinates">
+  <title>Polar Coordinates</title>
+  <p>
+    In <m>\RR^2</m>,
+    the most common non-linear coordinate system is polar coordinates.
+    Polar coordinates describe <m>\RR^2</m> in terms of circles and rays instead of the conventional lines of Cartesian coordinates.
+    The system has two parameters (coordinates):
+    <m>r</m> and <m>\theta</m>.
+    <m>r</m>, the radius, is the distance of a point from the origin.
+    We have <m>r \in [0, \infty)</m>,
+    since that distance can't be negative.
+    If we draw a ray from the origin to a point,
+    <m>\theta</m> is the angle between that line and the <m>x</m> axis,
+    with the convention that <m>\theta \in [0, 2\pi)</m>.
+  </p>
+  <figure xml:id="figure-polar-coordinates">
+    <caption>Polar Coordinates</caption>
+    <image width="1200%" source="images/figure26.png" />
+  </figure>
+  <p>
+    We would like to be able to move between Cartesian and polar coordinates.
+    To that end,
+    we need to describe <m>x</m> and <m>y</m> in terms of <m>r</m> and <m>\theta</m>,
+    and vice-versa.
+    The relationships are just trigonometry.
+    <me>
+      x = r \cos \theta \hspace{2cm} y = r \sin \theta
+    </me>
+  </p>
+  <p>
+    The reverse direction is also trigonometry.
+    <me>
+      r = \sqrt{x^2 + y^2} \hspace{2cm} \tan \theta = \frac{y}{x} \implies \theta = \arctan \frac{y}{x}
+    </me>
+  </p>
+  <p>
+    If <m>x</m> is zero, then <m>\tan \theta</m> is undefined,
+    but <m>\theta</m> will be <m>\pi/2</m> or <m>3\pi/2</m>,
+    depending on whether <m>y</m> is positive or negative.
+    If <m>x</m> and <m>y</m> are both zero, at the origin,
+    the angle is not defined at all.
+  </p>
+  <p>
+    Loci in <m>\RR^2</m> are equations in <m>x</m> and <m>y</m>.
+    The simplest such loci were <m>x=c</m>,
+    which is a vertical line, and <m>y=c</m>,
+    which is a horizontal line.
+    We get loci in <m>\RR^2</m> in terms of <m>r</m> and <m>\theta</m> as well.
+    <m>r=c</m> is a circle: the shape with any angle and a fixed radius.
+    <m>\theta =c</m> is a ray: the shape with a fixed angle and any radius.
+    <xref ref="figure-polar-locus1">Figures</xref>
+    <xref ref="figure-polar-locus4">thought</xref>
+    show some exammples of loci in polar coordinates.
+  </p>
+  <p>
+    To translate between loci in polar coordinates and loci in Cartesian coordinates is simply a matter of replacement.
+    The line <m>x=4</m> in Cartesian coordinates becomes
+    <m>r\cos \theta = 4</m> or <m>\cos \theta = \frac{r}{4}</m>.
+    The circle <m>x^2 + y^2 =1</m> becomes <m>r^2 \cos^2 \theta + r^2 \sin^2 \theta = 1</m>,
+    which is simply <m>r^2 = 1 \implies r=1</m>.
+    The polar locus <m>r=\theta</m> becomes <m>\sqrt{x^2 + y^2} = \arctan \frac{y}{x}</m>.
+  </p>
+  <figure xml:id="figure-polar-locus1">
+    <caption><m>r = \theta</m></caption>
+    <image width="500%" source="images/figure27.png" />
+  </figure>
+  <figure xml:id="figure-polar-locus2">
+    <caption><m>r = |\sin \theta|</m></caption>
+    <image width="500%" source="images/figure28.png" />
+  </figure>
+  <figure xml:id="figure-polar-locus3">
+    <caption><m>r = 1 + \sin \theta</m></caption>
+    <image width="500%" source="images/figure29.png" />
+  </figure>
+  <figure xml:id="figure-polar-locus4">
+    <caption><m>r = 3 \sin 2 \theta</m></caption>
+    <image width="500%" source="images/figure30.png" />
+  </figure>
+</section>

@@ -1,0 +1,222 @@
+<section xml:id="constrained-optimization">
+  <title>Constrained Optimization</title>
+  <p>
+    Let's reconsider the box-in-a-sphere problem of <xref ref="example-box-sphere">Example</xref>.
+    Instead of working inside the sphere,
+    we could just consider a prism centred at the origin with positive octant vertex <m>(a,b,c)</m> and volume <m>8abc</m>.
+    That maximized by itself will diverge to <m>\infty</m>,
+    since we have nothing to bound the prism.
+    However, we can consider the <em>constraint</em>
+    <m>x^2 + y^2 + z^2 = r^2</m> for some fixed <m>r</m>.
+  </p>
+  <p>
+    The idea, in general, is to ask when a function
+    <m>f(x_1, x_2, \ldots,
+    x_n)</m> is optimized subject to one
+    (or more)
+    constraints <m>g(x_1, x_2, \ldots x_n) = c</m>.
+    Let's first think of this geometrically.
+    If both <m>f</m> and <m>g</m> were functions of two variables,
+    we could draw contour plots.
+    <m>g(x,y) = c</m> would be a fixed countour line for <m>g</m>,
+    and we would be asking for maximum of <m>f</m> along that contour line.
+    We can notice that such a maximum occurs where a countour line for <m>f</m> touches the contour line <m>g(x,y) = c</m> and then backs off.
+    That is, the maximum occurs where the contour lines are tangent.
+  </p>
+  <p>
+    But the contour lines are level sets,
+    which are defined by their normals.
+    The normals are given by gradients.
+    If the level sets are tangent to each other,
+    that means the gradients must be in the same direction
+    (up to a sign).
+    That is, this optimization occurs when <m>\nabla f \parallel \nabla g</m>.
+    We can express this as <m>\nabla f = \lambda \nabla g</m> for some real constant <m>\lambda \neq 0</m>.
+  </p>
+  <p>
+    This holds in any dinemsion:
+    the level sets will be tangent and there will be a constant <m>\lambda</m> with <m>\nabla f = \lambda \nabla g</m>.
+    To optimize with constraint,
+    we now have a system of equation in <m>n+1</m> variables,
+    the <m>x_i</m> and <m>\lambda</m>:
+    <m>\nabla f = \lambda \nabla g</m> and <m>g(x_1, x_2, \ldots,
+    v_n) = c</m>.
+    To optimize the situation, we try to solve this system.
+    This method is called the method of Lagrange Multipliers.
+  </p>
+  <p>
+    (Historically,
+    the connection to the mathematician Lagrange comes from a <em>Lagrangian</em>
+    of the form <m>f + \lambda g</m>.
+    We're essentially looking for critical points of this Lagrangian).
+  </p>
+  <example>
+    <statement>
+      <p>
+        What is the largest rectangle with fixed perimeter <m>p</m>?
+        The rectangle has length <m>l</m> and height <m>h</m>,
+        with area <m>A(h,l) = hl</m>.
+        The constraint is the fixed perimeter <m>2h + 2l = p</m>,
+        so the function is <m>g(h,l) = 2h + 2l</m>.
+        The gradients are <m>\nabla A = (l,h)</m> and <m>\nabla g = (2,2)</m>.
+        The equation <m>\nabla A = \lambda \nabla g</m> is two equations:
+        <m>h = 2\lambda</m> and <m>l = 2 \lambda</m>.
+        We can substitute these into the constrait
+        <m>2h + 2l = p</m> to get <m>8 \lambda = p</m> so
+        <m>\lambda = p/8</m> and <m>h = l = 2 \lambda = p/4</m>.
+        The area is then <m>p^2/16</m>.
+      </p>
+    </statement>
+  </example>
+  <example>
+    <statement>
+      <p>
+        Let's actually do the motivating <xref ref="example-box-sphere">Example</xref> with Lagrange Multipliers.
+        <men>
+          \begin{array}{*4{>{\displaystyle}l}} V(x,y,z) = 8xyz \amp  \amp \hspace{1cm} g(x,y,z) = x^2 + y^2 + z^2 = r^2 \amp  \\[1em] \nabla V = (8yx,8xz,8xy) \amp  \amp \hspace{1cm} \nabla g = (2x, 2y, 2z) \amp  \\[1em] \nabla V = \lambda \nabla g \amp  \amp  \amp  \\[1em] 8yz = \lambda 2x \amp \hspace{1cm} 8xz = \lambda 2y \amp \hspace{2cm} 8xy = \lambda 2z \amp \end{array}
+        </men>
+      </p>
+      <p>
+        We will use the first of the three equations to isolate for <m>x</m>,
+        which we substitute in the second.
+        <md>
+          <mrow>x \amp  = \frac{1}{\lambda} 4yz \hspace{1cm} \frac{8}{\lambda} 4yz^2 = \lambda 2y</mrow>
+          <intertext>We solve for <m>z</m> (cancelling <m>y</m>, so careful with the possibility of <m>y=0</m>.)</intertext>
+          <mrow>16z^2 \amp  = \lambda^2 \implies z = \frac{\lambda}{4}</mrow>
+          <mrow>\frac{8}{\lambda} 4 y^2 z \amp  = \lambda 2z</mrow>
+          <intertext>Since everything in this question is symmetric, we apply the same reasoning with different variables.</intertext>
+          <mrow>y \amp  = \frac{\lambda}{4} \hspace{2cm} x = \frac{\lambda}{4}</mrow>
+          <intertext>We put <m>x</m>, <m>y</m> and <m>z</m> into the constraint to solve for <m>\lambda</m>.</intertext>
+          <mrow>x^2 + y^2 + z^2 \amp  = \frac{3\lambda^2}{16} = r^2 \implies \lambda = \frac{4r}{\sqrt{3}}</mrow>
+          <intertext>Then we use the value of <m>\gamma</m> to give the values of the variables.</intertext>
+          <mrow>x = y = z \amp  = \frac{r}{\sqrt{3}}</mrow>
+          <mrow>V \amp  = \frac{8r^3}{3\sqrt{3}}</mrow>
+        </md>
+      </p>
+      <p>
+        We recovered the same maximal area as before.
+        We don't have to worry about the <m>y=0</m> possibility that we noted (or likewise <m>x=0</m> and <m>z=0)</m>,
+        since any solution in that case would lead to zero volume,
+        which is certainly not maximal.
+      </p>
+    </statement>
+  </example>
+  <example>
+    <statement>
+      <p>
+        Instead of a sphere,
+        we could ask for the largest box inside an ellipsoid with equation <m>\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1</m>.
+        Geometrically, this because more difficult.
+        However, using Lagrange Multipliers,
+        we only need to change the constraint from the equation of the sphere to the equation of the ellipse.
+        <men>
+          \begin{array}{*4{>{\displaystyle}l}} V(x,y,z) = 8xyz \amp  \amp \hspace{1cm} g(x,y,z) = \frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = r^2 \amp  \\[1em] \nabla V = (8yx,8xz,8xy) \amp  \amp \hspace{1cm} \nabla g = \left( \frac{2x}{a^2}, \frac{2y}{b^2}, \frac{2z}{c^2} \right) \amp  \\[1em] \nabla V = \lambda \nabla g \amp  \amp  \amp  \\[1em] 8yz = \lambda \frac{2x}{a^2} \amp \hspace{1cm} 8xz = \lambda \frac{2y}{b^2} \amp \hspace{2cm} 8xy = \lambda \frac{2z}{c^2} \end{array}
+        </men>
+      </p>
+      <p>
+        We isolate for <m>x</m> in the first expression and substitute in the second.
+        <md>
+          <mrow>x \amp  = \frac{4z^2 yz}{\lambda} \hspace{2cm} 8 \left( \frac{4a^2yz}{\lambda} \right) z = \frac{\lambda 2y}{b^2}</mrow>
+          <intertext>We solve for <m>z</m> (again, careful with <m>y=0</m>).</intertext>
+          <mrow>16a^2 b^2 z^2 \amp  = \lambda^2 \implies 4abz = \lambda \implies z = \frac{\lambda}{4ab}</mrow>
+          <intertext>We have symmetry again in the variables.</intertext>
+          <mrow>x \amp  = \frac{\lambda}{4bc} \hspace{2cm} y = \frac{\lambda}{4ac}</mrow>
+          <intertext>We substitute <m>x</m>, <m>y</m> and <m>z</m> in the constraint and solve for <m>\lambda</m>.</intertext>
+          <mrow>\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} \amp  = 3 \left( \frac{\lambda^2}{16a^2b^2c^2} \right) = 1 \implies \lambda = \frac{4abc}{\sqrt{3}}</mrow>
+          <intertext>We use the value of <m>\lambda</m> to determine the other variables.</intertext>
+          <mrow>x \amp  = \frac{a}{\sqrt{3}} \hspace{2cm} y = \frac{b}{\sqrt{3}} \hspace{2cm} z = \frac{c}{\sqrt{3}}</mrow>
+          <mrow>V \amp  = \frac{8abc}{3\sqrt{3}}</mrow>
+        </md>
+      </p>
+      <p>
+        The volume of the ellipsoid is <m>\frac{4}{3} \pi abc</m>,
+        so as a fraction of that volume,
+        this is <m>\frac{2}{\sqrt{3}\pi}</m> times the volume of the ellipse,
+        a very believable fraction.
+        Again, the <m>x=0</m>,
+        <m>y=0</m> or <m>z=0</m> cases are discounted since they would lead to zero area and we are looking for a maximum.
+      </p>
+    </statement>
+  </example>
+  <example>
+    <statement>
+      <p>
+        We can use Lagrange multipliers with several constraints for higher dimensional problems.
+        Consider a plane <m>x +y+ z = 12</m> and a parabaloid <m>z = x^2 +y^2</m>.
+        Their intersection is an ellipse in <m>\RR^3</m>.
+        I'd like to find its highest point and its lowest point,
+        thinking of <m>z</m> as elevation.
+        In Lagrange Multipliers,
+        rhe function <m>f(x,y,z) = z</m> is simply height,
+        and the two equations are the constraints.
+        <men>
+          \begin{array}{*3{>{\displaystyle}l}} f(x,y,z) = z \amp \hspace{1cm} g(x,y,z) = x + y + z = 11 \amp \hspace{1cm} h(x,y,z) = x^2 + y^2 - z = 0 \\ \nabla f = (0,0,1) \amp \hspace{1cm} \nabla g = (1,1,1) \amp \hspace{1cm} \nabla h = (2x, 2y, -1) \\ \nabla f = \lambda \nabla g + \mu \nabla h \amp  \amp  \\ 0 = \lambda + 2 x \mu \amp \hspace{1cm} 0 = \lambda + 2y \mu \amp \hspace{1cm} 1 = \lambda - \mu \end{array}
+        </men>
+      </p>
+      <p>
+        This system is relatively straightforward, even with five variables.
+        We can solve for <m>\lambda</m> in the first two equation and equate the results.
+        <md>
+          <mrow>2x\mu \amp  = \lambda = 2 y \mu \implies x = y \ \ \ ( \mu \neq 0)</mrow>
+          <intertext>We put <m>x</m> and <m>y</m> into the <m>h</m> constraint.</intertext>
+          <mrow>z \amp  = 2x^2</mrow>
+          <intertext>Then we put this expressionv for <m>z</m>, and replace <m>y</m> with <m>x</m> in the <m>g</m> constraint. This result is an expression solely in <m>x</m>, so we can solve for values of <m>x</m>.</intertext>
+          <mrow>2x + 2x^2 \amp  = 12 \implies x = -3 \text{ or }  x = 2</mrow>
+          <intertext>We know the other variables in terms of <m>x</m>, so values of <m>x</m> determine values of <m>y</m> and <m>z</m>.</intertext>
+          <mrow>x \amp  = -3 \implies y = -3 \ \ z = 18</mrow>
+          <mrow>x \amp  = 2 \implies y = 2 \ \ z = 8</mrow>
+        </md>
+      </p>
+      <p>
+        We can simply look at the <m>z</m> value,
+        since we are trying to maximize it.
+        We see a maximum at <m>(-3, -3, 18)</m> and the minimum at <m>(2,2,8)</m>.
+      </p>
+    </statement>
+  </example>
+  <example>
+    <statement>
+      <p>
+        As we've seen in these examples,
+        constrained optimization is a particularly useful tool for sovling complicated geometry problems.
+        Here is another such problem.
+        Say we have the equation of a very general ellipse centred at the origin,
+        such as <m>17x^2 + 12xy + 8y^2 = 100</m>.
+        Since this ellipse has an <m>xy</m> term,
+        it is not oriented along any axis <mdash/> it's on some slanted plane through the origin.
+        So we don't know, from inspection,
+        what is major and minor semi-axes are.
+        However, we can ask for the points further from and closest too the origin.
+        That's asking for the min and max of the funciton
+        <m>f(x,y) = x^2 + y^2</m> on the constraint which is the equation of the ellipse.
+        <men>
+          \begin{array}{*2{>{\displaystyle}l}} f(x,y) = x^2 + y^2 \amp \hspace{2cm} g(x,y) = 17x^2 + 12xy + 8y^2 = 100 \\ \nabla f = (2x, 2y) \amp \hspace{2cm} \nabla g = (34x + 12y, 12x + 16y) \\ \nabla f = \lambda \nabla g \amp  \\ 2x = \lambda( 34x + 12y) \amp 2y = \lambda( 12x + 16y) \end{array}
+        </men>
+      </p>
+      <p>
+        We solve for <m>\lambda</m> in both equation and equate the results.
+        <md>
+          <mrow>\frac{-2x}{34x + 12 y} \amp  = \lambda = \frac{-2y}{12 x + 16 y}</mrow>
+          <mrow>12x^2 + 16xy \amp  = 34 xy + 12y^2</mrow>
+          <intertext>This is a bit tricky, since there are quadratic terms in both <m>x</m> and <m>y</m>. Turns out, though, we can get use out of isolating <m>y^2</m>.</intertext>
+          <mrow>2x^2 - 3xy - 2y^2 \amp  = 0 \implies y^2 = x^2 - \frac{3}{2} xy</mrow>
+          <intertext>We replace <m>y^2</m> in the constraint. We are fortunate, since this replacement cancelled off the <m>xy</m> term and leaves us just with an expression in <m>x</m>.</intertext>
+          <mrow>12 x^2 + 12 xy + 8 \left( x ^2 - \frac{3}{2} xy \right) \amp  = 100</mrow>
+          <mrow>12x^2 + 8x^2 \amp  = 100 \implies x = \pm 2</mrow>
+          <mrow>x \amp  = 2 \implies 8 - 6y - 2y^2 = 0 \implies y = 1, -4</mrow>
+          <mrow>x \amp  = -2 \implies 8 + 6y - 2y^2 = 0 \implies y = -1, 4</mrow>
+        </md>
+      </p>
+      <p>
+        This gives us the four points <m>(2,1)</m>, <m>(-2,-1)</m>,
+        <m>(2,-4)</m> and <m>(-2,4)</m>.
+        The semi-major axis is the distance to the further point,
+        and the semi-minor axis is the distance to the closet point
+        (from the origin).
+        Therefore, the semi-major axis is
+        <m>\sqrt{20}</m> units long along the line in the direction <m>(2,-4)</m> and the semi-minor axis is
+        <m>\sqrt{5}</m> units long in the direction <m>(2,1)</m>.
+      </p>
+    </statement>
+  </example>
+</section>

@@ -1,0 +1,620 @@
+<section xml:id="comparison">
+  <title>Comparison on Series</title>
+  <introduction>
+    <proposition>
+      <statement>
+        <p>
+          (Direct Comparison) Let <m>\{a_n\}</m> and <m>\{b_n\}</m> be the terms of two infinite series.
+          Then an inequality of the terms implies an inequality of the series.
+          <me>
+            a_n \leq b_n \ \ \forall n \in \NN \implies \sum_{n=1}^\infty a_n \leq \sum_{n=1}^\infty b_n
+          </me>
+        </p>
+        <p>
+          In addition,
+          let <m>a_n</m> and <m>b_n</m> be positive for all <m>n \in \NN</m>.
+          <ul>
+            <li>
+              <p>
+                If <m>\sum b_n</m> is convergent,
+                since the sum <m>\sum a_n</m> is smaller,
+                it must also be convergent.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>\sum a_n</m> is divergent,
+                since the sum <m>\sum b_n</m> is larger,
+                so it must also be divergent.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </proposition>
+    <example xml:id="example-comparison1">
+      <statement>
+        <p>
+          Here are some comparison examples.
+          <me>
+            \sum_{n=3}^\infty \frac{1}{n-2}
+          </me>
+        </p>
+        <p>
+          The terms <m>\frac{1}{n-2}</m> are larger that
+          <m>\frac{1}{n}</m> and the harmonic series <m>\sum \frac{1}{n}</m> is divergent,
+          so this series is also divergent.
+          <me>
+            \sum_{n=1}^\infty \frac{1}{3^n + 4n + 1}
+          </me>
+        </p>
+        <p>
+          The terms <m>\frac{1}{3^n + 4n + 1}</m> are smaller that <m>\frac{1}{3^n}</m>.
+          These term <m>\frac{1}{3^n}</m> are the terms of a geometric series with common ratio <m>\frac{1}{3}</m>,
+          which converges.
+          Therefore, this series converges.
+          <me>
+            \sum_{n=1}^\infty \frac{n+1}{n^2}
+          </me>
+        </p>
+        <p>
+          The terms <m>\frac{n+1}{n^2}</m> are larger than <m>\frac{1}{n}</m>.
+          The latter are the terms of the divergent harmonic series,
+          so this series diverges.
+          <me>
+            \sum_{n=1}^\infty \frac{2^n}{n!}
+          </me>
+        </p>
+        <p>
+          For <m>n \geq 4</m> we have
+          <me>
+            \frac{2^n}{n!} = \frac{2}{1} \frac{2}{2} \frac{2}{3} \ldots \leq \frac{2}{3} \left( \frac{1}{2} \right)^{n-4}
+          </me>
+        </p>
+        <p>
+          Therefore, we can compare to a geometric series with common ratio <m>\frac{1}{2}</m>,
+          which converges.
+          Therefore, this series also converges
+          (and converges to <m>e^2</m>, as it happens).
+        </p>
+      </statement>
+    </example>
+    <p>
+      As the last paranthetical comment hinted,
+      comparison doesn't actually give the value of the series.
+      These comparison arguments are very useful for determining convergence and divergence,
+      but they don't calculate exact values.
+      Also, in the last example the comparison only held for
+      <m>n \geq 4</m> instead of all <m>n \in \NN</m>.
+      This is typical and perfectly acceptable;
+      for everything involving series other than calculating the exact value,
+      we only need to consider the long term behaviour.
+      For comparison, it is enough that
+      <m>a_n \lt b_n</m> for all <m>n</m> past some finite fixed value.
+    </p>
+    <p>
+      In addition to the exact comparisons listed above,
+      we can also compare asymptotically.
+      Asymptotic comparison is particularly useful,
+      since we don't actually have to calculate the inequalities.
+    </p>
+    <proposition>
+      <statement>
+        <p>
+          (Asymptotic Comparison) Let
+          <m>a_n,b_n \geq 0</m> be the terms of two series.
+          If <m>a_n</m> and <m>b_n</m> have the same asymptotic order
+          (in the variable <m>n</m>),
+          then the two series
+          <me>
+            \sum_{n=1}^\infty a_n \hspace{1cm} \text{ and }  \hspace{1cm} \sum_{n=1}^\infty b_n
+          </me>
+          have the same convergence behaviour:
+          either they both converge or they both diverge.
+        </p>
+      </statement>
+    </proposition>
+    <p>
+      In <xref ref="example-comparison1">Example</xref>,
+      we could have simply said that
+      <m>\frac{1}{n-2}</m> is asymptotically the same order as <m>\frac{1}{n}</m>,
+      and likewsie for <m>\frac{n+1}{n^2}</m>.
+      Asymptotic comparison is often easier since we don't need to explicitly construct the necessary inequality.
+    </p>
+    <example>
+      <statement>
+        <p>
+          As an example for both asymptotic comparison and conditional convergence,
+          here are three alternating series.
+          They are all convergent by the alternating series test.
+          Comparison to geometric series or a <m>\zeta</m> series is used to check their absolute convergence.
+          <md>
+            <mrow>\sum_{n=1}^\infty \frac{(-1)^n}{n^6} \amp  \hspace{1cm} \text{ absolutely convergent by asymptotic comparison to } \frac{1}{n^6}</mrow>
+            <mrow>\sum_{n=1}^\infty \frac{(-1)^n \arctan n}{n^2} \amp  \hspace{1cm} \text{ absolutely convergent by asymptotic comparison to } \frac{1}{n^2}</mrow>
+            <mrow>\sum_{n=2}^\infty \frac{(-1)^n}{\ln n} \amp  \hspace{1cm} \text{ conditionally convergent by asymptotic comparison to } \frac{1}{\ln n}</mrow>
+          </md>
+        </p>
+        <p>
+          In the last compoarision, <m>\frac{1}{\ln n} > \frac{1}{n}</m>,
+          so the asymptotic order of
+          <m>\frac{(-1)^n}{\ln n}</m> is that of a divergent series,
+          growing faster than the harmonic series.
+        </p>
+      </statement>
+    </example>
+  </introduction>
+  <subsection xml:id="integral-test">
+    <title>The Integral Test</title>
+    <proposition>
+      <statement>
+        <p>
+          (Integral Test) If a series has positive terms and
+          <m>a_n = f(n)</m> for <m>f</m> an integrable function,
+          then the series is convergent if and only if the following improper integral is convergent:
+          <me>
+            \int_1^\infty f(x) dx
+          </me>
+        </p>
+      </statement>
+    </proposition>
+    <p>
+      Note that the integral and the resulting series will sum to different numbers:
+      this test doesn't calculate the value of the sum.
+      It just tells us whether the sum is convergent.
+    </p>
+    <example>
+      <statement>
+        <p>
+          As promised,
+          the integral tests allows us to prove the that <m>\zeta</m> series converges if and only if <m>p>1</m>.
+          <md>
+            <mrow>\int_1^\infty \frac{1}{x} dx = \infty \amp  \implies \sum_{n=1}^\infty \frac{1}{n} = \infty</mrow>
+            <mrow>\int_1^\infty \frac{1}{x^p} dx \lt  \infty \amp  \implies \sum_{n=1}^\infty \frac{1}{n^p} \lt  \infty \text{ for }  p > 1</mrow>
+          </md>
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection xml:id="ratio-root">
+    <title>The Ratio and Root Tests</title>
+    <p>
+      Here are two final tests.
+    </p>
+    <proposition>
+      <statement>
+        <p>
+          (Ratio Test) If <m>a_n</m> are the terms of a series,
+          consider the limit of the ratio of the terms.
+          <me>
+            \lim_{n \rightarrow \infty} \left| \frac{a_{n+1}}{a_n} \right|
+          </me>
+        </p>
+        <p>
+          If this limit is infinite or finite and <m>>1</m>, then the series diverges.
+          If this limit is <m>\lt 1</m>,
+          then the series converges.
+          If the limit is <m>1</m>, the test is inconclusive.
+        </p>
+      </statement>
+    </proposition>
+    <proposition>
+      <statement>
+        <p>
+          (Root Test) If <m>a_n</m> are the terms of a series,
+          consider the limit of the roots of the terms.
+          <me>
+            \lim_{n \rightarrow \infty} \sqrt[n]{|a_n|}
+          </me>
+        </p>
+        <p>
+          If this limit is infinite or finite and <m>>1</m>, then the series diverges.
+          If this limit is <m>\lt 1</m>,
+          then the series converges.
+          If the limit is <m>1</m>, the test is inconclusive.
+        </p>
+      </statement>
+    </proposition>
+    <p>
+      The ratio test is useful for powers and particularly for factorials.
+      The root test is obviously useful for powers.
+    </p>
+  </subsection>
+  <subsection xml:id="testing-strategies">
+    <title>Testing Strategies</title>
+    <p>
+      There are many approaches to testing the convergence of a series:
+      looking at partial sums, testing for divergence,
+      comparison, asymptotic comparison,
+      the alternating series test,
+      the integral test, the ratio test, and the root test.
+      It is difficult to know where to start and which tests or techniques to use.
+      Here are some pointers and strategies to help you.
+      <ul>
+        <li>
+          <p>
+            Looking at a series for asymptotic order is often the easiest first step.
+            The main comparisons are with geometric series and <m>\zeta</m>-series.
+          </p>
+        </li>
+        <li>
+          <p>
+            Using the test for divergence is also often an easy first step.
+            If the terms do not tend to <m>0</m>,
+            the series cannot converge.
+          </p>
+        </li>
+        <li>
+          <p>
+            If the series is an alternating series,
+            the alternating series test is likely the easiest approach.
+          </p>
+        </li>
+        <li>
+          <p>
+            The integral test is often the best approach if the series involves complicated functions,
+            such as exponentials, logarithms or trigonometric functions.
+          </p>
+        </li>
+        <li>
+          <p>
+            The ratio test is often the best approach when the terms involve factorials.
+            It is also very useful for terms which have the index in the exponent.
+          </p>
+        </li>
+        <li>
+          <p>
+            The root test is rarely used.
+            It also helps when the index is in the exponent,
+            but most of those cases can also be done with the ratio test.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      A final important observation is that convergence only cares about the long-term behaviour of the series.
+      Any finite pieces at the start are negligible.
+      This is a nice observation for many of the tests:
+      comparisons only need to work eventually,
+      integrals can be taken on <m>[a,\infty)</m> for some <m>a>0</m>,
+      and a series which eventually becomes an alternating series can use the alternating series test.
+    </p>
+    <example>
+      <statement>
+        <p>
+          For an extreme example, consider this series:
+          <me>
+            \sum_{n=1}^{10^{300}} (n^2 +n)^{75} + \sum_{n=10^{300} + 1}^\infty \frac{1}{n^2}
+          </me>
+        </p>
+        <p>
+          The first <m>10^{300}</m> terms of this series are enormous numbers and their sum is simply ridiculous.
+          However, the series is eventually is a <m>\zeta</m>-series with <m>p=2</m>,
+          which converges.
+          Therefore, this sum is finite.
+          The ridiculous number we get from the first <m>10^{300}</m> terms is very,
+          very large, but certainly finite.
+          Any very, very large number is negligible when asking about infinity.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection xml:id="testing-examples">
+    <title>Testing Examples</title>
+    <p>
+      Now that we have all the tools at our disposal,
+      here are a bunch of examples.
+    </p>
+    <example>
+      <statement>
+        <me>
+          \sum_{n=1}^\infty n^{-\frac{2}{3}}
+        </me>
+        <p>
+          The terms are <m>\frac{1}{n^{\frac{2}{3}}}</m>,
+          so this is a <m>\zeta</m> series.
+          Since <m>\frac{2}{3} \lt 1</m>, this diverges.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <me>
+          \sum_{k=1}^\infty \frac{2^k}{e^k}
+        </me>
+        <p>
+          The terms are <m>\left( \frac{2}{e} \right)^k</m>,
+          so this is a geometric series.
+          <m>\frac{2}{e} \lt 1</m> so converges.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <me>
+          \sum_{k=1}^\infty \frac{(-1)^k}{k^2-1}
+        </me>
+        <p>
+          This is an alternating series with decreasing terms, so it converges.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <me>
+          \sum_{n=1}^\infty \sin \left( \frac{n^2+1}{n} \right)
+        </me>
+        <p>
+          The terms do not tend to zero,
+          so the series is divergent by the test for divergence.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <me>
+          \sum_{k=1}^\infty \frac{1}{k^2-1}
+        </me>
+        <p>
+          This is asymptotically <m>\frac{1}{k^2}</m>,
+          which is a convergent <m>\zeta</m> series.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <me>
+          \sum_{k=1}^\infty \frac{(-1)^k k}{e^k}
+        </me>
+        <p>
+          This is an alternating series with decreasing terms, so it converges.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <me>
+          \sum_{n=1}^\infty \frac{3}{2 + e^n}
+        </me>
+        <p>
+          This is asymptotically <m>\frac{1}{e^n}</m>,
+          which is a convergent geometric series.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <me>
+          \sum_{k=1}^\infty \frac{k\sqrt{k}}{k^3}
+        </me>
+        <p>
+          This is asymptitically <m>\frac{1}{k^{\frac{3}{2}}}</m>,
+          which is a convergent <m>\zeta</m> series.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <me>
+          \sum_{n=1}^\infty \frac{(-1)^n n}{n^3+4}
+        </me>
+        <p>
+          This is an alternating series.
+          The terms are decreasing, so the alternating series test gives convergence.
+          In addition, the absolute value of the terms is
+          <m>\frac{n}{n^3+4}</m> which is asymptotically <m>\frac{1}{n^2}</m>.
+          That converges,
+          so the series is absolutely convergent and can be rearranged without changing the value.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <me>
+          \sum_{k=1}^\infty \frac{2^k k!}{k^k}
+        </me>
+        <p>
+          The factorial suggests that the ratio test is the best approach.
+          <md>
+            <mrow>\lim_{k \rightarrow \infty} \left| \frac{a_{k+1}}{a_k} \right| \amp  = \lim_{k \rightarrow \infty} \frac{2^{k+1} (k+1)! k^k}{2^k k! (k+1)^{k+1}} = \lim_{k \rightarrow \infty} 2 (k+1) \left( \frac{k}{k+1} \right)^k \frac{1}{k+1}</mrow>
+            <mrow>\amp  = \lim_{k \rightarrow \infty} 2 \left( \frac{k}{k+1} \right)^k = \frac{2}{e} \lt  1</mrow>
+          </md>
+        </p>
+        <p>
+          By the ratio test, this is convergent.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <me>
+          \sum_{k=1}^\infty k^5 e^{-k}
+        </me>
+        <p>
+          We use the ratio test:
+          <me>
+            \lim_{k \rightarrow \infty} \left| \frac{a_{k+1}}{a_k} \right| = \lim_{k \rightarrow \infty} \frac{(k+1)^5 e^k}{k^5 e^{k+1}} = \lim_{k \rightarrow \infty} \frac{1}{e} \left( \frac{k+1}{k} \right)^5 = \lim_{k \rightarrow \infty} \frac{1}{e} \left( 1 + \frac{1}{k} \right)^5 = \frac{1}{e} \lt  1
+          </me>
+        </p>
+        <p>
+          By the ratio test, this is convergent.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <me>
+          \sum_{n=1}^\infty \frac{\ln n^2}{n^2}
+        </me>
+        <p>
+          We use the integral test, with <m>u = ln x</m>.
+          <md>
+            <mrow>\int_1^\infty \frac{\ln x^2}{x^2} dx \amp  = 2 \int_1^\infty \frac{\ln x}{x^2} dx = 2 \int_0^\infty u e^{-u} du = \left. - ue^{-u} \right|_1^\infty + 2 \int_0^\infty e^{-u} = 0 - \left. e^{-u} \right|_1^\infty = 1 \leq \infty</mrow>
+          </md>
+        </p>
+        <p>
+          By the integral test, this is convergent.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <me>
+          \sum_{n=1}^\infty \frac{(n!)^2}{(2n+4)!}
+        </me>
+        <p>
+          The presence of a factorial means that ratio test is probably the best.
+          <me>
+            \lim_{n \rightarrow \infty} \left| \frac{a_{n+1}}{a_n} \right| = \lim_{n \rightarrow \infty} \frac{\frac{((n+1)!)^2}{(2(n+1)+4)!}}{\frac{(n!)^2}{(2(n)+4)!}} = \lim_{n \rightarrow \infty} \frac{(n+1)^2}{(2n+5)(2n+6} = \lim_{n \rightarrow \infty} \frac{n^2+2n+1}{4n^2+ 22n + 30} = \frac{1}{4} \lt  1
+          </me>
+        </p>
+        <p>
+          The limit is less than 1, so the series is convergent.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <me>
+          \sum_{n=1}^\infty \frac{n!}{e^{n^2}}
+        </me>
+        <p>
+          We have factorials again, so ratio test is likely the best choice.
+          <md>
+            <mrow>\lim_{n \rightarrow \infty} \left| \frac{a_{n+1}}{a_n} \right| \amp  = \lim_{n \rightarrow \infty} \frac{\frac{(n+1)!}{e^{(n+1)^2}}}{\frac{n!}{e^{n^2}}} = \lim_{n \rightarrow \infty} \frac{(n+1)e^{n^2}}{e^{n^2+2n+1}}</mrow>
+            <mrow>\amp  = \lim_{n \rightarrow \infty} \frac{(n+1)e^{n^2}}{e^{n^2} e^{2n} e} = \lim_{n \rightarrow \infty} \frac{n+1}{e^{2n+1}} = 0</mrow>
+          </md>
+        </p>
+        <p>
+          The limit is less than 1, so the series is convergent.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <me>
+          \sum_{n=1}^\infty \frac{\ln n}{\sqrt[3]{n}}
+        </me>
+        <p>
+          The integral test if most appropriate here,
+          even though the interal is difficult.
+          <md>
+            <mrow>\int_1^\infty \frac{\ln x}{\sqrt[3]{x}} \amp  = \int_1^\infty \ln x x^{\frac{-1}{3}} dx</mrow>
+            <mrow>f \amp  = \ln x \implies f^\prime = \frac{1}{x}</mrow>
+            <mrow>g^\prime \amp  = x^\frac{-1}{3} \implies g = \frac{3x^{\frac{2}{3}}}{2}</mrow>
+            <mrow>\amp  = \left. \frac{3x^{\frac{2}{3}}}{2} \ln x \right|_1^\infty - \int_1^\infty \frac{3x^{\frac{2}{3}}}{2} \frac{1}{x} dx = \lim_{a \rightarrow \infty} \left[ \frac{3a^{\frac{2}{3}} \ln a}{2} - \frac{3}{2} 1^{\frac{3}{2}} \ln 1 - \frac{3}{2} \int_1^a x^{-\frac{1}{3}} dx \right]</mrow>
+            <mrow>\amp  = \lim_{a \rightarrow \infty} \frac{3}{2} \left[ a^{\frac{2}{3}} \ln a - \left. \frac{3x^{\frac{2}{3}}}{2} \right|_1^a \right] = \lim_{a \rightarrow \infty} \frac{3}{2}\left[ a^{\frac{2}{3}} \ln a - \frac{3a^{\frac{2}{3}}}{2} + \frac{3}{2} \right]</mrow>
+            <mrow>\amp  = \lim_{a \rightarrow \infty} \frac{3}{2} \left[ a^{\frac{2}{3}} \left( \ln a - \frac{3}{2} \right) + \frac{3}{2} \right] = \infty</mrow>
+          </md>
+        </p>
+        <p>
+          The integral diverges, so the series must as well.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <me>
+          \sum_{n=2}^\infty \frac{1}{n \ln n}
+        </me>
+        <p>
+          We use the integral text again.
+          In the integral, we use the substitution <m>u = \ln x</m>.
+          <me>
+            \int_2^\infty \frac{1}{x \ln x} dx = \int_{\ln 2}^\infty \frac{1}{u} du =  \ln u \Big|_{\ln 2}^\infty = \infty
+          </me>
+        </p>
+        <p>
+          The integral is divergent, so the sum is divergent as well.
+          Also, note the following inequality.
+          <me>
+            \frac{1}{n} > \frac{1}{n \ln n} > \frac{1}{n^p}
+          </me>
+        </p>
+        <p>
+          It seems that comparison should be helpful with a series of this type.
+          However, the inequality shows that this series is asymptotically between the harmonic series and the other convergent <m>p</m> series.
+          In comparison,
+          it's slightly larger than a convergent series and slightly smaller than a divergent series,
+          which is entirely unhelpful.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <me>
+          \sum_{n=1}^\infty ne^{-n^2}
+        </me>
+        <p>
+          We use the integral test again.
+          In the integral, we use the substitution <m>u =x^2</m>.
+          <me>
+            \int_1^\infty x e^{-x^2} dx = \frac{1}{2} \int_1^\infty e^{-u} du = \left. \frac{-1}{2} e^{-u} \right|_1^\infty = \frac{e}{2} \lt \infty
+          </me>
+        </p>
+        <p>
+          The integral converges, so the sum does as well.
+          Note that the sum <em>does not</em>
+          have the value <m>\frac{e}{2}</m>.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <me>
+          \sum_{n=1}^\infty (-1)^n 3^{\frac{1}{n}}
+        </me>
+        <p>
+          The root test is good for exponents.
+          <me>
+            \lim_{n \rightarrow \infty} \sqrt[n]{3^{\frac{1}{n}}} = \lim_{n \rightarrow \infty} 3^{\frac{1}{2n}} = 1
+          </me>
+        </p>
+        <p>
+          This limit is 1, so the test is inconclusive.
+          Instead of using the root test,
+          look at the limit of the terms.
+          That limit is <m>\pm 1</m>, which is not zero,
+          so the series must diverge by the test for divergence.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <me>
+          \sum_{n=1}^\infty \left( \frac{n}{n+1} \right)^{n^2}
+        </me>
+        <p>
+          We use the root test again.
+          <md>
+            <mrow>\lim_{n \rightarrow \infty} \sqrt[n]{|a_n|} \amp  = \lim_{n \rightarrow \infty} \sqrt[n]{\left( \frac{n}{n+1}\right)^{n^2} } = \lim_{n \rightarrow \infty} \left( \frac{n}{n+1} \right)^n = \frac{1}{\lim_{n \rightarrow \infty} \left( \frac{n+1}{n} \right)^n}</mrow>
+            <mrow>\amp  = \frac{1}{\lim_{n \rightarrow \infty} \left( 1 + \frac{1}{n} \right)^n} = \frac{1}{e} \lt  1</mrow>
+          </md>
+        </p>
+        <p>
+          The limit is less than 1, so the series converges.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <me>
+          \sum_{n=1}^\infty \tan \left( \frac{1}{n} \right)
+        </me>
+        <p>
+          There is an interesting comparison argument which we can use to tackle this difficult example.
+          The derivative of tangent is <m>\sec^2 x</m>.
+          Since <m>\sec x</m> is always <m>>1</m> or <m>\lt -1</m>,
+          we have <m>\sec^2x > 1</m>.
+          That is, the slope of tangent is always larger than 1.
+          Since <m>\tan 0 = 0</m>,
+          that means that near the origin, <m>\tan x > x</m>.
+          Equivalently, for large <m>n</m>,
+          <m>\tan \frac{1}{n} > \frac{1}{n}</m>.
+          This allows us to compare our series to the harmonic series:
+          our terms are larger than the harmonic series and the harmonic series diverges,
+          so this series also diverges.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+</section>

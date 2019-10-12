@@ -1,0 +1,189 @@
+<section xml:id="pdes">
+  <title>Partial Differential Equations</title>
+  <figure xml:id="figure-concavity-heat">
+    <caption>Concavity and Heat Diffusion</caption>
+    <image width="1200%" source="images/figure39.png" />
+  </figure>
+  <p>
+    Now that we have defined partial derivatives,
+    we can introduce what is possibly the most important setting for their use:
+    partial differential equations.
+    We can start with two classic examples.
+    The first is diffusion of heat.
+  </p>
+  <p>
+    Let's say we have a 1-dimensional rod where length is measured with the variable <m>x</m>.
+    Heat can vary along the rod, so we measure it by a function <m>u(x)</m>.
+    However, this distribution of heat can also change over time.
+    Therefore, we should measure the heat distribution both in terms of position <m>x</m> along the rod and time <m>t</m>,
+    <m>u(x,t)</m>.
+  </p>
+  <p>
+    We need to consider several aspects of the situation to give a full account of how heat will diffuse.
+    First, let's look at the mechanics of heat.
+    We make the assumption that heat wants to equalize;
+    with the absence of external addition of heat,
+    it will diffuse until it equals out everywhere.
+    If addition,
+    we assume that the greater the variance in heat between two adjacent points on the rod,
+    the faster the heat will diffuse.
+    How do we translate this assumptions into mathematics?
+    We need to get a measure of this variance in heat.
+    The measure is local, since heat only diffuses to points adjacent.
+    So how do we meausre how much local variance there is in heat?
+  </p>
+  <p>
+    Consider the heat picture at some fixed time <m>t_0</m>:
+    <m>u(x,t_0)</m>.
+    It is not the value of the heat that determines diffusion,
+    since nearby values can be higher or lower.
+    It is also not the slope of this graph in <m>x</m> that determines the diffusion,
+    since a straight line slope represents and even flow of heat from one end to the other.
+    We can think of heat wanting to return to this even flow,
+    this straight line:
+    so it is the curvature of the graph that disrupts the straight line.
+    Curvature or concavity is measured by the second derivative.
+    Therefore <m>u_{xx}(x,t_0)</m> measures the tendency for the heat to diffuse.
+    <xref ref="figure-concavity-heat">Figure</xref>
+    illustrates how concavity causes heat diffusion.
+  </p>
+  <p>
+    Diffusion creates change: heat will leave or enter the point.
+    Change is measured by the time derivatives <m>u_t(x,t)</m>.
+    So convacity, the second space deriavitve,
+    must be related to the first time derivative.
+    What is the relationship between these?
+    Let's assume the simpliest case for now and make the relationship linear.
+    That means there is a constant <m>\alpha</m> such that
+    <me>
+      \frac{\del u}{\del t} = \alpha \frac{\del^2 u}{\del x^2}
+    </me>.
+  </p>
+  <p>
+    This equation is called the Heat Equation.
+    Though relatively simple,
+    it is one of the most important partial differential equations.
+  </p>
+  <p>
+    The equation, however, isn't enough to solve the problem.
+    We also need boundary conditions and initial conditions.
+    The boundary conditions tell us what happens at the end of the rod:
+    <m>u(0,t)</m> and <m>u(l,t)</m>.
+    In principle, these could be anything functions of <m>t</m>.
+    For now, let's assume they are constant
+    <m>u(0,t) = a</m> and <m>u(l,t) = b</m>.
+  </p>
+  <p>
+    We also need intial conditions.
+    These tells us the starting heat distribution at at particular time,
+    say <m>t=0</m>, That is <m>u(x,0) = f(x)</m>,
+    a single variable function that tells us the original situation.
+  </p>
+  <p>
+    All together, this information determines the physical system.
+    We can then try to find a function <m>u(x,t)</m> which matches the equation,
+    the boundary conditions and the initial conditions.
+    Such a task is often very difficult to do.
+    However, if both boundary conditions are constant <m>0</m> and the initial condition is <m>f(x) = \sin \left( \frac{\pi x}{l} \right)</m> then the function
+    <me>
+      u(x,t) = e^{-\frac{\alpha \pi^2 t}{l^2}} \sin \left( \frac{\pi x}{l} \right)
+    </me>
+    solves the partial differential equation.
+    This is an ideal case:
+    in general the solutions become much more complicated.
+    This initial heat distribution is half a period of a sine wave,
+    and the time dependence is a exponential decay of the amplitude of that sine wave back towards a stable 0-level heat distribution.
+  </p>
+  <p>
+    This example is archtypical of many partial differential equations.
+    We will almost always have a function which depends on time as well as some other quantities.
+    In physics, these other quantities are usually position.
+    Then the equation is usually organized by taking a time derivative on one side and a position derivative on the other.
+    Then we posit a relationship between the two two derivatives.
+    In addition,
+    boundary conditions tell us what happens at the edges of our environment and initial conditions give us a snapshot of the situation at a fixed moment in time.
+    Then we try to find a multi-variable function that fits all the information.
+  </p>
+  <p>
+    Another very familiar situation is a wave moving through an elastic medium.
+    We'll assume a 1-dimensional elastic medium
+    (think a wire or string),
+    then <m>u(x,t)</m> measures the displacement of the medium at position <m>x</m> and time <m>t</m>.
+    The physical motivation is similar to the heat equation:
+    the concavity measure the offset of the stiuation from a stable straight line.
+    However, this concavity, instead of causing heat diffusion,
+    causes acceleration on the adjacent points of the elastic medium.
+    The elastic medium doesn't diffuse back to equilibrium,
+    it accelerates, like a spring, back to equilibrium.
+    Acceleration is a second time derivative, so the Wave Equation is
+    <me>
+      \frac{\del^2 u}{\del t^2} = \alpha \frac{\del^2 u}{\del x^2}
+    </me>.
+  </p>
+  <p>
+    Again, there are boundary conditions and initial condition and,
+    in general, the problem is very difficult to solve.
+    However, if we take the same situation as before,
+    with constant zero boundary conditions at <m>x=0</m> and <m>x=l</m> and initial wave profile
+    <m>f(x) = \sin \left( \frac{ \pi x}{l} \right)</m>, then the solution is
+    <me>
+      u(x,t) = \sin \left( \frac{\sqrt{\alpha} \pi t}{l} \right) \sin \left( \frac{\pi x}{l} \right)
+    </me>.
+  </p>
+  <p>
+    So, instead of decay to equilibrium,
+    we get an oscillating amplitude,
+    resulting is a very simple standing wave on the wire or string.
+    This is a very simple version:
+    there are no higher harmonics and there is no friction which causes decay over time.
+  </p>
+  <p>
+    Many other famous equations are relationships between times derivatives and position derivatives.
+    In all of the following examples,
+    the left side is a time derivative and the right is a space derivative.
+  </p>
+  <p>
+    In classical Newtonian mechanics,
+    for conservative forces like gravity and electromagnetism,
+    the force is often determined by a potential energy field <m>V</m>.
+    <me>
+      F = - \frac{d V(x)}{dx}
+    </me>
+  </p>
+  <p>
+    But <m>F = ma</m> is Newton's first law,
+    and acceleration is a time derivative of position.
+    <me>
+      \frac{d^2 x}{dt^2} = \frac{-1}{m} \frac{dV}{dx}
+    </me>
+  </p>
+  <p>
+    The Schrodinger equation is the centre of quantum mechanics:
+    it measures a wave function
+    <m>\Psi(x,y,z,t)</m> in three dimensions and time.
+    The symbol <m>\nabla</m> is a 3-dimemsional differential operator which will be defined later;
+    for now, just know that it is a combination of position derivatives.
+    <m>\hbar</m> is a constant,
+    <m>\imath</m> is a number with <m>\imath^2 = -1</m>,
+    <m>m</m> is mass and <m>V(x,y,z)</m> is a potential energy function.
+    <me>
+      \imath \hbar \frac{\del \Psi}{\del t} = - \frac{ \hbar^2}{2m} \nabla^2 \Psi + V \Psi
+    </me>
+  </p>
+  <p>
+    Another famous example is the Navier-Stokes equation,
+    which is the fundamental equation of fluid dynamics.
+    There are a number of versions of it, but I'll only write one.
+    The function <m>v(x,y,z,t)</m> is the flow velocity of a three-dimensional fluid.
+    Again, <m>\nabla</m> is a 3-dimensional position differential operator.
+    <m>\rho</m> is the fluid density, <m>p</m> is the pressure,
+    <m>T</m> is something called a stress tensor and <m>f</m> is an external force of the fluid.
+    The equation is
+    <me>
+      \rho \frac{\del v}{\del t} = \rho v \cdot \nabla v - \nabla p + \nabla \cdot T + f
+    </me>
+  </p>
+  <p>
+    Solving the Navier-Stokes equation for various initial and boundary conditions is the subject of a whole branch of mathematical physics called fluid dynamics.
+  </p>
+</section>

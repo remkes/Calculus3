@@ -1,0 +1,11 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="taylor-series">
+  <title>Taylor Series</title>
+  <xi:include  href="series-as-functions.ptx" />
+  <xi:include  href="power-series.ptx" />
+  <xi:include  href="taylor-series-definition.ptx" />
+  <xi:include  href="taylor-series-examples.ptx" />
+  <xi:include  href="exponentials-and-trigonometry.ptx" />
+  <xi:include  href="non-elementary-functions.ptx" />
+  <xi:include  href="approximation.ptx" />
+  <xi:include  href="error-analysis.ptx" />
+</chapter>
