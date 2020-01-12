@@ -1,6 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
-  <docinfo>
 <macros>
 \def\vs{\textit{vs. }}
 \def\cf{\textit{cf. }}
@@ -543,39 +540,3 @@
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \renewcommand{\labelenumi}{(\alph{enumi})}
 </macros>
-<latex-image-preamble>
-\usepackage{tikz}
-\usepackage{tkz-graph}
-\usepackage{tkz-euclide}
-\usetikzlibrary{patterns}
-\usetikzlibrary{positioning}
-\usetikzlibrary{matrix,arrows}
-\usetikzlibrary{calc}
-\usetikzlibrary{shapes}
-\usetikzlibrary{through,intersections,decorations,shadows,fadings}
-\usepackage{pgfplots}
-</latex-image-preamble>
-  </docinfo>
-  <book>
-    <title>Course Notes for Calculus III</title>
-    <frontmatter>
-      <titlepage>
-        <author>
-          <personname>Remkes Kooistra</personname>
-        </author>
-      </titlepage>
-    </frontmatter>
-    <xi:include href="./introduction.ptx" />
-    <xi:include href="./infinite-series.ptx" />
-    <xi:include href="./taylor-series.ptx" />
-    <xi:include href="./vector-geometry.ptx" />
-    <xi:include href="./non-linear-coordinates.ptx" />
-    <xi:include href="./parametric-curves.ptx" />
-    <xi:include href="./topology.ptx" />
-    <xi:include href="./multivariable-functions.ptx" />
-    <xi:include href="./extrema-optimization.ptx" />
-    <backmatter>
-      <xi:include href="./bibliography.ptx" />
-    </backmatter>
-  </book>
-</pretext>
