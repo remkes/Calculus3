@@ -1,0 +1,95 @@
+<section xml:id="acceleration">
+  <title>Acceleration and Movement in Space</title>
+  <p>
+    Now that we understand how parametric curves describe motion in <m>\RR^3</m>,
+    we can do some physics.
+    This section tries to undertstand what acceleration means in the language of parametric curves.
+    The starting point is simple:
+    acceleration should be the second derivative of the curve.
+    <me>
+      a(t) = \gamma^{\prime \prime}(t) = \frac{d}{dt} \gamma^\prime(t)
+    </me>
+  </p>
+  <p>
+    This means acceleration is a vector.
+    Let's work out its direction and magnitude,
+    using <m>T</m>, <m>N</m> and <m>B</m> as reference for direction.
+    Recall the definition of the unit tangent.
+    <me>
+      T(t) = \frac{\gamma^\prime(t)}{|\gamma^\prime(t)|}
+    </me>
+  </p>
+  <p>
+    We solve for <m>\gamma^\prime(t)</m>.
+    <me>
+      \gamma^\prime(t) = \underbrace{|\gamma^\prime|}_{\text{ scalar } } \cdot \underbrace{T(t)}_{\text{ direction } }
+    </me>
+  </p>
+  <p>
+    We differentiate this, using the product rule.
+    <men xml:id="equation-reference2">
+      \frac{d}{dt} \gamma^\prime(t) = \left( \frac{d}{dt} |\gamma^\prime(t)| \right) T(t) + |\gamma^\prime(t)| \frac{d}{dt} T(t)
+    </men>
+  </p>
+  <p>
+    Recall the definition of the normal.
+    <me>
+      N(t) = \frac{T^\prime(t)}{|T^\prime(t)|}
+    </me>
+  </p>
+  <p>
+    We isolate <m>T^\prime(t)</m>.
+    <men xml:id="equation-reference1">
+      T^\prime(t) = |T^\prime(t)| N(t)
+    </men>
+  </p>
+  <p>
+    Finally, recall the definition of curvature.
+    <me>
+      \kappa(t) = \frac{|T^\prime(t)|}{|\gamma^\prime(t)|} \implies |T^\prime(t)| = \kappa(t) |\gamma^\prime(t)|
+    </me>
+  </p>
+  <p>
+    We use this expression to replace
+    <m>|T^\prime(t)|</m> in <xref ref="equation-reference1">Equation</xref>.
+    <me>
+      T^\prime(t) = \kappa(t) |\gamma^\prime(t)| N(t)
+    </me>
+  </p>
+  <p>
+    We put this expression for
+    <m>T^\prime(t)</m> into the second term of <xref ref="equation-reference2">Equation</xref>,
+    then group and label the terms.
+    <me>
+      a(t) = \underbrace{\frac{d}{dt} |\gamma^\prime(t)|}_{\text{ linear acceleration } } T(t) + \underbrace{\kappa(t) |\gamma^\prime(t)|^2}_{\text{ angular acceleration } } N(t)
+    </me>
+  </p>
+  <definition>
+    <statement>
+      <p>
+        Let <m>\gamma(t): [a,b] \rightarrow \RR^3</m> be a parametric curve.
+        Its <term>linear acceleration</term>
+        is the vector <m>\frac{d}{dt} |\gamma^\prime(t)| T(t)</m> and its
+        <term>angular acceleration</term>
+        is the vector <m>\kappa(t) |\gamma^\prime(t)|^2 N(t)</m>.
+        Linear acceleration tells us how quickly the speed changes.
+        Angular acceleration tells us how quickly the direction changes.
+      </p>
+    </statement>
+  </definition>
+  <example>
+    <statement>
+      <p>
+        For the helix, <m>|\gamma^\prime(t)|</m> is constant,
+        so the acceleration is entirely angular.
+        <me>
+          a(t) = 0 T(t) + r N(t) = r N(t)
+        </me>
+      </p>
+      <p>
+        This makes sense, since the linear speed doesn't every change;
+        only the direction changes as the helix curves and twists.
+      </p>
+    </statement>
+  </example>
+</section>

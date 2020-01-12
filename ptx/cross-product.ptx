@@ -1,0 +1,152 @@
+<section xml:id="cross-product">
+  <title>The Cross Product</title>
+  <p>
+    The dot product is an operation which can be performed on any two vectors in <m>\RR^n</m> for any <m>n \geq 1</m>.
+    There are no other conventional products that work in all dimensions.
+    However, there is a special product that works in three dimensions.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        Let <m>u</m> = <img src="MISSINGFILE"  width="400" /> and <m>v</m> = <img src="MISSINGFILE"  width="400" /> be two vectors in <m>\RR^3</m>.
+        The <term>cross product</term> of <m>u</m> and <m>v</m> is written
+        <m>u \times v</m> and defined by this formula:
+        <me>
+          u \times v = \begin{pmatrix}u_2v_3 - u_3v_2\\u_3v_1 - u_1v_3\\u_1v_2 - u_2v_1\end{pmatrix}
+        </me>
+      </p>
+    </statement>
+  </definition>
+  <p>
+    The cross product differs from the dot product in several important ways.
+    First, it produces a new vector in <m>\RR^3</m>, not a scalar.
+    For this reason, when working in <m>\RR^3</m>,
+    the dot product is often refered to as the <em>scalar product</em>
+    and the cross product as the <em>vector product</em>.
+    Second, the dot product measures,
+    in some sense, the similarity of two vectors.
+    The cross product measures, in some sense,
+    the difference between two vectors.
+    The cross product has greater magnitude if the vectors are closer to being perpendicular.
+    If <m>\theta</m> is the angle between <m>u</m> and <m>v</m>,
+    the dot product was expressed in terms of <m>\cos \theta</m>.
+    This measures similarity, since <m>\cos 0 = 1</m>.
+    There is a similar identity for the cross product.
+    <me>
+      |u \times v| = |u||v| \sin \theta
+    </me>
+  </p>
+  <p>
+    This identity tells us that the cross product measures difference in direction,
+    since <m>\sin 0 = 0</m>.
+    In particular, this tells us that <m>|u \times u| = 0</m>,
+    implying that <m>u \times u = 0</m>
+    (the zero vector is the only vector which has zero length).
+  </p>
+  <p>
+    We can calculate a combination of the dot and cross products.
+    <md>
+      <mrow>u \cdot (u \times v) \amp  = \begin{pmatrix}u_1</mrow>
+      <mrow>u_2</mrow>
+      <mrow>u_3\end{pmatrix} \cdot \begin{pmatrix}u_2v_3 - u_3v_2</mrow>
+      <mrow>u_3v_1 - u_1v_3</mrow>
+      <mrow>u_1v_2 - u_2v_1\end{pmatrix}</mrow>
+      <mrow>\amp  = u_1u_2v_3 - u_1u_3v_2 + u_2u_3v_1 - u_2u_1v_3 + u_3u_1v_2 - u_3u_2v_1 = 0</mrow>
+    </md>
+  </p>
+  <p>
+    A similar calculation shows that <m>v \cdot (u \times v) = 0</m>.
+    Since a dot product of two vectors is zero if and only if the vectors are perpendicular,
+    the vector <m>v \times u</m> is perpendicular to both <m>u</m> and <m>v</m>.
+    This property turns out to be very useful for describing planes in <xref ref="calculus-of-parametric-curves">Sections</xref>
+    and <xref ref="tangent-planes"></xref>.
+    There are two other identities for the cross product that we will use in <xref ref="multivariable-functions">Chapter</xref>,
+    which we state here without proof.
+  </p>
+  <proposition xml:id="prop-triple-cross-product">
+    <statement>
+      <p>
+        Let <m>u,v,w \in \RR^3</m> be vectors.
+        <me>
+          u \times (v \times w) = (u \cdot w) v - (u \cdot v) w
+        </me>
+      </p>
+    </statement>
+  </proposition>
+  <proposition xml:id="prop-cross-dot-product">
+    <statement>
+      <p>
+        Let <m>u,v,w \in \RR^3</m> be vectors.
+        <me>
+          u \cdot (v \times w) = v \cdot (w \times u) = w \cdot (u \times v)
+        </me>
+      </p>
+    </statement>
+  </proposition>
+  <p>
+    An important application of the cross product is describing rotational motion.
+    Linear mechanics describes the motion of an object through space but rotational mechanics describes the rotation of an object independently of its movement through space.
+    A force on an object can cause both kinds of movement,
+    obviously.
+    The table below summarizes the parallel questions of linear motion and rotational motion in <m>\RR^3</m>.
+  </p>
+  <tabular>
+    <row>
+      <cell>Linear Motion</cell>
+      <cell>Rotational Motion</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell>Straight line in a vacuum</cell>
+      <cell>Continual spinning in a vacuum</cell>
+    </row>
+    <row>
+      <cell>Direction of motion</cell>
+      <cell>Axis of spin</cell>
+    </row>
+    <row>
+      <cell>Force</cell>
+      <cell>Torque</cell>
+    </row>
+    <row>
+      <cell>Momentum</cell>
+      <cell>Angular Momentum</cell>
+    </row>
+    <row>
+      <cell>Mass (resistance to motion)</cell>
+      <cell>Moment of Intertia (resistance
+        to spin)</cell>
+    </row>
+    <row>
+      <cell>Velocity</cell>
+      <cell>Frequency (Angular Velocity)</cell>
+    </row>
+    <row>
+      <cell>Acceleration</cell>
+      <cell>Angular Acceleration</cell>
+    </row>
+  </tabular>
+  <p>
+    How do we describe torque?
+    If there is a linear force applied to an object which can only rotate around an axis,
+    and if the linear force is applied at a distance <m>r</m> from the axis,
+    we can think of the force <m>F</m> and the distance <m>r</m> as vectors.
+    The torque is then <m>\tau = r \times F</m>.
+    Notice that <m>|\tau| = |r||F| \sin \theta</m>,
+    indicating that linear force perpendicular to the radius gives the greatest angular acceleration.
+    That makes sense.
+    If <m>F</m> and <m>r</m> are colinear,
+    that means we are pushing directly along the axis and no rotation can occur.
+  </p>
+  <p>
+    The use of cross products in rotational dynamics is extended in many interesting ways.
+    In fluid dynamics,
+    local rotational products of the fluid result in turbulence,
+    helicity, vorticity and similar effects.
+    Tornadoes and hurricanes are particularly extreme examples of vortices and helices in the fluid which is the atmosphere.
+    All the descriptions of the force and motion of these vortices involve cross products in the vectors describing the fluid.
+  </p>
+</section>

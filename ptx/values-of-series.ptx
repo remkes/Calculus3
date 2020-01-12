@@ -1,0 +1,39 @@
+<section xml:id="values-of-series">
+  <title>Values of Infinite Series</title>
+  <p>
+    In all the examples of the previous section,
+    we have been testing series convergence.
+    One might complain that we are ignoring the more practical question of actually calculating the values.
+    However, the problem of finding closed form expressions for the values of series is difficult.
+    Consider the following series.
+    <me>
+      \sum_{n=1}^\infty \frac{n^2+4n}{(n!)2^n}
+    </me>
+  </p>
+  <p>
+    This is easy to check for convergence:
+    therefore, this does converge to a number.
+    Can we say what number?
+    Most likely the number is some number we simply don't recognize,
+    some irrational number which has no name.
+    This is an inherent issue with series:
+    often the series itself is the best representation of the new number,
+    whatever it is.
+  </p>
+  <p>
+    However, we would often like to know the rough value of the number.
+    We can use the series to approximate the number.
+    In the previous example,
+    we can approximate the sum by its fourth partial sum.
+    <me>
+      \frac{5}{2} + \frac{12}{8} + \frac{21}{48} + \frac{32}{384} = \frac{217}{48}
+    </me>
+  </p>
+  <p>
+    If we add more terms, we get a closer approximation.
+    Other than this series of improving approximations,
+    we really don't know what it is.
+    The accuracy and precision of our approximation is an important question in the study of infinite series;
+    we will return to it at the end of the next chapter.
+  </p>
+</section>

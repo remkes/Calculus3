@@ -1,0 +1,706 @@
+<section xml:id="calculus-of-parametric-curves">
+  <title>Calculus of Parametric Curves</title>
+  <subsection xml:id="tangents">
+    <title>Tangents</title>
+    <p>
+      Parametric curves are vector-valued functions,
+      so they have derivatives as defined earlier.
+      Since we consider parametric curves as motion through <m>\RR^n</m>,
+      the derivative has a related interpretation.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          Let <m>\gamma(t): [a,b] \rightarrow \RR^n</m> be a parametric curve.
+          Its derivative <m>\gamma^\prime(t)</m> is called the
+          <term>tangent vector</term> to the parametric curve.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      This tangent is no longer the slope of a tangent line from single-variable claculus.
+      It is a vector,
+      which we treat as a local direction vector along the curve.
+      At <m>\gamma(a)</m>,
+      <m>\gamma^\prime(a)</m> points in the local direction of movement.
+      The notion of a derivative as a tangent direction replaces old notion of the derivative as the slope of the tangent line.
+    </p>
+    <figure xml:id="figure-logarithmic-spiral-tangent">
+      <caption>A tangent vector to the logarithmic spiral</caption>
+      <image width="1200%" source="images/figure16.png" />
+    </figure>
+    <example>
+      <statement>
+        <p>
+          Consider the logarithmic spiral
+          <m>\gamma(t) = (e^{\frac{t}{4}}\sin t, e^{\frac{t}{4}}\cos t)</m> on the domain <m>t \in \RR</m>.
+          We calculate its derivative.
+          <me>
+            \gamma^\prime(t) = \left( e^{\frac{t}{4}} \cos t + \frac{1}{4} e^{\frac{t}{4}} \sin t, -e^{\frac{t}{4}} \sin t + \frac{1}{4} e^{\frac{t}{4}} \cos t \right)
+          </me>
+        </p>
+        <p>
+          Evaluating at <m>t=0</m> at the point of the curve <m>\gamma(0) = (0,1)</m>,
+          the derivative or tangent vector to the curve is <m>\gamma^\prime(0) = (1,\frac{1}{4})</m>.
+        </p>
+        <p>
+          This spiral is moving outwards;
+          we can see how the tangent vector points in the direction of movement as the curves goes through <m>(0,1)</m>.
+          <xref ref="figure-logarithmic-spiral-tangent">Figure</xref>
+          shows how we treat the tangent as a local direction vector:
+          it points from <m>\gamma(0) = (0,1)</m>, not from the origin.
+        </p>
+      </statement>
+    </example>
+    <figure xml:id="figure-tangent-lengths">
+      <caption>Length of tangent vectors depending on
+      parametrization</caption>
+      <image width="1200%" source="images/figure18.png" />
+    </figure>
+    <example>
+      <statement>
+        <p>
+          Consider the four parametrizations of the graph of the parabola introduced in <xref ref="example-four-parametrizations">Example</xref>
+          and their tangents to the point <m>(1,1)</m>.
+          <md>
+            <mrow>\gamma_1^\prime (t) = \left( 2t, 4t^3 \right) \amp  \hspace{1.0cm} t=1 \text{ at }  (1,1) \implies \gamma_1^\prime (1) = \left( 2, 4 \right) \amp</mrow>
+            <mrow>\gamma_2^\prime (t) = \left( 1, 2t \right) \amp  \hspace{1.0cm} t=1 \text{ at }  (1,1) \implies \gamma_2^\prime (1) = \left( 1, 2 \right) \amp</mrow>
+            <mrow>\gamma_3^\prime (t) = \left( \frac{1}{2\sqrt{t}}, 1 \right) \amp \hspace{1.0cm} t=1 \text{ at }  (1,1) \implies \gamma_3^\prime (1) = \left( \frac{1}{2} , 1 \right) \amp</mrow>
+            <mrow>\gamma_4^\prime (t) = \left( 5, 50t \right) \amp  \hspace{1.0cm} t = \frac{1}{5} \text{ at }  (1,1) \implies \gamma_4^\prime (\frac{1}{5}) = \left( 5, 10 \right) \amp</mrow>
+          </md>
+        </p>
+        <p>
+          All of these tangent vectors are multiples of the vector <m>(1,2)</m>,
+          but they have different lengths,
+          as seen in <xref ref="figure-tangent-lengths">Figure</xref>.
+        </p>
+      </statement>
+    </example>
+    <p>
+      We said the tangent vector indicated the instantaneous direction of motion.
+      The tangent vector also has a length,
+      independent of the direction.
+      The length of the tangent vector measures the speed of the curve going through that point.
+      If the movement along the curve is very fast,
+      the tangent vector will have a large length;
+      if the movement along the curve is slow,
+      the tangent vector will be shorter.
+    </p>
+    <p>
+      For the parametrizations of the graph of the parabolic,
+      we can see that the direction of the tangent is independent of the parametrization,
+      but the length of the tangent is entirely dependent on the parametrization.
+      The parametrization which move more quickly along the curve have longer tangents.
+    </p>
+    <p>
+      Often it is useful to only consider the tangent direction.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          If <m>\gamma^\prime(t)</m> is the tangent vector of a parametric curve,
+          the <term>unit tangent vector</term>
+          is the unique vector of length one in the same direction as <m>\gamma^\prime(t)</m>.
+          It is often written <m>T(t)</m>.
+          To calculate the unit tangent,
+          we simply take the tangent vector and divide by its length.
+          <me>
+            T(t) = \frac{\gamma^\prime(t)}{|\gamma^\prime(t)|}
+          </me>
+        </p>
+      </statement>
+    </definition>
+    <example>
+      <statement>
+        <p>
+          In the logarithmic spiral,
+          the tangent vector was <m>\gamma^\prime(0) = (1, \frac{1}{4})</m>.
+          We calculate the length of this vector.
+          <me>
+            \left|\left(1,\frac{1}{4}\right)\right| = \sqrt{ 1 + \frac{1}{16}} = \frac{\sqrt{17}}{4}
+          </me>
+        </p>
+        <p>
+          Then we can calculate the unit tangent.
+          <me>
+            T(t) = \frac{\gamma^\prime(t)}{|\gamma^\prime(t)|} = \frac{4}{\sqrt{17}}\left( 1, \frac{1}{4} \right) = \left( \frac{4}{\sqrt{17}},\frac{1}{\sqrt{17}} \right)
+          </me>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          In the various parametrizations of the graph of the parabola,
+          the tangent direction was <m>(1,2)</m>,
+          so the unit tangent is <m>\left( \frac{1}{\sqrt{5}}, \frac{2}{\sqrt{5}} \right)</m>.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection xml:id="tangents-non-linear-coords">
+    <title>Tangents in Non-Linear Coordinates</title>
+    <p>
+      Tangents are a Cartesian notion.
+      If our curve is given in a different coordinate systems,
+      we still want the word <sq>tangent</sq> to mean the Cartesian tangent.
+      Cartesian tangents cary the interepretation we want:
+      the direction of motion.
+      Therefore, to find tangent in other coordinate systems,
+      we relate them back to Cartesian coordinates.
+      In polar coordinates, we have
+      <m>x = r \cos \theta</m> and <m>y = r \sin \theta</m>.
+      If <m>r</m> and <m>\theta</m> depend on <m>t</m>,
+      then we can differentiation these expressions using the product rule.
+      <md>
+        <mrow>x^\prime \amp  = r^\prime \cos \theta - r \sin \theta \theta^\prime</mrow>
+        <mrow>y^\prime \amp  = r^\prime \sin \theta + r \cos \theta \theta^\prime</mrow>
+        <mrow>\gamma^\prime(t) \amp  = (r^\prime \cos \theta - r \sin \theta \theta^\prime, r^\prime \sin \theta + r \cos \theta \theta^\prime)</mrow>
+      </md>
+    </p>
+  </subsection>
+  <subsection xml:id="arclength-and-tangents">
+    <title>Arclength and Tangents</title>
+    <p>
+      There are some very natural connections between tangents and arclength which relate to the intepretation of parametric curves as movement through space.
+      Let's return to the arc length formula
+      (in <m>\RR^2</m>, for simplicity).
+      <me>
+        L = \int_a^b \sqrt{x^\prime(t)^2 + y^\prime(t)^2} dt
+      </me>
+    </p>
+    <p>
+      The tangent vector is <m>\gamma^\prime(t) = (x^\prime(t),
+      y^\prime(t))</m>,
+      so this integrand in the arclength formula is nothing more than the length of the tangent vector.
+      This lets us rewrite the arclength formula.
+      <me>
+        L = \int_a^b |\gamma^\prime(t)| dt
+      </me>
+    </p>
+    <p>
+      This hopefully makes intuitive sense <mdash/> the length of the tangent vector measures the speed of the curve.
+      To get length
+      (the distance travelled),
+      we integrate the speed of movement.
+    </p>
+    <p>
+      An nice event occurs when we differentiate the arclength function <m>s(t)</m>.
+      The fundamental theorem of calculus allows us to differentiate an integral.
+      <me>
+        \frac{d}{dt} s(t) = \frac{d}{dt} \int_a^t |\gamma^\prime(u)| du = |\gamma^\prime (t)|
+      </me>
+    </p>
+    <p>
+      The derivative of the arclength function is the length of the tangent vector,
+      which represents the speed of movement along the curve.
+      To get speed, we differentiate length.
+    </p>
+    <p>
+      Both of these observations generalize the relationship between distance and speed from single variable calculus.
+      In that forum, the relationship was relatively direct:
+      if <m>d(t)</m> was distance,
+      then <m>d^\prime(t)</m> was speed and if <m>v(t)</m> was speed then <m>\int v(t) dt</m> was distance.
+      The idea here is exactly the same,
+      but since the movement is much more complicated,
+      going through multi-dimensional space,
+      we need more complicated definitions and notations to access the idea.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Recall the parametrization by arclength of the helix in <m>\RR^3</m> in <xref ref="example-helix-reparametrized">Example</xref>.
+          <me>
+            \gamma(s) = \left( 2 \cos \left( \frac{s}{\sqrt{20}} \right), 2 \sin \left( \frac{s}{\sqrt{20}} \right), \frac{4s}{\sqrt{20}} \right)
+          </me>
+        </p>
+        <p>
+          Let's calculate the speed in this parametrization by arclength.
+          <m>|\gamma^\prime(s)|</m>:
+          <md>
+            <mrow>|\gamma^\prime(s)| \amp  = \sqrt{ x^\prime(s)^2 + y^\prime(s)^2 + z^\prime(s)^2}</mrow>
+            <mrow>\amp  = \sqrt{ \left( \frac{-2}{\sqrt{20}} \sin \left( \frac{s}{\sqrt{20}} \right) \right)^2 + \left( \frac{2}{\sqrt{20}} \cos \left( \frac{s}{\sqrt{20}} \right) \right)^2 + \left( \frac{4}{\sqrt{20}} \right)^2}</mrow>
+            <mrow>\amp  = \sqrt{\frac{4}{20} \left( \cos^2 \left( \frac{5}{\sqrt{20}} \right) + \sin^2 \left( \frac{5}{\sqrt{20}} \right) \right) + \frac{16}{20} } = \sqrt{ \frac{4}{20} + \frac{16}{20}} = 1</mrow>
+          </md>
+        </p>
+        <p>
+          We find that the speed is constantly one.
+          This turns out to be generally true.
+        </p>
+      </statement>
+    </example>
+    <proposition>
+      <statement>
+        <p>
+          Let <m>\gamma(t): [a,b] \rightarrow \RR^n</m> be a parametric curve.
+          Our of all the possible reparametrizations of <m>\gamma</m>,
+          the parametrization by arclength has three properties.
+          <ul>
+            <li>
+              <p>
+                It is the unique parametrization with constant speed of 1.
+              </p>
+            </li>
+            <li>
+              <p>
+                It is the unique parametrization where all tangent vectors have length 1.
+              </p>
+            </li>
+            <li>
+              <p>
+                It is the unique parametrization where the parameter measures distance along the curve.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </proposition>
+    <p>
+      These properties are very useful and convenient.
+      In the remainder of this chapter,
+      we will make frequent use of the parametrization by arclength;
+      it serves as our default parametrization.
+      We can do this since the parametrization by arclength always exists and is unique.
+      Having a special,
+      default parameter allows us to make good definitions which will be independent of the choice of parametrization. (In practice,
+      the parametrization by arclength can be extremely difficult to actually calculate.
+      For theoretical results, however,
+      this difficulty isn't relevant).
+    </p>
+  </subsection>
+  <subsection xml:id="curvature-and-torsion">
+    <title>Curvature and Torsion</title>
+    <p>
+      The tangent vector for a parametric curve measures the speed and direction of movement along the curve.
+      Speed and direction are good information,
+      but not enough to complete describe motion in multiple dimensions.
+      In particular,
+      the tangent vector gives the direction but doesn't say how direction is changing.
+      This section builds up the notions of curvature and torsion,
+      which will complete a full description of th echanging directions of movement.
+      In this section, we exclusively work in <m>\RR^3</m>.
+    </p>
+    <p>
+      In <m>\RR^3</m>, I want to classify three types of movement.
+      <ul>
+        <li>
+          <p>
+            Straight motion: the direction is fixed and only speed varies.
+          </p>
+        </li>
+        <li>
+          <p>
+            Curving motion in a plane: motion is fixed to a plane,
+            but the direction can change and curve in the plane.
+          </p>
+        </li>
+        <li>
+          <p>
+            Twisting motion: the most general motion,
+            where in addition to curving in a plane,
+            we can also twist away from the plane.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      Throughout this section,
+      let <m>\gamma(t): [a,b] \rightarrow \RR^3</m> be a curve in three dimensions.
+      Recall we already have the tangent
+      <m>\gamma^\prime(t)</m> and the unit tangent <m>T(t)</m>.
+      If the curve is parametrized by arc length,
+      we will use the parameter <m>s</m> and write <m>\gamma(s)</m>.
+      In this case, the tangent is already a unit vector,
+      so <m>T(s) = \gamma^\prime(s)</m>.
+      We will usually start our definition using the parmetrization by arclength,
+      to ensure they are independent of parametrizations.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          The <term>curvature</term> of <m>\gamma(s)</m> is a scalar
+          <m>\kappa(s)</m> which measure how quickly the curve is turning.
+          <me>
+            \kappa(s) = \left| \frac{dT(s)}{ds} \right|
+          </me>
+        </p>
+      </statement>
+    </definition>
+    <p>
+      We can think of turning as a change in the direction of the unit tangent <m>T(s)</m>.
+      It is a scalar,
+      not showing the new direction but just the magnitude of the change.
+    </p>
+    <p>
+      There are a couple things to note about this definition.
+      First, <m>\kappa</m> is the greek letter kappa,
+      even though it looks like our <sq>k</sq>.
+      Second, <m>T(s)</m> is a vector,
+      so the derivative <m>\frac{dT(s)}{ds}</m> is a vector derivative <mdash/> the derivative is taken in each component of the vector.
+      Curvature is the scalar length of the resulting vector.
+    </p>
+    <p>
+      The given definition of curvatuve only works for parametrization by arclength.
+      We would like to calculate <m>\kappa</m> in terms of an arbitrary parameter <m>t</m>,
+      since arclength can be difficult to work with.
+    </p>
+    <proposition>
+      <statement>
+        <p>
+          Let <m>\gamma(t)</m> be a parametric curve with an arbitrary parametrization.
+          The curvature <m>\kappa(t)</m> can be calculated in this arbitrary parametrization.
+          <me>
+            \kappa(t) = \frac{|T^\prime(t)|}{|\gamma^\prime(t)|}
+          </me>
+        </p>
+      </statement>
+    </proposition>
+    <proof>
+      <p>
+        We have the arclength function <m>s(t)</m>.
+        The chain rule gives the derivative in a general form.
+        <me>
+          \frac{dT(t)}{dt} = \frac{dT(s(t))}{ds} \frac{ds}{dt}
+        </me>
+      </p>
+      <p>
+        We can rearrange this equation and then take the lengths of the vectors.
+        <me>
+          \frac{dT}{ds} = \frac{\frac{dT}{dt}}{\frac{ds}{dt}} \implies \left| \frac{dT}{ds} \right| = \left| \frac{\frac{dT}{dt}}{\frac{ds}{dt}} \right| \implies \left| \frac{dT}{ds} \right| = \frac{\left|\frac{dT}{dt}\right|}{\left|\frac{ds}{dt}\right|}
+        </me>
+      </p>
+      <p>
+        The left hand side of this expression is exactly <m>\kappa</m>,
+        the curvature.
+        The numerator on the right hand side can be written <m>|T^\prime(t)|</m>,
+        the change in the unit tangent for an arbitrary parametrization.
+        The denominator <m>\left| \frac{ds}{dt} \right|</m> is just the length of the tangent vector <m>|\gamma^\prime(t)|</m>.
+      </p>
+    </proof>
+    <example>
+      <statement>
+        <p>
+          Consider the curve in <m>\RR^3</m>:
+          <m>\gamma(t) = (at,
+          bt, ct)</m> for some constants <m>a,b,c,\in \RR</m>.
+          This curve is the straight line through <m>(0,0,0)</m> in the direction <m>(a,b,c)</m>.
+          Let's calculate the curvature of this curve.
+          We work in steps, calculating the various pieces in order.
+          <md>
+            <mrow>\gamma^\prime(t) \amp  = (a,b,c)</mrow>
+            <mrow>|\gamma^\prime(t)| \amp  = \sqrt{a^2 + b^2 + c^2}</mrow>
+            <mrow>T(t) \amp  = \frac{\gamma^\prime(t)}{|\gamma^\prime(t)|} = \frac{1}{\sqrt{a^2 + b^2 + c^2}} (a,b,c)</mrow>
+            <mrow>T^\prime(t) \amp  = (0,0,0)</mrow>
+            <mrow>\kappa(t) \amp  = \frac{|T^\prime(t)|}{|\gamma^\prime(t)|} = \frac{0}{\sqrt{a^2 +b^2 + c^2}} = 0</mrow>
+          </md>
+        </p>
+        <p>
+          Unsurprisingly, the straight line has zero curvature.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Consider the unit circle in <m>\RR^2</m>:
+          <m>\gamma(t) = (\cos t, \sin t)</m>.
+          <md>
+            <mrow>\gamma^\prime(t) \amp  = (-\sin t, \cos t)</mrow>
+            <mrow>|\gamma^\prime(t)| \amp  = \sqrt{\sin^2 t + \cos^2 t} = 1</mrow>
+            <mrow>T(t) \amp  = \frac{\gamma^\prime(t)}{|\gamma^\prime(t)|} = (-\sin t, \cos t)</mrow>
+            <mrow>T^\prime(t) \amp  = (-\cos t, - \sin t)</mrow>
+            <mrow>|T^\prime(t)| \amp  = \sqrt{ \cos^2 t + \sin^2 t} = 1</mrow>
+            <mrow>\kappa(t) \amp  = \frac{|T^\prime(t)|}{|\gamma^\prime(t)|} = \frac{1}{1} = 1</mrow>
+          </md>
+        </p>
+        <p>
+          Again unsurprisingly, the unit circle has constant curvature of one;
+          we would expect uniform curvate for a circle.
+          This also give a reference for the scale of curvature:
+          curvature of one is exactly the curvature of the unit circle.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          A similar calcluation can be done for the circle of radius <m>a</m>,
+          which is <m>\gamma(t) = (a \cos t, a \sin t)</m>.
+          If we repeat all the steps for the unit circle,
+          we get <m>\kappa(t) = \frac{1}{a}</m>.
+          Again, this is constant,
+          which makes sense since the circle is equally curved at all points.
+          However, it's interesting to note that the curvature is <em>inversely</em>
+          proportional to the radius.
+          A curvature value of <m>\kappa</m> is interpreted as the curvature of a circle of radius <m>\frac{1}{\kappa}</m>.
+        </p>
+        <p>
+          This hopefully makes sense <mdash/> a circle with a very large radius doesn't locally have to curve very much.
+          We know this very well, living on the surface of the earth:
+          since the radius of the earth is large,
+          we don't really see the curvature of its surface.
+          However, for circle with very small radius,
+          there is less distance to cover a whole revolution,
+          so the curvature must be larger.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection xml:id="normals">
+    <title>Normals</title>
+    <p>
+      To complete the description of motion in <m>\RR^3</m>,
+      we define the normal and binormal vectors.
+      I apologies, on behalf of mathematicians everywhere,
+      for the use of the word <sq>normal</sq> in this definition (and,
+      franktly,
+      everywhere else it's used in mathematics.) Unfortunately,
+      it's standard and we are stuck with it.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          Let <m>\gamma(t): [a,b] \rightarrow \RR^3</m> be a parametric curve in an arbitrary parametrization.
+          The <term>normal</term> vector to a curve is written <m>N(t)</m> and defined by the formula
+          <me>
+            N(t) = \frac{T^\prime(t)}{|T^\prime(t)|}
+          </me>.
+        </p>
+        <p>
+          The <term>binormal</term> vector to a curve is written <m>B(t)</m> and defined by the formula
+          <me>
+            B(t) = T(t) \times N(t)
+          </me>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      The following lemma helps us understand the direction of <m>N(t)</m>
+      (and will be useful later in the course as well).
+    </p>
+    <lemma xml:id="lemma-unit-vector-derivative">
+      <statement>
+        <p>
+          Let <m>\gamma(t)</m> be a differential parametric curve such that
+          <m>|\gamma(t)| = 1</m> for all <m>t</m> in the domain of the curve. (That is,
+          <m>\gamma(t)</m> is always a unit vector.) Then <m>\gamma</m> is perpendicular to its derivative.
+          <me>
+            \gamma(t) \cdot \gamma^\prime(t) = 0
+          </me>
+        </p>
+      </statement>
+    </lemma>
+    <proof>
+      <p>
+        Since <m>\gamma(t)</m> is always a unit vector,
+        the path of <m>\gamma(t)</m> is a path on the unit sphere in <m>\RR^3</m>.
+        The tangent direction of this path, therefore,
+        must be a tangent to the unit sphere.
+        Unit vector point directly out of the unit sphere;
+        they are perpendicular to tangent vectors of the unit sphere.
+        Therefore, <m>\gamma</m> and
+        <m>\gamma^\prime</m> must be perpendicular vectors.
+      </p>
+    </proof>
+    <p>
+      <xref ref="lemma-unit-vector-derivative">Lemma</xref>
+      shows that <m>N</m> is perpendicular to <m>T</m>.
+      The cross product of two vectors is perpedicular to both,
+      to all of <m>T</m>,
+      <m>N</m> and <m>B</m> are perpendicular to each other.
+      In addition,
+      <m>T</m> was already a unit vector and <m>N</m> was defined explicitly as a unit vector.
+      The cross product of two perpendicular unit vectors is also a unit vectors,
+      so all three are unit vectors,
+      as seen in <xref ref="figure-three-unit-vectors">Figure</xref>.
+    </p>
+    <figure xml:id="figure-three-unit-vectors">
+      <caption>The tangent, normal and binormal to a helix in
+      <m>\RR^3</m></caption>
+      <image width="1200%" source="images/figure22.png" />
+    </figure>
+    <p>
+      Let's complete these definitions with interpretation.
+      We've already spent some time on the unit tangent vector <m>T(t)</m>.
+      It represents the direction of movement of the curve at that point.
+      The associated scalar is speed,
+      measuring how fast the object is moving at this point in the curve.
+      The normal vector <m>N(t)</m> represents the direction of curvature.
+      Curvature was a scalar, measuring how curved the curve is at this point.
+      The normal vector adds to this scalar a direction,
+      telling you which way the curve is turning.
+      The two vectors <m>T</m> and <m>N</m> determine a plane.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          The plane determined by <m>T</m> and <m>N</m>is called the
+          <term>osculating plane</term>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      If a parametric curve isn't twisted,
+      the osculating plane is the plane on which the curve travels.
+      The binormal vector <m>B(t)</m> is perpendicular to the osculating plane.
+      Since planes are best described by their normals,
+      we use <m>B(t)</m> to keep track of the osculating plane.
+    </p>
+    <p>
+      Our third type of movement was twisting movement,
+      where we allowed a curve path to twist away from its plane of movement.
+      Since the osculating plane is determined by its normal <m>B(t)</m>,
+      twisting motion involves the change in <m>B(t)</m>.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          Let <m>\gamma(s): [0,L] \rightarrow \RR^3</m> be a parametric curve parametrized by arclength.
+          Its <term>torsion</term> is written <m>\tau(s)</m> and defined by the formula
+          <me>
+            \tau(s) = \left| \frac{d B(s)}{ds} \right|
+          </me>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Torsion is a scalar that measures the change in <m>B</m>,
+      the change in the normal of the osculating plane.
+      It meausre the rate of twisting,
+      the tendency of curving paths to change their plane of motion.
+    </p>
+    <p>
+      As with curvature,
+      we want to calculate torsion in an arbitrary parametrization.
+    </p>
+    <proposition>
+      <statement>
+        <p>
+          Let <m>\gamma(t): [a,b] \rightarrow \RR</m> be a parametric curve in an arbitrary parametrization.
+          Then its torsion is calculabed by the formula
+          <me>
+            \tau(t) = \frac{-1}{|\gamma^\prime(t)|} B^\prime(t) \cdot N(t)
+          </me>.
+        </p>
+      </statement>
+    </proposition>
+    <proof>
+      <p>
+        The arclength parameter is related to the parameter <m>t</m> by the arlencth function <m>s = s(t)</m>.
+        The chain rule calculates the derivative of the binormal vector.
+        <me>
+          \frac{dB(t)}{dt} = \frac{dB(t(s))}{ds} \frac{ds}{dt}
+        </me>
+      </p>
+      <p>
+        We can rearrange this expression.
+        <me>
+          \frac{dB(s)}{ds} = \frac{\frac{dB(t)}{dt}}{\frac{dt}{ds}} = \frac{B^\prime(t)}{|\gamma^\prime(t)|}
+        </me>
+      </p>
+      <p>
+        Without proof,
+        <m>B^\prime(t)</m> points in the direction of the negative of the normal,
+        <m>-N(t)</m>.
+        To get the torsion,
+        which is the length of the vector in the previous formula,
+        we can take the dot product with the unit vector in this direction,
+        which is simply <m>-N(t)</m>.
+      </p>
+    </proof>
+    <p>
+      Now we have three scalars (speed, curvature,
+      torsion) and three matching vectors
+      (tangent, normal and binormal).
+      Together, this information completely describes motion in <m>\RR^3</m>.
+      For convenience,
+      the next list collects the definitions of all six of these mathematical objects.
+      <md>
+        <mrow>\gamma(t) \amp  = (x(t), y(t), z(y))</mrow>
+        <mrow>\gamma^\prime(t) \amp  = (x^\prime(t), y^\prime(t), z^\prime(t))</mrow>
+        <mrow>v(t) = |\gamma^\prime(t)| \amp  = \sqrt{x^\prime(t)^2 + y^\prime(t)^2 + z^\prime(t)^2 }</mrow>
+        <mrow>T(t) \amp  = \frac{\gamma^\prime(t)}{|\gamma^\prime(t)|}</mrow>
+        <mrow>\kappa(t) \amp  = \frac{|T^\prime(t)|}{|\gamma^\prime(t)|}</mrow>
+        <mrow>N(t) \amp  = \frac{ T^\prime(t)}{|T^\prime(t)|}</mrow>
+        <mrow>B(t) \amp  = T(t) \times N(t)</mrow>
+        <mrow>\tau(t) \amp  = - \frac{B^\prime(t)}{|\gamma^\prime(t)|} \cdot N(t)</mrow>
+      </md>
+    </p>
+    <example>
+      <statement>
+        <p>
+          Let <m>r</m> and <m>h</m> be two positive scalars.
+          Consider the helix <m>\gamma(t) = (r\cos t, r\sin t, ht)</m>.
+          In the helix,
+          <m>r</m> is the radius of the circular movement of the helix,
+          and <m>h</m> is the rate of linear movement along the axis of the helix.
+          Let's calculate all the information about the motion along the helix:
+          the speed (<m>v</m>), curvature (<m>\kappa</m>),
+          torsion (<m>\tau</m>),the tangent,
+          the normal and finally the binormal.
+          <md>
+            <mrow>\gamma^\prime(t) \amp  = (-r \sin t, r \cos t, h)</mrow>
+            <mrow>v = |\gamma^\prime(t)| \amp  = \sqrt{r^2 \sin^2 t + r^2 \cos^2 t + h^2} = \sqrt{r^2 + h^2}</mrow>
+            <mrow>T(t) \amp  = \frac{\gamma^\prime(t)}{|\gamma^\prime(t)|} = \frac{1}{\sqrt{r^2+h^2}} (-r \sin t, r \cos t, h)</mrow>
+            <mrow>T^\prime(t) \amp  = \frac{1}{\sqrt{r^2 + h^2}} ( -r \cos t, -r \sin t, 0)</mrow>
+            <mrow>|T^\prime(t)| \amp  = \frac{1}{\sqrt{r^2 + h^2}} \sqrt{r^2 \cos^2 t + r^2 \sin^2 t} = \frac{r}{\sqrt{r^2 + h^2}}</mrow>
+            <mrow>\kappa(t) \amp  = \frac{|T^\prime(t)|}{|\gamma^\prime(t)|} = \frac{\frac{r}{\sqrt{r^2 + h^2}}}{\sqrt{r^2 + h^2}} = \frac{r}{r^2 + h^2}</mrow>
+            <mrow>N(t) \amp  = \frac{ T^\prime(t)}{|T^\prime(t)|} = \frac{1}{\sqrt{r^2+h^2}}{r}{\sqrt{r^2 + h^2}} (-r\cos t, -r \sin t, 0)</mrow>
+            <mrow>\amp    = \frac{1}{r} (-r \cos t, -r \sin t, 0) = (-\cos t, -\sin t, 0)</mrow>
+            <mrow>B(t) \amp  = T(t) \times N(t) = \frac{1}{\sqrt{r^2 + h^2}} (-r \sin t, r \cos t, h) \times (-\cos t, - \sin t, 0)</mrow>
+            <mrow>\amp    = \frac{1}{\sqrt{r^2 + h^2}} (h \sin t, -h \cos t, r)</mrow>
+          </md>
+          <md>
+            <mrow>B^\prime(t) \amp  = \frac{1}{\sqrt{r^2 + h^2}} (h \cos t, h \sin t, 0)</mrow>
+            <mrow>\tau(t) \amp  = - \frac{B^\prime(t)}{|\gamma^\prime(t)|} \cdot N(t) = \frac{1}{r^2 + h^2} (h \cos t, h \sin t , 0 ) \cdot (-\cos t, - \sin t, 0) = \frac{h}{r^2 + h^2}</mrow>
+          </md>
+        </p>
+        <p>
+          Look at the three scalars.
+          <me>
+            v = \sqrt{r^2 + h^2} \hspace{1.5cm} \kappa = \frac{r}{r^2 + h^2} \hspace{1.5cm} \tau = \frac{h}{r^2 + h^2} \hspace{1.5cm}
+          </me>
+        </p>
+        <p>
+          All three, speed, curvature and torsion, are constant here.
+          Let's summarize what kind of shapes of curves we get for constant and zero values of the three scalars describing the motion of parametric curves.
+        </p>
+        <tabular>
+          <row>
+            <cell><m>v = 0</m></cell>
+            <cell><m>\kappa = 0</m></cell>
+            <cell><m>\tau = 0</m></cell>
+            <cell><m>\implies</m> no movement
+              at all</cell>
+          </row>
+          <row>
+            <cell><m>v = c</m></cell>
+            <cell><m>\kappa = 0</m></cell>
+            <cell><m>\tau = 0</m></cell>
+            <cell><m>\implies</m> straight line
+              movement, no curving or twisting</cell>
+          </row>
+          <row>
+            <cell><m>v = c_1</m></cell>
+            <cell><m>\kappa = c_2</m></cell>
+            <cell><m>\tau = 0</m></cell>
+            <cell><m>\implies</m> tracing
+              around a circle, constant speed and curvature, no twisting</cell>
+          </row>
+          <row>
+            <cell><m>v = c_1</m></cell>
+            <cell><m>\kappa = c_2</m></cell>
+            <cell><m>\tau = c_3</m></cell>
+            <cell><m>\implies</m> helix,
+              constantly moving, curving and twisting</cell>
+          </row>
+        </tabular>
+        <p>
+          Like the straight line and the circle,
+          the helix is the unique curve which has constant non-zero speed,
+          torsion and cruvature.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+</section>

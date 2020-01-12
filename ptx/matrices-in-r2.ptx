@@ -1,0 +1,98 @@
+<section xml:id="matrices-in-r2">
+  <title>Matrices in <m>\RR^2</m></title>
+  <p>
+    We defined five types of basic transformations in <m>\RR^2</m>.
+    Let's give them explicit description in terms of matrices.
+    <ul>
+      <li>
+        <p>
+          The first class was rotations.
+          To be linear, they needed to fix the origin,
+          so they needed to be rotations about the origin.
+          Rotation by <m>\theta</m> (counter-clockwise,
+          as per the standard convention) is given by the following matrix.
+          <me>
+            \left( \begin{matrix} \cos \theta \amp  - \sin \theta \\ \sin \theta \amp  \cos \theta \end{matrix} \right)
+          </me>
+          In particular, rotations by <m>\pi/2</m>,
+          <m>\pi</m> and <m>3\pi/2</m> radians are given by the following matrices,
+          respectively.
+          <me>
+            \left( \begin{matrix} 0 \amp  -1 \\ 1 \amp  0 \end{matrix} \right) \hspace{1cm} \left( \begin{matrix} -1 \amp  0 \\ 0 \amp  -1 \end{matrix} \right) \hspace{1cm} \left( \begin{matrix} 0 \amp  1 \\ -1 \amp  0 \end{matrix} \right)
+          </me>
+        </p>
+      </li>
+      <li>
+        <p>
+          The second class was reflections.
+          To preserve the origin,
+          they needed to be reflections over a line through the origin.
+          In general, take <m>\begin{pmatrix}a\\b \end{pmatrix}</m> to be a non-zero
+          <em>unit</em> vector in <m>\RR^2</m>.
+          Reflection over this line in the direction
+          <m>\begin{pmatrix}a\\b \end{pmatrix}</m> is given by the following matrix.
+          <me>
+            \left( \begin{matrix} a^2 - b^2 \amp  2ab \\ 2ab \amp  b^2 - a^2 \end{matrix} \right)
+          </me>
+          In particular,
+          reflections over the <m>x</m>-axis, the <m>y</m>-axis,
+          the line <m>y=x</m> and the line <m>y=-x</m> are given by the following matrices,
+          respectively.
+          <me>
+            \left( \begin{matrix} 1 \amp  0 \\ 0 \amp  -1 \end{matrix} \right) \hspace{1cm} \left( \begin{matrix} -1 \amp  0 \\ 0 \amp  -1 \end{matrix} \right) \hspace{1cm} \left( \begin{matrix} 0 \amp  1 \\ 1 \amp  0 \end{matrix} \right) \hspace{1cm} \left( \begin{matrix} 0 \amp  -1 \\ -1 \amp  0 \end{matrix} \right)
+          </me>
+        </p>
+      </li>
+      <li>
+        <p>
+          The next set of matrices are skews.
+          We're not going to give a general form,
+          but consider the following two matrices.
+          <me>
+            \left( \begin{matrix} 1 \amp  1 \\ 0 \amp  1 \end{matrix} \right) \hspace{1cm} \left( \begin{matrix} 1 \amp  0 \\ 1 \amp  1 \end{matrix} \right)
+          </me>
+          The first matrix is a skew by one in the positive <m>y</m> direction,
+          and the second is a skew by one in the positive <m>x</m> direction.
+          Both change squares into parallelograms.
+          We can generalize this slighty:
+          the following matrices are skews in <m>y</m> and <m>x</m> by the factor <m>a</m>,
+          respectively.
+          <me>
+            \left( \begin{matrix} 1 \amp  a \\ 0 \amp  1 \end{matrix} \right) \hspace{1cm} \left( \begin{matrix} 1 \amp  0 \\ a \amp  1 \end{matrix} \right)
+          </me>
+        </p>
+      </li>
+      <li>
+        <p>
+          Dialations were the next class.
+          To dialate by <m>a</m> in the <m>x</m> direction and by <m>b</m> in the <m>y</m> direction,
+          we use a diagonal matrix.
+          <me>
+            \left( \begin{matrix} a \amp  0 \\ 0 \amp  b \end{matrix} \right)
+          </me>
+        </p>
+      </li>
+      <li>
+        <p>
+          Finally, we have projections.
+          To project onto the line in the direction <m>\begin{pmatrix}a\\b \end{pmatrix}</m>,
+          we have the following matrix.
+          <me>
+            \frac{1}{a^2 + b^2}\left( \begin{matrix} a^2 \amp  ab \\ ab \amp  b^2 \end{matrix} \right)
+          </me>
+          In particular,
+          projections onto the <m>x</m> axis, the <m>y</m> axis,
+          the line <m>y=x</m> and the line <m>y=-x</m> are given by the following matrices,
+          respectively.
+          <me>
+            \left( \begin{matrix} 1 \amp  0 \\ 0 \amp  0 \end{matrix} \right) \hspace{1cm} \left( \begin{matrix} 0 \amp  0 \\ 0 \amp  1 \end{matrix} \right) \hspace{1cm} \frac{1}{2} \left( \begin{matrix} 1 \amp  1 \\ 1 \amp  1 \end{matrix} \right) \hspace{1cm} \frac{1}{2} \left( \begin{matrix} 1 \amp  -1 \\ -1 \amp  1 \end{matrix} \right)
+          </me>
+          Finally, projection to the origin is given by the zero matrix.
+          <me>
+            \left( \begin{matrix} 0 \amp  0 \\ 0 \amp  0 \end{matrix} \right)
+          </me>
+        </p>
+      </li>
+    </ul>
+  </p>
+</section>

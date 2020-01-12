@@ -1,0 +1,145 @@
+<section xml:id="parametric-curves-definition">
+  <title>Parametric Curves</title>
+  <introduction>
+    <figure xml:id="figure-parametric-curve1">
+      <caption>The curve <m>\gamma(t) = (\cos t, \sin t)</m></caption>
+      <image width="500%" source="images/figure10.png" />
+    </figure>
+    <figure xml:id="figure-parametric-curve2">
+      <caption>The curve <m>\gamma(t) = \left( \frac{1}{t} , t
+      \right)</m></caption>
+      <image width="500%" source="images/figure11.png" />
+    </figure>
+    <definition>
+      <statement>
+        <p>
+          A parametric curve in <m>\RR^n</m> is a continuous function <m>\gamma :[a,b] \rightarrow \RR^n</m>, that is,
+          a continuous vector-valued function defined on an interval.
+          As is convention,
+          we will typically use the symbol <m>\gamma</m> for an arbitrary parametric curve.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      We identify a parametric curve with its image:
+      that is, we think of a curve as a decription of the set of points in <m>\RR^n</m> which are the output of the curve.
+      In this interpretation,
+      we think of the curve as describing motion along this set:
+      we start at the point <m>\gamma(a) \in \RR^n</m> and move along the curve,
+      ending at <m>\gamma(b) \in \RR^n</m> when we get to the end of the domain.
+    </p>
+    <p>
+      The continuity condition is important,
+      since a parametric curve is a connected path.
+      We could think of vector-valued functions which jump around,
+      but these don't really fit the notion of a curve.
+      Continuity is also necessary for differentiability and we will assume
+      (in order to avoid restating it multiple times)
+      that all our parametric curves are differentiable.
+    </p>
+    <p>
+      For visualizing parametric curves,
+      we graph only the output or image of the curve.
+      There is never a <m>t</m> axis in any of these graphs;
+      instead, the variable <m>t</m> is the parameter of movement along the curve.
+    </p>
+    <example>
+      <statement>
+        <p>
+          The curve <m>\gamma(t) = (\cos t, \sin t)</m>,
+          for <m>t \in [0, 2\pi]</m> traces out a circle,
+          as in <xref ref="figure-parametric-curve1">Figure</xref>.
+        </p>
+      </statement>
+    </example>
+    <p>
+      Notice that we defined this curve on the domain <m>[0, 2\pi]</m>.
+      If we extend this domain, the curve just starts to retrace over the circle.
+      It's good to observe that parametric curves can self-intersect and trace over themselves many times.
+    </p>
+    <figure xml:id="figure-parametric-curve3">
+      <caption>The curve <m>\gamma(t) = (\cos 2t, \sin t)</m></caption>
+      <image width="500%" source="images/figure12.png" />
+    </figure>
+    <figure xml:id="figure-parametric-curve4">
+      <caption>The logarithmic spiral</caption>
+      <image width="500%" source="images/figure13.png" />
+    </figure>
+    <example>
+      <statement>
+        <p>
+          The curve <m>\gamma(t) = \left(\frac{1}{t}, t \right)</m> on the domain
+          <m>t \in \left[\frac{1}{5},5 \right]</m> traces part of the graph of <m>f(x) = \frac{1}{x}</m>,
+          as in <xref ref="figure-parametric-curve2">Figure</xref>.
+        </p>
+      </statement>
+    </example>
+    <p>
+      Notice that this parametric curve is the graph of a function,
+      specifically the function <m>f(x) = \frac{1}{x}</m> between <m>x = \frac{1}{5}</m> and <m>x=5</m>.
+      Parametric curves where one of the components is just <m>t</m> can be interpreted as graphs of functions.
+    </p>
+    <example>
+      <statement>
+        <p>
+          The curve <m>\gamma(t) = (\cos 2t, \sin t)</m> on the domain
+          <m>t \in [0, 2\pi]</m> oscilates faster in the <m>x</m> direction than in the <m>y</m> direction,
+          as in <xref ref="figure-parametric-curve3">Figure</xref>.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          A spiral in <m>\RR^2</m> is a parametric curve of the form
+          <m>\gamma(t) = (f(t) \cos t, f(t) \sin t)</m> where <m>f(t)</m> is a monotonic function.
+          It resembles the circle,
+          but the radius is either increasing or decreasing as the curve traces around the circle.
+          The curve <m>\gamma(t) = (2e^{\frac{t}{4}} \cos t, 2e^{\frac{t}{4}} \sin t)</m> is a logarithmic spiral,
+          as in <xref ref="figure-parametric-curve4">Figure</xref>.
+        </p>
+      </statement>
+    </example>
+    <figure xml:id="figure-parametric-curve5">
+      <caption>The archimedian spiral</caption>
+      <image width="500%" source="images/figure14.png" />
+    </figure>
+    <figure xml:id="figure-parametric-curve6">
+      <caption>The curve <m>\gamma(t) = (t \cos t, t \sin t, t)</m></caption>
+      <image width="500%" source="images/figure15.png" />
+    </figure>
+    <example>
+      <statement>
+        <p>
+          The curve <m>\gamma(t) = (t \cos t, t \sin t)</m> is the archimedian spiral,
+          as in <xref ref="figure-parametric-curve5">Figure</xref>.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          The curve <m>\gamma(t) = (t\cos t, t\sin t,t)</m> on <m>[0,20]</m> is a spiral in <m>\RR^3</m>,
+          as in <xref ref="figure-parametric-curve6">Figure</xref>.
+        </p>
+      </statement>
+    </example>
+  </introduction>
+  <subsection xml:id="parametric-curves-polar-coordinates">
+    <title>Parametric Curves in Polar Coordinates</title>
+    <p>
+      Once we are comfortable with changing coordinate systems,
+      we can use any coordinate system we wish to describe parametric curves.
+      For example,
+      polar coordinates in <m>\RR^2</m> are well suited to describing any kind of object that is circular in some sense.
+      Curves in polar coordinates are given as
+      <m>\gamma(t) = (r(t), \theta(t))</m> instead of <m>\gamma(t) = (x(t),y(t))</m>.
+      The circle in parametric coordinates is <m>\gamma(t) = (1, t)</m>;
+      if we write the components individually,
+      we could write <m>\theta(t) = t</m> and <m>r(t) = 1</m>.
+      The logarithmic spiral has components
+      <m>\theta(t) = t</m> and <m>r(t) = 2e^{\frac{t}{4}}</m>.
+      The archimedian spiral has components <m>\theta(t) = t</m> and <m>r(t) = t</m>.
+    </p>
+  </subsection>
+</section>

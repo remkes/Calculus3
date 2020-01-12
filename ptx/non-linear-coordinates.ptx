@@ -1,0 +1,25 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="non-linear-coordinates">
+  <title>Non-Linear Coordinate Systems</title>
+  <introduction>
+    <p>
+      One way of thinking of transformations of <m>\RR^n</m> is as changes of coordinates.
+      In <m>\RR^2</m>, with standard coordinates <m>x,y</m>,
+      we can think of a linear transformation,
+      say <m>u = x+v</m> and <m>v=x-v</m>,
+      as a new system of coordinates.
+      We can describe points, loci,
+      and any other objects in terms of <m>u</m> and <m>v</m> just as well as in terms of <m>x</m> and <m>y</m>.
+      The transformation tells us how to go between the two sets of coordinates.
+    </p>
+    <p>
+      All the linear transformations mentioned in the previous section
+      (at least those which preserve dimension)
+      are changes of coordinates.
+      In this section,
+      we look at changing to new coordinates in stranger ways;
+      in particular, we look as non-linear transformations.
+    </p>
+  </introduction>
+  <xi:include  href="polar-coordinates.ptx" />
+  <xi:include  href="spherical-cylindrical.ptx" />
+</chapter>

@@ -1,0 +1,138 @@
+<section xml:id="gradients">
+  <title>Gradients</title>
+  <p>
+    After partial derivatives,
+    we want to proceed to define several other generalizations of the derivative.
+    The first is the gradient.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        The gradient of a function
+        <m>f: \RR^n \rightarrow \RR</m> is written <m>\nabla f</m> and defined as
+        <me>
+          \nabla f = \left( \frac{\del f}{\del x_1}, \frac{\del f}{\del x_2}, \ldots, \frac{\del f}{\del x_n} \right)
+        </me>
+      </p>
+    </statement>
+  </definition>
+  <p>
+    The gradient is a new function <m>\RR^n \rightarrow \RR^n</m>.
+    It ouputs the <em>vector</em> of partial derivatives of <m>f</m> at any point in its domin.
+    Note that the gradient is a local direction vector <em>in the domain</em>.
+  </p>
+  <p>
+    The best interpretation of the gradient comes from contour plots.
+    Like the gradient, countour plots live in <m>\RR^n</m>,
+    the domain,
+    and show the level (hyper)surfaces of the function.
+    If, as in <m>\RR^2</m>,
+    we think of the function as a height function and the countour plot as a topographical map,
+    the gradient shows direction of greatest increase.
+  </p>
+  <p>
+    If we draw topographical lines on a countour plot,
+    the gradient will always be locally perpendicular to those lines and will point in the direction of greatest increase.
+    Rephrased, this is a useful result:
+    <m>\nabla f</m> is always the normal to the level sets of <m>f</m>.
+    If those level sets are hypersurfaces,
+    their tangent planes can be determined by the normal <m>\nabla f</m>.
+  </p>
+  <example>
+    <statement>
+      <p>
+        A central example of gradients is found by considering the gravitational potential energy function caused by a mass <m>m</m> at the the origin.
+        Another object of mass <m>m</m> and position <m>(x,y,z)</m> has potential gravitational energy of
+        <me>
+          P = \frac{-GmM}{\sqrt{x^2 + y^2 +z^2}}
+        </me>.
+      </p>
+      <p>
+        By convention, this potential energy is negative.
+        It approaches <m>0</m> in the limit at the origin,
+        and approaches <m>- \infty</m> as we get very far from the origin.
+        The gradient of this is
+        <me>
+          \nabla P = \frac{GmM}{\sqrt{(x^2 + y^2 +z^2)^3}} (x, y, z) = \frac{GmM}{x^2 + y^2 + z^2} \frac{1}{\sqrt{x^2 + y^2 + z^2}} (x,y,z)
+        </me>.
+      </p>
+      <p>
+        This is precisely the force of gravity.
+        The gradient point in the direction of maximum increase in potential energy with magnitude
+        <m>\frac{GmM}{r^2}</m> where <m>r</m> is the distance between the two objects.
+        This is a common situation we will discuss in Calculus IV: many forces are the result of gradients of potential energy functions.
+      </p>
+    </statement>
+  </example>
+  <example>
+    <statement>
+      <p>
+        In another example, consider a function
+        <m>p(x,y,z)</m> which measures the pressure in a rotating cylindrial drum. (Think of a centrifuge).
+        With bounds <m>z \in [0,5]</m> and <m>x,y \in [0, \sqrt{3}]</m>,
+        the function is
+        <me>
+          p(x,y,z) = \frac{1}{z+1} (x^2 + y^2)
+        </me>
+      </p>
+      <p>
+        The gradient is
+        <me>
+          \nabla p(x,y,z) = \left( \frac{2x}{z+1}, \frac{2y}{z+1}, \frac{-(x^2 + y^2)}{(z+1)^2} \right)
+        </me>
+      </p>
+      <p>
+        This points in the direction of greatest increase in pressure.
+        It is perpendicular to the surfaces of constant pressure.
+        If there is a difference in media in the drum,
+        the lighter medium will be force towards the edges of the drum in the direction of this gradient.
+      </p>
+    </statement>
+  </example>
+  <p>
+    In addition to the gradient,
+    we can think of <m>\nabla</m> itself as the following differential operator.
+    <me>
+      \nabla = \left( \frac{\del}{\del x_1}, \frac{\del}{\del x_2}, \frac{\del}{\del x_3}, \ldots, \frac{\del}{\del x_n} \right)
+    </me>
+  </p>
+  <p>
+    This is a vector-valued differential operator:
+    it outputs the vector of partial derivatives <m>\nabla f</m>.
+    Now that we have this operator,
+    there are other operations we can use it for.
+    Most of those operations come in Calculus IV, but we can define one such operation here.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        If <m>f: \RR^n \rightarrow R</m> is a scalar function,
+        the <term>Laplacian</term> of <m>f</m> is given by applying <m>\nabla</m> twice.
+        Since <m>\nabla</m> outputs a vector,
+        the second application uses the dot product to output a scalar.
+        <md>
+          <mrow>\nabla^2 f \amp  = \nabla \cdot \nabla f = \left( \frac{\del}{\del x_1}, \frac{\del}{\del x_2}, \frac{\del}{\del x_3}, \ldots, \frac{\del}{\del x_n} \right) \cdot \left( \frac{\del f}{\del x_1}, \frac{\del f}{\del x_2}, \frac{\del f}{\del x_3}, \ldots, \frac{\del f}{\del x_n} \right)</mrow>
+          <mrow>\amp  = \frac{\del^2 f}{\del^2 x_1} + \frac{\del^2 f}{\del^2 x_2} + \frac{\del^2 f}{\del^2 x_3} + \ldots \frac{\del^2 f}{\del^2 x_n}</mrow>
+        </md>
+      </p>
+    </statement>
+  </definition>
+  <p>
+    The Laplacian, as a second derivative,
+    measure some kind of multi-dimensional concavity.
+    We considered the heat equation in one dimension;
+    in that equation,
+    concavity measured local displacement from equilibrium.
+    The Laplacian does the same in multiple dimensions.
+    The general Heat Equation is
+    <me>
+      \frac{\del u}{\del t} = \alpha \nabla^2 u
+    </me>.
+  </p>
+  <p>
+    Similarly, the general Wave Equation is
+    <me>
+      \frac{\del^2 u}{\del t^2} = \alpha \nabla^2 u
+    </me>.
+  </p>
+</section>

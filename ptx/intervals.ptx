@@ -1,0 +1,50 @@
+<section xml:id="intervals">
+  <title>Intervals</title>
+  <p>
+    In addition to open and closed sets in <m>\RR^n</m>,
+    the is a direct extension of intervals.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        An <term>open interval</term> in <m>\RR^n</m> is a set of points <m>(x_1, x_2, \ldots,
+        x_n) \in \RR^n</m> such that
+        <me>
+          a_1 \lt  x_1 \lt  b_1, \hspace{1cm} a_2 \lt  x_2 \lt  b_2, \hspace{1cm} \ldots \hspace{1cm} a_n \lt  x_n \lt  b_n
+        </me>
+      </p>
+      <p>
+        It is written
+        <me>
+          I = (a_1,b_1)\times (a_2,b_2) \times \ldots \times (a_n,b_n)
+        </me>.
+      </p>
+    </statement>
+  </definition>
+  <definition>
+    <statement>
+      <p>
+        An <term>closed interval</term> in <m>\RR^n</m> is a set of points <m>(x_1, x_2, \ldots,
+        x_n) \in \RR^n</m> such that
+        <me>
+          a_1 \leq x_1 \leq b_1, \hspace{1cm} a_2 \leq x_2 \leq b_2, \hspace{1cm} \ldots \hspace{1cm} a_n \leq x_n \leq b_n
+        </me>
+      </p>
+      <p>
+        It is written
+        <me>
+          I = [a_1,b_1]\times [a_2,b_2] \times \ldots \times [a_n,b_n]
+        </me>.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    Intervals are rectangular objects.
+    In <m>\RR^2</m>, there are filled-in rectangles,
+    including the hollow bounding rectangle if the interval is closed and excluding it if the interval is open.
+    In <m>\RR^3</m>,
+    intervals are solid rectangular prisms whose boundaries are rectangular boxes.
+    In higher dimensions,
+    we think of intervals are higher-dimensional rectangular prisms.
+  </p>
+</section>

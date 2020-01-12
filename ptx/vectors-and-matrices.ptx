@@ -1,0 +1,141 @@
+<section xml:id="vectors-and-matrices">
+  <title>Vectors and Matrices</title>
+  <p>
+    We start with the two most important definitions in linear algebra:
+    the vector and the matrix.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        In linear algebra, ordinary numbers (intergers,
+        rational numbers or real numbers) are called <term>scalars</term>.
+      </p>
+    </statement>
+  </definition>
+  <definition>
+    <statement>
+      <p>
+        A <term>vector</term> is a finite ordered list of scalars.
+        Vectors can be written either as columns or rows.
+        The scalars in a vector are called its <term>entries</term>,
+        <term>components</term> or <term>coordinates</term>.
+        If our vector has components <m>4</m>,
+        <m>15</m>, <m>\pi</m> and <m>-e</m>
+        (in that order),
+        we write the vector either as a row or a column.
+        <men>
+          \begin{pmatrix}4\\15\\\pi\\e\end{pmatrix} \hspace{1cm} \text{ or } \hspace{1cm} (4, 15, \pi, -e)
+        </men>
+      </p>
+      <p>
+        In Linear Algebra, column vectors are used almost exclusively.
+        In this section,
+        we will match that convention and use column vectors.
+        However, in <xref ref="parametric-curves">Chapters</xref>,
+        <xref ref="multivariable-functions"></xref>,
+        and <xref ref="extrema-optimization"></xref>,
+        we will use row vectors, which are standard for that material.
+      </p>
+    </statement>
+  </definition>
+  <definition>
+    <statement>
+      <p>
+        A <term>matrix</term> is a rectangular array of scalars.
+        If the matrix has <m>m</m> rows and <m>n</m> columns,
+        we say it is an <m>m \times n</m> matrix.
+        The scalars in the matrix are called the <term>entries</term>,
+        <term>components</term> or <term>coefficients</term>.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    A matrix is written as a rectangular array of numbers,
+    either in square or round brackets.
+    Here are two ways of writing a particular
+    <m>3\times 2</m> matrix with integer coefficients.
+    <men>
+      \left( \begin{matrix} 5 \amp  6 \\ -4 \amp  -4 \\ 0 \amp  -3 \end{matrix} \right) \hspace{2cm} \left[ \begin{matrix} 5 \amp  6 \\ -4 \amp  -4 \\ 0 \amp  -3 \end{matrix} \right]
+    </men>
+  </p>
+  <p>
+    The rows of this matrix are vectors in <m>\RR^2</m>.
+    <men>
+      \begin{pmatrix}5\\6\end{pmatrix} \hspace{1cm} \begin{pmatrix}-4\\-4\end{pmatrix} \hspace{1cm} \begin{pmatrix}0\\-3\end{pmatrix}
+    </men>
+  </p>
+  <p>
+    The columns of this matrix are vectors in <m>\RR^3</m>.
+    <men>
+      \begin{pmatrix}5\\-4\\0\end{pmatrix} \hspace{1cm} \begin{pmatrix}6\\-4\\-3\end{pmatrix}
+    </men>
+  </p>
+  <p>
+    In these notes, we'll use curved brackets for matrices;
+    however, in many texts and books,
+    square brackets are very common.
+    Both notations are conventional and acceptable.
+  </p>
+  <p>
+    If we want to write a general matrix,
+    we can write with double indexed unknown coefficients.
+    <men>
+      \left( \begin{array}{cccc} a_{11} \amp  a_{12} \amp  \ldots \amp  a_{1n} \\ a_{21} \amp  a_{22} \amp  \ldots \amp  a_{2n} \\ \ldots \amp  \ldots \amp  \ldots \amp  \ldots \\ a_{n1} \amp  a_{n2} \amp  \ldots \amp  a_{nn} \end{array} \right)
+    </men>
+  </p>
+  <p>
+    By convention,
+    when we write an aribitrary matrix entry <m>a_{ij}</m> the first index tells us the row and the second index tells us the column.
+    For example,
+    <m>a_{64}</m> is the entry in the sixth row and the fourth column.
+    In the rare occurence that we have matrices with more than 10 rows or columns,
+    we can seperate the indices by commas:
+    <m>a_{12,15}</m> would be in the twelfth row and the fifteenth column.
+    Row and column indexing is very convenient.
+    Sometime we even write <m>A = a_{ij}</m> as short-hand for a matrix when the size is understood or undetermined.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        The rows of a matrix are called the
+        <term>row vectors</term> of the matrix.
+        Likewise the columns are called
+        <term>column vectors</term> of the matrix.
+      </p>
+    </statement>
+  </definition>
+  <definition>
+    <statement>
+      <p>
+        The <term>zero matrix</term> is the unique matrix (one for every size
+        <m>m \times n)</m> where all the coefficients are all zero.
+        <men>
+          \left( \begin{matrix} 0 \amp  0 \\ 0 \amp  0 \\ 0 \amp  0 \end{matrix} \right) \hspace{2cm} \left( \begin{matrix} 0 \amp  0 \amp  0 \amp  0 \amp  0 \amp  0 \\ 0 \amp  0 \amp  0 \amp  0 \amp  0 \amp  0 \\ 0 \amp  0 \amp  0 \amp  0 \amp  0 \amp  0 \\ 0 \amp  0 \amp  0 \amp  0 \amp  0 \amp  0 \\ 0 \amp  0 \amp  0 \amp  0 \amp  0 \amp  0 \\ 0 \amp  0 \amp  0 \amp  0 \amp  0 \amp  0 \end{matrix} \right)
+        </men>
+      </p>
+    </statement>
+  </definition>
+  <definition>
+    <statement>
+      <p>
+        The <term>diagonal elemenents</term>
+        of a matrix are the elements where the row and column index are the same.
+        They lie on a diagonal line starting at the top left of the matrix.
+        If an arbitrary matrix is written <m>a_{ij}</m>,
+        the diagonal elements are the elements <m>a_{ii}</m>.
+      </p>
+    </statement>
+  </definition>
+  <definition>
+    <statement>
+      <p>
+        The <term>identity matrix</term> is the unique <m>n \times n</m> matrix
+        (one for each <m>n</m>)
+        where the diagonal entries are all <m>1</m> and all other entries are <m>0</m>.
+        <men>
+          \left( \begin{matrix} 1 \amp  0 \\ 0 \amp  1 \end{matrix} \right) \hspace{2cm} \left( \begin{matrix} 1 \amp  0 \amp  0 \\ 0 \amp  1 \amp  0 \\ 0 \amp  0 \amp  1 \end{matrix} \right) \hspace{2cm} \left( \begin{matrix} 1 \amp  0 \amp  0 \amp  0 \\ 0 \amp  1 \amp  0 \amp  0 \\ 0 \amp  0 \amp  1 \amp  0 \\ 0 \amp  0 \amp  0 \amp  1 \end{matrix} \right)
+        </men>
+      </p>
+    </statement>
+  </definition>
+</section>

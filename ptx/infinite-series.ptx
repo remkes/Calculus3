@@ -1,0 +1,58 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="infinite-series">
+  <title>Infinite Series</title>
+  <introduction>
+    <p>
+      The first two chapters of these notes,
+      covering Infinite Series and Taylor Series,
+      cover the same as the final two chapters of the Calculus II notes.
+      Much of what we cover is review and most of the these notes are identical to the Calculus II notes,
+      but we will find a new focus on Taylor series and new material on approximation and error analysis.
+    </p>
+    <p>
+      There are three classical branches of calculus.
+      The first two, derivatives and integrals,
+      command the vast majority of the time and energy in most first year calculus classes.
+      In many universities, these two topics are the entire course.
+      However, there is a third branch of the calculus which deserves equal attention:
+      infinite series.
+    </p>
+    <p>
+      In some ways,
+      the problem of infinite series is older than the problems motivating derivatives and integrals.
+      Issues of infinite series go back to at least early Greek mathematics,
+      where thinkers struggled with the puzzle known as Zeno's Paradox.
+    </p>
+    <p>
+      There are many forms of Zeno's Paradox; I will present one relatively common version.
+      If you wish to travel from point <m>a</m> to point <m>b</m>,
+      then first you must travel half-way.
+      Having gone halfway to <m>b</m>,
+      you must again cover half the remaining distance.
+      Having gone <m>3/4</m> of the way to <m>b</m>,
+      there is still a distance remaining,
+      and you still must first cover half that distance.
+      Repeating this process gives an infinite series of halves,
+      all of which must be traversed to travel from <m>a</m> to <m>b</m>.
+      Since doing an infinite number of things is not humanly possible,
+      you will never be able to reach <m>b</m>.
+      Finally, since this holds for any two points <m>a</m> and <m>b</m>,
+      movement is impossible.
+    </p>
+    <p>
+      Obviously, Zeno's paradox doesn't hold,
+      since we are able to move from one place to another.
+      But Zeno's paradox has commanded the attention and imagination of philosophers and mathematicians for over 2000 years,
+      as they struggled to deal with the infinity implicit in even the smallest movement.
+      Infinite series is one way (though,
+      some would argue, an incomplete way) of dealing with Zeno's paradox.
+    </p>
+  </introduction>
+  <xi:include  href="sequences.ptx" />
+  <xi:include  href="series-definition.ptx" />
+  <xi:include  href="manipulation-series.ptx" />
+  <xi:include  href="absolute-convergence.ptx" />
+  <xi:include  href="decimal-expansions.ptx" />
+  <xi:include  href="convergence-tests.ptx" />
+  <xi:include  href="comparison.ptx" />
+  <xi:include  href="values-of-series.ptx" />
+</chapter>
