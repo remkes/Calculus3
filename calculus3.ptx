@@ -16,16 +16,20 @@
   </latex-image-preamble>
   </docinfo>
   <book>
+    <title>Course Notes for Calculus III</title>
     <xi:include href="./frontmatter.ptx" />
-    <xi:include href="./introduction.ptx" />
-    <xi:include href="./infinite-series.ptx" />
-    <xi:include href="./taylor-series.ptx" />
-    <xi:include href="./vector-geometry.ptx" />
-    <xi:include href="./non-linear-coordinates.ptx" />
-    <xi:include href="./parametric-curves.ptx" />
-    <xi:include href="./topology.ptx" />
-    <xi:include href="./multivariable-functions.ptx" />
-    <xi:include href="./extrema-optimization.ptx" />
+    <xi:include href="./week1.ptx" />
+    <xi:include href="./week2.ptx" />
+    <xi:include href="./week3.ptx" />
+    <xi:include href="./week4.ptx" />
+    <xi:include href="./week5.ptx" />
+    <xi:include href="./week6.ptx" />
+    <xi:include href="./week7.ptx" />
+    <xi:include href="./week8.ptx" />
+    <xi:include href="./week9.ptx" />
+    <xi:include href="./week10.ptx" />
+    <xi:include href="./week11.ptx" />
+    <xi:include href="./week12.ptx" />
     <backmatter>
     </backmatter>
   </book>

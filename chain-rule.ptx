@@ -1,76 +1,105 @@
 <section xml:id="chain-rule">
   <title>The Chain Rule</title>
-  <p>
-    We defined partial derivatives to measure rates of change in a particular variable.
-    We extended this to change in any unit direction with directional derivatives.
-    We can extend this even further,
-    but considering the change in a function as we move along a
-    <em>parametric curve</em> in the domain.
-  </p>
-  <p>
-    Let <m>f(x,y,z): \RR^3 \rightarrow\RR</m>,
-    be a potential energy function.
-    Let <m>\gamma(t) = (x(t),
-    y(t), z(t))</m> be a curve moving through <m>\RR^3</m>.
-    If this is a potential energy function,
-    we want to know how quickly we gain and/or lose energy moving along the path <m>\gamma</m>.
-    The energy along <m>\gamma</m> is <m>f(\gamma(t)) = f(x(t), y(t),
-    z(t))</m>.
-    The rate of change is <m>\frac{df}{dt}</m>.
-    But now <m>f</m> is a composition,
-    <m>f(\gamma(t))</m>, so this must be a chain rule calculation.
-    What is the chain rule when we have three
-    (or more)
-    components?.
-  </p>
-  <proposition>
-    <statement>
-      <p>
-        (The Chain Rule) Let <m>f: \RR^n \rightarrow \RR</m> be a scalar function and
-        <m>\gamma(t)</m> a parametric curve in <m>\RR^n</m> inside the domain of <m>f</m>.
-        The derivative of <m>f</m> along <m>\gamma</m> is
-        <me>
-          \frac{d}{dt} f(\gamma(t)) = \frac{\del f}{\del x_1} \frac{dx_1}{dt} + \frac{\del f}{\del x_2} \frac{dx_2}{dt} + \ldots + \frac{\del f}{\del x_n} \frac{dx_n}{dt}
-        </me>
-      </p>
-      <p>
-        The total rate of change is the sum of the rates of changes in each of the variables.
-      </p>
-    </statement>
-  </proposition>
-  <p>
-    For reference, here is the chain rule in <m>\RR^3</m>.
-    <me>
-      \frac{d}{dt} f((x(t), y(t), z(t)) = \frac{\del f}{\del x} \frac{dx}{dt} + \frac{\del f}{\del y} \frac{dy}{dt} + \frac{\del f}{\del z} \frac{dz}{dt}
-    </me>
-  </p>
-  <example>
-    <statement>
-      <p>
-        Consider the potential gravitational energy function
-        <me>
-          P = - \frac{GmM}{r} = \frac{-GmM}{\sqrt{x^2 + y^2 + z^2}}
-        </me>
-      </p>
-      <p>
-        If we move along a curve <m>\gamma</m>,
-        it is nice to know how the potential energy changes.
-        A helical path out of the gravity well might be <m>\gamma(t) = (\sin t, \cos t, t)</m>.
-        We differentiate along this path using the chain rule.
-        <md>
-          <mrow>\frac{dP}{dt} \amp  = \frac{\del P}{\del x} \frac{dx}{dt} + \frac{\del P}{\del y} \frac{dy}{dt} + \frac{\del P}{\del z} \frac{dz}{dt}</mrow>
-          <mrow>\amp  = \frac{GmMx}{(x^2 + y^2 + z^2)^{\frac{3}{2}}} \frac{dx}{dt} + \frac{GmMy}{(x^2 + y^2 + z^2)^{\frac{3}{2}}} \frac{dy}{dt} + \frac{GmMz}{(x^2 + y^2 + z^2)^{\frac{3}{2}}} \frac{dz}{dt}</mrow>
-          <mrow>\amp  = \frac{GmM\sin t}{(1 + t^2)^{\frac{3}{2}}} \cos t + \frac{GmM\cos t}{(1 + t^2)^{\frac{3}{2}}} (-\sin t) + \frac{GmMt}{(1 + t^2)^{\frac{3}{2}}} 1</mrow>
-          <mrow>\amp  = \frac{GmMt}{\sqrt{(1+t^2)^3}}</mrow>
-        </md>
-      </p>
-      <p>
-        Notice that if we let <m>|\gamma(t)| = \sqrt{1 + t^2}</m> at the start,
-        we could have written <m>P(t) = \frac{-GmM}{|\gamma(t)|} = \frac{-GmM}{\sqrt{1+t^2}}</m> and the
-        <m>P^\prime(t) = \frac{GmMt}{\sqrt{(1+t^2)^3}}</m> could have been calculated directly.
-        That would have been easier,
-        but its nice to get confirmation that working with the chain rule leads to the right result.
-      </p>
-    </statement>
-  </example>
+  <subsection xml:id="multivariable-composition">
+    <title>Multivariable Composition</title>
+    <p>
+     We defined partial derivatives to measure rates of change in a
+     particular variable. We extended this to change in any unit
+     direction with directional derivatives. We can extend this even
+     further, but considering the change in a function as we move
+     along a <em>parametric curve</em> in the domain.
+    </p>
+    <p>
+      Let <m>f(x,y,z): \RR^3 \rightarrow\RR</m>, be a potential energy
+      function. Let <m>\gamma(t) = (x(t), y(t), z(t))</m> be a curve
+      moving through <m>\RR^3</m>. If this is a potential energy
+      function, we want to know how quickly we gain and/or lose energy
+      moving along the path <m>\gamma</m>. The energy along
+      <m>\gamma</m> is <m>f(\gamma(t)) = f(x(t), y(t), z(t))</m>. The
+      rate of change is <m>\frac{df}{dt}</m>. But now <m>f</m> is a
+      composition, <m>f(\gamma(t))</m>, so this must be a chain rule
+      calculation. What is the chain rule when we have three (or
+      more) components?.
+    </p>
+  </subsection>
+  <subsection xml:id="chain-rule-statement">
+  <title>The Chain Rule</title>
+    <proposition>
+      <statement>
+        <p>
+          (The Chain Rule) Let <m>f: \RR^n \rightarrow \RR</m> be a
+          scalar function and <m>\gamma(t)</m> a parametric curve in
+          <m>\RR^n</m> inside the domain of <m>f</m>. The derivative
+          of <m>f</m> along <m>\gamma</m> is
+          <me>
+            \frac{d}{dt} f(\gamma(t)) = \frac{\del f}{\del x_1}
+            \frac{dx_1}{dt} + \frac{\del f}{\del x_2} \frac{dx_2}{dt}
+            + \ldots + \frac{\del f}{\del x_n} \frac{dx_n}{dt}
+          </me>
+        </p>
+        <p>
+          The total rate of change is the sum of the rates of changes
+          in each of the variables.
+        </p>
+      </statement>
+    </proposition>
+    <p>
+      For reference, here is the chain rule in <m>\RR^3</m>.
+      <me>
+        \frac{d}{dt} f((x(t), y(t), z(t)) = \frac{\del f}{\del x}
+        \frac{dx}{dt} + \frac{\del f}{\del y} \frac{dy}{dt} +
+        \frac{\del f}{\del z} \frac{dz}{dt}
+      </me>
+    </p>
+  </subsection>
+  <subsection xml:i="chain-rule-examples">
+    <title>Chain Rule Examples</title>
+    <example>
+      <statement>
+        <p>
+          Consider the potential gravitational energy function
+          <me>
+            P = - \frac{GmM}{r} = \frac{-GmM}{\sqrt{x^2 + y^2 + z^2}}
+          </me>
+        </p>
+        <p>
+          If we move along a curve <m>\gamma</m>, it is nice to know
+          how the potential energy changes. A helical path out of the
+          gravity well might be <m>\gamma(t) = (\sin t, \cos t,
+          t)</m>. We differentiate along this path using the chain
+          rule.
+          <md>
+            <mrow>
+              \frac{dP}{dt} \amp = \frac{\del P}{\del x}
+              \frac{dx}{dt} + \frac{\del P}{\del y} \frac{dy}{dt} +
+              \frac{\del P}{\del z} \frac{dz}{dt}
+            </mrow>
+            <mrow>
+              \amp = \frac{GmMx}{(x^2 + y^2 + z^2)^{\frac{3}{2}}}
+              \frac{dx}{dt} + \frac{GmMy}{(x^2 + y^2 +
+              z^2)^{\frac{3}{2}}} \frac{dy}{dt} + \frac{GmMz}{(x^2 +
+              y^2 + z^2)^{\frac{3}{2}}} \frac{dz}{dt}
+            </mrow>
+            <mrow>
+              \amp = \frac{GmM\sin t}{(1 + t^2)^{\frac{3}{2}}} \cos t
+              + \frac{GmM\cos t}{(1 + t^2)^{\frac{3}{2}}} (-\sin t) +
+              \frac{GmMt}{(1 + t^2)^{\frac{3}{2}}} 1
+            </mrow>
+            <mrow>
+              \amp = \frac{GmMt}{\sqrt{(1+t^2)^3}}
+           </mrow>
+          </md>
+        </p>
+        <p>
+          Notice that if we let <m>|\gamma(t)| = \sqrt{1 + t^2}</m> at
+          the start, we could have written <m>P(t) =
+          \frac{-GmM}{|\gamma(t)|} = \frac{-GmM}{\sqrt{1+t^2}}</m> and
+          the <m>P^\prime(t) = \frac{GmMt}{\sqrt{(1+t^2)^3}}</m> could
+          have been calculated directly. That would have been easier,
+          but its nice to get confirmation that working with the chain
+          rule leads to the right result.
+        </p>
+      </statement>
+    </example>
+  </subsection>
 </section>

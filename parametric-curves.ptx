@@ -1,11 +1,197 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="parametric-curves">
+<section xml:id="parametric-curves">
   <title>Parametric Curves</title>
-  <xi:include  href="parametric-curves-introduction.ptx" />
-  <xi:include  href="vector-valued-functions.ptx" />
-  <xi:include  href="parametric-curves-definition.ptx" />
-  <xi:include  href="parametrization.ptx" />
-  <xi:include  href="calculus-of-parametric-curves.ptx" />
-  <xi:include  href="acceleration.ptx" />
-  <xi:include  href="conics.ptx" />
-  <xi:include  href="kepler.ptx" />
-</chapter>
+  <subsection xml:id="parametric-curves-definition">
+    <title>Definition of Parametric Cuves</title>
+    <p>
+      The major goal of this course is the extension of calculus to
+      functions with multiple variable inputs and/or outputs. In
+      <xref ref="vector-geometry">Chapter</xref>, we introduced linear
+      transformation, which were function <m>\RR^n \rightarrow
+      \RR^m</m>, but we would like to also investigate non-linear
+      functions. Parametric curves are the first foray; we allow a
+      single-input function to have a multi-variable non-linear
+      output. We interpreted parametric curves as vectors or
+      positions in some euclidean space; as such, parametric curves
+      are used to talk about motion through space. The calculus of
+      parametric curves is a way to understand the physics of such
+      motion, covering both linear and angular velocity and
+      acceleration in a nice, holistic approach. When considering
+      parametric curves, we should imagine the movement of point-like
+      objects through space under the influence of various forces.
+      Projectiles with gravity and air friction is one imporant
+      example; the motions of planets, moons and satellite under
+      gravity is another.
+    </p>
+    <p>
+      Considering the motion of stellar objects around a large gravity
+      source (such as planets, asteroids and comets around the sun),
+      we will use the caluculus of parametric curves to derive
+      Kepler's laws of planetary motion from the basic assumptions of
+      Newtonian mechanics. Kepler's laws predate Newton, but they
+      were simply observed, not derived. The fact that Newton's
+      physics, with multivariable calculus, can recover these
+      observations from first principles of motion and gravity is a
+      major accomplishment of that theory. In order to cover Kepler's
+      laws in full, these notes also include descriptions of conics as
+      parametric curves.
+    </p>
+  </subsection>
+  <subsection xml:id="parametric-curves-exmaples">
+    <title>Parametric Curves</title>
+    <figure xml:id="figure-parametric-curve1">
+      <caption>The curve <m>\gamma(t) = (\cos t, \sin t)</m></caption>
+      <image width="100%" source="images/figure10" />
+    </figure>
+    <figure xml:id="figure-parametric-curve2">
+      <caption>The curve <m>\gamma(t) = \left( \frac{1}{t} , t
+      \right)</m></caption>
+      <image width="100%" source="images/figure11" />
+    </figure>
+    <definition>
+      <statement>
+        <p>
+          A parametric curve in <m>\RR^n</m> is a continuous
+          function <m>\gamma :[a,b] \rightarrow \RR^n</m>, that is,
+          a continuous vector-valued function defined on an
+          interval. As is convention, we will typically use the
+          symbol <m>\gamma</m> for an arbitrary parametric curve.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      We identify a parametric curve with its image: that is, we
+      think of a curve as a decription of the set of points in
+      <m>\RR^n</m> which are the output of the curve. In this
+      interpretation, we think of the curve as describing motion
+      along this set: we start at the point <m>\gamma(a) \in
+      \RR^n</m> and move along the curve, ending at <m>\gamma(b) \in
+      \RR^n</m> when we get to the end of the domain.
+    </p>
+    <p>
+      The continuity condition is important, since a parametric
+      curve is a connected path. We could think of vector-valued
+      functions which jump around, but these don't really fit the
+      notion of a curve. Continuity is also necessary for
+      differentiability and we will assume (in order to avoid
+      restating it multiple times) that all our parametric curves
+      are differentiable.
+    </p>
+    <p>
+      For visualizing parametric curves, we graph only the output or
+      image of the curve. There is never a <m>t</m> axis in any of
+      these graphs; instead, the variable <m>t</m> is the parameter
+      of movement along the curve.
+    </p>
+    <example>
+      <statement>
+        <p>
+          The curve <m>\gamma(t) = (\cos t, \sin t)</m>, for <m>t
+          \in [0, 2\pi]</m> traces out a circle, as in <xref
+          ref="figure-parametric-curve1" />. 
+        </p>
+      </statement>
+    </example>
+    <p>
+      Notice that we defined this curve on the domain <m>[0,
+      2\pi]</m>. If we extend this domain, the curve just starts to
+      retrace over the circle. It's good to observe that parametric
+      curves can self-intersect and trace over themselves many
+      times.
+    </p>
+    <figure xml:id="figure-parametric-curve3">
+      <caption>The curve <m>\gamma(t) = (\cos 2t, \sin t)</m></caption>
+      <image width="100%" source="images/figure12" />
+    </figure>
+    <figure xml:id="figure-parametric-curve4">
+      <caption>The logarithmic spiral</caption>
+      <image width="100%" source="images/figure13" />
+    </figure>
+    <example>
+      <statement>
+        <p>
+          The curve <m>\gamma(t) = \left(\frac{1}{t}, t \right)</m>
+          on the domain <m>t \in \left[\frac{1}{5},5 \right]</m>
+          traces part of the graph of <m>f(x) = \frac{1}{x}</m>, as
+          in <xref ref="figure-parametric-curve2" />.
+        </p>
+      </statement>
+    </example>
+    <p>
+      Notice that this parametric curve is the graph of a
+        function, specifically the function <m>f(x) =
+      \frac{1}{x}</m> between <m>x = \frac{1}{5}</m> and
+      <m>x=5</m>. Parametric curves where one of the components
+      is just <m>t</m> can be interpreted as graphs of functions.
+    </p>
+    <example>
+      <statement>
+        <p>
+          The curve <m>\gamma(t) = (\cos 2t, \sin t)</m> on the
+          domain <m>t \in [0, 2\pi]</m> oscilates faster in the
+          <m>x</m> direction than in the <m>y</m> direction, as in
+          <xref ref="figure-parametric-curve3" />.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          A spiral in <m>\RR^2</m> is a parametric curve of the form
+          <m>\gamma(t) = (f(t) \cos t, f(t) \sin t)</m> where
+          <m>f(t)</m> is a monotonic function. It resembles the
+          circle, but the radius is either increasing or decreasing
+          as the curve traces around the circle. The curve
+          <m>\gamma(t) = (2e^{\frac{t}{4}} \cos t, 2e^{\frac{t}{4}}
+          \sin t)</m> is a logarithmic spiral, as in <xref
+          ref="figure-parametric-curve4" />.
+        </p>
+      </statement>
+    </example>
+    <figure xml:id="figure-parametric-curve5">
+      <caption>The archimedian spiral</caption>
+      <image width="100%" source="images/figure14" />
+    </figure>
+    <figure xml:id="figure-parametric-curve6">
+      <caption>
+          The curve <m>\gamma(t) = (t \cos t, t \sin t, t)</m>
+      </caption>
+      <image width="100%" source="images/figure15" />
+    </figure>
+    <example>
+      <statement>
+        <p>
+          The curve <m>\gamma(t) = (t \cos t, t \sin t)</m> is the
+          archimedian spiral, as in <xref
+          ref="figure-parametric-curve5" />. 
+        </p>
+      </statement>
+    </example>
+    <example>
+    <statement>
+      <p>
+        The curve <m>\gamma(t) = (t\cos t, t\sin t,t)</m> on
+        <m>[0,20]</m> is a spiral in <m>\RR^3</m>,as in <xref
+          ref="figure-parametric-curve6" />.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection xml:id="parametric-curves-polar-coordinates">
+    <title>Parametric Curves in Polar Coordinates</title>
+    <p>
+      Once we are comfortable with changing coordinate systems, we
+      can use any coordinate system we wish to describe parametric
+      curves. For example, polar coordinates in <m>\RR^2</m> are
+      well suited to describing any kind of object that is circular
+      in some sense. Curves in polar coordinates are given as
+      <m>\gamma(t) = (r(t), \theta(t))</m> instead of <m>\gamma(t) =
+      (x(t),y(t))</m>. The circle in parametric coordinates is
+      <m>\gamma(t) = (1, t)</m>; if we write the components
+      individually, we could write <m>\theta(t) = t</m> and <m>r(t)
+      = 1</m>. The logarithmic spiral has components <m>\theta(t) =
+      t</m> and <m>r(t) = 2e^{\frac{t}{4}}</m>. The archimedian
+      spiral has components <m>\theta(t) = t</m> and <m>r(t) =
+      t</m>.
+    </p>
+  </subsection>
+</section>

@@ -1,189 +1,238 @@
 <section xml:id="tangent-planes">
   <title>Tangent Planes</title>
-  <p>
-    In single variable calculus,
-    derivatives allowed us to find the slopes and equations of tangent lines to the graph of a function.
-    We want to extend this idea.
-    For functions of two variables,
-    we have graphs which are surfaces in <m>\RR^3</m> instead of curves in <m>\RR^2</m>.
-    These surfaces have tangent planes instead of tangent lines.
-  </p>
-  <p>
-    If we have such a function <m>f(x,y)</m> let's look at a particular point
-    <m>(a,b,f(a,b))</m> on the graph of the function.
-    We can calculate the partial derivatives <m>f_x(a,b)</m> and <m>f_y(a,b)</m>.
-    At the point <m>(a,b,f(a,b))</m>,
-    these two partial derivatives give us the rate of change in <m>x</m> and in <m>y</m>.
-    That's the slope of a tangent line in the <m>x</m> direction and a tangent line in the <m>y</m> direction.
-    We'd rather have direction vectors than slopes,
-    but we can construct these.
-    For the <m>x</m> direciton,
-    the <m>y</m> coordinate is <m>0</m> since there is no change in <m>y</m>.
-    That gives the vector <m>(1, 0, f_x(a,b))</m>.
-    Likewise in the <m>y</m> direction,
-    we have the vector <m>(0,1,f_y(a,b))</m>.
-    These are two tangent local direction vectors.
-  </p>
-  <p>
-    If we have two vectors on a plane,
-    the normal of the plane is given by the cross product.
-    So we calculate <m>(1,0, f_x(a,b)) \times (0,1, f_y(a,b)) = (-f_x(a,b), -f_y(a,b),1)</m>.
-    Therefore, we have the following result.
-  </p>
-  <proposition>
-    <statement>
+  <subsection xml:id="tangents">
+    <title>Generalizing Tangents</title>
+    <p>
+      In single variable calculus, derivatives allowed us to find the
+      slopes and equations of tangent lines to the graph of a
+      function. We want to extend this idea. For functions of two
+      variables, we have graphs which are surfaces in <m>\RR^3</m>
+      instead of curves in <m>\RR^2</m>. These surfaces have tangent
+      planes instead of tangent lines.
+    </p>
+    <p>
+      If we have such a function <m>f(x,y)</m> let's look at a
+      particular point <m>(a,b,f(a,b))</m> on the graph of the
+      function. We can calculate the partial derivatives
+      <m>f_x(a,b)</m> and <m>f_y(a,b)</m>. At the point
+      <m>(a,b,f(a,b))</m>, these two partial derivatives give us the
+      rate of change in <m>x</m> and in <m>y</m>. That's the slope of
+      a tangent line in the <m>x</m> direction and a tangent line in
+      the <m>y</m> direction. We'd rather have direction vectors than
+      slopes, but we can construct these. For the <m>x</m> direciton,
+      the <m>y</m> coordinate is <m>0</m> since there is no change in
+      <m>y</m>. That gives the vector <m>(1, 0, f_x(a,b))</m>.
+      Likewise in the <m>y</m> direction, we have the vector
+      <m>(0,1,f_y(a,b))</m>. These are two tangent local direction
+      vectors.
+    </p>
+    <p>
+      If we have two vectors on a plane, the normal of the plane is
+      given by the cross product. So we calculate <m>(1,0, f_x(a,b))
+      \times (0,1, f_y(a,b)) = (-f_x(a,b), -f_y(a,b),1)</m>.
+      Therefore, we have the following result.
+    </p>
+    <proposition>
+      <statement>
+        <p>
+          Let <m>f(x,y)</m> be a function <m>\RR^2 \rightarrow
+          \RR</m>. The equation of the tangent plane to <m>f</m> at
+          <m>(a,b,f(a,b))</m> is
+          <me>
+            z - f(a,b) = f_x(a,b) (x-a) + f_y(a,b) (y-b)
+          </me>
+        </p>
+      </statement>
+    </proposition>
+    <proof>
       <p>
-        Let <m>f(x,y)</m> be a function <m>\RR^2 \rightarrow \RR</m>.
-        The equation of the tangent plane to <m>f</m> at <m>(a,b,f(a,b))</m> is
+        We just calculated the normal at any point <m>(a,b,f(a,b))</m>
+        on the graph of the function. That vector was <m>(-f_x(a,b),
+        -f_y(a,b),1)</m>. The equation of the plane
+        is given by the dot product of the variables with the normal.
+        Here is this dot product, with an unknown value <m>c</m>.
         <me>
-          z - f(a,b) = f_x(a,b) (x-a) + f_y(a,b) (y-b)
-        </me>
-      </p>
-    </statement>
-  </proposition>
-  <proof>
-    <p>
-      We just calculated the normal at any point
-      <m>(a,b,f(a,b))</m> on the graph of the function.
-      That vector was <m>(-f_x(a,b), -f_y(a,b),1)</m>.
-      From <xref ref="standard-forms">Section</xref>
-      the equation of the plane is given by the dot product of the variables with the normal.
-      Here is this dot product, with an unknown value <m>c</m>.
-      <me>
-        - f_x(a,b) x - f_y(a,b) y + z = c
-      </me>
-    </p>
-    <p>
-      We have a point on the plane: <m>(a,b,f(a,b))</m>.
-      By substitution, we can solve for <m>c</m>.
-      <me>
-        c = f(a,b) - f_x(a,b) a - f_y(a,b) b
-      </me>
-    </p>
-    <p>
-      Putting this <m>c</m> in gives the equation of the plane.
-      <me>
-        - f_x(a,b) x - f_y(a,b) y + z = f(a,b) - f_x(a,b)a - f_y(a,b)b
-      </me>
-    </p>
-    <p>
-      From here, is it just a re-arrangement to get the form in the proposition.
-    </p>
-  </proof>
-  <example xml:id="example-tangent-plane">
-    <statement>
-      <p>
-        Consider <m>f(x,y) = \frac{1}{1 + x^2 + y^2}</m>.
-        <me>
-          \frac{\del f}{\del x} = \frac{-2x}{(1+x^2+y^2)^2} \hspace{2cm} \frac{\del f}{\del y} = \frac{-2y}{(1+x^2+y^2)^2}
+          - f_x(a,b) x - f_y(a,b) y + z = c
         </me>
       </p>
       <p>
-        At the point <m>(x,y) = (1,1)</m>,
-        we have <m>f_x(1,1) = \frac{-2}{9}</m> and <m>f_y(1,1) = \frac{-2}{9}</m>.
-        The normal is <m>\left( \frac{-2}{9}, \frac{-2}{9}, 1 \right)</m> and the point is <m>\left(1,1, \frac{1}{3} \right)</m>.
-        The tangent plane is
+        We have a point on the plane: <m>(a,b,f(a,b))</m>. By
+        substitution, we can solve for <m>c</m>.
         <me>
-          \frac{2}{9} x + \frac{2}{9} y + z = \frac{7}{9}
-        </me>.
+          c = f(a,b) - f_x(a,b) a - f_y(a,b) b
+        </me>
       </p>
       <p>
-        At the point <m>(x,y) = (0,0)</m>,
-        we have <m>f_x(0,0) = 0</m> and <m>f_y(0,0) = 0</m>.
-        The normal is <m>(0,0,1)</m> and the point is <m>(0,0,1)</m>.
-        The tangent plane is
+        Putting this <m>c</m> in gives the equation of the plane.
         <me>
-          z=1
-        </me>.
+          - f_x(a,b) x - f_y(a,b) y + z = f(a,b) - f_x(a,b)a -
+          f_y(a,b)b
+        </me>
       </p>
       <p>
-        At the point <m>(x,y) = (-2,2)</m>,
-        we have <m>f_x(-2,2) = \frac{4}{81}</m> and <m>f_y(-2,2) = \frac{-4}{81}</m>.
-        The normal is <m>\left( \frac{-4}{81}, \frac{4}{81}, 1 \right)</m> and the point is <m>\left(-2,2, \frac{1}{9} \right)</m>.
-        The tangent plane is
-        <me>
-          \frac{-4}{81} x + \frac{4}{81} y + z = \frac{1}{9}
-        </me>.
+        From here, is it just a re-arrangement to get the form in the
+        proposition.
       </p>
-    </statement>
-  </example>
-  <p>
-    The definition of tangent planes for
-    <m>f: \RR^2 \rightarrow \RR</m> extends to as many dimensions as we want.
-    A function <m>f: \RR^3 \rightarrow \RR</m> has a graph in <m>\RR^4</m>.
-    Its tangent spaces are 3-spaces in <m>\RR^4</m>.
-    We can understand those 3-spaces in a very similar method.
-    We calcluate the three local tangent directions.
-    <me>
-      v_1 = \left( 1, 0, 0, \frac{\del f}{\del x} \right) \hspace{2cm} v_2 = \left( 0, 1, 0, \frac{\del f}{\del y} \right) \hspace{2cm} v_3 = \left( 0, 0, 1, \frac{\del f}{\del z} \right)
-    </me>
-  </p>
-  <p>
-    There isn't a cross-product in <m>\RR^4</m>,
-    but we can genearlize the pattern in this case to get the normal to the tangent 3-space.
-    <me>
-      \left( - \frac{\del f}{\del x}, - \frac{\del f}{\del y}, - \frac{\del f}{\del z}, 1 \right)
-    </me>
-  </p>
-  <p>
-    The equation of the tangent 3-space at <m>(a,b,c,f(a,b,c))</m> is
-    <me>
-      w - f(a,b,c) = \frac{\del f}{\del x}(a,b,c) (x-a) + \frac{\del f}{\del y} (a,b,c) (y-b) + \frac{\del f}{\del z} (a,b,c) (z-c)
-    </me>
-  </p>
-  <p>
-    And we could extend this to <m>f: \RR^n \rightarrow \RR</m>,
-    which has a tangent hyperplane in <m>\RR^{n+1}</m>.
-    <me>
-      v_1 = \left( 1, 0, \ldots, \frac{\del f}{\del x_1} \right) \hspace{1cm} v_2 = \left( 0, 1, 0, \ldots, \frac{\del f}{\del x_2} \right) \hspace{1cm} \ldots \hspace{1cm} v_n = \left( 0, \ldots, 0, 1, \frac{\del f}{\del x_n} \right)
-    </me>
-  </p>
-  <p>
-    The normal to the tangent hyperplane is
-    <me>
-      \left( - \frac{\del f}{\del x_1}, - \frac{\del f}{\del x_2}, \ldots, - \frac{\del f}{\del x_n}, 1 \right)
-    </me>.
-  </p>
-  <p>
-    The equation of the tangent hyperplane at <m>(a_1, a_2, a_3, \ldots,
-    a_n, f(a_1, a_2, \ldots, a_n))</m> is
-    <md>
-      <mrow>x_0 - f(a_1, a_2, \ldots a_n) \amp  = \frac{\del f}{\del x_1}(a_1, a_2, \ldots a_n ) (x_1-a_2) + \frac{\del f}{\del x_2} (a_1, a_2, \ldots, a_n) (x_2-a_2) + \ldots</mrow>
-      <mrow>\amp  \hspace{1cm} \ldots + \frac{\del f}{\del x_n} (a_1, a_2, \ldots, a_n) (x_n - a_n)</mrow>
-    </md>.
-  </p>
-  <p>
-    To connect tangent (hyper)planes to tangents to parametric curves and derivatives along those curves,
-    we have the following result.
-  </p>
-  <proposition>
-    <statement>
-      <p>
-        Let <m>\gamma(t)</m> be a parametric curve in <m>\RR^{n+1}</m> and
-        <m>f: \RR^n \rightarrow \RR</m> a differentiable function.
-        Then if <m>\gamma(t)</m> lies on the graph of <m>f</m>,
-        the tangents to <m>\gamma(t)</m> must lie on the tangent planes to the graph of <m>f</m>. (All these tangent vectors are local direction vectors).
-      </p>
-    </statement>
-  </proposition>
-  <example>
-    <statement>
-      <p>
-        Consider the same function as <xref ref="example-tangent-plane">Example</xref>:
-        <m>f(x,y) = \frac{1}{1+x^2+y^2}</m>.
-        Then consider the parametric curves
-        <m>\gamma_1(t) = \left(t,1, \frac{1}{2+t^2} \right)</m> and <m>\gamma_2(t) = \left(1, t, \frac{1}{2+t^2} \right)</m>.
-        It is easy to check that both curves lie on the graph of <m>f</m> and both pass through the point <m>\left(1,1,\frac{1}{3} \right)</m> at <m>t=1</m>.
-        Then we can calculate the tangents to the curves at that point and the plane they span.
-        <men>
-          \begin{array}{*4{>{\displaystyle}l}} \gamma_1^\prime(t) \amp  = \left( 1, 0 \frac{-2t}{(2+t^2)^2} \right) \amp \hspace{2cm} \gamma_2^\prime(t) \amp  = \left( 0, 1 \frac{-2t}{(2+t^2)^2} \right) \\[1em] \gamma_1^\prime(1) \amp  = \left( 1, 0, \frac{-2}{9} \right) \amp \hspace{2cm} \gamma_2^\prime(1) \amp  = \left( 0, 1, \frac{-2}{9} \right) \\[1em] \gamma_1^\prime(1) \times \gamma_2^\prime(1) \amp  = \left( \frac{2}{9}, \frac{2}{9}, 1 \right) \amp  \amp \end{array}
-        </men>
-      </p>
-      <p>
-        This gives exactly the same normal at the same point <m>\left( 1,1,\frac{1}{3} \right)</m>,
-        so the same plane.
-        We can think of tangent planes at the environment for tangents to curves which lie on the graph of the function.
-      </p>
-    </statement>
-  </example>
+    </proof>
+  </subsection>
+  <subsection xml:id="tangent-examples">
+    <title>Tangent Plane Examples</title>
+    <example xml:id="example-tangent-plane">
+      <statement>
+        <p>
+          Consider <m>f(x,y) = \frac{1}{1 + x^2 + y^2}</m>.
+          <me>
+            \frac{\del f}{\del x} = \frac{-2x}{(1+x^2+y^2)^2}
+            \frac{\del f}{\del y} =
+            \frac{-2y}{(1+x^2+y^2)^2}
+          </me>
+        </p>
+        <p>
+          At the point <m>(x,y) = (1,1)</m>, we have <m>f_x(1,1) =
+          \frac{-2}{9}</m> and <m>f_y(1,1) = \frac{-2}{9}</m>. The
+          normal is <m>\left( \frac{-2}{9}, \frac{-2}{9}, 1
+          \right)</m> and the point is <m>\left(1,1, \frac{1}{3}
+          \right)</m>. The tangent plane is
+          <me>
+            \frac{2}{9} x + \frac{2}{9} y + z = \frac{7}{9}
+          </me>.
+        </p>
+        <p>
+          At the point <m>(x,y) = (0,0)</m>, we have <m>f_x(0,0) =
+          0</m> and <m>f_y(0,0) = 0</m>. The normal is <m>(0,0,1)</m>
+          and the point is <m>(0,0,1)</m>. The tangent plane is
+          <me>
+            z=1
+          </me>.
+        </p>
+        <p>
+          At the point <m>(x,y) = (-2,2)</m>, we have <m>f_x(-2,2) =
+          \frac{4}{81}</m> and <m>f_y(-2,2) = \frac{-4}{81}</m>. The
+          normal is <m>\left( \frac{-4}{81}, \frac{4}{81}, 1
+          \right)</m> and the point is <m>\left(-2,2, \frac{1}{9}
+          \right)</m>. The tangent plane is
+          <me>
+            \frac{-4}{81} x + \frac{4}{81} y + z = \frac{1}{9}
+          </me>.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection xml:id="tangents-higher-dimensions">>
+    <title>Higher Dimensions</title>
+    <p>
+      The definition of tangent planes for <m>f: \RR^2 \rightarrow
+      \RR</m> extends to as many dimensions as we want. A function
+      <m>f: \RR^3 \rightarrow \RR</m> has a graph in <m>\RR^4</m>.
+      Its tangent spaces are 3-spaces in <m>\RR^4</m>. We can
+      understand those 3-spaces in a very similar method. We
+      calcluate the three local tangent directions.
+      <me>
+        v_1 = \left( 1, 0, 0, \frac{\del f}{\del x} \right)
+        v_2 = \left( 0, 1, 0, \frac{\del f}{\del y}
+        \right) v_3 = \left( 0, 0, 1, \frac{\del f}{\del
+        z} \right)
+      </me>
+    </p>
+    <p>
+      There isn't a cross-product in <m>\RR^4</m>, but we can
+      genearlize the pattern in this case to get the normal to the
+      tangent 3-space.
+      <me>
+        \left( - \frac{\del f}{\del x}, - \frac{\del f}{\del y}, -
+        \frac{\del f}{\del z}, 1 \right)
+      </me>
+    </p>
+    <p>
+      The equation of the tangent 3-space at <m>(a,b,c,f(a,b,c))</m> is
+      <me>
+        w - f(a,b,c) = \frac{\del f}{\del x}(a,b,c) (x-a) + \frac{\del
+        f}{\del y} (a,b,c) (y-b) + \frac{\del f}{\del z} (a,b,c)
+        (z-c)
+      </me>
+    </p>
+    <p>
+      And we could extend this to <m>f: \RR^n \rightarrow \RR</m>,
+      which has a tangent hyperplane in <m>\RR^{n+1}</m>.
+      <me>
+        v_1 = \left( 1, 0, \ldots, \frac{\del f}{\del x_1} \right)
+        v_2 = \left( 0, 1, 0, \ldots, \frac{\del f}{\del
+        x_2} \right) \ldots v_n = \left( 0,
+        \ldots, 0, 1, \frac{\del f}{\del x_n} \right)
+      </me>
+    </p>
+    <p>
+      The normal to the tangent hyperplane is
+      <me>
+        \left( - \frac{\del f}{\del x_1}, - \frac{\del f}{\del x_2},
+        \ldots, - \frac{\del f}{\del x_n}, 1 \right)
+      </me>.
+    </p>
+    <p>
+      The equation of the tangent hyperplane at <m>(a_1, a_2, a_3,
+      \ldots, a_n, f(a_1, a_2, \ldots, a_n))</m> is
+      <md>
+        <mrow>
+          x_0 - f(a_1, a_2, \ldots a_n) \amp = \frac{\del f}{\del
+          x_1}(a_1, a_2, \ldots a_n ) (x_1-a_2) + \frac{\del f}{\del
+          x_2} (a_1, a_2, \ldots, a_n) (x_2-a_2) + \ldots
+        </mrow>
+        <mrow>
+          \amp \ldots + \frac{\del f}{\del x_n} (a_1,
+          a_2, \ldots, a_n) (x_n - a_n) 
+        </mrow>
+      </md>.
+    </p>
+    <p>
+      To connect tangent (hyper)planes to tangents to parametric
+      curves and derivatives along those curves, we have the following
+      result.
+    </p>
+    <proposition>
+      <statement>
+        <p>
+          Let <m>\gamma(t)</m> be a parametric curve in
+          <m>\RR^{n+1}</m> and <m>f: \RR^n \rightarrow \RR</m> a
+          differentiable function. Then if <m>\gamma(t)</m> lies on
+          the graph of <m>f</m>, the tangents to <m>\gamma(t)</m> must
+          lie on the tangent planes to the graph of <m>f</m>. (All
+          these tangent vectors are local direction vectors).
+        </p>
+      </statement>
+    </proposition>
+    <example>
+      <statement>
+        <p>
+          Consider the same function as <xref
+          ref="example-tangent-plane">Example</xref>: <m>f(x,y) =
+          \frac{1}{1+x^2+y^2}</m>. Then consider the parametric
+          curves <m>\gamma_1(t) = \left(t,1, \frac{1}{2+t^2}
+          \right)</m> and <m>\gamma_2(t) = \left(1, t, \frac{1}{2+t^2}
+          \right)</m>. It is easy to check that both curves lie on
+          the graph of <m>f</m> and both pass through the point
+          <m>\left(1,1,\frac{1}{3} \right)</m> at <m>t=1</m>. Then we
+          can calculate the tangents to the curves at that point and
+          the plane they span.
+          <me>
+            \begin{array}{*4{>{\displaystyle}l}} 
+              \gamma_1^\prime(t) \amp = \left( 1, 0
+                \frac{-2t}{(2+t^2)^2} \right) \amp \gamma_2^\prime(t)
+                \amp = \left( 0, 1 \frac{-2t}{(2+t^2)^2} \right) \\ 
+              \gamma_1^\prime(1) \amp = \left( 1, 0, \frac{-2}{9}
+                \right) \amp \gamma_2^\prime(1) \amp =
+                \left( 0, 1, \frac{-2}{9} \right) \\ 
+              \gamma_1^\prime(1) \times \gamma_2^\prime(1) \amp =
+                \left( \frac{2}{9}, \frac{2}{9}, 1 \right) \amp \amp 
+            \end{array}
+          </me>
+        </p>
+        <p>
+          This gives exactly the same normal at the same point
+          <m>\left( 1,1,\frac{1}{3} \right)</m>, so the same plane. We
+          can think of tangent planes at the environment for tangents
+          to curves which lie on the graph of the function.
+        </p>
+      </statement>
+    </example>
+  </subsection>
 </section>

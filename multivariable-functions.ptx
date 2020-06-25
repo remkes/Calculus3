@@ -1,13 +1,496 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="multivariable-functions">
-  <title>Multivariable Functions and Partial Differentiation</title>
-  <xi:include  href="multivariable-functions-definitions.ptx" />
-  <xi:include  href="graphs.ptx" />
-  <xi:include  href="limits.ptx" />
-  <xi:include  href="partial-derivatives.ptx" />
-  <xi:include  href="pdes.ptx" />
-  <xi:include  href="gradients.ptx" />
-  <xi:include  href="directional-derivatives.ptx" />
-  <xi:include  href="chain-rule.ptx" />
-  <xi:include  href="tangent-planes.ptx" />
-  <xi:include  href="linear-approximation.ptx" />
-</chapter>
+<section xml:id="multivariable-functions">
+  <title>Multivariable Function</title>
+  <subsection xml:id="multivariable-definitions">
+    <title>Definitions</title>
+    <p>
+      First year calculus dealt with functions <m>\RR \rightarrow \RR</m>.
+      Parametric curves dealt with functions <m>\RR \rightarrow \RR^n</m>.
+      Multivariable functions are functions <m>\RR^n \rightarrow \RR^m</m>.
+      They having an arbitrary number of inputs and outputs.
+      We can distinguish between two main categories, classified by output.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          A <term>scalar function</term> is a function <m>f: \RR^n
+          \rightarrow \RR</m>.
+        </p>
+      </statement>
+    </definition>
+    <definition>
+      <statement>
+        <p>
+          A <term>vector function</term> is a function <m>f: \RR^n
+          \rightarrow \RR^m</m> for <m>m > 1</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Vector functions are the most difficult and complicated, since
+      they have both multiple inputs and multiple outputs. The study
+      of vector functions is the major topic of Calculus IV. For the
+      remainder of these notes, we will restrict our attention to
+      scalar functions.
+    </p>
+    <example>
+      <statement>
+        <p>
+          There are many familiar scalar functions. The potential
+          energy due to gravity on an object with mass <m>m</m> and
+          height <m>h</m> above the surface of the earth is <m>PE =
+          mgh</m> is a two variable function. In a circuit, voltage
+          in terms of current and reisistance is <m>V = IR</m> is
+          another two variable function. The force of gravity between
+          two celestial object <m>F = -MmG/r^2</m> is a three-variable
+          functions which depends on both masses, <m>M</m> and
+          <m>m</m>, as well as the distance between them <m>r</m>.
+          Any quantity which can vary in three dimensional space, such
+          a pressure, temperature, humidity, is a functions of the
+          three variables of location <m>(x,y,z)</m>.
+        </p>
+      </statement>
+    </example>
+    <example xml:id="example-multivariable1">
+      <statement>
+        <p>
+          Here are some explicit functions <m>\RR^2 \rightarrow \RR</m>.
+          <md>
+            <mrow>  
+              f_1(x,y) \amp = x-y
+            </mrow>
+            <mrow>
+              f_2(x,y) \amp = \sin (xy)
+            </mrow>
+            <mrow>
+              f_3(x,y) \amp = \frac{1}{2} x^y
+            </mrow>
+            <mrow>
+              f_4(x,y) \amp = x^2 + y^2 - xy
+            </mrow>
+            <mrow>
+              f_5(x,y) \amp = \sqrt{x} + \sqrt{y}
+            </mrow>
+            <mrow>
+              f_6(x,y) \amp = \sqrt{4 - x^2 -y^2}
+            </mrow>
+          </md>
+        </p>
+        <p>
+          Any other algebraic expression in <m>x</m> and <m>y</m>
+          would also define a function <m>\RR^2 \rightarrow \RR</m>.
+        </p>
+      </statement>
+    </example>
+    <definition>
+      <statement>
+        <p>
+          The <term>domain</term> of a scalar function <m>f: \RR^n
+          \rightarrow \RR</m> is the subset of <m>\RR^n</m> where the
+          function can be defined.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Domain has the same kind of restrictions as for single-variable
+      functions: no division by zero, no negative even roots, no
+      negative logarithms, etc. However, now that the domain
+      restrictions may apply to any of the input variables. The
+      domains themselves may be very complicated subsets of
+      <m>\RR^n</m>.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Let's look at the domains of the five explicitly stated
+          functions in the <xref
+          ref="example-multivariable1">Example</xref>
+          <ul>
+            <li>
+              <p>
+                <m>f_1</m> and <m>f_4</m> are polynomials (in two
+                variables), so there are no restrictions. Their
+                domain is <m>\RR^2</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f_2</m> is a sine function, which again imposes no
+                restrictions, so it also has domain <m>\RR^2</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f_5</m> has two square roots, one involving
+                <m>x</m> and one involving <m>y</m>. Therefore, we
+                need <m>x\geq 0</m> and <m>y \geq 0</m> to defined
+                <m>f_5</m>. That domain is the positive <m>x</m> and
+                <m>y</m> quadrant, including the origin and the
+                positive pieces of both axes.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f_6</m> also has a square root. To ensure that the
+                square root has a positive argument, we need <m>4 -
+                x^2 - y^2 \geq 0</m>, or <m>x^2 + y^2 \leq 4</m>.
+                This domain is a a circular disc of radius <m>2</m>,
+                including its boundary.
+              </p>
+            </li>
+            <li>
+              <p>
+                Lastly, <m>f_3</m>, has an strange exponential. This
+                leads to very strange domain behaviour. If <m>y</m>
+                is an integer, <m>x</m> can be any non-zero real
+                number. If <m>y</m> is a fraction, <m>x</m> must be
+                positive is the denominator of <m>y</m> is even, to
+                avoid square roots of negative numbers. If <m>y</m>
+                is irrational, <m>x</m> must be positive. This all
+                leads to a very complicated domain in <m>\RR^2</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection xml:id="graphs">
+    <title>Geometry and Graphs of Functions</title>
+    <p>
+      The graph of a single variable <m>f: \RR \rightarrow \RR</m> was
+      a curve in <m>\RR^2</m> where one axis was input and one axis
+      was output. The idea generalizes, so a graph has to show both
+      the inputs and output.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          Let <m>A \subset \RR^n</m> be the domain of a scalar
+          function <m>f: A \rightarrow \RR</m>. The
+          <term>graph</term> of the scalar function is the subset of
+          <m>\RR^{n+1}</m> consisting of all point <m>(x_1, x_2,
+          \ldots, x_n, f(x_1, x_2, \ldots, x_n))</m> for <m>(x_1, x_2,
+          \ldots x_n) \in A</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Since we have to show input and outputs, the graph need many
+      dimensions. If <m>n \geq 3</m>, then the graph is in
+      <m>\RR^4</m> or a higher dimensional space. We can only
+      actually see graphs of scalar function on <m>\RR^2</m>.
+    </p>
+    <p>
+      The <m>\RR^2</m> case is useful to understand the general
+      situation. In this case, <m>x</m> and <m>y</m> are in input
+      (domain) and <m>z</m> is the output (range). We can think of
+      the graph as a height function: over some point <m>(x,y)</m> in
+      the domain of <m>f</m>, the graph sits at some height <m>z =
+      f(x,y)</m>.
+    </p>
+    <figure xml:id="figure-3d-graph1">
+      <caption>
+        The graph of <m>f(x,y) = \frac{5}{x^2 + y^2 + 1}</m>
+      </caption>
+      <image width="100%" source="images/figure37" />
+    </figure>
+    <p>
+      We used graphs extensively in single-variable calculus to
+      understand derivatives and integrals: derivative were slopes of
+      tangent lines and integrals were area under curves. We want to
+      generalize this to the new higher-dimensional graphs. For
+      functions <m>f:\RR^2 \rightarrow \RR</m>, it's not too difficult
+      to extend the notions. Instead of tangent line, we now have
+      <em>tangent planes</em>. Instead of area under the curve, we
+      have volume under the surface. For <m>f: \RR^n \rightarrow
+      \RR</m>, we have tangent n-spaces and (n+1)-hyper-volume under
+      the n-dimensions graph surface.
+    </p>
+  </subsection>
+  <subsection xml:id="contour-plots">
+    <title>Contour Plots</title>
+    <p>
+      As an alternative to conventional graphs of function, a nice way
+      to visualize height functions is as topological maps. We refer
+      to these visualizations as contour plots.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          Let <m>f: A \rightarrow \RR</m> be a scalar function for a
+          domain <m>A \subset \RR^2</m>. A <term>countour plot</term>
+          for <m>f</m> is a plot of curves in <m>\RR^2</m> where each
+          curve is a locus of the form <m>f(x,y) = c</m> for some
+          constant <m>c</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      A contour plot has a series of implicit curves at constant
+      elevation; the constants <m>c</m> are the elevation. It shows
+      curves where the function takes a specific value. By looking at
+      the relationships of the curves, we can intuit how the function
+      behaves.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Consider <m>f(x,y) = \frac{5}{x^2+y^2+1}</m>. It's graph is
+          <xref ref="figure-3d-graph1">Figure</xref>. This function
+          has a simple hill at the origin and slopes down in all
+          direction. The contours are loci of the form
+          <m>\frac{5}{x^2 + y^2 + 1} = c</m>, which can be rearranged
+          as <m>\frac{5}{c} - 1 = x^2 + y^2</m>. These contours are
+          all circles, and are shown in <xref
+          ref="figure-contour-plot1">Figure</xref>.
+        </p>
+      </statement>
+    </example>
+    <figure xml:id="figure-contour-plot1">
+      <caption>
+        The circular contours of <m>f(x,y) = \frac{5}{x^2 + y^2 +
+        1}</m>
+      </caption>
+      <image width="100%" source="images/figure32" />
+    </figure>
+    <example>
+      <statement>
+        <p>
+          Contour diagrams can show many behaviours. <xref
+          ref="figure-contour-plot2">Figure</xref> shows a pass or
+          saddle point. (The saddle point will be formally defined in
+          <xref ref="def-saddle-point">Definition</xref>.
+        </p>
+      </statement>
+    </example>
+    <figure xml:id="figure-contour-plot2">
+      <caption>
+        The contours of a saddle point
+      </caption>
+      <image width="100%" source="images/figure34" />
+    </figure>
+    <p>
+      These contour plots lead us to a general definition.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          Let <m>f: \RR^n \rightarrow \RR</m> be a scalar function. A
+          <term>level set</term> for <m>f</m> is a subset of
+          <m>\RR^n</m> given by the equation <m>f(x_1, x_2, \ldots,
+          x_n) = c</m> for some <m>c \in \RR</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Then a countour plot is just a drawing of a variety of level
+      sets of a function <m>\RR^2 \rightarrow \RR</m>. It is useful
+      to see where a function is constant. The resulting shapes tell
+      us a great deal about the behaviour of the function. Level sets
+      for <m>f: \RR^3 \rightarrow \RR</m> are called level surfaces.
+    </p>
+  </subsection>
+  <subsection xml:id="limits">
+    <title>Limits of Multivariable Functions</title>
+    <p>
+      We want to re-establish the tools of calculus for multi-variable
+      functions. As with single-variable functions, our starting
+      point is limits. Let's start with the full, formal,
+      <m>\epsilon-\delta</m> definition.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          Let <m>f: \RR^n \rightarrow \RR</m> be a function. Let
+          <m>(a_1, a_2, \ldots, a_n)</m> be a point in <m>\RR^n</m>.
+          Then the statement
+          <me>
+            \lim_{(x_1, x_2, \ldots, x_n) \rightarrow (a_1, a_2,
+            \ldots, a_n)} f(x_1, x_2, \ldots, x_n) = L
+          </me>
+          means that <m>\forall \epsilon > 0</m> <m>\exists \delta >
+          0</m> such that if <m>|(x_1, x_2, \ldots, x_n) - (a_1, a_2,
+          \ldots, a_n)| \lt \delta</m> then <m>|f(x_1, x_2, \ldots,
+          x_n) - L| \lt  \epsilon</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      The definition is essentially the same as the single-variable
+      definition: as the input gets closer and closer to a specific
+      point, the output gets closer and closer to a fixed value
+      <m>L</m>. The only issue is that <sq>closer and closer</sq> now
+      happens in <m>\RR^n</m> instead of <m>\RR</m>.
+    </p>
+    <p>
+      In <m>\RR</m>, we only had two directions of approach: from the
+      left and from the right. If the behaviour from both sides was
+      the same, we said the limit existed. In <m>\RR^n</m> for <m>n
+      \geq 2</m>, we have infinitely many ways to approach any given
+      point. We can approach along lines in infinitely many
+      directions out from the point. Even more, we can approach along
+      other paths, such as spiral paths or stranger jagged paths.
+      This makes it much more difficult to determine the behaviour and
+      much more difficult to prove existence of various limits.
+      However, we do have some good news. First, the definition of
+      continuity remains the same.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          A function <m>f: \RR^n \rightarrow \RR</m> is called
+          continuous at <m>(a_1, a_2, \ldots, a_n)</m> if the limit
+          approaching <m>(a_1,a_2, \ldots, a_n)</m> exists and is the
+          same as <m>f(a_1,a_2, \ldots, a_n)</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      So limits for continuous functions are still reasonable: we just
+      evaluate. But what functions are continuous?
+    </p>
+    <proposition>
+      <statement>
+        <p>
+          A function <m>f: \RR^n \rightarrow \RR</m> is continuous if
+          and only if it is continuous independently in each of its
+          variables.
+        </p>
+      </statement>
+    </proposition>
+    <p>
+      This is the first application of a very important technique:
+      treating the function as a function of only one of the variables
+      and ignoring the other, pretending that they are constant. If
+      we do that, we get <m>n</m> different single variable functions.
+      The proposition says that the function is continuous in the new
+      definition if and only if all of the <m>n</m> different single
+      variable functions are continuous.
+    </p>
+    <p>
+      This proposition tells us how to recognize continuous functions.
+      Anything involving polynomials, roots, rational functions, trig,
+      exponentials and logarithms is continuous on its domain.
+    </p>
+    <p>
+      As we mentioned before, proving the existence of limits is
+      difficult. However, the algebraic techniques of first year
+      calculus can still work for calculations. Here are some
+      examples.
+    </p>
+    <example>
+      <statement>
+        <md>
+          <mrow>
+            \lim_{(x,y) \rightarrow (0,0)} \frac{x^2 - y^2}{x-y} \amp
+            = \lim_{(x,y) \rightarrow (0,0)} \frac{(x-y)(x+y)}{(x-y)}
+          </mrow>
+          <mrow>
+            \amp = \lim_{(x,y) \rightarrow (0,0)} x+y = 0 + 0 = 0
+            </mrow>
+          <mrow>
+            \lim_{(x,y) \rightarrow (4,1)} \frac{ xy - 4y^2}{\sqrt{x}
+            - 2\sqrt{y}} \amp = \lim_{(x,y) \rightarrow (4,1)}
+            \frac{y(\sqrt{x} - 2\sqrt{y})(\sqrt{x} + 2
+            \sqrt{y})}{\sqrt{x} - 2\sqrt{y}}
+          </mrow>
+          <mrow>
+            \amp = \lim_{(x,y) \rightarrow (4,1)} \sqrt{x} + 2
+            \sqrt{y} = \sqrt{4} + 2 \sqrt{1} = 2 + 2 = 4
+          </mrow>
+        </md>
+      </statement>
+    </example>
+    <figure xml:id="figure-3d-graph2">
+      <caption>
+        The graph of <m>f(x) = \frac{(x+y)^2}{x^2+y^2}</m>
+      </caption>
+      <image width="100%" source="images/figure38" />
+    </figure>
+    <example>
+      <statement>
+        <me>
+          \lim_{(x,y) \rightarrow (0,0)} \frac{(x+y)^2}{x^2 + y^2}
+        </me>
+        <p>
+          Let's approach this along the line <m>y = mx</m>. That lets
+          us replace <m>y</m> with <m>mx</m> in the calculation and
+          the limit becuase <m>x \rightarrow 0</m>.
+          <md>
+            <mrow>
+              \lim_{x \rightarrow 0} \frac{(x+mx)^2}{x^2 + m^2x^2}
+              \amp = \lim_{x \rightarrow 0} \frac{x^2 + 2mx + m^2
+              x^2}{x^2 + m^2 x^2}
+            </mrow>
+            <mrow>
+              \amp = \lim_{x \rightarrow 0}
+              \frac{x^2(1+m)^2}{x^2(1+m^2)} = \frac{(1+m)^2}{1+m^2}
+          </mrow>
+          </md>
+        </p>
+        <p>
+          This limit depend on the choice of <m>m</m>!  We can get
+          infinitely many values (all between 0 and 1) out of this
+          limit depending on which line we use to approach
+          <m>(0,0)</m>. With all these possible answers, the limit
+          cannot exist. It is interesting to try to visualize the
+          graph: as we get close to zero, there are pieces of the
+          graph getting close to any number between <m>0</m> and
+          <m>1</m>. <xref ref="figure-3d-graph2">Figure</xref> shows
+          some of this behaviour: approaching from the front of figure
+          leads to <m>0</m>, but approaching from the sides leads to
+          larger numbers. (The graph is slightly flawed, due to the
+          graphing algorithm. The two cliffs should meet, even though
+          the graph shows a gap between them. Where the two cliffs
+          meet is the line with all the problematic limits.)
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          In this example, we approach along parabolic paths of the
+          form <m>x = m y^2</m> and, like the previous example, get a
+          limit that depends on the path of approach.
+          <me>
+            \lim_{(x,y) \rightarrow (0,0)} \frac{3xy^2}{x^2 + y^2} =
+            \lim_{(x,y) \rightarrow (0,0)} \frac{3xy^2}{x^2 + y^2} =
+            \lim_{y \rightarrow 0} \frac{3my^4}{m^2 y^4 + y^4} =
+            \frac{3m}{m+1}
+          </me>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <md>
+          <mrow>
+            \lim_{(x,y) \rightarrow (1,2)} \frac{\sqrt{y} -
+            \sqrt{x+1}}{y-x-1} \amp = \lim_{(x,y) \rightarrow (1,2)}
+            \frac{y-x-1}{(y-x-1)(\sqrt{y} + \sqrt{x+1})}
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{\sqrt{2} + \sqrt{2}} =
+            \frac{1}{2\sqrt{2}}
+          </mrow>
+        </md>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Sometime we can make reasonable conclusion independent of
+          path.
+          <me>
+            \lim_{(x,y) \rightarrow (0,0)} \frac{\sin(x+y)}{x+y}
+          </me>
+        </p>
+        <p>
+          We can assume any path <m>y = f(x)</m> of approach and still
+          set <m>u = x+y</m>, which turns this into a limit of
+          <m>\sin(u)/u</m>, which tends to 1.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+</section>

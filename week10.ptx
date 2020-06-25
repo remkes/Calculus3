@@ -1,0 +1,8 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="week10">
+  <title>Week 10</title>
+  <xi:include href="directional-derivatives.ptx" />
+  <xi:include href="chain-rule.ptx" />
+  <xi:include href="tangent-planes.ptx" />
+  <xi:include href="linear-approximation.ptx" />
+  <xi:include href="week10-activity.ptx" />
+</chapter>

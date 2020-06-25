@@ -1,4 +1,4 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="introduction">
+<section xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="introduction">
   <title>Introduction</title>
   <p>
     Calculus I and II are the study of functions of a single real variable,
@@ -25,4 +25,4 @@
     moreover, they extend in deeply fascinating,
     mysterious and intricate ways.
   </p>
-</chapter>
+</section>

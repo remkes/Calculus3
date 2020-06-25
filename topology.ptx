@@ -1,28 +1,164 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="topology">
+<section xml:id="topology">
   <title>Topology of <m>\RR^n</m></title>
-  <introduction>
+  <subsection xml:id="what-is-topology">
+  <title>What Is Topology</title>
     <p>
-      Topology is a branch of mathematics which studies concepts of shape,
-      near-ness and distance.
-      You might think that such a study woulds just be geometry,
-      and you would be partially correct.
-      Topology is like a coarser version of geometry.
-      It cares about broad notions of near and far instead of precise distances,
-      and about types of shapes instead of precisely defined specifics.
-      Though it lacks the precision of other parts of geometry,
-      it is fundamental to modern mathematics.
+      Topology is a branch of mathematics which studies concepts of
+      shape, near-ness and distance. You might think that such a
+      study woulds just be geometry, and you would be partially
+      correct. Topology is like a coarser version of geometry. It
+      cares about broad notions of near and far instead of precise
+      distances, and about types of shapes instead of precisely
+      defined specifics. Though it lacks the precision of other parts
+      of geometry, it is fundamental to modern mathematics.
     </p>
     <p>
-      We have already seen some topology of <m>\RR</m> in single variable calculus,
-      mostly notably in the definition of open and closed intervals:
-      <m>(a,b)</m> and <m>[a,b]</m>.
-      Open intervals did not include their endpoints but closed intervals did.
-      Openness and closedness are central to topolgoy.
-      In this brief chapter, we will extend the notions of opennes,
-      closedness and intervals to <m>\RR^n</m>.
-      We will need these notions to understand multivariable functions in the next section.
+      We have already seen some topology of <m>\RR</m> in single
+      variable calculus, mostly notably in the definition of open and
+      closed intervals: <m>(a,b)</m> and <m>[a,b]</m>. Open intervals
+      did not include their endpoints but closed intervals did.
+      Openness and closedness are central to topolgoy. In this brief
+      chapter, we will extend the notions of opennes, closedness and
+      intervals to <m>\RR^n</m>. We will need these notions to
+      understand multivariable functions in the next section.
     </p>
-  </introduction>
-  <xi:include  href="open-closed.ptx" />
-  <xi:include  href="intervals.ptx" />
-</chapter>
+  </subsection>>
+  <subsection xml:id="open-closed">
+    <title>Open and Closed Sets</title>
+    <definition>
+      <statement>
+        <p>
+          Let <m>S</m> be a set. A <term>topology</term> on <m>S</m>
+          is a choice of subsets which are open and which subsets are
+          closed.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      We need two definitions to allow us to define open and clsoed
+      sets in <m>\RR^n</m>.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          Let <m>A</m> be a subset of <m>\RR^n</m>. A point <m>a \in
+          A</m> is called an <term>interior point</term> if there
+          exists <m>\epsilon > 0</m> such that all points <m>b</m>
+          with <m>|a-b|\lt \epsilon</m> are also in <m>A</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      A point is an interior point if all nearby points are also in
+      the set. Around an interior point, we can move a little bit in
+      any direction and remain inside the set. This <m>\epsilon</m>
+      measures exactly how little the little bit of movement is.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          Let <m>A</m> be a subset of <m>\RR^n</m>. A point <m>a</m>
+          (not necessarily in the set) is called a <term>boundary
+          point</term> if for any <m>\epsilon > 0</m> there exists
+          points <m>b_1</m> and <m>b_2</m> such that both <m>|b_i -
+          a|\lt \epsilon</m>, <m>b_1</m> is in the set, but <m>b_2</m>
+          isn't. The <term>boundary</term> of a set is the set of all
+          its boundary point.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      A point is a boundary point if there are nearby points in the
+      set and nearby points not in the set. Nearby means within some
+      small distance, measured by the small positive number
+      <m>\epsilon</m>. The two definitions are mutually exclusive: a
+      point cannot be both an interior and a boundary point for a set.
+      (It can, of course, be neither). These two definitions allow us
+      to define open and closed sets in <m>\RR^n</m>.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          Let <m>A</m> be a subset of <m>\RR^n</m>. Then <m>A</m> is
+          called <term>open</term> is all of its points are interior
+          points. Equivalently, <m>A</m> does not contin any boundary
+          points. Alternatively, <m>A</m> is called
+          <term>closed</term> if it contains all of its boundary
+          points (or, equivalently, if it contains its boundary).
+        </p>
+      </statement>
+    </definition>
+    <p>
+      This definition properly extends the notions of open and closed
+      intervals in <m>\RR</m>. The boundary points of an interval are
+      the endpoints. The open intervals lacks their endpoints and the
+      closed intervals included their endpoints. In <m>\RR^n</m>, the
+      boundaries are much more complicated than endpoints: they can be
+      intricate geometric shapes.
+    </p>
+    <example>
+      <statement>
+        <p>
+          The sphere <m>S^{n-1}</m> in <m>\RR^n</m> is all vectors of
+          length one. The closed ball <m>B^{n}</m> in <m>\RR^n</m> is
+          all vectors of length one or less. The sphere
+          <m>S^{n-1}</m>is the boundary of the closed ball <m>B^n</m>,
+          and the closed ball is closed because all points of the
+          sphere are all contained in the closed ball. 
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection xml:id="intervals">
+    <title>Intervals</title>
+    <p>
+      In addition to open and closed sets in <m>\RR^n</m>, the is a
+      direct extension of intervals.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          An <term>open interval</term> in <m>\RR^n</m> is a set of
+          points <m>(x_1, x_2, \ldots, x_n) \in \RR^n</m> such that
+          <me>
+            a_1 \lt  x_1 \lt  b_1, a_2 \lt  x_2 \lt  b_2,
+            \ldots a_n \lt  x_n \lt  b_n
+          </me>
+        </p>
+        <p>
+          It is written
+          <me>
+            I = (a_1,b_1)\times (a_2,b_2) \times \ldots \times (a_n,b_n)
+          </me>.
+        </p>
+      </statement>
+    </definition>
+    <definition>
+      <statement>
+        <p>
+          An <term>closed interval</term> in <m>\RR^n</m> is a set of
+          points <m>(x_1, x_2, \ldots, x_n) \in \RR^n</m> such that
+          <me>
+            a_1 \leq x_1 \leq b_1, a_2 \leq x_2 \leq b_2,
+            \ldots a_n \leq x_n \leq b_n
+          </me>
+        </p>
+        <p>
+          It is written
+          <me>
+            I = [a_1,b_1]\times [a_2,b_2] \times \ldots \times [a_n,b_n]
+          </me>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Intervals are rectangular objects. In <m>\RR^2</m>, there are
+      filled-in rectangles, including the hollow bounding rectangle if
+      the interval is closed and excluding it if the interval is open.
+      In <m>\RR^3</m>, intervals are solid rectangular prisms whose
+      boundaries are rectangular boxes. In higher dimensions, we
+      think of intervals are higher-dimensional rectangular prisms.
+    </p>
+  </subsection>
+</section>
+    

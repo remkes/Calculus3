@@ -1,183 +1,222 @@
 <section xml:id="linear-approximation">
   <title>Linear Approximation</title>
-  <p>
-    Consider a single variable function <m>f: \RR \rightarrow \RR</m>.
-    In Calculus I, we defined the linear approximation of <m>f</m> at the point <m>(a,f(a)</m>.
-    <me>
-      f(x) \approx f(a) + f^\prime(a) (x-a)
-    </me>
-  </p>
-  <p>
-    From Calculus II or <xref ref="taylor-series">Chapter</xref>,
-    you might recognize this as simply the first-order Taylor approximation for <m>f</m>,
-    where we truncate after the linear term.
-    The linear approximation is the line that best approximates <m>f</m> at this point.
-    Its graph is simply the tangent line to <m>f</m> at <m>(a,f(a))</m>.
-  </p>
-  <p>
-    We can rearrange the linear approximaiton to help us generalize to multivariable functions.
-    <men xml:id="equation-single-linear-approx">
-      (f(x) - f(a)) \approx f^\prime(a) (x-a)
-    </men>
-  </p>
-  <p>
-    In this course,
-    we have become accustomed to think of points in <m>\RR^n</m> along with local direction vectors:
-    each point can be thought of as the origin for a system of local directions.
-    We can do the same here:
-    let <m>(a,f(a))</m> be a local origin for a system of local directions.
-    Then switching from <m>f(x)</m> to
-    <m>f(x) - f(a)</m> and from <m>x</m> to <m>x-a</m> is just moving from the usual origin to this new,
-    local, origin.
-  </p>
-  <p>
-    In this new origin,
-    the function in <xref ref="equation-single-linear-approx">Equation</xref>
-    is approximated by multiplication by <m>f^\prime(a)</m>.
-    This gives us a new interpretation for the single-variable derivative:
-    the derivative is the multiplicative factor for the local linear approximation of <m>f</m>.
-    Locally, (in coordinates pretending that <m>(a,f(a))</m> is the origin),
-    the function is approximated by multiplication by <m>f^\prime(a)</m>.
-  </p>
-  <p>
-    Now lets think of function <m>f: \RR^2 \rightarrow \RR</m>.
-    It we want to approximate by linear functions,
-    we need to understand linear functions:
-    <m>\RR^2 \rightarrow \RR</m>.
-    Following <xref ref="matrix-representation">Section</xref>,
-    we look to matrices.
-    Matrices completely describe linear functions.
-    A <m>1 \times 1</m> matrix is just a number,
-    and the linear function <m>\RR \rightarrow \RR</m> is just multiplication by that number.
-    But for <m>\RR^2 \rightarrow \RR</m>,
-    we have a <m>1 \times 2</m> matrix.
-  </p>
-  <p>
-    So we ask: what is a linear approximation to the function <m>f: \RR^2 \rightarrow \RR</m>.
-    It must be a <m>1 \times 2</m> matrix <m>M</m> and fit into a equation mirroring <xref ref="equation-single-linear-approx">Equation</xref>.
-    <me>
-      f(x,y) - f(a,b) \approx M \begin{pmatrix}x-a\\y-b\end{pmatrix}
-    </me>
-  </p>
-  <p>
-    In local coordinates at <m>(a,b,f(a,b))</m>,
-    this is just matrix multiplication by <m>M</m>.
-    So a linear approximation is a matrix multiplication in local coordintaes.
-    What is the matrix <m>M</m>?
-    Well, if we work with partial derivatives,
-    the linear approximation should be formed of linear approximation in <m>x</m> and linear approximation in <m>y</m>.
-    <me>
-      f(x,y) \approx f(a,b) + \frac{\del f}{\del x} (a,b) (x-a) + \frac{\del f}{\del x} (a,b) (y-b)
-    </me>
-  </p>
-  <p>
-    We put this in matrix form.
-    <me>
-      f(x,y) - f(a,b) \approx \left( \begin{matrix} \frac{\del f}{\del x} \amp  \frac{\del f}{\del y} \end{matrix} \right) \begin{pmatrix}x-a\\y-b\end{pmatrix}
-    </me>
-  </p>
-  <definition>
-    <statement>
-      <p>
-        The matrix of the linear approximation to a scalar function <m>f: \RR^n \rightarrow \RR</m> is the
-        <m>1 \times n</m> matrix of partial derivatives.
-      </p>
-    </statement>
-  </definition>
-  <p>
-    The graph of the linear approximation is the tangent plane that we've already defined at <m>(a,b,f(a,b))</m>.
-  </p>
-  <example>
-    <statement>
-      <p>
-        Let's return to the function in <xref ref="example-tangent-plane">Example</xref>,
-        <m>f(x,y) = \frac{1}{1 + x^2 + y^2}</m>.
-        <me>
-          M = \left( \begin{matrix} \frac{-2x}{(1+x^2+y^2)^2} \amp \frac{-2y}{(1+x^2+y^2)^2} \end{matrix} \right)
-        </me>
-      </p>
-      <p>
-        Look at the point <m>(0,0)</m>.
-        <me>
-          f(x,y) \approx f(0,0) + \left( \begin{matrix} 0 \amp  0 \end{matrix} \right) \begin{pmatrix}x\\y\end{pmatrix} = 1
-        </me>
-      </p>
-      <p>
-        This linear approximation is a constant <m>1</m>,
-        which makes sense at the top of the small hill.
-        Momentarily, at the peak,
-        nothing is changing and the function doesn't do anything.
-        The linear approximation to doing nothing is appropriately a constant.
-      </p>
-      <p>
-        Look at the point <m>(1,1)</m>.
-        <me>
-          f(x,y) \approx f(1,1) + \left( \begin{matrix} \frac{-2}{9} \amp \frac{-2}{9} \end{matrix} \right) \begin{pmatrix}x-1\\y-1\end{pmatrix} = \frac{1}{3} - \frac{2(x-1)}{9} - \frac{2(y-1)}{9}
-        </me>
-      </p>
-      <p>
-        Look at the point <m>(-2,2)</m>.
-        <me>
-          f(x,y) \approx f(-2,2) + \left( \begin{matrix} \frac{4}{81} \amp \frac{-4}{81} \end{matrix} \right) \begin{pmatrix}x+2\\y-1\end{pmatrix} = \frac{1}{9} + \frac{4(x+2)}{81} - \frac{4(y-2)}{81}
-        </me>
-      </p>
-    </statement>
-  </example>
-  <example>
-    <statement>
-      <p>
-        <m>f(x,y) = x^2 e^{x-y}</m>.
-        <me>
-          M = \left( \begin{matrix} 2xe^{x-y} + x^2e^x, -x^2 e^{x-y} \end{matrix} \right)
-        </me>
-      </p>
-      <p>
-        Look at the point <m>(2,2)</m>.
-        <me>
-          f(x,y) \approx f(2,2) + \left( \begin{matrix} 4+4e^2 \amp  -4 \end{matrix} \right) \begin{pmatrix}x-2\\y-2\end{pmatrix} = 4 + (4+4e^2)(x-2) - 4(y-2)
-        </me>
-      </p>
-      <p>
-        Look at the point <m>(-1,-1)</m>.
-        <me>
-          f(x,y) \approx f(-1,-1) + \left( \begin{matrix} (2+e) \amp  -1 \end{matrix} \right) \begin{pmatrix}x+1\\y+1\end{pmatrix} = 1 + (2+e)(x+1) - (y+1)
-        </me>
-      </p>
-    </statement>
-  </example>
-  <p>
-    We extended the idea of a derivative with partial derivatives and directional derivatives.
-    These are both useful, but neither are a universal extension.
-    Both are only pieces of derivatives along certain directions.
-    Gradients were a more universal extension,
-    but they only identify the direction of greatest change.
-    Tangent planes were a good geometric extension,
-    but without an algebraic analogue.
-  </p>
-  <p>
-    The discussion of linear approximation leads us to a much more universal idea to generalize the derivative.
-    The big idea is this: derivatives,
-    in any dimension, are linear approximations to functions.
-    This idea works in single variables,
-    where multiplication by <m>f^\prime(a)</m> was the linear approximation.
-    The derivatives calculates that factor.
-    For higher dimensions,
-    we can use matrix multiplication instead of just multiplication by a number.
-  </p>
-  <p>
-    Therefore, we could realistically say that <em>the derivative</em>
-    of a function <m>f: \RR^n \rightarrow \RR^m</m> is the
-    <em>matrix of partial derivatives</em>,
-    which serves as a linear approximation of the function at any point in its domain.
-    It will be useful to give this matrix a name, for future reference.
-  </p>
-  <definition>
-    <statement>
-      <p>
-        Let <m>f: \RR^n \rightarrow \RR^m</m> be a differentiable function.
-        Then the <m>m \times n</m> matrix of partial derivatives of <m>f</m> is called the
-        <term>Jacobian Matrix</term> of the function.
-      </p>
-    </statement>
-  </definition>
+  <subsection xml:id="single-variable">
+    <title>Single Variable Interpretation</title>
+    <p>
+      Consider a single variable function <m>f: \RR \rightarrow
+      \RR</m>. In Calculus I, we defined the linear approximation of
+      <m>f</m> at the point <m>(a,f(a)</m>.
+      <me>
+        f(x) \approx f(a) + f^\prime(a) (x-a)
+      </me>
+    </p>
+    <p>
+      From Calculus II or <xref ref="taylor-series-definition" />
+      you might recognize this as simply the first-order Taylor
+      approximation for <m>f</m>, where we truncate after the linear
+      term. The linear approximation is the line that best
+      approximates <m>f</m> at this point. Its graph is simply the
+      tangent line to <m>f</m> at <m>(a,f(a))</m>.
+    </p>
+    <p>
+      We can rearrange the linear approximaiton to help us generalize
+      to multivariable functions.
+      <men xml:id="equation-single-linear-approx">
+        (f(x) - f(a)) \approx f^\prime(a) (x-a)
+      </men>
+    </p>
+    <p>
+      In this course, we have become accustomed to think of points in
+      <m>\RR^n</m> along with local direction vectors: each point can
+      be thought of as the origin for a system of local directions.
+      We can do the same here: let <m>(a,f(a))</m> be a local origin
+      for a system of local directions. Then switching from
+      <m>f(x)</m> to <m>f(x) - f(a)</m> and from <m>x</m> to
+      <m>x-a</m> is just moving from the usual origin to this new,
+      local, origin.
+    </p>
+    <p>
+      In this new origin, the function in <xref
+      ref="equation-single-linear-approx">Equation</xref> is
+      approximated by multiplication by <m>f^\prime(a)</m>. This
+      gives us a new interpretation for the single-variable
+      derivative: the derivative is the multiplicative factor for the
+      local linear approximation of <m>f</m>. Locally, (in
+      coordinates pretending that <m>(a,f(a))</m> is the origin), the
+      function is approximated by multiplication by
+      <m>f^\prime(a)</m>.
+    </p>
+    <p>
+      Now lets think of function <m>f: \RR^2 \rightarrow \RR</m>. It
+      we want to approximate by linear functions, we need to
+      understand linear functions: <m>\RR^2 \rightarrow \RR</m>.
+      We look to matrices. Matrices completely describe linear
+      functions. A <m>1 \times 1</m> matrix is just a number, and the
+      linear function <m>\RR \rightarrow \RR</m> is just
+      multiplication by that number. But for <m>\RR^2 \rightarrow
+      \RR</m>, we have a <m>1 \times 2</m> matrix.
+    </p>
+  </subsection>
+  <subsection xml:id="linear-approximation-definition">
+    <title>Linear Approximation in <m>\RR^2</m></title>
+    <p>
+      So we ask: what is a linear approximation to the function <m>f:
+      \RR^2 \rightarrow \RR</m>. It must be a <m>1 \times 2</m>
+      matrix <m>M</m> and fit into a equation mirroring <xref
+      ref="equation-single-linear-approx">Equation</xref>.
+      <me>
+        f(x,y) - f(a,b) \approx M \begin{pmatrix}x-a\\y-b\end{pmatrix}
+      </me>
+    </p>
+    <p>
+      In local coordinates at <m>(a,b,f(a,b))</m>, this is just matrix
+      multiplication by <m>M</m>. So a linear approximation is a
+      matrix multiplication in local coordintaes. What is the matrix
+      <m>M</m>? Well, if we work with partial derivatives, the linear
+      approximation should be formed of linear approximation in
+      <m>x</m> and linear approximation in <m>y</m>. 
+     <me>
+        f(x,y) \approx f(a,b) + \frac{\del f}{\del x} (a,b) (x-a) +
+        \frac{\del f}{\del x} (a,b) (y-b)
+      </me>
+    </p>
+    <p>
+      We put this in matrix form.
+      <me>
+        f(x,y) - f(a,b) \approx \left( \begin{matrix} \frac{\del
+        f}{\del x} \amp \frac{\del f}{\del y} \end{matrix} \right)
+        \begin{pmatrix}x-a\\y-b\end{pmatrix}
+      </me>
+    </p>
+    <definition>
+      <statement>
+        <p>
+          The matrix of the linear approximation to a scalar function
+          <m>f: \RR^n \rightarrow \RR</m> is the <m>1 \times n</m>
+          matrix of partial derivatives.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      The graph of the linear approximation is the tangent plane that
+      we've already defined at <m>(a,b,f(a,b))</m>.
+    </p>
+  </subsection>
+  <subsection xml:id="la-examples">
+    <title>Examples</title>
+    <example>
+      <statement>
+        <p>
+          Let's return to the function in <xref
+          ref="example-tangent-plane">Example</xref>, <m>f(x,y) =
+          \frac{1}{1 + x^2 + y^2}</m>.
+          <me>
+            M = \left( \begin{matrix} \frac{-2x}{(1+x^2+y^2)^2} \amp
+            \frac{-2y}{(1+x^2+y^2)^2} \end{matrix} \right)
+          </me>
+        </p>
+        <p>
+          Look at the point <m>(0,0)</m>.
+          <me>
+            f(x,y) \approx f(0,0) + \left( \begin{matrix} 0 \amp 0
+            \end{matrix} \right) \begin{pmatrix}x\\y\end{pmatrix} = 1
+          </me>
+        </p>
+        <p>
+          This linear approximation is a constant <m>1</m>, which
+          makes sense at the top of the small hill. Momentarily, at
+          the peak, nothing is changing and the function doesn't do
+          anything. The linear approximation to doing nothing is
+          appropriately a constant.
+        </p>
+        <p>
+          Look at the point <m>(1,1)</m>.
+          <me>
+            f(x,y) \approx f(1,1) + \left( \begin{matrix} \frac{-2}{9}
+            \amp \frac{-2}{9} \end{matrix} \right)
+            \begin{pmatrix}x-1\\y-1\end{pmatrix} = \frac{1}{3} -
+            \frac{2(x-1)}{9} - \frac{2(y-1)}{9}
+          </me>
+        </p>
+        <p>
+          Look at the point <m>(-2,2)</m>.
+          <me>
+            f(x,y) \approx f(-2,2) + \left( \begin{matrix}
+            \frac{4}{81} \amp \frac{-4}{81} \end{matrix} \right)
+            \begin{pmatrix}x+2\\y-1\end{pmatrix} = \frac{1}{9} +
+            \frac{4(x+2)}{81} - \frac{4(y-2)}{81}
+          </me>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          <m>f(x,y) = x^2 e^{x-y}</m>.
+          <me>
+            M = \left( \begin{matrix} 2xe^{x-y} + x^2e^x, -x^2 e^{x-y}
+            \end{matrix} \right)
+          </me>
+        </p>
+        <p>
+          Look at the point <m>(2,2)</m>.
+          <me>
+            f(x,y) \approx f(2,2) + \left( \begin{matrix} 4+4e^2 \amp
+            -4 \end{matrix} \right)
+            \begin{pmatrix}x-2\\y-2\end{pmatrix} = 4 + (4+4e^2)(x-2) -
+            4(y-2)
+          </me>
+        </p>
+        <p>
+          Look at the point <m>(-1,-1)</m>.
+          <me>
+            f(x,y) \approx f(-1,-1) + \left( \begin{matrix} (2+e) \amp
+            -1 \end{matrix} \right)
+            \begin{pmatrix}x+1\\y+1\end{pmatrix} = 1 + (2+e)(x+1) -
+            (y+1)
+          </me>
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection xml:id="what-is-a-derivative">
+    <title>What Is A Derivative?</title>
+    <p>
+      We extended the idea of a derivative with partial derivatives
+      and directional derivatives. These are both useful, but neither
+      are a universal extension. Both are only pieces of derivatives
+      along certain directions. Gradients were a more universal
+      extension, but they only identify the direction of greatest
+      change. Tangent planes were a good geometric extension, but
+      without an algebraic analogue.
+    </p>
+    <p>
+      The discussion of linear approximation leads us to a much more
+      universal idea to generalize the derivative. The big idea is
+      this: derivatives, in any dimension, are linear approximations
+      to functions. This idea works in single variables, where
+      multiplication by <m>f^\prime(a)</m> was the linear
+      approximation. The derivatives calculates that factor. For
+      higher dimensions, we can use matrix multiplication instead of
+      just multiplication by a number.
+    </p>
+    <p>
+      Therefore, we could realistically say that <em>the
+      derivative</em> of a function <m>f: \RR^n \rightarrow \RR^m</m>
+      is the <em>matrix of partial derivatives</em>, which serves as a
+      linear approximation of the function at any point in its domain.
+      It will be useful to give this matrix a name, for future
+      reference.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          Let <m>f: \RR^n \rightarrow \RR^m</m> be a differentiable
+          function. Then the <m>m \times n</m> matrix of partial
+          derivatives of <m>f</m> is called the <term>Jacobian
+          Matrix</term> of the function.
+        </p>
+      </statement>
+    </definition>
+  </subsection>
 </section>

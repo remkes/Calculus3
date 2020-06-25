@@ -1,22 +1,28 @@
 <section xml:id="kepler">
   <title>Kepler's Laws</title>
-  <introduction>
+  <subsection xml:id="planetary-motion">
+    <title>Planetary Motion</title>
     <figure xml:id="figure-keplers-laws">
-      <caption>An orbital path for Kepler's laws</caption>
-      <image width="1200%" source="images/figure24.png" />
+      <caption>
+        An orbital path for Kepler's laws
+      </caption>
+      <image width="100%" source="images/figure24" />
     </figure>
     <p>
-      Kepler's laws were originally formulated from the observations of planets in the night sky and were written down before Newton.
-      One of the triumphs of Newtonian mechanics is the recovery of Kepler's laws.
-      In this section,
-      we start with Newton's gravity and derive Kepler's laws.
+      Kepler's laws were originally formulated from the observations
+      of planets in the night sky and were written down before Newton.
+      One of the triumphs of Newtonian mechanics is the recovery of
+      Kepler's laws. In this section, we start with Newton's gravity
+      and derive Kepler's laws.
     </p>
     <p>
       Kepler described three laws of planetary motion.
       <ul>
         <li>
           <p>
-            Satellites in orbit around a large gravity source have elliptical orbits with the large object at one of the foci of the ellipse.
+            Satellites in orbit around a large gravity source have
+            elliptical orbits with the large object at one of the foci
+            of the ellipse.
           </p>
         </li>
         <li>
@@ -26,49 +32,56 @@
         </li>
         <li>
           <p>
-            The period <m>T</m> of a satellite and the major axis <m>a</m> of the associated ellipse satisfy
-            <m>T^2 = \alpha a^3</m> for some constant <m>\alpha</m> depending only upon the mass of the large object.
+            The period <m>T</m> of a satellite and the major axis
+            <m>a</m> of the associated ellipse satisfy <m>T^2 = \alpha
+            a^3</m> for some constant <m>\alpha</m> depending only
+            upon the mass of the large object.
           </p>
         </li>
       </ul>
     </p>
-  </introduction>
+  </subsection>
   <subsection xml:id="kepler-first">
     <title>Kepler's First Law</title>
     <p>
-      The setup for approaching Kepler's laws is show in <xref ref="figure-keplers-laws">Figure</xref>.
+      The setup for approaching Kepler's laws is show in <xref
+      ref="figure-keplers-laws" />. 
       <ul>
         <li>
           <p>
-            We have a large stationary object of mass <m>M</m>,
-            and a small object of mass <m>m</m> in orbit around the larger object.
-            We must assume that <m>m \ll M</m> to allow the larger object to be essentially stationary.
+            We have a large stationary object of mass <m>M</m>, and a
+            small object of mass <m>m</m> in orbit around the larger
+            object. We must assume that <m>m \ll M</m> to allow the
+            larger object to be essentially stationary.
           </p>
         </li>
         <li>
           <p>
-            We place the stationary object of mass <m>M</m> at the origin in <m>\RR^3</m>.
-            We might work in the plane since the orbits are planar,
-            but it is more useful to think of the orbit sitting in the <m>xy</m> plane in <m>\RR^3</m>.
-            This will be important,
-            since it turns out to be useful to consider the perperdicular direction to the plane of orbit and use normals and binormals in <m>\RR^3</m>.
+            We place the stationary object of mass <m>M</m> at the
+            origin in <m>\RR^3</m>. We might work in the plane since
+            the orbits are planar, but it is more useful to think of
+            the orbit sitting in the <m>xy</m> plane in <m>\RR^3</m>.
+            This will be important, since it turns out to be useful to
+            consider the perperdicular direction to the plane of orbit
+            and use normals and binormals in <m>\RR^3</m>.
           </p>
         </li>
         <li>
           <p>
-            The curve <m>\gamma(t) = (r(t),\theta(t),z(t))</m> decribes the motion of the orbiting object over time,
-            in cylindrical coordinates
-            (which reduce to polar coordinates in the <m>xy</m> plane).
-            In the third coordinate <m>z(t)</m>,
-            we expect that <m>z(t) = 0</m> at all times <m>t</m>
-            (which will produce a curve in the <m>xy</m> plane in polar coordinates),
-            but we don't assume this.
+            The curve <m>\gamma(t) = (r(t),\theta(t),z(t))</m>
+            decribes the motion of the orbiting object over time, in
+            cylindrical coordinates (which reduce to polar coordinates
+            in the <m>xy</m> plane). In the third coordinate
+            <m>z(t)</m>, we expect that <m>z(t) = 0</m> at all times
+            <m>t</m> (which will produce a curve in the <m>xy</m>
+            plane in polar coordinates), but we don't assume this.
           </p>
         </li>
         <li>
           <p>
-            The curve <m>\gamma(t)</m> is unknown and we wish to derive it from Newtonian physics.
-            We will prove Kelper's laws using the derived curve.
+            The curve <m>\gamma(t)</m> is unknown and we wish to
+            derive it from Newtonian physics. We will prove Kelper's
+            laws using the derived curve.
           </p>
         </li>
         <li>
@@ -81,17 +94,20 @@
         </li>
         <li>
           <p>
-            The direction of the force is <m>-\gamma(t)</m>,
-            since the force wishes to pull the object back towards the origin.
+            The direction of the force is <m>-\gamma(t)</m>, since the
+            force wishes to pull the object back towards the origin.
             Since we want just direction without changing magnitude,
-            we use the unit vector <m>u(t) = \gamma(t) / |\gamma(t)|</m> for the direction of <m>\gamma(t)</m>.
+            we use the unit vector <m>u(t) = \gamma(t) /
+            |\gamma(t)|</m> for the direction of <m>\gamma(t)</m>.
           </p>
         </li>
         <li>
           <p>
-            Newton's first law <m>F = ma</m> applies, so the acceleration is
+            Newton's first law <m>F = ma</m> applies, so the
+            acceleration is
             <me>
-              a(t) = \frac{-GM}{|\gamma(t)|^2} u(t) = \frac{-GM}{|\gamma(t)|^3} \gamma(t)
+              a(t) = \frac{-GM}{|\gamma(t)|^2} u(t) =
+              \frac{-GM}{|\gamma(t)|^3} \gamma(t)
             </me>.
           </p>
         </li>
@@ -100,28 +116,28 @@
             Acceleration is the second derivative of position,
             therefore Newton's first law becomes
             <me>
-              \frac{d^2}{dt^2} \gamma(t) = \frac{-GM}{|\gamma(t)|^3} \gamma(t)
+              \frac{d^2}{dt^2} \gamma(t) = \frac{-GM}{|\gamma(t)|^3}
+              \gamma(t)
             </me>
           </p>
         </li>
         <li>
           <p>
             We write <m>h(t) = \gamma(t) \times \gamma^\prime(t)</m>.
-            <m>h(t)</m> is in the binormal direction,
-            but is not necessarily a unit vector.
-            This seems like a strange definition,
-            but the vector <m>h</m> turns out to be very useful in the proof.
+            <m>h(t)</m> is in the binormal direction, but is not
+            necessarily a unit vector. This seems like a strange
+            definition, but the vector <m>h</m> turns out to be very
+            useful in the proof.
           </p>
         </li>
       </ul>
     </p>
     <p>
-      Newton's law is a multivariable differential equation;
-      solving it directly is very difficult and well beyond the scope of this course.
-      Our approach is indirect.
-      We start with two seeminly random calculations.
-      For convenience of notation, we often drop the <m>t</m> variable,
-      writing <m>\gamma</m> instead of
+      Newton's law is a multivariable differential equation; solving
+      it directly is very difficult and well beyond the scope of this
+      course. Our approach is indirect. We start with two seeminly
+      random calculations. For convenience of notation, we often drop
+      the <m>t</m> variable, writing <m>\gamma</m> instead of
       <m>\gamma(t)</m> and likewise for other functions of <m>t</m>.
     </p>
     <lemma xml:id="lemma-reference1">
@@ -135,16 +151,17 @@
       <me>
         \frac{d}{dt} h(t) = \frac{d}{dt} \gamma \times \gamma^\prime =
         \frac{d\gamma}{dt} \times \gamma^\prime + \gamma \times
-        \frac{d\gamma^\prime}{dt}
-        = \gamma^\prime \times \gamma^\prime + \gamma \times a
+        \frac{d\gamma^\prime}{dt} = \gamma^\prime \times \gamma^\prime
+        + \gamma \times a
       </me>
       <p>
-        The first term <m>\gamma^\prime \times \gamma^\prime = 0</m> since any vector with itself in the cross product is <m>0</m>.
-        Then <m>\gamma</m> and the acceleration <m>a</m> are in the same direction
-        (up to <m>\pm1</m>),
-        since the force pulls back towards the origin.
-        Vectors in the same direction likewise have <m>0</m> cross product.
-        Therefore, we have <m>\frac{d}{dt} h = 0</m>.
+        The first term <m>\gamma^\prime \times \gamma^\prime = 0</m>
+        since any vector with itself in the cross product is <m>0</m>.
+        Then <m>\gamma</m> and the acceleration <m>a</m> are in the
+        same direction (up to <m>\pm1</m>), since the force pulls back
+        towards the origin. Vectors in the same direction likewise
+        have <m>0</m> cross product. Therefore, we have
+        <m>\frac{d}{dt} h = 0</m>.
       </p>
     </proof>
     <lemma xml:id="lemma-reference2">
@@ -158,11 +175,26 @@
       <p>
         We can write <m>h</m> this way.
         <md>
-          <mrow>h(t) \amp  = \gamma \times \gamma^\prime = (|\gamma|u) \times \frac{d}{dt} (|\gamma| u)</mrow>
-          <intertext>We use the product rule on the second term.</intertext>
-          <mrow>\amp  = |\gamma| u \times \left( u \frac{d}{dt} |\gamma| + |\gamma| \frac{d}{dt} u \right) = |\gamma| u \times u \frac{d}{dt} |\gamma| + |\gamma| u \times |\gamma| \frac{d}{dt} u</mrow>
-          <mrow>\amp  = |\gamma| \frac{d}{dt} |\gamma| (u \times u ) + |\gamma|^2 u \times u^\prime</mrow>
-          <mrow>h \amp  = |\gamma|^2 (u \times u^\prime)</mrow>
+          <mrow>
+            h(t) \amp = \gamma \times \gamma^\prime = (|\gamma|u)
+            \times \frac{d}{dt} (|\gamma| u)
+          </mrow>
+          <intertext>
+            We use the product rule on the second term.
+          </intertext>
+          <mrow>
+            \amp = |\gamma| u \times \left( u \frac{d}{dt} |\gamma| +
+            |\gamma| \frac{d}{dt} u \right) = |\gamma| u \times u
+            \frac{d}{dt} |\gamma| + |\gamma| u \times |\gamma|
+            \frac{d}{dt} u
+          </mrow>
+          <mrow>
+            \amp = |\gamma| \frac{d}{dt} |\gamma| (u \times u ) +
+            |\gamma|^2 u \times u^\prime
+          </mrow>
+          <mrow>
+            h \amp = |\gamma|^2 (u \times u^\prime)
+          </mrow>
         </md>
       </p>
     </proof>
@@ -173,17 +205,17 @@
           <me>
             a = \frac{-GM}{|\gamma|^2} u
           </me>
-          can be solved with a polar parametric curve
-          <m>\gamma(t) = (r(t),\theta(r))</m> which satisfies the equation
+          can be solved with a polar parametric curve <m>\gamma(t) =
+          (r(t),\theta(r))</m> which satisfies the equation
           <me>
             r(t) = \frac{ed}{1 - e \cos \theta(t)}
           </me>.
         </p>
         <p>
-          This is exactly the same as <xref ref="equation-conic-eccentricity-form">Equation</xref>.
-          By <xref ref="prop-conic-eccentricity">Proposition</xref>
-          such forms describe all conics,
-          so Kepler's First Law states that orbital paths are conics.
+          This is exactly the same as <xref
+          ref="equation-conic-eccentricity-form">Equation</xref>.
+          Such forms describe all conics, so Kepler's First Law states
+          that orbital paths are conics.
         </p>
       </statement>
     </proposition>
@@ -196,22 +228,34 @@
         </me>
       </p>
       <p>
-        Let's take the cross product with <m>h</m>.
-        We use <xref ref="lemma-reference2">Lemma</xref> on the right side.
+        Let's take the cross product with <m>h</m>. We use <xref
+        ref="lemma-reference2">Lemma</xref> on the right side.
         <md>
-          <mrow>a \times h \amp  = \frac{-GM}{|\gamma|^2} u \times h = \frac{-GM}{|\gamma|^2} u \times \left( |\gamma|^2 (u \times u^\prime) \right)</mrow>
-          <mrow>\amp  = \frac{-GM}{|\gamma|^2} |\gamma|^2 \left( u \times \left( u \times u^\prime \right) \right) = -GM \left( u \times \left( u \times u^\prime \right) \right)</mrow>
-          <intertext>We use <xref ref="prop-triple-cross-product">Proposition</xref> to expand the triple cross product on the right side.</intertext>
-          <mrow>a \times h \amp  = -GM ((u\cdot u^\prime) u - (u \cdot u) u^\prime))</mrow>
+          <mrow>
+            a \times h \amp = \frac{-GM}{|\gamma|^2} u \times h =
+            \frac{-GM}{|\gamma|^2} u \times \left( |\gamma|^2 (u
+            \times u^\prime) \right)
+          </mrow>
+          <mrow>
+            \amp = \frac{-GM}{|\gamma|^2} |\gamma|^2 \left( u \times
+            \left( u \times u^\prime \right) \right) = -GM \left( u
+            \times \left( u \times u^\prime \right) \right)
+          </mrow>
+          <intertext> 
+            We expand the triple cross product on the right side.
+          </intertext>
+          <mrow>
+            a \times h \amp = -GM ((u\cdot u^\prime) u - (u \cdot u)
+            u^\prime))
+          </mrow>
         </md>
       </p>
       <p>
-        Since <m>u</m> is always a unit vector,
-        we can apply <xref ref="lemma-unit-vector-derivative">Lemma</xref>,
-        which says that <m>u \times u^\prime = 0</m>.
-        Also since <m>u</m> is a unit vector,
-        <m>u \cdot u = |u|^2 = 1</m>.
-        This deals with both of the dot products.
+        Since <m>u</m> is always a unit vector, we can apply <xref
+        ref="lemma-unit-vector-derivative">Lemma</xref>, which says
+        that <m>u \times u^\prime = 0</m>. Also since <m>u</m> is a
+        unit vector, <m>u \cdot u = |u|^2 = 1</m>. This deals with
+        both of the dot products.
         <men xml:id="equation-reference4">
           a \times h = -GM ( 0 u - 1 u^\prime) = GM u^\prime
         </men>
@@ -219,50 +263,66 @@
       <p>
         Then we consider the following derivative.
         <me>
-          \frac{d}{dt} (\gamma^\prime \times h) = \frac{d\gamma^\prime}{dt} \times h + \gamma^\prime \times \frac{dh}{dt}
+          \frac{d}{dt} (\gamma^\prime \times h) =
+          \frac{d\gamma^\prime}{dt} \times h + \gamma^\prime \times
+          \frac{dh}{dt}
         </me>
       </p>
       <p>
-        The first term here is <m>a \times h</m>,
-        since <m>a</m> is <m>\frac{d\gamma^\prime}{dt}</m>.
-        The second term involves the derivative of <m>h</m>.
-        But <xref ref="lemma-reference1">Lemma</xref>
-        said that the derivative of <m>h</m> is zero, so this term vanishes.
+        The first term here is <m>a \times h</m>, since <m>a</m> is
+        <m>\frac{d\gamma^\prime}{dt}</m>. The second term involves
+        the derivative of <m>h</m>. But <xref
+        ref="lemma-reference1">Lemma</xref> said that the derivative
+        of <m>h</m> is zero, so this term vanishes.
         <me>
           \frac{d}{dt} (\gamma^\prime \times h) = a \times h
         </me>
       </p>
       <p>
-        Then let's replace <m>a \times h</m> with the expression from <xref ref="equation-reference4">Equation</xref>.
+        Then let's replace <m>a \times h</m> with the expression from
+        <xref ref="equation-reference4">Equation</xref>.
         <me>
           \frac{d}{dt} (\gamma^\prime \times h) = GM u^\prime
         </me>
       </p>
       <p>
-        Now we've made progress with our difficult differential equation:
-        we have a time derivative on both sides.
-        We can simply integrate both sides to give
-        <m>\gamma^\prime \times h = GM u + c</m>. where <m>c</m> is a <em>vector</em>
-        of constants of integration. (That vector corresponds to intial conditions of position and velocity).
-        We take the dot product with <m>\gamma</m>.
+        Now we've made progress with our difficult differential
+        equation: we have a time derivative on both sides. We can
+        simply integrate both sides to give <m>\gamma^\prime \times h
+        = GM u + c</m>. where <m>c</m> is a <em>vector</em> of
+        constants of integration. (That vector corresponds to intial
+        conditions of position and velocity). We take the dot product
+        with <m>\gamma</m>.
         <me>
-          \gamma \cdot (\gamma^\prime \times h) = GM (u \cdot \gamma) + \gamma \cdot c = GM |\gamma| u \cdot u + |\gamma| |c| \cos \theta = GM + |\gamma| |c| \cos \theta
+          \gamma \cdot (\gamma^\prime \times h) = GM (u \cdot \gamma)
+          + \gamma \cdot c = GM |\gamma| u \cdot u + |\gamma| |c| \cos
+          \theta = GM + |\gamma| |c| \cos \theta
         </me>
       </p>
       <p>
-        Here <m>\theta</m> is the angle between <m>\gamma</m> and <m>c</m>.
-        Since we haven't specified a starting point,
-        we can choose coordinates such that <m>c</m> is in the positive <m>x</m> direction,
-        which means that this <m>\theta</m> is the usual <m>\theta</m> of polar coordinates and
-        <m>|\gamma|</m> is the usual <m>r</m> of polar coodinates.
+        Here <m>\theta</m> is the angle between <m>\gamma</m> and
+        <m>c</m>. Since we haven't specified a starting point, we can
+        choose coordinates such that <m>c</m> is in the positive
+        <m>x</m> direction, which means that this <m>\theta</m> is the
+        usual <m>\theta</m> of polar coordinates and <m>|\gamma|</m>
+        is the usual <m>r</m> of polar coodinates.
         <md>
-          <mrow>\gamma \cdot (\gamma^\prime \times h) \amp  = GM |\gamma| + |\gamma| |c| \cos \theta</mrow>
-          <intertext>We solve for <m>|\gamma|</m>.</intertext>
-          <mrow>|\gamma| \amp  = \frac{\gamma \cdot (\gamma^\prime \times h) } { GM + |c| \cos \theta}</mrow>
+          <mrow>
+            \gamma \cdot (\gamma^\prime \times h) \amp = GM |\gamma|
+            + |\gamma| |c| \cos \theta
+          </mrow>
+          <intertext>
+            We solve for <m>|\gamma|</m>.
+          </intertext>
+          <mrow>
+            |\gamma| \amp = \frac{\gamma \cdot (\gamma^\prime \times
+            h) } { GM + |c| \cos \theta}
+          </mrow>
         </md>
       </p>
       <p>
-        The expression <m>|c|/GM</m> is a constant, so let's give it a label.
+        The expression <m>|c|/GM</m> is a constant, so let's give it a
+        label.
         <men xml:id="equation-reference8">
           e \defeq \frac{|c|}{GM}
         </men>
@@ -270,35 +330,43 @@
       <p>
         Let's switch the <m>|\gamma|</m> for <m>r</m> as well.
         <me>
-          r = \frac{\gamma \cdot (\gamma^\prime \times h) } { GM + |c| \cos \theta} = \frac{\gamma \cdot (\gamma^\prime \times h) } { 1 + e \cos \theta} \left( \frac{1}{GM} \right)
+          r = \frac{\gamma \cdot (\gamma^\prime \times h) } { GM + |c|
+          \cos \theta} = \frac{\gamma \cdot (\gamma^\prime \times h) }
+          { 1 + e \cos \theta} \left( \frac{1}{GM} \right)
         </me>
       </p>
       <p>
-        The numerator involves <m>\gamma \cdot (\gamma^\prime \times h)</m>,
-        which we can rearrange to <m>h \cdot (\gamma \times \gamma^\prime)</m> using <xref ref="prop-cross-dot-product">Proposition</xref>.
-        But <m>(\gamma \times \gamma^\prime)</m> is the definition of <m>h</m>,
-        so this dot product is <m>h\cdot h = |h|^2</m>.
+        The numerator involves <m>\gamma \cdot (\gamma^\prime \times
+        h)</m>, which we can rearrange to <m>h \cdot (\gamma \times
+        \gamma^\prime)</m>. But
+        <m>(\gamma \times \gamma^\prime)</m> is the definition of
+        <m>h</m>, so this dot product is <m>h\cdot h = |h|^2</m>.
         <men xml:id="equation-reference10">
-          r = \frac{|h|^2 } { 1 + e \cos \theta} \left( \frac{1}{GM} \right)
+          r = \frac{|h|^2 } { 1 + e \cos \theta} \left( \frac{1}{GM}
+          \right)
         </men>
       </p>
       <p>
-        <m>|h|^2</m> is a constant,
-        since <m>h</m> doesn't change according to <xref ref="lemma-reference1">Lemma</xref>.
-        Let's make another definition.
+        <m>|h|^2</m> is a constant, since <m>h</m> doesn't change
+        according to <xref ref="lemma-reference1">Lemma</xref>. Let's
+        make another definition.
         <men xml:id="equation-reference9">
           d = |h|^2/|c|
         </men>
       </p>
       <p>
-        We can then replace the nuemrator of <xref ref="equation-reference10">Equation</xref> using <m>d</m>.
+        We can then replace the nuemrator of <xref
+        ref="equation-reference10">Equation</xref> using <m>d</m>.
         <me>
-          r = \frac{d|c|} { 1 + e \cos \theta} \left( \frac{1}{GM} \right) = \frac{d} { 1 + e \cos \theta} \left( \frac{|c|}{GM} \right)
+          r = \frac{d|c|} { 1 + e \cos \theta} \left( \frac{1}{GM}
+          \right) = \frac{d} { 1 + e \cos \theta} \left(
+          \frac{|c|}{GM} \right)
         </me>
       </p>
       <p>
-        Replace <m>\frac{|c|}{GM}</m> by <m>e</m>,
-        since that's how we defined <m>e</m> in <xref ref="equation-reference8">Equation</xref>.
+        Replace <m>\frac{|c|}{GM}</m> by <m>e</m>, since that's how we
+        defined <m>e</m> in <xref
+        ref="equation-reference8">Equation</xref>.
         <me>
           r = \frac{ed } { 1 + e \cos \theta}
         </me>
@@ -308,17 +376,18 @@
       </p>
     </proof>
     <p>
-      The eccentricity was defined as <m>e = |c|/GM</m>.
-      Notice that the eccentricity depends on the constants of integration.
-      That makes sense since those constants determine inital position and velocity.
-      If <m>e\lt 1</m>, then the initial conditions indicate an ellipse.
-      If <m>e \geq1</m> then we get a hyperbola.
-      The difference is precisely the notion of escape velocity <mdash/> these initial conditions tell us if the satellite has enough initial energy to escape or be trapped in orbit.
-      If trapped in orbit, the orbits are elliptical.
-      If escaping, the path is parabolic or hyperbolic.
-      We will assume that the orbits are elliptical,
-      i.e., that the original velocity is less than escape velocity,
-      to prove the final two laws.
+      The eccentricity was defined as <m>e = |c|/GM</m>. Notice that
+      the eccentricity depends on the constants of integration. That
+      makes sense since those constants determine inital position and
+      velocity. If <m>e\lt 1</m>, then the initial conditions
+      indicate an ellipse. If <m>e \geq1</m> then we get a hyperbola.
+      The difference is precisely the notion of escape velocity
+      <mdash/> these initial conditions tell us if the satellite has
+      enough initial energy to escape or be trapped in orbit. If
+      trapped in orbit, the orbits are elliptical. If escaping, the
+      path is parabolic or hyperbolic. We will assume that the orbits
+      are elliptical, i.e., that the original velocity is less than
+      escape velocity, to prove the final two laws.
     </p>
   </subsection>
   <subsection xml:id="kepler-second">
@@ -326,58 +395,67 @@
     <proposition>
       <statement>
         <p>
-          (Kepler's Second Law).
-          The area swept out by a line between the M and the satellite is constant in time.
+          (Kepler's Second Law). The area swept out by a line between
+          the M and the satellite is constant in time.
         </p>
       </statement>
     </proposition>
     <figure xml:id="figure-sweeping-area">
       <caption>Approximate movement along the orbit over time
       <m>dt</m>.</caption>
-      <image width="1200%" source="images/figure25.png" />
+      <image width="100%" source="images/figure25" />
     </figure>
     <proof>
       <p>
-        Write <m>A(t)</m> for the area swept out in this way.
-        Our goal is to prove that <m>A^\prime(t)</m> is constant.
-        We approach this by looking at the infinitesimal area <m>dA</m> swept out over an infinitesimal time interval <m>dt</m>.
-        Such an area is a small triangle,
-        shown in gray in <xref ref="figure-sweeping-area">Figure</xref>.
-        It has side length <m>r</m> and base <m>db</m>,
-        which we can assume is perpendicular to the radius.
-        Therefore, the area <m>dA</m> of the infinitesimal triangle is <m>\frac{1}{2} r db</m>.
-        Then <m>db</m>, as an infinitesimal arclength, is <m>rd\theta</m>,
+        Write <m>A(t)</m> for the area swept out in this way. Our
+        goal is to prove that <m>A^\prime(t)</m> is constant. We
+        approach this by looking at the infinitesimal area <m>dA</m>
+        swept out over an infinitesimal time interval <m>dt</m>. Such
+        an area is a small triangle, shown in gray in <xref
+        ref="figure-sweeping-area">Figure</xref>. It has side length
+        <m>r</m> and base <m>db</m>, which we can assume is
+        perpendicular to the radius. Therefore, the area <m>dA</m> of
+        the infinitesimal triangle is <m>\frac{1}{2} r db</m>. Then
+        <m>db</m>, as an infinitesimal arclength, is <m>rd\theta</m>,
         so <m>dA = \frac{1}{2} r^2 d\theta</m>, which we can integrate
         (with a temporary internal variable for the integration).
         <me>
-          A(t) = \int_0^t \frac{1}{2} r(w)^2 d\theta = \int_0^t \frac{1}{2} r(w)^2 \frac{d\theta}{dw} dw
+          A(t) = \int_0^t \frac{1}{2} r(w)^2 d\theta = \int_0^t
+          \frac{1}{2} r(w)^2 \frac{d\theta}{dw} dw 
         </me>
       </p>
       <p>
         We calculate the derivative <m>\frac{dA}{dt}</m>.
         <me>
-          \frac{dA}{dt} = \frac{d}{dt} \int_0^t \frac{1}{2} r(w)^2 \frac{d\theta}{dw} dw = \frac{1}{2} r(t)^2 \frac{d\theta}{dt}
+          \frac{dA}{dt} = \frac{d}{dt} \int_0^t \frac{1}{2} r(w)^2
+          \frac{d\theta}{dw} dw = \frac{1}{2} r(t)^2
+          \frac{d\theta}{dt}
         </me>
       </p>
       <p>
-        Now we return to some of the derivations of the previous section to understand this equation.
-        Recall <m>r(t) = |\gamma(t)|</m>.
-        In Cartesian coordinates, <m>\gamma</m> has this form.
+        Now we return to some of the derivations of the previous
+        section to understand this equation. Recall <m>r(t) =
+        |\gamma(t)|</m>. In Cartesian coordinates, <m>\gamma</m> has
+        this form.
         <me>
           \gamma(t) = (r(t) \cos \theta(t), r(t) \sin \theta(t), 0)
         </me>
       </p>
       <p>
-        The the unit vector <m>u = \gamma(t) / |\gamma(t)|</m> is <m>u(t) = (\cos \theta (t), \sin \theta(t),0)</m>.
-        We calculate its derivative.
+        The the unit vector <m>u = \gamma(t) / |\gamma(t)|</m> is
+        <m>u(t) = (\cos \theta (t), \sin \theta(t),0)</m>. We
+        calculate its derivative.
         <men xml:id="equation-reference6">
-          \frac{du}{dt} = (-\sin \theta(t), \cos \theta(t), 0) \frac{d\theta}{dt}
+          \frac{du}{dt} = (-\sin \theta(t), \cos \theta(t), 0)
+          \frac{d\theta}{dt}
         </men>
       </p>
       <p>
         We calculate <m>u \times u^\prime</m>.
         <men xml:id="equation-reference5">
-          u \times \frac{du}{dt} = (\cos \theta(t), \sin \theta(t), 0) \times (-\sin \theta(t), \cos \theta(t), 0) \frac{d\theta}{dt} = (0,0,1) \frac{d\theta}{dt}
+          u \times \frac{du}{dt} = (\cos \theta(t), \sin \theta(t), 0)
+          \times (-\sin \theta(t), \cos \theta(t), 0)
+          \frac{d\theta}{dt} = (0,0,1) \frac{d\theta}{dt}
         </men>
       </p>
       <p>
@@ -387,30 +465,34 @@
         </me>
       </p>
       <p>
-        We replace the cross product on the right with the same expression from <xref ref="equation-reference5">Equation</xref>.
+        We replace the cross product on the right with the same
+        expression from <xref
+        ref="equation-reference5">Equation</xref>.
         <me>
           h = |\gamma(t)|^2 \frac{d\theta}{dt} (0,0,1)
         </me>
       </p>
       <p>
-        We take the magnitude of this vector.
-        (We choose a direction of orbit for that <m>\frac{d\theta}{dt}</m> is positive.)
+        We take the magnitude of this vector. (We choose a direction
+        of orbit for that <m>\frac{d\theta}{dt}</m> is positive.)
         <me>
-          |h| = |\gamma(t)|^2 \frac{d\theta}{dt} = r(t)^2 \frac{d\theta}{dt}
+          |h| = |\gamma(t)|^2 \frac{d\theta}{dt} = r(t)^2
+          \frac{d\theta}{dt}
         </me>
       </p>
       <p>
-        Now this looks familiar:
-        if has the same right side as <xref ref="equation-reference6">Equation</xref>.
-        Therefore, it is equation to the left side of that equation.
+        Now this looks familiar: if has the same right side as <xref
+        ref="equation-reference6">Equation</xref>. Therefore, it is
+        equation to the left side of that equation.
         <m>\frac{dA}{dt}</m>.
         <me>
           \frac{dA}{dt} = \frac{1}{2} |h|
         </me>
       </p>
       <p>
-        But we know that <m>h</m> is constant by <xref ref="lemma-reference1">Lemma</xref>.
-        Therefore, the rate of change of the area <m>A</m> must be constant.
+        But we know that <m>h</m> is constant by <xref
+        ref="lemma-reference1">Lemma</xref>. Therefore, the rate of
+        change of the area <m>A</m> must be constant.
       </p>
     </proof>
   </subsection>
@@ -419,7 +501,8 @@
     <proposition>
       <statement>
         <p>
-          (Kepler's Third Law) The period <m>T</m> of the revolution and the semi-major axis <m>a</m> of the ellipse satisfy
+          (Kepler's Third Law) The period <m>T</m> of the revolution
+          and the semi-major axis <m>a</m> of the ellipse satisfy
           <m>T^2 = \alpha a^3</m> for some constant <m>\alpha</m>.
         </p>
       </statement>
@@ -432,53 +515,63 @@
         </me>
       </p>
       <p>
-        The period <m>T</m> is the time needed to complete one whole orbit.
-        The area swept out over time <m>T</m> should be the whole ellipse.
-        Recall an ellipse with semiaxes <m>a</m> and <m>b</m> has area <m>\pi a b</m>.
-        We make the two areas equal.
+        The period <m>T</m> is the time needed to complete one whole
+        orbit. The area swept out over time <m>T</m> should be the
+        whole ellipse. Recall an ellipse with semiaxes <m>a</m> and
+        <m>b</m> has area <m>\pi a b</m>. We make the two areas
+        equal.
         <men xml:id="equation-reference11">
-          A(T) = \frac{|h|T}{2} = \pi a b \implies T = \frac{2\pi ab}{|h|} \implies T^2 = \frac{4\pi^2 a^2 b^2}{|h|^2}
+          A(T) = \frac{|h|T}{2} = \pi a b \implies T = \frac{2\pi
+          ab}{|h|} \implies T^2 = \frac{4\pi^2 a^2 b^2}{|h|^2}
         </men>
       </p>
       <p>
-        From <xref ref="equation-reference7">Equation</xref>,
-        we have expressions for the semimajor and semiminor axes (<m>a</m> and <m>b</m>) in terms of the eccentricity <m>e</m> and the distance <m>d</m> from the focus to the directrix.
+        From <xref ref="equation-reference7">Equation</xref>, we have
+        expressions for the semimajor and semiminor axes (<m>a</m> and
+        <m>b</m>) in terms of the eccentricity <m>e</m> and the
+        distance <m>d</m> from the focus to the directrix.
         <me>
-          a^2 = \frac{e^2 d^2}{(1-e^2)^2} \hspace{2cm} b^2 = \frac{e^2 d^2}{1-e^2}
+          a^2 = \frac{e^2 d^2}{(1-e^2)^2} b^2 = \frac{e^2
+          d^2}{1-e^2}
         </me>
       </p>
       <p>
-        We take the square root of <m>a^2</m> and then the ratio of the two equations.
+        We take the square root of <m>a^2</m> and then the ratio of
+        the two equations.
         <men xml:id="equation-reference12">
-          \frac{a}{b^2} = \frac{\frac{ed}{(1-e^2)}}{\frac{e^2d^2}{1-e^2}} = \frac{1}{ed} \implies ed = \frac{b^2}{a}
+          \frac{a}{b^2} =
+          \frac{\frac{ed}{(1-e^2)}}{\frac{e^2d^2}{1-e^2}} =
+          \frac{1}{ed} \implies ed = \frac{b^2}{a}
         </men>
       </p>
       <p>
-        Now we can relate <m>ed</m> to <m>G</m>, <m>M</m> and <m>h</m>.
-        Recall the definition of <m>e</m> from <xref ref="equation-reference8">Equation</xref>
-        and <m>d</m> from <xref ref="equation-reference10">Equation</xref>.
-        We calculate the product <m>ed</m>.
+        Now we can relate <m>ed</m> to <m>G</m>, <m>M</m> and
+        <m>h</m>. Recall the definition of <m>e</m> from <xref
+        ref="equation-reference8">Equation</xref> and <m>d</m> from
+        <xref ref="equation-reference10">Equation</xref>. We
+        calculate the product <m>ed</m>.
         <men>
           ed = \frac{|h|^2}{GM} \implies |h|^2 = edGM
         </men>
       </p>
       <p>
-        We use this to substitute for <m>|h|^2</m> in <xref ref="equation-reference11"></xref>.
+        We use this to substitute for <m>|h|^2</m> in <xref
+        ref="equation-reference11"></xref>.
         <me>
           T^2 = \frac{4\pi^2 a^2 b^2}{GMed}
         </me>
       </p>
       <p>
-        Then use <xref ref="equation-reference12">Equation</xref>
-        to substitute for <m>ed</m> and simplify.
+        Then use <xref ref="equation-reference12">Equation</xref> to
+        substitute for <m>ed</m> and simplify.
         <me>
-          T^2= \frac{4\pi^2 a^2 b^2}{\frac{GMb^2}{a}} = \frac{4\pi^2}{GM} a^3
+          T^2= \frac{4\pi^2 a^2 b^2}{\frac{GMb^2}{a}} =
+          \frac{4\pi^2}{GM} a^3
         </me>
       </p>
       <p>
-        This is the desired result.
-        The proportionality constant is <m>\frac{4\pi^2}{GM}</m>,
-        which is certainly constant.
+        This is the desired result. The proportionality constant is
+        <m>\frac{4\pi^2}{GM}</m>, which is certainly constant.
       </p>
     </proof>
   </subsection>

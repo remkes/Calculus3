@@ -1,20 +1,28 @@
 <section xml:id="conics">
   <title>Conics</title>
-  <introduction>
+  <subsection xml:id="conics-definition">
     <p>
-      We are going to need conics to talk about orbital mechanics in the next section.
-      Let's first review the classical definitions of the four types of conics.
+      We are going to need conics to talk about orbital mechanics in
+      the next section. Let's first review the classical definitions
+      of the four types of conics.
     </p>
     <definition>
       <statement>
         <p>
-          The <term>circle</term> is all points equidistant from a center point
-          (focus).
-          It is determined entirely by its centre point and radius.
+          The <term>circle</term> is all points equidistant from a
+          center point (focus). It is determined entirely by its
+          centre point and radius.
           <md>
-            <mrow>\text{ Parameters }  \hspace{2cm} \amp  \text{ Radius }  r \vspace{0.3cm}</mrow>
-            <mrow>\text{ Equation at }  (0,0) \hspace{2cm} \amp  x^2 + y^2 = r^2 \vspace{0.3cm}</mrow>
-            <mrow>\text{ Equation at }  (x_0, y_0) \hspace{2cm} \amp  (x-x_0)^2 + (y-y_0)^2 = r^2 \vspace{0.3cm}</mrow>
+            <mrow>
+              \text{ Parameters } \amp \text{ Radius } r 
+            </mrow>
+            <mrow>
+              \text{ Equation at } (0,0) \amp x^2 + y^2 = r^2 
+            </mrow>
+            <mrow>
+              \text{ Equation at }  (x_0, y_0) \amp (x-x_0)^2 +
+              (y-y_0)^2 = r^2 
+            </mrow>
           </md>
         </p>
       </statement>
@@ -22,21 +30,29 @@
     <definition>
       <statement>
         <p>
-          The <term>ellipse</term> is all points equidistant from <term>two</term> points
-          (foci).
-          For the ellipse centered at the origin,
-          the foci are <m>(\pm c,0)</m> where <m>c^2 = a^2 - b^2</m>.
-          The ellipse is determined by a centre point and two axis length,
-          or by the two foci and a distance.
-          (This description of the ellipse assumes <m>a > b</m>.
-          If <m>a \lt  b</m>, the semimajor and semiminor axes are switched,
-          since the major axis is always larger,
-          the foci would be on the <m>y</m> axis instead of the <m>x</m>,
-          axis and <m>c^2 = b^2 - a^2</m>.)
+          The <term>ellipse</term> is all points equidistant from
+          <term>two</term> points (foci). For the ellipse centered at
+          the origin, the foci are <m>(\pm c,0)</m> where <m>c^2 = a^2
+          - b^2</m>. The ellipse is determined by a centre point and
+          two axis length, or by the two foci and a distance. (This
+          description of the ellipse assumes <m>a > b</m>. If <m>a
+          \lt  b</m>, the semimajor and semiminor axes are switched,
+          since the major axis is always larger, the foci would be on
+          the <m>y</m> axis instead of the <m>x</m>, axis and <m>c^2 =
+          b^2 - a^2</m>.)
           <md>
-            <mrow>\text{ Parameters }  \hspace{2cm} \amp  \text{ Semimajor axis }  a \ \ \text{ Semimnior axis }  b \vspace{0.3cm}</mrow>
-            <mrow>\text{ Equation at }  (0,0) \hspace{2cm} \amp  \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1 \vspace{0.3cm}</mrow>
-            <mrow>\text{ Equation at }  (x_0, y_0) \hspace{2cm} \amp \frac{(x-x_0)^2}{a^2} + \frac{(y-y_0)^2}{b^2} = 1 \vspace{0.3cm}</mrow>
+            <mrow>
+              \text{ Parameters }  \amp \text{ Semimajor axis }  a \
+              \ \text{ Semimnior axis }  b 
+            </mrow>
+            <mrow>
+             \text{ Equation at }  (0,0) \amp \frac{x^2}{a^2} +
+             \frac{y^2}{b^2} = 1 
+            </mrow>
+            <mrow>
+              \text{ Equation at }  (x_0, y_0) \amp
+              \frac{(x-x_0)^2}{a^2} + \frac{(y-y_0)^2}{b^2} = 1 
+            </mrow>
           </md>
         </p>
       </statement>
@@ -44,18 +60,28 @@
     <definition>
       <statement>
         <p>
-          The <term>parabola</term> is all points which are equidistant to a point (focus) and a line
-          (directrix).
-          For the parabola centered at the origin,
-          the focus is <m>(0,p)</m> and the directrix is the line <m>y = -p</m>.
-          The focus and directrix entirely determine the parabola. (This description holds for upward opening parabolae.
-          If the directrix is <m>y = p</m> and the focus <m>(0, -p)</m>,
+          The <term>parabola</term> is all points which are
+          equidistant to a point (focus) and a line (directrix). For
+          the parabola centered at the origin, the focus is
+          <m>(0,p)</m> and the directrix is the line <m>y = -p</m>.
+          The focus and directrix entirely determine the parabola.
+          (This description holds for upward opening parabolae. If
+          the directrix is <m>y = p</m> and the focus <m>(0, -p)</m>,
           then <m>x^2 = -4py</m> is the downward facing parabola.
-          Switching the roles of <m>x</m> and <m>y</m> gives left or right facing parabolae.)
+          Switching the roles of <m>x</m> and <m>y</m> gives left or
+          right facing parabolae.)
           <md>
-            <mrow>\text{ Parameters }  \hspace{2cm} \amp  \text{ Focus - Directrix Distance }  2p \vspace{0.3cm}</mrow>
-            <mrow>\text{ Equation at }  (0,0) \hspace{2cm} \amp  x^2 = 4py \vspace{0.3cm}</mrow>
-            <mrow>\text{ Equation at }  (x_0, y_0) \hspace{2cm} \amp  (x-x_0)^2 = 4p(y-y_0) \vspace{0.3cm}</mrow>
+            <mrow>
+              \text{ Parameters }  \amp \text{ Focus - Directrix
+              Distance }  2p 
+            </mrow>
+            <mrow>
+              \text{ Equation at }  (0,0) \amp x^2 = 4py 
+            </mrow>
+            <mrow>
+              \text{ Equation at }  (x_0, y_0) \amp (x-x_0)^2 =
+              4p(y-y_0) 
+            </mrow>
           </md>
         </p>
       </statement>
@@ -63,64 +89,76 @@
     <definition>
       <statement>
         <p>
-          The <term>hyperbola</term> is all points where the <term>difference</term>
-          of the distances to the two foci is constant.
-          The foci, similar to the ellipse,
-          are the points <m>(\pm c,0)</m> with <m>c^2 = a^2 + b^2</m>.
-          The hyperbola has vertices <m>(\pm a,0)</m>,
-          which are the points closest to the origin.
-          In addition, it has asymptotes,
-          which are the lines <m>y = \pm \frac{b}{a} x</m>.
-          The hyperbola is determined by its two foci and a distance.
-          (This description is for hyperbolae which open along the <m>x</m> axis.
-          Switching <m>x</m> and <m>y</m> gives hyperbolae which open along the <m>y</m> axis.)
+          The <term>hyperbola</term> is all points where the
+          <term>difference</term> of the distances to the two foci is
+          constant. The foci, similar to the ellipse, are the points
+          <m>(\pm c,0)</m> with <m>c^2 = a^2 + b^2</m>. The hyperbola
+          has vertices <m>(\pm a,0)</m>, which are the points closest
+          to the origin. In addition, it has asymptotes, which are
+          the lines <m>y = \pm \frac{b}{a} x</m>. The hyperbola is
+          determined by its two foci and a distance. (This
+          description is for hyperbolae which open along the <m>x</m>
+          axis. Switching <m>x</m> and <m>y</m> gives hyperbolae
+          which open along the <m>y</m> axis.)
           <md>
-            <mrow>\text{ Parameters }  \hspace{2cm} \amp  \text{ Axes }  a, \ b \vspace{0.3cm}</mrow>
-            <mrow>\text{ Equation at }  (0,0) \hspace{2cm} \amp  \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1 \vspace{0.3cm}</mrow>
-            <mrow>\text{ Equation at }  (x_0, y_0) \hspace{2cm} \amp \frac{(x-x_0)^2}{a^2} - \frac{(y-y_0)^2}{b^2} = 1 \vspace{0.3cm}</mrow>
+            <mrow>  
+              \text{ Parameters } \amp \text{ Axes }  a, \ b
+            </mrow>
+            <mrow>  
+              \text{ Equation at } (0,0) \amp \frac{x^2}{a^2} -
+              \frac{y^2}{b^2} = 1 
+            </mrow>
+            <mrow>  
+              \text{ Equation at } (x_0, y_0) \amp
+              \frac{(x-x_0)^2}{a^2} - \frac{(y-y_0)^2}{b^2} = 1 
+            </mrow>
           </md>
         </p>
       </statement>
     </definition>
-  </introduction>
+  </subsection>
   <subsection xml:id="eccentricity">
     <title>Eccentricity</title>
     <p>
-      The parabola is defined as all points equidistant from a focus and a directrix.
-      All other conics have foci, but the parabola is the only with a directrix.
-      However, there is another method of describing all conics in terms of focus and directrix.
-      To get to that description,
-      consider first the parabola in more detail in the following diagram.
-      In <xref ref="figure-focus-directrix">Figure</xref>,
-      we've labeled the conic itself as <m>\gamma</m>,
-      the focus <m>F</m> and the directrix <m>L</m> and the distance between the focus and the directrix,
-      labeled <m>d</m>.
+      The parabola is defined as all points equidistant from a focus
+      and a directrix. All other conics have foci, but the parabola
+      is the only with a directrix. However, there is another method
+      of describing all conics in terms of focus and directrix. To
+      get to that description, consider first the parabola in more
+      detail in the following diagram. In <xref
+      ref="figure-focus-directrix">Figure</xref>, we've labeled the
+      conic itself as <m>\gamma</m>, the focus <m>F</m> and the
+      directrix <m>L</m> and the distance between the focus and the
+      directrix, labeled <m>d</m>.
     </p>
     <figure xml:id="figure-focus-directrix">
-      <caption>Conic definition with directrix <m>L</m> and focus <m>F</m></caption>
-      <image width="1200%" source="images/figure23.png" />
+      <caption>
+        Conic definition with directrix <m>L</m> and focus <m>F</m>
+      </caption>
+      <image width="100%" source="images/figure23" />
     </figure>
     <p>
-      We've also labeled an angle <m>\theta</m> and two distances <m>r</m> and <m>l</m> in this diagram.
-      The point <m>P</m> is, by definition,
-      on the parabola because the distances from <m>P</m> to the focus and to the directrix are equal.
-      In <xref ref="figure-focus-directrix">Figure</xref>, <m>r=l</m>.
+      We've also labeled an angle <m>\theta</m> and two distances
+      <m>r</m> and <m>l</m> in this diagram. The point <m>P</m> is,
+      by definition, on the parabola because the distances from
+      <m>P</m> to the focus and to the directrix are equal. In <xref
+      ref="figure-focus-directrix" />, <m>r=l</m>.
     </p>
     <p>
-      We can generalize the construction by allowing <m>r</m> and <m>l</m> to be non-equal,
-      but insisting that their ration is constant.
-      That is, given a focus <m>F</m> and a directrix <m>L</m>,
-      we consider all points <m>P</m>,
-      such <m>\frac{r}{l}</m> is a constant.
-      <m>\frac{r}{l} = 1</m> will recover the parabola,
-      but other choices of the constant will result,
-      amazingly, in other conics.
+      We can generalize the construction by allowing <m>r</m> and
+      <m>l</m> to be non-equal, but insisting that their ration is
+      constant. That is, given a focus <m>F</m> and a directrix
+      <m>L</m>, we consider all points <m>P</m>, such
+      <m>\frac{r}{l}</m> is a constant. <m>\frac{r}{l} = 1</m> will
+      recover the parabola, but other choices of the constant will
+      result, amazingly, in other conics.
     </p>
     <definition>
       <statement>
         <p>
-          The <term>eccentricity</term> of a conic defined via a focus and a directix is the ratio
-          <m>\frac{r}{l}</m> of the distance to the focus over the distance to the directrix.
+          The <term>eccentricity</term> of a conic defined via a focus
+          and a directix is the ratio <m>\frac{r}{l}</m> of the
+          distance to the focus over the distance to the directrix.
           <me>
             e = \frac{r}{l}
           </me>
@@ -128,78 +166,92 @@
       </statement>
     </definition>
     <p>
-      We would like to get a description of conics as a parametric curves using the focus,
-      directrix and eccentricity.
-      We will use polar coordinates for this,
-      assuming that <m>F</m> is at the origin.
-      In <xref ref="figure-focus-directrix">Figure</xref>,
-      putting <m>F</m> at the origin means that <m>r</m> and <m>\theta</m>,
-      as labelled, are exactly polar coordinates.
+      We would like to get a description of conics as a parametric
+      curves using the focus, directrix and eccentricity. We will use
+      polar coordinates for this, assuming that <m>F</m> is at the
+      origin. In <xref ref="figure-focus-directrix">Figure</xref>,
+      putting <m>F</m> at the origin means that <m>r</m> and
+      <m>\theta</m>, as labelled, are exactly polar coordinates.
     </p>
     <proposition>
       <statement>
         <p>
-          Let <m>\gamma</m> be a conic described by a focus at the origin,
-          a directrix <m>x=d</m> and an eccentricity <m>e</m>.
+          Let <m>\gamma</m> be a conic described by a focus at the
+          origin, a directrix <m>x=d</m> and an eccentricity <m>e</m>.
           Then <m>\gamma</m> is described by a polar locus,
           <me>
             r = \frac{ed}{1 + e \cos \theta}
           </me>,
-          or by a polar parametric curve using <m>\theta</m> as the parameter,
+          or by a polar parametric curve using <m>\theta</m> as the
+          parameter,
           <me>
-            \gamma(\theta) = (r(\theta), \theta) = \left(\frac{ed}{1 + e \cos \theta}, \theta\right)
+            \gamma(\theta) = (r(\theta), \theta) = \left(\frac{ed}{1 +
+            e \cos \theta}, \theta\right)
           </me>
         </p>
       </statement>
     </proposition>
     <proof>
       <p>
-        From the diagram and some trigonometry,
-        we can see that <m>l = d - r\cos \theta</m>.
-        Eccentricity is the ratio of <m>r</m> to <m>l</m>,
-        so eccentricity has this form:
+        From the diagram and some trigonometry, we can see that <m>l =
+        d - r\cos \theta</m>. Eccentricity is the ratio of <m>r</m>
+        to <m>l</m>, so eccentricity has this form:
         <me>
           e = \frac{r}{d-r\cos\theta}
         </me>
       </p>
       <p>
-        If we solve for <m>r</m> in this equaiton we get the desired polar locus.
+        If we solve for <m>r</m> in this equaiton we get the desired
+        polar locus.
         <men xml:id="equation-conic-eccentricity-form">
           r = \frac{ed}{1 + e \cos \theta}
         </men>
       </p>
       <p>
-        Then we simply choose <m>\theta</m> as the parameter for the polar parametric description.
+        Then we simply choose <m>\theta</m> as the parameter for the
+        polar parametric description.
       </p>
     </proof>
     <proposition xml:id="prop-conic-eccentricity">
       <statement>
         <p>
           All four conics can be defined in terms of a focus <m>F</m>,
-          directrix <m>L</m>, and eccentricity <m>e</m>.
-          A conic is thus redefined to be all points where the ratio of the distance to the focus over the distance to the directrix is constant and equal to the eccentricity.
-          The hyperbola has eccentricity <m>e>1</m>,
-          the parabola has eccentricity <m>e=1</m>,
-          the ellipse has eccentricity <m>e\lt 1</m>.
-          The circle is the special limit case <m>e=0</m>,
-          though to realize the shape we have to allow the distance between <m>F</m> and <m>L</m> to approach infinity.
+          directrix <m>L</m>, and eccentricity <m>e</m>. A conic is
+          thus redefined to be all points where the ratio of the
+          distance to the focus over the distance to the directrix is
+          constant and equal to the eccentricity. The hyperbola has
+          eccentricity <m>e>1</m>, the parabola has eccentricity
+          <m>e=1</m>, the ellipse has eccentricity <m>e\lt 1</m>. The
+          circle is the special limit case <m>e=0</m>, though to
+          realize the shape we have to allow the distance between
+          <m>F</m> and <m>L</m> to approach infinity. 
         </p>
       </statement>
     </proposition>
     <proof>
       <p>
         We will prove all cases except the limit case of the circle.
-        Our approach is to start with the polar locus and try to recover the standard equations of the conics from the start of this section.
+        Our approach is to start with the polar locus and try to
+        recover the standard equations of the conics from the start of
+        this section.
       </p>
       <p>
-        We start with the polar locus and change back to Cartesian coordinates,
-        using the change of coordinates equations:
-        <m>r = \sqrt{x^2 + y^2}</m> and <m>r \cos \theta = x</m>.
+        We start with the polar locus and change back to Cartesian
+        coordinates, using the change of coordinates equations: <m>r =
+        \sqrt{x^2 + y^2}</m> and <m>r \cos \theta = x</m>.
         <md>
-          <mrow>\frac{r}{d - r\cos \theta} \amp  = e</mrow>
-          <mrow>\frac{\sqrt{x^2 + y^2}}{d - x} \amp  = e</mrow>
-          <mrow>\sqrt{x^2 + y^2} \amp  = ed -ex = e(d-x)</mrow>
-          <mrow>x^2 + y^2 \amp  = e^2 (d^2 - 2dx + x^2)</mrow>
+          <mrow>
+            \frac{r}{d - r\cos \theta} \amp = e
+          </mrow>
+          <mrow>
+            \frac{\sqrt{x^2 + y^2}}{d - x} \amp = e
+          </mrow>
+          <mrow>
+            \sqrt{x^2 + y^2} \amp = ed -ex = e(d-x)
+          </mrow>
+          <mrow>
+            x^2 + y^2 \amp = e^2 (d^2 - 2dx + x^2)
+          </mrow>
         </md>
       </p>
       <p>
@@ -209,62 +261,104 @@
         </men>
       </p>
       <p>
-        If <m>e \neq 1</m>, we divide through by <m>(1-e^2)</m>,
-        then proceed to complete the square in the <m>x</m> term.
+        If <m>e \neq 1</m>, we divide through by <m>(1-e^2)</m>, then
+        proceed to complete the square in the <m>x</m> term.
         <md>
-          <mrow>x^2 + \frac{2de^2}{1-e^2} x + \frac{y^2}{1-e^2} \amp  = \frac{d^2 e^2}{1-e^2}</mrow>
-          <mrow>x^2 + \frac{2de^2}{1-e^2} x + \frac{d^2e^4}{(1-e^2)^2} - \frac{d^2e^4}{(1-e^2)^2} + \frac{y^2}{1-e^2} \amp  = \frac{d^2 e^2}{1-e^2}</mrow>
-          <mrow>\left( x + \frac{e^2d}{1-e^2} \right)^2 + \frac{y^2}{1-e^2} \amp = \frac{d^2 e^2}{1-e^2} + \frac{d^2e^4}{(1-e^2)^2}</mrow>
-          <intertext>We take the right-hand side to common denominator.</intertext>
-          <mrow>\left( x + \frac{e^2d}{1-e^2} \right)^2 + \frac{y^2}{1-e^2} \amp = \frac{d^2 e^2(1-e^2) + d^2e^4}{(1-e^2)^2}</mrow>
-          <mrow>\left( x + \frac{e^2d}{1-e^2} \right)^2 + \frac{y^2}{1-e^2} \amp = \frac{d^2 e^2}{(1-e^2)^2}</mrow>
-          <intertext>We divide by the right-hand side.</intertext>
-          <mrow>\frac{\left( x + \frac{e^2d}{1-e^2} \right)^2}{\frac{d^2e^2}{(1-e^2)^2}} + \frac{\frac{y^2}{1-e^2}}{\frac{d^2e^2}{(1-e^2)^2}} \amp  = 1</mrow>
-          <mrow>\frac{\left( x + \frac{e^2d}{1-e^2} \right)^2}{\frac{d^2e^2}{(1-e^2)^2}} + \frac{y^2}{\frac{d^2e^2}{1-e^2}} \amp  = 1</mrow>
-          <intertext>The sign in from of the <m>y^2</m> term is positive if <m>1-e^2 > 1</m>, that is, when <m>e\lt 1</m>. Otherwise, <m>e^2-1</m> is positive. In the positive case, we can rewrite the expression as a difference of squares.</intertext>
-          <mrow>\frac{\left( x + \frac{e^2d}{1-e^2} \right)^2}{\frac{d^2e^2}{(1-e^2)^2}} - \frac{y^2}{\frac{d^2e^2}{e^2-1}} \amp  = 1</mrow>
+          <mrow>
+            x^2 + \frac{2de^2}{1-e^2} x + \frac{y^2}{1-e^2} \amp =
+            \frac{d^2 e^2}{1-e^2}
+          </mrow>
+          <mrow>
+            x^2 + \frac{2de^2}{1-e^2} x + \frac{d^2e^4}{(1-e^2)^2} -
+            \frac{d^2e^4}{(1-e^2)^2} + \frac{y^2}{1-e^2} \amp =
+            \frac{d^2 e^2}{1-e^2}
+          </mrow>
+          <mrow>
+            \left( x + \frac{e^2d}{1-e^2} \right)^2 +
+            \frac{y^2}{1-e^2} \amp = \frac{d^2 e^2}{1-e^2} +
+            \frac{d^2e^4}{(1-e^2)^2}
+          </mrow>
+          <intertext>
+            We take the right-hand side to common denominator.
+          </intertext>
+          <mrow>
+            \left( x + \frac{e^2d}{1-e^2} \right)^2 +
+            \frac{y^2}{1-e^2} \amp = \frac{d^2 e^2(1-e^2) +
+            d^2e^4}{(1-e^2)^2}
+          </mrow>
+          <mrow>
+            \left( x + \frac{e^2d}{1-e^2} \right)^2 +
+            \frac{y^2}{1-e^2} \amp = \frac{d^2 e^2}{(1-e^2)^2}
+          </mrow>
+          <intertext>
+            We divide by the right-hand side.
+          </intertext>
+          <mrow>
+            \frac{\left( x + \frac{e^2d}{1-e^2}
+            \right)^2}{\frac{d^2e^2}{(1-e^2)^2}} +
+            \frac{\frac{y^2}{1-e^2}}{\frac{d^2e^2}{(1-e^2)^2}} \amp =
+            1
+          </mrow>
+          <mrow>
+            \frac{\left( x + \frac{e^2d}{1-e^2}
+            \right)^2}{\frac{d^2e^2}{(1-e^2)^2}} +
+            \frac{y^2}{\frac{d^2e^2}{1-e^2}} \amp = 1
+          </mrow>
+          <intertext>
+            The sign in from of the <m>y^2</m> term is positive if
+            <m>1-e^2 > 1</m>, that is, when <m>e\lt 1</m>. Otherwise,
+            <m>e^2-1</m> is positive. In the positive case, we can
+            rewrite the expression as a difference of squares.
+          </intertext>
+          <mrow>
+            \frac{\left( x + \frac{e^2d}{1-e^2}
+            \right)^2}{\frac{d^2e^2}{(1-e^2)^2}} -
+            \frac{y^2}{\frac{d^2e^2}{e^2-1}} \amp = 1
+          </mrow>
         </md>
       </p>
       <p>
-        In the case <m>e\lt 1</m>,
-        the expression is the sum of positive squares, so we have an ellipse.
-        In the case <m>e>1</m>,
-        the expression is the difference of positive square, so we have a hyperbola.
-        For future convenience,
-        we define the following constants for the <m>e\lt 1</m> (ellipse) case.
+        In the case <m>e\lt 1</m>, the expression is the sum of
+        positive squares, so we have an ellipse. In the case
+        <m>e>1</m>, the expression is the difference of positive
+        square, so we have a hyperbola. For future convenience, we
+        define the following constants for the <m>e\lt 1</m> (ellipse)
+        case.
         <men xml:id="equation-reference7">
-          x_0 = \frac{-e^2 d}{1-e^2} a^2 = \frac{e^2 d^2}{(1-e^2)^2} b^2 = \frac{e^2 d^2}{1-e^2}
+          x_0 = \frac{-e^2 d}{1-e^2} a^2 = \frac{e^2 d^2}{(1-e^2)^2}
+          b^2 = \frac{e^2 d^2}{1-e^2}
         </men>
       </p>
       <p>
-        Subsituting these cosntant into the previous equation gives an elegant ellipse equation.
+        Subsituting these cosntant into the previous equation gives an
+        elegant ellipse equation.
         <me>
           \frac{(x-x_0)^2}{a^2} \pm \frac{y^2}{b^2} = 1
         </me>
       </p>
       <p>
-        Lastly, in <xref ref="equation-reference3">Equation</xref> we excluded <m>e = 1</m>.
-        Now assume <m>e=1</m>, which removes the
-        <m>(1-e^2)x^2</m> term from <xref ref="equation-reference3">Equation</xref> entirely.
-        We continue the derivation from that point;
-        the calculation is much easier in this case.
+        Lastly, in <xref ref="equation-reference3">Equation</xref> we
+        excluded <m>e = 1</m>. Now assume <m>e=1</m>, which removes
+        the <m>(1-e^2)x^2</m> term from <xref
+        ref="equation-reference3">Equation</xref> entirely. We
+        continue the derivation from that point; the calculation is
+        much easier in this case.
         <me>
-          2dx + y^2 = d^2 \implies y^2 = d^2 - 2dx \implies y^2 = -2d \left( x - \frac{d}{2} \right)
+          2dx + y^2 = d^2 \implies y^2 = d^2 - 2dx \implies y^2 = -2d
+          \left( x - \frac{d}{2} \right)
         </me>
       </p>
       <p>
-        This is the equation for a leftward-opening parabola,
-        so <m>e=1</m> does recover the parabola.
+        This is the equation for a leftward-opening parabola, so
+        <m>e=1</m> does recover the parabola.
       </p>
       <p>
-        For all cases except the circle,
-        we recovered the standard equation of the conic.
-        We found a hyperbola when <m>e>1</m>,
-        an ellipse when <m>e\lt 1</m>,
-        and a parabola when <m>e=1</m>.
-        As mentioned in the proposition,
-        the circle is a strange limit case as <m>e \rightarrow 0</m>,
-        but <m>e \rightarrow 0</m> also increases the distance <m>d \rightarrow \infty</m>.
+        For all cases except the circle, we recovered the standard
+        equation of the conic. We found a hyperbola when <m>e>1</m>,
+        an ellipse when <m>e\lt 1</m>, and a parabola when <m>e=1</m>.
+        As mentioned in the proposition, the circle is a strange limit
+        case as <m>e \rightarrow 0</m>, but <m>e \rightarrow 0</m>
+        also increases the distance <m>d \rightarrow \infty</m>.
       </p>
     </proof>
   </subsection>

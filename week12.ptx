@@ -1,0 +1,5 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="week12">
+  <title>Week 12</title>
+  <xi:include href="constrained-optimization.ptx" />
+  <xi:include href="week12-activity.ptx" />
+</chapter>

@@ -1,11 +1,445 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="taylor-series">
+<section xml:id="taylor-series-definition">
   <title>Taylor Series</title>
-  <xi:include  href="series-as-functions.ptx" />
-  <xi:include  href="power-series.ptx" />
-  <xi:include  href="taylor-series-definition.ptx" />
-  <xi:include  href="taylor-series-examples.ptx" />
-  <xi:include  href="exponentials-and-trigonometry.ptx" />
-  <xi:include  href="non-elementary-functions.ptx" />
-  <xi:include  href="approximation.ptx" />
-  <xi:include  href="error-analysis.ptx" />
-</chapter>
+  <subsection xml:id="analytic-functions">
+    <title>Analytic Functions</title>
+    <p>
+      Once again, consider the geometric series.
+      <me>
+        f(x) = \sum_{n=0}^\infty x^n = \frac{1}{1-x}
+      </me>
+    </p>
+    <p>
+      Unlike most of the power series we've seen so far, we actually
+      know the values of the geometric series. This series, as a
+      function, is the same as the function <m>\frac{1}{1-x}</m> on
+      the domain <m>(-1,1)</m>. (The function <m>\frac{1}{1-x}</m> is
+      certainly defined on a larger domain, but the series is not).
+      We can say that the geometric series lets us write
+      <m>\frac{1}{1-x}</m> as an infinite series; it is the infinite
+      series representation of the function on the domain
+      <m>(-1,1)</m>.
+    </p>
+    <p>
+      The theory of Taylor series generalizes this situation. For
+      various functions <m>f(x)</m>, we want to a build representation
+      of <m>f(x)</m> as a series. This will be a power series which
+      is identical to <m>f(x)</m>, at least for part of its domain.
+      To find the power series, we need to choose a centre point
+      <m>\alpha</m> and find coefficients <m>c_n</m> such that
+      <me>
+        f(x) = \sum_{n=0}^\infty c_n (x-\alpha)^n
+      </me>.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          A function is called <term>analytic</term> at <m>\alpha \in
+          \RR</m> if it can be expressed as a power series centered at
+          <m>\alpha</m> with a non-zero radius of convergence. Such a
+          power series is called a <term>Taylor series</term>
+          representation of the function. In the case that <m>\alpha
+          = 0</m>, a Taylor series is often called a <term>MacLaurin
+          series</term>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      We know that power series (and therefore all possible Taylor
+      series) are <m>C^\infty</m>. There is a nice theorem that
+      provides the reverse implication.
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          A function <m>f</m> is <m>C^\infty</m> at a point <m>\alpha
+          \in \RR</m> if and only if there exists <m>R>0</m> such that
+          <m>f</m> is analytic on <m>(\alpha-R,\alpha+R)</m>.
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      This theorem answers the questions of which functions have
+      Taylor series representations: any function which is infinitely
+      differentiable can be expressed as a series, but no other
+      functions can be so expressed.
+    </p>
+  </subsection>
+  <subsection xml:id="calculating-coefficients">
+    <title>Calculating Coefficients</title>
+    <p>
+      The previous section defined a class of analytic functions, but
+      it didn't tell us how to actually find the series for these
+      functions. We get to choose the centre point <m>\alpha</m>, so
+      we need to know how to calculate the coefficients <m>c_n</m>.
+      Assuming we have a series expression of <m>f(x)</m>, let's look
+      at the values of <m>f</m> and its derivatives. Then we
+      calculate the values of the derivatives at the centre point
+      <m>\alpha</m>.
+      <md>
+        <mrow>
+          f(\alpha) \amp = \sum_{n=0}^\infty c_n (\alpha-\alpha)^n =
+          c_0 + \sum_{n=1}^\infty c_n \cdot 0 = c_0 \implies c_0 =
+          f(\alpha)
+        </mrow>
+        <mrow>
+          f^{\prime} (\alpha) \amp = \sum_{n=1}^\infty c_n n
+          (\alpha-\alpha)^{n-1} = c_1 + \sum_{n=2}^\infty c_n \cdot 0
+          = c_1 \implies c_1 = f^\prime(\alpha)
+        </mrow>
+        <mrow>
+          f^{\prime \prime} (\alpha) \amp = \sum_{n=2}^\infty c_n n
+          (n-1) (\alpha-\alpha)^{n-2} = 2c_2 + \sum_{n=3}^\infty c_n
+          \cdot 0 = 2c_2 \implies c_2 =
+          \frac{f^{\prime\prime}(\alpha)}{2}
+        </mrow>
+        <mrow>
+          f^{(3)} (\alpha) \amp = \sum_{n=3}^\infty c_n n (n-1) (n-2)
+          (\alpha-\alpha)^{n-3} = 6c_3 + \sum_{n=4}^\infty c_n \cdot 0
+          = 6c_3 \implies c_3 = \frac{f^{(3)}(\alpha)}{6}
+        </mrow>
+        <mrow>
+          f^{(4)} (\alpha) \amp = \sum_{n=4}^\infty c_n n (n-1) (n-2)
+          (n-3) (\alpha-\alpha)^{n-4} = 24c_4 + \sum_{n=5}^\infty c_n
+          \cdot 0
+        </mrow>
+        <mrow>
+          f^{(4)} (\alpha) \amp = 24c_4 \implies c_4 =
+          \frac{f^{(4)}(\alpha)}{24}
+        </mrow>
+        <intertext>
+          We generalize the pattern to write a general expression for
+          the <m>n</m>th coefficient.
+        </intertext>
+        <mrow>
+          c_n \amp = \frac{f^{(n)}(\alpha)}{n!}
+        </mrow>
+      </md>
+    </p>
+    <p>
+      Now we have a way to calculate the coefficient in terms of the
+      derivatives of <m>f(x)</m> at the chosen centre point.
+      Therefore, to find a series representation of <m>f(x)</m>
+      centered at <m>\alpha</m> (assuming <m>f(x)</m> is analytic at
+      <m>\alpha</m>), we use this expression above to calculate the
+      coefficients. We summarize this in a proposition.
+    </p>
+    <proposition>
+      <statement>
+        <p>
+          If <m>f</m> is analytic at <m>\alpha</m>, then the Taylor
+          series for <m>f</m> has this form:
+          <me>
+            f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(\alpha)}{n!}
+            (x-\alpha)^n
+          </me>
+        </p>
+      </statement>
+    </proposition>
+    <p>
+      The expression for the coefficients <m>c_n</m> allows for
+      another important result.
+    </p>
+    <proposition>
+      <statement>
+        <p>
+          (Uniqueness of Coefficients) Two power series centered at
+          the same point are equal if an only if every coefficient is
+          equal.
+        </p>
+      </statement>
+    </proposition>
+    <proof>
+      <p>
+        Say we have an equation of power series.
+        <me>
+          \sum_{n=0}^\infty c_n (x-\alpha)^n = \sum_{n=0}^\infty b_n
+          (x-\alpha)^n
+        </me>
+      </p>
+      <p>
+        The coefficients are determined by the derivatives. But the
+        functions are the same, so they must have the same derivatives
+        at <m>\alpha</m>. Therefore, both <m>b_n</m> and <m>c_n</m>
+        must be calculated by <m>\frac{f^{(n)}(\alpha)}{n!}</m>, hence
+        <m>b_n = c_n</m>.
+      </p>
+    </proof>
+    <p>
+      Uniqueness of coefficients is very important for doing algebra
+      with series. If two series are equal, we can then pass to the
+      equality of each of the coefficients to get explicit equations.
+      Curiously, since all the coefficients are determined by the
+      derivatives at the centre point, this means that the derivatives
+      at the centre point encode the entire behaviour of the function
+      (inside the radius of convergence). This is a surprising
+      result, since functions can have a wide range of behaviours far
+      away from their centre points.
+    </p>
+  </subsection>
+  <subsection xml:id="taylor-series-examples">
+    <title>Taylor Series Examples</title>
+    <p>
+      Let's try to calculate some Taylor series for important functions.
+    </p>
+    <example>
+      <statement>
+        <p>
+          We start with the most important function in calculus:
+          <m>e^x</m>. The derivatives of <m>e^x</m> are just
+          <m>e^x</m>. If we centre a series at <m>x=0</m>, then all
+          these derivatives evaluate to <m>1</m>. Therefore
+          <me>
+            e^x = \sum_{n=0}^\infty \frac{1}{n!}x^n = 1 + x +
+            \frac{x^2}{2} + \frac{x^3}{6} + \frac{x^4}{24} +
+            \frac{x^5}{120} + \ldots
+          </me>.
+        </p>
+        <p>
+          We can check that the radius of convergence for this series
+          is <m>R = \infty</m>, so this is an expression for
+          <m>e^x</m> which works for all real numbers.
+        </p>
+      </statement>
+    </example>
+    <p>
+      As an aside, this finally allows for the proper definition of
+      the exponential function. For <m>r = \frac{a}{b}</m> a rational
+      number, <m>a^r = \sqrt[b]{x^a}</m>, which was well understood.
+      But if <m>r</m> is irrational, we previously had no idea what
+      <m>a^r</m> actually was nor how to calculate it. We worked on
+      faith that the exponential function <m>e^x</m> was well defined
+      for irrational numbers. Now, however, we can use this series.
+      The value of <m>e^{\pi}</m>, which was completely opaque and
+      mysterious before, is now given by a series.
+      <me>
+        e^{\pi} = \sum_{n=0}^\infty \frac{\pi^n}{n!} = 1 + \pi +
+        \frac{\pi^2}{2} + \frac{\pi^3}{6} + \frac{\pi^4}{24} +
+        \frac{\pi^5}{120} + \ldots
+      </me>
+    </p>
+    <p>
+      Other important properties of the exponential function can be
+      calculated from the series. Let's differentiate the series.
+      (We use a shift in the series in the last step.)
+      <me>
+        \frac{d}{dx} e^x = \frac{d}{dx} \sum_{n=0}^\infty \frac{1}{n!}
+        x^n = \sum_{n=1}^\infty \frac{1}{n!} n x^{n-1} =
+        \sum_{n=1}^\infty \frac{1}{(n-1)!} x^{n-1} = \sum_{n=0}^\infty
+        \frac{1}{n!} x^n = e^x
+      </me>
+    </p>
+    <p>
+      This recovers the fact that the exponential function is its own
+      derivative..
+    </p>
+    <example>
+      <statement>
+        <p>
+          Let's integrate the geometric series (we set the integration
+          constant to zero).
+          <md>
+            <mrow>
+              \int \sum_{n=0}^\infty x^n dx \amp = \int \frac{1}{1-x}
+              dx
+            </mrow>
+            <mrow>
+              \sum_{n=0}^\infty \frac{x^{n+1}}{n+1} + C \amp = -\ln
+              |1-x| + C
+            </mrow>
+            <mrow>
+              \sum_{n=0}^\infty \frac{x^{n+1}}{n+1} \amp = -\ln (1-x)
+            </mrow>
+          </md>
+        </p>
+        <p>
+          This gives a Tayor series for <m>- \ln (1-x)</m> centered at
+          <m>\alpha = 0</m>. Integration can be a convenient way to
+          calculate a series, since we didn't have to calculate all
+          the coefficients directly.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          We remarked in the previous section that integration was
+          easy for series. Let's look at the function <m>e^{x^2}</m>.
+          It has no elementary anti-derivative, so we unable to
+          integrate it with conventional methods. However, if we put
+          <m>x^2</m> into the series for the exponential function, we
+          get a series for <m>e^{x^2}</m>.
+          <me>
+            e^{x^2} = \sum_{n=0}^\infty \frac{x^{2n}}{n!}
+          </me>
+        </p>
+        <p>
+          Since this is a series, we can integrate it.
+          <me>
+            \int e^{x^2} dx = \sum_{n=0}^\infty
+            \frac{x^{2n+1}}{(2n+1)n!} + C
+          </me>
+        </p>
+        <p>
+          This new series is the anti-derivative of <m>e^{x^2}</m>.
+          We knew such a function should exist, and now we have a
+          representation of it as a Taylor series. (The series has
+          infinite radius of convergence).
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          The Taylor series for sine and cosine are important
+          examples. Centered at <m>x=0</m>, the derivatives of
+          <m>\sin x</m> form a cycle: <m>\sin x</m>, <m>\cos x</m>,
+          <m>-\sin x</m>, and <m>-\cos x</m>. Evaluated at
+          <m>x=0</m>, these gives values of <m>0</m>, <m>1</m>,
+          <m>0</m>, and <m>-1</m>. Therefore, we get the following
+          expressions for the coefficient of the Taylor series. (Note
+          we need to group the coefficients into odds and evens,
+          writing <m>n= 2k</m> for evens and <m>n = 2k+1</m> for
+          odds).
+          <me>
+            \begin{array}{*4{>{\displaystyle}l}} 
+              c_0 \amp = f(0) = 0 \amp c_1 \amp = f^\prime(0) = 1 \\
+              c_2 \amp = \frac{f^{\prime\prime}(0)}{2!} = 0 \amp c_3
+                \amp = \frac{f^{\prime\prime\prime}(0)}{3!} = 
+                \frac{-1}{3!} \\ 
+              c_4 \amp = \frac{f^{(4)}(0)}{4!} = 0 \amp c_5 \amp =
+                \frac{f^{(5)}(0)}{5!} = \frac{1}{5!} \\
+              c_6 \amp = \frac{f^{(6)}(0)}{6!} = 0 \amp c_7 \amp =
+                \frac{f^{(7)}(0)}{7!} = \frac{-1}{7!} \\ 
+              c_8 \amp = \frac{f^{(8)}(0)}{8!} = 0 \amp c_9 \amp = 
+                \frac{f^{(9)}(0)}{9!} = \frac{1}{9!} \\ 
+              c_{2k} \amp = 0 \amp c_{2k+1} \amp =
+                \frac{(-1)^k}{(2k+1)!} 
+            \end{array}
+          </me>
+        </p>
+        <p>
+          Using these coefficients, the Taylor series for sine
+          centered at <m>\alpha = 0</m> is this series:
+          <me>
+            \sin x = \sum_{n=0}^\infty \frac{(-1)^k}{(2k+1)!}
+            x^{2k+1}
+          </me>
+        </p>
+        <p>
+          The radius of convergence of this series is <m>R =
+          \infty</m>, so it expresses <m>\sin x</m> for all real
+          numbers. We can use similar steps to find the Taylor the
+          series for cosine.
+          <me>
+            \cos x = \sum_{n=0}^\infty \frac{(-1)^k}{(2k)!} x^{2k}
+          </me>
+        </p>
+        <p>
+          The radius of convergence of this series is also <m>R =
+          \infty</m>.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Consider <m>f(x) = \ln x</m> centered at <m>\alpha = 1</m>.
+          <me>
+            \begin{array}{*4{>{\displaystyle}l}} 
+              f^\prime(x) \amp = \frac{1}{x} \amp f^{\prime \prime}(x) 
+                \amp = \frac{-1}{x^2} \\ 
+              f^{\prime \prime \prime}(x) \amp = \frac{2}{x^3} \amp 
+                f^{(4)}(x) \amp = \frac{-6}{x^4} 
+            \end{array}
+          </me>
+        </p>
+        <p>
+          We look for a general patterns. There are three pieces: an
+          alternating sign, a factorial multiplication growing in the
+          numerator, an a power growing in the denominator. Careful
+          to match the indices correctly to the first few elements of
+          the pattern.
+          <me>
+            f^{(n)}(x) = \frac{(-1)^{n-1}(n-1)!}{x^n} 
+            f^{(n)}(1) = (-1)^{n-1}(n-1)!
+          </me>
+        </p>
+        <p>
+          Once we have the general pattern, we evaluate it at the
+          centre point and then we put it into the Taylor series
+          form.
+          <me>
+            \ln x = \sum_{n=1}^\infty \frac{(-1)^{n-1}(n-1)!}{n!}
+            (x-1)^n = \sum_{n=1}^\infty \frac{(-1)^{n-1}}{n} (x-1)^n
+          </me>
+        </p>
+        <p>
+          The radius of convergence is 1, found by ratio test.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Consider <m>f(x) = \frac{1}{x^2}</m> centered at <m>\alpha =
+          3</m>.
+          <md>
+            <mrow>
+              f^\prime(x) \amp = \frac{-2}{x^3} 
+              f^{\prime \prime}(x) = \frac{6}{x^4} 
+              f^{\prime \prime \prime}(x) = \frac{-24}{x^5}
+            </mrow>
+            <intertext>
+              We look for a general pattern as before.
+            </intertext>
+            <mrow>
+              f^{(n)}(x) \amp = \frac{(-1)^{n}(n+1)!}{x^{n+2}}
+            </mrow>
+            <intertext>
+              We evaluate at the centre point.
+            </intertext>
+            <mrow>
+              f^{(n)}(3) \amp = \frac{(-1)^{n}(n+1)!}{3^{n+2}}
+            </mrow>
+            <intertext>
+              We put this into the general Taylor series form.
+            </intertext>
+            <mrow>
+              \ln x \amp = \sum_{n=1}^\infty
+              \frac{(-1)^{n}(n+1)!}{3^{n+2} n!} (x-3)^n =
+              \sum_{n=1}^\infty \frac{(-1)^n (n+1)}{3^{n+2}} (x-3)^n
+            </mrow>
+          </md>
+        </p>
+        <p>
+          The radius of convergence is 3, found by ratio test.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Consider a function which has the following sequence of
+          derivatives at <m>x=0</m>.
+          <me>
+            0, 1, 2, 0, -1, 4, 0, 1, 8, 0, -1, 16, 0, 1, 32, 0, -1,
+            64, \ldots
+          </me>
+        </p>
+        <p>
+          The pattern has a cycle of threes. All <m>3n</m> terms are
+          0. All <m>3n+1</m> terms are <m>(-1)^n</m>. All
+          <m>3n+2</m> terms are <m>2^n</m>. Therefore, the series is
+          best expressed in two pieces.
+          <me>
+            f(x) = \sum_{n=0}^\infty \frac{(-1)^n}{(3n+1)!} x^{3n+1} +
+            \sum_{n=0}^\infty \frac{2^n}{(3n+2)!} x^{3n+2}
+          </me>
+        </p>
+        <p>
+          The radius of convergence is <m>\infty</m>, found by a ratio test.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+</section>

@@ -1,0 +1,8 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="week2">
+  <title>Week 2</title>
+  <xi:include href="power-series.ptx" />
+  <xi:include href="taylor-series.ptx" />
+  <xi:include href="approximation.ptx" />
+  <xi:include href="error-analysis.ptx" />
+  <xi:include href="week2-activity.ptx" />
+</chapter>
