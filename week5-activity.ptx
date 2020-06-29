@@ -1,14 +1,364 @@
 <section xml:id="week5-activity">
   <title>Week 5 Activity</title>
-  <subsection xml:id="temp">
-    <title>Temp</title>
+  <subsection xml:id="curvilinear-problems">
+    <title>Curvilinear Coordinates</title>
     <activity>
       <statement>
         <p>
+          Draw the following loci described in polar coordinates.
+          (This is mostly by inspection. Try out some points and use
+          the ideas and definitions of polar cooridinates to extend
+          those points to a curve.) 
+          <me>
+            r = \theta^2 
+          </me>
+          Also convert this polar equation into a cartesian equation. 
         </p>
       </statement>
       <solution>
         <p>
+          We can think of this by starting with <m>\theta = 0</m> and
+          seeing what happens to the radius as we increase or decrease
+          <m>/theta</m>. As the angle grows, the radius grows
+          quadratically. This should give a spiral going out at the
+          angle increases, and a mirrored spiral also going out as the
+          angle decreases (since the negative angle will give a
+          positive radius when squared). The double spiral result is
+          shown in <xref ref="figure-activity-polar-locus-1" />
+          <figure xml:id="figure-activity-polar-locus-1">
+            <caption>
+              Polar Locus <m>r = \theta^2</m>
+            </caption>
+            <image width="100%" source="images/figure48" />
+          </figure>
+          To do the conversion, we simply replace the various pieces:
+          <m>r/</m> and <m>\theta</m> with the corresponding cartesian
+          equivalents. 
+          <me>
+            \sqrt{x^2 + y^2} = \left( \arctan \left( \frac{y}{x}
+            \right) \right)^2
+          </me>
+          We could look for simplifications if we wish, but nothing
+          obviously makes the equations more succinct as far as I can
+          tell. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Draw the following loci described in polar coordinates.
+          (This is mostly by inspection. Try out some points and use
+          the ideas and definitions of polar cooridinates to extend
+          those points to a curve.) 
+          <me>
+            r^2 - 7r + 10 = 0 
+          </me>
+          Also convert this polar equation into a cartesian equation. 
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The locus only depends on <m>r</m>, so <m>/theta</m> can
+          take any possible value. In polar coordinates, this should
+          give us circles: shapes where the radius is fixed by the
+          angle is arbitrary. This is a quadratic in the radius with
+          roots <m>r=2</m> and <m>r=5</m>, so we get two cirles, one
+          with radius 2 and one with radius 5. 
+          <figure xml:id="figure-activity-polar-locus-2">
+            <caption>
+              Polar Locus <m>r^2 - 7r + 10 = 0</m>
+            </caption>
+            <image width="100%" source="images/figure49" />
+          </figure>
+          To converse, we simply replace <m>r</m> with its cartesian
+          equivalent.
+          <me>
+            4x^2 + 4y^2 - 4 \sqrt{x^2 + y^2} - 9 = 0 
+          </me>
+          There may be simplifications that can be made, but I don't
+          see anything that would obviously make the locus more
+          succinct. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Draw the following loci described in polar coordinates.
+          (This is mostly by inspection. Try out some points and use
+          the ideas and definitions of polar cooridinates to extend
+          those points to a curve.) 
+          <me>
+            r^2 = \theta
+          </me>
+          Also convert this polar equation into a cartesian equation. 
+        </p>
+      </statement>
+      <solution>
+        <p>
+          First we can notice that the left side is positive, so the
+          right side must also be positive; therefore, we are
+          restricted to positive angles. Starting at <m>\theta = 0
+          </m> and rotating counterclockwise, the radius grows with
+          the angle as <m>r = \sqrt{\theta}</m>. Therefore, we expect
+          a spiral with curve slowly getting closer and closer to each
+          other as it expands, since the square root function is
+          slower than linear growth (which would be an evently spaced
+          spiral). 
+          <figure xml:id="figure-activity-polar-locus-3">
+            <caption>
+              Polar Locus <m>r^2 = \theta</m>
+            </caption>
+            <image width="100%" source="images/figure50" />
+          </figure>
+          To converse, we simply replace <m>r</m> and <m>/theta</m>
+          with their cartesian equivalents.
+          <me>
+            x^2 + y^2 = \left( \arctan \left( \frac{y}{x} \right)
+            \right)^2 
+          </me>
+          We could try to simplify, but I don't see any obvious
+          simplifications that would make the equation more succinct. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Draw the following loci described in polar coordinates.
+          (This is mostly by inspection. Try out some points and use
+          the ideas and definitions of polar cooridinates to extend
+          those points to a curve.) 
+          <me>
+            r + \theta = 0 
+          </me>
+          Also convert this polar equation into a cartesian equation. 
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We can re-arrange this equation into <m>r = -\theta</m>,
+          which is the negative of the archimedian spiral. Since the
+          radius must be positive, the angle must be negative, so we
+          get a clockwise archimedian spiral. Since the growth is
+          linear, the arms of the spiral are equally spaced. 
+          <figure xml:id="figure-activity-polar-locus-4">
+            <caption>
+              Polar Locus <m>r + \theta = 0</m>
+            </caption>
+            <image width="100%" source="images/figure51" />
+          </figure>
+          To convert, we simply replace <m>r</m> and <m>/theta</m>
+          with their cartesian equavalents. 
+          <me>
+            \sqrt{x^2 + y^2} + \arctan \left( \fac{y}{x} \right) = 0 
+          </me>
+          We could try to simplify, but I don't see any changes that
+          make the equation substantially more succinct. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Draw the following loci described in polar coordinates.
+          (This is mostly by inspection. Try out some points and use
+          the ideas and definitions of polar cooridinates to extend
+          those points to a curve.) 
+          <me>
+            r = -(\theta + 1)^2
+          </me>
+          Also convert this polar equation into a cartesian equation. 
+        </p>
+      </statement>
+      <solution>
+        <p>
+          This locus only has one point, which is the origin. This
+          point happens when <m>\theta = -1</m> and <m>r=0</m>. For
+          all other values of <m>]theta</m>, the right side is
+          negative. The the radius cannot be negative, there are no
+          possible radius values that satisfy the equation. We can
+          still translate this locus, thought the cartesian locus is
+          still a complicated way of simply referring to the point
+          <m>(0,0)</m>.
+          <me>
+            \sqrt{x^2 + y^2} = - \left( \arctan \left( \frac{y}{x}
+            \right) + 1 \right)^2 
+          </me>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Change this Cartesian equation into a polar equation.
+          <me>
+            x^2 + y^2 = 49 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          This is nicely set up, since the cartesian locus includes
+          the term <m>x^2 + y^2</m>, which directly translates to the
+          polar term <m>r^2</m>. Making that replacement gives the
+          polar locus. 
+          <me>
+            r^2 = 49 
+          </me>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Change this Cartesian equation into a polar equation.
+          <me>
+            \arctan \left( \frac{y}{x} \right) - x^2 - y^2 = 1 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          This cartesian locus is in a convenient form. The artcangent
+          term is precisely the cartesian equivalent of the polar
+          <m>/theta</m>. If we write <m>(-x^2 - y^2</m> as
+          <m>-(x^2+y^2)</m>, we can also the fact that <m>(x^2 +
+          y^2)</m> is equivalent to the polar <m>r^2</m>. Making those
+          two replacement gives the polar locus. 
+          <me>
+            \theta - r^2 = 1 
+          </me>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Change this Cartesian equation into a polar equation.
+          <me>
+            y = 3x -4
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Here we simply replace <m>x</m> amd <m>y</m> with their
+          polar equivalent. 
+          <me>
+            r \sin \theta = 3 r \cos \theta - 4
+          </me>
+          We could try to simplify, but I don't see any particular
+          simplifications that make the equation any more succinct. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Change this Cartesian equation into a polar equation.
+          <me>
+            y = 2x^2 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Here we simply replace <m>x</m> amd <m>y</m> with their
+          polar equivalent. 
+          <me>
+            r \sin \theta = 2 (r \cos \theta)^2 
+          </me>
+          We could try to simplify if we wanted. One might be tempted
+          to cancel an <m>r</m> term from both sides of the equations.
+          That would be mostly fine, but there is one tricky subtlety.
+          With the equation as written, the origin (with <m>r=0</m>
+          and <m>\theta</m> undetermined) satisfied the equation; if
+          we cancel <m>r</m> from both sides, we preserve the rest of
+          the locus but we lose the origin. Therefore, the
+          simplification of cancelling out <m>r</m> needs to be
+          accompanied by a note for the case <m>r=0</m> and the
+          inclusion of the origin. 
+        </p>
+      </solution>
+    </activity>
+  </subsection>
+  <subsection xml:id="activity-vector-valued-functions">
+    <activity>
+      <statement>
+        <p>
+          With of these are vector valued functions and why?
+          <ol>
+            <li>
+              A function defined on the set of people which outputs
+              each persons age, height and weight.
+            </li>
+            <li>
+              A function which takes a location described by lattitude
+              and longitude and returns the altitude of that point.
+            </li>
+            <li>
+              A function defined on the positive real numbers which
+              outputs the square root, cube root and fourth root of
+              the number.
+            </li>
+            <li>
+              A function of time which gives the local windspeed and
+              direction at the top of a sailbost mast as the sailboat
+              moves. 
+            </li>
+            <li>
+              A function of time which gives the loudness (in
+              decibels) of a recorded music track played on a
+              particular sound system. 
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              A function defined on the set of people which outputs
+              each persons age, height and weight. This is a
+              vector valued function: for each person, three values
+              are given as output. This is not a geometric vector, but
+              it can still be represented as a triple: (age, height,
+              weight). That's the algeraic definition of a vector. 
+            </li>
+            <li>
+              A function which takes a location described by lattitude
+              and longitude and returns the altitude of that point.
+              This is not a vector-valued function. It depends on
+              multiple inputs (lattitude and input) but outputs a
+              simple value: the altitude. Altitude is a number, not a
+              vector. 
+            </li>
+            <li>
+              A function defined on the positive real numbers which
+              outputs the square root, cube root and fourth root of
+              the number. This is a vector valued function. If
+              <m>x</m> is the variable, we can write <m>f(x) = \left(
+              \sqrt{x}. \sqrt[3]{x}, \sqrt[4]{x} \right)</m>. That
+              triple can be interpreted as a vector. 
+            </li>
+            <li>
+              A function of time which gives the local windspeed and
+              direction at the top of a sailbost mast as the sailboat
+              moves. This is a vector valued function. It has a single
+              input (time), but outputs windspeed and direction, which
+              is a vector quantity. 
+            </li>
+            <li>
+              A function of time which gives the loudness (in
+              decibels) of a recorded music track played on a
+              particular sound system. This is not a vector-valued
+              function. This is an ordinay single-variable functions:
+              the input is a single value (time) and the output is
+              also a single value (decibels). 
+            </li>
+          </ol>
         </p>
       </solution>
     </activity>
@@ -18,14 +368,15 @@
     <p>
       <ul>
         <li>
+          What is a coordinate system. Why are there options for
+          coordinates?
         </li>
         <li>
+          What are curvilinear coordinates and how do they differ from
+          cartesian coordinates.
         </li>
         <li>
-        </li>
-        <li>
-        </li>
-        <li>
+          What is a vector valued function?
         </li>
       </ul>
     </p>

@@ -1,14 +1,312 @@
 <section xml:id="week1-activity">
   <title>Week 1 Activity</title>
-  <subsection xml:id="temp">
-    <title>Temp</title>
+  <subsection xml:id="testing-series">
+    <title>Testing Series for Convergence</title>
     <activity>
       <statement>
         <p>
+          Test this series for convergence.
+          <me>
+            \sum_{n=1}^\infty \frac{4}{1+n} 
+          </me>
         </p>
       </statement>
       <solution>
         <p>
+          These terms are positive and asymptotically equivalent to
+          <m>\frac{1}{n}</m>, which are the terms of the harmonic
+          series (or the <m>\zeta</m> series with <m>p=1</m>. The
+          harmonic series is a divergent series, so by asymptotic
+          comparison, this is also a divergence series. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Test this series for convergence.
+          <me>
+            \sum_{n=1}^\infty (-1)^n 5^{-n}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          This is an alternating series, so we can use the alternating
+          series test. Look at the limit of the term.
+          <me>
+            \lim_{n \rightarrow \infty} 5^{-n} = \lim_{n \rightarrow
+            \infty} \frac{1}{5^n} = 0 
+          </me>
+          The terms approach zero, so by the alternating series test,
+          this series is convergent. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Test this series for convergence.
+          <me>
+            \sum_{n=1}^\infty \frac{1 + 2^n + 4^n}{7^n}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We can split this up into three series by linearity.
+          <me>
+            \sum_{n=1}^\infty \frac{1 + 2^n + 4^n}{7^n} = 
+            \sum_{n=1}^\infty \frac{1}{7^n} + \frac{2^n}{7^n} +
+            \frac{4^n}{7^n} = 
+            \sum_{n=1}^\infty \left( \frac{1}{7} \right)^n + 
+            \sum_{n=1}^\infty \left( \frac{2}{7} \right)^n + 
+            \sum_{n=1}^\infty \left( \frac{4}{7} \right)^n
+          </me>
+          All three of these are geometric series with common ratios
+          less than one, so each of the three is convergent. Our
+          series is the sum of three convergent series, so it is
+          convergent. Since these are all geometric series, we can
+          actually calculate the value of this series. 
+          <me>
+            \sum_{n=1}^\infty \left( \frac{1}{7} \right)^n + 
+            \sum_{n=1}^\infty \left( \frac{2}{7} \right)^n + 
+            \sum_{n=1}^\infty \left( \frac{4}{7} \right)^n =
+            \frac{1}{1 - \frac{1}{7}} + \frac{1}{1 - \frac{2}{7}} +
+            \frac{1}{1 - \frac{4}{7}} = 
+            \frac{7}{6} + \frac{7}{5} + \frac{7}{3} = \frac{49}{10}
+          </me>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Test this series for convergence.
+          <me>
+            \sum_{n=1}^\infty \left( \frac{1}{n} + \frac{1}{n^2} +
+            \frac{1}}n^3} \right) 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Since we are adding positive elements to <m>\frac{1}{n}</m>,
+          the term here satisfy this inequatily. 
+          <me>
+            \left( \frac{1}{n} + \frac{1}{n^2} +
+            \frac{1}}n^3} \right) > \frac{1}{n} 
+          </me>
+          The terms are positive and greater than the terms of the
+          harmonic series, which is a divergent series with positive
+          terms. By direct comparison, this series diverges. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Test this series for convergence.
+          <me>
+            \sum_{n=1}^\infty \frac{\sqrt{n^6 + 1}}{n^3} 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We can use the test for divergence here and look at the
+          limit of the terms.
+          <me>
+            \lim_{n \rightarrow \infty} \frac{\sqrt{n^6 + 1}}{n^3} 
+          </me>
+          In this limit, the asymptotic order of the numerator and
+          denominator are both <m>n^3</m> and the leading coefficient
+          are both 1. 
+          <me>
+            \lim_{n \rightarrow \infty} \frac{\sqrt{n^6 + 1}}{n^3} =
+            \frac{1}{1} = 1 
+          </me>
+          Since the limit of the terms is not zero, this is a
+          divergent series.
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Test this series for convergence.
+          <me>
+            \sum_{n=1}^\infty \frac{e^n}{n!}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We can use the ratio test here to deal with the factorial
+          <md>
+            <mrow>
+              \lim_{n \rightarrow \infty} \left| \frac{a_{n+1}}{a_n}
+              \right| \amp = \lim_{n \rightarrow \infty}
+              \frac{\frac{e^{n+1}}{(n+1)!}{\frac{e^n}{n!}} 
+            </mrow>
+            <mrow>
+              \amp = \lim_{n \rightarrow \infty}
+              \frac{e^{n+1} (n)!}{e^n (n+1)!} 
+            </mrow>
+            <mrow>
+              \amp = \lim_{n \rightarrow \infty} \frac{e}{n+1} = 0
+            </mrow>
+          </md>
+          The limit is 0, which is less than 1, so the ratio test
+          tells us that the series is convergent.
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Test this series for convergence.
+          <me>
+            \sum_{n=1}^\infty \frac{(n+5!)}{n+7)!}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We could use ratio test here for the factorials, but we can
+          more directly simplify these terms. 
+          <me>
+            \frac{(n+5!)}{n+7)!} = \frac{(n+5)!}{(n+7)(n+6)(n+5)!} =
+            \frac{1}{(n+6)(n+7)} = \frac{1}{n^2 + 13n + 42}
+          </me>
+          Now these terms are asymptotically equivalent to
+          <m>\frac{1}{n^2}</m>, which are the terms of the
+          <m>\zeta</m> series with <m>p=2</m>, a convergent
+          <m>\zeta</m> series. Since our series has positive terms
+          which asymptotically equivalent to a positive convergent
+          series, our series is also convergent. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Test this series for convergence.
+          <me>
+            \sum_{n=1}^\infty \frac{20-n^2}{30-n^3}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Ther terms here are asymptotically equivalent to
+          <m>\frac{1}{n}</m>. Even though there are negative signs,
+          for <m>n</m> sufficiently large (<m>n \geq 5</m> is already
+          enough), both numerator and denominator will be negative, so
+          the term are positive. Therefore, we have positive terms
+          which are asymptotically equivalent to the positive terms of
+          the harmonic series. Since the harmonic series is divergent,
+          our series is also divergent. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Test this series for convergence.
+          <me>
+            \sum_{n=1}^\infty (-1)^n \frac{1}{n!}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          This is an alternating series and the limit of the terms if
+          zero. By the alternating series test, this is convergent. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Test this series for convergence.
+          <me>
+            \sum_{n=1}^\infty frac{n}{3^n}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We can use the ratio test.
+          <md>
+            <mrow>
+              \lim_{n \rightarrow \infty} \left| \frac{a_{n+1}}{a_n}
+              \right| \amp = \lim_{n \rightarrow \infty}
+              \frac{\frac{n+1}{3^{n+1}}{\frac{n}{3^n}}
+            </mrow>
+            <mrow>
+              \amp = \lim_{n \rightarrow \infty}
+              \frac{(n+1)3^n}{n3^{n+1}}
+            </mrow>
+            <mrow>
+              \amp = \lim_{n \rightarrow \infty} \frac{(n+1)}{n}
+              \frac{1}{3} 
+              = \frac{1}{3} \lim_{n \rightarrow \infty} \frac{(n+1)}{n}
+            </mrow>
+          </md>
+          The term <m>\frac{n+1}{n}</m> approaches 1 by asymptotic
+          analysis, so this limit approaches <m>\frac{1}{3}</m>. This
+          is less than one, to the ratio test tells us that the limit
+          is convergent. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Test this series for convergence.
+          <me>
+            \sum_{n=5}^\infty \frac{1}{\sqrt{3n^3-4}}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The terms of this series are asymptotically equivalent to
+          <m>\frac{1}{n^{\frac{3}{2}}}</m>. Those are the terms of a
+          <m>\zeta</m> series with <m>p=\frac{3}{2}</m>. <m>\zeta</m>
+          series converge when <m>p > 1</m>, so our series has terms
+          which are asymptotically equivalent to a convergent
+          <m>\zeta</m> series; therefore our series converges. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Test this series for convergence.
+          <me>
+            \sum_{n=3}^\infty \frac{1}{(\ln n)^n}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          This is a very strange series and it isn't obvious what test
+          might help. I found a comparison that works. For large
+          enough <m>n</m>, <m>\ln n \gt 2</m>. If we invert this, we see
+          that <m>\frac{1}{\ln n} \lt \frac{1}{2}</m>. Then if we
+          apply the exponent <m>n</m>, we get 
+          <me>
+            \frac{1}{(\ln n)^2} \lt \left( \frac{1}{2} \right)^n 
+          </me>
+          This shows that the terms of this series are smaller than
+          the terms <m>\left( \frac{1}{2} \right)^n</m>, which are the
+          terms of a convergent geometric series (since the common
+          ratio, <m>\frac{1}{2}</m>, is less than 1). Since all the
+          terms of our series and the comparison series are positive,
+          since we have terms which are smaller than the terms of a
+          convergent series, our series will also converge. 
         </p>
       </solution>
     </activity>
@@ -18,14 +316,22 @@
     <p>
       <ul>
         <li>
+          What is an infinite series? 
         </li>
         <li>
+          What does convergence of a series mean and how is it
+          determined?
         </li>
         <li>
+          What is conditional convergence? What is strange about the
+          alternating harmonic series?
         </li>
         <li>
+          Why does asymptotic comparison work for series?
         </li>
         <li>
+          What are <m>\zeta</m> and geometric series and why are they
+          important?
         </li>
       </ul>
     </p>

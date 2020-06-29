@@ -476,8 +476,7 @@
         <p>
           This is another definition for the number <m>e</m>. We'll
           prove that this definition is equivalent our existing
-          definitions in <xref
-          ref="taylor-series-examples">Section</xref>.
+          definitions in <xref ref="taylor-series" />.
         </p>
       </statement>
     </example>

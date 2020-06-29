@@ -1,10 +1,630 @@
 <section xml:id="week2-activity">
   <title>Week 2 Activity</title>
-  <subsection xml:id="temp">
-    <title>Temp</title>
+  <subsection xml:id="radii-problems">
+    <title>Radii of Convergence</title>
     <activity>
       <statement>
         <p>
+          Determine the radius of convergence of this power series.
+          <me>
+            \sum_{n=0}^\infty \frac{x^n}{2n+1}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We use the limit form for calculating radius of convergence.
+          <md>
+            <mrow>
+              R \amp = \lim_{n \rightarrow \infty} \left|
+              \frac{c_n}{c_{n+1}} \right| 
+            </mrow>
+            <mrow>
+              \amp = \lim_{n \rightarrow \infty} \left|
+              \frac{\frac{1}{2n+1}}{\frac{1}{2(n+1)+1}} 
+              \right| 
+            </mrow>
+            <mrow>
+              \amp = \lim_{n \rightarrow \infty} \left|
+              \frac{(2n+3)}{(2n+1)} \right| = 1
+            </mrow>
+          </md>
+          The radius of convergence is 1. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Determine the radius of convergence of this power series.
+          <me>
+            \sum_{n=0}^\infty \frac{(x-3)^n}{n!(n+1)} 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We use the limit form for calculating radius of convergence.
+          <md>
+            <mrow>
+              R \amp = \lim_{n \rightarrow \infty} \left|
+              \frac{c_n}{c_{n+1}} \right| 
+            </mrow>
+            <mrow>
+              \amp = \lim_{n \rightarrow \infty} \left|
+              \frac{\frac{1}{n!(n+1)}}{\frac{1}{(n+1)!(n+2)}} 
+              \right| 
+            </mrow>
+            <mrow>
+              \amp = \lim_{n \rightarrow \infty} 
+              \frac{(n+1)!(n+2)}{n!(n+1)} 
+            </mrow>
+            <mrow>
+              \amp = \lim_{n \rightarrow \infty} 
+              \frac{(n+1)(n+2)}{(n+1)} 
+            </mrow>
+            <mrow>
+              \amp = \lim_{n \rightarrow \infty} n+2 = \infty 
+            </mrow>
+          </md>
+          The radius of convergence is <m>\infty</m>, meaning that the
+          power series converges for all real numbers. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Determine the radius of convergence of this power series.
+          <me>
+            \sum_{n=0}^\infty nx^n 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We use the limit form for calculating radius of convergence.
+          <md>
+            <mrow>
+              R \amp = \lim_{n \rightarrow \infty} \left|
+              \frac{c_n}{c_{n+1}} \right| 
+            </mrow>
+            <mrow>
+              R \amp = \lim_{n \rightarrow \infty} \left|
+              \frac{n}{(n+1)} \right| = 1 
+            </mrow>
+          </md>
+          The radius of convergence is 1. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Determine the radius of convergence of this power series.
+          <me>
+            \sum_{n=0}^\infty \frac{x^n}{\sqrt{n+1}}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We use the limit form for calculating radius of convergence.
+          <md>
+            <mrow>
+              R \amp = \lim_{n \rightarrow \infty} \left|
+              \frac{c_n}{c_{n+1}} \right| 
+            </mrow>
+            <mrow>
+              R \amp = \lim_{n \rightarrow \infty} \left|
+              \frac{\frac{1}{\sqrt{n+1}}}{\frac{1}{\sqrt{n+2}}} 
+              \right| 
+            </mrow>
+            <mrow>
+              \amp = \lim_{n \rightarrow \infty} 
+              \frac{\sqrt{n+2}}{\sqrt{n+1}} = 1 
+            </mrow>
+          </md>
+          The numerator and denominator have the same asymptotic order
+          and the leading coefficients are both 1, so the limit is 1.
+          The radius of convergence is 1. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Determine the radius of convergence of this power series.
+          <me>
+            \sum_{n=0}^\infty \frac{(x+5)^n}{7n-4}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We use the limit form for calculating radius of convergence.
+          <md>
+            <mrow>
+              R \amp = \lim_{n \rightarrow \infty} \left|
+              \frac{c_n}{c_{n+1}} \right| 
+            </mrow>
+            <mrow>
+              R \amp = \lim_{n \rightarrow \infty} \left|
+              \frac{\frac{1}{7n-4}}{\frac{1}{7(n+1)-4}} \right| 
+            </mrow>
+            <mrow>
+              \amp = \lim_{n \rightarrow \infty} \frac{7n}{7n-4} = 1 
+            </mrow>
+          </md>
+          The radius of convergence is 1. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Determine the radius of convergence of this power series.
+          <me>
+            \sum_{n=0}^\infty \frac{n^2 x^n}{(n+3)!}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We use the limit form for calculating radius of convergence.
+          <md>
+            <mrow>
+              R \amp = \lim_{n \rightarrow \infty} \left|
+              \frac{c_n}{c_{n+1}} \right| 
+            </mrow>
+            <mrow>
+              R \amp = \lim_{n \rightarrow \infty} \left|
+              \frac{\frac{n^2}{(n+3)!}}{\frac{(n+1)^2}{(n+4)!}}
+              \right| 
+            </mrow>
+            <mrow>
+              \amp = \lim_{n \rightarrow \infty} 
+              \frac{(n+4)! n^2}{(n+3)! (n+1)^2} 
+            </mrow>
+            <mrow>
+              \amp = \lim_{n \rightarrow \infty} 
+              \frac{(n+4)n^2}{(n+1)^2} 
+            </mrow>
+            <mrow>
+              \amp = \lim_{n \rightarrow \infty} 
+              \frac{n^3 + 4n^2}{n^2 + 2n + 1} = \infty
+            </mrow>
+          </md>
+          The asymptotic order of the numerator is greater than the
+          denominator, so the limit is <m>\infty</m>. The radius of
+          convergence is <m>\infty</m>, which means that the power
+          series converges for all real numbers. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Determine the radius of convergence of this power series.
+          <me>
+            \sum_{n=0}^\infty \frac{\sqrt{n}(x-2)^n}{n!}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We use the limit form for calculating radius of convergence.
+          <md>
+            <mrow>
+              R \amp = \lim_{n \rightarrow \infty} \left|
+              \frac{c_n}{c_{n+1}} \right| 
+            </mrow>
+            <mrow>
+              R \amp = \lim_{n \rightarrow \infty} \left|
+              \frac{\frac{\sqrt{n}}{n!}}{\frac{\sqrt{n+1}}{(n+1)!}}
+              \right| 
+            </mrow>
+            <mrow>
+              R \amp = \lim_{n \rightarrow \infty} 
+              \frac{(n+1)! \sqrt{n}}{n! \sqrt{n+1}} 
+            </mrow>
+            <mrow>
+              R \amp = \lim_{n \rightarrow \infty} 
+              \frac{(n+1)\sqrt{n}}{\sqrt{n+1}} = \infty 
+            </mrow>
+          </md>
+          The numerator has a higher asymptotic order, so the limit is
+          <m>\infty</m>. The radius of convergence is <m>\infty</m>,
+          meaning that the power series converges for all real
+          numbers. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Determine the radius of convergence of this power series.
+          <me>
+            \sum_{n=0}^\infty \frac{n!x^n}{(2n)!}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We use the limit form for calculating radius of convergence.
+          <md>
+            <mrow>
+              R \amp = \lim_{n \rightarrow \infty} \left|
+              \frac{c_n}{c_{n+1}} \right| 
+            </mrow>
+            <mrow>
+              \amp = \lim_{n \rightarrow \infty} \left|
+              \frac{\frac{n!}{(2n!}}{\frac{(n+1)!}{(2n+2)!}} 
+              \right| 
+            </mrow>
+            <mrow>
+              \amp = \lim_{n \rightarrow \infty} 
+              \frac{n! (2n+2)!}{(n+1)! (2n)!}
+            </mrow>
+            <mrow>
+              \amp = \lim_{n \rightarrow \infty} 
+              \frac{(2n+2)(2n+1)}{n+1)} = \infty 
+            </mrow>
+          </md>
+          The numerator has higher asymptotic order, so the limit is
+          <m>\infty</m>. The radius of convergence is <m>\infty</m>. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Determine the radius of convergence of this power series.
+          <me>
+            \sum_{n=0}^\infty \frac{(x-3)^n}{n + \cos (pi n)} 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We use the limit form for calculating radius of convergence.
+          <md>
+            <mrow>
+              R \amp = \lim_{n \rightarrow \infty} \left|
+              \frac{c_n}{c_{n+1}} \right| 
+            </mrow>
+            <mrow>
+              \amp = \lim_{n \rightarrow \infty} \left|
+              \frac{\frac{1}{n+\cos (\pi
+              n)}{\frac{1}{n+1+\cos(\pi(n+1))}} \right| 
+            </mrow>
+            <mrow>
+              \amp = \lim_{n \rightarrow \infty} 
+              \frac{n + 1 + \cos(\pi(n+1))}{n + \cos (\pi n)} = 1
+            </mrow>
+          </md>
+          Both denominator and numerator have the same asymptotic
+          order and the leading coefficients are both 1, so the limit
+          is 1. (Note that the cosine term, since it doesn't grow at
+          all, has no effect on the asymptotic order.) The radius of
+          convergence is 1.
+        </p>
+      </solution>
+    </activity>
+  </subsection>
+  <subsection xml:id="taylor-series-problems">
+    <title>Taylor Series</title>
+    <activity>
+      <statement>
+        <p>
+          Calculate the Taylor series for <m>f(x) = \ln x</m> centered
+          at <m>\alpha = 3</m>. 
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We follow the steps in the process. First, we find the
+          first few derivatives of the function.
+          <md>
+            <mrow>
+              f(x) = \ln x 
+            </mrow>
+            <mrow>
+              f^{\prime} (x) = \frac{1}{x} 
+            </mrow>
+            <mrow>
+              f^{\prime \prime} (x) = \frac{-1}{x^2} 
+            </mrow>
+            <mrow>
+              f^{\prime \prime \prime} (x) = \frac{2}{x^3} 
+            </mrow>
+            <mrow>
+              f^{(4)} (x) = \frac{-6}{x^4} 
+            </mrow>
+            <mrow>
+              f^{(5)} (x) = \frac{24}{x^5}
+            </mrow>
+          </md>
+          Then we evaluate at the centre point.
+          <md>
+            <mrow>
+              f(3) = \ln 3 
+            </mrow>
+            <mrow>
+              f^{\prime} (3) = \frac{1}{3} 
+            </mrow>
+            <mrow>
+              f^{\prime \prime} (3) = \frac{-1}{3^2} 
+            </mrow>
+            <mrow>
+              f^{\prime \prime \prime} (3) = \frac{2}{3^3} 
+            </mrow>
+            <mrow>
+              f^{(4)} (3) = \frac{-(2)(3)}{3^4} 
+            </mrow>
+            <mrow>
+              f^{(5)} (3) = \frac{(2)(3)(4)}{3^5}
+            </mrow>
+          </md>
+          We try to set a pattern for these derivatives evaluated at
+          the centre point. We notice an alterning sign, which
+          is represented by <m>(-1)^{n+1}</m>. We need the exponent
+          <m>(n+1)</m> since the terms are even when the index is odd.
+          Then the numerator is building up a factorial, stoping at
+          one place less than the index: we can write this as
+          <m>(n-1)!</m>. Finally, the denomniator is constructing a
+          power of 3 with the exponent equal to the index. 
+          <me>
+            f^{(n)} (3) = \frac{(-1)^{n+1} (n-1)!}{3^n} 
+          </me>
+          Finally, we put this into the form of a taylor series. Here
+          is the general form.
+          <me>
+            f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(\alpha)}{n!}
+            (x-\alpha)^n
+          </me>
+          We put in the centre points and the pattern of our
+          derivatives to determine the taylor series. However, the
+          first term doens't fit the general pattern for this series,
+          so we have to write the first term outside the <m>\Sigma</m>
+          notation. 
+          <me>
+            f(x) = \ln 3 \sum_{n=1}^\infty \frac{(-1)^{n+1}
+            (n-1)!}{3^n n!} (x-3)^n = \ln 3 + \sum_{n=1}^\infty
+            \frac{(-1)^{n+1}}{n3^n}
+          </me>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the Taylor series for <m>f(x) = sin x</m> centered
+          at <m>\alpha = \frac{\pi}{2} </m>. 
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We follow the steps in the process. First, we find the
+          first few derivatives of the function.
+          <md>
+            <mrow>
+              f(x) = \sin x 
+            </mrow>
+            <mrow>
+              f^{\prime} (x) = \cos x 
+            </mrow>
+            <mrow>
+              f^{\prime \prime} (x) = -\sin x 
+            </mrow>
+            <mrow>
+              f^{\prime \prime \prime} (x) = -\cos x 
+            </mrow>
+            <mrow>
+              f^{(4)} (x) = \sin x
+            </mrow>
+            <mrow>
+              f^{(5)} (x) = \cos x
+            </mrow>
+          </md>
+          Then we evaluate at the centre point.
+          <md>
+            <mrow>
+              f\left( \frac{\pi}{2} \right) = 1
+            </mrow>
+            <mrow>
+              f^{\prime} \left( \frac{\pi}{2} \right) = 0
+            </mrow>
+            <mrow>
+              f^{\prime \prime} \left( \frac{\pi}{2} \right) = -1
+            </mrow>
+            <mrow>
+              f^{\prime \prime \prime} \left( \frac{\pi}{2} \right) =
+              0
+            </mrow>
+            <mrow>
+              f^{(4)} \left( \frac{\pi}{2} \right) = 1
+            </mrow>
+            <mrow>
+              f^{(5)} \left( \frac{\pi}{2} \right) = 0
+            </mrow>
+          </md>
+          We try to set a pattern for these derivatives evaluated at
+          the centre point. We have an alternating patterns of zeros
+          and positive/negative ones. Since all the odd terms are
+          zeros, we can ignore the indices <m>(2n+1)</m> and just use
+          the indices <m>(2n)</m>. Then when <m>n</m> in the
+          <m>(2n)</m> is even, we have positive values, and when it is
+          odd, we have negative values. Therefore, we can match indies
+          <m>(2n)</m> with a derivative value of <m>(-1)^n</m>
+          <md>
+            <mrow>
+            f^{(2n+1)} \left( \frac{\pi}{2} \right) = 0 
+            </mrow>
+            <mrow>
+            f^{(2n)} \left( \frac{\pi}{2} \right) = (-1)^n
+            </mrow>
+          </md>
+          Finally, we put this into the form of a taylor series. Here
+          is the general form.
+          <me>
+            f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(\alpha)}{n!}
+            (x-\alpha)^n
+          </me>
+          We put in the centre points and the pattern of our
+          derivatives to determine the taylor series. Since the odd
+          indicies are zero, we simply won't include them in the sum. 
+          <me>
+            f(x) = \sum_{n=0}^\infty \frac{(-1)^n}{(2n)!}
+            \left(x - \frac{\pi}{2}\right)^n
+          </me>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the Taylor series for <m>f(x) = x^4 + 7x^3 - 3x^2
+          - 6x + 1</m> centered at <m>\alpha = 0</m>. 
+        </p>
+      </statement>
+      <solution>
+        <p>
+          This is a trick question. We could do all the steps above,
+          and they would certainly work. We wouldn't get a patterns,
+          but we would explicitly get the first five derivatives and
+          all higher derivatives would be zero. We could put those
+          derivatives into the form and calcluate the result. However,
+          what we would get from that process would be exactly what we
+          started with. 
+        </p>
+        <p>
+          This makes an important point. A polynomial is already a
+          taylor series (at least centred at zero). Since taylor
+          series are unique
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the Taylor series for <m>f(x) = \ln x</m> centered
+          at <m>\alpha = 3</m>. 
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We follow the steps in the process. First, we find the
+          first few derivatives of the function.
+          <md>
+            <mrow>
+              f(x) = 
+            </mrow>
+            <mrow>
+              f^{\prime} (x) = 
+            </mrow>
+            <mrow>
+              f^{\prime \prime} (x) = 
+            </mrow>
+            <mrow>
+              f^{\prime \prime \prime} (x) = 
+            </mrow>
+            <mrow>
+              f^{(4)} (x) = 
+            </mrow>
+            <mrow>
+              f^{(5)} (x) = 
+            </mrow>
+          </md>
+          Then we evaluate at the centre point.
+          <md>
+            <mrow>
+              f() = 
+            </mrow>
+            <mrow>
+              f^{\prime} () = 
+            </mrow>
+            <mrow>
+              f^{\prime \prime} () = 
+            </mrow>
+            <mrow>
+              f^{\prime \prime \prime} () = 
+            </mrow>
+            <mrow>
+              f^{(4)} () = 
+            </mrow>
+            <mrow>
+              f^{(5)} () = 
+            </mrow>
+          </md>
+          We try to set a pattern for these derivatives evaluated at
+          the centre point. 
+          <me>
+            f^{(n)} () = 
+          </me>
+          Finally, we put this into the form of a taylor series. Here
+          is the general form.
+          <me>
+            f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(\alpha)}{n!}
+            (x-\alpha)^n
+          </me>
+          We put in the centre points and the pattern of our
+          derivatives to determine the taylor series. 
+          <me>
+            f(x) = \sum_{n=0}^\infty \frac{}{n!}
+            (x-)^n
+          </me>
+        </p>
+      </solution>
+    </activity>
+  </subsection>
+  <subsection xml:id="approximation-problems">
+    <title>Approximation</title>
+    <activity>
+      <statement>
+        <p>
+          Consider the function <m>f(x) = \cos x</m> centred at
+          <m>\alpha = 2\pi</m>. 
+          <ol>
+            <li>
+              Inside the radius <m>4\pi</m>, what is the error of the
+              35th order approximation?
+            </li>
+            <li>
+              What radius is required for a 10th order approximation
+              with error bounded by <m>10^{-6}</m>?
+            </li>
+            <li>
+              Inside the radius <m>2\pi</m>, what order is needed for
+              an error less than <m>10^{-1}</m>. 
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Consider the function <m>f(x) = \ln x cos x</m> centered at
+          <m>\alpha = 5</m>.
+          <ol>
+            <li>
+              Inside the radius <m>\frac{1}{4} </m>, what is the error
+              of the 10th order approximation?
+            </li>
+            <li>
+              What radius is required for a 8th order approximation
+              with error bounded by <m>10^{-3}</m>?
+            </li>
+            <li>
+              Inside the radius <m>\frac{1}{2}</m>, what order is
+              needed for an error less than <m>10^{-2}</m>. 
+            </li>
+          </ol>
         </p>
       </statement>
       <solution>
@@ -18,14 +638,14 @@
     <p>
       <ul>
         <li>
+          What is a power series? What is a radius of convergence?
         </li>
         <li>
+          What is a taylor series and how does it describe a function?
         </li>
         <li>
-        </li>
-        <li>
-        </li>
-        <li>
+          What is error analysis? How do was have to balance domain,
+          precision, and calculation load?
         </li>
       </ul>
     </p>
