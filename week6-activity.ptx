@@ -1,10 +1,306 @@
 <section xml:id="week6-activity">
   <title>Week 6 Activity</title>
-  <subsection xml:id="temp">
-    <title>Temp</title>
+  <subsection xml:id="problems-sketching-parametric-curves">
+    <title>Sketching Parametric Curves</title>
     <activity>
       <statement>
         <p>
+          Sketch this parametric curve. (This is mostly by inspection.
+          You can start by choosing some sample points. Then try to
+          evaluate the behaviour of the coordinate functions to get a
+          sense of the shape).
+          <md>
+            <mrow>
+              \amp \gamma(t) = (t^2, t^3) \amp \amp t \in [-3,3]
+            </mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          (Analysis)
+          This parametric curve is shown in <xref
+          ref="figure-activity-parametric-curve-1" />
+          <figure xml:id="figure-activity-parametric-curve-1">
+            <caption>
+              <m>\gamma(t) = (t^2, t^3) </m>
+            </caption>
+            <image width="100%" source="images/figure52" />
+          </figure>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Sketch this parametric curve. (This is mostly by inspection.
+          You can start by choosing some sample points. Then try to
+          evaluate the behaviour of the coordinate functions to get a
+          sense of the shape).
+          <md>
+            <mrow>
+              \amp \gamma(t) = (\cos t, 2 \sin t)  \amp \amp t \in
+              [0,2\pi]
+            </mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          (Analysis)
+          This parametric curve is shown in <xref
+          ref="figure-activity-parametric-curve-2" />
+          <figure xml:id="figure-activity-parametric-curve-2">
+            <caption>
+              <m>\gamma(t) = (\cos t, 2 \sin t) </m>
+            </caption>
+            <image width="100%" source="images/figure53" />
+          </figure>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Sketch this parametric curve. (This is mostly by inspection.
+          You can start by choosing some sample points. Then try to
+          evaluate the behaviour of the coordinate functions to get a
+          sense of the shape).
+          <md>
+            <mrow>
+              \amp \gamma(t) = (4 \cos t + \sin 2t, 4 \sin t + \cos 2
+              t) \amp \amp t \in [0,2\pi]
+            </mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          (Analysis)
+          This parametric curve is shown in <xref
+          ref="figure-activity-parametric-curve-3" />
+          <figure xml:id="figure-activity-parametric-curve-3">
+            <caption>
+              <m>\gamma(t) = (4 \cos t + \sin 2t, 4 \sin t + \cos 2t)
+              </m>
+            </caption>
+            <image width="100%" source="images/figure54" />
+          </figure>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Sketch this parametric curve. (This is mostly by inspection.
+          You can start by choosing some sample points. Then try to
+          evaluate the behaviour of the coordinate functions to get a
+          sense of the shape).
+          <md>
+            <mrow>
+              \amp \gamma(t) = (3-t^2,t) \amp \amp t \in [-4,4]
+            </mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          (Analysis)
+          This parametric curve is shown in <xref
+          ref="figure-activity-parametric-curve-4" />
+          <figure xml:id="figure-activity-parametric-curve-4">
+            <caption>
+              <m>\gamma(t) = (3-t^2,t)</m>
+            </caption>
+            <image width="100%" source="images/figure55" />
+          </figure>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Sketch this parametric curve. (This is mostly by inspection.
+          You can start by choosing some sample points. Then try to
+          evaluate the behaviour of the coordinate functions to get a
+          sense of the shape).
+          <md>
+            <mrow>
+              \amp \gamma(t) = \left( \frac{\pi^2}{t^2} \cos t,
+              \frac{\pi^2}{t^2} \sin t \right) \amp \amp t \in [\pi,
+              4\pi] 
+            </mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          (Analysis)
+          This parametric curve is shown in <xref
+          ref="figure-activity-parametric-curve-5" />
+          <figure xml:id="figure-activity-parametric-curve-5">
+            <caption>
+              <m>\gamma(t) = \left( \frac{\pi^2}{t^2} \cps t,
+              \frac{\pi^2}{t^2} \sin t \right) </m>
+            </caption>
+            <image width="100%" source="images/figure56" />
+          </figure>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Sketch this parametric curve. (This is mostly by inspection.
+          You can start by choosing some sample points. Then try to
+          evaluate the behaviour of the coordinate functions to get a
+          sense of the shape).
+          <md>
+            <mrow>
+              \amp \gamma(t) = (\sqrt{t}, \sqrt[3]{t} ) \amp \amp t
+              \in [0,100]
+            </mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          (Analysis)
+          This parametric curve is shown in <xref
+          ref="figure-activity-parametric-curve-6" />
+          <figure xml:id="figure-activity-parametric-curve-6">
+            <caption>
+              <m>\gamma(t) = (\sqrt{t}, \sqrt[3]{t})</m>
+            </caption>
+            <image width="100%" source="images/figure57" />
+          </figure>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Sketch this parametric curve described in polar coordinates.
+          (This is mostly by inspection.  You can start by choosing
+          some sample points. Then try to evaluate the behaviour of
+          the coordinate functions to get a sense of the shape).
+          <md>
+            <mrow>
+              \amp \r(t) = t \amp \amp \theta(t) = t \amp \amp t \in
+              [0,4\pi]
+            </mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          (Analysis)
+          This parametric curve is shown in <xref
+          ref="figure-activity-parametric-curve-7" />
+          <figure xml:id="figure-activity-parametric-curve-7">
+            <caption>
+              <m>r(t) = t</m> and <m>\theta(t) = t</m>
+            </caption>
+            <image width="100%" source="images/figure58" />
+          </figure>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Sketch this parametric curve described in polar coordinates.
+          (This is mostly by inspection.  You can start by choosing
+          some sample points. Then try to evaluate the behaviour of
+          the coordinate functions to get a sense of the shape).
+          <md>
+            <mrow>
+              \amp \r(t) = 4 + \sin t \amp \amp \theta(t) = t \amp
+              \amp t \in [0, 2\pi] 
+            </mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          (Analysis)
+          This parametric curve is shown in <xref
+          ref="figure-activity-parametric-curve-8" />
+          <figure xml:id="figure-activity-parametric-curve-8">
+            <caption>
+              <m>r(t) = 4 + \sin t</m> and <m>\theta(t) = t</m>
+            </caption>
+            <image width="100%" source="images/figure59" />
+          </figure>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Sketch this parametric curve described in polar coordinates.
+          (This is mostly by inspection.  You can start by choosing
+          some sample points. Then try to evaluate the behaviour of
+          the coordinate functions to get a sense of the shape).
+          <md>
+            <mrow>
+              \amp \r(t) = 2^{-t} \amp \amp \theta(t) = \pi 2^t  \amp
+              \amp t \in [-2,2]
+            </mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          (Analysis)
+          This parametric curve is shown in <xref
+          ref="figure-activity-parametric-curve-9" />
+          <figure xml:id="figure-activity-parametric-curve-9">
+            <caption>
+              <m>r(t) = 2^{-t}</m> and <m>\pi 2^t</m>
+            </caption>
+            <image width="100%" source="images/figure60" />
+          </figure>
+        </p>
+      </solution>
+    </activity>
+  </subsection>
+  <subsection xml:id="problems-reparametrization">
+    <title>Reparametrization</title>
+    <activity>
+      <statement>
+        <p>
+          Consider a general parametric curve (in either <m>\RR^2</m>
+          or <m>\RR^3</m>)  <m>\gamma(t)</m> with <m>t \in
+          [0,\infty)</m>. For each of these substitutions, describe
+          how the reparametrization changes the movement along the
+          curve and the domain of the parameter.
+          <ol>
+            <li>
+              <m>t = 3s</m>
+            </li>
+            <li>
+              <m>t = \frac{s}{4}</m>
+            </li>
+            <li>
+              <m>t = s + 7</m>
+            </li>
+            <li>
+              <m>t = s - 10</m>
+            </li>
+            <li>
+              <m>t = s^2</m>
+            </li>
+            <li>
+              <m>t = \sqrt{s}</m>
+            </li>
+            <li>
+              <m>t = e^s</m>
+            </li>
+            <li>
+              <m>t = -s</m>
+            </li>
+          </ol>
         </p>
       </statement>
       <solution>
@@ -18,14 +314,14 @@
     <p>
       <ul>
         <li>
+          What is a parametric curve?
         </li>
         <li>
+          What is a parametrization?
         </li>
         <li>
-        </li>
-        <li>
-        </li>
-        <li>
+          What is the difference between a parametric curve and an
+          implicit curve?
         </li>
       </ul>
     </p>

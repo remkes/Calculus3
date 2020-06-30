@@ -1,10 +1,345 @@
 <section xml:id="week7-activity">
   <title>Week 7 Activity</title>
-  <subsection xml:id="temp">
-    <title>Temp</title>
+  <subsection xml:id="problems-tangents-parametric-curves">
+    <title>Tangents to Parametric Curves</title>
     <activity>
       <statement>
         <p>
+          Calculate the tangent to this parametric curve. (This is the
+          same curve that you drew in the Week 6 activity). Choose
+          some points and draw some tangents to inspect if they fit
+          the curve.
+          <md>
+            <mrow>
+              \amp \gamma(t) = (t^2, t^3) \amp \amp t \in [-3,3]
+            </mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The tangent is the derivative calculated termwise.
+          <me>
+            \gamma^\prime(t) = 
+          </me>
+          This parametric curve with some example tangents is shown in
+          <xref ref="figure-activity-parametric-tangent-1" />
+          <figure xml:id="figure-activity-parametric-tangent-1">
+            <caption>
+              Tangents to <m>\gamma(t) = (t^2, t^3) </m>
+            </caption>
+            <image width="100%" source="images/figure61" />
+          </figure>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the tangent to this parametric curve. (This is the
+          same curve that you drew in the Week 6 activity). Choose
+          some points and draw some tangents to inspect if they fit
+          the curve.
+          <md>
+            <mrow>
+              \amp \gamma(t) = (\cos t, 2 \sin t)  \amp \amp t \in
+              [0,2\pi]
+            </mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The tangent is the derivative calculated termwise.
+          <me>
+            \gamma^\prime(t) = 
+          </me>
+          This parametric curve with some example tangents is shown in
+          <xref ref="figure-activity-parametric-tangent-2" />
+          <figure xml:id="figure-activity-parametric-tangent-2">
+            <caption>
+              Tangents to <m>\gamma(t) = (\cos t, 2 \sin t) </m>
+            </caption>
+            <image width="100%" source="images/figure62" />
+          </figure>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the tangent to this parametric curve. (This is the
+          same curve that you drew in the Week 6 activity). Choose
+          some points and draw some tangents to inspect if they fit
+          the curve.
+          <md>
+            <mrow>
+              \amp \gamma(t) = (4 \cos t + \sin 2t, 4 \sin t + \cos 2
+              t) \amp \amp t \in [0,2\pi]
+            </mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The tangent is the derivative calculated termwise.
+          <me>
+            \gamma^\prime(t) = 
+          </me>
+          This parametric curve with some example tangents is shown in
+          <xref ref="figure-activity-parametric-tangent-3" />
+          <figure xml:id="figure-activity-parametric-tangent-3">
+            <caption>
+              Tangents to <m>\gamma(t) = (4 \cos t + \sin 2t, 4 \sin t
+              + \cos 2t)
+              </m>
+            </caption>
+            <image width="100%" source="images/figure63" />
+          </figure>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the tangent to this parametric curve. (This is the
+          same curve that you drew in the Week 6 activity). Choose
+          some points and draw some tangents to inspect if they fit
+          the curve.
+          <md>
+            <mrow>
+              \amp \gamma(t) = (3-t^2,t) \amp \amp t \in [-4,4]
+            </mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The tangent is the derivative calculated termwise.
+          <me>
+            \gamma^\prime(t) = 
+          </me>
+          This parametric curve with some example tangents is shown in
+          <xref ref="figure-activity-parametric-tangent-4" />
+          <figure xml:id="figure-activity-parametric-tangent-4">
+            <caption>
+              Tangents to <m>\gamma(t) = (3-t^2,t)</m>
+            </caption>
+            <image width="100%" source="images/figure64" />
+          </figure>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the tangent to this parametric curve. (This is the
+          same curve that you drew in the Week 6 activity). Choose
+          some points and draw some tangents to inspect if they fit
+          the curve.
+          <md>
+            <mrow>
+              \amp \gamma(t) = \left( \frac{\pi^2}{t^2} \cos t,
+              \frac{\pi^2}{t^2} \sin t \right) \amp \amp t \in [\pi,
+              4\pi] 
+            </mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The tangent is the derivative calculated termwise.
+          <me>
+            \gamma^\prime(t) = 
+          </me>
+          This parametric curve with some example tangents is shown in
+          <xref ref="figure-activity-parametric-tangent-5" />
+          <figure xml:id="figure-activity-parametric-tangent-5">
+            <caption>
+              Tangents to <m>\gamma(t) = \left( \frac{\pi^2}{t^2} \cos
+              t, \frac{\pi^2}{t^2} \sin t \right) </m>
+            </caption>
+            <image width="100%" source="images/figure65" />
+          </figure>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the tangent to this parametric curve. (This is the
+          same curve that you drew in the Week 6 activity). Choose
+          some points and draw some tangents to inspect if they fit
+          the curve.
+          <md>
+            <mrow>
+              \amp \gamma(t) = (\sqrt{t}, \sqrt[3]{t} ) \amp \amp t
+              \in [0,100]
+            </mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The tangent is the derivative calculated termwise.
+          <me>
+            \gamma^\prime(t) = 
+          </me>
+          This parametric curve with some example tangents is shown in
+          <xref ref="figure-activity-parametric-tangent-6" />
+          <figure xml:id="figure-activity-parametric-tangent-6">
+            <caption>
+              Tangents to <m>\gamma(t) = (\sqrt{t}, \sqrt[3]{t})</m>
+            </caption>
+            <image width="100%" source="images/figure66" />
+          </figure>
+        </p>
+      </solution>
+    </activity>
+  </subsection>
+  <subsection xml:id="problems-arclength">
+    <title>Arclength</title>
+    <activity>
+      <statement>
+        <p>
+          Calculate the arclength of this parametric curve.
+          <md>
+            <mrow>
+              \amp \gamma(t) = (t, 3t-6) \amp \amp t \in [0,7]
+            </mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We calculate the tangent.
+          <me>
+            \gamma^\prime(t) 
+          </me>
+          We calculate the length of the tangent.
+          <me>
+            \left| \gamma^\prime(t) \right|
+          </me>
+          Then we integrate the length of the tangent over the
+          parameter domain.
+          <md>
+            <mrow>
+              \int_a^b \left| \gamma^\prime(t) \right| \amp = 
+            </mrow>
+          </md>
+          The result of this integral is the arclength of the
+          function. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the arclength of this parametric curve.
+          <md>
+            <mrow>
+              \amp \gamma(t) = (t^2, 1-t^2) \amp \amp t \in [0,4]
+            </mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We calculate the tangent.
+          <me>
+            \gamma^\prime(t) 
+          </me>
+          We calculate the length of the tangent.
+          <me>
+            \left| \gamma^\prime(t) \right|
+          </me>
+          Then we integrate the length of the tangent over the
+          parameter domain.
+          <md>
+            <mrow>
+              \int_a^b \left| \gamma^\prime(t) \right| \amp = 
+            </mrow>
+          </md>
+          The result of this integral is the arclength of the
+          function. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the arclength of this parametric curve.
+          <md>
+            <mrow>
+              \amp \gamma(t) = (4\cos(t^2),4\sin(t^2)) \amp \amp t \in
+              [0,\sqrt{2\pi}]
+            </mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We calculate the tangent.
+          <me>
+            \gamma^\prime(t) 
+          </me>
+          We calculate the length of the tangent.
+          <me>
+            \left| \gamma^\prime(t) \right|
+          </me>
+          Then we integrate the length of the tangent over the
+          parameter domain.
+          <md>
+            <mrow>
+              \int_a^b \left| \gamma^\prime(t) \right| \amp = 
+            </mrow>
+          </md>
+          The result of this integral is the arclength of the
+          function. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          This is a multi-part question on a historically important
+          arclength calculation. (Some historical context is given
+          and the end of the solution). 
+          <ol>
+            <li>
+              Find a parametric curve which descrives an ellipse with
+              semimajor axis <m>a</m> and semiminor axis <m>b</m>.
+              (Its easiest to orient the larger ellipse axis along the
+              <m>x</m> axis.
+            </li>
+            <li>
+              Set up the arclength calculation to find the
+              circumference of the ellipse.
+            </li>
+            <li>
+              Factor <m>a</m> out of the square root and subtract a
+              cosine term to that you can simplify using <m>(\sin^2 t
+              + \cos^2 t = 1)</m>.
+            </li>
+            <li>
+              We can define the eccentricity of the ellipse as <m>e =
+              \sqrt{1 - \frac{b^2}{a^2}}</m>. Manipulate the integral
+              so that <m>e</m> shows up under the square root, but
+              <m>a</m> amd <m>b</m> are no longer under the square
+              root.
+            </li>
+            <li>
+               Calculate the integral in the special case <m>e=0</m>.
+               (Since this happens only when <m>a=b</m>, this is a
+               circle with radius <m>a</m>; you should recover the
+               familiar circumference of a circle).
+            </li>
+            <li>
+              Try to solve the integral for general eccentricity <m>0
+              \lt e \lt 1</m>. Comment on the problems and barriers to
+              integration.
+            </li>
+          </ol>
         </p>
       </statement>
       <solution>
@@ -13,19 +348,187 @@
       </solution>
     </activity>
   </subsection>
-  <subsection xml:id="week7-concepts">
+  <subsection xml:id="problems-parametrization-by-arclength">
+    <title>Parametrization by Arclength</title>
+    <activity>
+      <statement>
+        <p>
+          Parametrize this curve by arclength.
+          <md>
+            <mrow>
+              \amp \gamma(t) = (t^2 \cos t, t^2 \sin t) \amp \amp t
+              \in [0, \infty) 
+            </mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We follow the proscribed algorithm. First we calculate the
+          tangent.
+          <me>
+            \gamma^\prime(t) = 
+          </me>
+          Then we calculate the length of the tangent.
+          <me>
+            \left| \gamma^\prime(t) \right| = 
+          </me>
+          Then we set up the arclength function, which is the integral
+          of the length of the tangent. 
+          <md>
+            <mrow>
+              s(t) \amp = \int_0^t \left| \gamma^\prime(t) \right| 
+            </mrow>
+            <mrow>
+              \amp = 
+            </mrow>
+          </md>
+          Then we invert the arclength function.
+          <md>
+            <mrow>
+              s(t) \amp = 
+            </mrow>
+            <mrow>
+            </mrow>
+            <mrow>
+              t(s) \amp = 
+            </mrow>
+          </md>
+          Finally, we repalce <m>t</m> with this express to get a
+          parametrization in <m>s</m>, which is the parametrization by
+          arclength. 
+          <md>
+            <mrow>
+              \gamma(s) \amp = 
+            </mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Parametrize this curve by arclength.
+          <md>
+            <mrow>
+              \amp \gamma(t) = (\ln t, 2t^2 - 1) \amp \amp t
+              \in [1, \infty) 
+            </mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We follow the proscribed algorithm. First we calculate the
+          tangent.
+          <me>
+            \gamma^\prime(t) = 
+          </me>
+          Then we calculate the length of the tangent.
+          <me>
+            \left| \gamma^\prime(t) \right| = 
+          </me>
+          Then we set up the arclength function, which is the integral
+          of the length of the tangent. 
+          <md>
+            <mrow>
+              s(t) \amp = \int_0^t \left| \gamma^\prime(t) \right| 
+            </mrow>
+            <mrow>
+              \amp = 
+            </mrow>
+          </md>
+          Then we invert the arclength function.
+          <md>
+            <mrow>
+              s(t) \amp = 
+            </mrow>
+            <mrow>
+            </mrow>
+            <mrow>
+              t(s) \amp = 
+            </mrow>
+          </md>
+          Finally, we repalce <m>t</m> with this express to get a
+          parametrization in <m>s</m>, which is the parametrization by
+          arclength. 
+          <md>
+            <mrow>
+              \gamma(s) \amp = 
+            </mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Parametrize this curve by arclength.
+          <md>
+            <mrow>
+              \amp \gamma(t) = (t^2 - 4x + 1, 2t - 2) \amp \amp t
+              \in [0, \infty) 
+            </mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We follow the proscribed algorithm. First we calculate the
+          tangent.
+          <me>
+            \gamma^\prime(t) = 
+          </me>
+          Then we calculate the length of the tangent.
+          <me>
+            \left| \gamma^\prime(t) \right| = 
+          </me>
+          Then we set up the arclength function, which is the integral
+          of the length of the tangent. 
+          <md>
+            <mrow>
+              s(t) \amp = \int_0^t \left| \gamma^\prime(t) \right| 
+            </mrow>
+            <mrow>
+              \amp = 
+            </mrow>
+          </md>
+          Then we invert the arclength function.
+          <md>
+            <mrow>
+              s(t) \amp = 
+            </mrow>
+            <mrow>
+            </mrow>
+            <mrow>
+              t(s) \amp = 
+            </mrow>
+          </md>
+          Finally, we repalce <m>t</m> with this express to get a
+          parametrization in <m>s</m>, which is the parametrization by
+          arclength. 
+          <md>
+            <mrow>
+              \gamma(s) \amp = 
+            </mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+  </subsection>
+  <subsection xml:id="week6-concepts">
     <title>Conceptual Review Questions</title>
     <p>
       <ul>
         <li>
+          What is a tangent to a parametric curve?
         </li>
         <li>
+          What is the arclength and how does it relate to the length
+          of the tangent?
         </li>
         <li>
-        </li>
-        <li>
-        </li>
-        <li>
+          What's special about the parametrization by arclength?
         </li>
       </ul>
     </p>

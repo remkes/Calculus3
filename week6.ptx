@@ -2,6 +2,5 @@
   <title>Week 6</title>
   <xi:include href="parametric-curves.ptx" />
   <xi:include href="parametrizations.ptx" />
-  <xi:include href="calculus-of-parametric-curves.ptx" />
   <xi:include href="week6-activity.ptx" />
 </chapter>
