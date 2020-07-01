@@ -1,14 +1,24 @@
 <section xml:id="week11-activity">
   <title>Week 11 Activity</title>
-  <subsection xml:id="temp">
-    <title>Temp</title>
+  <subsection xml:id="activity-extrema">
+    <title>Extrema</title>
     <activity>
       <statement>
         <p>
+          Calculate and classify the extrema of the function
+          <me>
+            f(x,y) = \sqrt{xy + 1}
+          </me>
         </p>
       </statement>
       <solution>
         <p>
+          First we need the gradient.
+          <md>
+            <mrow>
+              \nabla f(x,y) = 
+            </mrow>
+          </md>
         </p>
       </solution>
     </activity>

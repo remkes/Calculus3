@@ -18,6 +18,7 @@
   <book>
     <title>Course Notes for Calculus III</title>
     <xi:include href="./frontmatter.ptx" />
+<!--
     <xi:include href="./week1.ptx" />
     <xi:include href="./week2.ptx" />
     <xi:include href="./week3.ptx" />
@@ -26,12 +27,11 @@
     <xi:include href="./week6.ptx" />
     <xi:include href="./week7.ptx" />
     <xi:include href="./week8.ptx" />
+-->
     <xi:include href="./week9.ptx" />
-<!--
     <xi:include href="./week10.ptx" />
     <xi:include href="./week11.ptx" />
     <xi:include href="./week12.ptx" />
--->
     <backmatter>
     </backmatter>
   </book>

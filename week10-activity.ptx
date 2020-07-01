@@ -1,14 +1,722 @@
 <section xml:id="week10-activity">
   <title>Week 10 Activity</title>
-  <subsection xml:id="temp">
-    <title>Temp</title>
+  <subsection xml:id="activity-directional-derivatives">
+    <title>Directional Derivatives</title>
     <activity>
       <statement>
         <p>
+          Calculate the directional derivative of the function
+          <me>
+            f(x,y) = 3x + 5y - 2xy + x^2 - y^2 
+          </me>
+          at the point <m>p = (0,-2)</m> in the direction <m>v =
+          (-1,-1)</m>. 
         </p>
       </statement>
       <solution>
         <p>
+          Our method of calculating directional derivatives is to take
+          the dot product of the <emph>unit</emph> direction vector
+          with the gradient of the function. First we calculate the
+          gradient.
+          <md>
+            <mrow>
+              \nabla f(x,y) \amp = 
+            </mrow>
+          </md>
+          Then we calculate the unit vector for the given direction.
+          <md>
+            <mrow>
+              |v| \amp = 
+            </mrow>
+            <mrow>
+              \frac{1}{|v|}v \amp = ()
+            </mrow>
+          </md>
+          Then we take the dot product to produce the directional
+          derivative.
+          <md>
+            <mrow>
+              D_v f(x,y) \amp = \frac{1}{|v|} v \cdot \nabla f(x,y) = 
+            </mrow>
+          </md>
+          Finally, we evaluate at the given point.
+          <md>
+            <mrow>
+              D_v f(0,-2) \amp =
+            </mrow>
+          </md>
+          We could have first evaluated the gradient at the point and
+          then taken the dot product with the unit direction; that
+          order of calculations would have produced the same result.
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the directional derivative of the function
+          <me>
+            f(x,y) = \cos (x - y)
+          </me>
+          at the point <m>p = \left( \frac{\pi}{2}, \frac{\pi}{2}
+          \right)</m> in the direction <m>v = (2,1)</m>. 
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Our method of calculating directional derivatives is to take
+          the dot product of the <emph>unit</emph> direction vector
+          with the gradient of the function. First we calculate the
+          gradient.
+          <md>
+            <mrow>
+              \nabla f(x,y) \amp = 
+            </mrow>
+          </md>
+          Then we calculate the unit vector for the given direction.
+          <md>
+            <mrow>
+              |v| \amp = 
+            </mrow>
+            <mrow>
+              \frac{1}{|v|}v \amp = ()
+            </mrow>
+          </md>
+          Then we take the dot product to produce the directional
+          derivative.
+          <md>
+            <mrow>
+              D_v f(x,y) \amp = \frac{1}{|v|} v \cdot \nabla f(x,y) = 
+            </mrow>
+          </md>
+          Finally, we evaluate at the given point.
+          <md>
+            <mrow>
+              D_v f(0,-2) \amp =
+            </mrow>
+          </md>
+          We could have first evaluated the gradient at the point and
+          then taken the dot product with the unit direction; that
+          order of calculations would have produced the same result.
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the directional derivative of the function
+          <me>
+            f(x,y) = xy - yz + yz^2 - x^3
+          </me>
+          at the point <m>p = (3,1,-2)</m> in the direction <m>v =
+          (1,3,1)</m>. 
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Our method of calculating directional derivatives is to take
+          the dot product of the <emph>unit</emph> direction vector
+          with the gradient of the function. First we calculate the
+          gradient.
+          <md>
+            <mrow>
+              \nabla f(x,y) \amp = 
+            </mrow>
+          </md>
+          Then we calculate the unit vector for the given direction.
+          <md>
+            <mrow>
+              |v| \amp = 
+            </mrow>
+            <mrow>
+              \frac{1}{|v|}v \amp = ()
+            </mrow>
+          </md>
+          Then we take the dot product to produce the directional
+          derivative.
+          <md>
+            <mrow>
+              D_v f(x,y) \amp = \frac{1}{|v|} v \cdot \nabla f(x,y) = 
+            </mrow>
+          </md>
+          Finally, we evaluate at the given point.
+          <md>
+            <mrow>
+              D_v f(0,-2) \amp =
+            </mrow>
+          </md>
+          We could have first evaluated the gradient at the point and
+          then taken the dot product with the unit direction; that
+          order of calculations would have produced the same result.
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the directional derivative of the function
+          <me>
+            f(x,y) = e^{xyz}
+          </me>
+          at the point <m>p = (0,0,3)</m> in the direction <m>v =
+          (-1,0,-2)</m>. 
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Our method of calculating directional derivatives is to take
+          the dot product of the <emph>unit</emph> direction vector
+          with the gradient of the function. First we calculate the
+          gradient.
+          <md>
+            <mrow>
+              \nabla f(x,y) \amp = 
+            </mrow>
+          </md>
+          Then we calculate the unit vector for the given direction.
+          <md>
+            <mrow>
+              |v| \amp = 
+            </mrow>
+            <mrow>
+              \frac{1}{|v|}v \amp = ()
+            </mrow>
+          </md>
+          Then we take the dot product to produce the directional
+          derivative.
+          <md>
+            <mrow>
+              D_v f(x,y) \amp = \frac{1}{|v|} v \cdot \nabla f(x,y) = 
+            </mrow>
+          </md>
+          Finally, we evaluate at the given point.
+          <md>
+            <mrow>
+              D_v f(0,-2) \amp =
+            </mrow>
+          </md>
+          We could have first evaluated the gradient at the point and
+          then taken the dot product with the unit direction; that
+          order of calculations would have produced the same result.
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the directional derivative of the function
+          <me>
+            f(x,y) = \frac{x^2 + y^2}{1 + z^2}
+          </me>
+          at the point <m>p = (2,0,-2)</m> in the direction <m>v =
+          (1,1,1)</m>. 
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Our method of calculating directional derivatives is to take
+          the dot product of the <emph>unit</emph> direction vector
+          with the gradient of the function. First we calculate the
+          gradient.
+          <md>
+            <mrow>
+              \nabla f(x,y) \amp = 
+            </mrow>
+          </md>
+          Then we calculate the unit vector for the given direction.
+          <md>
+            <mrow>
+              |v| \amp = 
+            </mrow>
+            <mrow>
+              \frac{1}{|v|}v \amp = ()
+            </mrow>
+          </md>
+          Then we take the dot product to produce the directional
+          derivative.
+          <md>
+            <mrow>
+              D_v f(x,y) \amp = \frac{1}{|v|} v \cdot \nabla f(x,y) = 
+            </mrow>
+          </md>
+          Finally, we evaluate at the given point.
+          <md>
+            <mrow>
+              D_v f(0,-2) \amp =
+            </mrow>
+          </md>
+          We could have first evaluated the gradient at the point and
+          then taken the dot product with the unit direction; that
+          order of calculations would have produced the same result.
+        </p>
+      </solution>
+    </activity>
+  </subsection>
+  <subsection xml:id="activity-chain-rule">
+    <title>Chain Rule</title>
+    <activity>
+      <statement>
+        <p>
+          Calculate the rate of change of the scalar field
+          <me>
+            f(x,y) = 4x + 3y
+          </me>
+          along the parametric curve
+          <me>
+            \gamma(t) = (t^2 + t - 1, t^3 - 2t^2 + t + 1)
+          </me>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          This is a chain rule calculation. We first need the partial
+          dervatives of the scalar field.
+          <md>
+            <mrow>
+              \frac{\del }{\del x} f \amp = 
+            </mrow>
+            <mrow>
+              \frac{\del }{\del y} f \amp = 
+            </mrow>
+          </md>
+          Then we need the derivatives of the components of the
+          parametric curve. 
+          <md>
+            <mrow>
+              \frac{d}{dt} \gamma_1 \amp = 
+            </mrow>
+            <mrow>
+              \frac{d}{dt} \gamma_2 \amp = 
+            </mrow>
+          </md>
+          Then we put these into the chain rule form and simplify. 
+          <md>
+            <mrow>
+              \frac{d}{dt} f(\gamma(t)) \amp \amp = 
+            </mrow>
+            <mrow>
+            </mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the rate of change of the scalar field
+          <me>
+            f(x,y) = x^2 - y^2
+          </me>
+          along the parametric curve
+          <me>
+            \gamma(t) = (\cos t, \sin t) 
+          </me>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          This is a chain rule calculation. We first need the partial
+          dervatives of the scalar field.
+          <md>
+            <mrow>
+              \frac{\del }{\del x} f \amp = 
+            </mrow>
+            <mrow>
+              \frac{\del }{\del y} f \amp = 
+            </mrow>
+          </md>
+          Then we need the derivatives of the components of the
+          parametric curve. 
+          <md>
+            <mrow>
+              \frac{d}{dt} \gamma_1 \amp = 
+            </mrow>
+            <mrow>
+              \frac{d}{dt} \gamma_2 \amp = 
+            </mrow>
+          </md>
+          Then we put these into the chain rule form and simplify. 
+          <md>
+            <mrow>
+              \frac{d}{dt} f(\gamma(t)) \amp \amp = 
+            </mrow>
+            <mrow>
+            </mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the rate of change of the scalar field
+          <me>
+            f(x,y) = \frac{1}{x^2 + y^2 + 1}
+          </me>
+          along the parametric curve
+          <me>
+            \gamma(t) = (3t - 2, t + 4)
+          </me>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          This is a chain rule calculation. We first need the partial
+          dervatives of the scalar field.
+          <md>
+            <mrow>
+              \frac{\del }{\del x} f \amp = 
+            </mrow>
+            <mrow>
+              \frac{\del }{\del y} f \amp = 
+            </mrow>
+          </md>
+          Then we need the derivatives of the components of the
+          parametric curve. 
+          <md>
+            <mrow>
+              \frac{d}{dt} \gamma_1 \amp = 
+            </mrow>
+            <mrow>
+              \frac{d}{dt} \gamma_2 \amp = 
+            </mrow>
+          </md>
+          Then we put these into the chain rule form and simplify. 
+          <md>
+            <mrow>
+              \frac{d}{dt} f(\gamma(t)) \amp \amp = 
+            </mrow>
+            <mrow>
+            </mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the rate of change of the scalar field
+          <me>
+            f(x,y) = e^{-(x^2 + y^2)}
+          </me>
+          along the parametric curve
+          <me>
+            \gamma(t) = (t \cos t, t \sin t)
+          </me>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          This is a chain rule calculation. We first need the partial
+          dervatives of the scalar field.
+          <md>
+            <mrow>
+              \frac{\del }{\del x} f \amp = 
+            </mrow>
+            <mrow>
+              \frac{\del }{\del y} f \amp = 
+            </mrow>
+          </md>
+          Then we need the derivatives of the components of the
+          parametric curve. 
+          <md>
+            <mrow>
+              \frac{d}{dt} \gamma_1 \amp = 
+            </mrow>
+            <mrow>
+              \frac{d}{dt} \gamma_2 \amp = 
+            </mrow>
+          </md>
+          Then we put these into the chain rule form and simplify. 
+          <md>
+            <mrow>
+              \frac{d}{dt} f(\gamma(t)) \amp \amp = 
+            </mrow>
+            <mrow>
+            </mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          The potential energy scalar field produced by a
+          gravitational source is 
+          <me>
+            P(x,y,z) = \frac{-GM}{\sqrt{x^2 + y^2 + z^2}}
+          </me>.
+          (This is the field per unit mass on an object; by
+          convention, potential energy is near zero at very large
+          distances and approches <m>-\infty</m> as we approach the
+          gravitational source.) For each of these curves, calculate
+          the rate of change of potential energy along the curve.
+          Describe the shape of the curves and qualitatively argue
+          that the increase or decrease in potential energy is
+          reasonable. 
+          <ol>
+            <li>
+              <m>\gamma(t) = (3 \cos t, 3 \sin t, 0)</m>
+            </li>
+            <li>
+              <m>\gamma(t) = \left( \frac{1}{t} \cos t, \frac{1}{t}
+              \sin t, 0 \right)</m>
+            </li>
+            <li>
+              <m>\gamma(t) = (t,t^2,t^3)</m>
+            </li>
+            <li>
+              <m>\gamma(t) = (3\cos t, 5 \sin t, 4 \cos t)</m>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+        </p>
+      </solution>
+    </activity>
+  </subsection>
+  <subsection xml:id="activity-tangent-planes">
+    <title>Tangent Planes</title>
+    <activity>
+      <statement>
+        <p>
+          Calculate the equation of the tangent plane to the function 
+          <me>
+            f(x,y) = 3y - 4x^2 
+          </me>
+          at the point <m>p = (0,0)</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We can use the direct form of the equation. To use that
+          form, we need the value of the function at the point as well
+          as the value of its partial derivatives at the point.
+          <md>
+            <mrow>
+              f() \amp = 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del x} f(x,y) \amp = 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del x} f() \amp = 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del y} f(x,y) \amp = 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del y} f() \amp = 
+            </mrow>
+          </md>
+          Then the equation of the tangent plane is given by
+          substituting these values in the form. 
+          <me>
+            z - REPLACE = REPLACE (x - a) + REPLACE (y - b)
+          </me>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the equation of the tangent plane to the function 
+          <me>
+            f(x,y) = 3y - 4x^2 
+          </me>
+          at the point <m>p = (4,3)</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We can use the direct form of the equation. To use that
+          form, we need the value of the function at the point as well
+          as the value of its partial derivatives at the point.
+          <md>
+            <mrow>
+              f() \amp = 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del x} f(x,y) \amp = 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del x} f() \amp = 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del y} f(x,y) \amp = 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del y} f() \amp = 
+            </mrow>
+          </md>
+          Then the equation of the tangent plane is given by
+          substituting these values in the form. 
+          <me>
+            z - REPLACE = REPLACE (x - a) + REPLACE (y - b)
+          </me>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the equation of the tangent plane to the function 
+          <me>
+            f(x,y) = e^{x^2+y^2}
+          </me>
+          at the point <m>p = (0,0)</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We can use the direct form of the equation. To use that
+          form, we need the value of the function at the point as well
+          as the value of its partial derivatives at the point.
+          <md>
+            <mrow>
+              f() \amp = 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del x} f(x,y) \amp = 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del x} f() \amp = 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del y} f(x,y) \amp = 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del y} f() \amp = 
+            </mrow>
+          </md>
+          Then the equation of the tangent plane is given by
+          substituting these values in the form. 
+          <me>
+            z - REPLACE = REPLACE (x - a) + REPLACE (y - b)
+          </me>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the equation of the tangent plane to the function 
+          <me>
+            f(x,y) = e^{x^2+y^2}
+          </me>
+          at the point <m>p = (-2,-2)</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We can use the direct form of the equation. To use that
+          form, we need the value of the function at the point as well
+          as the value of its partial derivatives at the point.
+          <md>
+            <mrow>
+              f() \amp = 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del x} f(x,y) \amp = 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del x} f() \amp = 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del y} f(x,y) \amp = 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del y} f() \amp = 
+            </mrow>
+          </md>
+          Then the equation of the tangent plane is given by
+          substituting these values in the form. 
+          <me>
+            z - REPLACE = REPLACE (x - a) + REPLACE (y - b)
+          </me>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the equation of the tangent plane to the function 
+          <me>
+            f(x,y) = \frac{x^2+1}{y^2-4}
+          </me>
+          at the point <m>p = (-3,3)</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We can use the direct form of the equation. To use that
+          form, we need the value of the function at the point as well
+          as the value of its partial derivatives at the point.
+          <md>
+            <mrow>
+              f() \amp = 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del x} f(x,y) \amp = 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del x} f() \amp = 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del y} f(x,y) \amp = 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del y} f() \amp = 
+            </mrow>
+          </md>
+          Then the equation of the tangent plane is given by
+          substituting these values in the form. 
+          <me>
+            z - REPLACE = REPLACE (x - a) + REPLACE (y - b)
+          </me>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the equation of the tangent plane to the function 
+          <me>
+            f(x,y) = \frac{x^2+1}{y^2-4}
+          </me>
+          at the point <m>p = (1,2)</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We can use the direct form of the equation. To use that
+          form, we need the value of the function at the point as well
+          as the value of its partial derivatives at the point.
+          <md>
+            <mrow>
+              f() \amp = 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del x} f(x,y) \amp = 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del x} f() \amp = 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del y} f(x,y) \amp = 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del y} f() \amp = 
+            </mrow>
+          </md>
+          Then the equation of the tangent plane is given by
+          substituting these values in the form. 
+          <me>
+            z - REPLACE = REPLACE (x - a) + REPLACE (y - b)
+          </me>
         </p>
       </solution>
     </activity>
@@ -18,14 +726,19 @@
     <p>
       <ul>
         <li>
+          What is a directional derivative? How does it differ from
+          the gradient?
         </li>
         <li>
+          What is the situation where the chain rule is appropriate
+          for multivariable functions?
         </li>
         <li>
+          Why for 2-variable functions have tangent planes?
         </li>
         <li>
-        </li>
-        <li>
+          What is linear approximation? How does it somewhat unify the
+          idea of generalizing the derivative?
         </li>
       </ul>
     </p>
