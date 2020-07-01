@@ -516,6 +516,26 @@
       </solution>
     </activity>
   </subsection>
+  <subsection xml:id="problems-curvature-torsion">
+    <title>Full Descriptions of Curves in <m>\RR^3</m></title>
+    <activity>
+      <statement>
+        <p>
+          For this curve, calculate the speed, curvature, torsion.
+          Also calculate the tangent vector, normal vector and
+          binormal vector. 
+          <me>
+            \gamma(t) = (x(t), y(t), z(t))
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We follow the lengthy process. 
+        </p>
+      </solution>
+    </activity>
+  </subsection>
   <subsection xml:id="week6-concepts">
     <title>Conceptual Review Questions</title>
     <p>
@@ -529,6 +549,16 @@
         </li>
         <li>
           What's special about the parametrization by arclength?
+        </li>
+        <li>
+          What are tangents, normals and binormals?
+        </li>
+        <li>
+          What is curvature?
+        </li>
+        <li>
+          What is the osculating plane and how does it relate to
+          torsion?
         </li>
       </ul>
     </p>

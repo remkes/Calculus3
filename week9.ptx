@@ -1,6 +1,6 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="week9">
   <title>Week 9</title>
-  <xi:include href="multivariable-functions.ptx" />
+  <xi:include href="multivariable-limits.ptx" />
   <xi:include href="partial-derivatives.ptx" />
   <xi:include href="pdes.ptx" />
   <xi:include href="gradients.ptx" />

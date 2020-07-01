@@ -1,14 +1,571 @@
 <section xml:id="week9-activity">
   <title>Week 9 Activity</title>
-  <subsection xml:id="temp">
-    <title>Temp</title>
+  <subsection xml:id="problems-multivariable-limits">
+    <title>Multivariable Limits</title>
     <activity>
       <statement>
         <p>
+          Calculate this limit or prove that is does not exist. If the
+          limit doesn't exist, describe the behaviour approaching the
+          limit point. 
+          <me>
+            \lim_{(x,y) \rightarrow (3,4)} \frac{x^ + y^2}{x - y + 3}
+          </me>
         </p>
       </statement>
       <solution>
         <p>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this limit or prove that is does not exist. If the
+          limit doesn't exist, describe the behaviour approaching the
+          limit point. 
+          <me>
+            \lim_{(x,y) \rightarrow (0,0)} \frac{xy + x^2y +
+            xy^2}{x^2y + 3xy} 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this limit or prove that is does not exist. If the
+          limit doesn't exist, describe the behaviour approaching the
+          limit point. 
+          <me>
+            \lim_{(x,y) \rightarrow (4,\pi)} \frac{x}{\sin y}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this limit or prove that is does not exist. If the
+          limit doesn't exist, describe the behaviour approaching the
+          limit point. 
+          <me>
+            \lim_{(x,y) \rightarrow (-3,0)} \frac{x^2 + 1}{y^2 - 4}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this limit or prove that is does not exist. If the
+          limit doesn't exist, describe the behaviour approaching the
+          limit point. 
+          <me>
+            \lim_{(x,y) \rightarrow (4,2)} \frac{x^2 + 1}{y^2 - 4}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this limit or prove that is does not exist. If the
+          limit doesn't exist, describe the behaviour approaching the
+          limit point. 
+          <me>
+            \lim_{(x,y) \rightarrow (0,0)} \frac{4x^2 - 3xy -
+            y^2}{2x^2 + xy - 5y^2} 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this limit or prove that is does not exist. If the
+          limit doesn't exist, describe the behaviour approaching the
+          limit point. 
+          <me>
+            \lim_{(x,y,z) \rightarrow (0,0,0)} \frac{z^2 - xy + y^2 -
+            4}{5xy^2 - xyz + 3}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this limit or prove that is does not exist. If the
+          limit doesn't exist, describe the behaviour approaching the
+          limit point. 
+          <me>
+            \lim_{(x,y,z) \rightarrow (0,0,0)} \frac{xy - y^2 +
+            yz}{z^2 - 3xy + x^2} 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this limit or prove that is does not exist. If the
+          limit doesn't exist, describe the behaviour approaching the
+          limit point. 
+          <me>
+            \lim_{(x,y,z) \rightarrow (0,0,0)} \arctan
+            \frac{1}{|x+y+z|}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this limit or prove that is does not exist. If the
+          limit doesn't exist, describe the behaviour approaching the
+          limit point. 
+          <me>
+            \lim_{(x,y,z) \rightarrow (0,0,0)} \ln \left(
+            \frac{xy}{y^2 + z^2 +x^3} \right)
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+        </p>
+      </solution>
+    </activity>
+  </subsection>
+  <subsection xml:id="activity-partial-derivatives">
+    <title>Partial Derivatives</title>
+    <activity>
+      <statement>
+        <p>
+          Calculate this partial derivative.
+          <me>
+            \frac{\del}{\del x} 4x^2 - 4y^2 + 3xy + 4 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We differetiate in the VARIABLE variable, treating other
+          variables as constant. 
+          <md>
+            <mrow>
+            </mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this partial derivative.
+          <me>
+            \frac{\del}{\del y} \cos (3x^2 + 4y^2)
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We differetiate in the VARIABLE variable, treating other
+          variables as constant. 
+          <md>
+            <mrow>
+            </mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this partial derivative.
+          <me>
+            \frac{\del}{\del z} \ln (xyz) 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We differetiate in the VARIABLE variable, treating other
+          variables as constant. 
+          <md>
+            <mrow>
+            </mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this partial derivative.
+          <me>
+            \frac{\del^2}{\del x^2} e^{x^2 + y^2} 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We differetiate in the VARIABLE variable, treating other
+          variables as constant. 
+          <md>
+            <mrow>
+            </mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this partial derivative.
+          <me>
+            \frac{\del^2}{\del y^2} x^2 + 3y^2 + 4y^2 x^3 - 5x^3 y +
+            8y^4 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We differetiate in the VARIABLE variable, treating other
+          variables as constant. 
+          <md>
+            <mrow>
+            </mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this partial derivative.
+          <me>
+            \frac{\del^2}{\del z^2} xyz + x^2yz - xy^2z - xyz^2 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We differetiate in the VARIABLE variable, treating other
+          variables as constant. 
+          <md>
+            <mrow>
+            </mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this partial derivative.
+          <me>
+            \frac{\del^2}{\del x \del y} \sin (xy) 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We differetiate in the VARIABLE variable, treating other
+          variables as constant. 
+          <md>
+            <mrow>
+            </mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this partial derivative.
+          <me>
+            \frac{\del^2}{\del x \del y} \frac{1}{x^2 + y^2 + 3}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We differetiate in the VARIABLE variable, treating other
+          variables as constant. 
+          <md>
+            <mrow>
+            </mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this partial derivative.
+          <me>
+            \frac{\del^2}{\del x \del y} x^2 y^3 - 7x^4y^3 - x^5 +
+            3y^7
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We differetiate in the VARIABLE variable, treating other
+          variables as constant. 
+          <md>
+            <mrow>
+            </mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this partial derivative.
+          <me>
+            \frac{\del^3}{\del x \del y \del z} 3xyz - xy^2 - xz^2 +
+            yz^2 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We differetiate in the VARIABLE variable, treating other
+          variables as constant. 
+          <md>
+            <mrow>
+            </mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this partial derivative.
+          <me>
+            \frac{\del^3}{\del x \del y^2} x^2 e^y - xy^2
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We differetiate in the VARIABLE variable, treating other
+          variables as constant. 
+          <md>
+            <mrow>
+            </mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this partial derivative.
+          <me>
+            \frac{\del^3}{\del x^2 \del y} x^2 e^y - xy^2
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We differetiate in the VARIABLE variable, treating other
+          variables as constant. 
+          <md>
+            <mrow>
+            </mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+  </subsection>
+  <subsection xml:id="activity-gradients">
+    <title>Gradients</title>
+    <activity>
+      <statement>
+        <p>
+          Calculate the gradient of this function. Use the countour
+          plots from the activity fro Week 8 and draw some of the
+          gradient directions, showing that the gradients are indeed
+          perpendicular to the coutour plots. 
+          <me>
+            f(x,y) = 3y^x - 3x^2 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We calculate the two partial derivative. 
+          <md>
+            <mrow>
+              \frac{\del}{\del x} f(x,y) = 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del y} f(x,y) = 
+            </mrow>
+          </md>
+          The gradient is has these two as component. 
+          <me>
+            \nabla f(x,y) = 
+          </me>
+          I've chosen some points and drawn the gradients in <xref
+          ref="figure-activity-gradient-1" />
+          <figure xml:id="figure-activity-gradient-1">
+            <caption>
+              <m>\nabla </m>
+            </caption>
+            <image width="100%" source="images/figure67" />
+          </figure>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the gradient of this function. Use the countour
+          plots from the activity fro Week 8 and draw some of the
+          gradient directions, showing that the gradients are indeed
+          perpendicular to the coutour plots. 
+          <me>
+            f(x,y) = e^{x^2 + y^2} + 4
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We calculate the two partial derivative. 
+          <md>
+            <mrow>
+              \frac{\del}{\del x} f(x,y) = 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del y} f(x,y) = 
+            </mrow>
+          </md>
+          The gradient is has these two as component. 
+          <me>
+            \nabla f(x,y) = 
+          </me>
+          I've chosen some points and drawn the gradients in <xref
+          ref="figure-activity-gradient-2" />
+          <figure xml:id="figure-activity-gradient-2">
+            <caption>
+              <m>\nabla </m>
+            </caption>
+            <image width="100%" source="images/figure68" />
+          </figure>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the gradient of this function. Use the countour
+          plots from the activity fro Week 8 and draw some of the
+          gradient directions, showing that the gradients are indeed
+          perpendicular to the coutour plots. 
+          <me>
+            f(x,y) = \frac{x}{\sin y} 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We calculate the two partial derivative. 
+          <md>
+            <mrow>
+              \frac{\del}{\del x} f(x,y) = 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del y} f(x,y) = 
+            </mrow>
+          </md>
+          The gradient is has these two as component. 
+          <me>
+            \nabla f(x,y) = 
+          </me>
+          I've chosen some points and drawn the gradients in <xref
+          ref="figure-activity-gradient-3" />
+          <figure xml:id="figure-activity-gradient-3">
+            <caption>
+              <m>\nabla </m>
+            </caption>
+            <image width="100%" source="images/figure69" />
+          </figure>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the gradient of this function. Use the countour
+          plots from the activity fro Week 8 and draw some of the
+          gradient directions, showing that the gradients are indeed
+          perpendicular to the coutour plots. 
+          <me>
+            f(x,y) = \frac{x^2 + 1}{y^2 - 4}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We calculate the two partial derivative. 
+          <md>
+            <mrow>
+              \frac{\del}{\del x} f(x,y) = 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del y} f(x,y) = 
+            </mrow>
+          </md>
+          The gradient is has these two as component. 
+          <me>
+            \nabla f(x,y) = 
+          </me>
+          I've chosen some points and drawn the gradients in <xref
+          ref="figure-activity-gradient-4" />
+          <figure xml:id="figure-activity-gradient-4">
+            <caption>
+              <m>\nabla </m>
+            </caption>
+            <image width="100%" source="images/figure70" />
+          </figure>
         </p>
       </solution>
     </activity>
@@ -18,14 +575,21 @@
     <p>
       <ul>
         <li>
+          How do multivariable limits differ from single variable
+          limits?
         </li>
         <li>
+          What is a partial derivative?
         </li>
         <li>
+          What is a gradient?
         </li>
         <li>
+          Why is the generalization of the derivative so complicated? 
         </li>
         <li>
+          What is a partial differential equation? What does it mean
+          to relate the time and space derivatives of a model?
         </li>
       </ul>
     </p>
