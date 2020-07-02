@@ -16,8 +16,247 @@
           First we need the gradient.
           <md>
             <mrow>
-              \nabla f(x,y) = 
+              \nabla f(x,y) \amp = 
             </mrow>
+          </md>
+          Then we set the gradient equal to zero to find the critical
+          points. This involves solving a system of two equations. 
+          <md>
+            <mrow>
+              \frac{\del}{\del x} f \amp = 0 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del y} f \amp = 0 
+            </mrow>
+          </md>
+          This gives us the critical point REPLACE. Then we calculate
+          the determinant of the Hessian and evaluate it at the
+          critical point.
+          <md>
+            <mrow>
+              D \amp = \frac{\del^2 f}{\del x^2} \frac{\del^2 f}{\del y^2}
+              - \left( \frac{\del^2 f}{\del x \del y} \right) 
+            </mrow>
+            <mrow>
+              D() \amp = 
+            </mrow>
+            ANALYSIS
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate and classify the extrema of the function
+          <me>
+            f(x,y) = (x^2 - 1) \ln (xy) 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          First we need the gradient.
+          <md>
+            <mrow>
+              \nabla f(x,y) \amp = 
+            </mrow>
+          </md>
+          Then we set the gradient equal to zero to find the critical
+          points. This involves solving a system of two equations. 
+          <md>
+            <mrow>
+              \frac{\del}{\del x} f \amp = 0 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del y} f \amp = 0 
+            </mrow>
+          </md>
+          This gives us the critical point REPLACE. Then we calculate
+          the determinant of the Hessian and evaluate it at the
+          critical point.
+          <md>
+            <mrow>
+              D \amp = \frac{\del^2 f}{\del x^2} \frac{\del^2 f}{\del y^2}
+              - \left( \frac{\del^2 f}{\del x \del y} \right) 
+            </mrow>
+            <mrow>
+              D() \amp = 
+            </mrow>
+            ANALYSIS
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate and classify the extrema of the function
+          <me>
+            f(x,y) = \sin (x) \cos (y) 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          First we need the gradient.
+          <md>
+            <mrow>
+              \nabla f(x,y) \amp = 
+            </mrow>
+          </md>
+          Then we set the gradient equal to zero to find the critical
+          points. This involves solving a system of two equations. 
+          <md>
+            <mrow>
+              \frac{\del}{\del x} f \amp = 0 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del y} f \amp = 0 
+            </mrow>
+          </md>
+          This gives us the critical point REPLACE. Then we calculate
+          the determinant of the Hessian and evaluate it at the
+          critical point.
+          <md>
+            <mrow>
+              D \amp = \frac{\del^2 f}{\del x^2} \frac{\del^2 f}{\del y^2}
+              - \left( \frac{\del^2 f}{\del x \del y} \right) 
+            </mrow>
+            <mrow>
+              D() \amp = 
+            </mrow>
+            ANALYSIS
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate and classify the extrema of the function
+          <me>
+            f(x,y) = x^2y + 4x^2y + xy - 6y
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          First we need the gradient.
+          <md>
+            <mrow>
+              \nabla f(x,y) \amp = 
+            </mrow>
+          </md>
+          Then we set the gradient equal to zero to find the critical
+          points. This involves solving a system of two equations. 
+          <md>
+            <mrow>
+              \frac{\del}{\del x} f \amp = 0 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del y} f \amp = 0 
+            </mrow>
+          </md>
+          This gives us the critical point REPLACE. Then we calculate
+          the determinant of the Hessian and evaluate it at the
+          critical point.
+          <md>
+            <mrow>
+              D \amp = \frac{\del^2 f}{\del x^2} \frac{\del^2 f}{\del y^2}
+              - \left( \frac{\del^2 f}{\del x \del y} \right) 
+            </mrow>
+            <mrow>
+              D() \amp = 
+            </mrow>
+            ANALYSIS
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate and classify the extrema of the function
+          <me>
+            f(x,y) = x^2y^2 - 3xy^2 + x^2 y - 4x^2 + xy 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          First we need the gradient.
+          <md>
+            <mrow>
+              \nabla f(x,y) \amp = 
+            </mrow>
+          </md>
+          Then we set the gradient equal to zero to find the critical
+          points. This involves solving a system of two equations. 
+          <md>
+            <mrow>
+              \frac{\del}{\del x} f \amp = 0 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del y} f \amp = 0 
+            </mrow>
+          </md>
+          This gives us the critical point REPLACE. Then we calculate
+          the determinant of the Hessian and evaluate it at the
+          critical point.
+          <md>
+            <mrow>
+              D \amp = \frac{\del^2 f}{\del x^2} \frac{\del^2 f}{\del y^2}
+              - \left( \frac{\del^2 f}{\del x \del y} \right) 
+            </mrow>
+            <mrow>
+              D() \amp = 
+            </mrow>
+            ANALYSIS
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate and classify the extrema of the function
+          <me>
+            f(x,y) = e^{-x^2 + 2x - y^2 + 2y} - e^{-x^2 - 2x - y^2
+            -2x}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          First we need the gradient.
+          <md>
+            <mrow>
+              \nabla f(x,y) \amp = 
+            </mrow>
+          </md>
+          Then we set the gradient equal to zero to find the critical
+          points. This involves solving a system of two equations. 
+          <md>
+            <mrow>
+              \frac{\del}{\del x} f \amp = 0 
+            </mrow>
+            <mrow>
+              \frac{\del}{\del y} f \amp = 0 
+            </mrow>
+          </md>
+          This gives us the critical point REPLACE. Then we calculate
+          the determinant of the Hessian and evaluate it at the
+          critical point.
+          <md>
+            <mrow>
+              D \amp = \frac{\del^2 f}{\del x^2} \frac{\del^2 f}{\del y^2}
+              - \left( \frac{\del^2 f}{\del x \del y} \right) 
+            </mrow>
+            <mrow>
+              D() \amp = 
+            </mrow>
+            ANALYSIS
           </md>
         </p>
       </solution>
@@ -28,14 +267,11 @@
     <p>
       <ul>
         <li>
+          What is a saddle point?
         </li>
         <li>
-        </li>
-        <li>
-        </li>
-        <li>
-        </li>
-        <li>
+          How does optimization in several variables differ from
+          the single variable situation?
         </li>
       </ul>
     </p>

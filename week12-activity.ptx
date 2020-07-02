@@ -1,14 +1,184 @@
 <section xml:id="week12-activity">
   <title>Week 12 Activity</title>
-  <subsection xml:id="temp">
-    <title>Temp</title>
+  <subsection xml:id="activity-constrained-optimization">
+    <title>Constrained Optimization</title>
     <activity>
       <statement>
         <p>
+          Determine the extrema of the function
+          <me>
+            f(x,y) = \frac{1}{x^2 + y^2} 
+          </me>
+          on the constraint <m>x + y = 5</m>.
         </p>
       </statement>
       <solution>
         <p>
+          We need to calculate the gradient of both the function and
+          the constraint (writing the constraint in the form <m>g =
+          0</m> for a constraint function g). 
+          <md>
+            <mrow>
+              g \amp = 
+            </mrow>
+            <mrow>
+              \nabla f \amp = 
+            </mrow>
+            <mrow>
+              \nabla g \amp = 
+            </mrow>
+          </md>
+          Then we set <m>\nabla f = \lambda \nabla g</m> and solve the
+          resulting system.
+          <md>
+            <mrow>
+            </mrow>
+          </md>
+          ANALYSIS
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Determine the extrema of the function
+          <me>
+            f(x,y) = (x+1)(y-1)
+          </me>
+          on the constraint <m>x^2 + y^2 = 49</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We need to calculate the gradient of both the function and
+          the constraint (writing the constraint in the form <m>g =
+          0</m> for a constraint function g). 
+          <md>
+            <mrow>
+              g \amp = 
+            </mrow>
+            <mrow>
+              \nabla f \amp = 
+            </mrow>
+            <mrow>
+              \nabla g \amp = 
+            </mrow>
+          </md>
+          Then we set <m>\nabla f = \lambda \nabla g</m> and solve the
+          resulting system.
+          <md>
+            <mrow>
+            </mrow>
+          </md>
+          ANALYSIS
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Determine the extrema of the function
+          <me>
+            f(x,y) = e^{-x} \sin y 
+          </me>
+          on the constraint <m>x + y = 4</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We need to calculate the gradient of both the function and
+          the constraint (writing the constraint in the form <m>g =
+          0</m> for a constraint function g). 
+          <md>
+            <mrow>
+              g \amp = 
+            </mrow>
+            <mrow>
+              \nabla f \amp = 
+            </mrow>
+            <mrow>
+              \nabla g \amp = 
+            </mrow>
+          </md>
+          Then we set <m>\nabla f = \lambda \nabla g</m> and solve the
+          resulting system.
+          <md>
+            <mrow>
+            </mrow>
+          </md>
+          ANALYSIS
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Determine the extrema of the function
+          <me>
+            f(x,y) = yx - z^2 
+          </me>
+          on the constraint <m>x^2 + y^2 + z^2 = 1</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We need to calculate the gradient of both the function and
+          the constraint (writing the constraint in the form <m>g =
+          0</m> for a constraint function g). 
+          <md>
+            <mrow>
+              g \amp = 
+            </mrow>
+            <mrow>
+              \nabla f \amp = 
+            </mrow>
+            <mrow>
+              \nabla g \amp = 
+            </mrow>
+          </md>
+          Then we set <m>\nabla f = \lambda \nabla g</m> and solve the
+          resulting system.
+          <md>
+            <mrow>
+            </mrow>
+          </md>
+          ANALYSIS
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Determine the extrema of the function
+          <me>
+            f(x,y) = xyz
+          </me>
+          on the constraint <m>3x - 2y - 4z = 5</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We need to calculate the gradient of both the function and
+          the constraint (writing the constraint in the form <m>g =
+          0</m> for a constraint function g). 
+          <md>
+            <mrow>
+              g \amp = 
+            </mrow>
+            <mrow>
+              \nabla f \amp = 
+            </mrow>
+            <mrow>
+              \nabla g \amp = 
+            </mrow>
+          </md>
+          Then we set <m>\nabla f = \lambda \nabla g</m> and solve the
+          resulting system.
+          <md>
+            <mrow>
+            </mrow>
+          </md>
+          ANALYSIS
         </p>
       </solution>
     </activity>
@@ -18,14 +188,14 @@
     <p>
       <ul>
         <li>
+          What is constrained optimization?
         </li>
         <li>
+          What is a Lagrange multiplier and what does it mean?
         </li>
         <li>
-        </li>
-        <li>
-        </li>
-        <li>
+          Why are we using gradient directions to solve constrained
+          optimization problems?
         </li>
       </ul>
     </p>
