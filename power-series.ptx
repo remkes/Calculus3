@@ -26,10 +26,12 @@
       the values of the parameter (now the variable) where the
       geometric series converges. We even know what this function
       is.
-      <me>
-        f(x) = \sum_{n=0}^\infty x^n = \frac{1}{1-x} |x|
-        \lt  1
-      </me>
+      <md>
+        <mrow>
+        \amp f(x) = \sum_{n=0}^\infty x^n = \frac{1}{1-x} \amp \amp
+        |x| .\lt  1
+        </mrow>
+      </md>
     </p>
     <p>
       In this way, the geometric series now defines the function
@@ -43,16 +45,16 @@
       called them <m>\zeta</m> series is that the associated function
       is called the Riemann <m>\zeta</m>-function.
       <me>
-        \zeta(x) = \sum_{n=0}^\infty \frac{1}{n^x}
+        \zeta(p) = \sum_{n=0}^\infty \frac{1}{n^p}
       </me>
     </p>
     <p>
-      The domain of this function is <m>(1,\infty)</m>, since that is
-      where the series converges. (In other branches of mathematics,
-      the domain of <m>\zeta</m> is extended in new and interesting
-      ways. The vanishing of the <m>\zeta</m> function is the subject
-      of the famous Riemann Hypothesis, an important unsolved problem
-      in modern mathematics.)
+      The domain of this function is <m>p \in (1,\infty)</m>, since
+      that is where the series converges. (In other branches of
+      mathematics, the domain of <m>\zeta</m> is extended in new and
+      interesting ways. The vanishing of the <m>\zeta</m> function is
+      the subject of the famous Riemann Hypothesis, an important
+      unsolved problem in modern mathematics.)
     </p>
     <p>
       In general, an infinite series can represent a function
@@ -495,6 +497,67 @@
       functions which be expressed as series, integration is almost
       trivial. This makes power series a very useful and convenient
       class of functions.
+    </p>
+  </subsection>
+  <subsection xml:id="series-patterns-exponents">
+    <title>Series with Patterns of Exponents</title>
+    <p>
+      If it often the case that a power series may non-zero terms only
+      for certain exponents following some pattern. In this section,
+      I'm going to briefly introduce some common notation for
+      particular cases of this phenomenon. Consider a series where all
+      the odd terms are zero (centered at <m>0</m> for convenience). 
+      <me>
+        f(x) = c_0 + 0x + c_2x^2 + 0x^3 + c_4x^4 + 0x^5 + \ldots 
+      </me>
+      We could similarly consider a series where all the even terms
+      are zero. 
+      <me>
+        f(x) = 0 + c_1x + 0 + c_3x^3 + 0x^4 + c_45^5 + 0x^6 + \ldots 
+      </me>
+      If we want to index all the even numbers, we can write <m>k =
+      2n</m> for <m> n \in \NN</m>. Similarly, we can index all the
+      odd numbers by writing <m>k = (2n+1)</m> for <m>n \in \NN</m>.
+      Using these tools, we could write a series with only odd or even
+      non-zero terms. The series
+      <me>
+        f(x) = \sum_{n=0}^\infty c_n (x-\alpha)^{2n}
+      </me>
+      is a series with only even terms. The series.
+      <me>
+        g(x) = \sum_{n=0}^\infty c_n (x-\alpha)^{2n+1}
+      </me>
+      is a series with only odd terms. When we use these convention,
+      we permit the indices on the <m>c_i</m> to be unmatched with the
+      exponents. In the function <m>g(x)</m> above, <m>c_1</m> matches
+      with <m>x^1</m>, but <m>c_2</m> matches with <m>x^3</m>,
+      <m>c_3</m> matched with <m>c^5</m> and so on. 
+    </p>
+    <p>
+      Some extra care must be taken with calculating radii of
+      convergence for these series. The formula
+      <me>
+        R = \lim_{n \rightarrow \infty} \left| \frac{c_n}{c_{n+1}}
+        \right| 
+      </me>
+      relies on the assumption that all <m>c_n \neq 0</m>. This is not
+      true for these series with only odd term or even terms. We have
+      to use the ratio test directly to calculate radii of convergence
+      in these situations.
+    </p>
+    <p>
+      Using similar ideas, we could encode all sorts of patterns in
+      the exponents of our power series. If a power series had
+      non-zero terms only when the exponent was a power of <m>3</m>,
+      we could write it as
+      <me>
+        f(x) = \sum_{n=0}^\infty (x-\alpha)^{3n}
+      </me>.
+      If the power series had non-zero exponents only for every fifth
+      number starting at <m>7</m>, we could write it as
+      <me>
+        f(x) = \sum_{n=0}^\infty (x-\alpha)^{5n + 7}
+      </me>.
     </p>
   </subsection>
   <subsection xml:id="non-elementary-functions">

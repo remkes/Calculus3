@@ -177,10 +177,12 @@
         <p>
           Since we have a general expression for the partial sums, we
           can take the limit.
-          <me>
-            \lim_{n \rightarrow \infty} s_n = \lim_{n \rightarrow
-            \infty} \frac{2^n - 1}{2n} = 1 
-          </me>
+          <md>
+            <mrow>
+              \lim_{n \rightarrow \infty} s_n = \lim_{n \rightarrow
+              \infty} \frac{2^n - 1}{2n} = 1 
+            </mrow>
+          </md>
         </p>
         <p>
           Unsurprisingly, we get that the total distance travelled
@@ -193,7 +195,7 @@
         </p>
       </statement>
     </example>
-    <example>
+    <example xml:id="example-harmonic-series">
       <statement>
         <p>
           Now consider the sum of the harmonic series. We are going
@@ -258,17 +260,19 @@
         <p>
           Taking every second power of two gives us partial sums
           larger than the sequence of positive numbers.
-          <me>
-            s_{2^{2k-2}} > k \forall k \geq 2
-          </me>
+          <md>
+            <mrow>
+            \amp s_{2^{2k-2}} > k \amp \amp \forall k \geq 2
+            </mrow>
+          </md>
         </p>
         <p>
           The lower bounds get larger and larger. The limit of the
           sequence of partial sums is larger than this limit of larger
           bounds.
           <me>
-            \lim_{n \rightarrow \infty} s_n = \lim_{k \rightarrow
-            \infty} s_{2^{2k-2}} \geq \lim_{k \rightarrow \infty} k =
+            \lim_{n \rightarrow \infty} s_n \geq \lim_{k \rightarrow
+            \infty} s_{2^{2k-2}} =\lim_{k \rightarrow \infty} k =
             \infty
           </me>
         </p>
@@ -282,16 +286,36 @@
       </statement>
     </example>
     <p>
-      This example makes a very important point: it is possible to
-      build a series where the terms are getting smaller and smaller
-      and still end up with an infinite value. This gives some credit
-      to the initial concern of Zeno's paradox, since all these
-      smaller and smaller pieces may eventually add up to something
-      infinite. One might have the intuition that if the terms are
-      becoming very small (as with the harmonic series), the series
-      should have a finite sum; the harmonic series is a
-      counter-example to this intuition. However, the reverse
-      intuition holds, as seen in the following result.
+      The harmonic series in the previous example diverged and the
+      limit of its partial sum was <m>\infty</m>. For such series, it
+      is not uncommon to write 
+      <me>
+        \sum_{n=1}^\infty \frac{1}{n} = \infty
+      </me>.
+      As with the use of infinity in limits, this does not imply that
+      infinity is a number. Rather, <qt><m>= \infty</m></qt> in this
+      course is a symbol meaning larger and larger without bound. In a
+      similar notation, when a series convergenes, it's all common to
+      see this written as 
+      <me>
+        \sum_{n=1}^\infty a_n \lt \infty
+      </me>,
+      particularly when the series has positive terms. This again does
+      not imply that infinity is a number which can be compared, but
+      is just a short-hand symbol for convergence. 
+    </p>
+    <p>
+      Studying the harmonic series in <xref
+      ref="example-harmonic-series" /> leads to an important
+      observation: it is possible to build a series where the terms
+      are getting smaller and smaller and still end up with an
+      infinite value.  This gives some credit to the initial concern
+      of Zeno's paradox, since all these smaller and smaller pieces
+      may eventually add up to something infinite. One might have the
+      intuition that if the terms are becoming very small (as with the
+      harmonic series), the series should have a finite sum; the
+      harmonic series is a counter-example to this intuition. However,
+      the reverse intuition holds, as seen in the following result.
     </p>
     <proposition>
       <statement>
@@ -302,7 +326,7 @@
           </me>
           such that
           <me>
-            \lim_{n \rightarrow a_n} \neq 0
+            \lim_{n \rightarrow \infty} a_n \neq 0
           </me>
           then the series must diverge.
         </p>
@@ -324,39 +348,40 @@
           positive and negative ones.
           <md>
             <mrow>
-              \sum_{n=1}^\infty (-1)^n \amp</mrow>
-            <mrow>
-              s_1 \amp = 1
+              \amp \sum_{n=1}^\infty (-1)^n \amp \amp 
             </mrow>
             <mrow>
-              s_2 \amp = 1-1 = 0
+              \amp s_1 \amp = \amp 1
             </mrow>
             <mrow>
-              s_3 \amp = 1-1+1 = 1
+              \amp s_2 \amp = \amp 1-1 = 0
             </mrow>
             <mrow>
-              s_4 \amp = 1-1+1-1 = 0
+              \amp s_3 \amp = \amp 1-1+1 = 1
             </mrow>
             <mrow>
-              s_5 \amp = 1+1-1-1+1 = 1
+              \amp s_4 \amp = \amp 1-1+1-1 = 0
             </mrow>
             <mrow>
-              s_6 \amp = 1+1-1-1+1-1 = 0
+              \amp s_5 \amp = \amp 1+1-1-1+1 = 1
             </mrow>
-            <mrow>\
-              vdots \amp \vdots
+            <mrow>
+              \amp s_6 \amp = \amp 1+1-1-1+1-1 = 0
+            </mrow>
+            <mrow>
+              \amp \vdots \amp \amp \vdots
             </mrow>
             <intertext>
               We can determine a pattern for even and odd terms.
             </intertext>
             <mrow>
-              s_{2n} \amp = 0 \ \ \forall n \in \NN
+              \amp s_{2n} \amp = \amp 0 \ \ \forall n \in \NN
             </mrow>
             <mrow>
-              s_{2n+1} \amp = 1 \ \ \forall n \in \NN
+              \amp s_{2n+1} \amp = \amp 1 \ \ \forall n \in \NN
             </mrow>
-            <mrow>\
-              lim_{n \rightarrow \infty} s_n \amp DNE
+            <mrow>
+              \amp \lim_{n \rightarrow \infty} s_n \amp \amp DNE
             </mrow>
           </md>
         </p>
@@ -380,11 +405,15 @@
               \sum_{n=1}^\infty \frac{1}{n(n+1)} \amp
             </mrow>
             <mrow>
-              s_n \amp = \sum_{k=1}^n \frac{1}{k(k+1)} = \sum_{k=1}^n
-              \frac{1}{k} - \frac{1}{k+1}
+              \frac{1}{n(n+1)} \amp = \amp 
+              \frac{1}{n} - \frac{1}{n+1}
             </mrow>
             <mrow>
-              \amp = \frac{1}{1} - \frac{1}{2} + \frac{1}{2} -
+              \sum_{n=1}^\infty \frac{1}{n(n+1)} = \sum_{n=1}^\infty
+              \frac{1}{n} - \frac{1}{n+1}
+            </mrow>
+            <mrow>
+              s_n \amp = \frac{1}{1} - \frac{1}{2} + \frac{1}{2} -
               \frac{1}{3} + \frac{1}{3} - \frac{1}{4} + \frac{1}{4}
               \ldots - \frac{1}{n+1}
             </mrow>
@@ -659,8 +688,13 @@
               \frac{3^{n+2}}{(n+2)!} + \sum_{n=0}^\infty
               \frac{1}{n(n+2)} 
             </mrow>
-            <mrow> \amp = \sum_{n=0}^\infty \left(
-              \frac{3^{n+2}}{(n+2)!} + \frac{1}{n(n+2} \right)
+            <mrow> 
+              \amp = \sum_{n=0}^\infty \left(
+              \frac{3^{n+2}}{(n+2)!} + \frac{1}{n(n+2)} \right)
+            </mrow>
+            <mrow> 
+              \amp = \sum_{n=0}^\infty \left(
+              \frac{3^{n+2}}{(n+2)!} + \frac{(n-1)!(n+1)}{(n+2)!} \right)
             </mrow>
             <mrow>
               \amp = \sum_{n=0}^\infty \left( \frac{3^{n+2} +
