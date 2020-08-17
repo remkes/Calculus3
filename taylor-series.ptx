@@ -30,7 +30,7 @@
         f(x) = \sum_{n=0}^\infty c_n (x-\alpha)^n
       </me>.
     </p>
-    <definition>
+    <definition xml:id="taylor-series-definition">
       <statement>
         <p>
           A function is called <term>analytic</term> at <m>\alpha \in

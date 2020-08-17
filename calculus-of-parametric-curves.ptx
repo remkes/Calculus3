@@ -29,7 +29,27 @@
     </p>
     <figure xml:id="figure-logarithmic-spiral-tangent">
       <caption>A tangent vector to the logarithmic spiral</caption>
-      <image width="100%" source="images/figure16" />
+      <image xml:id="figure16" width="90%">
+        <asymptote>
+          size(12cm,7cm,IgnoreAspect);
+          import graph;
+
+          xaxis("$x$");
+          yaxis("$y$");
+
+          real x(real t) {return exp(t/4)*sin(t);}
+          real y(real t) {return exp(t/4)*cos(t);}
+
+          draw(graph(x,y,-16,2));
+          draw((-1,1)--(1,1));
+          draw((0,1)--(1,1.25),Arrow());
+
+          label("Tangent Vector $\left(1,\frac{1}{4}\right)$",(1,1.25),N);
+          label("$\gamma(0)$", (0,1),NW);
+
+          dot((0,1));
+        </asymptote>
+      </image>
     </figure>
     <example>
       <statement>
@@ -62,7 +82,33 @@
       <caption>
         Length of tangent vectors depending on parametrization
       </caption>
-      <image width="100%" source="images/figure18" />
+      <image xml:id="figure18" width="90%">
+        <asymptote>
+          size(12cm,7cm,IgnoreAspect);
+          import graph;
+
+          xaxis("$x$");
+          yaxis("$y$");
+
+          real x(real t) {return t;}
+          real y(real t) {return t^2/2;}
+
+          draw(graph(x,y,0,3));
+
+          draw((1,1/2)--(3,5/2),Arrow());
+          draw((1,1/2)--(2,3/2),Arrow());
+          draw((1,1/2)--(1.5,2/2),Arrow());
+          draw((1,1/2)--(6,11/2),Arrow());
+
+          dot((1,1/2));
+
+          label("$(\frac{1}{2},1)$",(1.5,2/2), SE);
+          label("$(1,2)$",(2,3/2), SE);
+          label("$(2,4)$",(3,5/2), SE);
+          label("$(5,10)$",(6,11/2), SE);
+          label("$\gamma(t)$",(3,9/2), N);
+        </asymptote>
+      </image>
     </figure>
     <example>
       <statement>
@@ -624,7 +670,23 @@
       <caption>
         The tangent, normal and binormal to a helix in <m>\RR^3</m>
       </caption>
-      <image width="100%" source="images/figure22" />
+      <image xml:id="figure27" width="90%">
+        <asymptote>
+          size(7cm,7cm);
+          import graph;
+
+          xlimits(-3,3);
+          ylimits(-3,3);
+
+          xaxis("$x$",above=true);
+          yaxis("$y$",above=true);
+
+          real f(real t) {return t/6;}
+
+          path g=polargraph(f,0,5pi)--cycle;
+          draw(g);
+        </asymptote>
+      </image>
     </figure>
     <p>
       Let's complete these definitions with interpretation. We've

@@ -4,7 +4,26 @@
     <title>Varied Parametrizations</title>
     <figure xml:id="figure-parametric-parabola">
       <caption>The graph of a parabola as a parametric curve</caption>
-      <image width="100%" source="images/figure17" />
+      <image xml:id="figure17" width="90%">
+        <asymptote>
+          size(12cm,7cm,IgnoreAspect);
+          import graph;
+
+          xaxis("$x$");
+          yaxis("$y$");
+
+          real x(real t) {return t;}
+          real y(real t) {return t^2/4;}
+
+          draw(graph(x,y,0,4),MidArrow);
+
+          dot((0,0));
+          dot((4,4));
+
+          label("$(0,0)$",(0,0),NW);
+          label("$(4,16)$",(4,4),SE);
+        </asymptote>
+      </image>
     </figure>
     <p>
       There are many ways to describe the same shape by a parametric
@@ -105,7 +124,36 @@
     <title>Arc Length</title>
     <figure xml:id="figure-arclength-approximation">
       <caption>Arclength setup by approximation</caption>
-      <image width="100%" source="images/figure19" />
+      <image xml:id="figure19" width="90%"> 
+        <asymptote>
+          size(12cm,7cm,IgnoreAspect);
+          import graph;
+
+          xlimits(-2,6);
+          ylimits(-2,6);
+
+          xaxis("$x$");
+          yaxis("$y$");
+
+          draw((-1,-1)--(1,-1)--(2,0)--(3,2)--(4,4)--(5,4));
+          draw((-1,-1)..(1,-1)..(2,0)..(3,2)..(4,4)..(5,4));
+
+          dot((-1,-1));
+          dot((1,-1));
+          dot((2,0));
+          dot((3,2));
+          dot((4,4));
+          dot((5,4));
+
+          draw((3,2)--(4,2)--(4,4));
+
+          label("$\gamma(t)$", (3.5,3.7),NW);
+          label("$\gamma(a)$", (-1,-1),NW);
+          label("$\gamma(b)$", (5,4),NE);
+          label("$\Delta y$",(4,3),E);
+          label("$\Delta x$",(3.5,2),S);
+        </asymptote>
+      </image>
     </figure>
     <p>
       Our goal in this section is to produce a formula describing the
@@ -170,7 +218,23 @@
         </p>
         <figure xml:id="figure-asteroid">
           <caption>The Asteroid</caption>
-          <image width="100%" source="images/figure20" />
+          <image xml:id="figure20" width="90%">
+            <asymptote>
+              size(7cm,7cm);
+              import graph;
+
+              xlimits(-1.1,1.1);
+              ylimits(-1.1,1.1);
+
+              xaxis("$x$");
+              yaxis("$y$");
+
+              real x(real t) {return (cos(t))^3;}
+              real y(real t) {return (sin(t))^3;}
+
+              draw(graph(x,y,0,2*pi));
+            </asymptote>
+          </image>
         </figure>
         <md>
           <mrow>
@@ -311,7 +375,25 @@
           <caption>
             The helix <m>\gamma(t) = (2 \cos t, 2 \sin t, 4t)</m>
           </caption>.
-          <image width="100%" source="images/figure21" />
+          <image xml:id="figure21" width="90%">
+            <asymptote>
+              size(12cm,7cm,IgnoreAspect);
+              import graph3;
+              currentprojection=orthographic(1,1,1);
+
+              limits((-4,-4,0),(4,4,14));
+
+              dot((1,1,1));
+
+              axes3("$x$", "$y$", "$z$", Arrow3);
+
+              real x(real t) {return 2*cos(t);}
+              real y(real t) {return 2*sin(t);}
+              real z(real t) {return t;}
+
+              draw(graph(x,y,z,0,14));
+            </asymptote>
+          </image>
         </figure>
         <p>
           We calculate the arclength function.

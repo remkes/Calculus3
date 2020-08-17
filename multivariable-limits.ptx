@@ -117,7 +117,27 @@
       <caption>
         The graph of <m>f(x) = \frac{(x+y)^2}{x^2+y^2}</m>
       </caption>
-      <image width="100%" source="images/figure38" />
+      <image xml:id="figure38" width="90%">
+        <asymptote>
+          import graph3;
+          import palette;
+          size(12cm,6cm,IgnoreAspect);
+          currentprojection=orthographic(1,-0.5,0.5);
+          
+          real f(pair z) { return ((z.x+z.y)^2)/((z.x)^2+(z.y)^2+(1/100));}
+
+          limits((-2,-1.9,0),(2,2,1.2));
+
+          xaxis3("$x$",Bounds(Both,Value),OutTicks(Step=1));
+          yaxis3("$y$",Bounds(Both,Value),OutTicks(Step=1));
+
+          surface s=surface(f,(-2,-2),(2,2),100,Spline);
+
+          pen[] pens=mean(palette(s.map(zpart),Gradient(green,blue)));
+
+          draw(s,pens);
+        </asymptote>
+      </image>
     </figure>
     <example>
       <statement>

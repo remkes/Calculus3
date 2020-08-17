@@ -192,7 +192,27 @@
       <caption>
         The graph of <m>f(x,y) = \frac{5}{x^2 + y^2 + 1}</m>
       </caption>
-      <image width="100%" source="images/figure37" />
+      <image xml:id="figure37" width="90%">
+        <asymptote>
+          import graph3;
+          import palette;
+          size(12cm,5cm,IgnoreAspect);
+          currentprojection=orthographic(-0.5,-1,0.4);
+
+          real f(pair z) { return 2/((z.x)^2+(z.y)^2+1);}
+
+          limits((-2,-2,0),(2,2,3));
+
+          xaxis3("$x$",Bounds(Both,Value),OutTicks(Step=1));
+          yaxis3("$y$",Bounds(Both,Value),OutTicks(Step=1));
+
+          surface s=surface(f,(-2,-2),(2,2),100,Spline);
+
+          pen[] pens=mean(palette(s.map(zpart),Gradient(green,blue)));
+
+          draw(s,pens);
+        </asymptote>
+      </image>
     </figure>
     <p>
       We used graphs extensively in single-variable calculus to
@@ -251,7 +271,24 @@
         The circular contours of <m>f(x,y) = \frac{5}{x^2 + y^2 +
         1}</m>
       </caption>
-      <image width="100%" source="images/figure32" />
+      <image xml:id="figure32" width="90%">
+        <asymptote>
+          size(7cm,7cm);
+          import contour;
+          import graph;
+          
+          xaxis();
+          yaxis();
+
+          real f(real x, real y) {return 1/(x^2 + y^2 +1);}
+
+          int n=10;
+          real[] c=new real[n];
+          for(int i=0; i \lt n; ++i) c[i]=1/(i+1);
+
+          draw(contour(f,(-4,-4),(4,4),c));
+        </asymptote>
+      </image>
     </figure>
     <example>
       <statement>
@@ -267,7 +304,24 @@
       <caption>
         The contours of a saddle point
       </caption>
-      <image width="100%" source="images/figure34" />
+      <image xml:id="figure34" width="90%">
+        <asymptote>
+          size(12cm,7cm,IgnoreAspect);
+          import contour;
+          import graph;
+
+          xaxis();
+          yaxis();
+
+          real f(real x, real y) {return x^2 - y^2 + 2x*y - 3y + x;}
+
+          int n=20;
+          real[] c=new real[n];
+          for(int i=0; i \lt n; ++i) c[i]=i-10;
+
+          draw(contour(f,(-4,-4),(4,4),c));
+        </asymptote>
+      </image>
     </figure>
     <p>
       These contour plots lead us to a general definition.

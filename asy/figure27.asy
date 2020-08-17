@@ -1,6 +1,5 @@
 size(7cm,7cm);
 import graph;
-usepackage("remdefs");
 
 xlimits(-3,3);
 ylimits(-3,3);

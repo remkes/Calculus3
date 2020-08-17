@@ -33,7 +33,27 @@
     </p>
     <figure xml:id="figure-polar-coordinates">
       <caption>Polar Coordinates</caption>
-      <image width="100%" source="images/figure26" />
+      <image xml:id="figure26" width="90%">
+        <asymptote>
+          size(12cm,7cm,IgnoreAspect);
+          import graph;
+
+          xlimits(-1,3);
+          ylimits(-1,3);
+
+          xaxis(Ticks("%"));
+          yaxis(Ticks("%"));
+
+          draw((0,0)--(2,2),Arrow); 
+          draw((2,2)--(2,0),Arrow); 
+
+          label("$r$",(1,1),NW);
+          label("$(x,y) \ or \ (r,\theta)$",(2,2),E);
+          label("$y$",(2,1),E);
+          label("$x$",(1,-0.1),S);
+          label("$\theta$",(0.2,0.1),E);
+        </asymptote>
+      </image>
     </figure>
     <p>
       We would like to be able to move between Cartesian and polar
@@ -83,19 +103,84 @@
     </p>
     <figure xml:id="figure-polar-locus1">
       <caption><m>r = \theta</m></caption>
-      <image width="100%" source="images/figure27" />
+      <image xml:id="figure27" width="90%">
+        <asymptote>
+          size(7cm,7cm);
+          import graph;
+          usepackage("remdefs");
+
+          xlimits(-3,3);
+          ylimits(-3,3);
+
+          xaxis("$x$",above=true);
+          yaxis("$y$",above=true);
+
+          real f(real t) {return t/6;}
+
+          path g=polargraph(f,0,5pi)--cycle;
+          draw(g);
+        </asymptote>
+      </image>
     </figure>
     <figure xml:id="figure-polar-locus2">
       <caption><m>r = |\sin \theta|</m></caption>
-      <image width="100%" source="images/figure28" />
+      <image xml:id="figure28" width="90%"> 
+        <asymptote>
+          size(7cm,7cm);
+          import graph;
+
+          xlimits(-1.2,1.2);
+          ylimits(-1.2,1.2);
+          
+          xaxis("$x$",above=true);
+          yaxis("$y$",above=true);
+
+          real f(real t) {return sqrt((sin(t))^2);}
+
+          path g=polargraph(f,0,2pi)--cycle;
+          draw(g);
+        </asymptote>
+      </image>
     </figure>
     <figure xml:id="figure-polar-locus3">
       <caption><m>r = 1 + \sin \theta</m></caption>
-      <image width="100%" source="images/figure29" />
+      <image xml:id="figure29" width="90%">
+        <asymptote>
+          size(7cm,7cm);
+          import graph;
+
+          xlimits(-2,2);
+          ylimits(-1,3);
+
+          xaxis("$x$",above=true);
+          yaxis("$y$",above=true);
+
+          real f(real t) {return 1 + sin(t);}
+
+          path g=polargraph(f,0,2pi)--cycle;
+          draw(g);
+        </asymptote>
+      </image>
     </figure>
     <figure xml:id="figure-polar-locus4">
       <caption><m>r = 3 \sin 2 \theta</m></caption>
-      <image width="100%" source="images/figure30" />
+      <image xml:id="figure30" width="90%">
+        <asymptote>
+          size(7cm,7cm);
+          import graph;
+
+          xlimits(-3,3);
+          ylimits(-3,3);
+
+          xaxis("$x$",above=true);
+          yaxis("$y$",above=true);
+
+          real f(real t) {return sqrt((3*sin(2*t))^2);}
+
+          path g=polargraph(f,0,2pi)--cycle;
+          draw(g);
+        </asymptote>
+      </image>
     </figure>
   </subsection>
   <subsection xml:id="spherical-cylindrical">

@@ -40,12 +40,51 @@
     <title>Parametric Curves</title>
     <figure xml:id="figure-parametric-curve1">
       <caption>The curve <m>\gamma(t) = (\cos t, \sin t)</m></caption>
-      <image width="100%" source="images/figure10" />
+      <image xml:id="figure10" width="90%">
+        <asymptote>
+          size(10cm,6cm);
+          import graph;
+
+          xlimits(-1.2,2);
+          ylimits(-1.2,1.2);
+
+          xaxis("$x$");
+          yaxis("$y$");
+
+          real x(real t) {return cos(t);}
+          real y(real t) {return sin(t);}
+
+          label("$\gamma(0) = \gamma(2\pi)$",(1,0),NE);
+
+          draw(graph(x,y,0,2*pi), MidArrow());
+
+          dot((1,0));
+        </asymptote>
+      </image>
     </figure>
     <figure xml:id="figure-parametric-curve2">
       <caption>The curve <m>\gamma(t) = \left( \frac{1}{t} , t
       \right)</m></caption>
-      <image width="100%" source="images/figure11" />
+      <image xml:id="figure11" width="90%">
+        <asymptote>
+          size(12cm,7cm,IgnoreAspect);
+          import graph;
+
+          xaxis("$x$");
+          yaxis("$y$");
+
+          real x(real t) {return 1/t;}
+          real y(real t) {return t;}
+
+          label("$\gamma\left(\frac{1}{5}\right)$",(5,0.2),NE);
+          label("$\gamma(5)$",(0.2,5),E);
+
+          draw(graph(x,y,0.2,5), MidArrow());
+
+          dot((5,0.2));
+          dot((0.2,5));
+        </asymptote>
+      </image>
     </figure>
     <definition>
       <statement>
@@ -100,11 +139,45 @@
     </p>
     <figure xml:id="figure-parametric-curve3">
       <caption>The curve <m>\gamma(t) = (\cos 2t, \sin t)</m></caption>
-      <image width="100%" source="images/figure12" />
+      <image xml:id="figure12" width="90%">
+        <asymptote>
+          size(12cm,7cm,IgnoreAspect);
+          import graph;
+
+          xlimits(-1.4,1.4);
+          ylimits(-1.4,1.4);
+
+          xaxis("$x$");
+          yaxis("$y$");
+
+          real x(real t) {return cos((3*t));}
+          real y(real t) {return sin(t);}
+
+          draw(graph(x,y,0,2*pi), MidArrow());
+
+          dot((1,0));
+        </asymptote>
+      </image>
     </figure>
     <figure xml:id="figure-parametric-curve4">
       <caption>The logarithmic spiral</caption>
-      <image width="100%" source="images/figure13" />
+      <image xml:id="figure13" width="90%">
+        <asymptote>
+          size(12cm,7cm);
+          import graph;
+
+          xlimits(-6,10);
+          ylimits(-7,4);
+
+          xaxis("$x$");
+          yaxis("$y$");
+
+          real x(real t) {return 2*exp(t/4)*cos(t);}
+          real y(real t) {return 2*exp(t/4)*sin(t);}
+
+          draw(graph(x,y,-10,6), MidArrow());
+        </asymptote>
+      </image>
     </figure>
     <example>
       <statement>
@@ -149,13 +222,45 @@
     </example>
     <figure xml:id="figure-parametric-curve5">
       <caption>The archimedian spiral</caption>
-      <image width="100%" source="images/figure14" />
+      <image xml:id="figure14" width="90%"> 
+        <asymptote>
+          size(7cm,7cm);
+          import graph;
+
+          xlimits(-17,15);
+          ylimits(-18,14);
+
+          xaxis("$x$");
+          yaxis("$y$");
+
+          real x(real t) {return t*cos(t);}
+          real y(real t) {return t*sin(t);}
+
+          draw(graph(x,y,0,18), MidArrow());
+        </asymptote>
+      </image>
     </figure>
     <figure xml:id="figure-parametric-curve6">
       <caption>
           The curve <m>\gamma(t) = (t \cos t, t \sin t, t)</m>
       </caption>
-      <image width="100%" source="images/figure15" />
+      <image xml:id="figure15" width="90%">
+        <asymptote>
+          size(12cm,7cm,IgnoreAspect);
+          import graph3;
+          currentprojection=orthographic(2,2,1);
+
+          limits((-20,-20,0),(20,20,20));
+
+          axes3("$x$", "$y$", "$z$", Arrow3);
+
+          real x(real t) {return t*cos(t);}
+          real y(real t) {return t*sin(t);}
+          real z(real t) {return t;}
+
+          draw(graph(x,y,z,0,20));
+        </asymptote>
+      </image>
     </figure>
     <example>
       <statement>

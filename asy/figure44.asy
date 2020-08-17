@@ -5,19 +5,13 @@ currentprojection=orthographic(-1,0.6,0.3);
 
 real f(pair z) {return cos(z.x+z.y)+1/2;}
 
-// The axes
 limits((-5,-4.9,-2),(5,5,2));
 
 xaxis3("$x$",Bounds(Both,Value),OutTicks(Step=2));
 yaxis3("$y$",Bounds(Both,Value),OutTicks(Step=2));
 
-// The surface
 surface s=surface(f,(-5,-5),(5,5),100,Spline);
 
 pen[] pens=mean(palette(s.map(zpart),Gradient(green,blue)));
 
-// Draw the surface
 draw(s,pens);
-
-
-
