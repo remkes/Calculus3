@@ -21,7 +21,7 @@
         <m>0\lt d\lt R</m>. Let <m>M \in \RR_{> 0}</m> such that on
         the interval <m>(\alpha-d, \alpha+d)</m> we have
         <me>
-          |f^{n+1}(x)| \leq M
+          |f^{k+1}(x)| \leq M
         </me>.
       </p>
       <p>
@@ -36,7 +36,7 @@
         Under all these assumptions, the error satisfies an
         inequality.
         <me>
-          |R_n(x)| \leq \frac{M}{(n+1)!} |x-a|^{n+1}
+          |R_k(x)| \leq \frac{M}{(k+1)!} |x-\alpha|^{k+1}
         </me>
       </p>
     </statement>
@@ -82,7 +82,7 @@
         <m>n</m> and the error bound:
         <me>
           \begin{array}{*4{>{\displaystyle}l}} 
-            n=5 \amp |R_6(x)| \leq \frac{12500}{9} \amp n=10 \amp
+            n=5 \amp |R_5(x)| \leq \frac{12500}{9} \amp n=10 \amp
               |R_{10}(x)| \leq \frac{15625000}{6237} \\
             n=15 \amp |R_{15}(x)| \leq 477 \amp n=18 \amp |R_{18}(x)|
               \leq 82.3 \\
@@ -109,14 +109,14 @@
         how accurate various orders are on this interval.
         <md>
           <mrow>
-            n=5 \amp |R_6(x)| \leq 1.39 \times 10^{-9}
+            \amp n=5 \amp \amp |R_5(x)| \leq 1.39 \times 10^{-9}
           </mrow>
           <mrow>
-            n=10 \amp |R_{10}(x)| \leq 2.51 \times
+            \amp n=10 \amp \amp |R_{10}(x)| \leq 2.51 \times
             10^{-19}
           </mrow>
           <mrow>
-            n=15 \amp |R_{15}(x)| \leq 4.78 \times
+            \amp n=15 \amp \amp |R_{15}(x)| \leq 4.78 \times
             10^{-30}
           </mrow>
         </md>
