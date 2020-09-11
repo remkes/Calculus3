@@ -6,9 +6,9 @@
     <p>
       The first two chapters of these notes, covering Infinite Series
       and Taylor Series, cover the same as the final two chapters of
-      the Calculus II notes. Much of what we cover is review and most
-      of the these notes are identical to the Calculus II notes, but
-      we will find a new focus on Taylor series and new material on
+      the Calculus II notes. Much of what we cover is review and parts
+      of the text are taken from the Calculus II notes, but
+      there will be  a new focus on Taylor series and new material on
       approximation and error analysis.
     </p>
     <p>
@@ -338,7 +338,7 @@
       series and the limits of the terms. For an infinite series, the
       fact that the terms tend to zero is <em>necessary</em> for
       convergence but is <em>not sufficient</em>. It is a very common
-      temptation to assume the fact that the terms tend to zer is
+      temptation to assume the fact that the terms tend to zero is
       sufficient; be careful not to fall into this trap.
     </p>
     <example>

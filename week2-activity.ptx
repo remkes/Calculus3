@@ -518,49 +518,49 @@
           first few derivatives of the function.
           <md>
             <mrow>
-              f(x) = 
+              f(x) = \ln x 
             </mrow>
             <mrow>
-              f^{\prime} (x) = 
+              f^{\prime} (x) = \frac{1}{x} 
             </mrow>
             <mrow>
-              f^{\prime \prime} (x) = 
+              f^{\prime \prime} (x) = \frac{-1}{x^2} 
             </mrow>
             <mrow>
-              f^{\prime \prime \prime} (x) = 
+              f^{\prime \prime \prime} (x) = \frac{2}{x^3}
             </mrow>
             <mrow>
-              f^{(4)} (x) = 
+              f^{(4)} (x) = \frac{-3!}{x^4}
             </mrow>
             <mrow>
-              f^{(5)} (x) = 
+              f^{(5)} (x) = \frac{4!}{x^5}
             </mrow>
           </md>
           Then we evaluate at the centre point.
           <md>
             <mrow>
-              f() = 
+              f(3) = \ln 3 
             </mrow>
             <mrow>
-              f^{\prime} () = 
+              f^{\prime} (3) = \frac{1}{3}
             </mrow>
             <mrow>
-              f^{\prime \prime} () = 
+              f^{\prime \prime} (3) = \frac{-1}{3^2}
             </mrow>
             <mrow>
-              f^{\prime \prime \prime} () = 
+              f^{\prime \prime \prime} (3) = \frac{2}{3^3}
             </mrow>
             <mrow>
-              f^{(4)} () = 
+              f^{(4)} (3) = \frac{-3!}{3^4} 
             </mrow>
             <mrow>
-              f^{(5)} () = 
+              f^{(5)} (3) = \frac{4!}{3^5}
             </mrow>
           </md>
           We try to set a pattern for these derivatives evaluated at
           the centre point. 
           <me>
-            f^{(n)} () = 
+            f^{(n)} (3) = \frac{(-1)^{n-1}(n-1)!}{3^n}
           </me>
           Finally, we put this into the form of a taylor series. Here
           is the general form.
@@ -571,8 +571,9 @@
           We put in the centre points and the pattern of our
           derivatives to determine the taylor series. 
           <me>
-            f(x) = \sum_{n=0}^\infty \frac{}{n!}
-            (x-)^n
+            ln x = \sum_{n=0}^\infty \frac{(-1)^{n-1}(n-1)!}{n!}
+            (x-3)^n = \sum_{n=0}^\infty \frac{(-1)^{n-1}}{n}
+            (x-3)^n
           </me>
         </p>
       </solution>
