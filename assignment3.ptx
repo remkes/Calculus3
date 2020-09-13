@@ -1,0 +1,86 @@
+<!--
+  This assignment was used for the Fall 2020 term.
+-->
+<section xml:id="section-assignment3">
+  <title>Assignment 3</title>
+  <p><ol>
+    <li>
+      <p>
+        Let <m>$t \in [0, \infty)</m>. For each of the following
+        parametric curves in <m>\RR^2</m> (24)
+        <ul>
+          <li><p>
+            Find <m>\gamma(0)</m>.
+          </p></li>
+          <li><p>
+            Determine the direction of movement at <m>\gamma(0)</m>.
+          </p></li>
+          <li><p>
+            Determine the length of the curve on <m>t \in [0,4]</m>.
+          </p></li>
+          <li><p>
+            Determine the behaviour of the curves as <m>t \rightarrow
+            \infty</m>. 
+          </p></li>
+        </ul>
+        <ol>
+          <li><p>
+            <m>\gamma(t) = (x(t), y(t)) = (\cos 6\pi t, \sin 6\pi
+            t)</m>. (Cartesian Coordinates).
+          </p></li>
+          <li><p>
+            <m>\gamma(t) = (x(t), y(t)) = (4, \frac{1}{(t+1)^2})</m>.
+            (Cartesian Coordinates). 
+          </p></li>
+          <li><p>
+            <m>\gamma(t) = (r(t), \theta(t)) = (t+1,t)</m>. (Polar
+            Coordinates).
+          </p></li>
+        </ol>
+      </p>
+    </li>
+    <li>
+      <p>
+        For each of the following parametric curves in <m>\RR^3</m>
+        (24)
+        <ul>
+          <li><p>
+            Find <m>\gamma(1)</m>.
+          </p></li>
+          <li><p>
+            Determine the direction of movement at <m>\gamma(1)</m>.
+          </p></li>
+          <li><p>
+            Determine the intersection of the curve with the unit
+            sphere.
+          </p></li>
+          <li><p>
+            Determine the intersection of the curve the the cube with
+            vertices <m>(\pm 1, \pm 1, \pm 1)</m>. 
+          </p></li>
+        </ul>
+        <ol>
+          <li><p>
+            <m>\gamma(t) = (x(t), y(t), z(t)) = (t, t^2, t^3) </m>
+          </p></li>
+          <li><p>
+            <m>\gamma(t) = (x(t), y(t), z(t)) = (\sin t, \cos t, 5t) </m>
+          </p></li>
+          <li><p>
+            <m>\gamma(t) = (x(t), y(t), z(t)) = (\sqrt{t^2+1}, t,
+            t^2-2)</m>
+          </p></li>
+        </ol>
+      </p>
+    </li>
+    <li>
+      <p>
+        Parametrize the following curve by arclength for <m>t > 0</m>.
+        (8)
+        <me>
+          \gamma(t) = (t^3, t^3 + t^2, t^3 -t^2)
+        </me>
+      </p>
+    </li>
+  </ol></p>
+</section>

@@ -1,0 +1,142 @@
+<!--
+  This assignment was used for the Fall 2020 term.
+-->
+<section xml:id="section-assignment4">
+  <title>Assignment 4</title>
+  <p><ol>
+    <li>
+      <p>
+        Assume that two particles have the following paths, both
+        starting at <m>t=0</m>. Prove that the two particle collides,
+        and find their speeds at the time of collision. (6)
+        <me>
+          \gamma_1(t) = (0, t^2, t^3) \hspace{3cm}
+          \gamma_2(t) = (\sin 2\pi t, 4 t, (2t-6)^6)
+        </me>
+      </p>
+    </li>
+    <li>
+      <p>
+        For the two following curves, calculate the vectors <m>T(t),
+        N(t)</m> and <m>B(t)</m> as well as the speed, curvature and
+        torsion. Use these to qualitatively descripe the motion.
+        (20)
+        <ol>
+          <li><p>
+            <m>\gamma(t) = (\sin t \cos t, \sin^2 t, 4t)</m>. 
+          </p></li>
+          <li><p>
+            <m>\gamma(t) = (e^t, e^t \sin t, e^t \cos t)</m>. 
+          </p></li>
+        </ol>
+      </p>
+    </li>
+    <li>
+      <p>
+        Consider a function <m>I(m,t,p,d)</m> which describes the
+        total amount of interest paid over the whole course of a
+        mortgage, given that <m>m</m> is the original loan in dollars,
+        <m>t</m> is the ammortization period in years, <m>p</m> is the
+        interest rate in percentage (compounded yearly) and <m>d</m>
+        is the monthly payment rate. Considering this a function of
+        four variables, answer the following questions. (8)
+        <ol>
+          <li><p>
+            What is the domain of the function. (You should impose
+            reasonable practical limits on domain, as well as
+            mathematically necessary limits).
+          </p></li>
+          <li><p>
+            What is the range of the function?
+          </p></li>
+          <li><p>
+            Does the function increase or decrease in each of the
+            variables?
+          </p></li>
+        </ol>
+      </p>
+    </li>
+    <li>
+      <p>
+        Consider a function <m>L(p,\theta,v)</m> which describe the
+        lift of an airplane, given that <m>p</m> is the air pressure,
+        <m>\theta</m> is the angle of the wing flaps, and <m>v</m> is
+        the speed of the plane. Considering this a function of three
+        variables, answer the following questions. (8)
+        <ol>
+          <li><p>
+            What is the domain of the function. (You should impose
+            reasonable practical limits on domain, as well as
+            mathematically necessary limits).
+          </p></li>
+          <li><p>
+            What is the range of the function?
+          </p></li>
+          <li><p>
+            Does the function increase or decrease in each of the
+            variables?
+          </p></li>
+        </ol>
+      </p>
+    </li>
+    <li>
+      <p>
+        What variables should a function describing the price of
+        Canadian crude oil depend on?  Make a guess at the form of
+        such a function, using at least three variables. (6) 
+      </p>
+    </li>
+    <li>
+      <p>
+        Sketch the contour maps for each of the following functions,
+        and describe the shapes of some of the level curves. (6)
+        <ol>
+          <li><p>
+            <m>f(x,y) = e^{\frac{y}{x}}</m>.
+          </p></li>
+          <li><p>
+            <m>f(x,y) = x^3 - y</m>.
+          </p></li>
+        </ol>
+      </p>
+    </li>
+    <li>
+      <p>
+        Which if the following sets are open, closed, both or neither? (7)
+        <ol>
+          <li><p>
+            The empty set.
+          </p></li>
+          <li><p>
+            <m>\{(x,y) \in \RR^2 | 0 \leq x \leq 1 \quad 2 \leq y
+            \leq 3\}</m>.
+          </p></li>
+          <li><p>
+            The unit cube in <m>\RR^3</m> including its boundary.
+          </p></li>
+          <li><p>
+            The domain of the function <m>f(x,y) = \frac{1}{x^2 +
+            y^2}</m>. 
+          </p></li>
+          <li><p>
+            The domain of the function <m>f(x,y,z) = xyz</m>. 
+          </p></li>
+          <li><p>
+            The hollow unit sphere in <m>\RR^3</m>. 
+          </p></li>
+          <li><p>
+            The set of all points that are more than <m>3</m> units
+            away from <m>(0,3,0)</m> in <m>\RR^3</m>.
+          </p></li>
+        </ol>
+      </p>
+    </li>
+  </ol></p>
+</section>
+
+
+
+
+
+
+
