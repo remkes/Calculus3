@@ -48,7 +48,7 @@
         <p>
           Test this series for convergence.
           <me>
-            \sum_{n=1}^\infty \frac{1 + 2^n + 4^n}{7^n}
+            \sum_{n=0}^\infty \frac{1 + 2^n + 4^n}{7^n}
           </me>
         </p>
       </statement>
@@ -56,12 +56,12 @@
         <p>
           We can split this up into three series by linearity.
           <me>
-            \sum_{n=1}^\infty \frac{1 + 2^n + 4^n}{7^n} = 
-            \sum_{n=1}^\infty \frac{1}{7^n} + \frac{2^n}{7^n} +
+            \sum_{n=0}^\infty \frac{1 + 2^n + 4^n}{7^n} = 
+            \sum_{n=0}^\infty \frac{1}{7^n} + \frac{2^n}{7^n} +
             \frac{4^n}{7^n} = 
-            \sum_{n=1}^\infty \left( \frac{1}{7} \right)^n + 
-            \sum_{n=1}^\infty \left( \frac{2}{7} \right)^n + 
-            \sum_{n=1}^\infty \left( \frac{4}{7} \right)^n
+            \sum_{n=0}^\infty \left( \frac{1}{7} \right)^n + 
+            \sum_{n=0}^\infty \left( \frac{2}{7} \right)^n + 
+            \sum_{n=0}^\infty \left( \frac{4}{7} \right)^n
           </me>
           All three of these are geometric series with common ratios
           less than one, so each of the three is convergent. Our
@@ -70,9 +70,9 @@
           actually calculate the value of this series. 
           <md>
             <mrow>
-              \amp \sum_{n=1}^\infty \left( \frac{1}{7} \right)^n + 
-              \sum_{n=1}^\infty \left( \frac{2}{7} \right)^n + 
-              \sum_{n=1}^\infty \left( \frac{4}{7} \right)^n 
+              \amp \sum_{n=0}^\infty \left( \frac{1}{7} \right)^n + 
+              \sum_{n=0}^\infty \left( \frac{2}{7} \right)^n + 
+              \sum_{n=0}^\infty \left( \frac{4}{7} \right)^n 
             </mrow>
             <mrow>
               \amp = \frac{1}{1 - \frac{1}{7}} + \frac{1}{1 -
@@ -171,7 +171,7 @@
         <p>
           Test this series for convergence.
           <me>
-            \sum_{n=1}^\infty \frac{(n+5!)}{n+7)!}
+            \sum_{n=1}^\infty \frac{(n+5!)}{(n+7)!}
           </me>
         </p>
       </statement>
@@ -302,7 +302,7 @@
           that <m>\frac{1}{\ln n} \lt \frac{1}{2}</m>. Then if we
           apply the exponent <m>n</m>, we get 
           <me>
-            \frac{1}{(\ln n)^2} \lt \left( \frac{1}{2} \right)^n 
+            \frac{1}{(\ln n)^n} \lt \left( \frac{1}{2} \right)^n 
           </me>
           This shows that the terms of this series are smaller than
           the terms <m>\left( \frac{1}{2} \right)^n</m>, which are the
@@ -311,6 +311,18 @@
           terms of our series and the comparison series are positive,
           since we have terms which are smaller than the terms of a
           convergent series, our series will also converge. 
+        </p>
+        <p>
+          Alternatively, the root test is quite effective here (though
+          I completely forgot about it while looking for the
+          comparison above). 
+          <me>
+            \lim_{n \rightarrow \infty} \sqrt[n]{ \left| \frac{1}{(\ln
+            n)^n} \right| } = \lim_{n \rightarrow \infty} \frac{1}{\ln
+            n} = 0 
+          </me>
+          Since this limits exists and is less than <m>1</m>, the root
+          test tells us that the series converges.
         </p>
       </solution>
     </activity>
