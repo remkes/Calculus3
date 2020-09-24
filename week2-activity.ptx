@@ -281,7 +281,7 @@
         <p>
           Determine the radius of convergence of this power series.
           <me>
-            \sum_{n=0}^\infty \frac{(x-3)^n}{n + \cos (pi n)} 
+            \sum_{n=0}^\infty \frac{(x-3)^n}{n + \cos (\pi n)} 
           </me>
         </p>
       </statement>
@@ -296,7 +296,7 @@
             <mrow>
               \amp = \lim_{n \rightarrow \infty} \left|
               \frac{\frac{1}{n+\cos (\pi
-              n)}{\frac{1}{n+1+\cos(\pi(n+1))}} \right| 
+              n)}}{\frac{1}{n+1+\cos(\pi(n+1))}} \right| 
             </mrow>
             <mrow>
               \amp = \lim_{n \rightarrow \infty} 
