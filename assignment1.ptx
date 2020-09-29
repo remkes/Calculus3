@@ -93,7 +93,7 @@
           \sum_{n=0}^\infty b_n x^n 
         </mrow></md>
         If these two series have radii of convergence <m>R_1</m> and
-        <m>R_2</m> respecitvely, give reasons why the sum and the
+        <m>R_2</m> respectively, give reasons why the sum and the
         product of the two series should have radius of convergence
         equal to the minimum of <m>R_1</m> and <m>R_2</m>. Give an
         example where the sum or product has a radius of convergence
@@ -106,11 +106,11 @@
         <em>uniformly</em> on <m>\RR</m> to a function <m>f(x)</m>
         if for all <m>\epsilon > 0</m>, there exists <m>N \in
         \NN</m> such that for all <m>x \in \RR</m> if <m>n \lt
-        N</m> then (6) <m> |f(x) - \sum_{k=0}^n c_n x^n | \lt
+        N</m> then <m> |f(x) - \sum_{k=0}^n c_n x^n | \lt
         \epsilon </m> Prove that the standard Taylor series for
-        <m>e^x</m> centered at <m>0</m> does \emph{not} converge
+        <m>e^x</m> centered at <m>0</m> does <em>not</em> converge
         uniformly. (Consider a lower bound on the error as <m>x</m>
-        gets large). 
+        gets large). (6)
       </p>
     </li>
   </ol></p>

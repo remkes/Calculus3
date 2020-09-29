@@ -6,6 +6,104 @@
   <p><ol>
     <li>
       <p>
+        Describe these lines as offset spans. Everything is in
+        <m>\RR^3</m>. 
+        <ol>
+          <li>
+            The line through <m>(1,0,2)</m> with direction
+            <m>(-1,-1,-2)</m>.
+          </li>
+          <li>
+            The line perpendicular to the plane <m>x - y = 0</m> and
+            through the point <m>(1,0,5)</m>.
+          </li>
+          <li>
+            The line which is the intersection of th planes <m>-2x + y
+            + z = 0</m> and <m>3x - 3y + z = 0</m>.
+          </li>
+        </ol>
+      </p>
+    </li>
+    <li>
+      <p>
+        Calculate equations for these planes. (12)
+        <ol>
+          <li>
+            The plane parallel to <m>x + y + z = 0</m> but three units
+            above (meaning that we move from the plane by increasing
+            the <m>z</m> coordinate). 
+          </li>
+          <li>
+            The plane with normal <m>(1,0,1)</m> through the point
+            <m>(3,0,3)</m>.
+          </li>
+          <li>
+            The plane through the points <m>(1,0,0</m>, <m>(0,1,0)</m>
+            and <m>(0,0,1)</m>
+          </li>
+        </ol>
+      </p>
+    </li>
+    <li>
+      <p>
+        Calculate the intersection of these objects.
+        <ol>
+          <li>
+            The plane <m>x + y - z = 0</m> and the plane <m>x + y +
+            z=4</m>. (Describe the line as an offset span). 
+          </li>
+          <li>
+            The line <m>(1,0,1) + \Span \{(-1,0,2)\}</m> and the plane
+            <m>x + 4y = 0</m>.
+          </li>
+        </ol>
+      </p>
+    </li>
+    <li>
+      <p>
+        The rotation matrix by angle <m>\theta</m> (counterclockwise
+        from above) around the <m>x</m> axis in <m>\RR^3</m>
+        is
+        <me>
+          \begin{pmatrix}
+            1 \amp 0 \amp 0 \\
+            0 \amp \cos \theta \amp -\sin \theta \\
+            0 \amp \sin \theta \amp \cos \theta 
+          \end{pmatrix}
+        </me>.
+        Likewise, for rotation around the <m>y</m> axis the matrix is 
+        <me>
+          \begin{pmatrix}
+            \cos \theta \amp 0 \amp -\sin \theta \\
+            0 \amp 1 \amp 0 \\
+            \sin \theta \amp 0 \amp \cos \theta 
+          \end{pmatrix}
+        </me>
+        and for rotation around the <m>z</m> axis the matrix is
+        <me>
+          \begin{pmatrix}
+            \cos \theta \amp -\sin \theta \amp 0 \\
+            \sin \theta \amp \cos \theta \amp 0  \\
+            0 \amp 0 \amp 1 
+          \end{pmatrix}
+        </me>.
+        <ol>
+          <li>
+            Check that the rotation by a quarter turn around the
+            <m>z</m> axis does what is expected to the vectors
+            <m>(1,1,1)</m>, <m>(4,4,0)</m> and <m>(0,0,5)</m>. 
+          </li>
+          <li>
+            Show that the composition of a quarter turn around the
+            <m>x</m> and a quarter turn around the <m>y</m> axis
+            produces a rotation around the <m>z</m> axis.
+          </li>
+          <li>
+            Show that in the previous calculation, reversing the order
+            of the composition changes the direction of the <m>z</m>
+            axis rotation.
+          </li>
+        </ol>
       </p>
     </li>
   </ol></p>

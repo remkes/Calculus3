@@ -666,7 +666,7 @@
       <statement>
         <p>
           Consider the function <m>f(x) = \ln x</m> centered at
-          <m>\alpha = 5</m>.
+          <m>\alpha = 1</m>.
           <ol>
             <li>
               Inside the radius <m>\frac{1}{4} </m>, what is the error
@@ -724,7 +724,7 @@
               that applies to the whole interval.
               <me>
                 |R_{10}(x)| \leq \frac{4^{11}}{(3^{11}(11)}
-                \frac{1}{4^{11}} = \frac{1}{(3^11){11}} =
+                \frac{1}{4^{11}} = \frac{1}{(3^{11}){11}} =
                 \frac{1}{1948617} \doteq 0.000000513
               </me>
               The error of the 10th order approximation is less than
