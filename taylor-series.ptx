@@ -354,7 +354,7 @@
           </me>
         </p>
         <p>
-          We look for a general patterns. There are three pieces: an
+          We look for a general pattern. There are three pieces: an
           alternating sign, a factorial multiplication growing in the
           numerator, an a power growing in the denominator. Careful
           to match the indices correctly to the first few elements of
@@ -372,6 +372,12 @@
             \ln x = \sum_{n=1}^\infty \frac{(-1)^{n-1}(n-1)!}{n!}
             (x-1)^n = \sum_{n=1}^\infty \frac{(-1)^{n-1}}{n} (x-1)^n
           </me>
+        </p>
+        <p>
+          Notice that the series starts at <m>n=1</m>. The constant
+          term here would be evaluating a logarithm at the centre
+          point, which is <m>\alpha = 1</m>. Since <m>\ln 1 = 0</m>,
+          the constant term is zero, so we start with the linear term.
         </p>
         <p>
           The radius of convergence is 1, found by ratio test.
