@@ -62,8 +62,8 @@
     <li>
       <p>
         The rotation matrix by angle <m>\theta</m> (counterclockwise
-        from above) around the <m>x</m> axis in <m>\RR^3</m>
-        is
+        if looking down the the axis from the positive end) around the
+        <m>x</m> axis in <m>\RR^3</m> is
         <me>
           \begin{pmatrix}
             1 \amp 0 \amp 0 \\
@@ -94,14 +94,16 @@
             <m>(1,1,1)</m>, <m>(4,4,0)</m> and <m>(0,0,5)</m>. 
           </li>
           <li>
-            Show that the composition of a quarter turn around the
-            <m>x</m> and a quarter turn around the <m>y</m> axis
+            Show that the composition of a half turn around the
+            <m>x</m> axis and a half turn around the <m>y</m> axis
             produces a rotation around the <m>z</m> axis.
           </li>
           <li>
-            Show that in the previous calculation, reversing the order
-            of the composition changes the direction of the <m>z</m>
-            axis rotation.
+            Do the same calculation as the previous part, but with
+            quarter turns instead of half turns. Show that if we
+            interchange the order of the composition, the resulting
+            transformation changes as well (giving an example where
+            matrix multiplication is non-commutative).  
           </li>
         </ol>
       </p>
