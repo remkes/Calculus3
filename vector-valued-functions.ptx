@@ -83,42 +83,16 @@
       </p>
     </statement>
   </definition>
-  <definition>
-    <statement>
-      <p>
-        Similarly, the integral of <m>f</m> is defined componentwise.
-        <me>
-          \int f(t) dt = \left( \int f_1(t) dt, \int f_2(t) dt,
-          \ldots, \int f_n(t) dt \right)
-        </me>
-      </p>
-      <p>
-        We state this explicitly, for <m>f(x) = (x(t),y(t))</m> with
-        values in <m>\RR^2</m>.
-        <me>
-          \int f(t) dt = \left( \int x(t) dt, \int y(t) dt \right)
-        </me>
-      </p>
-      <p>
-        Likewise, we give the explicit form for <m>f(x) =
-        (x(t),y(t),z(t))</m> with values in <m>\RR^3</m>.
-        <me>
-          \int f(t) dt = \left( \int x(t) dt, \int y(t) dt, \int z(t)
-          dt \right)
-        </me>
-      </p>
-    </statement>
-  </definition>
   <p>
-    The result of a derivative or integral of a vector valued function
+    The result of a derivative of a vector valued function
     is still a vector. This may seem odd from the viewpoint of first
-    year calculus, where derivatives and integrals measured
-    quantifiable geometric properties, such as slopes of tangent lines
-    and areas under curves. ince the answers here are vectors
+    year calculus, where derivatives measured
+    quantifiable geometric properties, such as slopes of tangent
+    lines.  Since the answers here are vectors
     instead of scalars, we will eventually reconsider those
     interpretations. A major challenge in extending calculus to
     several variables is the need to re-adjust our interpretation and
-    intuition concerning derivatives and integrals. The derivative is
-    no longer the slope of a tangent line.
+    intuition concerning derivatives (and eventually integrals). The
+    derivative is no longer the slope of a tangent line.
   </p>
 </section>

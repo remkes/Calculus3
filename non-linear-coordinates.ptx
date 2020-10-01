@@ -60,16 +60,25 @@
       coordinates. To that end, we need to describe <m>x</m> and
       <m>y</m> in terms of <m>r</m> and <m>\theta</m>, and vice-versa.
       The relationships are just trigonometry.
-      <me>
-        x = r \cos \theta y = r \sin \theta
-      </me>
+      <md>
+        <mrow>
+          x = r \cos \theta 
+        </mrow>
+        <mrow>
+          y = r \sin \theta
+        </mrow>
+      </md>
     </p>
     <p>
       The reverse direction is also trigonometry.
-      <me>
-        r = \sqrt{x^2 + y^2} \tan \theta = \frac{y}{x}
-        \implies \theta = \arctan \frac{y}{x}
-      </me>
+      <md>
+        <mrow>
+          r = \sqrt{x^2 + y^2} \tan 
+        </mrow>
+        <mrow>
+          \theta = \frac{y}{x} \implies \theta = \arctan \frac{y}{x}
+        </mrow>
+      </md>
     </p>
     <p>
       If <m>x</m> is zero, then <m>\tan \theta</m> is undefined, but
@@ -225,6 +234,19 @@
       cylinder.
     </p>
     <p>
+      There are a few other simple loci in cylindrical coordinates.
+      <m>\theta = c</m> is a vertical half plane of all point with a
+      fixed angle but arbitrary distance out from the origin and
+      arbitrary height. <m>z = c</m> is a horizontal plane, as it
+      would be in cartesian coordinates (since the <m>z</m> coordinate
+      is unchanges). The locus <m>r = |z|</m> is a double cone;
+      cylindrical coordinates is often the preferred coordinate system
+      for cones as well. 
+    </p>
+  </subsection>
+  <subsection xml:id="subsection-spherical-coordinates">
+    <title>Spherical Coordinates</title>
+    <p>
       Spherical coordinates uses a sphere the same way that polar
       coordinates uses a circle. There is a radius term <m>r</m>,
       which measure the distance from a point to the origin in
@@ -269,7 +291,10 @@
     </p>
     <p>
       The equation <m>r=c</m> in spherical coordinates gives a
-      sphere.
+      sphere. <m>\theta = c</m> is a half plane as it was with
+      cylindrical coordinates. <m>\phi = c</m> is a single cone,
+      upward or downward depending on whether <m>c</m> is a colatitude
+      below or above the equator. 
     </p>
   </subsection>
 </section>
