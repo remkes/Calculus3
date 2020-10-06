@@ -139,19 +139,20 @@
           check their absolute convergence.
           <md>
             <mrow>
-              \sum_{n=1}^\infty \frac{(-1)^n}{n^6} \amp  
-              \text{ absolutely convergent by asymptotic comparison to
-              } \frac{1}{n^6}
+              \amp \sum_{n=1}^\infty \frac{(-1)^n}{n^6} \amp \amp
+              \text{ absolutely convergent by asymptotic comparison to } 
+              \frac{1}{n^6}
             </mrow>
             <mrow>
-              \sum_{n=1}^\infty \frac{(-1)^n \arctan n}{n^2} \amp
-              \text{ absolutely convergent by asymptotic
-              comparison to } \frac{1}{n^2}
+              \amp \sum_{n=1}^\infty \frac{(-1)^n \arctan n}{n^2} \amp
+              \amp 
+              \text{ absolutely convergent by asymptotic comparison to } 
+              \frac{1}{n^2}
             </mrow>
             <mrow>
-              \sum_{n=2}^\infty \frac{(-1)^n}{\ln n} \amp
-              \text{ conditionally convergent by
-              asymptotic comparison to } \frac{1}{\ln n}
+              \amp \sum_{n=2}^\infty \frac{(-1)^n}{\ln n} \amp \amp 
+              \text{ conditionally convergent by asymptotic comparison to } 
+              \frac{1}{\ln n}
             </mrow>
           </md>
         </p>
@@ -476,14 +477,18 @@
         </me>
         <p>
           We use the ratio test:
-          <me>
-            \lim_{k \rightarrow \infty} \left| \frac{a_{k+1}}{a_k}
-            \right| = \lim_{k \rightarrow \infty} \frac{(k+1)^5
-            e^k}{k^5 e^{k+1}} = \lim_{k \rightarrow \infty}
-            \frac{1}{e} \left( \frac{k+1}{k} \right)^5 = \lim_{k
-            \rightarrow \infty} \frac{1}{e} \left( 1 + \frac{1}{k}
-            \right)^5 = \frac{1}{e} \lt  1
-          </me>
+          <md>
+            <mrow>
+              \lim_{k \rightarrow \infty} \left| \frac{a_{k+1}}{a_k}
+              \right| \amp = \lim_{k \rightarrow \infty} \frac{(k+1)^5
+              e^k}{k^5 e^{k+1}} = \lim_{k \rightarrow \infty}
+              \frac{1}{e} \left( \frac{k+1}{k} \right)^5 
+            </mrow>
+            <mrow>
+              \amp = \lim_{k \rightarrow \infty} \frac{1}{e} \left( 1
+              + \frac{1}{k} \right)^5 = \frac{1}{e} \lt  1 
+            </mrow>
+          </md>
         </p>
         <p>
           By the ratio test, this is convergent.
@@ -499,9 +504,12 @@
           We use the integral test, with <m>u = ln x</m>.
           <md>
             <mrow>
-              \int_1^\infty \frac{\ln x^2}{x^2} dx \amp  = 2
+              \int_1^\infty \frac{\ln x^2}{x^2} dx \amp = 2
               \int_1^\infty \frac{\ln x}{x^2} dx = 2 \int_0^\infty u
-              e^{-u} du = \left. - ue^{-u} \right|_1^\infty + 2
+              e^{-u} du 
+            </mrow>
+            <mrow>
+              \amp = \left. - ue^{-u} \right|_1^\infty + 2
               \int_0^\infty e^{-u} = 0 - \left. e^{-u}
               \right|_1^\infty = 1 \leq \infty
             </mrow>
@@ -520,14 +528,19 @@
         <p>
           The presence of a factorial means that ratio test is
           probably the best.
-          <me>
-            \lim_{n \rightarrow \infty} \left| \frac{a_{n+1}}{a_n}
-            \right| = \lim_{n \rightarrow \infty}
-            \frac{\frac{((n+1)!)^2}{(2(n+1)+4)!}}{\frac{(n!)^2}{(2(n)+4)!}}
-            = \lim_{n \rightarrow \infty} \frac{(n+1)^2}{(2n+5)(2n+6}
-            = \lim_{n \rightarrow \infty} \frac{n^2+2n+1}{4n^2+ 22n +
-            30} = \frac{1}{4} \lt  1
-          </me>
+          <md>
+            <mrow>
+              \lim_{n \rightarrow \infty} \left| \frac{a_{n+1}}{a_n}
+              \right| \amp = \lim_{n \rightarrow \infty}
+              \frac{\frac{((n + 1)!)^2}{(2(n + 1) +
+              4)!}}{\frac{(n!)^2}{(2(n) + 4)!}} = \lim_{n \rightarrow
+              \infty} \frac{(n+1)^2}{(2n+5)(2n+6}
+            </mrow>
+            <mrow>
+              \amp = \lim_{n \rightarrow \infty} \frac{n^2+2n+1}{4n^2+
+              22n + 30} = \frac{1}{4} \lt  1
+            </mrow>
+          </md>
         </p>
         <p>
           The limit is less than 1, so the series is convergent.
@@ -585,10 +598,13 @@
             <mrow>
               \amp  = \left. \frac{3x^{\frac{2}{3}}}{2} \ln x
               \right|_1^\infty - \int_1^\infty
-              \frac{3x^{\frac{2}{3}}}{2} \frac{1}{x} dx = \lim_{a
-              \rightarrow \infty} \left[ \frac{3a^{\frac{2}{3}} \ln
-              a}{2} - \frac{3}{2} 1^{\frac{3}{2}} \ln 1 - \frac{3}{2}
-              \int_1^a x^{-\frac{1}{3}} dx \right]
+              \frac{3x^{\frac{2}{3}}}{2} \frac{1}{x} dx 
+            </mrow>
+            <mrow>
+              \amp = \lim_{a \rightarrow \infty} \left[
+              \frac{3a^{\frac{2}{3}} \ln a}{2} - \frac{3}{2}
+              1^{\frac{3}{2}} \ln 1 - \frac{3}{2} \int_1^a
+              x^{-\frac{1}{3}} dx \right]
             </mrow>
             <mrow>
               \amp  = \lim_{a \rightarrow \infty} \frac{3}{2} \left[

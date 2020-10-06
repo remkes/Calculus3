@@ -38,54 +38,6 @@
   </subsection>
   <subsection xml:id="parametric-curves-exmaples">
     <title>Parametric Curves</title>
-    <figure xml:id="figure-parametric-curve1">
-      <caption>The curve <m>\gamma(t) = (\cos t, \sin t)</m></caption>
-      <image xml:id="figure10" width="90%">
-        <asymptote>
-          size(10cm,6cm);
-          import graph;
-
-          xlimits(-1.2,2);
-          ylimits(-1.2,1.2);
-
-          xaxis("$x$");
-          yaxis("$y$");
-
-          real x(real t) {return cos(t);}
-          real y(real t) {return sin(t);}
-
-          label("$\gamma(0) = \gamma(2\pi)$",(1,0),NE);
-
-          draw(graph(x,y,0,2*pi), MidArrow());
-
-          dot((1,0));
-        </asymptote>
-      </image>
-    </figure>
-    <figure xml:id="figure-parametric-curve2">
-      <caption>The curve <m>\gamma(t) = \left( \frac{1}{t} , t
-      \right)</m></caption>
-      <image xml:id="figure11" width="90%">
-        <asymptote>
-          size(12cm,7cm,IgnoreAspect);
-          import graph;
-
-          xaxis("$x$");
-          yaxis("$y$");
-
-          real x(real t) {return 1/t;}
-          real y(real t) {return t;}
-
-          label("$\gamma\left(\frac{1}{5}\right)$",(5,0.2),NE);
-          label("$\gamma(5)$",(0.2,5),E);
-
-          draw(graph(x,y,0.2,5), MidArrow());
-
-          dot((5,0.2));
-          dot((0.2,5));
-        </asymptote>
-      </image>
-    </figure>
     <definition>
       <statement>
         <p>
@@ -121,6 +73,30 @@
       these graphs; instead, the variable <m>t</m> is the parameter
       of movement along the curve.
     </p>
+    <figure xml:id="figure-parametric-curve1">
+      <caption>The curve <m>\gamma(t) = (\cos t, \sin t)</m></caption>
+      <image xml:id="figure10" width="90%">
+        <asymptote>
+          size(10cm,6cm);
+          import graph;
+
+          xlimits(-1.2,2);
+          ylimits(-1.2,1.2);
+
+          xaxis("$x$");
+          yaxis("$y$");
+
+          real x(real t) {return cos(t);}
+          real y(real t) {return sin(t);}
+
+          label("$\gamma(0) = \gamma(2\pi)$",(1,0),NE);
+
+          draw(graph(x,y,0,2*pi), MidArrow());
+
+          dot((1,0));
+        </asymptote>
+      </image>
+    </figure>
     <example>
       <statement>
         <p>
@@ -136,6 +112,47 @@
       retrace over the circle. It's good to observe that parametric
       curves can self-intersect and trace over themselves many
       times.
+    </p>
+    <figure xml:id="figure-parametric-curve2">
+      <caption>The curve <m>\gamma(t) = \left( \frac{1}{t} , t
+      \right)</m></caption>
+      <image xml:id="figure11" width="90%">
+        <asymptote>
+          size(12cm,7cm,IgnoreAspect);
+          import graph;
+
+          xaxis("$x$");
+          yaxis("$y$");
+
+          real x(real t) {return 1/t;}
+          real y(real t) {return t;}
+
+          label("$\gamma\left(\frac{1}{5}\right)$",(5,0.2),NE);
+          label("$\gamma(5)$",(0.2,5),E);
+
+          draw(graph(x,y,0.2,5), MidArrow());
+
+          dot((5,0.2));
+          dot((0.2,5));
+        </asymptote>
+      </image>
+    </figure>
+    <example>
+      <statement>
+        <p>
+          The curve <m>\gamma(t) = \left(\frac{1}{t}, t \right)</m>
+          on the domain <m>t \in \left[\frac{1}{5},5 \right]</m>
+          traces part of the graph of <m>f(x) = \frac{1}{x}</m>, as
+          in <xref ref="figure-parametric-curve2" />.
+        </p>
+      </statement>
+    </example>
+    <p>
+      Notice that this parametric curve is the graph of a
+        function, specifically the function <m>f(x) =
+      \frac{1}{x}</m> between <m>x = \frac{1}{5}</m> and
+      <m>x=5</m>. Parametric curves where one of the components
+      is just <m>t</m> can be interpreted as graphs of functions.
     </p>
     <figure xml:id="figure-parametric-curve3">
       <caption>The curve <m>\gamma(t) = (\cos 2t, \sin t)</m></caption>
@@ -159,6 +176,16 @@
         </asymptote>
       </image>
     </figure>
+    <example>
+      <statement>
+        <p>
+          The curve <m>\gamma(t) = (\cos 2t, \sin t)</m> on the
+          domain <m>t \in [0, 2\pi]</m> oscilates faster in the
+          <m>x</m> direction than in the <m>y</m> direction, as in
+          <xref ref="figure-parametric-curve3" />.
+        </p>
+      </statement>
+    </example>
     <figure xml:id="figure-parametric-curve4">
       <caption>The logarithmic spiral</caption>
       <image xml:id="figure13" width="90%">
@@ -179,33 +206,6 @@
         </asymptote>
       </image>
     </figure>
-    <example>
-      <statement>
-        <p>
-          The curve <m>\gamma(t) = \left(\frac{1}{t}, t \right)</m>
-          on the domain <m>t \in \left[\frac{1}{5},5 \right]</m>
-          traces part of the graph of <m>f(x) = \frac{1}{x}</m>, as
-          in <xref ref="figure-parametric-curve2" />.
-        </p>
-      </statement>
-    </example>
-    <p>
-      Notice that this parametric curve is the graph of a
-        function, specifically the function <m>f(x) =
-      \frac{1}{x}</m> between <m>x = \frac{1}{5}</m> and
-      <m>x=5</m>. Parametric curves where one of the components
-      is just <m>t</m> can be interpreted as graphs of functions.
-    </p>
-    <example>
-      <statement>
-        <p>
-          The curve <m>\gamma(t) = (\cos 2t, \sin t)</m> on the
-          domain <m>t \in [0, 2\pi]</m> oscilates faster in the
-          <m>x</m> direction than in the <m>y</m> direction, as in
-          <xref ref="figure-parametric-curve3" />.
-        </p>
-      </statement>
-    </example>
     <example>
       <statement>
         <p>
@@ -240,6 +240,15 @@
         </asymptote>
       </image>
     </figure>
+    <example>
+      <statement>
+        <p>
+          The curve <m>\gamma(t) = (t \cos t, t \sin t)</m> is the
+          archimedian spiral, as in <xref
+          ref="figure-parametric-curve5" />. 
+        </p>
+      </statement>
+    </example>
     <figure xml:id="figure-parametric-curve6">
       <caption>
           The curve <m>\gamma(t) = (t \cos t, t \sin t, t)</m>
@@ -262,15 +271,6 @@
         </asymptote>
       </image>
     </figure>
-    <example>
-      <statement>
-        <p>
-          The curve <m>\gamma(t) = (t \cos t, t \sin t)</m> is the
-          archimedian spiral, as in <xref
-          ref="figure-parametric-curve5" />. 
-        </p>
-      </statement>
-    </example>
     <example>
     <statement>
       <p>

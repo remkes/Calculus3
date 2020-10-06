@@ -305,6 +305,399 @@
       </statement>
       <solution>
         <p>
+          <ol>
+            <li>
+              <m>t = 3s</m>
+              <p>
+                The movement will be consistently three times faster.
+                For any value of <m>s</m>, the position based on the
+                original parameter would be three times further along
+                the curve, so we move through the curve three times as
+                fast. 
+              </p>
+            </li>
+            <li>
+              <m>t = \frac{s}{4}</m>
+              <p>
+                The movement will be one quarter th eoriginal speed.
+                For any value of <m>s</m>, the position based on the
+                original parameter would be only one quarter as far
+                along the curve, so we move through the curve at one
+                quarter the original speed.
+              </p>
+            </li>
+            <li>
+              <m>t = s + 7</m>
+              <p>
+                The speed doesn't change. However, at <m>s=0</m> (the
+                starting time for the new variable), we are already
+                along the curve at <m>t=7</m>.
+              </p>
+            </li>
+            <li>
+              <m>t = s - 10</m>
+              <p>
+                The speed doesn't change. However, at <m>s=0</m> (the
+                starting time for the new variable), we have moved
+                back along the curve to <m>t = -10</m>. If <m>t</m>
+                doesn't take negative values, then we would have to
+                start the new variable at <m>s = 10</m>.
+              </p>
+            </li>
+            <li>
+              <m>t = s^2</m>
+              <p>
+                By squaring the new variable, we will be going faster
+                and faster compared with the old variable. Moving
+                linearly in <m>s</m> is moving quadratically in
+                <m>t</m>, getting faster and faster.
+              </p>
+            </li>
+            <li>
+              <m>t = \sqrt{s}</m>
+              <p>
+                By taking the square rook we will be going slower and
+                slower compared with the old variable. Moving linearly
+                in <m>s</m> is moving only <m>\sqrt{s}</m> in
+                <m>t</m>, getting slower and slower.
+              </p>
+            </li>
+            <li>
+              <m>t = e^s</m>
+              <p>
+                As we move on in the new variable, the speed will
+                accelerate more and more compared with the old
+                variable. This is like the quadratic change, but more
+                dramatic, since the exponential function grows faster.
+              </p>
+            </li>
+            <li>
+              <m>t = -s</m>
+              <p>
+                The speed will not change, but the direction of
+                movement along the curve will be reversed. 
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </activity>
+  </subsection>
+  <subsection xml:id="problems-arclength">
+    <title>Arclength</title>
+    <activity>
+      <statement>
+        <p>
+          Calculate the arclength of this parametric curve.
+          <md>
+            <mrow>
+              \amp \gamma(t) = (t, 3t-6) \amp \amp t \in [0,7]
+            </mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We calculate the tangent.
+          <me>
+            \gamma^\prime(t) 
+          </me>
+          We calculate the length of the tangent.
+          <me>
+            \left| \gamma^\prime(t) \right|
+          </me>
+          Then we integrate the length of the tangent over the
+          parameter domain.
+          <md>
+            <mrow>
+              \int_a^b \left| \gamma^\prime(t) \right| \amp = 
+            </mrow>
+          </md>
+          The result of this integral is the arclength of the
+          function. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the arclength of this parametric curve.
+          <md>
+            <mrow>
+              \amp \gamma(t) = (t^2, 1-t^2) \amp \amp t \in [0,4]
+            </mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We calculate the tangent.
+          <me>
+            \gamma^\prime(t) 
+          </me>
+          We calculate the length of the tangent.
+          <me>
+            \left| \gamma^\prime(t) \right|
+          </me>
+          Then we integrate the length of the tangent over the
+          parameter domain.
+          <md>
+            <mrow>
+              \int_a^b \left| \gamma^\prime(t) \right| \amp = 
+            </mrow>
+          </md>
+          The result of this integral is the arclength of the
+          function. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the arclength of this parametric curve.
+          <md>
+            <mrow>
+              \amp \gamma(t) = (4\cos(t^2),4\sin(t^2)) \amp \amp t \in
+              [0,\sqrt{2\pi}]
+            </mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We calculate the tangent.
+          <me>
+            \gamma^\prime(t) 
+          </me>
+          We calculate the length of the tangent.
+          <me>
+            \left| \gamma^\prime(t) \right|
+          </me>
+          Then we integrate the length of the tangent over the
+          parameter domain.
+          <md>
+            <mrow>
+              \int_a^b \left| \gamma^\prime(t) \right| \amp = 
+            </mrow>
+          </md>
+          The result of this integral is the arclength of the
+          function. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          This is a multi-part question on a historically important
+          arclength calculation. (Some historical context is given
+          and the end of the solution). 
+          <ol>
+            <li>
+              Find a parametric curve which descrives an ellipse with
+              semimajor axis <m>a</m> and semiminor axis <m>b</m>.
+              (Its easiest to orient the larger ellipse axis along the
+              <m>x</m> axis.
+            </li>
+            <li>
+              Set up the arclength calculation to find the
+              circumference of the ellipse.
+            </li>
+            <li>
+              Factor <m>a</m> out of the square root and subtract a
+              cosine term to that you can simplify using <m>(\sin^2 t
+              + \cos^2 t = 1)</m>.
+            </li>
+            <li>
+              We can define the eccentricity of the ellipse as <m>e =
+              \sqrt{1 - \frac{b^2}{a^2}}</m>. Manipulate the integral
+              so that <m>e</m> shows up under the square root, but
+              <m>a</m> amd <m>b</m> are no longer under the square
+              root.
+            </li>
+            <li>
+               Calculate the integral in the special case <m>e=0</m>.
+               (Since this happens only when <m>a=b</m>, this is a
+               circle with radius <m>a</m>; you should recover the
+               familiar circumference of a circle).
+            </li>
+            <li>
+              Try to solve the integral for general eccentricity <m>0
+              \lt e \lt 1</m>. Comment on the problems and barriers to
+              integration.
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+        </p>
+      </solution>
+    </activity>
+  </subsection>
+  <subsection xml:id="problems-parametrization-by-arclength">
+    <title>Parametrization by Arclength</title>
+    <activity>
+      <statement>
+        <p>
+          Parametrize this curve by arclength.
+          <md>
+            <mrow>
+              \amp \gamma(t) = (t^2 \cos t, t^2 \sin t) \amp \amp t
+              \in [0, \infty) 
+            </mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We follow the proscribed algorithm. First we calculate the
+          tangent.
+          <me>
+            \gamma^\prime(t) = 
+          </me>
+          Then we calculate the length of the tangent.
+          <me>
+            \left| \gamma^\prime(t) \right| = 
+          </me>
+          Then we set up the arclength function, which is the integral
+          of the length of the tangent. 
+          <md>
+            <mrow>
+              s(t) \amp = \int_0^t \left| \gamma^\prime(t) \right| 
+            </mrow>
+            <mrow>
+              \amp = 
+            </mrow>
+          </md>
+          Then we invert the arclength function.
+          <md>
+            <mrow>
+              s(t) \amp = 
+            </mrow>
+            <mrow>
+            </mrow>
+            <mrow>
+              t(s) \amp = 
+            </mrow>
+          </md>
+          Finally, we repalce <m>t</m> with this express to get a
+          parametrization in <m>s</m>, which is the parametrization by
+          arclength. 
+          <md>
+            <mrow>
+              \gamma(s) \amp = 
+            </mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Parametrize this curve by arclength.
+          <md>
+            <mrow>
+              \amp \gamma(t) = (\ln t, 2t^2 - 1) \amp \amp t
+              \in [1, \infty) 
+            </mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We follow the proscribed algorithm. First we calculate the
+          tangent.
+          <me>
+            \gamma^\prime(t) = 
+          </me>
+          Then we calculate the length of the tangent.
+          <me>
+            \left| \gamma^\prime(t) \right| = 
+          </me>
+          Then we set up the arclength function, which is the integral
+          of the length of the tangent. 
+          <md>
+            <mrow>
+              s(t) \amp = \int_0^t \left| \gamma^\prime(t) \right| 
+            </mrow>
+            <mrow>
+              \amp = 
+            </mrow>
+          </md>
+          Then we invert the arclength function.
+          <md>
+            <mrow>
+              s(t) \amp = 
+            </mrow>
+            <mrow>
+            </mrow>
+            <mrow>
+              t(s) \amp = 
+            </mrow>
+          </md>
+          Finally, we repalce <m>t</m> with this express to get a
+          parametrization in <m>s</m>, which is the parametrization by
+          arclength. 
+          <md>
+            <mrow>
+              \gamma(s) \amp = 
+            </mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Parametrize this curve by arclength.
+          <md>
+            <mrow>
+              \amp \gamma(t) = (t^2 - 4x + 1, 2t - 2) \amp \amp t
+              \in [0, \infty) 
+            </mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We follow the proscribed algorithm. First we calculate the
+          tangent.
+          <me>
+            \gamma^\prime(t) = 
+          </me>
+          Then we calculate the length of the tangent.
+          <me>
+            \left| \gamma^\prime(t) \right| = 
+          </me>
+          Then we set up the arclength function, which is the integral
+          of the length of the tangent. 
+          <md>
+            <mrow>
+              s(t) \amp = \int_0^t \left| \gamma^\prime(t) \right| 
+            </mrow>
+            <mrow>
+              \amp = 
+            </mrow>
+          </md>
+          Then we invert the arclength function.
+          <md>
+            <mrow>
+              s(t) \amp = 
+            </mrow>
+            <mrow>
+            </mrow>
+            <mrow>
+              t(s) \amp = 
+            </mrow>
+          </md>
+          Finally, we repalce <m>t</m> with this express to get a
+          parametrization in <m>s</m>, which is the parametrization by
+          arclength. 
+          <md>
+            <mrow>
+              \gamma(s) \amp = 
+            </mrow>
+          </md>
         </p>
       </solution>
     </activity>
@@ -322,6 +715,12 @@
         <li>
           What is the difference between a parametric curve and an
           implicit curve?
+        </li>
+        <li>
+          What is the arclength of a curve?
+        </li>
+        <li>
+          What is special about the parametrization by arclength?
         </li>
       </ul>
     </p>

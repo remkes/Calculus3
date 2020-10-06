@@ -399,7 +399,7 @@
     <activity>
       <statement>
         <p>
-          Calculate the Taylor series for <m>f(x) = sin x</m> centered
+          Calculate the Taylor series for <m>f(x) = \sin x</m> centered
           at <m>\alpha = \frac{\pi}{2} </m>. 
         </p>
       </statement>
@@ -723,7 +723,7 @@
               can replace <m>|x-1|</m> with this radius for a bound
               that applies to the whole interval.
               <me>
-                |R_{10}(x)| \leq \frac{4^{11}}{(3^{11}(11)}
+                |R_{10}(x)| \leq \frac{4^{11}}{(3^{11})(11)}
                 \frac{1}{4^{11}} = \frac{1}{(3^{11}){11}} =
                 \frac{1}{1948617} \doteq 0.000000513
               </me>
