@@ -18,7 +18,12 @@
       </statement>
       <solution>
         <p>
-          (Analysis)
+          The <m>x</m> coordinate is always positive, starting at
+          <m>9</m>, dropping back down to <m>0</m> and then rising up
+          to <m>9</m> again. The <m>y</m> coordinates starts at
+          <m>-27</m> and increases to <m>27</m>. Since the two
+          coordinates have different exponents, I expect a non-linear
+          shape following the trends I just described. 
           This parametric curve is shown in <xref
           ref="figure-activity-parametric-curve-1" />
           <figure xml:id="figure-activity-parametric-curve-1">
@@ -47,7 +52,11 @@
       </statement>
       <solution>
         <p>
-          (Analysis)
+          Both coordinates are period functions, so I expect a shape
+          that loops around and return to its starting point. The
+          <m>y</m> coordinate has a larger amplitude, but both have
+          the same period, so I expect this to be stretch out in the
+          <m>y</m> direction. Possible an ellipse. 
           This parametric curve is shown in <xref
           ref="figure-activity-parametric-curve-2" />
           <figure xml:id="figure-activity-parametric-curve-2">
@@ -76,7 +85,13 @@
       </statement>
       <solution>
         <p>
-          (Analysis)
+          This is hard to immediately guess the shape. Both
+          coordinates are bounded and periodic, so I do expect a shape
+          that loops around in some way and return to the origin.
+          However, since we have sums of trig functions with different
+          amplitues and periods, I expect a slightly complicated kind
+          of looping. Possible like a sinusoidal oscilaton along a
+          circle, but maybe with self-intersections as well. 
           This parametric curve is shown in <xref
           ref="figure-activity-parametric-curve-3" />
           <figure xml:id="figure-activity-parametric-curve-3">
@@ -105,7 +120,11 @@
       </statement>
       <solution>
         <p>
-          (Analysis)
+          The <m>y</m> coordinates is just the parameter <m>t</m>, so
+          I can think of this as a graph of the other coordinate (with
+          the axes reverse, since here <m>x</m> will be a function of
+          <m>y</m>. The <m>x</m> coordinate is a quadratic, so I
+          expect a sideways parabola.
           This parametric curve is shown in <xref
           ref="figure-activity-parametric-curve-4" />
           <figure xml:id="figure-activity-parametric-curve-4">
@@ -135,7 +154,10 @@
       </statement>
       <solution>
         <p>
-          (Analysis)
+          This is a typical setup for a spiral, with sine and cosine
+          terms of the same period but an amplitude which changes with
+          the parameter. Here, the amplitude is decreasing, so I
+          expect an curve spiraling inward. 
           This parametric curve is shown in <xref
           ref="figure-activity-parametric-curve-5" />
           <figure xml:id="figure-activity-parametric-curve-5">
@@ -165,7 +187,8 @@
       </statement>
       <solution>
         <p>
-          (Analysis)
+          I expect a curved path out from the origin to <m>(10,
+          \sqrt[3]{10}</m>. 
           This parametric curve is shown in <xref
           ref="figure-activity-parametric-curve-6" />
           <figure xml:id="figure-activity-parametric-curve-6">
@@ -186,7 +209,7 @@
           the coordinate functions to get a sense of the shape).
           <md>
             <mrow>
-              \amp \r(t) = t \amp \amp \theta(t) = t \amp \amp t \in
+              \amp r(t) = t \amp \amp \theta(t) = t \amp \amp t \in
               [0,4\pi]
             </mrow>
           </md>
@@ -194,7 +217,8 @@
       </statement>
       <solution>
         <p>
-          (Analysis)
+          Both the radius and the angle grow at the same rate. I
+          expect a spiral with linearly growing radius. 
           This parametric curve is shown in <xref
           ref="figure-activity-parametric-curve-7" />
           <figure xml:id="figure-activity-parametric-curve-7">
@@ -215,7 +239,7 @@
           the coordinate functions to get a sense of the shape).
           <md>
             <mrow>
-              \amp \r(t) = 4 + \sin t \amp \amp \theta(t) = t \amp
+              \amp r(t) = 4 + \sin t \amp \amp \theta(t) = t \amp
               \amp t \in [0, 2\pi] 
             </mrow>
           </md>
@@ -223,7 +247,10 @@
       </statement>
       <solution>
         <p>
-          (Analysis)
+          As the angle goes around, the radius oscilated between
+          <m>3</m> and <m>5</m>. I expect a wobbly kind of circle, or
+          perhaps more like an ellipse, since there is only one period
+          of the oscilations as we go around the circle.
           This parametric curve is shown in <xref
           ref="figure-activity-parametric-curve-8" />
           <figure xml:id="figure-activity-parametric-curve-8">
@@ -244,7 +271,7 @@
           the coordinate functions to get a sense of the shape).
           <md>
             <mrow>
-              \amp \r(t) = 2^{-t} \amp \amp \theta(t) = \pi 2^t  \amp
+              \amp r(t) = 2^{-t} \amp \amp \theta(t) = \pi 2^t  \amp
               \amp t \in [-2,2]
             </mrow>
           </md>
@@ -252,7 +279,8 @@
       </statement>
       <solution>
         <p>
-          (Analysis)
+          The rate of revolution is increasing. At the same time, the
+          radius is increasing. I expect a spiral into the origin. 
           This parametric curve is shown in <xref
           ref="figure-activity-parametric-curve-9" />
           <figure xml:id="figure-activity-parametric-curve-9">
@@ -398,23 +426,26 @@
       </statement>
       <solution>
         <p>
-          We calculate the tangent.
-          <me>
-            \gamma^\prime(t) 
-          </me>
-          We calculate the length of the tangent.
-          <me>
-            \left| \gamma^\prime(t) \right|
-          </me>
-          Then we integrate the length of the tangent over the
-          parameter domain.
+          I calculate the derivatives of the two coordinates.
           <md>
             <mrow>
-              \int_a^b \left| \gamma^\prime(t) \right| \amp = 
+              \amp x^{\prime}(t) = 1
+              \amp \amp y^\prime(t) = 3
+            </mrow>
+          </md>
+          I then put the into a pythagorian combination.
+          <me>
+            \sqrt{1^2 + 3^2} = \sqrt{10}
+          </me>
+          For arclength, I need to integrate this expression over the
+          length of the curve.
+          <md>
+            <mrow>
+              \int_0^7 \sqrt{10} dt \amp = 7\sqrt{10}  
             </mrow>
           </md>
           The result of this integral is the arclength of the
-          function. 
+          curve. 
         </p>
       </solution>
     </activity>
@@ -431,23 +462,27 @@
       </statement>
       <solution>
         <p>
-          We calculate the tangent.
-          <me>
-            \gamma^\prime(t) 
-          </me>
-          We calculate the length of the tangent.
-          <me>
-            \left| \gamma^\prime(t) \right|
-          </me>
-          Then we integrate the length of the tangent over the
-          parameter domain.
+          I calculate the derivatives of the two coordinates.
           <md>
             <mrow>
-              \int_a^b \left| \gamma^\prime(t) \right| \amp = 
+              \amp x^{\prime}(t) = 2t 
+              \amp \amp y^\prime(t) = -2t 
+            </mrow>
+          </md>
+          I then put these into a pythagorian combination.
+          <me>
+            \sqrt{(2t)^2 + (-2t)^2} = \sqrt{8t^2} = (2\sqrt{2})t
+          </me>
+          For arclength, I need to integrate this expression over the
+          length of the curve.
+          <md>
+            <mrow>
+              \int_0^4 (2\sqrt{2}) t \amp = (2\sqrt{2}) \frac{t^2}{2}
+              \Big|_0^4 = (2\sqrt{2}) \frac{16}{2} = 16 \sqrt{2} 
             </mrow>
           </md>
           The result of this integral is the arclength of the
-          function. 
+          curve. 
         </p>
       </solution>
     </activity>
@@ -465,19 +500,22 @@
       </statement>
       <solution>
         <p>
-          We calculate the tangent.
-          <me>
-            \gamma^\prime(t) 
-          </me>
-          We calculate the length of the tangent.
-          <me>
-            \left| \gamma^\prime(t) \right|
-          </me>
-          Then we integrate the length of the tangent over the
-          parameter domain.
+          I calculate the derivatives of the two coordinates.
           <md>
             <mrow>
-              \int_a^b \left| \gamma^\prime(t) \right| \amp = 
+              \amp x^{\prime}(t) = -8t\sin (t^2) 
+              \amp \amp y^\prime(t) = 8t \cos (t^2) 
+            </mrow>
+          </md>
+          I then put these into a pythagorian combination.
+          <me>
+            \sqrt{64 \sin^2 (t^2) + 64 \cos^2 (t^2)} = \sqrt{64} = 8 
+          </me>
+          For arclength, I need to integrate this expression over the
+          length of the curve.
+          <md>
+            <mrow>
+              \int_0^{\sqrt{2\pi}} 8 \amp = 8 \sqrt{2\pi} 
             </mrow>
           </md>
           The result of this integral is the arclength of the
@@ -530,6 +568,134 @@
       </statement>
       <solution>
         <p>
+          <ol>
+            <li>
+              <p>
+                Find a parametric curve which descrives an ellipse with
+                semimajor axis <m>a</m> and semiminor axis <m>b</m>.
+                (It's easiest to orient the larger ellipse axis along the
+                <m>x</m> axis.
+              </p>
+              <p>
+                I can take the standard curve for the circle and just
+                scale the amplitude of the two coordinate functions.
+                <me>
+                  \gamma(t) = (a \cos t, b \sin t) 
+                </me>
+                The shape is given by one period of the sine and
+                cosine functions, so <m>t \in [0,2\pi]</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Set up the arclength calculation to find the
+                circumference of the ellipse.
+              </p>
+              <p>
+                The derivatives are <m>x^\prime = -a \sin t</m> and
+                <m>y^\prime = b \cos t</m>. I put these in a
+                pythagorian combination and integrate to find the
+                arclength.
+                <me>
+                  \int_0^{2\pi} \sqrt{a^2 \sin^2 (t) + b^2 \cos^2
+                  (t)} dt
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                Factor <m>a</m> out of the square root and subtract a
+                cosine term to that you can simplify using <m>(\sin^2 t
+                + \cos^2 t = 1)</m>.
+              </p>
+              <md>
+                <mrow>
+                  \amp \int_0^{2\pi} \sqrt{a^2 \sin^2 (t) + b^2
+                  \cos^2 (t)} dt
+                </mrow>
+                <mrow>
+                  \amp = \int_0^{2\pi} \sqrt{a^2 \left( \sin^2 (t) +
+                  \frac{b^2}{a^2} \cos^2 (t)\right)} dt
+                </mrow>
+                <mrow>
+                  \amp = \int_0^{2\pi} a \sqrt{ \sin^2 (t) +
+                  \frac{b^2}{a^2} \cos^2 (t)} dt
+                </mrow>
+                <mrow>
+                  \amp = \int_0^{2\pi} a \sqrt{ \sin^2 (t) +
+                  \cos^2 t + \left( \frac{b^2}{a^2} - 1 \right) \cos^2
+                  (t)} dt
+                </mrow>
+                <mrow>
+                  \amp = \int_0^{2\pi} a \sqrt{ 1 + \left(
+                  \frac{b^2}{a^2} - 1 \right) \cos^2 (t)} dt
+                </mrow>
+              </md>
+            </li>
+            <li>
+              <p>
+                We can define the eccentricity of the ellipse as <m>e =
+                \sqrt{1 - \frac{b^2}{a^2}}</m>. Manipulate the integral
+                so that <m>e</m> shows up under the square root, but
+                <m>a</m> amd <m>b</m> are no longer under the square
+                root.
+              </p>
+              <md>
+                <mrow>
+                  \int_0^{2\pi} a \sqrt{ 1 + \left(
+                  \frac{b^2}{a^2} - 1 \right) \cos^2 (t)} dt
+                </mrow>
+                <mrow>
+                  \int_0^{2\pi} a \sqrt{ 1 - \left(
+                  1 - \frac{b^2}{a^2} \right) \cos^2 (t)} dt
+                </mrow>
+                <mrow>
+                  = \int_0^{2\pi} a \sqrt{ 1 - e \cos^2 (t)} dt
+                </mrow>
+              </md>
+            </li>
+            <li>
+              <p>
+                 Calculate the integral in the special case <m>e=0</m>.
+                 (Since this happens only when <m>a=b</m>, this is a
+                 circle with radius <m>a</m>; you should recover the
+                 familiar circumference of a circle).
+               </p>
+               <me>
+                  = \int_0^{2\pi} a \sqrt{ 1 - 0 \cos^2 (t)} dt = 
+                  \int_0^{2\pi} a dt = 2\pi a
+               </me>
+            </li>
+            <li>
+              <p>
+                Try to solve the integral for general eccentricity <m>0
+                \lt e \lt 1</m>. Comment on the problems and barriers to
+                integration.
+              </p>
+              <p>
+                This is an impossible integral to solve with the
+                method we are familiar with in this course. Without
+                <m>e=0</m>, we can't make use of a trig identity to
+                remove all the trig functions. We are left with this
+                annoying <m>\cos^2 t</m> function inside the integral.
+                No substitution works, since there are no trig
+                functions outside the integral. 
+              </p>
+              <p>
+                This is called an elliptic integral (of the second
+                kind, technically). It was a major motivator in 19th
+                century mathematics, since the circumference of the
+                ellipse was considered an important geometric problem.
+                It led, indirectly, to the objects known as elliptic
+                curves. These are very important geometric object
+                which seem strangely named, since they don't look like
+                they have anything to do with ellipses. The connection
+                if these integrals. Elliptic curves were invented as
+                part of some clever and complicated new methods to
+                approach ellitpic integrals.
+              </p>
+            </li>
+          </ol>
         </p>
       </solution>
     </activity>
@@ -550,42 +716,84 @@
       </statement>
       <solution>
         <p>
-          We follow the proscribed algorithm. First we calculate the
-          tangent.
-          <me>
-            \gamma^\prime(t) = 
-          </me>
-          Then we calculate the length of the tangent.
-          <me>
-            \left| \gamma^\prime(t) \right| = 
-          </me>
-          Then we set up the arclength function, which is the integral
-          of the length of the tangent. 
+          First, I calculate the derivatives of the coordinate
+          functions.
           <md>
             <mrow>
-              s(t) \amp = \int_0^t \left| \gamma^\prime(t) \right| 
-            </mrow>
-            <mrow>
-              \amp = 
+              \amp x^\prime = -2t \sin t - t^2 \sin t 
+              \amp \amp y^\prime = 2t \cos t + t^2 \cos t 
             </mrow>
           </md>
-          Then we invert the arclength function.
+          Then I calculate the pythagorian combination of these. This
+          is a pretty long calculation, but I will be able to make use
+          of a number of trig identities to simplify the terms inside
+          the square root, and some terms cancel. 
           <md>
             <mrow>
-              s(t) \amp = 
+              \amp \sqrt{4t^2 \cos^2 t - 4t^3 \cos t \sin t + t^2 \sin^2
+              t + 4t^2 \sin^2 t + 4t^3 \cos t \sin t + t^4 \cos^2 t}
             </mrow>
             <mrow>
+              \amp = \sqrt{4t^2 (\cos^2 t + \sin^2 t) + t^4 (\cos^2 t
+              + \sin^2 t} 
             </mrow>
             <mrow>
-              t(s) \amp = 
+              \amp = \sqrt{4t^2 + t^4} = t \sqrt{4+t^2}
             </mrow>
           </md>
-          Finally, we repalce <m>t</m> with this express to get a
+          Then I set up the arclength function, which is the integral
+          of this pythagorian combination.
+          <md>
+            <mrow>
+              s(t) \amp = \int_0^t u \sqrt{4 + u^2} du 
+            </mrow>
+          </md>
+          I can use a substitution here.
+          <md>
+            <mrow>
+              v \amp = 4 + u^2 \implies dv = 2u du     
+            </mrow>
+            <mrow>
+              s(t) \amp = \int_4^{4+t^2} \frac{\sqrt{v}}{2} dv 
+            </mrow>
+            <mrow>
+              \amp = \frac{v^{\frac{3}{2}}}{3} \Big_4^{4+t^2} =
+              \frac{(4 +t^2)^{\frac{3}{2}}}{3} - \frac{1}{3} 
+            </mrow>
+          </md>
+          Then I invert the arclength function.
+          <md>
+            <mrow>
+              s + \frac{1}{3}  \amp = \frac{(4+t^2)^\frac{3}{2}}{3} 
+            </mrow>
+            <mrow>
+              3s + 1 \amp = (4+t^2)^\frac{3}{2}
+            </mrow>
+            <mrow>
+              (3s + 1)^{\frac{2}{3}} \amp = 4+t^2
+            </mrow>
+            <mrow>
+              (3s + 1)^{\frac{2}{3}} - 4  \amp = t^2
+            </mrow>
+            <mrow>
+              \sqrt{(3s + 1)^{\frac{2}{3}} - 4} \amp = t
+            </mrow>
+            <mrow>
+              t(s) \amp = \sqrt{(3s + 1)^{\frac{2}{3}} - 4} 
+            </mrow>
+          </md>
+          Finally, I repalce <m>t</m> with this express to get a
           parametrization in <m>s</m>, which is the parametrization by
           arclength. 
           <md>
             <mrow>
-              \gamma(s) \amp = 
+              \sqrt{(3s + 1)^{\frac{2}{3}} - 4} 
+              \gamma(s) \amp = \left( 
+              \left((3s + 1)^{\frac{2}{3}} - 4 \right) 
+              \cos \left( \sqrt{(3s + 1)^{\frac{2}{3}} - 4} \right), 
+              \left( (3s + 1)^{\frac{2}{3}} - 4 \right) 
+              \sin \left( \sqrt{(3s + 1)^{\frac{2}{3}} - 4} \right)
+              \right) 
             </mrow>
           </md>
         </p>
@@ -594,7 +802,12 @@
     <activity>
       <statement>
         <p>
-          Parametrize this curve by arclength.
+          Parametrize this curve by arclength. (The function
+          <m>s(t)</m> will turn out to be imposible to invert
+          algebraically.  You can just leave the inverse implicit.
+          Also, the integral is a difficult trig substitution; please
+          just ask a computer algebra system for the result of the
+          integral.) 
           <md>
             <mrow>
               \amp \gamma(t) = (\ln t, 2t^2 - 1) \amp \amp t
@@ -605,42 +818,41 @@
       </statement>
       <solution>
         <p>
-          We follow the proscribed algorithm. First we calculate the
-          tangent.
-          <me>
-            \gamma^\prime(t) = 
-          </me>
-          Then we calculate the length of the tangent.
-          <me>
-            \left| \gamma^\prime(t) \right| = 
-          </me>
-          Then we set up the arclength function, which is the integral
-          of the length of the tangent. 
+          First, I calculate the derivatives of the coordinate
+          functions.
           <md>
             <mrow>
-              s(t) \amp = \int_0^t \left| \gamma^\prime(t) \right| 
-            </mrow>
-            <mrow>
-              \amp = 
+              \amp x^\prime = \frac{1}{t} 
+              \amp \amp y^\prime = 4t 
             </mrow>
           </md>
-          Then we invert the arclength function.
+          Then I calculate the pythagorian combination of these.
+          <me>
+            \sqrt{\frac{1}{t^2} + 16t^2} = \sqrt{\frac{1 +
+            16t^4}{t^2}} = \frac{1}{t} \sqrt{ 1+ 16t^4} 
+          </me>
+          Then I set up the arclength function, which is the integral
+          of this pythagorian combination.
           <md>
             <mrow>
-              s(t) \amp = 
-            </mrow>
-            <mrow>
-            </mrow>
-            <mrow>
-              t(s) \amp = 
+              s(t) \amp = \int_1^t \frac{1}{u} \sqrt{ 1+ 16 u^4} du 
             </mrow>
           </md>
-          Finally, we repalce <m>t</m> with this express to get a
-          parametrization in <m>s</m>, which is the parametrization by
-          arclength. 
+          I asked a computer algebra system for the value of this
+          integral. 
           <md>
             <mrow>
-              \gamma(s) \amp = 
+              s(t) \amp =  \frac{1}{2} \left( \sqrt{ 1 + 16t^4 -
+              \arctanh \left( \sqrt{ 1 + 16t^4 \right) - \sqrt{17} +
+              \arctanh (17) \right) 
+            </mrow>
+          </md>
+          This is not algebraically invertible. All I can do is call
+          the inverse <m>t(s)</m> and replace it implicitly. 
+          <md>
+            <mrow>
+              \gamma(s) \amp = \left( \ln t(s), 2(t(s))^2 - 1)
+              \right) \amp \amp s \in [0,\infty) 
             </mrow>
           </md>
         </p>
@@ -649,10 +861,15 @@
     <activity>
       <statement>
         <p>
-          Parametrize this curve by arclength.
+          Parametrize this curve by arclength. (The function
+          <m>s(t)</m> will turn out to be impossible to invert
+          algebraically.  You can just leave the inverse implicit.
+          Also, the integral is a difficult trig substitution; please
+          just ask a computer algebra system for the result of the
+          integral.) 
           <md>
             <mrow>
-              \amp \gamma(t) = (t^2 - 4x + 1, 2t - 2) \amp \amp t
+              \amp \gamma(t) = (t^2 - 4t + 1, 2t - 2) \amp \amp t
               \in [0, \infty) 
             </mrow>
           </md>
@@ -660,42 +877,52 @@
       </statement>
       <solution>
         <p>
-          We follow the proscribed algorithm. First we calculate the
-          tangent.
-          <me>
-            \gamma^\prime(t) = 
-          </me>
-          Then we calculate the length of the tangent.
-          <me>
-            \left| \gamma^\prime(t) \right| = 
-          </me>
-          Then we set up the arclength function, which is the integral
-          of the length of the tangent. 
+          First, I calculate the derivatives of the coordinate
+          functions.
           <md>
             <mrow>
-              s(t) \amp = \int_0^t \left| \gamma^\prime(t) \right| 
-            </mrow>
-            <mrow>
-              \amp = 
+              \amp x^\prime = 2t - 4
+              \amp \amp y^\prime = 2
             </mrow>
           </md>
-          Then we invert the arclength function.
+          Then I calculate the pythagorian combination of these.
+          <me>
+            \sqrt{4t^2 - 16t + 16 + 4} = \sqrt{4t^2 - 16t + 20} = 2
+            \sqrt{t^2 - 4t + 5} 
+          </me>
+          I'm going to complete the square here to make this more
+          approachable.
+          <me>
+            2 \sqrt{t^2 - 4t + 5} = 2 \sqrt{(t-2)^2 + 1}
+          </me>
+          Then I set up the arclength function, which is the integral
+          of this pythagorian combination.
           <md>
             <mrow>
-              s(t) \amp = 
-            </mrow>
-            <mrow>
-            </mrow>
-            <mrow>
-              t(s) \amp = 
+              s(t) \amp = \int_0^t 2 \sqrt{(u-2)^2 + 1} du 
             </mrow>
           </md>
-          Finally, we repalce <m>t</m> with this express to get a
-          parametrization in <m>s</m>, which is the parametrization by
-          arclength. 
+          I can shift using the substitution <m>v = u-2</m>
           <md>
             <mrow>
-              \gamma(s) \amp = 
+              s(t) \amp = \int_{-2}^{t-2} 2 \sqrt{v^2 + 1} du 
+            </mrow>
+          </md>
+          This is a trig substitution. I asked a computer algebra for
+          the solution.
+          <md>
+            <mrow>
+              s(t) \amp = \frac{1}{2} \left( \sqrt{(t-2)^2 + 1} +
+              \arcsinh t - 2 - \sqrt{3} - \arcsinh (-2)} 
+            </mrow>
+          </md>
+          This is not algebraically invertible. All I can do is
+          implicitly write <m>t(s)</m> for the inverse. Then I can
+          replace <m>t</m> with this <m>t(s)</m> in this curve. 
+          <md>
+            <mrow>
+              \gamma(s) \amp = \left( (t(s))^2 - 4t(s) + 1, 2t(s) - 2
+              \right) \amp \amp t \in [0, \infty) 
             </mrow>
           </md>
         </p>
