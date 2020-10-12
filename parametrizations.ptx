@@ -35,12 +35,12 @@
           Consider the following curves.
           <md>
             <mrow>
-              \gamma_1(t) = \left( t^2, t^4 \right) \amp
-              t \in [0, 4]
+              \gamma_1(t) = \left( t, t^2 \right) \amp 
+              t \in [0, 16]
             </mrow>
             <mrow>
-              \gamma_2(t) = \left( t, t^2 \right) \amp 
-              t \in [0, 16]
+              \gamma_2(t) = \left( t^2, t^4 \right) \amp
+              t \in [0, 4]
             </mrow>
             <mrow>
               \gamma_3(t) = \left( \sqrt{t}, t \right) \amp
@@ -211,6 +211,19 @@
     <example>
       <statement>
         <p>
+          In <m>\RR^3</m>, consider the helix <m>\gamma(t) = (\cos t,
+          \sin t, t)</m>. On the domain <m>t \in [0, 8\pi]</m>, the
+          helix makes four revolutions. We calculate its arclength.
+          <me>
+            L = \int_0^{8\pi} \sqrt{ \sin^2 t + \cos^2 t + 1} dt =
+            \int_0^{8\pi} \sqrt{2} dt = 8 \sqrt{2} \pi
+          </me>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
           The asteroid is the parametric curve <m>\gamma(t) = (\cos^3
           t, \sin^3 t)</m> for <m>t \in [0,2\pi]</m>, shown in <xref
           ref="figure-asteroid">Figure</xref>. We want to calculate
@@ -266,21 +279,8 @@
           4.
           <me>
             L = 4\int_0^{\frac{\pi}{2}} 3 \sin t \cos t dt = 6
-            \int_0^{\frac{\pi}{2}} \sin 2t = \left. -3\cos 2t
-            \right|_0^{\frac{\pi}{2}} = 6
-          </me>
-        </p>
-      </statement>
-    </example>
-    <example>
-      <statement>
-        <p>
-          In <m>\RR^3</m>, consider the helix <m>\gamma(t) = (\cos t,
-          \sin t, t)</m>. On the domain <m>t \in [0, 8\pi]</m>, the
-          helix makes four revolutions. We calculate its arclength.
-          <me>
-            L = \int_0^{8\pi} \sqrt{ \sin^2 t + \cos^2 t + 1} dt =
-            \int_0^{8\pi} \sqrt{2} dt = 8 \sqrt{2} \pi
+            \int_0^{\frac{\pi}{2}} \sin 2t = -3\cos 2t
+            \Big|_0^{\frac{\pi}{2}} = 6
           </me>
         </p>
       </statement>

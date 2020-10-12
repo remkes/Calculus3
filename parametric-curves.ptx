@@ -6,12 +6,17 @@
       The major goal of this course is the extension of calculus to
       functions with multiple variable inputs and/or outputs. In
       <xref ref="vector-geometry">Chapter</xref>, we introduced linear
-      transformation, which were function <m>\RR^n \rightarrow
+      transformations, which were function <m>\RR^n \rightarrow
       \RR^m</m>, but we would like to also investigate non-linear
-      functions. Parametric curves are the first foray; we allow a
-      single-input function to have a multi-variable non-linear
-      output. We interpreted parametric curves as vectors or
-      positions in some euclidean space; as such, parametric curves
+      functions. Vector-valued function are the first step in that
+      direction: they have a single-input but multi-variable non-linear
+      output. The first and most important interpretation of
+      vector-valued function is parametric curve. 
+    </p>
+    <p>
+      A parametric curves describes interpret a vector-valued function
+      as a position in some euclidean space depending on time; as
+      such, parametric curves
       are used to talk about motion through space. The calculus of
       parametric curves is a way to understand the physics of such
       motion, covering both linear and angular velocity and
@@ -211,12 +216,15 @@
         <p>
           A spiral in <m>\RR^2</m> is a parametric curve of the form
           <m>\gamma(t) = (f(t) \cos t, f(t) \sin t)</m> where
-          <m>f(t)</m> is a monotonic function. It resembles the
-          circle, but the radius is either increasing or decreasing
-          as the curve traces around the circle. The curve
+          <m>f(t)</m> is a monotonic continuous function. It resembles
+          the circle, but the radius is either increasing or
+          decreasing as the curve traces around the circle. The curve
           <m>\gamma(t) = (2e^{\frac{t}{4}} \cos t, 2e^{\frac{t}{4}}
           \sin t)</m> is a logarithmic spiral, as in <xref
-          ref="figure-parametric-curve4" />.
+          ref="figure-parametric-curve4" />. For the logarithmic
+          spiral, we can have the parameter <m>t</m> be any real
+          number: the spiral will spin inwards and outwards without
+          end. 
         </p>
       </statement>
     </example>
@@ -245,13 +253,19 @@
         <p>
           The curve <m>\gamma(t) = (t \cos t, t \sin t)</m> is the
           archimedian spiral, as in <xref
-          ref="figure-parametric-curve5" />. 
+          ref="figure-parametric-curve5" />.  For this spiral, we take
+          <m>t \in [0,\infty)</m>; the shape starts at the origin and
+          spins outward.
         </p>
       </statement>
     </example>
     <figure xml:id="figure-parametric-curve6">
       <caption>
-          The curve <m>\gamma(t) = (t \cos t, t \sin t, t)</m>
+          In three dimensions, in addition to spiraling outward or
+          inward, we can spiral upward or downward.
+          The curve <m>\gamma(t) = (t \cos t, t \sin t, t)</m>, for
+          <m>t \in [0,\infty)</m>, is a conical spiral extending infinitely
+          upward.
       </caption>
       <image xml:id="figure15" width="90%">
         <asymptote>
