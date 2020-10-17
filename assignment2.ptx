@@ -7,7 +7,7 @@
     <li>
       <p>
         Describe these lines as offset spans. Everything is in
-        <m>\RR^3</m>. 
+        <m>\RR^3</m>. (6)
         <ol>
           <li>
             The line through <m>(1,0,2)</m> with direction
@@ -26,7 +26,7 @@
     </li>
     <li>
       <p>
-        Calculate equations for these planes. (12)
+        Calculate equations for these planes. (8)
         <ol>
           <li>
             The plane parallel to <m>x + y + z = 0</m> but three units
@@ -46,7 +46,7 @@
     </li>
     <li>
       <p>
-        Calculate the intersection of these objects.
+        Calculate the intersection of these objects. (6) 
         <ol>
           <li>
             The plane <m>x + y - z = 0</m> and the plane <m>x + y +
@@ -63,7 +63,7 @@
       <p>
         The rotation matrix by angle <m>\theta</m> (counterclockwise
         if looking down the the axis from the positive end) around the
-        <m>x</m> axis in <m>\RR^3</m> is
+        <m>x</m> axis in <m>\RR^3</m> is (8) 
         <me>
           \begin{pmatrix}
             1 \amp 0 \amp 0 \\
