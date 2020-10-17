@@ -1,6 +1,6 @@
-<section xml:id="calculus-of-parametric-curves">
+<section xml:id="section-calculus-of-parametric-curves">
   <title>Calculus of Parametric Curves</title>
-  <subsection xml:id="tangents">
+  <subsection xml:id="subsection-tangents">
     <title>Tangents</title>
     <p>
       Parametric curves are vector-valued functions, so they have
@@ -119,26 +119,26 @@
           tangents to the point <m>(1,1)</m>.
           <md>
             <mrow>
-              \gamma_1^\prime (t) = \left( 2t, 4t^3 \right) \amp
+              \gamma_2^\prime (t) \amp = \left( 1, 2t \right) \amp \amp 
               t=1 \text{ at }  (1,1) \implies
-              \gamma_1^\prime (1) = \left( 2, 4 \right) \amp
+              \gamma_2^\prime (1) = \left( 1, 2 \right) 
             </mrow>
             <mrow>
-              \gamma_2^\prime (t) = \left( 1, 2t \right) \amp
-              t=1 \text{ at }  (1,1) \implies
-              \gamma_2^\prime (1) = \left( 1, 2 \right) \amp
+              \gamma_1^\prime (t) \amp = \left( 2t, 4t^3 \right) \amp
+              \amp t=1 \text{ at }  (1,1) \implies
+              \gamma_1^\prime (1) = \left( 2, 4 \right) 
             </mrow>
             <mrow>
-              \gamma_3^\prime (t) = \left( \frac{1}{2\sqrt{t}}, 1
-              \right) \amp t=1 \text{ at }  (1,1)
+              \gamma_3^\prime (t) \amp = \left( \frac{1}{2\sqrt{t}}, 1
+              \right) \amp \amp t=1 \text{ at }  (1,1)
               \implies \gamma_3^\prime (1) = \left( \frac{1}{2} , 1
-              \right) \amp
+              \right) 
             </mrow>
             <mrow>
-              \gamma_4^\prime (t) = \left( 5, 50t \right) \amp
-              t = \frac{1}{5} \text{ at }  (1,1)
-              \implies \gamma_4^\prime (\frac{1}{5}) = \left( 5, 10
-              \right) \amp
+              \gamma_4^\prime (t) \amp = \left( 5, 50t \right) \amp
+              \amp t = \frac{1}{5} \text{ at }  (1,1)
+              \implies \gamma_4^\prime \left( \frac{1}{5} \right) =
+              \left( 5, 10 \right) 
             </mrow>
           </md>
         </p>
@@ -186,27 +186,6 @@
     <example>
       <statement>
         <p>
-          In the logarithmic spiral, the tangent vector was
-          <m>\gamma^\prime(0) = (1, \frac{1}{4})</m>. We calculate
-          the length of this vector.
-          <me>
-            \left|\left(1,\frac{1}{4}\right)\right| = \sqrt{ 1 +
-            \frac{1}{16}} = \frac{\sqrt{17}}{4}
-          </me>
-        </p>
-        <p>
-          Then we can calculate the unit tangent.
-          <me>
-            T(t) = \frac{\gamma^\prime(t)}{|\gamma^\prime(t)|} =
-            \frac{4}{\sqrt{17}}\left( 1, \frac{1}{4} \right) = \left(
-            \frac{4}{\sqrt{17}},\frac{1}{\sqrt{17}} \right)
-          </me>
-        </p>
-      </statement>
-    </example>
-    <example>
-      <statement>
-        <p>
           In the various parametrizations of the graph of the
           parabola, the tangent direction was <m>(1,2)</m>, so the
           unit tangent is <m>\left( \frac{1}{\sqrt{5}},
@@ -214,8 +193,36 @@
         </p>
       </statement>
     </example>
+    <example>
+      <statement>
+        <p>
+          As we say in <xref ref="section-parametric-curves" />, the
+          archimedian spiral is
+          <me>
+            \gamma(t) = (t \cos t, t \sin t) 
+          </me>.
+          The tangent vector is k
+          <me>
+            \gamma^\prime (t) = (\cos t - t \sin t, \sin t + t \cos t) 
+          </me>.
+          When <m>t=\pi</m> (at the point <m>(-\pi,0)</m>, the tangent
+          vector is 
+          <me>
+            \gamma^\prime (\pi) = (-1,-\pi).
+          </me>.
+          The length of this vector is 
+          <me>
+            |\gamma^\prime (\pi)| = \sqrt{1 + \pi^2} 
+          </me>.
+          Therefore the unit tangent at this point is 
+          <me>
+            T (\pi) = \frac{1}{\sqrt{1+\pi^2} (-1,-\pi).
+          </me>.
+        </p>
+      </statement>
+    </example>
   </subsection>
-  <subsection xml:id="tangents-non-linear-coords">
+  <subsection xml:id="subsection-tangents-non-linear-coords">
     <title>Tangents in Non-Linear Coordinates</title>
     <p>
       Tangents are a Cartesian notion. If our curve is given in a
@@ -230,22 +237,28 @@
       rule.
       <md>
         <mrow>
-          x^\prime \amp = r^\prime \cos \theta - r \sin \theta
+          x \amp = r \cos \theta
+        </mrow>
+        <mrow>
+          x^\prime \amp = r^\prime \cos \theta - (r \sin \theta)
           \theta^\prime
         </mrow>
         <mrow>
-          y^\prime \amp = r^\prime \sin \theta + r \cos \theta
+          y \amp = r \sin \theta
+        </mrow>
+        <mrow>
+          y^\prime \amp = r^\prime \sin \theta + (r \cos \theta)
           \theta^\prime
         </mrow>
         <mrow>
-          \gamma^\prime(t) \amp = (r^\prime \cos \theta - r \sin
-          \theta \theta^\prime, r^\prime \sin \theta + r \cos \theta
-          \theta^\prime)
+          \gamma^\prime(t) \amp = (r^\prime \cos \theta - (r \sin
+          \theta) \theta^\prime, r^\prime \sin \theta + (r \cos
+          \theta) \theta^\prime)
         </mrow>
       </md>
     </p>
   </subsection>
-  <subsection xml:id="arclength-and-tangents">
+  <subsection xml:id="subsection-arclength-and-tangents">
     <title>Arclength and Tangents</title>
     <p>
       There are some very natural connections between tangents and
@@ -379,8 +392,8 @@
       difficulty isn't relevant).
     </p>
   </subsection>
-  <subsection xml:id="curvature-and-torsion">
-    <title>Curvature and Torsion</title>
+  <subsection xml:id="subsection-curvature">
+    <title>Curvature</title>
     <p>
       The tangent vector for a parametric curve measures the speed and
       direction of movement along the curve. Speed and direction are
@@ -596,7 +609,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="normals">
+  <subsection xml:id="subsection-normals">
     <title>Normals</title>
     <p>
       To complete the description of motion in <m>\RR^3</m>, we define
@@ -670,21 +683,26 @@
       <caption>
         The tangent, normal and binormal to a helix in <m>\RR^3</m>
       </caption>
-      <image xml:id="figure27" width="90%">
+      <image xml:id="figure71" width="90%">
         <asymptote>
-          size(7cm,7cm);
-          import graph;
+          size(12cm,7cm,IgnoreAspect);
+          import graph3;
+          currentprojection=orthographic(2,1,2);
 
-          xlimits(-3,3);
-          ylimits(-3,3);
+          limits((-3,-3,0),(3,3,10));
+          
+          axes3("$x$", "$y$", "$z$", Arrow3);
 
-          xaxis("$x$",above=true);
-          yaxis("$y$",above=true);
+          real x(real t) {return 2*cos(t);}
+          real y(real t) {return 2*sin(t);}
+          real z(real t) {return t;}
 
-          real f(real t) {return t/6;}
+          draw(graph(x,y,z,0,10));
 
-          path g=polargraph(f,0,5pi)--cycle;
-          draw(g);
+          dot((0,-2,4.7));
+          draw(Label("T(t)",EndPoint),(0,-2,4.7)--(1.8,-2,5.6),Arrow3);
+          draw(Label("N(t)",EndPoint),(0,-2,4.7)--(0,-1,4.7),Arrow3);
+          draw(Label("B(t)",EndPoint),(0,-2,4.7)--(-0.45,-2,5.6),Arrow3);
         </asymptote>
       </image>
     </figure>
@@ -715,6 +733,9 @@
       planes are best described by their normals, we use <m>B(t)</m>
       to keep track of the osculating plane.
     </p>
+  </subsection>
+  <subsection xml:id="subsection-torsion">
+    <title>Torsion</title>
     <p>
       Our third type of movement was twisting movement, where we
       allowed a curve path to twist away from its plane of movement.
@@ -887,10 +908,17 @@
         </p>
         <p>
           Look at the three scalars.
-          <me>
-            v = \sqrt{r^2 + h^2} \kappa = \frac{r}{r^2
-            + h^2} \tau = \frac{h}{r^2 + h^2}
-          </me>
+          <md>
+            <mrow>
+              v \amp = \sqrt{r^2 + h^2} 
+            </mrow>
+            <mrow>
+              \kappa \amp = \frac{r}{r^2 + h^2} 
+            </mrow>
+            <mrow>
+              \tau \amp = \frac{h}{r^2 + h^2}
+            </mrow>
+          </md>
         </p>
         <p>
           All three, speed, curvature and torsion, are constant here.
@@ -968,7 +996,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="acceleration">
+  <subsection xml:id="subsection-acceleration">
     <title>Acceleration and Movement in Space</title>
     <p>
       Now that we understand how parametric curves describe motion in

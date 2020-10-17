@@ -35,19 +35,19 @@
           Consider the following curves.
           <md>
             <mrow>
-              \gamma_1(t) = \left( t, t^2 \right) \amp 
+              \gamma_1(t) \amp = \left( t, t^2 \right) \amp \amp
               t \in [0, 16]
             </mrow>
             <mrow>
-              \gamma_2(t) = \left( t^2, t^4 \right) \amp
+              \gamma_2(t) \amp = \left( t^2, t^4 \right) \amp \amp
               t \in [0, 4]
             </mrow>
             <mrow>
-              \gamma_3(t) = \left( \sqrt{t}, t \right) \amp
+              \gamma_3(t) \amp = \left( \sqrt{t}, t \right) \amp \amp
               t \in [0, 256]
             </mrow>
             <mrow>
-              \gamma_4(t) = \left( 5t, 25t^2 \right) \amp
+              \gamma_4(t) \amp = \left( 5t, 25t^2 \right) \amp \amp
               t \in \left[0, \frac{16}{5} \right]
             </mrow>
           </md>

@@ -1,6 +1,6 @@
-<section xml:id="parametric-curves">
+<section xml:id="section-parametric-curves">
   <title>Parametric Curves</title>
-  <subsection xml:id="parametric-curves-definition">
+  <subsection xml:id="subsection-parametric-curves-definition">
     <title>Definition of Parametric Cuves</title>
     <p>
       The major goal of this course is the extension of calculus to
@@ -41,7 +41,7 @@
       parametric curves.
     </p>
   </subsection>
-  <subsection xml:id="parametric-curves-exmaples">
+  <subsection xml:id="subsection-parametric-curves-examples">
     <title>Parametric Curves</title>
     <definition>
       <statement>
@@ -295,7 +295,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="parametric-curves-polar-coordinates">
+  <subsection xml:id="subsection-parametric-curves-polar-coordinates">
     <title>Parametric Curves in Polar Coordinates</title>
     <p>
       Once we are comfortable with changing coordinate systems, we

@@ -6,69 +6,128 @@
   <p><ol>
     <li>
       <p>
-        Let <m>$t \in [0, \infty)</m>. For each of the following
-        parametric curves in <m>\RR^2</m> (24)
-        <ul>
+        Write these cartesian loci as polar loci. (6) 
+        <ol>
+          <li><me>
+            x - 4y = 1
+          </me></li>
+          <li><me>
+            x^2 + 2y^2 = 3
+          </me></li>
+          <li><me>
+            \frac{y}{x} - 3 \frac{y^2}{x^2} = 3
+          </me></li>
+        </ol>
+      </p>
+    </li>
+    <li>
+      <p>
+        Write these cartesian loci as spherical loci. (6) 
+        <ol>
+          <li><me>
+            5x - 4y + 6z = 1
+          </me></li>
+          <li><me>
+            x^2 + y^2 + z^2 - \sqrt{x^2 + y^2} = 1
+          </me></li>
+          <li><me>
+            \left(\frac{\sqrt{x^2+y^2}}{z}\right)^3 - x^2 - y^2 - z^2
+            = 1
+          </me></li>
+        </ol>
+      </p>
+    </li>
+    <li>
+      <p>
+        Consider this parametric curve (in cartesian coordinates). (6) 
+        <me>
+          \gamma(t) = (x(t), y(t)) = (\cos 6\pi t, \sin 6\pi
+            t)
+        </me>
+        <ol>
           <li><p>
             Find <m>\gamma(0)</m>.
-          </p></li>
-          <li><p>
-            Determine the direction of movement at <m>\gamma(0)</m>.
           </p></li>
           <li><p>
             Determine the length of the curve on <m>t \in [0,4]</m>.
           </p></li>
           <li><p>
-            Determine the behaviour of the curves as <m>t \rightarrow
+            Determine the behaviour of the curve as <m>t \rightarrow
             \infty</m>. 
-          </p></li>
-        </ul>
-        <ol>
-          <li><p>
-            <m>\gamma(t) = (x(t), y(t)) = (\cos 6\pi t, \sin 6\pi
-            t)</m>. (Cartesian Coordinates).
-          </p></li>
-          <li><p>
-            <m>\gamma(t) = (x(t), y(t)) = (4, \frac{1}{(t+1)^2})</m>.
-            (Cartesian Coordinates). 
-          </p></li>
-          <li><p>
-            <m>\gamma(t) = (r(t), \theta(t)) = (t+1,t)</m>. (Polar
-            Coordinates).
           </p></li>
         </ol>
       </p>
     </li>
     <li>
       <p>
-        For each of the following parametric curves in <m>\RR^3</m>
-        (24)
-        <ul>
-          <li><p>
-            Find <m>\gamma(1)</m>.
-          </p></li>
-          <li><p>
-            Determine the direction of movement at <m>\gamma(1)</m>.
-          </p></li>
-          <li><p>
-            Determine the intersection of the curve with the unit
-            sphere.
-          </p></li>
-          <li><p>
-            Determine the intersection of the curve the the cube with
-            vertices <m>(\pm 1, \pm 1, \pm 1)</m>. 
-          </p></li>
-        </ul>
+        Consider this parametric curve (in cartesian coordinates). (6) 
+        <me>
+          \gamma(t) = (x(t), y(t)) = \left(4, \frac{1}{(t+1)^2} \right)
+        </me>
         <ol>
           <li><p>
-            <m>\gamma(t) = (x(t), y(t), z(t)) = (t, t^2, t^3) </m>
+            Find <m>\gamma(0)</m>.
           </p></li>
           <li><p>
-            <m>\gamma(t) = (x(t), y(t), z(t)) = (\sin t, \cos t, 5t) </m>
+            Determine the length of the curve on <m>t \in [0,4]</m>.
           </p></li>
           <li><p>
-            <m>\gamma(t) = (x(t), y(t), z(t)) = (\sqrt{t^2+1}, t,
-            t^2-2)</m>
+            Determine the behaviour of the curve as <m>t \rightarrow
+            \infty</m>. 
+          </p></li>
+        </ol>
+      </p>
+    </li>
+    <li>
+      <p>
+        Consider this parametric curve (in polar coordinates). (4) 
+        <me>
+          \gamma(t) = (r(t), \theta(t)) = (t+1,t)
+        </me>
+        <ol>
+          <li><p>
+            Find <m>\gamma(0)</m>.
+          </p></li>
+          <li><p>
+            Determine the behaviour of the curve as <m>t \rightarrow
+            \infty</m>. 
+          </p></li>
+        </ol>
+      </p>
+    </li>
+    <li>
+      <p>
+        Consider this parametric curve. (6) 
+        <me>
+          \gamma(t) = (x(t), y(t), z(t)) = (t, t^2, t^3)
+        </me>
+        <ol>
+          <li><p>
+            Determine the intersection (if any) of the curve with the
+            unit sphere.
+          </p></li>
+          <li><p>
+            Determine the intersection (if any) of the curve the the
+            cube with vertices <m>(\pm 1, \pm 1, \pm 1)</m>. 
+          </p></li>
+        </ol>
+      </p>
+    </li>
+    <li>
+      <p>
+        Consider this parametric curve. (6) 
+        <me>
+          \gamma(t) = (x(t), y(t), z(t)) = (\sqrt{t^2+1}, t, t^2-2)
+        </me>
+        <ol>
+          <li><p>
+            Determine the intersection (if any) of the curve with the
+            unit sphere. (Approximsate values calculated by computer
+            are fine.) 
+          </p></li>
+          <li><p>
+            Determine the intersection (if any )of the curve the the
+            cube with vertices <m>(\pm 1, \pm 1, \pm 1)</m>. 
           </p></li>
         </ol>
       </p>
