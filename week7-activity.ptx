@@ -206,13 +206,72 @@
           Also calculate the tangent vector, normal vector and
           binormal vector. 
           <me>
-            \gamma(t) = (x(t), y(t), z(t))
+            \gamma(t) = (t \cos t, t \sin t, ht)
           </me>
+          Interpret the curve using the three scalar. In particular,
+          describe the long term behaviour of the curse. 
         </p>
       </statement>
       <solution>
         <p>
-          We follow the lengthy process. 
+          We follow the lengthy process of calculating speed,
+          curvature, torsion, the tangent vector, the normal vector,
+          and the binormal vector. 
+          <md>
+            <mrow>
+              \gamma(t) \amp = (t^3, 1 - t^2, 1 + t^2) 
+            </mrow>
+            <mrow>
+              \gamma^\prime(t) \amp = (x^\prime(t), y^\prime(t),
+              z^\prime(t)) = (3t^2, -2t, 2t) 
+            </mrow>
+            <mrow>
+              v(t) = |\gamma^\prime(t)| \amp = \sqrt{x^\prime(t)^2 +
+              y^\prime(t)^2 + z^\prime(t)^2 }
+            </mrow>
+            <mrow>
+             \amp = \sqrt{ 9t^4 + 4t^2 + 4t^2} = t \sqrt{9t^2 + 4} 
+            </mrow>
+            <mrow>
+              T(t) \amp = \frac{\gamma^\prime(t)}{|\gamma^\prime(t)|} =
+              \frac{1}{t\sqrt{9t^2 + 4}} \left( 3t^2, -2t, 2t) =
+              \left( \frac{3t}{\sqrt{9t^2+4}} 
+              \frac{-2}{\sqrt{9t^2+4}} 
+              \frac{2}{\sqrt{9t^2+4}} \right) 
+            </mrow>
+            <mrow>
+              T^\prime(t) \amp = \left( \frac{12}{(9t^2 +
+              4)^{\frac{3}{2}}, \frac{-18t}{(9t^2+4)^{\frac{3}{2}}},
+              \frac{18t}{(9t^2+4)^{\frac{3}{2}}} \right) =
+              \frac{1}{(9t^2+4)^{frac{3}{2}}} (12, -18t, 18t)
+            </mrow>
+            <mrow>
+              |T^\prime(t)| \amp = \frac{1}{(9t^2+4)^{\frac{3}{2}}} \sqrt{
+              144 + 324t^2 + 324t^2} = \frac{1}{(9t^2+4)^{\frac{3}{2}}} \sqrt{
+              144 + 648t^2} = 
+            </mrow>
+            <mrow>
+              \kappa(t) \amp = \frac{|T^\prime(t)|}{|\gamma^\prime(t)|} =
+              \frac{\frac{1}{(9t^2+4)^{\frac{3}{2}}} \sqrt{ 144 +
+              648t^2}}{\sqrt{ 9t^4 + 4t^2 + 4t^2} = t \sqrt{9t^2 + 4}}
+            </mrow>
+            <mrow>
+              \amp = \frac{144 + 648 t^2}{(9t^2+4)^2}
+            </mrow>
+            <mrow>
+              N(t) \amp = \frac{1}{\sqrt{144 + 648t^2} \left( 12, -18t,
+              18t \right) = \left( \frac{12}{\sqrt{144 + 648t^2},
+              \frac{-18}{\sqrt{144 + 648t^2}, \frac{-18}{\sqrt{144 +
+              648t^2} \right)
+            </mrow>
+            <mrow>
+              B(t) \amp = T(t) \times N(t)
+            </mrow>
+            <mrow>
+              \tau(t) \amp = - \frac{B^\prime(t)}{|\gamma^\prime(t)|}
+              \cdot N(t)
+            </mrow>
+          </md>
         </p>
       </solution>
     </activity>

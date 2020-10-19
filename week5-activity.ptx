@@ -74,7 +74,7 @@
           To converse, we simply replace <m>r</m> with its cartesian
           equivalent.
           <me>
-            4x^2 + 4y^2 - 4 \sqrt{x^2 + y^2} - 9 = 0 
+            x^2 + y^2 - 7 \sqrt{x^2 + y^2} + 10 = 0 
           </me>
           There may be simplifications that can be made, but I don't
           see anything that would obviously make the locus more

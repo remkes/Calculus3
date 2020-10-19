@@ -901,7 +901,10 @@
             </mrow>
             <mrow>
               \tau(t) \amp = - \frac{B^\prime(t)}{|\gamma^\prime(t)|}
-              \cdot N(t) = \frac{1}{r^2 + h^2} (h \cos t, h \sin t , 0
+              \cdot N(t) 
+            </mrow>
+            <mrow>
+               \amp = \frac{1}{r^2 + h^2} (h \cos t, h \sin t , 0
               ) \cdot (-\cos t, - \sin t, 0) = \frac{h}{r^2 + h^2}
             </mrow>
           </md>
@@ -953,8 +956,7 @@
               <m>\tau = 0</m>
             </cell>
             <cell>
-              <m>\implies</m> straight line
-              movement, no curving or twisting
+              <m>\implies</m> straight line, no curving or twisting
             </cell>
           </row>
           <row>
@@ -968,8 +970,8 @@
               <m>\tau = 0</m>
             </cell>
             <cell>
-              <m>\implies</m> tracing around a circle, constant speed
-              and curvature, no twisting
+              <m>\implies</m> circle, constant speed and curvature, no
+              twisting
             </cell>
           </row>
           <row>

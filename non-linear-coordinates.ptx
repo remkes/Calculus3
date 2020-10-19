@@ -73,10 +73,10 @@
       The reverse direction is also trigonometry.
       <md>
         <mrow>
-          r = \sqrt{x^2 + y^2} \tan 
+          r = \sqrt{x^2 + y^2} 
         </mrow>
         <mrow>
-          \theta = \frac{y}{x} \implies \theta = \arctan \frac{y}{x}
+          \tan \theta = \frac{y}{x} \implies \theta = \arctan \frac{y}{x}
         </mrow>
       </md>
     </p>
