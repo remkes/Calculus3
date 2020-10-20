@@ -30,7 +30,26 @@
             <caption>
               <m>\gamma(t) = (t^2, t^3) </m>
             </caption>
-            <image width="100%" source="images/figure52" />
+            <image xml:id="figure52" width="90%">
+              <asymptote>
+                import graph;
+                size(10cm,10cm);
+
+                xaxis("$x$");
+                yaxis("$y$");
+
+                real x(real t) {return t^2;}
+                real y(real t) {return (1/8)*t^3;}
+
+                dot("$t=0\mapsto(0,0)$",(0,0),NW);
+                dot("$t=2\mapsto(4,8)$",(4,1),NW);
+                dot("$t=-2\mapsto(4,-8)$",(4,-1),SW);
+                dot("$t=3\mapsto(9,27)$",(9,3.375),NW);
+                dot("$t=-3\mapsto(9,-27)$",(9,-3.375),SW);
+                
+                draw(graph(x,y,-3,3),Arrow);
+              </asymptote>
+            </image>
           </figure>
         </p>
       </solution>
@@ -63,7 +82,33 @@
             <caption>
               <m>\gamma(t) = (\cos t, 2 \sin t) </m>
             </caption>
-            <image width="100%" source="images/figure53" />
+            <image xml:id="figure53" width="90%">
+              <asymptote>
+                import graph;
+                size(10cm,10cm);
+
+                xaxis("$x$");
+                yaxis("$y$");
+
+                real x(real t) {return cos(t);}
+                real y(real t) {return 2*sin(t);}
+
+                draw(graph(x,y,0,2*pi),Arrow);
+
+                dot("$t=0\mapsto(1,0)$",(1,0),NE);
+                dot("$t=\frac{\pi}{4}\mapsto\left(\frac{1}{\sqrt{2}},
+                \sqrt{2}\right)$",(0.707,1.414),NE);
+                dot("$t=\frac{\pi}{2}\mapsto(0,2)$",(0,2),NE);
+                dot("$t=\frac{3\pi}{4}\mapsto\left(\frac{-1}{\sqrt{2}},
+                \sqrt{2}\right)$",(-0.707,1.414),NW);
+                dot("$t=\pi\mapsto(-1,0)$",(-1,0),NW);
+                dot("$t=\frac{5\pi}{4}\mapsto\left(\frac{-1}{\sqrt{2}},
+                -\sqrt{2}\right)$",(-0.707,-1.414),SW);
+                dot("$t=\frac{3\pi}{2}\mapsto(0,-2)$",(0,-2),SW);
+                dot("$t=\frac{7\pi}{4}\mapsto\left(\frac{1}{\sqrt{2}},
+                -\sqrt{2}\right)$",(0.707,-1.414),SE);
+              </asymptote>
+            </image>
           </figure>
         </p>
       </solution>
@@ -99,7 +144,34 @@
               <m>\gamma(t) = (4 \cos t + \sin 2t, 4 \sin t + \cos 2t)
               </m>
             </caption>
-            <image width="100%" source="images/figure54" />
+            <image xml:id="figure54" width="100%">
+              <asymptote>
+                import graph;
+                size(15cm,15cm);
+
+                xaxis("$x$");
+                yaxis("$y$");
+
+                real x(real t) {return 4*cos(t) + sin(2*t);}
+                real y(real t) {return 4*sin(t) + cos(2*t);}
+
+                draw(graph(x,y,0,2*pi),Arrow);
+
+                dot("$t=0\mapsto(4,1)$",(4,1),E);
+                dot("$t=\frac{\pi}{2}\mapsto(0,3)$",(0,3),NE);
+                dot("$t=\pi\mapsto(-4,1)$",(-4,1),W);
+                dot("$t=\frac{3\pi}{2}\mapsto(0,-5)$",(0,-5),SW);
+
+                dot("$t=\frac{\pi}{4}\mapsto\left(2\sqrt{2}+1,
+                2\sqrt{2}\right)$",(3.828,2.828),NE);
+                dot("$t=\frac{3\pi}{4}\mapsto\left(-2\sqrt{2}-1,
+                2\sqrt{2}\right)$",(-3.828,2.828),NW);
+                dot("$t=\frac{5\pi}{4}\mapsto\left(-2\sqrt{2}+1,
+                2\sqrt{2}\right)$",(-1.828,-2.828),SW);
+                dot("$t=\frac{7\pi}{4}\mapsto\left(2\sqrt{2}-1,
+                2\sqrt{2}\right)$",(1.828,-2.828),SE);
+              </asymptote>
+            </image>
           </figure>
         </p>
       </solution>
@@ -131,7 +203,30 @@
             <caption>
               <m>\gamma(t) = (3-t^2,t)</m>
             </caption>
-            <image width="100%" source="images/figure55" />
+            <image xml:id="figure55" width="90%">
+              <asymptote>
+                import graph;
+                size(15cm,15cm);
+
+                xaxis("$x$");
+                yaxis("$y$");
+
+                real x(real t) {return 3-t^2;}
+                real y(real t) {return t;}
+
+                draw(graph(x,y,-4,4),Arrow);
+
+                dot("$t=0\mapsto(3,0)$",(3,0),NE);
+                dot("$t=1\mapsto(2,1)$",(2,1),NE);
+                dot("$t=-1\mapsto(2,-1)$",(2,-1),SE);
+                dot("$t=2\mapsto(-1,2)$",(-1,2),NE);
+                dot("$t=-2\mapsto(-1,-2)$",(-1,-2),SE);
+                dot("$t=3\mapsto(-6,3)$",(-6,3),NE);
+                dot("$t=-3\mapsto(-6,-3)$",(-6,-3),SE);
+                dot("$t=4\mapsto(-13,4)$",(-13,4),NE);
+                dot("$t=-4\mapsto(-13,-4)$",(-13,-4),SE);
+              </asymptote>
+            </image>
           </figure>
         </p>
       </solution>
@@ -165,7 +260,36 @@
               <m>\gamma(t) = \left( \frac{\pi^2}{t^2} \cps t,
               \frac{\pi^2}{t^2} \sin t \right) </m>
             </caption>
-            <image width="100%" source="images/figure56" />
+            <image xml:id="figure56" width="90%">
+              <asymptote>
+                import graph;
+                size(15cm,15cm);
+
+                xaxis("$x$");
+                yaxis("$y$");
+
+                real x(real t) {return (pi)^2*(1/t)^2*cos(t);}
+                real y(real t) {return (pi)^2*(1/t)^2*sin(t);}
+
+                draw(graph(x,y,pi,4*pi),Arrow);
+
+                dot("$t=\pi\mapsto(-1,0)$",(-1,0),NW);
+                dot("$t=\frac{3\pi}{2}\mapsto\left( 0,\frac{4}{9}
+                \right)$",(0,-0.444),SE);
+                dot("$t=2\pi\mapsto\left( \frac{1}{4},0
+                \right)$",(0.25,0),NE);
+                dot("$t=\frac{5\pi}{2}\mapsto\left( 0,\frac{4}{25}
+                \right)$",(0,0.16),NE);
+                dot("$t=3\pi\mapsto\left( \frac{-1}{9},0
+                \right)$",(-0.111,0),NW);
+                dot("$t=\frac{7\pi}{2}\mapsto\left( 0,\frac{4}{49}
+                \right)$",(0,-0.082),SW);
+                dot((0.063,0));
+                draw((0.063,0)--(0.3,-0.2),dashed);
+                label("$t=4\pi\mapsto\left( \frac{1}{16},0
+                \right)$",(0.3,-0.2),E);
+              </asymptote>
+            </image>
           </figure>
         </p>
       </solution>
@@ -195,7 +319,32 @@
             <caption>
               <m>\gamma(t) = (\sqrt{t}, \sqrt[3]{t})</m>
             </caption>
-            <image width="100%" source="images/figure57" />
+            <image xml:id="figure57" width="90%">
+              <asymptote>
+                import graph;
+                size(15cm,15cm);
+
+                xaxis("$x$");
+                yaxis("$y$");
+
+                real x(real t) {return sqrt(t);}
+                real y(real t) {return t^(1/3);}
+
+                draw(graph(x,y,0,100),Arrow);
+
+                dot("$t=0\mapsto(0,0)$",(0,0),SE);
+                dot("$t=20\mapsto(\sqrt{20},\sqrt[3]{20})$",
+                (4.47,2.71),SE);
+                dot("$t=40\mapsto(\sqrt{40},\sqrt[3]{40})$",
+                (6.32,3.42),NW);
+                dot("$t=60\mapsto(\sqrt{60},\sqrt[3]{60})$",
+                (7.74,3.91),SE);
+                dot("$t=80\mapsto(\sqrt{80},\sqrt[3]{80})$",
+                (8.94,4.31),NW);
+                dot("$t=1000\mapsto(\sqrt{1000},\sqrt[3]{1000})$",
+                (10,4.64),SE);
+              </asymptote>
+            </image>
           </figure>
         </p>
       </solution>
@@ -225,7 +374,43 @@
             <caption>
               <m>r(t) = t</m> and <m>\theta(t) = t</m>
             </caption>
-            <image width="100%" source="images/figure58" />
+            <image xml:id="figure58" width="90%">
+              <asymptote>
+                import graph; size(15cm,15cm);
+
+                xaxis("$x$");
+                yaxis("$y$");
+
+                real x(real t) {return t*cos(t);}
+                real y(real t) {return t*sin(t);}
+
+                draw(graph(x,y,0,4*pi),Arrow);
+
+                dot((0,0));
+                dot((0,1.57));
+                dot((-3.14,0));
+                dot("$t=\frac{3\pi}{2} \mapsto \left(0, \frac{-3\pi}{2}
+                \right)$",(0,-4.71),SE);
+                dot("$t=2\pi \mapsto (2\pi, 0)$", (6.28,0),NE);
+                dot("$t=\frac{5\pi}{2} \mapsto \left(0, \frac{5\pi}{2}
+                \right)$",(0,7.85),NE);
+                dot("$t=3\pi \mapsto (-3\pi, 0)$", (-9.42,0),SW);
+                dot("$t=\frac{7\pi}{2} \mapsto \left(0, \frac{-7\pi}{2}
+                \right)$",(0,-11),SE);
+                dot((12.57,0),SE);
+
+                label("$t=0\mapsto(0,0)$",(8,3),NE);
+                label("$t=\frac{\pi}{2} \mapsto \left(0, \frac{\pi}{2}
+                \right)$",(6,6),NE);
+                label("$t=\pi \mapsto (-\pi, 0)$", (-11,4),NW);
+                label("$t=4\pi \mapsto (4\pi, 0)$", (12.57,-5),SE);
+
+                draw((0,0)--(8,3),dotted);
+                draw((0,1.57)--(6,6),dotted);
+                draw((-3.14,0)--(-11,4),dotted);
+                draw((12.57,0)--(12.57,-5),dotted);
+              </asymptote>
+            </image>
           </figure>
         </p>
       </solution>
@@ -257,7 +442,43 @@
             <caption>
               <m>r(t) = 4 + \sin t</m> and <m>\theta(t) = t</m>
             </caption>
-            <image width="100%" source="images/figure59" />
+            <image xml:id="figure59" width="90%">
+              <asymptote>
+                import graph; 
+                size(20cm,20cm);
+
+                xaxis("$x$");
+                yaxis("$y$");
+
+                real x(real t) {return (4+sin(t))*cos(t);}
+                real y(real t) {return (4+sin(t))*sin(t);}
+
+                draw(graph(x,y,0,4*pi),Arrow);
+
+                dot("$t=0 \mapsto (4, 0)$", (4,0),NE);
+                dot("$t=\frac{\pi}{4} \mapsto
+                \left(\left(4+\frac{1}{\sqrt{2}}\right) \frac{1}{\sqrt{2}},
+                \left(4+\frac{1}{\sqrt{2}}\right) \frac{1}{\sqrt{2}}
+                \right)$",(3.33,3.33),NE);
+                dot("$t=\frac{\pi}{2} \mapsto (0,5)$",(0,5),NE);
+                dot("$t=\frac{3\pi}{4} \mapsto
+                \left(\left(4+\frac{1}{\sqrt{2}}\right)
+                \frac{-1}{\sqrt{2}},\left(4+\frac{1}{\sqrt{2}}\right)
+                \frac{1}{\sqrt{2}} \right)$",
+                (-3.33,3.33),NW);
+                dot("$t=\pi \mapsto (-4,0)$",(-4,0),SW);
+                dot("$t=\frac{5\pi}{4} \mapsto
+                \left(\left(4-\frac{1}{\sqrt{2}}\right)
+                \frac{-1}{\sqrt{2}}, \left(4-\frac{1}{\sqrt{2}}\right)
+                \frac{-1}{\sqrt{2}} \right)$", (-2.33,-2.33),SW);
+                dot("$t=\frac{3\pi}{2} \mapsto (0,-3)$",(0,-3),SE);
+                dot("$t=\frac{7\pi}{4} \mapsto
+                \left(\left(4-\frac{1}{\sqrt{2}}\right) \frac{1}{\sqrt{2}},
+                \left(4-\frac{1}{\sqrt{2}}\right) \frac{-1}{\sqrt{2}}
+                \right)$", (2.33,-2.33),SE);
+                dot("$t=2\pi \mapsto (4,0)$",(4,0),SE);
+              </asymptote>
+            </image>
           </figure>
         </p>
       </solution>
@@ -287,7 +508,32 @@
             <caption>
               <m>r(t) = 2^{-t}</m> and <m>\pi 2^t</m>
             </caption>
-            <image width="100%" source="images/figure60" />
+            <image xml:id="figure60" width="90%">
+              <asymptote>
+                import graph; 
+                size(15cm,15cm);
+
+                xaxis("$x$");
+                yaxis("$y$");
+
+                real x(real t) {return 2^(-1*t)*cos(pi*2^t);}
+                real y(real t) {return 2^(-1*t)*sin(pi*2^t);}
+
+                draw(graph(x,y,-2,2),Arrow);
+
+                dot("$t=-2 \mapsto \left(2\sqrt{2},2\sqrt{2}\right)$",
+                (2.83,2.83),SE);
+                dot("$t=-1 \mapsto (0,2)$", (0,2),NW);
+                dot("$t=0 \mapsto (-1,0)$", (-1,0),SW);
+                dot("$t=1 \mapsto \left(\frac{1}{2},0\right)$",
+                (0.5,0),SE);
+                dot((0.25,0));
+
+                draw((0.25,0)--(0.75,0.75),dotted);
+                label("$t=2 \mapsto \left(\frac{1}{4},0\right)$",
+                (0.75,0.75),E);
+              </asymptote>
+            </image>
           </figure>
         </p>
       </solution>

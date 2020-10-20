@@ -208,8 +208,16 @@
           <me>
             \gamma(t) = (t \cos t, t \sin t, ht)
           </me>
-          Interpret the curve using the three scalar. In particular,
-          describe the long term behaviour of the curse. 
+          Interpret the curve using the three scalars, focusing on the
+          asymptotic behaviour.  (The numbers
+          are functions get very hectic in this example -- it is very
+          hard to construct examples where the functions don't quickly
+          grow difficult. Use a computer to do the derivatives and
+          cross product to save yourself some calculation. I used
+          Wolfram Alpha for all the derivatives and cross products,
+          and some of the algebraic simplifications as well. By the
+          time you get to <m>B^\prime</m>, expect some complicated
+          results.) 
         </p>
       </statement>
       <solution>
@@ -226,7 +234,7 @@
               z^\prime(t)) = (3t^2, -2t, 2t) 
             </mrow>
             <mrow>
-              v(t) = |\gamma^\prime(t)| \amp = \sqrt{x^\prime(t)^2 +
+              v(t) \amp = |\gamma^\prime(t)| = \sqrt{x^\prime(t)^2 +
               y^\prime(t)^2 + z^\prime(t)^2 }
             </mrow>
             <mrow>
@@ -234,44 +242,93 @@
             </mrow>
             <mrow>
               T(t) \amp = \frac{\gamma^\prime(t)}{|\gamma^\prime(t)|} =
-              \frac{1}{t\sqrt{9t^2 + 4}} \left( 3t^2, -2t, 2t) =
-              \left( \frac{3t}{\sqrt{9t^2+4}} 
-              \frac{-2}{\sqrt{9t^2+4}} 
-              \frac{2}{\sqrt{9t^2+4}} \right) 
+              \frac{1}{t\sqrt{9t^2 + 4}} \left( 3t^2, -2t, 2t \right)
+            </mrow>
+            <mrow>
+              \amp = \left( \frac{3t}{\sqrt{9t^2+4}}
+              \frac{-2}{\sqrt{9t^2+4}} \frac{2}{\sqrt{9t^2+4}} \right)
             </mrow>
             <mrow>
               T^\prime(t) \amp = \left( \frac{12}{(9t^2 +
-              4)^{\frac{3}{2}}, \frac{-18t}{(9t^2+4)^{\frac{3}{2}}},
-              \frac{18t}{(9t^2+4)^{\frac{3}{2}}} \right) =
-              \frac{1}{(9t^2+4)^{frac{3}{2}}} (12, -18t, 18t)
+              4)^{\frac{3}{2}}}, \frac{-18t}{(9t^2+4)^{\frac{3}{2}}},
+              \frac{18t}{(9t^2+4)^{\frac{3}{2}}} \right) 
             </mrow>
             <mrow>
-              |T^\prime(t)| \amp = \frac{1}{(9t^2+4)^{\frac{3}{2}}} \sqrt{
-              144 + 324t^2 + 324t^2} = \frac{1}{(9t^2+4)^{\frac{3}{2}}} \sqrt{
-              144 + 648t^2} = 
+              \amp = \frac{1}{(9t^2+4)^{\frac{3}{2}}} (12, -18t, 18t)
             </mrow>
             <mrow>
-              \kappa(t) \amp = \frac{|T^\prime(t)|}{|\gamma^\prime(t)|} =
+              |T^\prime(t)| \amp = \frac{1}{(9t^2+4)^{\frac{3}{2}}}
+              \sqrt{144 + 324t^2 + 324t^2} =
+              \frac{1}{(9t^2+4)^{\frac{3}{2}}} \sqrt{144 + 648t^2}
+            </mrow>
+            <mrow>
+              \kappa(t) \amp =
+              \frac{|T^\prime(t)|}{|\gamma^\prime(t)|} =
               \frac{\frac{1}{(9t^2+4)^{\frac{3}{2}}} \sqrt{ 144 +
-              648t^2}}{\sqrt{ 9t^4 + 4t^2 + 4t^2} = t \sqrt{9t^2 + 4}}
+              648t^2}}{\sqrt{ 9t^4 + 4t^2}} = \frac{144 + 648
+              t^2}{(9t^2+4)^2}
             </mrow>
             <mrow>
-              \amp = \frac{144 + 648 t^2}{(9t^2+4)^2}
+              N(t) \amp = \frac{T^\prime(t)}{|T^\prime(t)|}
+              \frac{1}{\sqrt{144 + 648t^2}} \left( 12, -18t, 18t
+              \right) 
             </mrow>
             <mrow>
-              N(t) \amp = \frac{1}{\sqrt{144 + 648t^2} \left( 12, -18t,
-              18t \right) = \left( \frac{12}{\sqrt{144 + 648t^2},
-              \frac{-18}{\sqrt{144 + 648t^2}, \frac{-18}{\sqrt{144 +
-              648t^2} \right)
+              B(t) \amp = T(t) \times N(t) = \frac{1}{\sqrt{9t^2+4}}
+              (3t, -2, -2) \times \frac{1}{\sqrt{144+684t^2}} (12,
+              -18t, 18t)
             </mrow>
             <mrow>
-              B(t) \amp = T(t) \times N(t)
+              \amp = \frac{1}{\sqrt{(9t^2+4)(144+648t^2)}} \left[ 
+              (3t, -2, -2) \times (12, -18t, 18t) \right] 
+            </mrow>
+            <mrow>
+              \amp = \frac{1}{\sqrt{5832t^4 + 3888t^2 + 576}} (-72t,
+              -24 - 54t^2, 24 - 54t^2)
+            </mrow>
+            <mrow>
+              B^\prime(t) \amp = \frac{1}{(81t^4 +54t^2 +
+              8)^{\frac{3}{2}}} \left( 6\sqrt{2} (81t^4 - 8),
+              9\sqrt{2} t(9t^2 + 4), -9\sqrt{2}t (63t^2 + 20) \right) 
             </mrow>
             <mrow>
               \tau(t) \amp = - \frac{B^\prime(t)}{|\gamma^\prime(t)|}
               \cdot N(t)
             </mrow>
+            <mrow>
+              \amp = \frac{-\left( 12(6\sqrt{2}) (81t^4 - 8) -
+              18t(9\sqrt{2})(9t^2 + 4) - 18t(9\sqrt{2})(63t^2 + 20)
+              \right)}{t\sqrt{(9t^2+4)(81t^4 + 54t^2 + 8)^3}}
+            </mrow>
+            <mrow>
+              \amp = \frac{-\sqrt{2}}{t\sqrt{(9t^2+4)(81t^4 + 54t^2 +
+              8)^3}} (5832t^4 - 11664t^2 - 4464)
+            </mrow>
           </md>
+          As I warned you, this got pretty intense. However, let's
+          look at the asymptotic order of the three scalars. 
+          <md>
+            <mrow>  
+              v \amp \cong t^2 
+            </mrow>
+            <mrow>
+              \kappa \amp \cong \frac{1}{t^2} 
+            </mrow>
+            <mrow>
+              \tau \amp \cong \frac{t^4}{t^9} = \frac{1}{t^5}
+            </mrow>
+          </md>
+          The speed is increasing. This makes sense, since the
+          components are cubic and quadratic. The curve covers more
+          distance as the inputs to these polynomials become large.
+          The curvature starts out significant, incidating a curving
+          shape at the start. However, asymptotically, the curvature
+          drops to zero, making this approach a straight line.
+          Something similar is true for torsion. Torsion is large when
+          <m>t</m> is small, showing the twisting of the curve near
+          the origin. Asymptotically, torsion decays very quickly, so
+          the twisting quickly become insignificant as the curve
+          straightens out.
         </p>
       </solution>
     </activity>
