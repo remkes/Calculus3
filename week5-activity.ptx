@@ -152,7 +152,7 @@
           To convert, we simply replace <m>r</m> and <m>/theta</m>
           with their cartesian equavalents. 
           <me>
-            \sqrt{x^2 + y^2} + \arctan \left( \fac{y}{x} \right) = 0 
+            \sqrt{x^2 + y^2} + \arctan \left( \frac{y}{x} \right) = 0 
           </me>
           We could try to simplify, but I don't see any changes that
           make the equation substantially more succinct. 

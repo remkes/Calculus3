@@ -12,16 +12,17 @@
     <definition>
       <statement>
         <p>
-          A <term>scalar function</term> is a function <m>f: \RR^n
-          \rightarrow \RR</m>.
+          A <term>scalar function</term> of <term>scalar field</term>
+          is a function <m>f: \RR^n \rightarrow \RR</m>.
         </p>
       </statement>
     </definition>
     <definition>
       <statement>
         <p>
-          A <term>vector function</term> is a function <m>f: \RR^n
-          \rightarrow \RR^m</m> for <m>m > 1</m>.
+          A <term>vector function</term> or <term>vector field</term> 
+          is a function <m>f: \RR^n \rightarrow \RR^m</m> for <m>m >
+          1</m>.
         </p>
       </statement>
     </definition>
