@@ -1003,7 +1003,7 @@
               s(t) \amp = \int_4^{4+t^2} \frac{\sqrt{v}}{2} dv 
             </mrow>
             <mrow>
-              \amp = \frac{v^{\frac{3}{2}}}{3} \Big_4^{4+t^2} =
+              \amp = \frac{v^{\frac{3}{2}}}{3} \Big|_4^{4+t^2} =
               \frac{(4 +t^2)^{\frac{3}{2}}}{3} - \frac{1}{3} 
             </mrow>
           </md>
@@ -1033,11 +1033,13 @@
           arclength. 
           <md>
             <mrow>
-              \sqrt{(3s + 1)^{\frac{2}{3}} - 4} 
-              \gamma(s) \amp = \left( 
+              \amp \sqrt{(3s + 1)^{\frac{2}{3}} - 4} 
+              \gamma(s) \amp = \amp \left( 
               \left((3s + 1)^{\frac{2}{3}} - 4 \right) 
               \cos \left( \sqrt{(3s + 1)^{\frac{2}{3}} - 4} \right), 
-              \left( (3s + 1)^{\frac{2}{3}} - 4 \right) 
+            </mrow>
+            <mrow>
+              \amp \amp \amp \left( (3s + 1)^{\frac{2}{3}} - 4 \right) 
               \sin \left( \sqrt{(3s + 1)^{\frac{2}{3}} - 4} \right)
               \right) 
             </mrow>
@@ -1088,7 +1090,7 @@
           integral. 
           <md>
             <mrow>
-              s(t) \amp =  \frac{1}{2} \left( \sqrt{ 1 + 16t^4 -
+              s(t) \amp =  \frac{1}{2} \left( \sqrt{1 + 16t^4} -
               \arctanh \left( \sqrt{ 1 + 16t^4 \right) - \sqrt{17} +
               \arctanh (17) \right) 
             </mrow>
@@ -1159,7 +1161,7 @@
           <md>
             <mrow>
               s(t) \amp = \frac{1}{2} \left( \sqrt{(t-2)^2 + 1} +
-              \arcsinh t - 2 - \sqrt{3} - \arcsinh (-2)} 
+              \arcsinh t - 2 - \sqrt{3} - \arcsinh (-2)} \right)  
             </mrow>
           </md>
           This is not algebraically invertible. All I can do is
