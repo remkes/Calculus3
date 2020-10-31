@@ -9,12 +9,18 @@
           limit doesn't exist, describe the behaviour approaching the
           limit point. 
           <me>
-            \lim_{(x,y) \rightarrow (3,4)} \frac{x^ + y^2}{x - y + 3}
+            \lim_{(x,y) \rightarrow (3,4)} \frac{x^2 + y^2}{x - y + 3}
           </me>
         </p>
       </statement>
       <solution>
         <p>
+          This limit can be directly evaluated, since there are no
+          division by zero (or similar) problems. 
+          <me>
+            \lim_{(x,y) \rightarrow (3,4)} \frac{x^2 + y^2}{x - y + 3}
+            = \frac{3^2 + 4^2}{3-4+3} = \frac{25}{2}
+          </me>
         </p>
       </solution>
     </activity>
@@ -32,6 +38,22 @@
       </statement>
       <solution>
         <p>
+          I can factor <m>xy</m> out of the numerator and the
+          denominator.
+          <me>
+            \lim_{(x,y) \rightarrow (0,0)} \frac{xy + x^2y +
+            xy^2}{x^2y + 3xy} = 
+            \lim_{(x,y) \rightarrow (0,0)} \frac{xy(1 + x +
+            y)}{xy(x + 3)} = 
+            \lim_{(x,y) \rightarrow (0,0)} \frac{1 + x +
+            y}{x + 3} 
+          </me>
+          After this <m>xy</m> term is cancelled out, the remaining
+          limit can just be evaluted.
+          <me>
+            \lim_{(x,y) \rightarrow (0,0)} \frac{1 + x +
+            y}{x + 3} = \frac{1 + 0 + 0}{0 + 3} = \frac{1}{3} 
+          </me>
         </p>
       </solution>
     </activity>
@@ -48,6 +70,10 @@
       </statement>
       <solution>
         <p>
+          The numerator approaches <m>4</m> and the denominator
+          approaches <m>0</m>, so the limit must diverge to <m>\pm
+          \infty</m>. Whether it diverges to positive or negative
+          <m>\infty</m> will depend on the direction of approach.
         </p>
       </solution>
     </activity>
@@ -64,6 +90,11 @@
       </statement>
       <solution>
         <p>
+          This limit can be directly evaluted. 
+          <me>
+            \lim_{(x,y) \rightarrow (-3,0)} \frac{x^2 + 1}{y^2 - 4} =
+            \frac{(-3)^1 + 1}{0^2 - 4} = \frac{10}{-4} = \frac{-5}{2} 
+          </me>
         </p>
       </solution>
     </activity>
@@ -80,6 +111,10 @@
       </statement>
       <solution>
         <p>
+          The numerator approaches <m>17</m> and the denominator
+          approaches <m>0</m>, so the limit must diverge to <m>\pm
+          \infty</m>. Whether it diverges to positive or negative
+          <m>\infty</m> will depend on the direction of approach.
         </p>
       </solution>
     </activity>
@@ -97,6 +132,35 @@
       </statement>
       <solution>
         <p>
+          I will try to prove that this limit does not exist by
+          approaches along a variety of lines. I do this by setting
+          <m>y = mx</m>, turing this into a single variable limit in
+          <m>x</m>. 
+          <me>
+            \lim_{(x,y) \rightarrow (0,0)} \frac{4x^2 - 3xy -
+            y^2}{2x^2 + xy - 5y^2} = \lim_{x \rightarrow 0} \frac{4x^2
+            - 3xmx - m^2x^2}{2x^2 + xmx - 5m^2 x^2}
+          </me>
+          Then I can factor <m>x^2</m> out of numerator and
+          denominator. 
+          <me>
+            \lim_{x \rightarrow 0} \frac{4x^2 - 3mx^2 - m^2x^2}{2x^2 -
+            mx^2 - 5m^2 x^2} = 
+            \lim_{x \rightarrow 0} \frac{x^2(4 - 3m - m^2)}{x^2 (2 - m
+            - 5m^2)} = 
+            \lim_{x \rightarrow 0} \frac{4 - 3m - m^2}{2 - m - 5m^2} 
+          </me>
+          Then I can just evaluate the limit, since there are no
+          <m>x</m> variables left at all..
+          <me>
+            \lim_{x \rightarrow 0} \frac{4 - 3m - m^2}{2 - m - 5m^2} = 
+            \frac{4 - 3m - m^2}{2 - m - 5m^2} 
+          </me>
+          Now I can argue that the limit depends on the slope of the
+          line of approach. If <m>m=0</m>, the limit is <m>\frac{4}{2}
+          = 2</m>. If <m>m=1</m>, the limit is <m>\frac{4 - 3 - 1}{2 -
+          1 - 5} = 0</m>. Since the limit depends on the direction of
+          approach, the limit does not exist. 
         </p>
       </solution>
     </activity>
@@ -114,6 +178,12 @@
       </statement>
       <solution>
         <p>
+          This limit can be directly evaluted.
+          <me>
+            \lim_{(x,y,z) \rightarrow (0,0,0)} \frac{z^2 - xy + y^2 -
+            4}{5xy^2 - xyz + 3} = \frac{0 - 0 + 0 - 4}{0 - 0 + 3} =
+            \frac{-4}{3} 
+          </me>
         </p>
       </solution>
     </activity>
@@ -131,6 +201,35 @@
       </statement>
       <solution>
         <p>
+          I want to argue that this limit doesn't exist by approaching
+          along various lines. I can set <m>y = mx</m> and <m>z =
+          mx</m> to make this a single-variable limit approach along
+          some lines which depend on the parameter <m>m</m>. (There
+          aren't all possible lines of approach, but all I need to
+          show is that there are at least a few directions which lead
+          to different values). 
+          <me>
+            \lim_{(x,y,z) \rightarrow (0,0,0)} \frac{xy - y^2 +
+            yz}{z^2 - 3xy + x^2} = \lim_{x \rightarrow 0} \frac{xmx -
+            m^2x^2 + m^2x^2}{m^2x^2 - 3mxx + x^2} 
+          </me>
+          Then I can simplify, factor our <m>x^2</m>, cancel it off,
+          and evlaute the limit. 
+          <md>
+            <mrow>
+              \lim_{x \rightarrow 0} \frac{mx^2 - m^2x^2 +
+              m^2x^2}{m^2x^2 - 3mx^2 + x^2} \amp = 
+              \lim_{x \rightarrow 0} \frac{mx^2}{x^2(m^2 - 3m + 1)} 
+            </mrow>
+            <mrow>
+              \amp = \lim_{x \rightarrow 0} \frac{m}{m^2 - 3m + 1} =
+              \frac{m}{m^2 - 3m + 1} 
+            </mrow>
+          </md>
+          I get a result which does depend on the direction of
+          approach, determined by the parameter <m>m</m>. The limit
+          approaches a variety of values based on this parameter, so
+          the limit cannot exist. 
         </p>
       </solution>
     </activity>
@@ -148,23 +247,15 @@
       </statement>
       <solution>
         <p>
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Calculate this limit or prove that is does not exist. If the
-          limit doesn't exist, describe the behaviour approaching the
-          limit point. 
-          <me>
-            \lim_{(x,y,z) \rightarrow (0,0,0)} \ln \left(
-            \frac{xy}{y^2 + z^2 +x^3} \right)
-          </me>
-        </p>
-      </statement>
-      <solution>
-        <p>
+          I can work out this limit logically. As we approach the
+          origin, the denoimnator approaches <m>0</m>. The absolute
+          value ensure that the denominator, hence the whole limit, is
+          positive. Since the numerator is fixed, the fraction is
+          approaching <m>\infty</m>. Then I apply the arctangent
+          function. That function has a horizontal asymptote at <m>y =
+          \frac{\pi}{2}</m> as  the input goes to <m>\infty</m>.
+          Therefore, I can conclude that this limit approaches
+          <m>\frac{\pi}{2}</m>.
         </p>
       </solution>
     </activity>
@@ -182,10 +273,12 @@
       </statement>
       <solution>
         <p>
-          We differetiate in the VARIABLE variable, treating other
+          I differetiate in the <m>x</m> variable, treating other
           variables as constant. 
           <md>
             <mrow>
+              \frac{\del}{\del x} 4x^2 - 4y^2 + 3xy + 4 \amp = 8x - 0
+              + 3y = 8x + 3y 
             </mrow>
           </md>
         </p>
@@ -202,10 +295,17 @@
       </statement>
       <solution>
         <p>
-          We differetiate in the VARIABLE variable, treating other
+          I differetiate in the <m>y</m> variable, treating other
           variables as constant. 
           <md>
             <mrow>
+              \frac{\del}{\del y} \cos (3x^2 + 4y^2) \amp = \frac{d}{du}
+              \cos u \Bigg|_{u=3x^2 + 4y^2} \frac{d}{dy} (3x^2 +
+              4y^2) 
+            </mrow>
+            <mrow>
+              \amp = -\sin u \Bigg|_{u = 3x^2 + 4y^2} (6x) = -6x \sin
+              (3x^2 + 4y^2) 
             </mrow>
           </md>
         </p>
@@ -222,10 +322,13 @@
       </statement>
       <solution>
         <p>
-          We differetiate in the VARIABLE variable, treating other
+          I differetiate in the <m>z</m> variable, treating other
           variables as constant. 
           <md>
             <mrow>
+              \frac{\del}{\del z} \ln (xyz) \amp = \frac{d}{du} \ln u
+              \Bigg|_{u = xyz} \frac{\del}{\del z} xyz = \frac{1}{u}
+              \Bigg|_{u = xyz} xy = \frac{xy}{xyz} = \frac{1}{z}
             </mrow>
           </md>
         </p>
@@ -242,10 +345,35 @@
       </statement>
       <solution>
         <p>
-          We differetiate in the VARIABLE variable, treating other
-          variables as constant. 
+          I differetiate in the <m>x</m> variable twice, treating other
+          variables as constant. I use the chain rule in the first
+          step, and then the product rule and the chain rule for the
+          second partial derivative.
           <md>
             <mrow>
+              \frac{\del^2}{\del x^2} e^{x^2 + y^2} \amp = \frac{\del}{\del
+              x} \left[ \frac{d}{du} e^u \Bigg|_{u = x^2 + y^2}
+              \frac{\del}{\del x} (x^2 + y^2) \right]
+            </mrow>
+            <mrow>
+              \amp = \frac{\del}{\del x} \left[ e^u \Bigg|_{u = x^2 +
+              y^2} (2x) \right] = \frac{\del}{\del x} 2xe^{x^2 + y^2}
+            </mrow>
+            <mrow>
+              \amp = \frac{\del}{\del x} (2x) (e^{x^2+y^2} + 2x
+              \frac{\del}{\del x} e^{x^2 + y^2} 
+            </mrow>
+            <mrow>
+              \amp = 2e^{x^2 + y^2} + 2x
+              \frac{d}{du} e^u \Bigg|_{u = x^2 + y^2} \frac{\del}{\del
+              x} (x^2 + y^2) 
+            </mrow>
+            <mrow>
+              \amp = 2e^{x^2 + y^2} + 2x e^u \Bigg|_{u = x^2 + y^2}
+              (2x) = 2e^{x^2 + y^2} + 4x^2 e^{x^2 + y^2}
+            </mrow>
+            <mrow>
+              \amp = (2+4x^2) e^{x^2 + y^2} 
             </mrow>
           </md>
         </p>
@@ -263,10 +391,16 @@
       </statement>
       <solution>
         <p>
-          We differetiate in the VARIABLE variable, treating other
+          I differetiate in the <m>y</m> variable twice, treating other
           variables as constant. 
           <md>
             <mrow>
+              \frac{\del^2}{\del y^2} x^2 + 3y^2 + 4y^2 x^3 - 5x^3 y +
+              8y^4 = \frac{\del}{\del y} \left[ 0 + 6y + 8yx^3 - 5x^3
+              + 32y^3 \right]
+            </mrow>
+            <mrow>
+              = 6 + 8x^3 - 0 + 96y^2 = 6 + 8x^3 + 96y^2  
             </mrow>
           </md>
         </p>
@@ -283,10 +417,16 @@
       </statement>
       <solution>
         <p>
-          We differetiate in the VARIABLE variable, treating other
+          I differetiate in the <m>z</m> variable twice, treating other
           variables as constant. 
           <md>
             <mrow>
+              \frac{\del^2}{\del z^2} xyz + x^2yz - xy^2z - xyz^2 \amp =
+              \frac{\del}{\del z} \left[ xy + x^2y - xy^2 + 2xyz
+              \right] 
+            </mrow>
+            <mrow>
+              = 0 + 0 - 0 + 2xy = 2xy 
             </mrow>
           </md>
         </p>
@@ -303,10 +443,31 @@
       </statement>
       <solution>
         <p>
-          We differetiate in the VARIABLE variable, treating other
-          variables as constant. 
+          I differetiate in <m>y</m> and then in <m>x</m>, in each
+          step treating other variables as constant. I use the chain
+          rule in the first derivative, then product rule and chain
+          rule in the second derivative. 
           <md>
             <mrow>
+              \frac{\del^2}{\del x \del y} \sin (xy) \amp =
+              \frac{\del}{\del x} \left[ \frac{d}{du} \sin u \Bigg|_{u
+              = xy} \frac{\del}{\del y} xy \right] 
+            </mrow>
+            <mrow>
+              \amp = \frac{\del}{\del x} \left[ \cos u \Bigg|_{u = xy}
+              (x) = \frac{\del}{\del x} x \cos (xy) \right] 
+            </mrow>
+            <mrow>
+              \amp = \left( \frac{\del}{\del x} x \right) \cos (xy) + x
+              \frac{\del}{\del x} \cos xy 
+            </mrow>
+            <mrow>
+              \amp = 1 \cos (xy) + x \frac{d}{du}
+              \cos u \Bigg|_{u = xy} \frac{\del}{\del x} xy 
+            </mrow>
+            <mrow>
+              \amp = \cos (xy) - x \sin u \Bigg|_{u = xy} (y) 
+              = \cos (xy) - xy \sin (xy) 
             </mrow>
           </md>
         </p>
@@ -323,10 +484,30 @@
       </statement>
       <solution>
         <p>
-          We differetiate in the VARIABLE variable, treating other
-          variables as constant. 
+          I differetiate in <m>y</m> and then in <m>x</m>, in each
+          step treating other variables as constant. I use the chain
+          rule in the first step, and then the quotient rule in the
+          second.
           <md>
             <mrow>
+              \frac{\del^2}{\del x \del y} \frac{1}{x^2 + y^2 + 3}
+              \amp = \frac{\del}{\del x} \left[ \frac{d}{du}
+              \frac{1}{u} \Bigg|_{u = x^2 + y^2 + 3} \frac{\del}{\del
+              y} (x^2 + y^2 + 3) \right] 
+            </mrow>
+            <mrow>
+              \amp = \frac{\del}{\del x} \left[ \frac{-1}{u^2}
+              \Bigg|_{u = x^2 + y^2 +3} (2y) \right] 
+              = \frac{\del}{\del x} \left[ \frac{-2y}{(x^2 + y^2 +
+              3)^2} \right] 
+            </mrow>
+            <mrow>
+              \amp = \frac{(x^2 + y^2 + 3)\frac{\del}{\del x} (-2y) +
+              2y \frac{\del}{\del x} (x^2 +y^2 +3)}{(x^2 + y^2 + 3)^4} 
+            </mrow>
+            <mrow>
+              \amp = \frac{0 + (2y)(2x)}{(x^2 + y^2 + 3)^4} =
+              \frac{4xy}{(x^2 + y^3 + 3)^4}
             </mrow>
           </md>
         </p>
@@ -344,10 +525,16 @@
       </statement>
       <solution>
         <p>
-          We differetiate in the VARIABLE variable, treating other
-          variables as constant. 
+          I differetiate in <m>y</m> and then in <m>x</m>, in each
+          step treating other variables as constant. 
           <md>
             <mrow>
+              \frac{\del^2}{\del x \del y} x^2 y^3 - 7x^4y^3 - x^5 +
+              3y^7 \amp = \frac{\del}{\del x} \left[ 3x^2y^2 -
+              21x^4y^2 - 0 + 21y^6 \right] 
+            </mrow>
+            <mrow>
+              \amp = 6xy^2 -  84x^3y^2 - 0 + 0 = 6xy^2 - 84x^3y^2
             </mrow>
           </md>
         </p>
@@ -365,10 +552,17 @@
       </statement>
       <solution>
         <p>
-          We differetiate in the VARIABLE variable, treating other
-          variables as constant. 
+          I differetiate in <m>z</m>, then in <m>y</m>, and then in
+          <m>z</m>, in each step treating other variables as constant. 
           <md>
             <mrow>
+              \frac{\del^3}{\del x \del y \del z} 3xyz - xy^2 - xz^2 +
+              yz^2 \amp = \frac{\del^2}{\del x \del y} \left[ 3xy - 0 - 2xy
+              + 2yz \right] 
+            </mrow>
+            <mrow>
+              \amp = \frac{\del}{\del x} \left[ 3x - 2x + 2z \right] =
+              3 - 2 = 0 = 1 
             </mrow>
           </md>
         </p>
@@ -385,30 +579,15 @@
       </statement>
       <solution>
         <p>
-          We differetiate in the VARIABLE variable, treating other
-          variables as constant. 
+          I differetiate in <m>y</m> twice and the in <m>x</m>, in
+          each step treating other variables as constant. 
           <md>
             <mrow>
+              \frac{\del^3}{\del x \del y^2} x^2 e^y - xy^2 \amp =
+              \frac{\del^2}{\del x \del y} x^2 e^y - 2xy 
             </mrow>
-          </md>
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Calculate this partial derivative.
-          <me>
-            \frac{\del^3}{\del x^2 \del y} x^2 e^y - xy^2
-          </me>
-        </p>
-      </statement>
-      <solution>
-        <p>
-          We differetiate in the VARIABLE variable, treating other
-          variables as constant. 
-          <md>
             <mrow>
+              \amp =  \frac{\del}{\del x} x^2e^y - 2x = 2xe^y - 2 
             </mrow>
           </md>
         </p>
@@ -425,7 +604,7 @@
           gradient directions, showing that the gradients are indeed
           perpendicular to the coutour plots. 
           <me>
-            f(x,y) = 3y^x - 3x^2 
+            f(x,y) = 3y - 4x^2 
           </me>
         </p>
       </statement>
@@ -434,23 +613,48 @@
           We calculate the two partial derivative. 
           <md>
             <mrow>
-              \frac{\del}{\del x} f(x,y) = 
+              \frac{\del}{\del x} f(x,y) = -8x 
             </mrow>
             <mrow>
-              \frac{\del}{\del y} f(x,y) = 
+              \frac{\del}{\del y} f(x,y) = 3
             </mrow>
           </md>
-          The gradient is has these two as component. 
+          The gradient is has these two as components. 
           <me>
-            \nabla f(x,y) = 
+            \nabla f(x,y) = (-8x,3) 
           </me>
           I've chosen some points and drawn the gradients in <xref
           ref="figure-activity-gradient-1" />
           <figure xml:id="figure-activity-gradient-1">
-            <caption>
-              <m>\nabla </m>
-            </caption>
-            <image width="100%" source="images/figure67" />
+            <caption><m>\nabla 3y - 4x^2</m></caption>
+            <image xml:id="figure67" width="50%">
+              <asymptote>
+                size(7cm,7cm);
+                import contour;
+                import graph;
+
+                xaxis();
+                yaxis();
+
+                real f(real x, real y) {return 3*y-4*x^2;}
+
+                int n=10;
+                real[] c=new real[n];
+                for(int i=0; i \lt n; ++i) c[i]=(i-4);
+                
+                draw(contour(f,(-4,-4),(4,4),c));
+                
+                draw((0,0)--(0,1),Arrow);
+                draw((1,1)--(0,1.75),Arrow);
+                draw((-1,0)--(0,0.75),Arrow);
+                draw((2,3)--(0,3.75),Arrow);
+
+                dot((0,0));
+                dot((1,1));
+                dot((-1,0));
+                dot((2,3));
+              </asymptote>
+            </image>
           </figure>
         </p>
       </solution>
@@ -472,23 +676,48 @@
           We calculate the two partial derivative. 
           <md>
             <mrow>
-              \frac{\del}{\del x} f(x,y) = 
+              \frac{\del}{\del x} f(x,y) = 2xe^{x^2 + y^2}
             </mrow>
             <mrow>
-              \frac{\del}{\del y} f(x,y) = 
+              \frac{\del}{\del y} f(x,y) = 2ye^{x^2 + y^2}
             </mrow>
           </md>
-          The gradient is has these two as component. 
+          The gradient is has these two as components. 
           <me>
-            \nabla f(x,y) = 
+            \nabla f(x,y) = (2xe^{x^2 + y^2}, 2ye^{x^2 + y^2}) 
           </me>
           I've chosen some points and drawn the gradients in <xref
           ref="figure-activity-gradient-2" />
           <figure xml:id="figure-activity-gradient-2">
-            <caption>
-              <m>\nabla </m>
-            </caption>
-            <image width="100%" source="images/figure68" />
+            <caption><m>\nabla e^{x^2+y^2} + 4 </m></caption>
+            <image xml:id="figure68" width="50%">
+              <asymptote>
+                size(7cm,7cm);
+                import contour;
+                import graph;
+
+                xaxis();
+                yaxis();
+                
+                real f(real x, real y) {return exp(x^2+y^2)+4;}
+                
+                int n=10;
+                real[] c=new real[n];
+                for(int i=0; i \lt n; ++i) c[i]=(5+i/(10));
+
+                draw(contour(f,(-4,-4),(4,4),c));
+
+                draw((0.3,0.3)--(0.6,0.6),Arrow);
+                draw((0.3,-0.3)--(0.6,-0.6),Arrow);
+                draw((-0.3,0.3)--(-0.6,0.6),Arrow);
+                draw((-0.3,-0.3)--(-0.6,-0.6),Arrow);
+
+                dot((0.3,0.3));
+                dot((0.3,-0.3));
+                dot((-0.3,0.3));
+                dot((-0.3,-0.3));
+              </asymptote>
+            </image>
           </figure>
         </p>
       </solution>
@@ -510,23 +739,53 @@
           We calculate the two partial derivative. 
           <md>
             <mrow>
-              \frac{\del}{\del x} f(x,y) = 
+              \frac{\del}{\del x} f(x,y) = \frac{1}{\sin y}
             </mrow>
             <mrow>
-              \frac{\del}{\del y} f(x,y) = 
+              \frac{\del}{\del y} f(x,y) = \frac{-x \cos y}{\sin^2 y}
             </mrow>
           </md>
-          The gradient is has these two as component. 
+          The gradient is has these two as components. 
           <me>
-            \nabla f(x,y) = 
+            \nabla f(x,y) = \left( \frac{1}{\sin y}, \frac{-x \cos
+            y}{\sin^2 y} \right)
           </me>
           I've chosen some points and drawn the gradients in <xref
           ref="figure-activity-gradient-3" />
           <figure xml:id="figure-activity-gradient-3">
-            <caption>
-              <m>\nabla </m>
-            </caption>
-            <image width="100%" source="images/figure69" />
+            <caption><m>\nabla \frac{x}{\sin y}</m></caption>
+            <image xml:id="figure69" width="50%">
+              <asymptote>
+                size(7cm,7cm);
+                import contour;
+                import graph;
+
+                xaxis();
+                yaxis();
+
+                real f(real x, real y) {return x/((sin(y)+0.01));}
+
+                int n=10;
+                real[] c=new real[n];
+                for(int i=0; i \lt n; ++i) c[i]=(i/3);
+
+                draw(contour(f,(-4,-1),(4,7),c));
+
+                draw((1,0.785)--(2.414,-0.629),Arrow);
+                draw((1,1.571)--(2,1.571),Arrow);
+                draw((1,2.356)--(2.414,3.77),Arrow);
+                draw((-2,3.927)--(-3.414,1.099),Arrow);
+                draw((-2,4.712)--(-3,4.712),Arrow);
+                draw((-2,5.498)--(-3.414,8.326),Arrow);
+
+                dot((1,0.785));
+                dot((1,1.571));
+                dot((1,2.356));
+                dot((-2,3.927));
+                dot((-2,4.712));
+                dot((-2,5.498));
+              </asymptote>
+            </image>
           </figure>
         </p>
       </solution>
@@ -548,23 +807,75 @@
           We calculate the two partial derivative. 
           <md>
             <mrow>
-              \frac{\del}{\del x} f(x,y) = 
+              \frac{\del}{\del x} f(x,y) = \frac{2x + 1}{y^2-4}
             </mrow>
             <mrow>
-              \frac{\del}{\del y} f(x,y) = 
+              \frac{\del}{\del y} f(x,y) =
+              \frac{-(x^2+1)(2y)}{(y^2-4)^2}
             </mrow>
           </md>
-          The gradient is has these two as component. 
+          The gradient is has these two as components. 
           <me>
-            \nabla f(x,y) = 
+            \nabla f(x,y) = \left( \frac{2x + 1}{y^2-4},
+            \frac{-2y(x^2+1)}{(y^2-4)^2} \right) 
           </me>
           I've chosen some points and drawn the gradients in <xref
           ref="figure-activity-gradient-4" />
           <figure xml:id="figure-activity-gradient-4">
-            <caption>
-              <m>\nabla </m>
-            </caption>
-            <image width="100%" source="images/figure70" />
+            <caption><m>\nabla \frac{x^2+1}{y^2-4}</m></caption>
+            <image xml:id="figure70" width="50%">
+              <asymptote>
+                size(7cm,7cm);
+                import contour;
+                import graph;
+
+                xaxis();
+                yaxis();
+
+                real f(real x, real y) {return (x^2+1)/(y^2-4);}
+
+                int n=10;
+                real[] c=new real[n];
+                for(int i=0; i \lt n; ++i) c[i]=i+1;
+
+                draw(contour(f,(-4,2.01),(4,7),c));
+                draw(contour(f,(-4,-4),(4,-2.01),c));
+
+                real f1p(real x) {return sqrt((-1/1)*(x^2+1)+4);}
+                real f1n(real x) {return (-1)*sqrt((-1/1)*(x^2+1)+4);}
+                draw(graph(f1p,-1.7,1.7));
+                draw(graph(f1n,-1.7,1.7));
+
+                real f2p(real x) {return sqrt((-1/2)*(x^2+1)+4);}
+                real f2n(real x) {return (-1)*sqrt((-1/2)*(x^2+1)+4);}
+                draw(graph(f2p,-2.6,2.6));
+                draw(graph(f2n,-2.6,2.6));
+
+                real f3p(real x) {return sqrt((-1/3)*(x^2+1)+4);}
+                real f3n(real x) {return (-1)*sqrt((-1/3)*(x^2+1)+4);}
+                draw(graph(f3p,-3.25,3.25));
+                draw(graph(f3n,-3.25,3.25));
+
+                real f3p(real x) {return sqrt((-1/4)*(x^2+1)+4);}
+                real f3n(real x) {return (-1)*sqrt((-1/4)*(x^2+1)+4);}
+                draw(graph(f3p,-3.8,3.8));
+                draw(graph(f3n,-3.8,3.8));
+
+                draw((1,1)--(0.333,0.556),Arrow);
+                draw((2,1)--(0.666,-0.111),Arrow);
+                draw((3,1)--(1,-1.222),Arrow);
+                draw((1,3)--(1.4,2.52),Arrow);
+                draw((2,3)--(2.8,1.8),Arrow);
+                draw((3,3)--(4.2,0.6),Arrow);
+
+                dot((1,1));
+                dot((2,1));
+                dot((3,1));
+                dot((1,3));
+                dot((2,3));
+                dot((3,3));
+              </asymptote>
+            </image>
           </figure>
         </p>
       </solution>

@@ -175,30 +175,16 @@
     <title>Other PDEs</title>
     <p>
       Many other famous equations are relationships between times
-      derivatives and position derivatives. In all of the following
+      derivatives and position derivatives. In both of the following
       examples, the left side is a time derivative and the right is a
       space derivative.
-    </p>
-    <p>
-      In classical Newtonian mechanics, for conservative forces like
-      gravity and electromagnetism, the force is often determined by a
-      potential energy field <m>V</m>.
-      <me>
-        F = - \frac{d V(x)}{dx}
-      </me>
-    </p>
-    <p>
-      But <m>F = ma</m> is Newton's first law, and acceleration is a
-      time derivative of position.
-      <me>
-        \frac{d^2 x}{dt^2} = \frac{-1}{m} \frac{dV}{dx}
-      </me>
     </p>
     <p>
       The Schrodinger equation is the centre of quantum mechanics: it
       measures a wave function <m>\Psi(x,y,z,t)</m> in three
       dimensions and time. The symbol <m>\nabla</m> is a
-      3-dimemsional differential operator which will be defined later;
+      3-dimemsional differential operator which will be defined in
+      <xref ref="section-gradients" />;
       for now, just know that it is a combination of position
       derivatives. <m>\hbar</m> is a constant, <m>\imath</m> is a
       number with <m>\imath^2 = -1</m>, <m>m</m> is mass and

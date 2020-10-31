@@ -3,8 +3,8 @@
   <subsection xml:id="multivariable-limits-definitions">
     <title>Definition of Limits of Multivariable Functions</title>
     <p>
-      We want to re-establish the tools of calculus for multi-variable
-      functions. As with single-variable functions, our starting
+      I want to re-establish the tools of calculus for multi-variable
+      functions. As with single-variable functions, the starting
       point is limits. Let's start with the full, formal,
       <m>\epsilon-\delta</m> definition.
     </p>
@@ -33,16 +33,16 @@
       happens in <m>\RR^n</m> instead of <m>\RR</m>.
     </p>
     <p>
-      In <m>\RR</m>, we only had two directions of approach: from the
+      In <m>\RR</m>, there were only two directions of approach: from the
       left and from the right. If the behaviour from both sides was
-      the same, we said the limit existed. In <m>\RR^n</m> for <m>n
-      \geq 2</m>, we have infinitely many ways to approach any given
-      point. We can approach along lines in infinitely many
-      directions out from the point. Even more, we can approach along
-      other paths, such as spiral paths or stranger jagged paths.
+      the same, then the limit existed. In <m>\RR^n</m> for <m>n
+      \geq 2</m>, there are infinitely many ways to approach any given
+      point. I can approach along lines in infinitely many
+      directions out from the point. Even more, I can approach along
+      other paths, such as spiral paths or strange jagged paths.
       This makes it much more difficult to determine the behaviour and
       much more difficult to prove existence of various limits.
-      However, we do have some good news. First, the definition of
+      However, I do have some good news. First, the definition of
       continuity remains the same.
     </p>
     <definition>
@@ -56,7 +56,7 @@
       </statement>
     </definition>
     <p>
-      So limits for continuous functions are still reasonable: we just
+      So limits for continuous functions are still reasonable: I just
       evaluate. But what functions are continuous?
     </p>
     <proposition>
@@ -70,7 +70,7 @@
     </proposition>
     <p>
       This is the first application of a very important technique:
-      treating the function as a function of only one of the variables
+      treating the function as a function of only one variable
       and ignoring the other, pretending that they are constant. If
       we do that, we get <m>n</m> different single variable functions.
       The proposition says that the function is continuous in the new
@@ -82,37 +82,106 @@
       Anything involving polynomials, roots, rational functions, trig,
       exponentials and logarithms is continuous on its domain.
     </p>
+  </subsection>
+  <subsection xml:id="subsection-evaluating-multivariable-limits">
+    <title>Evaluating Multivariable Limits</title>
     <p>
       As we mentioned before, proving the existence of limits is
       difficult. However, the algebraic techniques of first year
       calculus can still work for calculations. Here are some
-      examples.
+      examples where we can use algebraic manipulation to simplify
+      limits so that they can be evaluated. 
     </p>
-  </subsection>
-  <subsection xml:id="multivariable-limits-examples">
     <example>
       <statement>
-        <md>
-          <mrow>
-            \lim_{(x,y) \rightarrow (0,0)} \frac{x^2 - y^2}{x-y} \amp
+        <p>
+          <me>
+            \lim_{(x,y) \rightarrow (0,0)} \frac{x^2 - y^2}{x-y} 
             = \lim_{(x,y) \rightarrow (0,0)} \frac{(x-y)(x+y)}{(x-y)}
-          </mrow>
-          <mrow>
-            \amp = \lim_{(x,y) \rightarrow (0,0)} x+y = 0 + 0 = 0
-            </mrow>
-          <mrow>
-            \lim_{(x,y) \rightarrow (4,1)} \frac{ xy - 4y^2}{\sqrt{x}
-            - 2\sqrt{y}} \amp = \lim_{(x,y) \rightarrow (4,1)}
-            \frac{y(\sqrt{x} - 2\sqrt{y})(\sqrt{x} + 2
-            \sqrt{y})}{\sqrt{x} - 2\sqrt{y}}
-          </mrow>
-          <mrow>
-            \amp = \lim_{(x,y) \rightarrow (4,1)} \sqrt{x} + 2
-            \sqrt{y} = \sqrt{4} + 2 \sqrt{1} = 2 + 2 = 4
-          </mrow>
-        </md>
+          </me>
+            The limit cannot be directly evaluated. However, with the
+            factoring of the numerator, we can cancel of the
+            <m>(x-y)</m> term. That removes the division by zero
+            problem and lets us evaluate the limit.
+          <me>
+            = \lim_{(x,y) \rightarrow (0,0)} x+y = 0 + 0 = 0
+          </me>
+          This limit means that no matter which direction we approach
+          <m>(0,0)</m> from, the function gets closer and closer to
+          zero. 
+        </p>
       </statement>
     </example>
+    <example>
+      <statement>
+        <p>
+          <me>
+            \lim_{(x,y) \rightarrow (4,1)} \frac{ xy - 4y^2}{\sqrt{x}
+            - 2\sqrt{y}} = \lim_{(x,y) \rightarrow (4,1)}
+            \frac{(xy - 4y^2)(\sqrt{x} + 2\sqrt{y})}{(\sqrt{x} - 2
+            \sqrt{y})(\sqrt{x} + 2 \sqrt{y})} 
+          </me>
+          This is another limit that cannot be directly evaluated,
+          since it has type <m>\frac{0}{0}</m>. To deal with this
+          denominator, I will multiply by its conjugate (in both
+          numerator and denominator, of course). The conjugate gets
+          rid of the square roots in the denominator
+          <me>
+            = \lim_{(x,y) \rightarrow (4,1)} 
+            \frac{(xy - 4y^2)(\sqrt{x} + 2\sqrt{y})}{x - 4y} 
+          </me>
+          Then I can factor a <m>y</m> out of the numerator and find a
+          common term, <m>(x-4y)</m>, which I can cancel off.
+          <me>
+            = \lim_{(x,y) \rightarrow (4,1)} \frac{y(x - 4y)(\sqrt{x}
+            + 2\sqrt{y})}{x - 4y} = \lim_{(x,y) \rightarrow (4,1)}
+            y(\sqrt{x} + 2\sqrt{y})
+          </me>
+          At the end, having removed the division by zero, I just
+          evaluate the limit.
+          <me>
+            = \lim_{(x,y) \rightarrow (4,1)} y(\sqrt{x} + 2\sqrt{y}) =
+            (1)(\sqrt{4} + 2 \sqrt{1}) = 2 + 2 = 4
+          </me>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          <me>
+            \lim_{(x,y) \rightarrow (1,2)} \frac{\sqrt{y} -
+            \sqrt{x+1}}{y-x-1} = \lim_{(x,y) \rightarrow (1,2)}
+            \frac{(\sqrt{y} - \sqrt{x+1})(\sqrt{y} + \sqrt{x+1})}{(y - x 
+            - 1)(\sqrt{y} + \sqrt{x+1})}
+          </me>
+          This is another limit where multiplying by a conjugate is
+          helpful. The conjugate removes the square roots from the
+          numerator.
+          <me>
+            = \lim_{(x,y) \rightarrow (1,2)}
+            \frac{(y-x-1)}{(y-x-1)(\sqrt{y} + \sqrt{x+1})}
+          </me>
+          Then I can cancel off the common term, which removes the
+          division by zero. After tha, I can simply evaluate the
+          limit. 
+          <me>
+            = \lim_{(x,y) \rightarrow (1,2)} \frac{1}{\sqrt{y} +
+            \sqrt{x+1}} = \frac{1}{\sqrt{2} + \sqrt{2}} =
+            \frac{1}{2\sqrt{2}}
+          </me>
+        </p>
+      </statement>
+    </example>
+    <p>
+      When a limit doesn't exist, we can prove its non-existence by
+      looking at various directions of approach. If the limit along
+      different directions is different, then there can be no cohesive
+      limit. There are several ways to do this, depending on what kind
+      of approach we want to take. I'll do two examples with different
+      paths of approach, each chosen to suit the function in the
+      limit.
+    </p>
     <figure xml:id="figure-3d-graph2">
       <caption>
         The graph of <m>f(x) = \frac{(x+y)^2}{x^2+y^2}</m>
@@ -145,13 +214,13 @@
           \lim_{(x,y) \rightarrow (0,0)} \frac{(x+y)^2}{x^2 + y^2}
         </me>
         <p>
-          Let's approach this along the line <m>y = mx</m>. That lets
-          us replace <m>y</m> with <m>mx</m> in the calculation and
-          the limit becuase <m>x \rightarrow 0</m>.
+          I will approach <m>(0,0)</m> along the line <m>y = mx</m>.
+          That lets me replace <m>y</m> with <m>mx</m> in the
+          calculation and the limit becuase <m>x \rightarrow 0</m>.
           <md>
             <mrow>
               \lim_{x \rightarrow 0} \frac{(x+mx)^2}{x^2 + m^2x^2}
-              \amp = \lim_{x \rightarrow 0} \frac{x^2 + 2mx + m^2
+              \amp = \lim_{x \rightarrow 0} \frac{x^2 + 2mx^2 + m^2
               x^2}{x^2 + m^2 x^2}
             </mrow>
             <mrow>
@@ -161,12 +230,12 @@
           </md>
         </p>
         <p>
-          This limit depend on the choice of <m>m</m>!  We can get
+          This limit depend on the choice of <m>m</m>. I can get
           infinitely many values (all between 0 and 1) out of this
-          limit depending on which line we use to approach
+          limit depending on which line I use to approach
           <m>(0,0)</m>. With all these possible answers, the limit
           cannot exist. It is interesting to try to visualize the
-          graph: as we get close to zero, there are pieces of the
+          graph: as the values get close to zero, there are pieces of the
           graph getting close to any number between <m>0</m> and
           <m>1</m>. <xref ref="figure-3d-graph2">Figure</xref> shows
           some of this behaviour: approaching from the front of figure
@@ -181,48 +250,25 @@
     <example>
       <statement>
         <p>
-          In this example, we approach along parabolic paths of the
-          form <m>x = m y^2</m> and, like the previous example, get a
-          limit that depends on the path of approach.
+          In this example, I approach along parabolic paths of the
+          form <m>x = m y^2</m>. This lets me replace <m>x</m> with
+          <m>my^2</m> and get a single variable limit. Like the
+          previous example, I get a limit that depends on the path of
+          approach, so I conclude that the limit cannot exists.
           <me>
-            \lim_{(x,y) \rightarrow (0,0)} \frac{3xy^2}{x^2 + y^2} =
-            \lim_{(x,y) \rightarrow (0,0)} \frac{3xy^2}{x^2 + y^2} =
+            \lim_{(x,y) \rightarrow (0,0)} \frac{3xy^2}{x^2 + y^4} =
             \lim_{y \rightarrow 0} \frac{3my^4}{m^2 y^4 + y^4} =
-            \frac{3m}{m+1}
+            \frac{3m}{m^2+1}
           </me>
         </p>
       </statement>
     </example>
-    <example>
-      <statement>
-        <md>
-          <mrow>
-            \lim_{(x,y) \rightarrow (1,2)} \frac{\sqrt{y} -
-            \sqrt{x+1}}{y-x-1} \amp = \lim_{(x,y) \rightarrow (1,2)}
-            \frac{y-x-1}{(y-x-1)(\sqrt{y} + \sqrt{x+1})}
-          </mrow>
-          <mrow>
-            \amp = \frac{1}{\sqrt{2} + \sqrt{2}} =
-            \frac{1}{2\sqrt{2}}
-          </mrow>
-        </md>
-      </statement>
-    </example>
-    <example>
-      <statement>
-        <p>
-          Sometime we can make reasonable conclusion independent of
-          path.
-          <me>
-            \lim_{(x,y) \rightarrow (0,0)} \frac{\sin(x+y)}{x+y}
-          </me>
-        </p>
-        <p>
-          We can assume any path <m>y = f(x)</m> of approach and still
-          set <m>u = x+y</m>, which turns this into a limit of
-          <m>\sin(u)/u</m>, which tends to 1.
-        </p>
-      </statement>
-    </example>
+    <p>
+      It is important to note that this technique (choosing multiple
+      paths of approach) can only be used to proves that limits fail.
+      It cannot be used to prove that limits exists (at least not in
+      the way that I have presented it here), since it doesn't cover
+      any possible path of approach. 
+    </p>
   </subsection>
 </section>
