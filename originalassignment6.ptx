@@ -6,31 +6,6 @@
   <p><ol>
     <li>
       <p>
-        Find the equations of the tangent planes to the following
-        functions at the specified points. (12)
-        <ol>
-          <li>
-            <m>f(x,y) = y \ln x</m> at <m>(1,4,0)</m>
-          </li>
-          <li>
-            <m>f(x,y) = x^2 - y^2</m> at <m>(2,-2,0)</m>
-          </li>
-          <li>
-            <m>f(x,y) = \frac{1}{x-y}</m> at <m>(3,2,1)</m>
-          </li>
-        </ol>
-      </p>
-    </li>
-    <li>
-      <p>
-        Consider the function <m>f(x,y) = -(x^2 + y^2) + 4</m>. Where
-        does the graph of this function intersect with the sphere or
-        radius <m>4</m>?  Is the tangent plane at any of those points
-        also tangent to the sphere? (8)
-      </p>
-    </li>
-    <li>
-      <p>
         Find and classify (including local/global status) the critical
         points and extrema of the following functions. (Careful with
         domains.) (20)
@@ -70,6 +45,37 @@
             elevation loss or gain?
           </li>
         </ol>
+      </p>
+    </li>
+    <li>
+      <p>
+        Solve the following constrained optimization problems. (12)
+        <ol>
+          <li>
+            Minimize <m>x^2 + 3y^2</m> on the line <m>x + y = 4</m>.
+          </li>
+          <li>
+            Maximize <m>x^2 + y^2 +z^2</m> on the locus <m>x^3 + y^3 =
+            z</m>.
+          </li>
+        </ol>
+      </p>
+    </li>
+    <li>
+      <p>
+        If temperature is given as <m>T(x,y) = Ae^{-(x^2 + y^2)}</m>
+        over points in the <m>x,y</m> plane, and elevation is
+        <m>H(x,y) = \frac{10}{(x+1)^2 + y^2 + 4}</m>, then what is the
+        maximum temperature at a height of <m>1</m>?  (Hint: make an
+        argument for maximizing a simplier function before starting).
+        (6)
+      </p>
+    </li>
+    <li>
+      <p>
+        What intersection point(s) of the plane <m>x + y + z = 2</m>
+        and the sphere <m>x^2 + y^2 + z^2 = 9</m> is(are) farthest
+        from the origin? (6)
       </p>
     </li>
   </ol></p>

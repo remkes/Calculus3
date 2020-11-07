@@ -206,7 +206,7 @@
           Also calculate the tangent vector, normal vector and
           binormal vector. 
           <me>
-            \gamma(t) = (t \cos t, t \sin t, ht)
+            \gamma(t) = (t^3, 1 - t^2, 1 + t^2)
           </me>
           Interpret the curve using the three scalars, focusing on the
           asymptotic behaviour.  (The numbers
