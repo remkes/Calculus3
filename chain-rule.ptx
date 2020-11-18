@@ -12,9 +12,9 @@
     <p>
       Let <m>f(x,y,z): \RR^3 \rightarrow\RR</m>, be a potential energy
       function. Let <m>\gamma(t) = (x(t), y(t), z(t))</m> be a curve
-      moving through <m>\RR^3</m>. If this is a potential energy
-      function, we want to know how quickly we gain and/or lose energy
-      moving along the path <m>\gamma</m>. The energy along
+      moving through <m>\RR^3</m>. 
+      I want to know how quickly energy is gained or lost 
+      move along the path <m>\gamma</m>. The energy along
       <m>\gamma</m> is <m>f(\gamma(t)) = f(x(t), y(t), z(t))</m>. The
       rate of change is <m>\frac{df}{dt}</m>. But now <m>f</m> is a
       composition, <m>f(\gamma(t))</m>, so this must be a chain rule
@@ -50,6 +50,22 @@
         \frac{dx}{dt} + \frac{\del f}{\del y} \frac{dy}{dt} +
         \frac{\del f}{\del z} \frac{dz}{dt}
       </me>
+    </p>
+    <p>
+      This is a slightly strange extension of the single-variable
+      chain rule. Originally, the chain rule was for any composition.
+      However, the chain rule is very specifically for the composition
+      of a scalar field with a parameteric curve. However, upon
+      reflection, you could realize that this is really the only
+      possibility. If <m>f</m> and <m>g</m> are both functions
+      <m>\RR^3 \rightarrow \RR</m>, then the composition <m>f \circ
+      g</m> or <m>g \circ f</m> isn't even defined. The output of one
+      is a scalar, but the input needs to be a vector. The only
+      reasonable composition using the function we already know is to
+      compose with a parametric curce, since a parametric curve
+      outputs a vector. In Calculus IV, we will work with vector
+      fields which could allow for other compositions, but for now,
+      this is the only possibility.
     </p>
   </subsection>
   <subsection xml:i="chain-rule-examples">
