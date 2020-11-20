@@ -81,11 +81,14 @@
       <statement>
         <p>
           Consider <m>f(x,y) = \frac{1}{1 + x^2 + y^2}</m>.
-          <me>
-            \frac{\del f}{\del x} = \frac{-2x}{(1+x^2+y^2)^2}
-            \frac{\del f}{\del y} =
-            \frac{-2y}{(1+x^2+y^2)^2}
-          </me>
+          <md>
+            <mrow>
+              \frac{\del f}{\del x} \amp = \frac{-2x}{(1+x^2+y^2)^2}
+            </mrow>
+            <mrow>
+              \frac{\del f}{\del y} = \frac{-2y}{(1+x^2+y^2)^2}
+            </mrow>
+          </md>
         </p>
         <p>
           At the point <m>(x,y) = (1,1)</m>, we have <m>f_x(1,1) =
@@ -93,9 +96,14 @@
           normal is <m>\left( \frac{-2}{9}, \frac{-2}{9}, 1
           \right)</m> and the point is <m>\left(1,1, \frac{1}{3}
           \right)</m>. The tangent plane is
-          <me>
-            \frac{2}{9} x + \frac{2}{9} y + z = \frac{7}{9}
-          </me>.
+          <md>
+            <mrow>
+              \frac{-2}{9} (x-1)  + \frac{-2}{9} (y-1) = z - \frac{1}{3} 
+            </mrow>
+            <mrow>
+              \frac{2}{9} x + \frac{2}{9} y + z = \frac{7}{9}
+            </mrow>
+          </md>.
         </p>
         <p>
           At the point <m>(x,y) = (0,0)</m>, we have <m>f_x(0,0) =
@@ -118,7 +126,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="tangents-higher-dimensions">>
+  <subsection xml:id="tangents-higher-dimensions">
     <title>Higher Dimensions</title>
     <p>
       The definition of tangent planes for <m>f: \RR^2 \rightarrow
@@ -213,18 +221,28 @@
           <m>\left(1,1,\frac{1}{3} \right)</m> at <m>t=1</m>. Then we
           can calculate the tangents to the curves at that point and
           the plane they span.
-          <me>
-            \begin{array}{*4{>{\displaystyle}l}} 
+          <md>
+            <mrow>
               \gamma_1^\prime(t) \amp = \left( 1, 0
-                \frac{-2t}{(2+t^2)^2} \right) \amp \gamma_2^\prime(t)
-                \amp = \left( 0, 1 \frac{-2t}{(2+t^2)^2} \right) \\ 
+              \frac{-2t}{(2+t^2)^2} \right) 
+            </mrow>
+            <mrow>
+              \gamma_2^\prime(t) \amp = \left( 0, 1
+              \frac{-2t}{(2+t^2)^2} \right) 
+            </mrow>
+            <mrow>
               \gamma_1^\prime(1) \amp = \left( 1, 0, \frac{-2}{9}
-                \right) \amp \gamma_2^\prime(1) \amp =
-                \left( 0, 1, \frac{-2}{9} \right) \\ 
+              \right) 
+            </mrow>
+            <mrow>
+              \gamma_2^\prime(1) \amp = \left( 0, 1, \frac{-2}{9}
+              \right)
+            </mrow>
+            <mrow>
               \gamma_1^\prime(1) \times \gamma_2^\prime(1) \amp =
-                \left( \frac{2}{9}, \frac{2}{9}, 1 \right) \amp \amp 
-            \end{array}
-          </me>
+              \left( \frac{2}{9}, \frac{2}{9}, 1 \right) 
+            </mrow>
+          </md>
         </p>
         <p>
           This gives exactly the same normal at the same point

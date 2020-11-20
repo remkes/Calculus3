@@ -73,6 +73,48 @@
     <example>
       <statement>
         <p>
+          <md>
+            <mrow>
+              f(x,y) \amp = x^2y + 3xy 
+            </mrow>
+            <mrow>
+              \gamma(t) \amp = \left( \frac{t^2}{4}, 1-t^3 \right) 
+            </mrow>
+            <mrow>
+              \frac{d}{dt} f(\gamma(t)) \amp = \frac{\del f}{\del x}
+              \frac{dx}{dt} + \frac{\del f}{\del y} \frac{dy}{dt} 
+            </mrow>
+            <mrow>
+              \amp = (2xy + 3y) \frac{t}{2} + (x^2 + 3x) (-3t^2) 
+            </mrow>
+          </md>
+          The variables are now mixed, so I have to make replacements.
+          I repalce <m>x</m> and <m>y</m> with the matching components
+          of the parametric curve. This matches what we do with the
+          single variable chain rule: we differentiate then we replace
+          the variable. The single variable notation, with the
+          evaluation bar, it not typically used in multivariable
+          situations.
+          <md>
+            <mrow>
+              \amp = \left( 2 \frac{t^2}{4} (1-t^3) + 3(1 - t^3) \right)
+              \frac{t}{2} + \left( \left( \frac{t^2}{4} \right)^2 + 3
+              \frac{t^2}{4} \right) (-3t^2) 
+            </mrow>
+            <mrow>
+              \amp = \frac{t^2 - t^5}{4} + \frac{3t}{2} - \frac{3t^4}{2}
+              + \frac{-3t^6 + -36t^4}{16} 
+            </mrow>
+            <mrow>
+              \amp = \frac{24t + 4t^2 - 60t^4 - 4t^5 - 3t^6}{16} 
+            </mrow>
+          </md>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
           Consider the potential gravitational energy function
           <me>
             P = - \frac{GmM}{r} = \frac{-GmM}{\sqrt{x^2 + y^2 + z^2}}

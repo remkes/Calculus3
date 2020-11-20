@@ -143,7 +143,7 @@
           <me>
             f(x,y) \approx f(-2,2) + \left( \begin{matrix}
             \frac{4}{81} \amp \frac{-4}{81} \end{matrix} \right)
-            \begin{pmatrix}x+2\\y-1\end{pmatrix} = \frac{1}{9} +
+            \begin{pmatrix}x+2\\y-2\end{pmatrix} = \frac{1}{9} +
             \frac{4(x+2)}{81} - \frac{4(y-2)}{81}
           </me>
         </p>
@@ -154,14 +154,14 @@
         <p>
           <m>f(x,y) = x^2 e^{x-y}</m>.
           <me>
-            M = \left( \begin{matrix} 2xe^{x-y} + x^2e^x, -x^2 e^{x-y}
-            \end{matrix} \right)
+            M = \left( \begin{matrix} 2xe^{x-y} + x^2e^{x-y}, -x^2
+            e^{x-y} \end{matrix} \right)
           </me>
         </p>
         <p>
           Look at the point <m>(2,2)</m>.
           <me>
-            f(x,y) \approx f(2,2) + \left( \begin{matrix} 4+4e^2 \amp
+            f(x,y) \approx f(2,2) + \left( \begin{matrix} 4+4 \amp
             -4 \end{matrix} \right)
             \begin{pmatrix}x-2\\y-2\end{pmatrix} = 4 + (4+4e^2)(x-2) -
             4(y-2)
@@ -206,7 +206,9 @@
       is the <em>matrix of partial derivatives</em>, which serves as a
       linear approximation of the function at any point in its domain.
       It will be useful to give this matrix a name, for future
-      reference.
+      reference. I'll state the definition so that it works for scalar
+      fields (<m>m=1</m>) for this course, as well as for vector
+      fields (<m>m \gt 1</m>), which is important in Calculus IV.
     </p>
     <definition>
       <statement>

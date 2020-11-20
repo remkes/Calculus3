@@ -304,7 +304,7 @@
               4y^2) 
             </mrow>
             <mrow>
-              \amp = -\sin u \Bigg|_{u = 3x^2 + 4y^2} (6x) = -6x \sin
+              \amp = -\sin u \Bigg|_{u = 3x^2 + 4y^2} (8y) = -8y \sin
               (3x^2 + 4y^2) 
             </mrow>
           </md>

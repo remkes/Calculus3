@@ -31,9 +31,12 @@
       single variable limit: we use the line in the direction <m>u</m>
       (as a local direction vector form the point <m>v</m>) to give a
       one-dimensional domain <mdash/> a copy of <m>\RR^1</m>. Then we
-      just differentiate along the line. If <m>u = e_1</m>, we get
-      <m>D_{e_1} f = f_{x_1}</m>. If <m>u = e_2</m> we get <m>D_{e_2}
-      f = f_{x_2}</m> and so on.
+      just differentiate along the line. In <m>\RR^3</m>, if <m>u =
+      e_1</m>, the directional derivative is <m>D_{e_1} f =
+      \frac{\del f}{\del x}</m>; if <m>u = e_2</m>, the directional
+      derivative is <m>D_{e_2} f = \frac{\del f}{\del y}</m>; and if
+      <m>u = e_3</m>, the directional derivative is <m>D_{e_3} f =
+      \frac{\del f}{\del z}</m>. 
     </p>
   </subsection>
   <subsection xml:id="calculating-directional-derivatives">
@@ -55,32 +58,6 @@
         </p>
       </statement>
     </proposition>
-    <figure xml:id="figure-3d-graph3">
-      <caption>
-        The function <m>f(x,y) = \sin (x^2 + y^2)</m>.
-      </caption>
-      <image xml:id="figure40" width="90%">
-        <asymptote>
-          import graph3;
-          import palette;
-          size(12cm,4cm,IgnoreAspect);
-          currentprojection=orthographic(1,-1,0.4);
-
-          real f(pair z) { return sin((z.x)^2 + (z.y)^2)+1;}
-
-          limits((-3.7,-3.7,-1.2),(3.7,3.7,1.2));
-
-          xaxis3("$x$",Bounds(Both,Value),OutTicks(Step=1));
-          yaxis3("$y$",Bounds(Both,Value),OutTicks(Step=1));
-
-          surface s=surface(f,(-3.7,-3.7),(3.7,3.7),100,Spline);
-
-          pen[] pens=mean(palette(s.map(zpart),Gradient(green,blue)));
-
-          draw(s,pens);
-        </asymptote>
-      </image>
-    </figure>
     <p>
       If <m>(a,b)</m> or <m>(a,b,c)</m> are unit vectors in
       <m>\RR^2</m> and <m>\RR^3</m>, respectively, we can write the
@@ -118,19 +95,21 @@
         </mrow>
       </md>
     </p>
-    <figure xml:id="figure-3d-graph4">
+  </subsection>
+  <subsection xml:id="subsection-directional-examples">
+    <title>Examples of Directional Derivatives</title>
+    <figure xml:id="figure-3d-graph3">
       <caption>
-        The function <m>f(x,y) = e^{-(x^2+y^2)}\sin (x^2 + y^2)</m>.
+        The function <m>f(x,y) = \sin (x^2 + y^2)</m>.
       </caption>
-      <image xml:id="figure41" width="90%">
+      <image xml:id="figure40" width="90%">
         <asymptote>
           import graph3;
           import palette;
           size(12cm,4cm,IgnoreAspect);
-          currentprojection=orthographic(1,-1,0.3);
+          currentprojection=orthographic(1,-1,0.4);
 
-          real f(pair z) { return
-          exp((-1/6)*((z.x)^2+(z.y)^2))*sin((z.x)^2 + (z.y)^2) + 1/5;}
+          real f(pair z) { return sin((z.x)^2 + (z.y)^2)+1;}
 
           limits((-3.7,-3.7,-1.2),(3.7,3.7,1.2));
 
@@ -173,6 +152,37 @@
             </mrow>
           </md>
         </p>
+      </statement>
+    </example>
+    <figure xml:id="figure-3d-graph4">
+      <caption>
+        The function <m>f(x,y) = e^{-(x^2+y^2)}\sin (x^2 + y^2)</m>.
+      </caption>
+      <image xml:id="figure41" width="90%">
+        <asymptote>
+          import graph3;
+          import palette;
+          size(12cm,4cm,IgnoreAspect);
+          currentprojection=orthographic(1,-1,0.3);
+
+          real f(pair z) { return
+          exp((-1/6)*((z.x)^2+(z.y)^2))*sin((z.x)^2 + (z.y)^2) + 1/5;}
+
+          limits((-3.7,-3.7,-1.2),(3.7,3.7,1.2));
+
+          xaxis3("$x$",Bounds(Both,Value),OutTicks(Step=1));
+          yaxis3("$y$",Bounds(Both,Value),OutTicks(Step=1));
+
+          surface s=surface(f,(-3.7,-3.7),(3.7,3.7),100,Spline);
+
+          pen[] pens=mean(palette(s.map(zpart),Gradient(green,blue)));
+
+          draw(s,pens);
+        </asymptote>
+      </image>
+    </figure>
+    <example>
+      <statement>
         <p>
           If we wanted damped ripples instead, as in <xref
           ref="figure-3d-graph4">Figure</xref>, we would take
