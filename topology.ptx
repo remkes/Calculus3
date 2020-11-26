@@ -110,10 +110,10 @@
     </example>
   </subsection>
   <subsection xml:id="intervals">
-    <title>Intervals</title>
+    <title>Important Open and Closed Sets</title>
     <p>
-      In addition to open and closed sets in <m>\RR^n</m>, the is a
-      direct extension of intervals.
+      Interval were important subsets of <m>\RR</m>. Here, I extend
+      the notion to <m>\RR^n</m>.
     </p>
     <definition>
       <statement>
@@ -152,13 +152,42 @@
       </statement>
     </definition>
     <p>
-      Intervals are rectangular objects. In <m>\RR^2</m>, there are
+      Intervals are rectangular objects. In <m>\RR^2</m>, they are
       filled-in rectangles, including the hollow bounding rectangle if
       the interval is closed and excluding it if the interval is open.
       In <m>\RR^3</m>, intervals are solid rectangular prisms whose
       boundaries are rectangular boxes. In higher dimensions, we
       think of intervals are higher-dimensional rectangular prisms.
     </p>
+    <p>
+      Open and closed intervals are basic open and closed sets in
+      <m>\RR^n</m>. I will also define another important pair of
+      useful open and closed sets.
+    </p>
+    <definition>
+      <statement>
+        The <term>open ball</term> centred at <m>v \in \RR^n</m> with
+        radius <m>r</m> is the set of points <m>u \in \RR^n</m> such
+        that <m>|u-v| \lt r</m>. In <m>\RR</m>, this is an open
+        interval (again, generalizing the interval). In <m>\RR^2</m>,
+        this is a disc not including the boundary. In <m>\RR^3</m>,
+        this is a solid sphere, again not including the boundary. In
+        higher dimensions, this defines the higher analogue of a
+        solid, round object without boundary. 
+      </statement>
+    </definition>
+    <definition>
+      <statement>
+        The <term>closed ball</term> centred at <m>v \in \RR^n</m> with
+        radius <m>r</m> is the set of points <m>u \in \RR^n</m> such
+        that <m>|u-v| \leq r</m>. In <m>\RR</m>, this is a closed
+        interval (again, generalizing the interval). In <m>\RR^2</m>,
+        this is a solid sphere including the boundary. In
+        <m>\RR^3</m>, this is a solid sphere, again including the
+        boundary. In higher dimensions, this defines the higher
+        analogue of a solid, round object with boundary. 
+      </statement>
+    </definition>
   </subsection>
 </section>
     

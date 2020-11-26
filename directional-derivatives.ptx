@@ -141,13 +141,13 @@
             <mrow>
               D_{ \left( \frac{1}{\sqrt{5}} , \frac{2}{\sqrt{5}}
               \right) } f(x,y) \amp = \frac{2}{\sqrt{5}} x \cos (x^2
-              + y^2) + \frac{2}{\sqrt{5}}y \cos (x^2 + y^2)
+              + y^2) + \frac{4}{\sqrt{5}}y \cos (x^2 + y^2)
             </mrow>
             <mrow>
               D_{ \left( \frac{1}{\sqrt{5}} , \frac{2}{\sqrt{5}}
               \right) } f(\sqrt{\pi},\sqrt{\pi}) \amp =
               \frac{2}{\sqrt{5}} \sqrt{\pi} \cos (\pi + \pi) +
-              \frac{2}{\sqrt{5}} \sqrt{\pi} \cos (\pi + \pi) = 4
+              \frac{4}{\sqrt{5}} \sqrt{\pi} \cos (\pi + \pi) = 6
               \sqrt{ \frac{\pi}{5}}
             </mrow>
           </md>
