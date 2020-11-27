@@ -13,35 +13,46 @@
       </statement>
       <solution>
         <p>
-          First we need the gradient.
+          First I calculate the gradient.
           <md>
             <mrow>
-              \nabla f(x,y) \amp = 
+              \nabla f(x,y) \amp = \left( \frac{y}{2\sqrt{xy+1}},
+              \frac{x}{2\sqrt{xy+1}} \right) 
             </mrow>
           </md>
-          Then we set the gradient equal to zero to find the critical
+          Then I set the gradient equal to zero to find the critical
           points. This involves solving a system of two equations. 
           <md>
             <mrow>
-              \frac{\del}{\del x} f \amp = 0 
+              \frac{y}{2\sqrt{xy+1}} \amp = 0 
             </mrow>
             <mrow>
-              \frac{\del}{\del y} f \amp = 0 
+              \frac{x}{2\sqrt{xy+1}}  \amp = 0 
             </mrow>
           </md>
-          This gives us the critical point REPLACE. Then we calculate
-          the determinant of the Hessian and evaluate it at the
-          critical point.
+          This is an easy system to solve. The fractions are zero only
+          when their numerators are zero, so the only possibilities
+          here are <m>x=0</m> and <m>y=0</m>.  This gives the critical
+          point <m>(0,0)</m>. Then I calculate the determinant of the
+          Hessian and evaluate it at the critical point.
           <md>
             <mrow>
               D \amp = \frac{\del^2 f}{\del x^2} \frac{\del^2 f}{\del y^2}
-              - \left( \frac{\del^2 f}{\del x \del y} \right) 
+              - \left( \frac{\del^2 f}{\del x \del y} \right)^2 
             </mrow>
             <mrow>
-              D() \amp = 
+              D \amp = \left( \frac{-y^2}{4(xy+1)^{\frac{3}{2}}}
+              \right) \left( \frac{-x^2}{4(xy+1)^{\frac{3}{2}}}
+              \right) - \left( \frac{xy+2}{4(xy+1)^{\frac{3}{2}}}
+              \right)^2 
             </mrow>
-            ANALYSIS
+            <mrow>
+              D(0,0) \amp = 0 - \left( \frac{2}{4} \right)^2 =
+              \frac{1}{4} 
+            </mrow>
           </md>
+          The Hessian determinant is negative, so the critical point
+          at <m>(0,0)</m> is a saddle point. 
         </p>
       </solution>
     </activity>
@@ -56,35 +67,66 @@
       </statement>
       <solution>
         <p>
-          First we need the gradient.
+          First I calculate the gradient.
           <md>
             <mrow>
-              \nabla f(x,y) \amp = 
+              \nabla f(x,y) \amp =  \left( 2x \ln xy + (x^2 - 1)
+              \frac{1}{x}, (x^2-1) \frac{1}{y} \right) 
+            </mrow>
+            <mrow>
+              \amp = \left( 2x \ln (xy) + x - \frac{1}{x}, \frac{x^2 -
+              1}{y} \right)
             </mrow>
           </md>
-          Then we set the gradient equal to zero to find the critical
+          Then I set the gradient equal to zero to find the critical
           points. This involves solving a system of two equations. 
           <md>
             <mrow>
-              \frac{\del}{\del x} f \amp = 0 
+              2x \ln (xy) + x - \frac{1}{x} \amp = 0 
             </mrow>
             <mrow>
-              \frac{\del}{\del y} f \amp = 0 
+              \frac{x^2 - 1}{y} \amp = 0 
             </mrow>
           </md>
-          This gives us the critical point REPLACE. Then we calculate
-          the determinant of the Hessian and evaluate it at the
-          critical point.
+          I work with the second equation first. The numerator of this
+          fraction needs to be zero, so <m>x^2 = 1</m>. This gives two
+          possible <m>x</m> coordinates: <m>x = \pm 1</m>. For each of
+          these <m>x</m> coordinates, I can replace <m>x</m> in the
+          first equation and solve for <m>y</m>. First I substitute
+          <m>x = 1</m>.
+          <me>
+            2 \ln (y) + 1 - 1 = 0 \implies \ln y = 0 \implies y =
+            1
+          </me>
+          Then I substitute <m>x = -1</m>
+          <me>
+            -2 \ln (-y) - 1 + 1 = 0 \implies -\ln (-y) = 0 \implies y =
+            -1
+          </me>
+          This gives me the critical points <m>(1,1)</m> and
+          <m>(-1,-1)</m>.  Then I calculate the determinant of the
+          Hessian and evaluate it at the critical point.
           <md>
             <mrow>
               D \amp = \frac{\del^2 f}{\del x^2} \frac{\del^2 f}{\del y^2}
               - \left( \frac{\del^2 f}{\del x \del y} \right) 
             </mrow>
             <mrow>
-              D() \amp = 
+              D \amp = \left( 2 \ln (xy) + 2 + 1 + \frac{1}{x^2}
+              \right) \left( \frac{1-x^2}{y^2} \right) - \left(
+              \frac{2x}{y} \right)^2 
             </mrow>
-            ANALYSIS
+            <mrow>
+              D(1,1) \amp = \left( 0 + 3 + 1 \right) \left( 0 \right)
+              - \left( \frac{2}{1} \right)^2 = -4 
+            </mrow>
+            <mrow>
+              D(-1,-1) \amp = \left( 0 + 3 + 1 \right) \left( 0 \right)
+              - \left( \frac{2}{1} \right)^2 = -4 
+            </mrow>
           </md>
+          The Hessian determinant is negative for points points, so 
+          they are both saddle points. 
         </p>
       </solution>
     </activity>
@@ -99,35 +141,69 @@
       </statement>
       <solution>
         <p>
-          First we need the gradient.
+          First I calculate the gradient.
           <md>
             <mrow>
-              \nabla f(x,y) \amp = 
+              \nabla f(x,y) \amp = \left( \cos (x) \cos (y), - \sin
+              (x) \sin (y) \right) 
             </mrow>
           </md>
-          Then we set the gradient equal to zero to find the critical
+          Then I set the gradient equal to zero to find the critical
           points. This involves solving a system of two equations. 
           <md>
             <mrow>
-              \frac{\del}{\del x} f \amp = 0 
+              \cos x \cos y \amp = 0 
             </mrow>
             <mrow>
-              \frac{\del}{\del y} f \amp = 0 
+              -\sin x \sin y  \amp = 0 
             </mrow>
           </md>
-          This gives us the critical point REPLACE. Then we calculate
-          the determinant of the Hessian and evaluate it at the
-          critical point.
+          This is a complicated system. To make both terms vanish, we
+          have to use <m>x</m> and <m>y</m> as the zeros of sine or
+          cosine in matching pairs. This gives two families of point.
+          The first is 
           <md>
             <mrow>
-              D \amp = \frac{\del^2 f}{\del x^2} \frac{\del^2 f}{\del y^2}
-              - \left( \frac{\del^2 f}{\del x \del y} \right) 
+              \amp \left( n\pi, (2m+1) \frac{\pi}{2} \right) \amp \amp
+              n,m \in \ZZ
+            </mrow>
+          </md>
+          For this first family, the <m>x</m>
+          coordinate makes the sine term vanish and the <m>y</m>
+          coordinate makes the cosine term vanish. The second family
+          does the opposite. 
+          <md>
+            <mrow>
+              \amp \left( (2n + 1) \frac{\pi}{2}, m\pi \right) \amp
+              \amp n,m \in \ZZ
+            </mrow>
+          </md>
+          Here, the <m>x</m> coordinate makes the cosine terms vanish
+          and the <m>y</m> coordinate makes the sine terms vanish. 
+          Then I calculate the determinant of the Hessian and evaluate
+          it at the critical points (which I will have to do in
+          families, since there are infinitely many critical points). 
+          <md>
+            <mrow>
+              D \amp = \left( -\sin x \cos y \right) \left( -\sin x
+              \cos y \right) - \left( - \cos x \sin y \right)^2 
             </mrow>
             <mrow>
-              D() \amp = 
+              \amp = \sin^2 x \cos^2 y - \cos^2 x \sin^2 y 
             </mrow>
-            ANALYSIS
           </md>
+          I have to analyse the two families of critical points. For
+          the points in the family <m>\left( n\pi, (2m+1)
+          \frac{\pi}{2} \right)</m>, <m>D = -1</m>, so all of these
+          points are saddle points. For points in the family <m>
+          \left( (2n+1) \frac{\pi}{2}, m \pi \right)</m>, <m>D =
+          1</m>, so these are minima or maxima. I need to additionally
+          look at <m>\frac{\del^2 f}{\del x^2} = -\sin x \cos y</m>.
+          If <m>m,n</m> are both odd or both even, this partial
+          derivative is negative and the critical point is a maximum.
+          If one of <m>m,n</m> is odd and the other is even, this
+          partial derivative is positive and the critical point is a
+          minimum. 
         </p>
       </solution>
     </activity>
@@ -136,41 +212,55 @@
         <p>
           Calculate and classify the extrema of the function
           <me>
-            f(x,y) = x^2y + 4x^2y + xy - 6y
+            f(x,y) = x^3y + 4x^2y + xy - 6y
           </me>
         </p>
       </statement>
       <solution>
         <p>
-          First we need the gradient.
+          First I calculate the gradient.
           <md>
             <mrow>
-              \nabla f(x,y) \amp = 
+              \nabla f(x,y) \amp = (3x^2y + 8xy + y, x^3 + 4x^2
+              + x - 6) 
             </mrow>
           </md>
-          Then we set the gradient equal to zero to find the critical
+          Then I set the gradient equal to zero to find the critical
           points. This involves solving a system of two equations. 
           <md>
             <mrow>
-              \frac{\del}{\del x} f \amp = 0 
+              3x^2 y + 8xy + y \amp = 0 
             </mrow>
             <mrow>
-              \frac{\del}{\del y} f \amp = 0 
+              x^3 + 4x^2 + x - 6 \amp = 0 
             </mrow>
           </md>
-          This gives us the critical point REPLACE. Then we calculate
-          the determinant of the Hessian and evaluate it at the
-          critical point.
+          I can work with the second equation first, since it only
+          involves the <m>x</m> coordinate. This cubic has three roots
+          <m>x = 1, -2, -3</m>. Then I look at the second equation,
+          which I can factor.
+          <me>
+            y(3x^2  + 8x +  1) = 0 
+          </me>
+          I need to replace <m>x</m> with the three roots. However,
+          none of the three roots will produce zero in the second
+          factor in this equation. Therefore, to satisfy the first
+          equation, I must set <m>y=0</m>.  This gives me the critical
+          points <m>(1,0)</m>, <m>(-2,0)</m> and <m>(-3,0)</m>. Then I
+          calculate the determinant of the Hessian and evaluate it at
+          the critical points.
           <md>
             <mrow>
               D \amp = \frac{\del^2 f}{\del x^2} \frac{\del^2 f}{\del y^2}
               - \left( \frac{\del^2 f}{\del x \del y} \right) 
             </mrow>
             <mrow>
-              D() \amp = 
+              D \amp = (6xy + 8y)(0) - (3x^2 + 8x + 1)^2 = -(3x^2 + 8x
+              + 1)^2 
             </mrow>
-            ANALYSIS
           </md>
+          <m>D</m> will always be negative, regardless of where we
+          evaluate it. Therefore, all three points are saddlepoints. 
         </p>
       </solution>
     </activity>
@@ -179,85 +269,76 @@
         <p>
           Calculate and classify the extrema of the function
           <me>
-            f(x,y) = x^2y^2 - 3xy^2 + x^2 y - 4x^2 + xy 
+            f(x,y) = x^2y^2 - 3xy^2 -4x^2 
           </me>
         </p>
       </statement>
       <solution>
         <p>
-          First we need the gradient.
+          First I calculate the gradient.
           <md>
             <mrow>
-              \nabla f(x,y) \amp = 
+              \nabla f(x,y) \amp = (2xy^2 - 3y^2 - 8x, 2x^2y - 6xy) 
             </mrow>
           </md>
-          Then we set the gradient equal to zero to find the critical
+          Then I set the gradient equal to zero to find the critical
           points. This involves solving a system of two equations. 
           <md>
             <mrow>
-              \frac{\del}{\del x} f \amp = 0 
+              3xy^2 - 3y^2 - 8x \amp = 0 
             </mrow>
             <mrow>
-              \frac{\del}{\del y} f \amp = 0 
+              2x^2 y - 6xy \amp = 0 
             </mrow>
           </md>
-          This gives us the critical point REPLACE. Then we calculate
-          the determinant of the Hessian and evaluate it at the
-          critical point.
-          <md>
-            <mrow>
-              D \amp = \frac{\del^2 f}{\del x^2} \frac{\del^2 f}{\del y^2}
-              - \left( \frac{\del^2 f}{\del x \del y} \right) 
-            </mrow>
-            <mrow>
-              D() \amp = 
-            </mrow>
-            ANALYSIS
-          </md>
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Calculate and classify the extrema of the function
+          I work with the second equation first. I can factor the left
+          side.
           <me>
-            f(x,y) = e^{-x^2 + 2x - y^2 + 2y} - e^{-x^2 - 2x - y^2
-            -2x}
+            (x)(y)(2x - 6) = 0 
           </me>
-        </p>
-      </statement>
-      <solution>
-        <p>
-          First we need the gradient.
-          <md>
-            <mrow>
-              \nabla f(x,y) \amp = 
-            </mrow>
-          </md>
-          Then we set the gradient equal to zero to find the critical
-          points. This involves solving a system of two equations. 
-          <md>
-            <mrow>
-              \frac{\del}{\del x} f \amp = 0 
-            </mrow>
-            <mrow>
-              \frac{\del}{\del y} f \amp = 0 
-            </mrow>
-          </md>
-          This gives us the critical point REPLACE. Then we calculate
-          the determinant of the Hessian and evaluate it at the
-          critical point.
+          This leads to three possibilities: <m>x=0</m>, <m>y=0</m>
+          and <m>x=3</m>. I need to try all these possibilities in the
+          first equation. Let me start with <m>x=0</m> and rewrite the
+          first equation.
+          <me>
+            3(0)y^2 - 3y^2 - 8(0) = 0 \implies 3y^2 = 0 
+          </me>
+          This is solved only when <m>y=0</m>, so I get a critical
+          point at <m>(0,0)</m>. If i start with <m>x=0</m>, I get the
+          same critical point. Lastly, I need to check <m>x=3</m>.
+          <me>
+            3(3)y^2 - 3y^2 - 8(3) = 0 \implies 6y^2 = 24 \implies y^2
+            = 8 
+          </me>
+          There are two solutions here: <m>y = \pm 2\sqrt{2}</m>. That
+          gives two more critical points.  In total, I have three
+          critical points <m>(0,0)</m>, <m>(3, 2\sqrt{2})</m> and
+          <m>(3, -2\sqrt{2})</m>. Then I calculate the determinant of
+          the Hessian and evaluate it at the critical point.
           <md>
             <mrow>
               D \amp = \frac{\del^2 f}{\del x^2} \frac{\del^2 f}{\del y^2}
               - \left( \frac{\del^2 f}{\del x \del y} \right) 
             </mrow>
             <mrow>
-              D() \amp = 
+              D \amp = (2y^2 - 8)(2x^2 - 6y) - (4xy - 6y)^2 
             </mrow>
-            ANALYSIS
+            <mrow>
+              D(0,0) \amp = 0 
+            </mrow>
+            <mrow>
+              D(3,2\sqrt{2}) \amp = -240 
+            </mrow>
+            <mrow>
+              D(3,-2\sqrt{2}) \amp = -240 
+            </mrow>
           </md>
+          The test is inconclusive for <m>(0,0)</m>. By looking at the
+          graph of the function, we could guess that there is a saddle
+          point at the origin, but it is difficult to see this
+          directly from the function. The Hessian determinant is
+          negative for the other two critical points, so these are
+          certainly both saddle points. 
         </p>
       </solution>
     </activity>
