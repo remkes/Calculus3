@@ -50,7 +50,7 @@
     </p>
   </subsection>
   <subsection xml:id="finding-extrema">
-    <title>Finding Exrema</title>
+    <title>Finding Extrema</title>
     <p>
       A key obervation from Calculus I is that maxima and minima where
       found when <m>f^\prime(x) = 0</m>. (Though <m>f^\prime =0</m>
