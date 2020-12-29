@@ -1,4 +1,4 @@
-<section xml:id="error-analysis">
+<section xml:id="section-error-analysis">
   <title>Error Analysis of Series</title>
   <p>
     When we truncate a series to get a Taylor polynomial, we obviously

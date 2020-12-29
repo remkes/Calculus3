@@ -1,6 +1,6 @@
-<section xml:id="convergence-tests">
+<section xml:id="section-convergence-tests">
   <title>Convergence Tests</title>
-  <subsection xml:id="direct-comparison">
+  <subsection xml:id="subsection-direct-comparison">
     <title>Direction Comparison</title>
     <proposition>
       <statement>
@@ -97,7 +97,7 @@
       b_n</m> for all <m>n</m> past some finite fixed value.
     </p>
   </subsection>
-  <subsection xml:id="asymptotic-comparison">
+  <subsection xml:id="subsection-asymptotic-comparison">
     <title>Asymptotic Comparison</title>
     <p>
       In addition to the exact comparisons listed above, we can also
@@ -165,7 +165,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="integral-test">
+  <subsection xml:id="subsection-integral-test">
     <title>The Integral Test</title>
     <proposition>
       <statement>
@@ -205,7 +205,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="ratio-root">
+  <subsection xml:id="subsection-ratio-root">
     <title>The Ratio and Root Tests</title>
     <p>
       Here are two final tests.
@@ -250,7 +250,7 @@
       factorials. The root test is obviously useful for powers.
     </p>
   </subsection>
-  <subsection xml:id="testing-strategies">
+  <subsection xml:id="subsection-testing-strategies">
     <title>Testing Strategies</title>
     <p>
       There are many approaches to testing the convergence of a
@@ -333,7 +333,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="testing-examples">
+  <subsection xml:id="subsection-testing-examples">
     <title>Testing Examples</title>
     <p>
       Now that we have all the tools at our disposal, here are a bunch

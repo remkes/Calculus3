@@ -1,4 +1,4 @@
-<section xml:id="kepler">
+<section xml:id="section-kepler">
   <title>Kepler's Laws</title>
   <subsection xml:id="subsection-orbits">
     <title>Orbits</title>
@@ -69,7 +69,7 @@
       </ul>
     </p>
   </subsection>
-  <subsection xml:id="kepler-first">
+  <subsection xml:id="subsection-kepler-first">
     <title>Kepler's First Law</title>
     <p>
       The setup for approaching Kepler's laws is show in <xref
@@ -452,7 +452,7 @@
       escape velocity, to prove the final two laws.
     </p>
   </subsection>
-  <subsection xml:id="kepler-second">
+  <subsection xml:id="subsection-kepler-second">
     <title>Kepler's Second Law</title>
     <proposition>
       <statement>
@@ -592,7 +592,7 @@
       </p>
     </proof>
   </subsection>
-  <subsection xml:id="kepler-third">
+  <subsection xml:id="subsection-kepler-third">
     <title>Kepler's Third Law</title>
     <proposition>
       <statement>

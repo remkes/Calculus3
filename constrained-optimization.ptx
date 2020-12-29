@@ -1,6 +1,6 @@
-<section xml:id="constrained-optimization">
+<section xml:id="section-constrained-optimization">
   <title>Constrained Optimization</title>
-  <subsection xml:id="leading-example">
+  <subsection xml:id="subsection-leading-example">
     <title>A Motivating Example</title>
     <p>
       Let's reconsider the box-in-a-sphere problem of <xref
@@ -51,7 +51,7 @@
       Lagrangian).
     </p>
   </subsection>
-  <subsection xml:id="lm-examples">
+  <subsection xml:id="subsection-lm-examples">
     <title>Examples</title>
     <example>
       <statement>

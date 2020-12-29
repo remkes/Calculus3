@@ -1,6 +1,6 @@
 <section xml:id="section-gradients">
   <title>Gradients</title>
-  <subsection xml:id="gradient-definition">
+  <subsection xml:id="subsection-gradient-definition">
     <title>Definition of the Gradient</title>
     <p>
       After partial derivatives, we want to proceed to define several
@@ -26,7 +26,7 @@
       direction vector <em>in the domain</em>.
     </p>
   </subsection>
-  <subsection xml:id="gradient-interpretation">
+  <subsection xml:id="subsection-gradient-interpretation">
     <title>Interpretation of the Gradient</title>
     <p>
       The best interpretation of the gradient comes from contour
@@ -46,7 +46,7 @@
       f</m>.
     </p>
   </subsection>
-  <subsection xml:id="gradient-examples">
+  <subsection xml:id="subsection-gradient-examples">
     <title>Gradient Examples</title>
     <example>
       <statement>

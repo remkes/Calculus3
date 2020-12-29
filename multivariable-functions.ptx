@@ -1,6 +1,6 @@
-<section xml:id="multivariable-functions">
+<section xml:id="section-multivariable-functions">
   <title>Multivariable Functions</title>
-  <subsection xml:id="multivariable-definitions">
+  <subsection xml:id="section-multivariable-definitions">
     <title>Definitions</title>
     <p>
       First year calculus dealt with functions <m>\RR \rightarrow \RR</m>.
@@ -155,7 +155,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="graphs">
+  <subsection xml:id="section-graphs">
     <title>Geometry and Graphs of Functions</title>
     <p>
       The graph of a single variable <m>f: \RR \rightarrow \RR</m> was
@@ -228,7 +228,7 @@
       the n-dimensions graph surface.
     </p>
   </subsection>
-  <subsection xml:id="contour-plots">
+  <subsection xml:id="section-contour-plots">
     <title>Contour Plots</title>
     <p>
       As an alternative to conventional graphs of function, a nice way

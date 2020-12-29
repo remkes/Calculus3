@@ -1,6 +1,6 @@
-<section xml:id="multivariable-limits">
+<section xml:id="section-multivariable-limits">
   <title>Multivariable Limits</title>
-  <subsection xml:id="multivariable-limits-definitions">
+  <subsection xml:id="subsection-multivariable-limits-definitions">
     <title>Definition of Limits of Multivariable Functions</title>
     <p>
       I want to re-establish the tools of calculus for multi-variable

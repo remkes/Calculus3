@@ -1,6 +1,6 @@
-<section xml:id="pdes">
+<section xml:id="section-pdes">
   <title>Partial Differential Equations</title>
-  <subsection xml:id="heat-equation">
+  <subsection xml:id="subsection-heat-equation">
     <figure xml:id="figure-concavity-heat">
       <caption>
         Concavity and Heat Diffusion
@@ -132,7 +132,7 @@
       function that fits all the information.
     </p>
   </subsection>
-  <subsection xml:id="wave-equation">
+  <subsection xml:id="subsection-wave-equation">
     <title>The Wave Equation</title>
     <p>
       Another very familiar situation is a wave moving through an
@@ -171,7 +171,7 @@
       time.
     </p>
   </subsection>
-  <subsection xml:id="other-pdes">
+  <subsection xml:id="subsection-other-pdes">
     <title>Other PDEs</title>
     <p>
       Many other famous equations are relationships between times

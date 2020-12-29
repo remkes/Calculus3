@@ -1,6 +1,6 @@
-<section xml:id="extrema">
+<section xml:id="section-extrema">
   <title>Extrema</title>
-  <subsection xml:id="extreme-values">
+  <subsection xml:id="subsection-extreme-values">
     <title>Extreme Values</title>
     <p>
       Let's first define what we mean by extreme values.
@@ -49,7 +49,7 @@
       directions in the domain).
     </p>
   </subsection>
-  <subsection xml:id="finding-extrema">
+  <subsection xml:id="subsection-finding-extrema">
     <title>Finding Extrema</title>
     <p>
       A key obervation from Calculus I is that maxima and minima where
@@ -82,7 +82,7 @@
       behaviour, but not maxima or minima.
     </p>
   </subsection>
-  <subsection xml:id="extrema-examples">
+  <subsection xml:id="subsection-extrema-examples">
     <title>Examples</title>
     <figure xml:id="figure-3d-graph5">
       <caption>
@@ -180,7 +180,7 @@
       neither a maximum, minimum nor saddle point.
     </p>
   </subsection>
-  <subsection xml:id="hessians">
+  <subsection xml:id="subsection-hessians">
     <title>Hessian Matrices</title>
     <p>
       This informal approach is reasonable, but it would be nice to
@@ -333,7 +333,7 @@
       </statement>
     </proposition>
   </subsection>
-  <subsection xml:id="subsection-extrema-examples">
+  <subsection xml:id="subsection-hessian-examples">
     <title>Examples</title>
     <figure xml:id="figure-3d-graph7">
       <caption>

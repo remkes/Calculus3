@@ -1,4 +1,4 @@
-<section xml:id="absolute-convergence">
+<section xml:id="section-absolute-convergence">
   <title>Absolute and Conditional Convergence</title>
   <introduction>
     <p>
@@ -8,7 +8,7 @@
       alternating harmonic series.
     </p>
   </introduction>
-  <subsection xml:id="alternating-series-test">
+  <subsection xml:id="subsection-alternating-series-test">
     <title>Alternating Series Test</title>
     <definition>
       <statement>
@@ -40,7 +40,7 @@
       </statement>
     </proposition>
   </subsection>
-  <subsection xml:id="alternating-harmoinc-series">
+  <subsection xml:id="subsection-alternating-harmoinc-series">
     <title>The Alternating Harmonic Series</title>
     <definition>
       <statement>
@@ -193,7 +193,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="conditional-convergence">
+  <subsection xml:id="subsection-conditional-convergence">
     <title>Conditional Convergence</title>
     <p>
       This situation for the alternating harmonic series is not

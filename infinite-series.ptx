@@ -1,7 +1,6 @@
-<section xmlns:xi="http://www.w3.org/2001/XInclude"
-    xml:id="infinite-series">
+<section xml:id="section-infinite-series">
   <title>Infinite Series</title>
-  <subsection xml:id="zeno">
+  <subsection xml:id="subsection-zeno">
     <title>Zeno's Paradox</title>
     <p>
       The first two chapters of these notes, covering Infinite Series
@@ -50,7 +49,7 @@
       incomplete way) of dealing with Zeno's paradox.
     </p>
   </subsection>
-  <subsection xml:id="series-definition">
+  <subsection xml:id="subsection-series-definition">
     <title>Definition of Infinite Series</title>
       <definition>
         <statement>
@@ -74,7 +73,7 @@
       </statement>
     </definition>
   </subsection>
-  <subsection xml:id="convergence">
+  <subsection xml:id="subsection-convergence">
     <title>Partial Sums and Convergence</title>
     <p>
       Unlike finite sums, we have no guarantee that this expression
@@ -505,7 +504,7 @@
         <p>
           This is another definition for the number <m>e</m>. We'll
           prove that this definition is equivalent our existing
-          definitions in <xref ref="taylor-series" />.
+          definitions in <xref ref="section-taylor-series" />.
         </p>
       </statement>
     </example>
@@ -552,7 +551,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="geometric-zeta">
+  <subsection xml:id="subsection-geometric-zeta">
     <title>Geometric and <m>\zeta</m> Series</title>
     <p>
       There are two important classes of convergent series which we
@@ -627,13 +626,13 @@
     <p>
       We give this without proof for now. The convergence of the
       <m>\zeta</m> series can be proved with the Integral Test in
-      <xref ref="convergence-tests">Section</xref>. Unlike the
+      <xref ref="section-convergence-tests" />. Unlike the
       geometric series, where we can easily write the value, the
       actual value of <m>\zeta(p)</m> is not easy to express in
       conventional algebraic terms.
     </p>
   </subsection>
-  <subsection xml:id="manipulation-series">
+  <subsection xml:id="subsection-manipulation-series">
     <title>Manipulation of Series</title>
     <p>
       Once we have defined convergent series, we want to be able to

@@ -1,6 +1,6 @@
-<section xml:id="tangent-planes">
+<section xml:id="section-tangent-planes">
   <title>Tangent Planes</title>
-  <subsection xml:id="tangents">
+  <subsection xml:id="subsection-tangents">
     <title>Generalizing Tangents</title>
     <p>
       In single variable calculus, derivatives allowed us to find the
@@ -75,7 +75,7 @@
       </p>
     </proof>
   </subsection>
-  <subsection xml:id="tangent-examples">
+  <subsection xml:id="subsection-tangent-examples">
     <title>Tangent Plane Examples</title>
     <example xml:id="example-tangent-plane">
       <statement>
@@ -126,7 +126,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="tangents-higher-dimensions">
+  <subsection xml:id="subsection-tangents-higher-dimensions">
     <title>Higher Dimensions</title>
     <p>
       The definition of tangent planes for <m>f: \RR^2 \rightarrow

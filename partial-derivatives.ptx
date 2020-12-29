@@ -1,6 +1,6 @@
-<section xml:id="partial-derivatives">
+<section xml:id="section-partial-derivatives">
   <title>Partial Derivatives</title>
-  <subsection xml:id="partial-deriavties-definition">
+  <subsection xml:id="subsection-partial-deriavties-definition">
     <title>Definition</title>
     <p>
       A major goal of this course is extending the notion of the
@@ -146,7 +146,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="differentiability">
+  <subsection xml:id="subsection-differentiability">
     <title>Differentiability</title>
     <p>
       The partial derivative allows us to define a holistic notion of

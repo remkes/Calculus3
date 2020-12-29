@@ -1,6 +1,6 @@
-<section xml:id="chain-rule">
+<section xml:id="section-chain-rule">
   <title>The Chain Rule</title>
-  <subsection xml:id="multivariable-composition">
+  <subsection xml:id="subsection-multivariable-composition">
     <title>Multivariable Composition</title>
     <p>
      We defined partial derivatives to measure rates of change in a
@@ -22,7 +22,7 @@
       more) components?.
     </p>
   </subsection>
-  <subsection xml:id="chain-rule-statement">
+  <subsection xml:id="subsection-chain-rule-statement">
   <title>The Chain Rule</title>
     <proposition>
       <statement>
@@ -68,7 +68,7 @@
       this is the only possibility.
     </p>
   </subsection>
-  <subsection xml:i="chain-rule-examples">
+  <subsection xml:i="subsection-chain-rule-examples">
     <title>Chain Rule Examples</title>
     <example>
       <statement>

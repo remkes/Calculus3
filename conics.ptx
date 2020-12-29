@@ -1,6 +1,6 @@
-<section xml:id="conics">
+<section xml:id="section-conics">
   <title>Conics</title>
-  <subsection xml:id="conics-definition">
+  <subsection xml:id="subsection-conics-definition">
     <p>
       We are going to need conics to talk about orbital mechanics in
       the next section. Let's first review the classical definitions
@@ -118,7 +118,7 @@
       </statement>
     </definition>
   </subsection>
-  <subsection xml:id="eccentricity">
+  <subsection xml:id="subsection-eccentricity">
     <title>Eccentricity</title>
     <p>
       The parabola is defined as all points equidistant from a focus

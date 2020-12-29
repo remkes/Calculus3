@@ -1,6 +1,6 @@
-<section xml:id="parametrization">
+<section xml:id="section-parametrization">
   <title>Parametrization</title>
-  <subsection xml:id="varied-parametrization">
+  <subsection xml:id="subsection-varied-parametrization">
     <title>Varied Parametrizations</title>
     <figure xml:id="figure-parametric-parabola">
       <caption>The graph of a parabola as a parametric curve</caption>
@@ -60,7 +60,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="reparametrization">
+  <subsection xml:id="subsection-reparametrization">
     <title>Reparametrization</title>
     <p>
       Since the same shape can have many different parametrizations,
@@ -120,7 +120,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="arc-length">
+  <subsection xml:id="subsection-arc-length">
     <title>Arc Length</title>
     <figure xml:id="figure-arclength-approximation">
       <caption>Arclength setup by approximation</caption>
@@ -286,7 +286,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="parametrization-by-arclength">
+  <subsection xml:id="subsection-parametrization-by-arclength">
     <title>Parametrization by Arclength</title>
     <p>
       Our arclength calculation determins the length of the whole

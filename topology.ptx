@@ -1,6 +1,6 @@
-<section xml:id="topology">
+<section xml:id="section-topology">
   <title>Topology of <m>\RR^n</m></title>
-  <subsection xml:id="what-is-topology">
+  <subsection xml:id="subsection-what-is-topology">
   <title>What Is Topology</title>
     <p>
       Topology is a branch of mathematics which studies concepts of
@@ -23,7 +23,7 @@
       understand multivariable functions in the next section.
     </p>
   </subsection>>
-  <subsection xml:id="open-closed">
+  <subsection xml:id="subsection-open-closed">
     <title>Open and Closed Sets</title>
     <definition>
       <statement>
@@ -109,7 +109,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="intervals">
+  <subsection xml:id="subsection-intervals">
     <title>Important Open and Closed Sets</title>
     <p>
       Interval were important subsets of <m>\RR</m>. Here, I extend

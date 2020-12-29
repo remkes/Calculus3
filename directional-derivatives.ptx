@@ -1,6 +1,6 @@
-<section xml:id="directional-derivatives">
+<section xml:id="section-directional-derivatives">
   <title>Directional Derivatives</title>
-  <subsection xml:id="direction-derivatives-definition">
+  <subsection xml:id="subsection-direction-derivatives-definition">
     <title>Definition of Directional Derivatives</title>
     <p>
       Partial derivatives took one variable and pretended that all
@@ -39,7 +39,7 @@
       \frac{\del f}{\del z}</m>. 
     </p>
   </subsection>
-  <subsection xml:id="calculating-directional-derivatives">
+  <subsection xml:id="subsection-calculating-directional-derivatives">
     <title>Calculating Directional Derivatives</title>
     <p>
       Instead of calculating this limit every time, we have a nice

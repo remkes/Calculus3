@@ -1,6 +1,6 @@
-<section xml:id="taylor-series">
+<section xml:id="section-taylor-series">
   <title>Taylor Series</title>
-  <subsection xml:id="analytic-functions">
+  <subsection xml:id="subsection-analytic-functions">
     <title>Analytic Functions</title>
     <p>
       Once again, consider the geometric series.
@@ -64,7 +64,7 @@
       functions can be so expressed.
     </p>
   </subsection>
-  <subsection xml:id="calculating-coefficients">
+  <subsection xml:id="subsection-calculating-coefficients">
     <title>Calculating Coefficients</title>
     <p>
       The previous section defined a class of analytic functions, but
@@ -176,7 +176,7 @@
       away from their centre points.
     </p>
   </subsection>
-  <subsection xml:id="taylor-series-examples">
+  <subsection xml:id="subsection-taylor-series-examples">
     <title>Taylor Series Examples</title>
     <p>
       Let's try to calculate some Taylor series for important functions.

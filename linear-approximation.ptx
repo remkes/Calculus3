@@ -1,6 +1,6 @@
-<section xml:id="linear-approximation">
+<section xml:id="section-linear-approximation">
   <title>Linear Approximation</title>
-  <subsection xml:id="single-variable">
+  <subsection xml:id="subsection-single-variable">
     <title>Single Variable Interpretation</title>
     <p>
       Consider a single variable function <m>f: \RR \rightarrow
@@ -57,7 +57,7 @@
       \RR</m>, we have a <m>1 \times 2</m> matrix.
     </p>
   </subsection>
-  <subsection xml:id="linear-approximation-definition">
+  <subsection xml:id="subsection-linear-approximation-definition">
     <title>Linear Approximation in <m>\RR^2</m></title>
     <p>
       So we ask: what is a linear approximation to the function <m>f:
@@ -102,7 +102,7 @@
       we've already defined at <m>(a,b,f(a,b))</m>.
     </p>
   </subsection>
-  <subsection xml:id="la-examples">
+  <subsection xml:id="subsection-la-examples">
     <title>Examples</title>
     <example>
       <statement>
@@ -179,7 +179,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="what-is-a-derivative">
+  <subsection xml:id="subsection-what-is-a-derivative">
     <title>What Is A Derivative?</title>
     <p>
       We extended the idea of a derivative with partial derivatives
