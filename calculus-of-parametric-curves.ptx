@@ -1,6 +1,6 @@
 <section xml:id="section-calculus-of-parametric-curves">
   <title>Calculus of Parametric Curves</title>
-  <subsection xml:id="subsection-tangents">
+  <subsection xml:id="subsection-curve-tangents">
     <title>Tangents</title>
     <p>
       Parametric curves are vector-valued functions, so they have

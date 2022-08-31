@@ -1,5 +1,5 @@
 <!--
-  This assignment was used for the Fall 2020 term.
+  This assignment was used for the Fall 2022 term.
 -->
 <section xml:id="section-assignment1">
   <title>Assignment 1</title>
@@ -9,108 +9,135 @@
         Test the following series for convergence. (24)
         <ol>
           <li><me>
-            \sum_{n=0}^\infty \frac{1}{\pi^n} 
+            \sum_{n=0}^\infty \frac{n^2 + 1}{n^3 - 4}
           </me></li>
           <li><me>
-            \sum_{n=1}^\infty \frac{(n!)^2}{(3n+2)!} 
+            \sum_{n=0}^\infty \left( \sqrt{\frac{1}{2}} \right)^{2n} 
           </me></li>
           <li><me>
-            \sum_{n=2}^\infty \frac{(-1)^n}{n \ln n} 
+            \sum_{n=0}^\infty \frac{1}{\pi - 3}^n 
           </me></li>
           <li><me>
-            \sum_{n=5}^\infty \frac{n^7 + 4n^2 + 3}{4n^8 - n^6 - 3n^3 + n}  
+            \sum_{n=0}^\infty \frac{(n+1)! (2n)!}{(n!)^3}
           </me></li>
           <li><me>
-            \sum_{n=0}^\infty \left(\sqrt{\pi} \right)^{\frac{n}{2}}
+            \sum_{n=2}^\infty \frac{\ln n}{n^2} 
           </me></li>
           <li><me>
-            \sum_{n=1}^\infty \frac{\sin^2 n + \cos^2 3n}{n^2} 
+            \sum_{n=1}^\infty \frac{n^2 + n^3(\sin (n \pi))}{n^4 + 4}
           </me></li>
           <li><me>
-            \sum_{n=1}^\infty \frac{1}{\sqrt[3]{n^7+3n^6+n^2}} 
+            \sum_{n=1}^\infty \frac{(\ln n)^2}{n^2 + 1}
           </me></li>
           <li><me>
-            \sum_{n=1}^\infty  \frac{\ln n}{n + n^2\ln n}
+            \sum_{n=1}^\infty \frac{(-1)^n n^2}{n^2 + 4}
           </me></li>
         </ol>
       </p>
     </li>
     <li>
       <p>
-        Calculate the Taylor series for each function around the given
-        centre point <m>\alpha</m>, and determine the radius of
-        convergence. (15)
+        Calculate the Taylor series for each function, if possible,
+        around the given centre point <m>\alpha</m> and determine the 
+        radius of convergence. You can use commonly known series and 
+        adapt them, or calculate directly using derivatives to determine
+        the series. (20)
         <ol>
-          <li><md><mrow>
-            \amp e^{x^3+1} \amp \amp  \alpha = 0 
-          </mrow></md></li>
-          <li><md><mrow>
-            \amp \frac{1}{x} \amp \amp  \alpha = 4 
-          </mrow></md></li>
-          <li><md><mrow>
-            \amp x^2 \ln x \amp \amp  \alpha = 4 
-          </mrow></md></li>
+          <li>
+            <md>
+              <mrow>
+                \amp \sin (6x^2) \amp \amp \alpha = 0
+              </mrow>
+            </md>
+          </li>
+          <li>
+            <md>
+              <mrow>
+                \amp \frac{1}{1 - x^4} \amp \amp \alpha = 1
+              </mrow>
+            </md>
+          </li>
+          <li>
+            <md>
+              <mrow>
+                \amp \ln x \amp \amp \alpha = e
+              </mrow>
+            </md>
+          </li>
         </ol>
       </p>
     </li>
     <li>
       <p>
         Use the Lagrange error bounds to solve the following problems.
-        (20)
+        (12)
         <ol>
-          <li><p>
-            Given <m>\ln (1-x)</m> as a Taylor series centered at
-            <m>0</m>, if we want an approximation accurate to
-            <m>\frac{1}{1000}</m> on <m>\left( \frac{-1}{2},
-            \frac{1}{2} \right)</m>, what order of approximation is
-            required?
-          </p></li>
-          <li><p>
-            Given <m>e^{x^2}</m> as a Taylor series centered at
-            <m>0</m>, what interval allows us to use the fifth order
-            approximation with accuracy <m>\frac{1}{100}</m>. (You
-            may need to guess the interval here. Guess to the nearest
-            tenth.)
-          </p></li>
-          <li><p>
-            Given the <m>0</m>th Bessel function on the interval
-            <m>(-10,10)</m>, what accuracy is guaranteed by using a
-            seventh order approximation? (Use the fact that the series
-            is alternating to put a bound on the 8th derivative.)
-          </p></li>
-          <li><p>
-            Approximate <m>e^4</m> to 3 decimal places  using a
-            Taylor series.
-          </p></li>
+          <li>
+            <p>
+              Given <m>\sin x</m> as a Taylor series centered at
+              <m>0</m>, what interval allows the seventh order
+              approximation to have accuracy <m>\frac{1}{1000}</m>.
+              (You may approximate the interval to the nearest
+              hundredth.) 
+            </p>
+          </li>
+          <li>
+            <p>
+              Given <m>\ln x</m> as a Taylor series centered at
+              <m>0</m>, what accuracy is guaranteed by using a tenth
+              order approximation? 
+            </p>
+          </li>
         </ol>
       </p>
     </li>
     <li>
       <p>
-        Consider two power series.
-        <md><mrow>
-          \amp \sum_{n=0}^\infty a_n x^n \amp \amp 
-          \sum_{n=0}^\infty b_n x^n 
-        </mrow></md>
-        If these two series have radii of convergence <m>R_1</m> and
-        <m>R_2</m> respectively, give reasons why the sum and the
-        product of the two series should have radius of convergence
-        equal to the minimum of <m>R_1</m> and <m>R_2</m>. Give an
-        example where the sum or product has a radius of convergence
-        which is larger than both of the original radii. (6)
+        Given <m>\frac{1}{1-x}</m> as a Taylor series centered at
+        <m>0</m>, show that the Lagrange error calculation cannot
+        determine the order of approximation required to ensure that
+        the error is less than <m>\frac{1}{1000}</m> on the interval
+        <m>\left( \frac{-1}{2}, \frac{1}{2} \right)</m>? 
       </p>
     </li>
     <li>
       <p>
-        We say that a series <m>\sum_{n=0}^\infty</m> converges
-        <em>uniformly</em> on <m>\RR</m> to a function <m>f(x)</m>
-        if for all <m>\epsilon > 0</m>, there exists <m>N \in
-        \NN</m> such that for all <m>x \in \RR</m> if <m>n \lt
-        N</m> then <m> |f(x) - \sum_{k=0}^n c_n x^n | \lt
-        \epsilon </m> Prove that the standard Taylor series for
-        <m>e^x</m> centered at <m>0</m> does <em>not</em> converge
-        uniformly. (Consider a lower bound on the error as <m>x</m>
-        gets large). (6)
+        Let <m>f</m> and <m>g</m> be positive continuous functions
+        which both grow to inifnnity as <m>x \rightarrow \infty</m>.
+        Assume that the following series has a finite, non-zero radius
+        of convergence <m>R</m>. (10) 
+        <me>
+          \sum_{n=0}^\infty \frac{f(n)}{g(n)} x^n 
+        </me>
+        What happens to <m>R</m>, if anything, under the following
+        changes. Be as specific as you can and give reasons. 
+        <ol>
+          <li>
+            <p>
+              <m>f</m> is replace by <m>2f</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>g</m> is replace by <m>\frac{g}{3}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f</m> is replace by <m>f^2</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>g</m> is replace by <m>g^3</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>g</m> is replace by <m>g+1</m>.
+            </p>
+          </li>
+        </ol>
       </p>
     </li>
   </ol></p>
