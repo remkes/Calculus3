@@ -216,7 +216,7 @@
           </me>.
           Therefore the unit tangent at this point is 
           <me>
-            T (\pi) = \frac{1}{\sqrt{1+\pi^2} (-1,-\pi).
+            T (\pi) = \frac{1}{\sqrt{1+\pi^2}} (-1,-\pi).
           </me>.
         </p>
       </statement>

@@ -257,7 +257,7 @@
           ref="figure-activity-parametric-curve-5" />
           <figure xml:id="figure-activity-parametric-curve-5">
             <caption>
-              <m>\gamma(t) = \left( \frac{\pi^2}{t^2} \cps t,
+              <m>\gamma(t) = \left( \frac{\pi^2}{t^2} \cos t,
               \frac{\pi^2}{t^2} \sin t \right) </m>
             </caption>
             <image xml:id="figure56" width="90%">
@@ -976,12 +976,10 @@
           the square root, and some terms cancel. 
           <md>
             <mrow>
-              \amp \sqrt{4t^2 \cos^2 t - 4t^3 \cos t \sin t + t^2 \sin^2
-              t + 4t^2 \sin^2 t + 4t^3 \cos t \sin t + t^4 \cos^2 t}
+              \amp \sqrt{4t^2 \cos^2 t - 4t^3 \cos t \sin t + t^2 \sin^2 t + 4t^2 \sin^2 t + 4t^3 \cos t \sin t + t^4 \cos^2 t}
             </mrow>
             <mrow>
-              \amp = \sqrt{4t^2 (\cos^2 t + \sin^2 t) + t^4 (\cos^2 t
-              + \sin^2 t} 
+              \amp = \sqrt{4t^2 (\cos^2 t + \sin^2 t) + t^4 (\cos^2 t + \sin^2 t} 
             </mrow>
             <mrow>
               \amp = \sqrt{4t^2 + t^4} = t \sqrt{4+t^2}
@@ -1003,7 +1001,7 @@
               s(t) \amp = \int_4^{4+t^2} \frac{\sqrt{v}}{2} dv 
             </mrow>
             <mrow>
-              \amp = \frac{v^{\frac{3}{2}}}{3} \Big|_4^{4+t^2} =
+              \amp = \frac{v^{\frac{3}{2}}}{3} \Bigg|_4^{4+t^2} =
               \frac{(4 +t^2)^{\frac{3}{2}}}{3} - \frac{1}{3} 
             </mrow>
           </md>
@@ -1036,12 +1034,13 @@
               \amp \sqrt{(3s + 1)^{\frac{2}{3}} - 4} 
               \gamma(s) \amp = \amp \left( 
               \left((3s + 1)^{\frac{2}{3}} - 4 \right) 
-              \cos \left( \sqrt{(3s + 1)^{\frac{2}{3}} - 4} \right), 
+              \cos \left( \sqrt{(3s + 1)^{\frac{2}{3}} - 4} \right),
+              \right.  
             </mrow>
             <mrow>
-              \amp \amp \amp \left( (3s + 1)^{\frac{2}{3}} - 4 \right) 
-              \sin \left( \sqrt{(3s + 1)^{\frac{2}{3}} - 4} \right)
-              \right) 
+              \amp \amp \amp \left. \left( (3s + 1)^{\frac{2}{3}} - 4
+              \right) \sin \left( \sqrt{(3s + 1)^{\frac{2}{3}} - 4}
+              \right) \right) 
             </mrow>
           </md>
         </p>
@@ -1077,7 +1076,7 @@
           Then I calculate the pythagorian combination of these.
           <me>
             \sqrt{\frac{1}{t^2} + 16t^2} = \sqrt{\frac{1 +
-            16t^4}{t^2}} = \frac{1}{t} \sqrt{ 1+ 16t^4} 
+            16t^4}{t^2}} = \frac{1}{t} \sqrt{1+ 16t^4} 
           </me>
           Then I set up the arclength function, which is the integral
           of this pythagorian combination.
@@ -1091,7 +1090,7 @@
           <md>
             <mrow>
               s(t) \amp =  \frac{1}{2} \left( \sqrt{1 + 16t^4} -
-              \arctanh \left( \sqrt{ 1 + 16t^4 \right) - \sqrt{17} +
+              \arctanh \left( \sqrt{ 1 + 16t^4} \right) - \sqrt{17} +
               \arctanh (17) \right) 
             </mrow>
           </md>
@@ -1161,7 +1160,7 @@
           <md>
             <mrow>
               s(t) \amp = \frac{1}{2} \left( \sqrt{(t-2)^2 + 1} +
-              \arcsinh t - 2 - \sqrt{3} - \arcsinh (-2)} \right)  
+              \arcsinh t - 2 - \sqrt{3} - \arcsinh (-2) \right)  
             </mrow>
           </md>
           This is not algebraically invertible. All I can do is
