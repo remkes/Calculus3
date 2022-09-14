@@ -1,23 +1,329 @@
 <section xml:id="week1-activity">
   <title>Week 1 Activity</title>
-  <subsection xml:id="testing-series">
-    <title>Testing Series for Convergence</title>
+  <subsection xml:id="subsection-activity-alternating-series">
+    <title>Alternating Series</title>
+    <activity>
+      <statement>
+        <p>
+          Use the alternating series to test this series for
+          convergence. 
+        </p>
+        <me>
+          \sum_{n=1}^\infty \frac{(-1)^{n+1}}{n^3} 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          The alternating series test says that an alternating series
+          converges if and only if the limit of the terms is zero. I
+          calculate the limit of the terms.
+        </p>
+        <me>
+          \lim_{n \rightarrow \infty} \frac{1}{n^3} = 0 
+        </me>
+        <p>
+          The limit of the terms is zero, so the series converges. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Use the alternating series to test this series for
+          convergence. 
+        </p>
+        <me>
+          \sum_{n=1}^\infty \frac{(-1)^{n+1}(n^2 + 3n + 4)}{4n^2 + 2n
+          + 4} 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          The alternating series test says that an alternating series
+          converges if and only if the limit of the terms is zero. I
+          calculate the limit of the terms.
+        </p>
+        <me>
+          \lim_{n \rightarrow \infty} \frac{n^2 + 3n + 4}{4n^2 + 2n +
+          4} = \frac{1}{4}
+        </me>
+        <p>
+          This is an asymptotic analysis limit and the order is the
+          same in both numerator and denominator. The limit is the
+          ratio of the leading terms. Since the limit is not zero, the
+          series diverges by the alternating series test. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Use the alternating series to test this series for
+          convergence. 
+        </p>
+        <me>
+          \sum_{n=1}^\infty (-1)^{n+1} \sin ((2n+1)\pi) 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          The alternating series test says that an alternating series
+          converges if and only if the limit of the terms is zero. I
+          calculate the limit of the terms.
+        </p>
+        <me>
+          \lim_{n \rightarrow \infty} \sin ((2n+1)\pi) = \lim_{n
+          \rightarrow \infty} 0 = 0 
+        </me>
+        <p>
+          This is a limit of constant zeros, so it is certainly zero,
+          and the series converges. (Adds up to 0, in fact, since it
+          is just a sum of zeros!)
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Use the alternating series to test this series for
+          convergence. 
+        </p>
+        <me>
+          \sum_{n=1}^\infty (-1)^{n+1} \sqrt{n} 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          The alternating series test says that an alternating series
+          converges if and only if the limit of the terms is zero. I
+          calculate the limit of the terms.
+        </p>
+        <me>
+          \lim_{n \rightarrow \infty} \sqrt{n} = \infty 
+        </me>
+        <p>
+          The limit of the terms is not zero, so the series diverges. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Use the alternating series to test this series for
+          convergence. 
+        </p>
+        <me>
+          \sum_{n=1}^\infty (-1)^{n+1} \ln \left( \frac{1}{n} \right) 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          The alternating series test says that an alternating series
+          converges if and only if the limit of the terms is zero. I
+          calculate the limit of the terms.
+        </p>
+        <me>
+          \lim_{n \rightarrow \infty} \ln \left( \frac{1}{n} \right) =
+          -\infty 
+        </me>
+        <p>
+          The limit of the terms is not zero, so the series is
+          divergent. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Use the alternating series to test this series for
+          convergence. 
+        </p>
+        <me>
+          \sum_{n=1}^\infty (-1)^{n+1} e^{-n} 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          The alternating series test says that an alternating series
+          converges if and only if the limit of the terms is zero. I
+          calculate the limit of the terms.
+        </p>
+        <me>
+          \lim_{n \rightarrow \infty} e^{-n} = 0 
+        </me>
+        <p>
+          The limit of the terms is zero, so the series is convergent. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Use the alternating series to test this series for
+          convergence. 
+        </p>
+        <me>
+          \sum_{n=1}^\infty \frac{(-1)^{n+1} (n^6 + 54}{n!} 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          The alternating series test says that an alternating series
+          converges if and only if the limit of the terms is zero. I
+          calculate the limit of the terms.
+        </p>
+        <me>
+          \lim_{n \rightarrow \infty} \frac{n^6 + 54}{n!} = 0 
+        </me>
+        <p>
+          Asymptotically, the factorial grows faster than any
+          polynomial or exponential function. Therefore, the limit is
+          zero and the series converges. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Use the alternating series to test this series for
+          convergence. 
+        </p>
+        <me>
+          \sum_{n=1}^\infty (-1)^{n+1} \sin \left( \frac{1}{n} \right) 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          The alternating series test says that an alternating series
+          converges if and only if the limit of the terms is zero. I
+          calculate the limit of the terms.
+        </p>
+        <me>
+          \lim_{n \rightarrow \infty} \sin \left( \frac{1}{n} \right)
+          = 0 
+        </me>
+        <p>
+          The limit of the terms is zero, so the series converges. In
+          this limit, see that the term inside the sine fucntion are
+          getting close to zero. Since sine is continuous and <m>\sin
+          (0) = 0</m>, applying the sine function to those terms gives
+          new terms which will still be approaching zero. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Use the alternating series to test this series for
+          convergence. 
+        </p>
+        <me>
+          \sum_{n=1}^\infty (-1)^{n+1} \cos \left( \frac{1}{n} \right) 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          The alternating series test says that an alternating series
+          converges if and only if the limit of the terms is zero. I
+          calculate the limit of the terms.
+        </p>
+        <me>
+          \lim_{n \rightarrow \infty} \cos \left( \frac{1}{n} \right)
+          = 1 
+        </me>
+        <p>
+          The limit does not approach zero, so the series is
+          divergent. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Use the alternating series to test this series for
+          convergence. 
+        </p>
+        <me>
+          \sum_{n=1}^\infty \frac{(-1)^{n+1} (n!)(n+1)!}{(2n+3)!} 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          The alternating series test says that an alternating series
+          converges if and only if the limit of the terms is zero. I
+          calculate the limit of the terms. For this limit, I have to
+          do some factorial algebra. I'll split up the factorial in
+          the denominator into three pieces. 
+        </p>
+        <me>
+          \lim_{n \rightarrow \infty} \frac{n!(n+1)!}{2n+3)!} =
+          \lim_{n \rightarrow \infty} \frac{n!}{n!}
+          \frac{(n+1)!}{(n+1)(n+2)\ldots (2n+2)} \frac{1}{(2n+3)} 
+        </me>
+        <p>
+          Let me look at these three pieces. In the first, piece, the
+          <m>n!</m> cancels off, leaving just <m>1</m>. The third
+          piece is simply <m>\frac{1}{2n+3}</m>. The middle piece is
+          the most interesting. Here there are <m>n+1</m> numers in
+          the numerator multiplied together and there are also
+          <m>n+1</m> numbers in the denominator multiplied together.
+          In the numerator, the numbers multiplied at all numbers up
+          to <m>n+1</m>. In the denominator, the numbers multiplied
+          together are the numbers starting with <m>n+1</m> and
+          getting larger. Therefore, the product in the denominator
+          must be larger than the product in the numerator and the
+          fraction must be less than one. Putting it all together, I
+          get constnat 1 multiplies by something less than one
+          multiplied by <m>
+          \frac{1}{2n+3}</m>, which approach zero. Therefore, the
+          limit must be zero as well, which means that the series
+          converges. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Use the alternating series to test this series for
+          convergence. 
+        </p>
+        <me>
+          \sum_{n=1}^\infty \frac{(-1)^{n+1}}{1 - \frac{1}{n}} 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          The alternating series test says that an alternating series
+          converges if and only if the limit of the terms is zero. I
+          calculate the limit of the terms.
+        </p>
+        <me>
+          \lim_{n \rightarrow \infty} \frac{1}{1 - \frac{1}{n}} = 1
+        </me>
+        <p>
+          The limit of the terms is not zero, so the sequence is
+          divergent. 
+        </p>
+      </solution>
+    </activity>
+  </subsection>
+  <subsection xml:id="subsection-activity-testing-series">
+    <title>Testing Series for Convergence </title>
     <activity>
       <statement>
         <p>
           Test this series for convergence.
-          <me>
-            \sum_{n=1}^\infty \frac{4}{1+n} 
-          </me>
         </p>
+        <me>
+          \sum_{n=1}^{\infty} \frac{4}{1+n} 
+        </me>
       </statement>
       <solution>
         <p>
-          These terms are positive and asymptotically equivalent to
-          <m>\frac{1}{n}</m>, which are the terms of the harmonic
-          series (or the <m>\zeta</m> series with <m>p=1</m>. The
-          harmonic series is a divergent series, so by asymptotic
-          comparison, this is also a divergence series. 
+          The asymptotic order of the terms is <m>\frac{1}{n}</m>,
+          which are the terms of the harmonic series. The hamornic
+          series diverges, so this series will also diverge by
+          asymptotic comparison. 
         </p>
       </solution>
     </activity>
@@ -25,21 +331,25 @@
       <statement>
         <p>
           Test this series for convergence.
-          <me>
-            \sum_{n=1}^\infty (-1)^n 5^{-n}
-          </me>
         </p>
+        <me>
+          \sum_{n=2}^{\infty} \frac{1}{n \ln n}
+        </me>
       </statement>
       <solution>
         <p>
-          This is an alternating series, so we can use the alternating
-          series test. Look at the limit of the term.
-          <me>
-            \lim_{n \rightarrow \infty} 5^{-n} = \lim_{n \rightarrow
-            \infty} \frac{1}{5^n} = 0 
-          </me>
-          The terms approach zero, so by the alternating series test,
-          this series is convergent. 
+          I will use the integral test to deal with the logarithm. In
+          the resulting integral, I use a substitution <m>u = \ln
+          x</m> with <m> du = \frac{1}{x} dx</m>.
+        </p>
+        <me>
+          \int_2^\infty \frac{1}{x \ln x} dx = \int_{\ln 2}^\infty
+          \frac{1}{u} du = \lim_{a \rightarrow \infty} \ln u
+          \Bigg|_{\ln 2}^a = \lim_{a \rightarrow \infty} \ln a - \ln
+          (\ln 2) = \infty
+        </me>
+        <p>
+          The integral diverges, so the sum will also diverge. 
         </p>
       </solution>
     </activity>
@@ -47,39 +357,242 @@
       <statement>
         <p>
           Test this series for convergence.
-          <me>
-            \sum_{n=0}^\infty \frac{1 + 2^n + 4^n}{7^n}
-          </me>
         </p>
+        <me>
+          \sum_{n=1}^{\infty} \frac{1 + 2^n + 4^n}{7^n} 
+        </me>
       </statement>
       <solution>
         <p>
-          We can split this up into three series by linearity.
-          <me>
-            \sum_{n=0}^\infty \frac{1 + 2^n + 4^n}{7^n} = 
-            \sum_{n=0}^\infty \frac{1}{7^n} + \frac{2^n}{7^n} +
-            \frac{4^n}{7^n} = 
-            \sum_{n=0}^\infty \left( \frac{1}{7} \right)^n + 
-            \sum_{n=0}^\infty \left( \frac{2}{7} \right)^n + 
-            \sum_{n=0}^\infty \left( \frac{4}{7} \right)^n
-          </me>
-          All three of these are geometric series with common ratios
-          less than one, so each of the three is convergent. Our
-          series is the sum of three convergent series, so it is
-          convergent. Since these are all geometric series, we can
-          actually calculate the value of this series. 
-          <md>
-            <mrow>
-              \amp \sum_{n=0}^\infty \left( \frac{1}{7} \right)^n + 
-              \sum_{n=0}^\infty \left( \frac{2}{7} \right)^n + 
-              \sum_{n=0}^\infty \left( \frac{4}{7} \right)^n 
-            </mrow>
-            <mrow>
-              \amp = \frac{1}{1 - \frac{1}{7}} + \frac{1}{1 -
-              \frac{2}{7}} + \frac{1}{1 - \frac{4}{7}} = \frac{7}{6} +
-              \frac{7}{5} + \frac{7}{3} = \frac{49}{10}
-            </mrow>
-          </md>
+          I can split this up into three series using linearity. 
+        </p>
+        <me>
+          \sum_{n=1}^{\infty} \frac{1}{7^n} 
+          + \sum_{n=1}^{\infty} \frac{2^n}{7^n} 
+          + \sum_{n=1}^{\infty} \frac{4^n}{7^n} 
+        </me>
+        <p>
+          All three of these are geometric series. The common ratios
+          are <m>\frac{1}{7}</m>. <m>\frac{2}{7}</m>, and
+          <m>\frac{4}{7}</m>. All the common ratios are less than one,
+          so all three series converge, and I conclude that the
+          original series also converges. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Test this series for convergence.
+        </p>
+        <me>
+          \sum_{n=1}^{\infty} \frac{\sqrt{n^6 + 7n^3 +
+          1}}{\sqrt[3]{n^9 + 3n}} 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          I consider the limit of the terms. 
+        </p>
+        <me>
+          \lim_{n \rightarrow \infty} \frac{\sqrt{n^6 + 7n^3 +
+          1}}{\sqrt[3]{n^9 + 3n}} 
+        </me>
+        <p>
+          The asymptotic order of the numerator is <m>\sqrt{n^6} =
+          n^3</m>. The asymptotic order of the denominator is
+          <m>\sqrt[3]{n^9} = n^3</m>. The limit here is the ratio of
+          the leading coefficients, since the asymptotic order of the
+          numerator is the same as the denominator. That ratio is 1.
+          The limit of the terms is not zero, so by the test for
+          divergence, the series diverges.
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Test this series for convergence.
+        </p>
+        <me>
+          \sum_{n=1}^{\infty} \frac{e^n}{n!} 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          With factorials, I'll use the ratio test. I take the limit
+          of the ratio of the terms. In the limit, note how the
+          factorials cancal: <m>\frac{n!}{(n+1)!} = \frac{1}{n+1}</m>.  
+        </p>
+        <me>
+          \lim_{n \rightarrow \infty}
+          \frac{\left| \frac{e^{n+1}}{(n+1)!} \right|}{\left|
+          \frac{e^n}{n!} \right|} = \lim_{n
+          \rightarrow \infty} \frac{n!}{(n+1)!} \frac{e^{n+1}}{e^n} =
+          \lim_{n \rightarrow \infty} \frac{e}{n+1} = 0 
+        </me>
+        <p>
+          The outcome of the ratio test is less than one, so the limit
+          converges. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Test this series for convergence.
+        </p>
+        <me>
+          \sum_{n=1}^{\infty} 2^{\frac{1}{n}}
+        </me>
+      </statement>
+      <solution>
+        <p>
+          I look at the limit of the terms.
+        </p>
+        <me>
+          \lim_{n \rightarrow \infty} 2^{\frac{1}{n}} = 1 
+        </me>
+        <p>
+          The limit of the terms is not zero, so the series diverges
+          by the test for divergence. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Test this series for convergence.
+        </p>
+        <me>
+          \sum_{n=1}^{\infty} \frac{\sin n}{n^2} 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          Asymptotically, the <m>\sin n</m> in the numerator doesn't
+          affect the asymptotic order. The asymptotic order here is
+          <m>\frac{1}{n^2}</m>. That's the asymptotic order of
+          convergent zeta series, so this series converges. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Test this series for convergence.
+        </p>
+        <me>
+          \sum_{n=4}^{\infty} \frac{\ln (n-3)}{n-3}
+        </me>
+      </statement>
+      <solution>
+        <p>
+          Since the logarithm is a growing function, these terms are
+          eventually larger than <m>\frac{1}{n-3}</m>. Those terms are
+          (with a shift) the terms of the divergence harmonic series.
+          Therefore, since these terms are larger than the terms of a
+          divergent series, this diverges by direct comparison.
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Test this series for convergence.
+        </p>
+        <me>
+          \sum_{n=1}^{\infty} \frac{(n+5)!}{(n+7)!} 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          I can simplify the terms by canceling with the factorial. 
+        </p>
+        <me>
+          \frac{(n+5)!}{(n+7)!} = \frac{1}{(n+6)(n+7)} = \frac{1}{n^2
+          + 13n + 42} 
+        </me>
+        <p>
+          The asymptotic order of the terms is <m>\frac{1}{n^2}</m>,
+          which are the terms of a convergent <m>\zeta</m> series.
+          Therefore, this series converges. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Test this series for convergence.
+        </p>
+        <me>
+          \sum_{n=1}^{\infty} \frac{20 - n^2}{30 - n^3} 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          The asymptotic order of the series is <m>\frac{n^2}{n^3} =
+          \frac{1}{n}</m>. That is the harmonic series, which is
+          divergence. Therefore, this series is divergent. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Test this series for convergence.
+        </p>
+        <me>
+          \sum_{n=1}^{\infty} \frac{n^6 + 5n + 4}{7n^8 + 4n^3} 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          The asymptotic order of the terms is <m>\frac{n^6}{n^8} =
+          \frac{1}{n^2}</m>. Those are the terms of a convergent
+          <m>\zeta</m> series, so this series converges. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Test this series for convergence.
+        </p>
+        <me>
+          \sum_{n=1}^{\infty} \frac{1}{3n - \sqrt{n}} 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          The asymptotic order of the terms of this series is
+          <m>\frac{1}{n}</m>. That is the order of the harmonic
+          series, which diverges. Therefore, this series diverges by
+          asymptotic comparison. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Test this series for convergence.
+        </p>
+        <me>
+          \sum_{n=1}^{\infty} \frac{n}{3^n}
+        </me>
+      </statement>
+      <solution>
+        <p>
+          I will use the ratio test. I calculate the limit of the
+          ratio of the terms.
+        </p>
+        <me>
+          \lim_{n \rightarrow \infty} \frac{\left| \frac{n+1}{3^{n+1}}
+          \right|}{\left| \frac{n}{3^n} \right|} = \lim_{n \rightarrow
+          \infty} \frac{n+1}{n} \frac{3^n}{3^{n+1}} = \frac{1}{3} 
+        </me>
+        <p>
+          The limit is less than one, so the series converges. 
         </p>
       </solution>
     </activity>
@@ -95,8 +608,8 @@
       </statement>
       <solution>
         <p>
-          Since we are adding positive elements to <m>\frac{1}{n}</m>,
-          the term here satisfy this inequatily. 
+          Since this series is formed by adding positive elements to
+          <m>\frac{1}{n}</m>, the terms here satisfy this inequatily. 
           <me>
             \left( \frac{1}{n} + \frac{1}{n^2} +
             \frac{1}{n^3} \right) > \frac{1}{n} 
@@ -118,13 +631,13 @@
       </statement>
       <solution>
         <p>
-          We can use the test for divergence here and look at the
+          I can use the test for divergence here and look at the
           limit of the terms.
           <me>
             \lim_{n \rightarrow \infty} \frac{\sqrt{n^6 + 1}}{n^3} 
           </me>
           In this limit, the asymptotic order of the numerator and
-          denominator are both <m>n^3</m> and the leading coefficient
+          denominator are both <m>n^3</m> and the leading coefficients
           are both 1. 
           <me>
             \lim_{n \rightarrow \infty} \frac{\sqrt{n^6 + 1}}{n^3} =
@@ -132,136 +645,6 @@
           </me>
           Since the limit of the terms is not zero, this is a
           divergent series.
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Test this series for convergence.
-          <me>
-            \sum_{n=1}^\infty \frac{e^n}{n!}
-          </me>
-        </p>
-      </statement>
-      <solution>
-        <p>
-          We can use the ratio test here to deal with the factorial.
-          <md>
-            <mrow>
-              \lim_{n \rightarrow \infty} \left| \frac{a_{n+1}}{a_n}
-              \right| \amp = \lim_{n \rightarrow \infty}
-              \frac{\frac{e^{n+1}}{(n+1)!}}{\frac{e^n}{n!}} 
-            </mrow>
-            <mrow>
-              \amp = \lim_{n \rightarrow \infty}
-              \frac{e^{n+1} (n)!}{e^n (n+1)!} 
-            </mrow>
-            <mrow>
-              \amp = \lim_{n \rightarrow \infty} \frac{e}{n+1} = 0
-            </mrow>
-          </md>
-          The limit is 0, which is less than 1, so the ratio test
-          tells us that the series is convergent.
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Test this series for convergence.
-          <me>
-            \sum_{n=1}^\infty \frac{(n+5!)}{(n+7)!}
-          </me>
-        </p>
-      </statement>
-      <solution>
-        <p>
-          We could use ratio test here for the factorials, but we can
-          more directly simplify these terms. 
-          <me>
-            \frac{(n+5!)}{n+7)!} = \frac{(n+5)!}{(n+7)(n+6)(n+5)!} =
-            \frac{1}{(n+6)(n+7)} = \frac{1}{n^2 + 13n + 42}
-          </me>
-          Now these terms are asymptotically equivalent to
-          <m>\frac{1}{n^2}</m>, which are the terms of the
-          <m>\zeta</m> series with <m>p=2</m>, a convergent
-          <m>\zeta</m> series. Since our series has positive terms
-          which asymptotically equivalent to a positive convergent
-          series, our series is also convergent. 
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Test this series for convergence.
-          <me>
-            \sum_{n=1}^\infty \frac{20-n^2}{30-n^3}
-          </me>
-        </p>
-      </statement>
-      <solution>
-        <p>
-          Ther terms here are asymptotically equivalent to
-          <m>\frac{1}{n}</m>. Even though there are negative signs,
-          for <m>n</m> sufficiently large (<m>n \geq 5</m> is already
-          enough), both numerator and denominator will be negative, so
-          the term are positive. Therefore, we have positive terms
-          which are asymptotically equivalent to the positive terms of
-          the harmonic series. Since the harmonic series is divergent,
-          our series is also divergent. 
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Test this series for convergence.
-          <me>
-            \sum_{n=1}^\infty (-1)^n \frac{1}{n!}
-          </me>
-        </p>
-      </statement>
-      <solution>
-        <p>
-          This is an alternating series and the limit of the terms if
-          zero. By the alternating series test, this is convergent. 
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Test this series for convergence.
-          <me>
-            \sum_{n=1}^\infty \frac{n}{3^n}
-          </me>
-        </p>
-      </statement>
-      <solution>
-        <p>
-          We can use the ratio test.
-          <md>
-            <mrow>
-              \lim_{n \rightarrow \infty} \left| \frac{a_{n+1}}{a_n}
-              \right| \amp = \lim_{n \rightarrow \infty}
-              \frac{\frac{n+1}{3^{n+1}}}{\frac{n}{3^n}}
-            </mrow>
-            <mrow>
-              \amp = \lim_{n \rightarrow \infty}
-              \frac{(n+1)3^n}{n3^{n+1}}
-            </mrow>
-            <mrow>
-              \amp = \lim_{n \rightarrow \infty} \frac{(n+1)}{n}
-              \frac{1}{3} 
-              = \frac{1}{3} \lim_{n \rightarrow \infty} \frac{(n+1)}{n}
-            </mrow>
-          </md>
-          The term <m>\frac{n+1}{n}</m> approaches 1 by asymptotic
-          analysis, so this limit approaches <m>\frac{1}{3}</m>. This
-          is less than one, to the ratio test tells us that the limit
-          is convergent. 
         </p>
       </solution>
     </activity>
@@ -279,9 +662,9 @@
           The terms of this series are asymptotically equivalent to
           <m>\frac{1}{n^{\frac{3}{2}}}</m>. Those are the terms of a
           <m>\zeta</m> series with <m>p=\frac{3}{2}</m>. <m>\zeta</m>
-          series converge when <m>p > 1</m>, so our series has terms
+          series converge when <m>p > 1</m>, so the series has terms
           which are asymptotically equivalent to a convergent
-          <m>\zeta</m> series; therefore our series converges. 
+          <m>\zeta</m> series; therefore the series converges. 
         </p>
       </solution>
     </activity>
@@ -298,9 +681,9 @@
         <p>
           This is a very strange series and it isn't obvious what test
           might help. I found a comparison that works. For large
-          enough <m>n</m>, <m>\ln n \gt 2</m>. If we invert this, we see
-          that <m>\frac{1}{\ln n} \lt \frac{1}{2}</m>. Then if we
-          apply the exponent <m>n</m>, we get 
+          enough <m>n</m>, <m>\ln n \gt 2</m>. If I invert this, I see
+          that <m>\frac{1}{\ln n} \lt \frac{1}{2}</m>. Then if I
+          apply the exponent <m>n</m>, I get 
           <me>
             \frac{1}{(\ln n)^n} \lt \left( \frac{1}{2} \right)^n 
           </me>
@@ -309,8 +692,8 @@
           terms of a convergent geometric series (since the common
           ratio, <m>\frac{1}{2}</m>, is less than 1). Since all the
           terms of our series and the comparison series are positive,
-          since we have terms which are smaller than the terms of a
-          convergent series, our series will also converge. 
+          since there are terms which are smaller than the terms of a
+          convergent series, this series will also converge. 
         </p>
         <p>
           Alternatively, the root test is quite effective here (though
@@ -322,7 +705,7 @@
             n} = 0 
           </me>
           Since this limits exists and is less than <m>1</m>, the root
-          test tells us that the series converges.
+          test tells me that the series converges.
         </p>
       </solution>
     </activity>

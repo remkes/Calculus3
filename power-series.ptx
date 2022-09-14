@@ -3,100 +3,107 @@
   <subsection xml:id="subsection-series-as-functions">
     <title>Series as Functions</title>
     <p>
-      Our two main examples for comparison in the previous chapter
+      The two main examples for comparison in <xref
+      ref="subsection-comparison" />
       were the geometric series and the <m>\zeta</m> series. Both
-      converged for certain values of the parameter; <m>|r|\lt 1</m>
+      converged for certain values of a parameter; <m>|r|\lt 1</m>
       for the geometric series and <m>p ></m> for the <m>\zeta</m>
       series. To start this section, I'd like to re-interpret these
       two series. Instead of thinking of a whole family of different
-      series which depend on a parameter (<m>r</m> or <m>p</m>), we
+      series which depend on a parameter (<m>r</m> or <m>p</m>), I
       can think of each family of series as a <em>function</em> of the
-      parameter. In this view, we have only one series, but the
-      series produces a function instead of just a number.
+      parameter. In this view, there is only one series, but the
+      series converges tofunction instead of just a number.
     </p>
     <p>
       For the geometric series, this new perspective defines a
       function <m>f(x)</m>.
-      <me>
-        f(x) = \sum_{n=0}^\infty x^n
-      </me>
     </p>
+    <me>
+      f(x) = \sum_{n=0}^\infty x^n
+    </me>
     <p>
       The domain of this function is <m>|x|\lt 1</m>, since those are
       the values of the parameter (now the variable) where the
-      geometric series converges. We even know what this function
-      is.
-      <md>
-        <mrow>
-        \amp f(x) = \sum_{n=0}^\infty x^n = \frac{1}{1-x} \amp \amp
-        |x| .\lt  1
-        </mrow>
-      </md>
+      geometric series converges. Since I know the value of the
+      geometric series, I actually already have another expression for
+      this function.
     </p>
+    <md>
+      <mrow>
+        \amp f(x) = \sum_{n=0}^\infty x^n = \frac{1}{1-x} \amp \amp 
+        |x| \lt 1
+      </mrow>
+    </md>
     <p>
       In this way, the geometric series now defines the function
       <m>f(x) = \frac{1}{1-x}</m>. The domain restriction of the
       function is determined by the convergence of the series: a point
       <m>x</m> is in the domain of the function if the series
-      converges for that choice of <m>x</m>. 
+      converges for that choice of <m>x</m>.
     </p>
     <p>
-      We can do the same with the <m>\zeta</m> series. The reason we
-      called them <m>\zeta</m> series is that the associated function
-      is called the Riemann <m>\zeta</m>-function.
-      <me>
-        \zeta(p) = \sum_{n=0}^\infty \frac{1}{n^p}
-      </me>
+      I can do the same with the <m>\zeta</m> series. The reason I
+      called these series <sq><m>\zeta</m> series</sq> is that the
+      associated function is called the Riemann <m>\zeta</m>-function.
     </p>
+    <me>
+      \zeta(x) = \sum_{n=0}^\infty \frac{1}{n^x}
+    </me>
     <p>
-      The domain of this function is <m>p \in (1,\infty)</m>, since
-      that is where the series converges. (In other branches of
-      mathematics, the domain of <m>\zeta</m> is extended in new and
-      interesting ways. The vanishing of the <m>\zeta</m> function is
-      the subject of the famous Riemann Hypothesis, an important
-      unsolved problem in modern mathematics.)
+      The domain of this function is <m>(1,\infty)</m>, since that is
+      where the series converges. (In other branches of mathematics,
+      the domain of <m>\zeta</m> is extended in new and interesting
+      ways. The vanishing of the <m>\zeta</m> function is the subject
+      of the famous Riemann Hypothesis, an important unsolved problem
+      in modern mathematics.)
     </p>
     <p>
       In general, an infinite series can represent a function
       <m>f(x)</m> when the terms <m>a_n</m> of the series also depend
       on <m>x</m>.
-      <me>
-        f(x) = \sum_{n=1}^\infty a_n(x)
-      </me>
     </p>
+    <me>
+      f(x) = \sum_{n=1}^\infty a_n(x)
+    </me>
     <p>
       Notice that the variable of the function, <m>x</m>, is not the
       index of the sum <m>n</m>. These two numbers are different and
       must not be confused. The domain of this function is the set of
       values of <m>x</m> for which the series converges. Instead of
-      previous domain restrictions, involving division by zero, square
-      roots and other problems, domain restrictions are now all about
+      the conventions for determining the domains of functions used
+      before (avoiding division by zero, square
+      roots and other problems) domain restrictions for these new
+      funcdtions are all about
       convergence. For these series, convergence is no longer a
       yes/no question. Instead, it is a domain question: for which
       real numbers does the series converge?
     </p>
   </subsection>
-  <subsection xml:id="subsection-power-series-definition">
-    <title>Definition</title>
+  <subsection xml:id="subsection-power-series-definitions">
+    <title>Definition of Power Series</title>
     <p>
       A polynomial <m>p(x)</m> of degree <m>d</m> can be written as a
       finite sum in sigma notation.
-      <me>
-        p(x) = \sum_{n=0}^d c_n x^n
-      </me>
     </p>
+    <me>
+      p(x) = \sum_{n=0}^d c_n x^n
+    </me>
     <p>
       The terms involve powers of the variables (<m>x^n</m>) and
-      coefficients of those powers (<m>c_n</m>). What if we let the
-      degree become arbitrarily large, going to infinity?
+      coefficients of those powers (<m>c_n</m>). What if I let the
+      degree become arbitrarily large, going to infinity? I get a
+      particular kind of infinite series. 
     </p>
     <definition>
       <statement>
         <p>
           A series of the form
-          <me>
-            f(x) = \sum_{n=0}^\infty c_n x^n
-          </me>
+        </p>
+        <me>
+          f(x) = \sum_{n=0}^\infty c_n x^n
+        </me>
+        <p>
           is called a <term>power series</term>. The real numbers
           <m>c_n</m> are called the <term>coefficients</term> of the
           power series. The whole expression <m>c_nx^n</m> is still
@@ -106,16 +113,20 @@
     </definition>
     <p>
       The full definition is slightly more general. The previous
-      series was a power series <em>centered at 0</em>. We can centre
-      a power series at any <m>\alpha \in \RR</m>.
+      series was a power series <em>centered at 0</em>. I can centre
+      a power series at any <m>\alpha \in \RR</m>. This could also be
+      done for polynomials, but it much more useful to do for power
+      series. 
     </p>
     <definition>
       <statement>
         <p>
           A series of the form
-          <me>
-            f(x) = \sum_{n=0}^\infty c_n (x-\alpha)^n
-          </me>
+        </p>
+        <me>
+          f(x) = \sum_{n=0}^\infty c_n (x-\alpha)^n
+        </me>
+        <p>
           is called a <term>power series centered at
           <m>\alpha</m></term>. The numbers <m>c_n</m> are still
           called the <term>coefficients</term> and the number
@@ -129,19 +140,23 @@
   <subsection xml:id="subsection-radii-of-convergence">
     <title>Radii of Convergence</title>
     <p>
-      Polynomials were defined for all real numbers; they had no
+      Polynomials are defined for all real numbers; they had no
       domain restrictions. However, series do have domain
       restrictions. A power series may or may not converge for all
       real values of <m>x</m>. The first and most important issue
-      when we start using series as functions is determining the
-      domain of convergence. For power series, we will almost always
+      when I start using series as functions is determining the
+      domain of convergence. For power series, I will almost always
       use the ratio test. Recall that the ratio tests shows
       convergence when the limit of the ratio of the terms is <m>\lt
-      1</m>. We will use some examples to show the various types of
+      1</m>. I will use some examples to show the various types of
       behaviours.
     </p>
     <example>
       <statement>
+        <p>
+          Here is a power series centred at <m>\alpha = -2</m>. I'll
+          determine its convergence using the ratio test. 
+        </p>
         <md>
           <mrow>
             \sum_{n=0}^\infty \frac{(x+2)^n}{n^2} \amp
@@ -155,22 +170,26 @@
           </mrow>
           <mrow>
             \amp = |x+2| \lim_{n \rightarrow \infty}
-            \frac{n^2}{n^2+2n+1} = |x+2| \lt  1
+            \frac{n^2}{n^2+2n+1} = |x+2| \lt 1
           </mrow>
         </md>
         <p>
           This series is centered at <m>\alpha=-2</m>, and the ratio
-          test tells us that we have convergence on <m>|x+2|\lt 1</m>,
+          test tells me that there is convergence on <m>|x+2|\lt 1</m>,
           which is the interval <m>(-3,-1)</m>. Outside the interval,
           the series diverges and doesn't represent a function. The
           convergence at the endpoints <m>-3</m> and <m>-1</m> is
-          undetermined; we would need to check them individually using
+          undetermined; I would need to check them individually using
           another type of test.
         </p>
       </statement>
     </example>
     <example>
       <statement>
+        <p>
+          Here is a power series centred at <m>\alpha = 0</m>. I'll
+          determine its convergence using the ratio test. 
+        </p>
         <md>
           <mrow>
             \sum_{n=0}^\infty nx^n \amp
@@ -179,17 +198,23 @@
             \lim_{n \rightarrow \infty} \left| \frac{a_{n+1}}{a_n}
             \right| \amp = \lim_{n \rightarrow \infty} \left|
             \frac{x^{n+1} (n+1)}{x^n n} \right| = |x| \lim_{n
-            \rightarrow \infty} \frac{n+1}{n} = |x| \lt  1
-        </mrow>
+            \rightarrow \infty} \frac{n+1}{n} = |x| \lt 1
+          </mrow>
         </md>
         <p>
-          The ratio test allows us to conclude that this converges on
-          <m>(-1,1)</m>.
+          The ratio test allows me to conclude that this converges on
+          <m>(-1,1)</m>. Again, if I wanted to know about convergence
+          at the endpoint (where the ratio test is inconclusive), I'd
+          have to investigate those series with another test.
         </p>
       </statement>
     </example>
     <example>
       <statement>
+        <p>
+          Here is a power series centred at <m>\alpha = 0</m>. I'll
+          determine its convergence using the ratio test. 
+        </p>
         <md>
           <mrow>
             \sum_{n=0}^\infty n!x^n \amp
@@ -198,19 +223,24 @@
             \lim_{n \rightarrow \infty} \left| \frac{a_{n+1}}{a_n}
             \right| \amp = \lim_{n \rightarrow \infty} \left|
             \frac{x^{n+1} (n+1)!}{x^n n!} \right| = |x| \lim_{n
-            \rightarrow \infty} \frac{n+1!}{n!} = \infty
+            \rightarrow \infty} \frac{n+1!}{n!} = |x| \lim_{n
+            \rightarrow \infty} (n+1)
           </mrow>
         </md>
         <p>
-          This limit is never finite unless <m>x=0</m>, so this
-          converges almost nowhere. This is essentially useless as
-          the definition of a function, since its only value is
-          <m>f(0) = 0</m>.
+          This limit is never finite unless <m>x=0</m> (when all the
+          terms are zero), so this converges almost nowhere. This is
+          essentially useless as the definition of a function, since
+          its only value is <m>f(0) = 0</m>.
         </p>
       </statement>
     </example>
     <example>
       <statement>
+        <p>
+          Here is a power series centred at <m>\alpha = 7</m>. I'll
+          determine its convergence using the ratio test. 
+        </p>
         <md>
           <mrow>
             \sum_{n=0}^\infty \frac{(-1)^n (x-7)^n}{2^n n!} \amp
@@ -220,18 +250,19 @@
             \right| \amp = \lim_{n \rightarrow \infty} \left|
             \frac{\frac{(x-7)^{n+1}}{2^{n+1}
             (n+1)!}}{\frac{(x-7)^n}{2^n n!}} \right| = |x-7|\lim_{n
-            \rightarrow \infty} \frac{1}{2(n+1)} = 0 \lt  1
+            \rightarrow \infty} \frac{1}{2(n+1)} = 0 \lt 1
           </mrow>
         </md>
         <p>
           The limit here is <m>0</m> regardless of the value of
-          <m>x</m>, so we have convergence for all real numbers.
+          <m>x</m>, so I have established convergence for all real
+          numbers.
         </p>
       </statement>
     </example>
     <p>
       The previous examples represent all of the possible types of
-      convergence behaviour of power series. We summarize the
+      convergence behaviour of power series. I summarize the
       situation in a proposition.
     </p>
     <proposition>
@@ -275,30 +306,40 @@
         <p>
           The positive real number <m>R</m> in the third case is
           called the <term>radius of convergence</term> of a power
-          series. We can use this terminology to cover the other two
-          cases as well: in the first case, we say <m>R=0</m> and in
-          the second case, we say <m>R = \infty</m>.
+          series. I can use this terminology to cover the other two
+          cases as well: in the first case, I can say <m>R=0</m> and in
+          the second case, I can say <m>R = \infty</m>.
         </p>
       </statement>
     </definition>
+    <p>
+      For power series, the most important things to do is to
+      determine the radius of convergence. This determines the domain
+      of the function defined by the series. I'll do some examples. In
+      each example, I'll define a series and calculate its convergence
+      using the ratio test. 
+    </p>
     <example>
       <statement>
         <md>
           <mrow>
-            f(x) \amp = \sum_{n=1}^\infty \sqrt{n} x^n \lim_{n
-            \rightarrow \infty} \frac{a_{n+1}}{a_n} = \lim_{n
-            \rightarrow \infty} \left|
+            f(x) \amp = \sum_{n=1}^\infty \sqrt{n} x^n 
+          </mrow>
+          <mrow>
+            \lim_{n \rightarrow \infty} \left| \frac{a_{n+1}}{a_n}
+            \right| \amp =
+            \lim_{n \rightarrow \infty} \left|
             \frac{\sqrt{n+1}x^{n+1}}{\sqrt{n} x^n} \right| = \lim_{n
             \rightarrow \infty} |x| \sqrt{\frac{n+1}{n}}
           </mrow>
           <mrow>
             \amp = |x| \lim_{n \rightarrow \infty} \sqrt{ 1 +
-            \frac{1}{n} } = |x| \lt  1
+            \frac{1}{n} } = |x| \lt 1
           </mrow>
         </md>
         <p>
-          The radius of convergence is <m>R=1</m>, so this series
-          converges on <m>(-1,1)</m>.
+          This series converbes on <m>(-1,1)</m>, so the radius of
+          convergence is <m>R=1</m>.
         </p>
       </statement>
     </example>
@@ -307,20 +348,22 @@
         <md>
           <mrow>
             f(x) \amp = \sum_{n=1}^\infty \frac{n(x-6)^n}{4^{2n+2}}
-            \lim_{n \rightarrow \infty} \frac{a_{n+1}}{a_n} = \lim_{n
-            \rightarrow \infty} \left|
-            \frac{\frac{(n+1)(x-6)^{n+1}}{4^{2n+3}}}{\frac{n(x -
-            6)^n}{4^{2n+2}}} \right|
+          </mrow>
+          <mrow>
+            \lim_{n \rightarrow \infty} \left| \frac{a_{n+1}}{a_n}
+            \right| \amp = \lim_{n \rightarrow \infty} \left|
+            \frac{\frac{(n+1)(x-6)^{n+1}}{4^{2n+3}}}
+            {\frac{n(x-6)^n}{4^{2n+2}}} \right|
           </mrow>
           <mrow>
             \amp = |x-6| \lim_{n \rightarrow \infty} \frac{n+1}{n}
-            \frac{1}{4^2} = \frac{|x-6|}{16} \lt  1 \implies
-            |x-6| \lt  16
+            \frac{1}{4^2} = \frac{|x-6|}{16} \lt 1 \implies |x-6| \lt
+            16
           </mrow>
         </md>
         <p>
-          The radius of convergence is <m>R=16</m>, centered around
-          <m>x=6</m>. This series converges on <m>(-10, 22)</m>.
+          This series converges on <m>(-10, 22)</m>, so the radius of
+          convergence is <m>R=16</m>, centered around <m>x=6</m>. 
         </p>
       </statement>
     </example>
@@ -328,19 +371,21 @@
       <statement>
         <md>
           <mrow>
-            f(x) \amp = \sum_{n=1}^\infty \frac{x^n}{7^n} \lim_{n
-            \rightarrow \infty} \frac{a_{n+1}}{a_n} = \lim_{n
-            \rightarrow \infty} \left|
+            f(x) \amp = \sum_{n=1}^\infty \frac{x^n}{7^n} 
+          </mrow>
+          <mrow>
+            \lim_{n \rightarrow \infty} \left| \frac{a_{n+1}}{a_n}
+            \right| \amp = \lim_{n \rightarrow \infty} \left|
             \frac{\frac{x^{n+1}}{7^{n+1}}}{\frac{x^n}{7^n}} \right|
           </mrow>
           <mrow>
             \amp = |x| \lim_{n \rightarrow \infty} \left| \frac{1}{7}
-            \right| = \frac{|x|}{7} \lt  1 \implies |x| \lt  7
+            \right| = \frac{|x|}{7} \lt 1 \implies |x| \lt 7
           </mrow>
         </md>
         <p>
-          The radius of convergence is 7 and the series converges on
-          <m>(-7,7)</m>.
+          The series converges on <m>(-7,7)</m>, so the radius of
+          convergence is <m>R=7</m>.
         </p>
       </statement>
     </example>
@@ -349,35 +394,41 @@
         <md>
           <mrow>
             f(x) \amp = \sum_{n=1}^\infty \frac{x^n}{(1)(3)(5) \ldots
-            (2n+1)} \lim_{n \rightarrow \infty} \frac{a_{n+1}}{a_n} =
-            \lim_{n \rightarrow \infty} \left|
-            \frac{\frac{x^{n+1}}{(1)(3)(5) \ldots
-            (2n+3)}}{\frac{x^n}{(1)(3)(5)\ldots (2n+1)}}
-            \right|
+            (2n+1)} 
           </mrow>
           <mrow>
-            \amp = |x| \lim_{n \rightarrow \infty} \frac{1}{2n+3} =
-            0
+            \lim_{n \rightarrow \infty} \left| \frac{a_{n+1}}{a_n}
+            \right| \amp = \lim_{n \rightarrow \infty} \left|
+            \frac{\frac{x^{n+1}}{(1)(3)(5) \ldots
+            (2n+3)}}{\frac{x^n}{(1)(3)(5)\ldots (2n+1)}} \right|
+          </mrow>
+          <mrow>
+            \amp = |x| \lim_{n \rightarrow \infty} \frac{1}{2n+3} = 0
           </mrow>
         </md>
         <p>
           This convergence doesn't depend on <m>x</m>, since the limit
           is <m>0</m> in any case. Therefore, this has an infinite
-          radius of convergence and is a function defined on all of
-          <m>\RR</m>. 
+          radius of convergence (<m>R = \infty</m>) and is a function
+          defined on all of <m>\RR</m>.
         </p>
       </statement>
     </example>
     <p>
-      Sometimes, we like to simply calculate the radius directly.
-      Here are two formulae to do so.
+      In the previous examples, the use of the ratio test determined
+      the radius of convergence. This is always a valid method, but
+      there are some more direct methods to calculate <m>R</m> as
+      well. In the following proposition, though I don't give the
+      proof, the first calculation is essentially still doing the
+      ratio test and the second calculation is essentially doing the
+      root test. 
     </p>
     <proposition>
       <statement>
         <p>
-          If we have a power series where all the coefficients
-          <m>c_n</m> are non-zero, then we can calculate the radius of
-          convergence directly in either of two ways.
+          In a power series where all the coefficients <m>c_n</m> are
+          non-zero, the radius of convergence can be directly
+          calculated in either of two ways.
           <md>
             <mrow>
               R \amp = \lim_{n \rightarrow \infty} \left|
@@ -396,39 +447,40 @@
     <title>Properties of Power Series</title>
     <p>
       Inside the radius of convergence, a power series has all the
-      properties of a normal function. We can add and subtract two
-      power series as long as we remain inside the radii of both
-      series. We can multiply as well, though the calculations become
+      properties of a normal function. I can add and subtract two
+      power series as long as I remain inside the radii of both
+      series. I can multiply as well, though the calculations become
       difficult. The same is true for division: if a series is
-      non-zero inside its radius of convergence, we can divide by the
+      non-zero inside its radius of convergence, I can divide by the
       series (though the results of the calculation are difficult to
       use).
     </p>
     <p>
       Other properties of series can be calculated with various ease
-      or difficulty, depending on the series. We can investigate the
-      growth of series, whether or not they are bound, symmetric or
+      or difficulty, depending on the series. I can investigate the
+      growth of series, whether or not they are bounded, symmetric or
       periodic, and whether or not they are invertible. The key idea
       to remember is that power series, inside their radii of
       convergence, are functions; anything that applies to functions
       can be applied to power series.
     </p>
   </subsection>
-  <subsection xml:id="subsection-calculus-of-power-series">
+  <subsection xml:id="subsection-power-series-calculus">
     <title>Calculus of Power Series</title>
     <p>
-      Since power series are functions, we can try to do calculus with
+      Since power series are functions, I can try to do calculus with
       them, investigating their limits, continuity, derivatives and
-      integrals.
+      integrals. It turns out that one of major advantages of working
+      with power is that their calculus is remarkably approachable. 
     </p>
     <proposition>
       <statement>
         <p>
-          Assume we have a power series centered at <m>\alpha</m>.
-          <me>
-            f(x) = \sum_{n=0}^\infty c_n (x-\alpha)^n
-          </me>
+         Consider power series centered at <m>\alpha</m>.
         </p>
+        <me>
+          f(x) = \sum_{n=0}^\infty c_n (x-\alpha)^n
+        </me>
         <p>
           This <m>f</m> is a continuous function inside its radius of
           convergence. In addition, <m>f</m> is infinitely
@@ -437,37 +489,36 @@
       </statement>
     </proposition>
     <p>
-      There is a convenient notation for differentiability which we
-      will use frequently.
+      There is a convenient notation for differentiability which I
+      will use frequently, particularly in future courses.
     </p>
     <definition>
       <statement>
         <p>
           If <m>f</m> is a function on a domain <m>D</m> and the
           <m>n</m>-th derivative of <m>f</m> is defined and
-          continuous, we say that <m>f</m> is in class <m>C^n(D)</m>.
-          If the domain is understood implicitly, we just say <m>f</m>
-          is in class <m>C^n</m>. If <m>f</m> is infinitely
-          differentiable, we say <m>f</m> is in class
+          continuous, then <m>f</m> is in the class <m>C^n(D)</m>.
+          If the domain is understood implicitly, I just say <m>f</m>
+          is in the class <m>C^n</m>. If <m>f</m> is infinitely
+          differentiable, then<m>f</m> is in the class
           <m>C^\infty</m>.
         </p>
       </statement>
     </definition>
     <p>
       The proposition says that power series are in class
-      <m>C^\infty</m>, but how are these derivatives calculated? The
-      answer is as nice as possible.
+      <m>C^\infty</m>, but how are these derivatives calculated? 
     </p>
     <proposition>
       <statement>
         <p>
-          If <m>f</m> is a power series, then derivative of <m>f</m>
-          is calculated term-wise, simply by differentiating every
-          term in the series.
-          <me>
-            f^\prime(x) = \sum_{n=1}^\infty c_n n(x-\alpha)^{n-1}
-          </me>
+          If <m>f</m> is a power series, then then derivative of
+          <m>f</m> is calculated term-wise, simply by differentiating
+          every term in the series.
         </p>
+        <me>
+          f^\prime(x) = \sum_{n=1}^\infty c_n n(x-\alpha)^{n-1}
+        </me>
         <p>
           Therefore, the derivative is a power series as well;
           moreover, it will have the same radius of convergence as the
@@ -483,55 +534,51 @@
         <p>
           If <m>f</m> is a power series centered at <m>\alpha</m>,
           then <m>f</m> is integrable and its indefinite integral is
-          calculated termwise.
-          <me>
-            \int f(x) dx= \sum_{n=0}^\infty c_n
-            \frac{(x-\alpha)^{n+1}}{n+1} + C
-          </me>
+          calculated termwise. 
         </p>
+        <me>
+          \int f(x) dx= \sum_{n=0}^\infty c_n
+          \frac{(x-\alpha)^{n+1}}{n+1} + C
+        </me>
       </statement>
     </proposition>
     <p>
-      The simplicity of integration is particularly helpful. As we
-      saw in Calculus II, integration is difficult business. For
-      functions which be expressed as series, integration is almost
-      trivial. This makes power series a very useful and convenient
-      class of functions.
+      The simplicity of integration is particularly helpful. As
+      previous sections of this course have amply demonstrated,
+      integration is difficult business. For functions which be
+      expressed as series, integration is almost trivial. This makes
+      power series a very useful and convenient class of functions.
     </p>
   </subsection>
   <subsection xml:id="subsection-series-patterns-exponents">
     <title>Series with Patterns of Exponents</title>
     <p>
-      If it often the case that a power series may non-zero terms only
-      for certain exponents following some pattern. In this section,
-      I'm going to briefly introduce some common notation for
+      If it often the case that a power series may contain non-zero
+      terms only for certain exponents following some pattern. In this
+      section, I'm going to briefly introduce some common notation for
       particular cases of this phenomenon. Consider a series where all
       the odd terms are zero (centered at <m>0</m> for convenience). 
       <me>
         f(x) = c_0 + 0x + c_2x^2 + 0x^3 + c_4x^4 + 0x^5 + \ldots 
       </me>
-      We could similarly consider a series where all the even terms
+      I could similarly consider a series where all the even terms
       are zero. 
       <me>
         f(x) = 0 + c_1x + 0 + c_3x^3 + 0x^4 + c_45^5 + 0x^6 + \ldots 
       </me>
-      If we want to index all the even numbers, we can write <m>k =
-      2n</m> for <m> n \in \NN</m>. Similarly, we can index all the
+      If I want to index all the even numbers, I can write <m>k =
+      2n</m> for <m> n \in \NN</m>. Similarly, I can index all the
       odd numbers by writing <m>k = (2n+1)</m> for <m>n \in \NN</m>.
-      Using these tools, we could write a series with only odd or even
+      Using these tools, I could write a series with only odd or even
       non-zero terms. The series
       <me>
-        f(x) = \sum_{n=0}^\infty c_n (x-\alpha)^{2n}
+        f(x) = \sum_{n=0}^\infty c_{2n} (x-\alpha)^{2n}
       </me>
       is a series with only even terms. The series.
       <me>
-        g(x) = \sum_{n=0}^\infty c_n (x-\alpha)^{2n+1}
+        g(x) = \sum_{n=0}^\infty c_{2n-1} (x-\alpha)^{2n+1}
       </me>
-      is a series with only odd terms. When we use these convention,
-      we permit the indices on the <m>c_i</m> to be unmatched with the
-      exponents. In the function <m>g(x)</m> above, <m>c_1</m> matches
-      with <m>x^1</m>, but <m>c_2</m> matches with <m>x^3</m>,
-      <m>c_3</m> matched with <m>c^5</m> and so on. 
+      is a series with only odd terms. 
     </p>
     <p>
       Some extra care must be taken with calculating radii of
@@ -541,34 +588,72 @@
         \right| 
       </me>
       relies on the assumption that all <m>c_n \neq 0</m>. This is not
-      true for these series with only odd term or even terms. We have
-      to use the ratio test directly to calculate radii of convergence
-      in these situations.
+      true for these series with only odd term or even terms. For
+      series with such patterns, I need a slightly different approach.
+      Take the example series
+      <me>
+        f(x) = \sum_{n=0}^\infty c_{2n} (x-\alpha)^{2n}
+      </me>
+      that only has even terms. Implicitly, even though I can assume
+      <m>c_{2n} \neq 0</m>, all of the missing coefficient
+      <m>c_{2n+1}</m> are zero.  To use the calculation for radius of
+      convergence, a series needs all non-zero coefficients. I can
+      force this series into such a form by some clever manipulation
+      of exponents. Using the laws of exponents, I adjust the power of
+      <m>(x-\alpha)</m>.
+      <me>
+        f(x) = \sum_{n=0}^\infty c_{2n} ((x-\alpha)^2)^{n}
+      </me>
+      Then I also re-index the coefficients: what I called
+      <m>c_{2n}</m> before, I'll just call <m>c_n</m>.
+      <me>
+        f(x) = \sum_{n=0}^\infty c_{n} ((x-\alpha)^2)^{n}
+      </me>
+      Then this is a series with all non-zero coefficients (with the
+      assumption that the original <m>c_{2n}</m> were non-zero).
+      However, it is now a power series in <m>x^2</m>, not <m>x</m>.
+      Therefore, if I calculate a radius of convergence <m>R</m>, the
+      resulting inequality is
+      <me>
+        (x-\alpha)^2 \in \left( - R, R \right)
+      </me>
+      To get the actual bound on <m>x</m> itself requires manipulating
+      the inequalities that bound <m>x^2</m>. The result is this.
+      <me>
+        (x-\alpha) \in \left( - \sqrt{R}, \sqrt{R} \right) \implies 
+        x \in \left( \alpha - \sqrt{R}, \alpha + \sqrt{R} \right) 
+      </me>
+      In summary, there is often a way to get to a domain of convergence
+      for this type of series, but it can be difficult and unwieldy. 
     </p>
     <p>
-      Using similar ideas, we could encode all sorts of patterns in
-      the exponents of our power series. If a power series had
-      non-zero terms only when the exponent was a power of <m>3</m>,
-      we could write it as
+      The approach above doesn't just work for even and odd terms.
+      Using similar ideas, I could encode all sorts of patterns in the
+      exponents of our power series. If a power series had non-zero
+      terms only when the exponent was a power of <m>3</m>, I could
+      write it as
       <me>
         f(x) = \sum_{n=0}^\infty (x-\alpha)^{3n}
       </me>.
       If the power series had non-zero exponents only for every fifth
-      number starting at <m>7</m>, we could write it as
+      number starting at <m>7</m>, I could write it as
       <me>
         f(x) = \sum_{n=0}^\infty (x-\alpha)^{5n + 7}
       </me>.
+      In either case, I'd have to use similar kinds of tricks to
+      reduce it to a series in <m>x^3</m> or <m>x^5</m>, then
+      calculate the radius, then manipulate the inequalities to figure
+      out the actual bounds on <m>x</m>. 
     </p>
   </subsection>
   <subsection xml:id="subsection-non-elementary-functions">
     <title>Non-Elementary Functions</title>
     <p>
-      In addition to finding connections between known functions,
-      Taylor series can help us construct entirely new functions.
-      These are often called non-elementary functions (the elementary
-      functions are those which we already have worked with:
-      polynomials, roots, exponentials, logarithms, trig, and
-      hyperbolics).
+      One of the uses of power series is to construct entirely new
+      functions.  These are often called non-elementary functions (the
+      elementary functions are those which we already have worked
+      with: polynomials, roots, exponentials, logarithms, trig, and
+      hyperbolics). Here are some examples. 
     </p>
     <example>
       <statement>

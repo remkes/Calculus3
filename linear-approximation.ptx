@@ -11,7 +11,7 @@
       </me>
     </p>
     <p>
-      From Calculus II or <xref ref="taylor-series-definition" />
+      From Calculus II or <xref ref="section-approximation" />
       you might recognize this as simply the first-order Taylor
       approximation for <m>f</m>, where we truncate after the linear
       term. The linear approximation is the line that best

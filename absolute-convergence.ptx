@@ -2,34 +2,37 @@
   <title>Absolute and Conditional Convergence</title>
   <introduction>
     <p>
-      Among convergent series, there is a distincting between a
-      stronger and a weaker kind of convergence. This section
-      explores that distinction via the important example of the
-      alternating harmonic series.
+      Among convergent series, there is a distincting between two
+      kinds of convergences: a stronger and a weaker version.  This
+      section explores that distinction via the important example of
+      the alternating harmonic series. Let me start with a definition. 
     </p>
-  </introduction>
-  <subsection xml:id="subsection-alternating-series-test">
-    <title>Alternating Series Test</title>
     <definition>
       <statement>
         <p>
-          If we have a sequences of terms <m>\{a_n\}</m> such that
-          <m>a_n>0 \ \forall n \in \NN</m>, then the following
-          expression is called an alternating series.
-          <me>
-            \sum_{n=1}^\infty (-1)^{n+1} a_n
-          </me>
+          Let <m>\{a_n\}</m> be a sequence such that
+          <m>a_n>0 \ \forall n \in \NN</m>. the following
+          series is called an alternating series.
+        </p>
+        <me>
+          \sum_{n=1}^\infty (-1)^{n+1} a_n
+        </me>
+        <p>
+          Since the <m>a_n</m> are positive, the <m>(-1)^n</m> ensure
+          that each consecutive term in the series changes sign, from
+          positive to negative back to positive. This is the
+          <sq>alternating</sq> that gives the series its name.
         </p>
       </statement>
     </definition>
     <p>
-      In an alternating series, each term has a different sign from
-      the previous term. Recall the test for divergence: for
-      convergence, is it <em>necessary</em> but not
-      <em>sufficient</em> for the terms to tend to zero. Intuitively,
-      we would like to have sufficiency as well, but the harmonic
-      series was the counter example. For alternating series, we get
-      our wish.
+      Now recall the test for divergence in <xref
+      ref="proposition-test-for-divergence" />. From that test, I
+      observe that for a series to converge, it is <em>necessary</em>
+      but not <em>sufficient</em> for the terms to tend to zero.
+      Intuitively, I would be much more convenient if this condition
+      was sufficient, but the harmonic series was the counter example.
+      For alternating series, it turns it is sufficient.
     </p>
     <proposition>
       <statement>
@@ -39,80 +42,102 @@
         </p>
       </statement>
     </proposition>
-  </subsection>
-  <subsection xml:id="subsection-alternating-harmoinc-series">
+    <p> 
+      I won't give a formal proof, the I'll describe the informal
+      idea. In an alternating series, in each step of the sum I
+      alternatively add and subtract term. The sum is always
+      increasing when I add and then decreasing when I subtract. It's
+      always jumping forward and then jumping back down. 
+    </p>
+    <p>
+      In that jumping forward and jumping back, if the terms are
+      getting smaller, then the jumps are getting smaller as well.
+      Therefore, if the terms go to zero, that's enough to ensure that
+      this foward and backward pattern will eventually convergence on
+      some value. 
+    </p>
+  </introduction>
+  <subsection xml:id="subsection-alternating-harmonic">
     <title>The Alternating Harmonic Series</title>
+    <p>
+      To further understand the convergence of alternative series,
+      I'll work with a specific and important example. 
+    </p>
     <definition>
       <statement>
         <p>
           The alternating harmonic series is the harmonic series with
           <m>(-1)^n</m> in the numerator.
-          <me>
-            \sum_{n=1}^\infty \frac{(-1)^{n+1}}{n} = 1 - \frac{1}{2} +
-            \frac{1}{3} - \frac{1}{4} + \ldots
-          </me>
         </p>
+        <me>
+          \sum_{n=1}^\infty \frac{(-1)^{n+1}}{n} = 1 - \frac{1}{2} +
+          \frac{1}{3} - \frac{1}{4} + \ldots
+        </me>
       </statement>
     </definition>
     <p>
-      This series converges by the alternating series test. It is
-      difficult to prove, but the value is <m>\ln 2</m>.
-    </p>
+      This series converges by the alternating series test.  It is
+      difficult to prove, but the value of the series is <m>\ln 2</m>.
+      However, very strange things happen when I try to re-arrange the
+      terms of the harmonic series. Consider the following series. 
+    </p> 
+    <md>
+      <mrow>
+        \amp  1 + \frac{1}{3} - \frac{1}{2} + \frac{1}{5} +
+        \frac{1}{7} - \frac{1}{4} + \frac{1}{9} + \frac{1}{11} -
+        \frac{1}{6} + \ldots
+      </mrow>
+    </md>
     <p>
-      We must be very careful here. Consider the following series,
-      which is a pattern of two positive terms with odd denominators
-      followed by one negative term with an even denominator.
-      <md>
-        <mrow>
-          \amp 1 + \frac{1}{3} - \frac{1}{2} + \frac{1}{5} +
-          \frac{1}{7} - \frac{1}{4} + \frac{1}{9} + \frac{1}{11} -
-          \frac{1}{6} + \ldots
-        </mrow>
-        <intertext>
-          We write this series in a strange new way: as the difference
-          of the alternating harmonic series and another series with
-          only even denominators. You can see, if you add the two
-          series, how some of the terms cancel and other add to the
-          correct terms in the original.
-        </intertext>
-        <mrow>
-          \amp = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} +
-          \frac{1}{5} - \frac{1}{6} + \frac{1}{7} - \frac{1}{8} +
-          \ldots
-        </mrow>
-        <mrow>
-          \amp + 0 + \frac{1}{2} + 0 - \frac{1}{4} + 0
-          + \frac{1}{6} + 0 - \frac{1}{8} + \ldots
-        </mrow>
-        <intertext>
-          The first series is the harmonic series. If we factor
-          <m>\frac{1}{2}</m> out of the second series, it is also the
-          harmonic series. We use the known value of <m>\ln 2</m> for
-          the harmonic series to calculate the value of this series.
-        </intertext>
-        <mrow>
-          \amp = \sum_{n=1}^\infty \frac{(-1)^{n+1}}{n} + \frac{1}{2}
-          \sum_{n=1}^\infty \frac{(-1)^{n+1}}{n} = \ln 2 + \frac{1}{2}
-          \ln 2 = \frac{3}{2} \ln 2
-        </mrow>
-      </md>
+      I'm going to do some strange arithmetic here. I can express this
+      series as the following sum. I think about adding the two series
+      term-wise, adding each term in the second row to the term above
+      it. Hopefully, you can see that doing so will cancel half the
+      terms and add up to exactly the terms of the previous series in
+      the othter terms.
     </p>
+    <md>
+      <mrow>
+        \amp  = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} +
+        \frac{1}{5} - \frac{1}{6} + \frac{1}{7} - \frac{1}{8} +
+        \ldots
+      </mrow>
+      <mrow>
+        \amp  \hspace{0.2cm} + 0 + \frac{1}{2} + 0 - \frac{1}{4} + 0
+        + \frac{1}{6} + 0 - \frac{1}{8} + \ldots
+      </mrow>
+    </md>
+    <p>
+      The first series is the harmonic series. If I factor
+      <m>\frac{1}{2}</m> out of the second series, it is also the
+      harmonic series. I use the known value of <m>\ln 2</m> for
+      the harmonic series to calculate the value of this
+      series.
+    </p>
+    <md>
+      <mrow>
+        \amp  = \sum_{n=1}^\infty \frac{(-1)^{n+1}}{n} + \frac{1}{2}
+        \sum_{n=1}^\infty \frac{(-1)^{n+1}}{n} = \ln 2 + \frac{1}{2}
+        \ln 2 = \frac{3}{2} \ln 2
+      </mrow>
+    </md>
     <p>
       This looks reasonable as well, but what are the terms of this
-      series? If we group them by sign, the positive terms are <m>\{
+      series?  Let me simply list the positive and negative term in
+      order. The positive terms are <m>\{
       1, \frac{1}{3}, \frac{1}{5}, \frac{1}{7}, \ldots \}</m> and the
       negative terms are <m>\{ \frac{-1}{2}, \frac{-1}{4},
-      \frac{-1}{6}, \ldots \}</m>. These are exactly the same terms
+      \frac{-1}{6}, \ldots \}</m>.  These are exactly the same terms
       at the alternating harmonic series, just in a different order.
       However, the alternating harmonic series summed to <m>\ln 2</m>,
       not <m>\frac{3}{2} \ln 2</m>.
     </p>
     <p>
-      It seems we can re-arrange the alternating harmonic series to
-      sum to a different number. This is exceedingly odd: for finite
+      It seems I can re-arrange the alternating harmonic series to
+      sum to a different number.  This is exceedingly odd: for finite
       sums, any re-arrangement was irrelevant to the value of the sum.
       It seems, for infinite sums, re-arrangement can actually change
-      the value. There is an important result which is even
+      the value.  There is an important result which is even
       stranger.
     </p>
     <proposition>
@@ -127,73 +152,77 @@
     <proof>
       <p>
         This is a very strange result, but the proof has a remarkably
-        simple argument.First, groups the terms as positive and
-        negative. Each set of terms is asymptotically similar to the
-        (non-alternating) harmonic series, so each set sums to <m>\pm
-        \infty</m>.
+        simple argument. First, groups the terms as positive and
+        negative, as I did before. Each set of terms is asymptotically
+        similar to the (non-alternating) harmonic series, so each set
+        sums to <m>\pm \infty</m> (or <m>-\infty</m> for the negative
+        terms).
       </p>
       <p>
-        Then choose a real number <m>\alpha</m>. Start adding
-        positive terms until we get past <m>\alpha</m>. (This can
-        always be done, since the possitive terms by themslves sum to
-        <m>\infty</m>). Then, when we are past <m>\alpha</m>, start
-        adding negative terms until we're below <m>\alpha</m> again.
+        Now let <m>\alpha</m> be any real number. I will start by adding
+        positive terms until I get past <m>\alpha</m>. (This can
+        always be done, since the positive terms by themslves sum to
+        <m>\infty</m>).  Then, when the sum so far is larger than
+        <m>\alpha</m>, I start adding negative terms until I get back
+        below <m>\alpha</m> again.
         (Again, this can always be done, since the negative terms sum
-        to <m>-\infty</m>). Then simply repeat this process, adding
-        positives until we get above <m>\alpha</m> and negatives until
-        we get back below <m>\alpha</m>. This process can be
-        continued indefinitely, and since the terms get arbitrarily
-        small, we will approach <m>\alpha</m> in the limit.
+        to <m>-\infty</m>). Then I simply repeat this process, adding
+        positives until I get above <m>\alpha</m> and negatives until
+        I get back below <m>\alpha</m>. This process can be
+        continued indefinitely. Since both the positive and negative
+        terms get arbitrarily small, this process will invariably
+        converge on <m>\alpha</m> in the limit.
       </p>
     </proof>
     <example>
       <statement>
         <p>
           There are some regular arrangements of the alternating
-          harmonic which have specific values. Let <m>A(m,n)</m> be
-          the sum where we take <m>m</m> positive terns, then <m>n</m>
-          negative, then back to <m>m</m> positive and so on. It can
-          be proved that this converges to
-          <me>
-            A(m,n) = \ln 2 + \frac{1}{2} \ln \left( \frac{m}{n}
-            \right)
-          </me>.
+          harmonic which have specific values.  Let <m>A(m,n)</m> be
+          the sum formed by adding <m>m</m> positive terms followed by
+          <m>n</m> negative terms and repeating this pattern.  (As
+          before, the positive and negative terms are taken in
+          decreasing order.)  It can be proved that this converges to
+          certain values of the logarithm.
         </p>
+        <me>
+          A(m,n) = \ln 2 + \frac{1}{2} \ln \left( \frac{m}{n} \right)
+        </me>.
         <p>
           In particular, the combination of one positive and four
           negative terms sums to zero.
-          <md>
-            <mrow>
-              A(1,4) \amp = \ln 2 + \frac{1}{2} \ln \frac{1}{4} = \ln
-              2 + \ln \left( \frac{1}{4} \right)^{\frac{1}{2}} = \ln 2
-              + \ln \frac{1}{2} = \ln 2 - \ln 2 = 0
-            </mrow>
-            <mrow>
-              0 \amp = 1 - \frac{1}{2} - \frac{1}{4} - \frac{1}{6} -
-              \frac{1}{8}
-            </mrow>
-            <mrow>
-              \amp + \frac{1}{3} - \frac{1}{10} -
-              \frac{1}{12} - \frac{1}{14} - \frac{1}{16}
-            </mrow>
-            <mrow>
-              \amp + \frac{1}{5} - \frac{1}{18} -
-              \frac{1}{20} - \frac{1}{22} - \frac{1}{24}
-            </mrow>
-            <mrow>
-              \amp + \frac{1}{7} - \frac{1}{26} -
-              \frac{1}{28} - \frac{1}{30} - \frac{1}{32}
-            </mrow>
-            <mrow>
-              \amp + \frac{1}{9} - \frac{1}{34} -
-              \frac{1}{36} - \frac{1}{38} - \frac{1}{40} \ldots
-            </mrow>
-          </md>
         </p>
+        <md>
+          <mrow>
+            A(1,4) \amp  = \ln 2 + \frac{1}{2} \ln \frac{1}{4} = \ln
+            2 + \ln \left( \frac{1}{4} \right)^{\frac{1}{2}} = \ln 2
+            + \ln \frac{1}{2} = \ln 2 - \ln 2 = 0
+          </mrow>
+          <mrow>
+            0 \amp  = 1 - \frac{1}{2} - \frac{1}{4} - \frac{1}{6} -
+            \frac{1}{8}
+          </mrow>
+          <mrow>
+            \amp  \hspace{0.5cm} + \frac{1}{3} - \frac{1}{10} -
+            \frac{1}{12} - \frac{1}{14} - \frac{1}{16}
+          </mrow>
+          <mrow>
+            \amp  \hspace{0.5cm} + \frac{1}{5} - \frac{1}{18} -
+            \frac{1}{20} - \frac{1}{22} - \frac{1}{24}
+          </mrow>
+          <mrow>
+            \amp  \hspace{0.5cm} + \frac{1}{7} - \frac{1}{26} -
+            \frac{1}{28} - \frac{1}{30} - \frac{1}{32}
+          </mrow>
+          <mrow>
+            \amp  \hspace{0.5cm} + \frac{1}{9} - \frac{1}{34} -
+            \frac{1}{36} - \frac{1}{38} - \frac{1}{40} \ldots
+          </mrow>
+        </md>
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="subsection-conditional-convergence">
+  <subsection xml:id="subsection-conditional">
     <title>Conditional Convergence</title>
     <p>
       This situation for the alternating harmonic series is not
@@ -204,10 +233,10 @@
         <p>
           A convergent series <m>\sum a_n</m> is called
           <term>absolutely convergent</term> if
-          <me>
-            \sum_{n=1}^\infty |a_n| \lt  \infty
-          </me>.
         </p>
+        <me>
+          \sum_{n=1}^\infty |a_n| \lt  \infty
+        </me>.
         <p>
           Otherwise, if a series is convergent but not absolutely
           convergent, it is called <term>conditionally
@@ -218,8 +247,9 @@
     <p>
       The alternating harmonic series was a conditionally convergent
       series, since the (non-alternating) harmonic series diverges.
-      The behaviour that we saw for the alternating harmonic series is
-      the same for <em>any</em> conditionally convergent series.
+      The behaviour that I demonstrated for the alternating harmonic
+      series is the same for <em>any</em> conditionally convergent
+      series.
     </p>
     <proposition>
       <statement>

@@ -5,8 +5,8 @@
     <p>
       The first two chapters of these notes, covering Infinite Series
       and Taylor Series, cover the same as the final two chapters of
-      the Calculus II notes. Much of what we cover is review and parts
-      of the text are taken from the Calculus II notes, but
+      the Calculus II notes. Much of what I cover is review and many
+      parts of the text are taken from the Calculus II notes, but
       there will be  a new focus on Taylor series and new material on
       approximation and error analysis.
     </p>
@@ -20,9 +20,10 @@
     </p>
     <p>
       In some ways, the problem of infinite series is older than the
-      problems motivating derivatives and integrals. Issues of
-      infinite series go back to at least early Greek mathematics,
-      where thinkers struggled with the puzzle known as Zeno's
+      problems motivating derivatives and integrals.
+      Infinite series go back at least to early Greek mathematics,
+      where thinkers struggled with the puzzles of infinitiy. The most
+      famous of those ancient puzzles is known as Zeno's
       Paradox.
     </p>
     <p>
@@ -30,8 +31,8 @@
       relatively common version. If you wish to travel from point
       <m>a</m> to point <m>b</m>, then first you must travel half-way.
       Having gone halfway to <m>b</m>, you must again cover half the
-      remaining distance. Having gone <m>3/4</m> of the way to
-      <m>b</m>, there is still a distance remaining, and you still
+      remaining distance. Having gone <m>\frac{3}{4}</m> of the way
+      to <m>b</m>, there is still a distance remaining, and you still
       must first cover half that distance. Repeating this process
       gives an infinite series of halves, all of which must be
       traversed to travel from <m>a</m> to <m>b</m>. Since doing an
@@ -40,8 +41,8 @@
       any two points <m>a</m> and <m>b</m>, movement is impossible.
     </p>
     <p>
-      Obviously, Zeno's paradox doesn't hold, since we are able to
-      move from one place to another. But Zeno's paradox has
+      Obviously, Zeno's paradox doesn't hold, since movement is,
+      indeed, possible. But Zeno's paradox has
       commanded the attention and imagination of philosophers and
       mathematicians for over 2000 years, as they struggled to deal
       with the infinity implicit in even the smallest movement.
@@ -49,59 +50,58 @@
       incomplete way) of dealing with Zeno's paradox.
     </p>
   </subsection>
-  <subsection xml:id="subsection-series-definition">
-    <title>Definition of Infinite Series</title>
-      <definition>
-        <statement>
-          <p>
-          If <m>\{a_n\}</m> is a sequence, then the sum of all
-          infinitely many terms <m>a_n</m> is called an <term>infinite
-          series</term>. We write infinite series with sigma
-          notation.
-          <me>
-            \sum_{n=1}^\infty a_n
-          </me>
-        </p>
-        <p>
-          The number <m>n</m> is called the <term>index</term> and the
-          numbers <m>a_n</m> are called the <term>terms</term>. If we
-          want to forget the sum, we can talk about the <term>sequence
-          of terms</term> <m>\{a_n\}_{n=1}^\infty</m>. Though we
-          started with <m>n=1</m> in this definition, we could start
-          with any integer.
-        </p>
-      </statement>
-    </definition>
+  <subsection xml:id="subsection-series-definition-statment">
+  <definition>
+    <statement>
+      <p>
+        If <m>\{a_n\}</m> is a sequence, then the sum of all
+        infinitely many terms <m>a_n</m> is called an <term>infinite
+        series</term>. Infinite series are usually written with sigma
+        notation.
+      </p>
+      <me>
+        \sum_{n=1}^\infty a_n
+      </me>
+      <p>
+        The number <m>n</m> is called the <term>index</term> and the
+        numbers <m>a_n</m> are called the <term>terms</term>. 
+        Forgetting the sum produces the <term>sequence
+        of terms</term> <m>\{a_n\}_{n=1}^\infty</m>. Though the above
+        notation started with <m>n=1</m>, the series can have a
+        starting index of any integer.
+      </p>
+    </statement>
+  </definition>
   </subsection>
-  <subsection xml:id="subsection-convergence">
-    <title>Partial Sums and Convergence</title>
+  <subsection xml:id="subsection-partial-sums">
+    <title>Partial-Sums and Convergence</title>
     <p>
-      Unlike finite sums, we have no guarantee that this expression
-      evaluates to anything. The problem of infinite series is
-      precisely this: how do we add up infinitely many things? This
+      Unlike finite sums, there is no guarantee that an infinite
+      series evaluates to anything. The problem of infinite series is
+      precisely this: how can I add up infinitely many things? This
       isn't a problem that algebra can solve, but calculus, with the
-      use of limits, can give a reasonable answer. We need to set up
-      an approximation process and take the limit, just as we did for
+      use of limits, can give a reasonable answer. I need to set up an
+      approximation process and take the limit, just as I did for
       derivatives and integrals. The approximation process is called
-      partial sums. Instead of taking the entire sum to infinity,
-      let's just take a piece of finite length.
+      partial sums. Instead of taking the entire sum to infinity, I
+      just take a sum of finitely many pieces.
     </p>
     <definition>
       <statement>
         <p>
           The <m>n</m>th <term>partial sum</term> of an infinite
           series is the sum of the first <m>n</m> terms.
-          <me>
-            s_n := \sum_{k=1}^n a_k
-          </me>
         </p>
+        <me>
+          s_n := \sum_{k=1}^n a_k
+        </me>
       </statement>
     </definition>
     <p>
-      Since these are finite sums, we can actually calculate them.
+      Since these are finite sums, I can actually calculate them.
       They serve as approximations to the total infinite sum.
       Moreover, these partial sums <m>\{s_n\}_{n=1}^\infty</m> define
-      a sequence. We can take the limit of the sequcne of partial
+      a sequence. I can take the limit of the sequence of partial
       sums. This is the limit of the approximation process, so it
       should calculate the value of the series.
     </p>
@@ -110,83 +110,114 @@
         <p>
           The value of an infinite series is the limit of the sequence
           of partial sums, if the limit exists.
-          <me>
-            \sum_{n=1}^\infty a_n := \lim_{n \rightarrow \infty} s_n =
-            \lim_{n \rightarrow \infty} \sum_{k=1}^n a_k
-          </me>
         </p>
+        <me>
+          \sum_{n=1}^\infty a_n := \lim_{n \rightarrow \infty} s_n =
+          \lim_{n \rightarrow \infty} \sum_{k=1}^n a_k
+        </me>
         <p>
-          If this limit exists, we call the series
-          <term>convergent</term>. Otherwise, we call the series
-          <term>divergent</term>.
+          If this limit exists, the series is <term>convergent</term>.
+          Otherwise, the series is <term>divergent</term>.
         </p>
       </statement>
     </definition>
+    <p>
+      With limits, writing
+      <me>
+        \lim_{n \rightarrow a} a_n = \infty
+      </me>
+      was a short hand. The symbol ``<m>infinity</m>'' was a way to
+      write ``getting larger and larger without bound.'' Something
+      similar happens for infinite series. Some divergent series
+      diverge because the sum grows larger and larger without bound
+      (as in <xref ref="example-harmonic-series" /> below). For these
+      series, it is common to use a very similar shorthand notation.
+    </p>
+    <me>
+      \sum_{n=1}^\infty a_n = \infty
+    </me>
+    <p>
+      Sometime, mathematicians also use the infinity symbol for
+      convergence. This is somewhat taking liberties with our
+      notation, somewhat stretching the intention of the symbols, but
+      it nonetheless is practice. For a convergent series, I would
+      indicate this convergence by the following notation.
+    </p>
+    <me>
+      \sum_{n=1}^\infty a_n \lt \infty
+    </me>
+    <p>
+      I would probably use this notation only for sums with all
+      positive terms, where being ``less than infinity'' would clearly
+      indicate that it sums to a finite number. 
+    </p>
+  </subsection>
+  <subsection xml:id="subsection-series-examples">
+    <title>First Convergence Examples</title>
     <example>
       <statement>
         <p>
-          The first and most classical example is simply Zeno's
-          paradox. If we are trying to go from <m>0</m> to <m>1</m>,
-          first we travel <m>\frac{1}{2}</m>, then <m>\frac{1}{4}</m>,
-          then <m>\frac{1}{8}</m>, and so on. We represent this
-          paradox as an infinite sum.
-          <me>
-            \sum_{n=1}^\infty \frac{1}{2^n}
-          </me>
+          I'll start with Zeno's paradox.  paradox. I can this problem
+          as the sum of a geometric series with common ratio
+          <m>\frac{1}{2}</m>. 
         </p>
+        <me>
+          \sum_{n=1}^\infty \frac{1}{2^n}
+        </me>
         <p>
-          Let's look at the partial sums.
-          <md>
-            <mrow>
-              s_1 \amp = \frac{1}{2}
-            </mrow>
-            <mrow>
-              s_2 \amp = \frac{1}{2} + \frac{1}{4} = \frac{3}{4}
-            </mrow>
-            <mrow>
-              s_3 \amp = \frac{1}{2} + \frac{1}{4} + \frac{1}{8} =
-              \frac{7}{8}
-            </mrow>
-            <mrow>
-              s_4 \amp = \frac{1}{2} + \frac{1}{4} + \frac{1}{8} +
-              \frac{1}{16} = \frac{15}{16}
-            </mrow>
-            <mrow>
-              s_5 \amp = \frac{1}{2} + \frac{1}{4} + \frac{1}{8} +
-              \frac{1}{16} + \frac{1}{32} = \frac{31}{32}
-            </mrow>
-            <mrow>
-              s_6 \amp = \frac{1}{2} + \frac{1}{4} + \frac{1}{8} +
-              \frac{1}{16} + \frac{1}{32} + \frac{1}{64} =
-              \frac{63}{64}
-            </mrow>
-            <mrow>
-              \vdots \amp \vdots
-            </mrow>
-            <mrow>
-            <intertext>
-              We can generate a formula to describe the pattern.
-            </intertext>
-            </mrow>
-            <mrow>
-              s_n \amp = \frac{2^n-1}{2n}
-            </mrow>
-          </md>
+          I'll calculate the first few partial sums. 
         </p>
+        <md>
+          <mrow>
+            s_1 \amp = \frac{1}{2}
+          </mrow>
+          <mrow>
+            s_2 \amp = \frac{1}{2} + \frac{1}{4} = \frac{3}{4}
+          </mrow>
+          <mrow>
+            s_3 \amp = \frac{1}{2} + \frac{1}{4} + \frac{1}{8} =
+            \frac{7}{8}
+          </mrow>
+          <mrow>
+            s_4 \amp = \frac{1}{2} + \frac{1}{4} + \frac{1}{8} +
+            \frac{1}{16} = \frac{15}{16}
+          </mrow>
+          <mrow>
+            s_5 \amp = \frac{1}{2} + \frac{1}{4} + \frac{1}{8} +
+            \frac{1}{16} + \frac{1}{32} = \frac{31}{32}
+          </mrow>
+          <mrow>
+            s_6 \amp = \frac{1}{2} + \frac{1}{4} + \frac{1}{8} +
+            \frac{1}{16} + \frac{1}{32} + \frac{1}{64} =
+            \frac{63}{64}
+          </mrow>
+        </md>
         <p>
-          Since we have a general expression for the partial sums, we
-          can take the limit.
-          <md>
-            <mrow>
-              \lim_{n \rightarrow \infty} s_n = \lim_{n \rightarrow
-              \infty} \frac{2^n - 1}{2n} = 1 
-            </mrow>
-          </md>
+          From these first few partial sum, I can claim that there is
+          a pattern of partial sums. 
         </p>
+        <me>
+          s_n = \frac{2^n-1}{2n}
+        </me>
         <p>
-          Unsurprisingly, we get that the total distance travelled
+          I haven't proved this pattern of partial sums, but there is
+          still a strong informal argument for it. (Proving the
+          patterns of partial sums is often done through a proof
+          technique called <term>mathematical induction</term>. This
+          is an important proof technique and necessary for a more
+          formal presentation of infinite series, but I'm not going to
+          cover it in this course.) Now that I have a pattern for the
+          partial sums, I can take the limit of the pattern to
+          calculate the value of the infinite series.
+        </p>  
+        <me>
+          \lim_{n \rightarrow \infty} s_n = \lim_{n \rightarrow
+          \infty} \frac{2^n - 1}{2n} = 1
+        </me>
+        <p>
+          Unsurprisingly, I conclude that the total distance travelled
           from <m>0</m> to <m>1</m> is simply <m>1</m> unit. This
-          gives a justification for saying that we <em>can</em> travel
+          gives a justification for saying that I <em>can</em> travel
           an infinite number of smaller and smaller intervals, since
           all those infinitely many intervals add up to a finite
           distance. (Whether this actually soves Zeno's paradox is a
@@ -197,84 +228,88 @@
     <example xml:id="example-harmonic-series">
       <statement>
         <p>
-          Now consider the sum of the harmonic series. We are going
-          to analyze the partial sums. We don't get a general
-          formula, but we can define some lower bounds for these
-          partial sums.
-          <md>
-            <mrow>
-              \sum_{n=1}^\infty \frac{1}{n} \amp
-            </mrow>
-            <mrow>
-              s_1 \amp = 1
-            </mrow>
-            <mrow>
-              s_2 \amp = 1 + \frac{1}{2} = \frac{3}{2}
-            </mrow>
-            <mrow>
-              s_3 \amp = 1 + \frac{1}{2} + \frac{1}{3}
-            </mrow>
-            <mrow>
-              s_4 \amp = 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4}
-              > 1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{4} = 2
-            </mrow>
-            <intertext>
-              The inequatity holds since <m>\frac{1}{3} >
-              \frac{1}{4}</m> and all other terms remain the same.
-            </intertext>
-            <mrow>
-              s_8 \amp = 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4}
-              + \frac{1}{5} + \frac{1}{6} + \frac{1}{7} + \frac{1}{8}
-            </mrow>
-            <mrow>
-              \amp > 1 + \frac{1}{2} + \frac{1}{4} +
-              \frac{1}{4} + \frac{1}{8} + \frac{1}{8} + \frac{1}{8} +
-              \frac{1}{8} = \frac{5}{2}
-            </mrow>
-            <intertext>
-              We replace all the fraction without powers of 2 in the
-              demoninator with smaller terms to satify the inequality.
-            </intertext>.
-            <mrow>
-              s_{16} \amp > 3
-            </mrow>
-            <intertext>
-              We can generate a lower bound for <m>s_{2^n}</m> in this
-              pattern.
-            </intertext>
-            <mrow>
-              s_{32} \amp > \frac{7}{2}
-            </mrow>
-            <mrow>
-              s_{64} \amp > 4
-            </mrow>
-            <mrow>
-              s_{128} \amp > \frac{9}{2}
-            </mrow>
-            <mrow>
-              s_{256} \amp > 5
-            </mrow>
-          </md>
+          Now consider the sum of the harmonic series. I am going
+          to analyze the partial sums. I will not produce a general
+          formula, but I can define some lower bounds for these
+          partial sums. 
         </p>
+        <md>
+          <mrow>
+            \sum_{n=1}^\infty \frac{1}{n} \amp
+          </mrow>
+          <mrow>
+            s_1 \amp = 1
+          </mrow>
+          <mrow>
+            s_2 \amp = 1 + \frac{1}{2} = \frac{3}{2}
+          </mrow>
+          <mrow>
+            s_3 \amp = 1 + \frac{1}{2} + \frac{1}{3}
+          </mrow>
+          <mrow>
+            s_4 \amp = 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4}
+            > 1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{4} = 2
+          </mrow>
+        </md>
         <p>
-          Taking every second power of two gives us partial sums
-          larger than the sequence of positive numbers.
-          <md>
-            <mrow>
-            \amp s_{2^{2k-2}} > k \amp \amp \forall k \geq 2
-            </mrow>
-          </md>
+          The inequatity holds since <m>\frac{1}{3} > \frac{1}{4}</m>
+          and all other terms remain the same.
         </p>
+        <md>
+          <mrow>
+            s_8 \amp = 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4}
+            + \frac{1}{5} + \frac{1}{6} + \frac{1}{7} + \frac{1}{8}
+          </mrow>
+          <mrow>
+            \amp \hspace{1cm} > 1 + \frac{1}{2} + \frac{1}{4} +
+            \frac{1}{4} + \frac{1}{8} + \frac{1}{8} + \frac{1}{8} +
+            \frac{1}{8} = \frac{5}{2}
+          </mrow>
+        </md>
+        <p>
+          This time, I replace all the fractions without powers of 2
+          in the demoninator with smaller terms to satify the inequality.
+        </p>
+        <md>
+          <mrow>
+            s_{16} \amp > 3
+          </mrow>
+        </md>
+        <p>
+          I can generate a lower bound for any <m>s_{2^n}</m> in this
+          way, producing a pattern of lower bounds. 
+        </p>
+        <md>
+          <mrow>
+            s_{32} \amp > \frac{7}{2}
+          </mrow>
+          <mrow>
+            s_{64} \amp > 4
+          </mrow>
+          <mrow>
+            s_{128} \amp > \frac{9}{2}
+          </mrow>
+          <mrow>
+            s_{256} \amp > 5
+          </mrow>
+        </md>
+        <p>
+          Taking every second power of two gives partial sums
+          larger than the sequence of positive numbers.
+        </p>
+        <me>
+          s_{2^{2k-2}} > k \hspace{2cm} \forall k \geq 2
+        </me>
         <p>
           The lower bounds get larger and larger. The limit of the
           sequence of partial sums is larger than this limit of larger
           bounds.
-          <me>
-            \lim_{n \rightarrow \infty} s_n \geq \lim_{k \rightarrow
-            \infty} s_{2^{2k-2}} =\lim_{k \rightarrow \infty} k =
-            \infty
-          </me>
         </p>
+        <me>
+          \lim_{n \rightarrow \infty} s_n = \lim_{k \rightarrow
+          \infty} s_{2^{2k-2}} \geq \lim_{k \rightarrow \infty} k =
+          \infty
+        </me>
         <p>
           The harmonic series is divergent. This is something of a
           surprising result, since the harmoinc series looks similar
@@ -284,111 +319,62 @@
         </p>
       </statement>
     </example>
-    <p>
-      The harmonic series in the previous example diverged and the
-      limit of its partial sum was <m>\infty</m>. For such series, it
-      is not uncommon to write 
-      <me>
-        \sum_{n=1}^\infty \frac{1}{n} = \infty
-      </me>.
-      As with the use of infinity in limits, this does not imply that
-      infinity is a number. Rather, <qt><m>= \infty</m></qt> in this
-      course is a symbol meaning larger and larger without bound. In a
-      similar notation, when a series convergenes, it's all common to
-      see this written as 
-      <me>
-        \sum_{n=1}^\infty a_n \lt \infty
-      </me>,
-      particularly when the series has positive terms. This again does
-      not imply that infinity is a number which can be compared, but
-      is just a short-hand symbol for convergence. 
-    </p>
-    <p>
-      Studying the harmonic series in <xref
-      ref="example-harmonic-series" /> leads to an important
-      observation: it is possible to build a series where the terms
-      are getting smaller and smaller and still end up with an
-      infinite value.  This gives some credit to the initial concern
-      of Zeno's paradox, since all these smaller and smaller pieces
-      may eventually add up to something infinite. One might have the
-      intuition that if the terms are becoming very small (as with the
-      harmonic series), the series should have a finite sum; the
-      harmonic series is a counter-example to this intuition. However,
-      the reverse intuition holds, as seen in the following result.
-    </p>
-    <proposition>
-      <statement>
-        <p>
-          (The Test for Divergence) If we have an infinite series
-          <me>
-            \sum_{n=1}^\infty a_n
-          </me>
-          such that
-          <me>
-            \lim_{n \rightarrow \infty} a_n \neq 0
-          </me>
-          then the series must diverge.
-        </p>
-      </statement>
-    </proposition>
-    <p>
-      Using the test for divergence and the harmonic series example,
-      we can rephrase the important relation between convergence of a
-      series and the limits of the terms. For an infinite series, the
-      fact that the terms tend to zero is <em>necessary</em> for
-      convergence but is <em>not sufficient</em>. It is a very common
-      temptation to assume the fact that the terms tend to zero is
-      sufficient; be careful not to fall into this trap.
-    </p>
     <example>
       <statement>
         <p>
           Another important example is an alternating series of
-          positive and negative ones.
-          <md>
-            <mrow>
-              \amp \sum_{n=1}^\infty (-1)^n \amp \amp 
-            </mrow>
-            <mrow>
-              \amp s_1 \amp = \amp 1
-            </mrow>
-            <mrow>
-              \amp s_2 \amp = \amp 1-1 = 0
-            </mrow>
-            <mrow>
-              \amp s_3 \amp = \amp 1-1+1 = 1
-            </mrow>
-            <mrow>
-              \amp s_4 \amp = \amp 1-1+1-1 = 0
-            </mrow>
-            <mrow>
-              \amp s_5 \amp = \amp 1+1-1-1+1 = 1
-            </mrow>
-            <mrow>
-              \amp s_6 \amp = \amp 1+1-1-1+1-1 = 0
-            </mrow>
-            <mrow>
-              \amp \vdots \amp \amp \vdots
-            </mrow>
-            <intertext>
-              We can determine a pattern for even and odd terms.
-            </intertext>
-            <mrow>
-              \amp s_{2n} \amp = \amp 0 \ \ \forall n \in \NN
-            </mrow>
-            <mrow>
-              \amp s_{2n+1} \amp = \amp 1 \ \ \forall n \in \NN
-            </mrow>
-            <mrow>
-              \amp \lim_{n \rightarrow \infty} s_n \amp \amp DNE
-            </mrow>
-          </md>
+          positive and negative ones. I'll calculate the first few
+          partial sums. 
         </p>
+        <md>
+          <mrow>
+            \sum_{n=0}^\infty (-1)^n \amp
+          </mrow>
+          <mrow>
+            s_0 \amp = 1
+          </mrow>
+          <mrow>
+            s_1 \amp = 1-1 = 0
+          </mrow>
+          <mrow>
+            s_2 \amp = 1-1+1 = 1
+          </mrow>
+          <mrow>
+            s_3 \amp = 1-1+1-1 = 0
+          </mrow>
+          <mrow>
+            s_4 \amp = 1+1-1-1+1 = 1
+          </mrow>
+          <mrow>
+            s_5 \amp = 1+1-1-1+1-1 = 0
+          </mrow>
+        </md>
+        <p>
+          There is a pattern here. The sequence of partial sums is a
+          sequences that switches back and forth between 0 and 1. 
+        </p>
+        <md>
+          <mrow>
+            s_{2n+1} \amp = 0 \ \ \forall n \in \NN
+          </mrow>
+          <mrow>
+            s_{2n} \amp = 1 \ \ \forall n \in \NN
+          </mrow>
+          <mrow>
+            \lim_{n \rightarrow \infty} s_n \amp \hspace{1cm} DNE
+          </mrow>
+        </md>
         <p>
           This series does not converge, even though it doesn't grow
           to infinity. There is simply no way to settle on a value
           when the partial sums keep switching back and forth from
-          <m>0</m> to <m>1</m>.
+          <m>0</m> to <m>1</m>. Unlike the geometric series behind
+          Zeno's paradox, this is a series where I simply can't
+          reckon with the infinite numbers of steps. Since there is no
+          last step in an finite process, I can never decide if the
+          last addition is <m>(-1)</m>, giving a value of <m>0</m>, of
+          if the last addition is <m>(+1)</m>, giving a value of
+          <m>1</m>. 
         </p>
       </statement>
     </example>
@@ -399,38 +385,41 @@
           leads to reasonable partial sums. In this example (and
           similar series), the middle terms in each successive partial
           sum cancel; these series are called telescoping series.
-          <md>
-            <mrow>
-              \sum_{n=1}^\infty \frac{1}{n(n+1)} \amp
-            </mrow>
-            <mrow>
-              \frac{1}{n(n+1)} \amp = 
-              \frac{1}{n} - \frac{1}{n+1}
-            </mrow>
-            <mrow>
-              \sum_{n=1}^\infty \frac{1}{n(n+1)} \amp = \sum_{n=1}^\infty
-              \frac{1}{n} - \frac{1}{n+1}
-            </mrow>
-            <mrow>
-              s_n \amp = \frac{1}{1} - \frac{1}{2} + \frac{1}{2} -
-              \frac{1}{3} + \frac{1}{3} - \frac{1}{4} + \frac{1}{4}
-              \ldots - \frac{1}{n+1}
-            </mrow>
-          </md>
-          Almost all the terms conveniently cancel out, leaving
-          only the first and the last.
-          <md>
-            <mrow>
-              \amp = 1 - \frac{1}{n+1}
-            </mrow>
-            <mrow>
-              \sum_{n=1}^\infty \frac{1}{n(n+1)} \amp  = \lim_{n
-              \rightarrow \infty} 1 - \frac{1}{n+1} = 1
-            </mrow>
-          </md>
         </p>
+        <md>
+          <mrow>
+            \sum_{n=1}^\infty \frac{1}{n(n+1)} \amp
+          </mrow>
+          <mrow>
+            s_n \amp = \sum_{k=1}^n \frac{1}{k(k+1)} = \sum_{k=1}^n
+            \frac{1}{k} - \frac{1}{k+1}
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{1} - \frac{1}{2} + \frac{1}{2} -
+            \frac{1}{3} + \frac{1}{3} - \frac{1}{4} + \frac{1}{4}
+            \ldots - \frac{1}{n+1}
+          </mrow>
+        </md>
+        <p>
+          Almost all the terms cancel out, leaving only the first and
+          last term. This lets me determine a pattern for the partial
+          sums and take the limit of that pattern to determine the
+          value of the series. 
+        </p>
+        <md>
+          <mrow>
+            \amp = 1 - \frac{1}{n+1}
+          </mrow>
+          <mrow>
+            \sum_{n=1}^\infty \frac{1}{n(n+1)} \amp = \lim_{n
+            \rightarrow \infty} 1 - \frac{1}{n+1} = 1
+          </mrow>
+        </md>
       </statement>
     </example>
+    <p>
+      I need a new definition to present the last two examples. 
+    </p>
     <definition>
       <statement>
         <p>
@@ -442,13 +431,12 @@
           </me>
         </p>
         <p>
-          In addition, we define <m>0! = 1</m>. (Why? There are good
-          reasons!)
+          In addition, <m>0! = 1</m>. 
         </p>
       </statement>
     </definition>
     <p>
-      The factorial grows very rapidly. Even by the time we get to
+      The factorial grows very rapidly. Even by 
       <m>n=40</m>, the factorial is already a ridiculously large
       number.
       <me>
@@ -457,54 +445,55 @@
     </p>
     <p>
       Asymptotically, the factorial grows even faster than the
-      exponential.
+      exponential. In particular, I can use this fact in asymptotic
+      analysis of limits. 
     </p>
     <example>
       <statement>
         <p>
-          Here's a series example using the factorial.
-          <md>
-            <mrow>  
-              \sum_{n=0}^\infty \frac{1}{n!} \amp
-            </mrow>
-            <mrow> 
-              s_0 \amp = 1
-            </mrow>
-            <mrow> 
-              s_1 \amp = 1 + 1 = 2
-            </mrow>
-            <mrow>  
-              s_2 \amp = 1 + 1 + \frac{1}{2} = \frac{5}{2}
-            </mrow>
-            <mrow>  
-              s_3 \amp = \frac{5}{2} + \frac{1}{6} = \frac{16}{6}
-            </mrow>
-            <mrow>  
-              s_4 \amp = \frac{16}{6} + \frac{1}{24} = \frac{61}{24}
-            </mrow>
-            <mrow>  
-              s_5 \amp = \frac{61}{24} + \frac{1}{120} =
-              \frac{51}{20}
-            </mrow>
-            <mrow>  
-              s_6 \amp = \frac{51}{20} + \frac{1}{720} =
-              \frac{1837}{720}
-            </mrow>
-          </md>
+          Here's a series example using the factorial. I'll calculate
+          the first few partial sums. 
         </p>
+        <md>
+          <mrow>
+            \sum_{n=0}^\infty \frac{1}{n!} \amp 
+          </mrow>
+          <mrow>
+            s_0 \amp = 1 
+          </mrow>
+          <mrow>
+            s_1 \amp = 1 + 1 = 2 \amp 
+          </mrow>
+          <mrow>
+            s_2 \amp = 1 + 1 + \frac{1}{2} = \frac{5}{2} 
+          </mrow>
+          <mrow>
+            s_3 \amp = \frac{5}{2} + \frac{1}{6} = \frac{16}{6} 
+          </mrow>
+          <mrow>
+            s_4 \amp = \frac{16}{6} + \frac{1}{24} = \frac{61}{24} 
+          </mrow>
+          <mrow>
+            s_5 \amp = \frac{61}{24} + \frac{1}{120} = \frac{51}{20} 
+          </mrow>
+          <mrow>
+            s_6 \amp = \frac{51}{20} + \frac{1}{720} = \frac{1837}{720}
+          </mrow>
+        </md>
         <p>
-          It looks like these terms are growing slowly and possibly
-          leveling off at some value, perhaps less than 3. We can't
-          prove it now, but the value of this series is surprising.
-          <me>
-            \sum_{n=0}^{\infty} \frac{1}{n!} = \lim_{n \rightarrow
-            \infty} s_n = e
-          </me>
+          It looks like these partial sums are growing slowly and
+          possibly leveling off at some value, perhaps less than 3. I 
+          can't prove it now, but the value of this series is surprising.
         </p>
+        <me>
+          \sum_{n=0}^{\infty} \frac{1}{n!} = \lim_{n \rightarrow
+          \infty} s_n = e
+        </me>
         <p>
-          This is another definition for the number <m>e</m>. We'll
-          prove that this definition is equivalent our existing
-          definitions in <xref ref="section-taylor-series" />.
+          This is another definition for the number <m>e</m>. I'll
+          prove that this definition is equivalent to the previous
+          definitions is <xref
+          ref="subsection-taylor-series-examples"/>.
         </p>
       </statement>
     </example>
@@ -515,192 +504,255 @@
           project in the history of mathematics. There are many
           interesting results, some of which are listed here for your
           curiosity.
-          <md>
-            <mrow>
-              \pi \amp = 4 \sum_{n=0}^\infty \frac{(-1)^n}{2n+1} =
-              \frac{4}{1} - \frac{4}{3} + \frac{4}{5} - \frac{4}{7} +
-              \frac{4}{9} - \ldots
-            </mrow>
-            <mrow>
-              \pi \amp = \sqrt{12} \sum_{n=-0}^\infty
-              \frac{(-1)^n}{3^n (2n+1)} = \sqrt{12} \left( 1 -
-              \frac{1}{9} + \frac{1}{45} - \ldots \right)
-            </mrow>
-            <mrow>
-              \frac{1}{\pi} \amp = \frac{2\sqrt{2}}{9801}
-              \sum_{n=0}^\infty \frac{ (4n)! (1103 + 26390n)}{(n!)^4
-              (396)^{4n}}
-            </mrow>
-            <mrow>
-              \frac{1}{\pi} \amp = \frac{1}{426880 \sqrt{16005}}
-              \sum_{n=0}^\infty \frac{(6n)! (13591409 + 545140134n)
-              (-1)^n}{(3n)! (n!)^3 (640320)^n}
-            </mrow>
-            <mrow>
-              \frac{\pi^4}{90} \amp = \sum_{n=1}^\infty
-              \frac{1}{n^4}
-            </mrow>
-            <mrow>
-              e \amp = \sum_{n=0}^\infty \frac{(3n)^2+1}{(3n)!}
-            </mrow>
-            <mrow>
-              e \amp = \sum_{n=0}^\infty \frac{n^7}{877n^!}
-            </mrow>
-          </md>
         </p>
+        <md>
+          <mrow>
+            \pi \amp = 4 \sum_{n=0}^\infty \frac{(-1)^n}{2n+1} =
+            \frac{4}{1} - \frac{4}{3} + \frac{4}{5} - \frac{4}{7} +
+            \frac{4}{9} - \ldots
+          </mrow>
+          <mrow>
+            \pi \amp = \sqrt{12} \sum_{n=-0}^\infty
+            \frac{(-1)^n}{3^n (2n+1)} = \sqrt{12} \left( 1 -
+            \frac{1}{9} + \frac{1}{45} - \ldots \right)
+          </mrow>
+          <mrow>
+            \frac{1}{\pi} \amp = \frac{2\sqrt{2}}{9801}
+            \sum_{n=0}^\infty \frac{ (4n)! (1103 + 26390n)}{(n!)^4
+            (396)^{4n}}
+          </mrow>
+          <mrow>
+            \frac{1}{\pi} \amp = \frac{1}{426880 \sqrt{16005}}
+            \sum_{n=0}^\infty \frac{(6n)! (13591409 + 545140134n)
+            (-1)^n}{(3n)! (n!)^3 (640320)^n}
+          </mrow>
+          <mrow>
+            \frac{\pi^4}{90} \amp = \sum_{n=1}^\infty
+            \frac{1}{n^4}
+          </mrow>
+          <mrow>
+            e \amp = \sum_{n=0}^\infty \frac{(3n)^2+1}{(3n)!}
+          </mrow>
+          <mrow>
+            e \amp = \sum_{n=0}^\infty \frac{n^7}{877n^!}
+          </mrow>
+        </md>
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="subsection-geometric-zeta">
-    <title>Geometric and <m>\zeta</m> Series</title>
+  <subsection xml:id="subsection-test-for-divergence">
+    <title>The Test for Divergence</title>
     <p>
-      There are two important classes of convergent series which we
-      will use throughout this chapter. The first is the geometric
-      series.
+      As several examples have illustrated, it is possible for a
+      divergent series to have terms which decrease to zero. 
+      The comparsions between the geometric series
+      with common ratio <m>\frac{1}{2}</m> and the harmonic series is
+      an important comparison. The geometric series (which address
+      Zeno's paradox) has terms <m>\frac{1}{2^n}</m>; these terms approach
+      zero and the whole series adds up to exactly <m>1</m>. The
+      harmonic series also has terms <m>\frac{1}{n}</m> which approach
+      zero, but the series diverges. This leads to a very important
+      observation: <em>the fact that the terms of a series decay to
+      zero is not sufficient to conclude that the series
+      converges</em>.
     </p>
-    <definition>
+    <p>
+      The inverse logical statement, however, does hold. 
+    </p>
+    <proposition xml:id="proposition-test-for-divergence">
       <statement>
         <p>
-          For <m>|r|\lt 0</m>, the geometric series with common ratio
-          <m>r</m> is this series.
-          <me>
-            \sum_{n=0}^\infty r^n
-          </me>
+          (The Test for Divergence) Consider an infinite series.
         </p>
+        <me>
+          \sum_{n=1}^\infty a_n
+        </me>
+        <p>
+          Assume that the limit of the terms of the series is non
+          zero. 
+        </p>
+        <me>
+          \lim_{n \rightarrow a_n} \neq 0
+        </me>
+        <p>
+          Under this assumption, the series must diverge. 
+        </p>
+      </statement>
+    </proposition>
+    <p>
+      This is called the Test for Divergence because the logic here
+      can only be used to prove divergence. If the limit of the terms
+      is zero, I don't know if the series converges. If might be like
+      the geometric series with common ratio <m>\frac{1}{2}</m> and
+      converge. It might be like the harmonic series and diverge. I
+      just don't know. However, if the limit of the terms is not zero,
+      I know for certain that the series will diverge. 
+    </p>
+  </subsection>
+  <subsection xml:id="subsection-series-geometric-zeta">
+    <title>Two Central Examples</title>
+    <p>
+      There are two important classes of convergent series which I
+      will use frequently. These two examples will be particularly
+      important for future comparison results.  The first of the two
+      examples has already been mentioned in connection with Zeno's
+      paradox: the geometric series. I'll now give a full definition
+      of is. 
+    </p>
+    <definition xml:id="definition-geometric-series">
+      <statement>
+        <p>
+          Let <m>r \in \RR</m>. The <term>geometric series</term>
+          with common ratio <m>r</m> is this series.
+        </p>
+        <me>
+          \sum_{n=0}^\infty r^n
+        </me>
       </statement>
     </definition>
     <proposition>
       <statement>
         <p>
           The geometric series with common ratio <m>r</m> converges to
-          <m>\frac{1}{1-r}</m> as long as <m>|r|\lt 1</m>.
+          <m>\frac{1}{1-r}</m> as long as <m>|r| \lt 1</m>.
         </p>
       </statement>
     </proposition>
     <proof>
       <p>
-        For <m>|r| \lt  1</m>, we look at the partial sums. We
-        multiply by <m>\frac{1-r}{1-r}</m>. In the expansion in the
-        denominator, most of the terms cancel and we are left with a
+        For <m>|r| \lt  1</m>, I will calculate the <m>k</m>th partial
+        sums. In the calculation, I multiply by
+        <m>\frac{1-r}{1-r}</m>. In the numerator, when I distribute the
+        multiplication of the two terms, all but the very first and
+        the very last products will cancel out, leaving a relatively 
         simple expression.
-        <me>
-          s_k = 1 + r + r^2 + r^3 + \ldots + r^k = \frac{1-r}{1-r}
-          \left( 1 + r + r^3 + r^3 + \ldots + r^k \right) =
-          \frac{(1-r^k)}{1-r}
-        </me>
       </p>
+      <me>
+        s_k = 1 + r + r^2 + r^3 + \ldots + r^k = \frac{1-r}{1-r}
+        \left( 1 + r + r^3 + r^3 + \ldots + r^k \right) =
+        \frac{(1-r^k)}{1-r}
+      </me>
       <p>
         The convergence of the series is shown by the limit of these
         partial sums.
-        <me>
-          \sum_{n=0}^\infty r^n = \lim_{k \rightarrow \infty}
-          \frac{1-r^k}{1-r} = \frac{1}{1-r}
-        </me>
+      </p>
+      <me>
+        \sum_{n=0}^\infty r^n = \lim_{k \rightarrow \infty}
+        \frac{1-r^k}{1-r} = \frac{1}{1-r}
+      </me>
+      <p>
+        This limit is <m>\frac{1}{1-r}</m> only because of the
+        assuming that <m>|r| \lt 1</m>. Under that assuming, the power
+        of <m>r</m> in the numerator of the limit decay to zero,
+        leaving the result as stated. 
       </p>
     </proof>
     <p>
-      The second class of convergent series are the <m>\zeta</m>
-      (zeta) series. These are often called <m>p</m>-series in
-      standard texts. We are calling them <m>\zeta</m> series since
-      this definition, in a broader context, gives the famous Riemann
+      The second important series is the <m>\zeta</m> (zeta)
+      series. These are often called <m>p</m>-series in some texts.
+      I call this the <m>\zeta</m> series since this definition, in
+      a broader context, is the definition of the famous Riemann
       <m>\zeta</m> function.
     </p>
-    <definition>
+    <definition xml:id="definition-zeta-series">
       <statement>
         <p>
           The <m>\zeta</m> series is the infinite series with terms
           <m>\frac{1}{n^p}</m>.
-          <me>
-            \zeta(p) = \sum_{n=1}^\infty \frac{1}{n^p}
-          </me>
         </p>
+        <me>
+          \zeta(p) = \sum_{n=1}^\infty \frac{1}{n^p}
+        </me>
       </statement>
     </definition>
     <proposition>
       <statement>
         <p>
-          The <m>\zeta</m> series converges when <m>p > 1</m>.
+          The <m>\zeta</m> series converges when <m>p \gt 1</m>.
         </p>
       </statement>
     </proposition>
     <p>
-      We give this without proof for now. The convergence of the
-      <m>\zeta</m> series can be proved with the Integral Test in
-      <xref ref="section-convergence-tests" />. Unlike the
-      geometric series, where we can easily write the value, the
-      actual value of <m>\zeta(p)</m> is not easy to express in
-      conventional algebraic terms.
+      I state this without proof for now. The convergence of the
+      <m>\zeta</m> series can be proved with the Integral Test in <xref
+      ref="subsection-integral-test" />. Unlike the geometric series,
+      where I can easily write the value, the actual value of
+      <m>\zeta(p)</m> is not easy to express in conventional algebraic
+      terms.
     </p>
   </subsection>
-  <subsection xml:id="subsection-manipulation-series">
+  <subsection xml:id="section-series-manipulation">
     <title>Manipulation of Series</title>
     <p>
-      Once we have defined convergent series, we want to be able to
-      work with them algebraically. There are several important
-      manipulations and techniques.
+      This short section covers a couple useful algebraic manipulations
+      of sigma notation and infinite series. These algebraic tools are
+      useful for understanding series, determining convergence, and
+      combining different series together. 
     </p>
     <p>
-      First, series are linear as long as the indices match up. This
-      means we can bring out constants and split series over sums.
-      <md>
-        <mrow>
-          c \sum_{n=0}^\infty a_n \amp = \sum_{n=0}^\infty ca_n
-        </mrow>
-        <mrow>
-          \sum_{n=0}^\infty (a_n \pm b_n) \amp = \sum_{n=0}^\infty
-          a_n \pm \sum_{n=0}^\infty b_n
-        </mrow>
-      </md>
+      First, series are linear as long as the indices match up. Series
+      split up over sum and differences in the term. Constants present
+      in the term can be factored out of the sigma notation. 
     </p>
+    <md>
+      <mrow>
+        c \sum_{n=0}^\infty a_n \amp  = \sum_{n=0}^\infty ca_n
+      </mrow>
+      <mrow>
+        \sum_{n=0}^\infty (a_n \pm b_n) \amp  = \sum_{n=0}^\infty a_n
+        \pm \sum_{n=0}^\infty b_n
+      </mrow>
+    </md>
     <p>
-      Second, we can remove terms. Since a series is just notation
-      for a sum, we can take out leading terms and write them in
-      conventional notation.
-      <me>
-        \sum_{n=0}^\infty a_n = a_0 + a_1 + a_2 + \sum_{n=3}^\infty
-        a_n
-      </me>
+      Second, since sigma notation is just notation for a sum, pieces of
+      the sum can be written explicitly using the ordinary notation for
+      sums. This is called removing terms from the series. 
     </p>
+    <me>
+      \sum_{n=0}^\infty a_n = a_0 + a_1 + a_2 + \sum_{n=3}^\infty a_n
+    </me>
     <p>
-      Third, we can shift the indices. The key idea here is balance:
-      whatever we do to the index in the bounds, we do the opposite to
+      Third, I can shift the indices.  The key idea here is balance:
+      whatever I do to the index in the bounds, I must do the opposite to
       the index in the terms to balance it out.
-      <me>
-        \sum_{n=0}^\infty a_n = \sum_{n=1}^\infty a_{n-1} =
-        \sum_{n=-1}^\infty a_{n+1}
-      </me>
     </p>
+    <me>
+      \sum_{n=0}^\infty a_n = \sum_{n=1}^\infty a_{n-1} =
+      \sum_{n=-1}^\infty a_{n+1}
+    </me>
     <p>
-      Both techniques are very useful, particularly for combining
-      series.
+      Note that the linearity properties required the bounds of the
+      series to match up. Shifting and/or removing terms is very useful
+      for adjusting series so that they have the same starting bounds,
+      and thus can be combined into a single series. 
     </p>
     <example>
       <statement>
         <p>
-          In this example, we want to add two series which don't have
-          matching indices. We shift the first series to make the
-          indices match and allow the addition.
-          <md>
-            <mrow>
-              \sum_{n=2}^\infty \frac{3^n}{n!} + \sum_{n=0}^\infty
-              \frac{1}{n(n+2)} \amp = \sum_{n=0}^\infty
-              \frac{3^{n+2}}{(n+2)!} + \sum_{n=0}^\infty
-              \frac{1}{n(n+2)} 
-            </mrow>
-            <mrow> 
-              \amp = \sum_{n=0}^\infty \left(
-              \frac{3^{n+2}}{(n+2)!} + \frac{1}{n(n+2)} \right)
-            </mrow>
-            <mrow> 
-              \amp = \sum_{n=0}^\infty \left(
-              \frac{3^{n+2}}{(n+2)!} + \frac{(n-1)!(n+1)}{(n+2)!} \right)
-            </mrow>
-            <mrow>
-              \amp = \sum_{n=0}^\infty \left( \frac{3^{n+2} +
-              (n-1)!(n+1)}{(n+2)!} \right)
-            </mrow>
-          </md>
+          In this example, I want to add two series which don't have
+          matching indices. I shift the first series to make the
+          indices match and allow the addition. In the last step below,
+          I also show an example of common denominator with factorials,
+          which is another frequently useful bit of algebra. In the
+          second term, I need to multiply by all the missing term to
+          make the factorial in the denominator. 
         </p>
+        <md>
+          <mrow>
+            \sum_{n=3}^\infty \frac{3^n}{n!} + \sum_{n=1}^\infty
+            \frac{1}{n(n+2)} \amp  = \sum_{n=1}^\infty
+            \frac{3^{n+2}}{(n+2)!} + \sum_{n=1}^\infty
+            \frac{1}{n(n+2)}
+          </mrow>
+          <mrow>
+            \amp = \sum_{n=1}^\infty \left( \frac{3^{n+2}}{(n+2)!} +
+            \frac{1}{n(n+2)} \right)
+          </mrow>
+          <mrow>
+            \amp  = \sum_{n=1}^\infty \left( \frac{3^{n+2} +
+            (n-1)!(n+1)}{(n+2)!} \right)
+          </mrow>
+        </md>
       </statement>
     </example>
   </subsection>
