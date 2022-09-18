@@ -14,7 +14,7 @@
         </me>
       </p>
       <p>
-        The function <m>f_i</m> are called the <term>component
+        The functions <m>f_i</m> are called the <term>component
         functions</term> of the vector-valued function. In
         <m>\RR^2</m>, the components will often be written <m>(x(t),
         y(t))</m>, and similarly in <m>\RR^3</m>, <m>(x(t), y(t),
@@ -23,7 +23,7 @@
     </statement>
   </definition>
   <p>
-    The single-variable component functions allow us to quickly extend
+    The single-variable component functions allow me to quickly extend
     many notions from single-variable calculus to vector-valued
     functions.
   </p>
@@ -66,15 +66,15 @@
         </me>
       </p>
       <p>
-        We state this explicitly, for <m>f(x) = (x(t),y(t))</m> with
-        values in <m>\RR^2</m>.
+        I can state this explicitly, for <m>f(x) = (x(t),y(t))</m>
+        with values in <m>\RR^2</m>.
         <me>
           f^\prime(t) = \frac{d}{dt} f(t) = \left( \frac{dx}{dt},
           \frac{dy}{dt}\right)
         </me>
       </p>
       <p>
-        Likewise, we give the explicit form for <m>f(t) = (x(t),
+        Likewise, I can give the explicit form for <m>f(t) = (x(t),
         y(t),z(t))</m> with values in <m>\RR^3</m>.
         <me>
           f^\prime(t) = \frac{d}{dt} f(t) = \left( \frac{dx}{dt},
@@ -84,13 +84,12 @@
     </statement>
   </definition>
   <p>
-    The result of a derivative of a vector valued function
-    is still a vector. This may seem odd from the viewpoint of first
-    year calculus, where derivatives measured
-    quantifiable geometric properties, such as slopes of tangent
-    lines.  Since the answers here are vectors
-    instead of scalars, we will eventually reconsider those
-    interpretations. A major challenge in extending calculus to
+    The result of a derivative of a vector valued function is still a
+    vector. This may seem odd from the viewpoint of first year
+    calculus, where derivatives measured quantifiable geometric
+    properties, such as slopes of tangent lines. Since the answers
+    here are vectors instead of scalars, I will eventually reconsider
+    those interpretations. A major challenge in extending calculus to
     several variables is the need to re-adjust our interpretation and
     intuition concerning derivatives (and eventually integrals). The
     derivative is no longer the slope of a tangent line.

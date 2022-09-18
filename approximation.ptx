@@ -41,7 +41,7 @@
   <p>
     The previous section defined Taylor series for analytic functions.
     Instead of taking the terms and coefficients all the way to
-    infinity, we could instead truncate the process at some degree.
+    infinity, I could instead truncate the process at some degree.
     The result is a polynomial which serves as a polynomial
     approximation to the function.
   </p>
@@ -66,10 +66,10 @@
     <statement>
       <p>
         Look at the exponential function <m>e^x</m> centered at
-        <m>\alpha = 0</m>. We have its Taylor series from the
-        previous section. These are its polynomial approximations.
-        Their graphs are shown in 
-        <xref ref="figure-exponential-approx" />.
+        <m>\alpha = 0</m>. Its Taylor series was calculated in <xref
+          ref="example-taylor-series1" />. These are its polynomial
+        approximations.sd Their graphs are shown in <xref
+          ref="figure-exponential-approx" />.
         <md>
           <mrow>
             e^x \amp \cong \sum_{n=0}^1 \frac{1}{n!} x^n = 1 + x =
@@ -167,37 +167,40 @@
     </statement>
   </example>
   <p>
-    The main application of approximation is calculating values of
-    transcendental functions. We can't directly calculate their
-    values using basic arithmetic; we need a method. Before the
-    convenience of calculator and computer reference, mathematicians,
-    scientists and engineers carried around large books of tables of
-    values of trig, exponential and logarithmic function.
+    The main application of Taylor polynomial approximation is
+    calculating values of transcendental functions. I can't directly
+    calculate their values using basic arithmetic; I need a method.
+    Before the convenience of calculator and computer reference,
+    mathematicians, scientists and engineers carried around large
+    books of tables of values of trig, exponential and logarithmic
+    function. Now, computer algorithms calculate these values for
+    uses, but these algorithms still need a method. Taylor polynomials
+    are one such method. 
   </p>
   <p>
     Polynomials are particularly useful as approximation tools since
     they involve only the basic operations of arithmetic. Computers
     can calculate with the basic operations of arithmetic, so
-    computers can understand polynomials  If we want to program a
+    computers can understand polynomials  If I want to program a
     computer or calculator to calculate values of <m>e^x</m> or
     <m>\sin x</m> or <m>\ln x</m> or some other transcendental
-    function, Taylor series are one of the best techniques.
+    function, a Taylor polynomial is a great choice. 
   </p>
   <example>
     <statement>
       <p>
         The logarithm is a transcendental function which can't be
-        directly calculated  We had a Taylor series for the logarithm
-        in the previous section.
+        directly calculated  The Taylor series for <m>-\ln (1-x)</m> 
+        was calculated in <xref ref="example-taylor-series3" />.
         <me>
           -\ln (1-x) = \sum_{n=0}^\infty \frac{x^{n+1}}{n+1} 
         </me>
       </p>
       <p>
-        Using some clever arithmetic, we can write <m>\ln 2 = - \ln
-        \frac{1}{2} = - \ln \left( 1 - \frac{1}{2} \right)</m>  If we
-        truncate the series at degree <m>6</m>, we have this
-        approximation for <m>\ln 2</m>.
+        Using some clever arithmetic, I can write <m>\ln 2 = - \ln
+        \frac{1}{2} = - \ln \left( 1 - \frac{1}{2} \right)</m>  If I
+        truncate the series at degree <m>6</m>, I produce the
+        following approximation for <m>\ln 2</m>.
         <md>
           <mrow>
             \ln 2 \amp \cong 1 \cdot \frac{1}{2} + \frac{1}{2} \cdot
@@ -219,27 +222,6 @@
       <p>
         This is not to far off from the value of <m>\ln 2 =
         0.69314\ldots</m>, accurate to the thousandths place.
-      </p>
-    </statement>
-  </example>
-  <example>
-    <statement>
-      <p>
-        There are many ways in mathematics to find approximations to
-        numbers. Recall that the alternating harmonic series also
-        summed to <m>\ln 2</m>. If we truncate that series after ten
-        steps, we get this approximation.
-        <me>
-          \ln 2 \cong 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} +
-          \frac{1}{5} - \frac{1}{6} + \frac{1}{7} - \frac{1}{8} +
-          \frac{1}{9} - \frac{1}{10} = \frac{1627}{2520} =
-          0.645\overline{634920}
-        </me>
-      </p>
-      <p>
-        This expression is a poorer approximation for <m>\ln 2</m>; we
-        would need to go much farther down the alternating harmonic
-        series to match the precision of the Taylor series.
       </p>
     </statement>
   </example>
