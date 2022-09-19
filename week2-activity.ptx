@@ -391,7 +391,7 @@
           <me>
             f(x) = \ln 3 \sum_{n=1}^\infty \frac{(-1)^{n+1}
             (n-1)!}{3^n n!} (x-3)^n = \ln 3 + \sum_{n=1}^\infty
-            \frac{(-1)^{n+1}}{n3^n}
+            \frac{(-1)^{n+1}}{n3^n} (x-3)^n
           </me>
         </p>
       </solution>
