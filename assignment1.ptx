@@ -84,8 +84,8 @@
           <li>
             <p>
               Given <m>\ln x</m> as a Taylor series centered at
-              <m>0</m>, what accuracy is guaranteed by using a tenth
-              order approximation? 
+              <m>e</m>, what accuracy is guaranteed by using a tenth
+              order approximation on the interval <m>(e-1,e+1)</m>?
             </p>
           </li>
         </ol>
