@@ -6,7 +6,7 @@
       The two main examples for comparison in <xref
       ref="subsection-comparison" />
       were the geometric series and the <m>\zeta</m> series. Both
-      converged for certain values of a parameter; <m>|r|\lt 1</m>
+      converged for certain values of a parameter; <m>|r|\lt 1</m>.
       for the geometric series and <m>p ></m> for the <m>\zeta</m>
       series. To start this section, I'd like to re-interpret these
       two series. Instead of thinking of a whole family of different
@@ -677,7 +677,8 @@
     <example>
       <statement>
         <p>
-          The Bessel-Clifford functions are givesn by this series.
+          The Bessel-Clifford functions for <m>k \in \NN</m> are given 
+          by this series.
           <me>
             C_k(x) = \sum_{n=0}^\infty \frac{\pi (k+n) x^n}{n!}
           </me>
@@ -687,9 +688,9 @@
     <example>
       <statement>
         <p>
-          The Polylogarithm functions are given by this series. (Note
-          that for <m>s=1</m> the polylogarithm is <m>Li_1(x) = -\ln
-          (1-x)</m>, the conventional logarithm).
+          The Polylogarithm functions for <m>s \geq 1</m> are given by 
+          this series. (Note that for <m>s=1</m> the polylogarithm is 
+          <m>Li_1(x) = -\ln (1-x)</m>, the conventional logarithm).
           <me>
             Li_s(x) = \sum_{n=0}^\infty \frac{x^{n}}{n^s}
           </me>
