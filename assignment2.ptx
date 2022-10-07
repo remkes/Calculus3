@@ -113,7 +113,9 @@
     </li>
     <li>
       <p>
-        Calculate the detemrinants of these matrices. (12) 
+        Use a computer to calculate the determinants of these matrices. 
+        Give me an interpretation of the resulting numbers. (If you do
+        the matrices by hand, I'll give a couple of bonus marks). (6) 
         <md>
           <mrow>
             a) \amp \begin{vmatrix}
