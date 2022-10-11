@@ -17,28 +17,28 @@
       </statement>
       <solution>
         <p>
-          We can think of this by starting with <m>\theta = 0</m> and
-          seeing what happens to the radius as we increase or decrease
-          <m>/theta</m>. As the angle grows, the radius grows
-          quadratically. This should give a spiral going out at the
-          angle increases, and a mirrored spiral also going out as the
-          angle decreases (since the negative angle will give a
-          positive radius when squared). The double spiral result is
-          shown in <xref ref="figure-activity-polar-locus-1" />
+          I start with <m>\theta = 0</m>, and then I see what happens
+          to the radius as <m>\theta</m> increases or decreases. As
+          the angle grows, the radius grows quadratically. This should
+          give a spiral going out at the angle increases, and a
+          mirrored spiral also going out as the angle decreases (since
+          the negative angle will give a positive radius when
+          squared). The double spiral result is shown in <xref
+          ref="figure-activity-polar-locus-1" />
           <figure xml:id="figure-activity-polar-locus-1">
             <caption>
               Polar Locus <m>r = \theta^2</m>
             </caption>
             <image width="100%" source="images/figure48" />
           </figure>
-          To do the conversion, we simply replace the various pieces:
-          <m>r/</m> and <m>\theta</m> with the corresponding cartesian
+          To do the conversion, I simply replace the various pieces
+          (<m>r</m> and <m>\theta</m>) with the corresponding cartesian
           equivalents. 
           <me>
             \sqrt{x^2 + y^2} = \left( \arctan \left( \frac{y}{x}
             \right) \right)^2
           </me>
-          We could look for simplifications if we wish, but nothing
+          I could look for simplifications if I wished to, but nothing
           obviously makes the equations more succinct as far as I can
           tell. 
         </p>
@@ -59,11 +59,11 @@
       </statement>
       <solution>
         <p>
-          The locus only depends on <m>r</m>, so <m>/theta</m> can
+          The locus only depends on <m>r</m>, so <m>\theta</m> can
           take any possible value. In polar coordinates, this should
-          give us circles: shapes where the radius is fixed by the
+          produce circles: shapes where the radius is fixed by the
           angle is arbitrary. This is a quadratic in the radius with
-          roots <m>r=2</m> and <m>r=5</m>, so we get two cirles, one
+          roots <m>r=2</m> and <m>r=5</m>, so there are two cirles, one
           with radius 2 and one with radius 5. 
           <figure xml:id="figure-activity-polar-locus-2">
             <caption>
@@ -71,7 +71,7 @@
             </caption>
             <image width="100%" source="images/figure49" />
           </figure>
-          To converse, we simply replace <m>r</m> with its cartesian
+          To do the converse, I simply replace <m>r</m> with its cartesian
           equivalent.
           <me>
             x^2 + y^2 - 7 \sqrt{x^2 + y^2} + 10 = 0 
@@ -97,12 +97,12 @@
       </statement>
       <solution>
         <p>
-          First we can notice that the left side is positive, so the
-          right side must also be positive; therefore, we are
-          restricted to positive angles. Starting at <m>\theta = 0
+          First I notice that the left side is positive, so the
+          right side must also be positive; therefore, <m>\theta</m>
+          is restricted to positive angles. Starting at <m>\theta = 0
           </m> and rotating counterclockwise, the radius grows with
-          the angle as <m>r = \sqrt{\theta}</m>. Therefore, we expect
-          a spiral with curve slowly getting closer and closer to each
+          the angle as <m>r = \sqrt{\theta}</m>. Therefore, I expect
+          a spiral with curves slowly getting closer and closer to each
           other as it expands, since the square root function is
           slower than linear growth (which would be an evently spaced
           spiral). 
@@ -112,13 +112,13 @@
             </caption>
             <image width="100%" source="images/figure50" />
           </figure>
-          To converse, we simply replace <m>r</m> and <m>/theta</m>
+          To do the converse, I simply replace <m>r</m> and <m>\theta</m>
           with their cartesian equivalents.
           <me>
             x^2 + y^2 = \left( \arctan \left( \frac{y}{x} \right)
             \right)^2 
           </me>
-          We could try to simplify, but I don't see any obvious
+          I could try to simplify, but I don't see any obvious
           simplifications that would make the equation more succinct. 
         </p>
       </solution>
@@ -138,7 +138,7 @@
       </statement>
       <solution>
         <p>
-          We can re-arrange this equation into <m>r = -\theta</m>,
+          I can re-arrange this equation into <m>r = -/theta</m>,
           which is the negative of the archimedian spiral. Since the
           radius must be positive, the angle must be negative, so we
           get a clockwise archimedian spiral. Since the growth is
@@ -149,12 +149,12 @@
             </caption>
             <image width="100%" source="images/figure51" />
           </figure>
-          To convert, we simply replace <m>r</m> and <m>/theta</m>
+          To convert, I simply replace <m>r</m> and <m>/theta</m>
           with their cartesian equavalents. 
           <me>
             \sqrt{x^2 + y^2} + \arctan \left( \frac{y}{x} \right) = 0 
           </me>
-          We could try to simplify, but I don't see any changes that
+          I could try to simplify, but I don't see any changes that
           make the equation substantially more succinct. 
         </p>
       </solution>
@@ -176,9 +176,9 @@
         <p>
           This locus only has one point, which is the origin. This
           point happens when <m>\theta = -1</m> and <m>r=0</m>. For
-          all other values of <m>]theta</m>, the right side is
+          all other values of <m>/theta</m>, the right side is
           negative. The the radius cannot be negative, there are no
-          possible radius values that satisfy the equation. We can
+          possible radius values that satisfy the equation. I can
           still translate this locus, thought the cartesian locus is
           still a complicated way of simply referring to the point
           <m>(0,0)</m>.
@@ -223,10 +223,10 @@
         <p>
           This cartesian locus is in a convenient form. The artcangent
           term is precisely the cartesian equivalent of the polar
-          <m>/theta</m>. If we write <m>(-x^2 - y^2</m> as
-          <m>-(x^2+y^2)</m>, we can also the fact that <m>(x^2 +
+          <m>\theta</m>. If I write <m>(-x^2 - y^2</m> as
+          <m>-(x^2+y^2)</m>, I can also remember the fact that <m>(x^2 +
           y^2)</m> is equivalent to the polar <m>r^2</m>. Making those
-          two replacement gives the polar locus. 
+          two replacements produces the polar locus. 
           <me>
             \theta - r^2 = 1 
           </me>
@@ -244,12 +244,12 @@
       </statement>
       <solution>
         <p>
-          Here we simply replace <m>x</m> amd <m>y</m> with their
-          polar equivalent. 
+          Here I simply replace <m>x</m> amd <m>y</m> with their
+          polar equivalents. 
           <me>
             r \sin \theta = 3 r \cos \theta - 4
           </me>
-          We could try to simplify, but I don't see any particular
+          I could try to simplify, but I don't see any particular
           simplifications that make the equation any more succinct. 
         </p>
       </solution>
@@ -265,18 +265,18 @@
       </statement>
       <solution>
         <p>
-          Here we simply replace <m>x</m> amd <m>y</m> with their
+          Here I simply replace <m>x</m> amd <m>y</m> with their
           polar equivalent. 
           <me>
             r \sin \theta = 2 (r \cos \theta)^2 
           </me>
-          We could try to simplify if we wanted. One might be tempted
+          I could try to simplify if I wanted. One might be tempted
           to cancel an <m>r</m> term from both sides of the equations.
           That would be mostly fine, but there is one tricky subtlety.
           With the equation as written, the origin (with <m>r=0</m>
-          and <m>\theta</m> undetermined) satisfied the equation; if
-          we cancel <m>r</m> from both sides, we preserve the rest of
-          the locus but we lose the origin. Therefore, the
+          and <m>\theta</m> undetermined) satisfies the equation; if
+          I cancel <m>r</m> from both sides, I preserve the rest of
+          the locus but I lose the origin. Therefore, the
           simplification of cancelling out <m>r</m> needs to be
           accompanied by a note for the case <m>r=0</m> and the
           inclusion of the origin. 
@@ -305,7 +305,7 @@
             </li>
             <li>
               A function of time which gives the local windspeed and
-              direction at the top of a sailbost mast as the sailboat
+              direction at the top of a sailboat mast as the sailboat
               moves. 
             </li>
             <li>
@@ -339,7 +339,7 @@
               A function defined on the positive real numbers which
               outputs the square root, cube root and fourth root of
               the number. This is a vector valued function. If
-              <m>x</m> is the variable, we can write <m>f(x) = \left(
+              <m>x</m> is the variable, I can write <m>f(x) = \left(
               \sqrt{x}. \sqrt[3]{x}, \sqrt[4]{x} \right)</m>. That
               triple can be interpreted as a vector. 
             </li>

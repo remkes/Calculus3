@@ -1,14 +1,15 @@
 <section xml:id="week6-activity">
   <title>Week 6 Activity</title>
   <subsection xml:id="problems-sketching-parametric-curves">
-    <title>Sketching Parametric Curves</title>
+    <title>Examples Parametric Curves</title>
     <activity>
       <statement>
         <p>
-          Sketch this parametric curve. (This is mostly by inspection.
-          You can start by choosing some sample points. Then try to
-          evaluate the behaviour of the coordinate functions to get a
-          sense of the shape).
+          Give an informal analysis of this curve by looking at its
+          component functions, perhaps calculating some sample points,
+          and trying to determine the behaviour of the shape. Check
+          your informal analysis by computer to see the actual shape
+          of the curve.
           <md>
             <mrow>
               \amp \gamma(t) = (t^2, t^3) \amp \amp t \in [-3,3]
@@ -57,10 +58,11 @@
     <activity>
       <statement>
         <p>
-          Sketch this parametric curve. (This is mostly by inspection.
-          You can start by choosing some sample points. Then try to
-          evaluate the behaviour of the coordinate functions to get a
-          sense of the shape).
+          Give an informal analysis of this curve by looking at its
+          component functions, perhaps calculating some sample points,
+          and trying to determine the behaviour of the shape. Check
+          your informal analysis by computer to see the actual shape
+          of the curve.
           <md>
             <mrow>
               \amp \gamma(t) = (\cos t, 2 \sin t)  \amp \amp t \in
@@ -116,10 +118,11 @@
     <activity>
       <statement>
         <p>
-          Sketch this parametric curve. (This is mostly by inspection.
-          You can start by choosing some sample points. Then try to
-          evaluate the behaviour of the coordinate functions to get a
-          sense of the shape).
+          Give an informal analysis of this curve by looking at its
+          component functions, perhaps calculating some sample points,
+          and trying to determine the behaviour of the shape. Check
+          your informal analysis by computer to see the actual shape
+          of the curve.
           <md>
             <mrow>
               \amp \gamma(t) = (4 \cos t + \sin 2t, 4 \sin t + \cos 2
@@ -179,10 +182,11 @@
     <activity>
       <statement>
         <p>
-          Sketch this parametric curve. (This is mostly by inspection.
-          You can start by choosing some sample points. Then try to
-          evaluate the behaviour of the coordinate functions to get a
-          sense of the shape).
+          Give an informal analysis of this curve by looking at its
+          component functions, perhaps calculating some sample points,
+          and trying to determine the behaviour of the shape. Check
+          your informal analysis by computer to see the actual shape
+          of the curve.
           <md>
             <mrow>
               \amp \gamma(t) = (3-t^2,t) \amp \amp t \in [-4,4]
@@ -234,10 +238,11 @@
     <activity>
       <statement>
         <p>
-          Sketch this parametric curve. (This is mostly by inspection.
-          You can start by choosing some sample points. Then try to
-          evaluate the behaviour of the coordinate functions to get a
-          sense of the shape).
+          Give an informal analysis of this curve by looking at its
+          component functions, perhaps calculating some sample points,
+          and trying to determine the behaviour of the shape. Check
+          your informal analysis by computer to see the actual shape
+          of the curve.
           <md>
             <mrow>
               \amp \gamma(t) = \left( \frac{\pi^2}{t^2} \cos t,
@@ -297,10 +302,11 @@
     <activity>
       <statement>
         <p>
-          Sketch this parametric curve. (This is mostly by inspection.
-          You can start by choosing some sample points. Then try to
-          evaluate the behaviour of the coordinate functions to get a
-          sense of the shape).
+          Give an informal analysis of this curve by looking at its
+          component functions, perhaps calculating some sample points,
+          and trying to determine the behaviour of the shape. Check
+          your informal analysis by computer to see the actual shape
+          of the curve.
           <md>
             <mrow>
               \amp \gamma(t) = (\sqrt{t}, \sqrt[3]{t} ) \amp \amp t
@@ -352,10 +358,11 @@
     <activity>
       <statement>
         <p>
-          Sketch this parametric curve described in polar coordinates.
-          (This is mostly by inspection.  You can start by choosing
-          some sample points. Then try to evaluate the behaviour of
-          the coordinate functions to get a sense of the shape).
+          Give an informal analysis of this curve by looking at its
+          component functions, perhaps calculating some sample points,
+          and trying to determine the behaviour of the shape. Check
+          your informal analysis by computer to see the actual shape
+          of the curve.
           <md>
             <mrow>
               \amp r(t) = t \amp \amp \theta(t) = t \amp \amp t \in
@@ -418,10 +425,11 @@
     <activity>
       <statement>
         <p>
-          Sketch this parametric curve described in polar coordinates.
-          (This is mostly by inspection.  You can start by choosing
-          some sample points. Then try to evaluate the behaviour of
-          the coordinate functions to get a sense of the shape).
+          Give an informal analysis of this curve by looking at its
+          component functions, perhaps calculating some sample points,
+          and trying to determine the behaviour of the shape. Check
+          your informal analysis by computer to see the actual shape
+          of the curve.
           <md>
             <mrow>
               \amp r(t) = 4 + \sin t \amp \amp \theta(t) = t \amp
@@ -486,10 +494,11 @@
     <activity>
       <statement>
         <p>
-          Sketch this parametric curve described in polar coordinates.
-          (This is mostly by inspection.  You can start by choosing
-          some sample points. Then try to evaluate the behaviour of
-          the coordinate functions to get a sense of the shape).
+          Give an informal analysis of this curve by looking at its
+          component functions, perhaps calculating some sample points,
+          and trying to determine the behaviour of the shape. Check
+          your informal analysis by computer to see the actual shape
+          of the curve.
           <md>
             <mrow>
               \amp r(t) = 2^{-t} \amp \amp \theta(t) = \pi 2^t  \amp
@@ -581,75 +590,87 @@
         <p>
           <ol>
             <li>
-              <m>t = 3s</m>
+              <me>t = 3s</me>
               <p>
                 The movement will be consistently three times faster.
                 For any value of <m>s</m>, the position based on the
                 original parameter would be three times further along
-                the curve, so we move through the curve three times as
-                fast. 
+                the curve, so movement along the curve happens three
+                times as fast. The domain is still <m>s \in [0,
+                \infty)</m>.  
               </p>
             </li>
             <li>
-              <m>t = \frac{s}{4}</m>
+              <me>t = \frac{s}{4}</me>
               <p>
                 The movement will be one quarter th eoriginal speed.
                 For any value of <m>s</m>, the position based on the
                 original parameter would be only one quarter as far
-                along the curve, so we move through the curve at one
-                quarter the original speed.
+                along the curve, so motvement along the curve happens
+                at one quarter the original speed. The domain is still
+                <m>s \in [0, \infty)</m>
               </p>
             </li>
             <li>
-              <m>t = s + 7</m>
+              <me>t = s + 7</me>
               <p>
                 The speed doesn't change. However, at <m>s=0</m> (the
-                starting time for the new variable), we are already
-                along the curve at <m>t=7</m>.
+                starting time for the new variable), the position is
+                already partially along the curve, where the original
+                parametrization would have been at <m>t=7</m>. The
+                domain, to match the original curve, would be <m>s \in
+                [-7,\infty)</m>. 
               </p>
             </li>
             <li>
-              <m>t = s - 10</m>
+              <me>t = s - 10</me>
               <p>
                 The speed doesn't change. However, at <m>s=0</m> (the
-                starting time for the new variable), we have moved
-                back along the curve to <m>t = -10</m>. If <m>t</m>
-                doesn't take negative values, then we would have to
-                start the new variable at <m>s = 10</m>.
+                starting time for the new variable), the position has
+                moved back along the curve to <m>t = -10</m>. If
+                <m>t</m> doesn't take negative values, then the curve
+                would have to start the new variable at <m>s =
+                10</m>. The domain, to match the original curve, would
+                be <m>s \in [10,\infty)</m>.
               </p>
             </li>
             <li>
-              <m>t = s^2</m>
+              <me>t = s^2</me>
               <p>
-                By squaring the new variable, we will be going faster
-                and faster compared with the old variable. Moving
-                linearly in <m>s</m> is moving quadratically in
-                <m>t</m>, getting faster and faster.
+                By squaring the new variable, the movement  will be
+                faster and faster compared with the old variable.
+                Moving linearly in <m>s</m> is moving quadratically in
+                <m>t</m>. The domain is still <m>s\ in [0,\infty)</m>. 
               </p>
             </li>
             <li>
-              <m>t = \sqrt{s}</m>
+              <me>t = \sqrt{s}</me>
               <p>
-                By taking the square rook we will be going slower and
-                slower compared with the old variable. Moving linearly
-                in <m>s</m> is moving only <m>\sqrt{s}</m> in
-                <m>t</m>, getting slower and slower.
+                By taking the square root, movement along the curve
+                will be going slower and slower compared with the old
+                variable. Moving linearly in <m>s</m> is moving only
+                <m>\sqrt{s}</m> in <m>t</m>.The domain is still <m>s\
+                in [0,\infty)</m>. 
               </p>
             </li>
             <li>
-              <m>t = e^s</m>
+              <me>t = e^s</me>
               <p>
-                As we move on in the new variable, the speed will
-                accelerate more and more compared with the old
-                variable. This is like the quadratic change, but more
-                dramatic, since the exponential function grows faster.
+                The speed will accelerate more and more compared with
+                the old variable. This is like the quadratic change,
+                but more dramatic, since the exponential function
+                grows faster. The domain cannot actually match the
+                original curve, since producing <m>t = 0</m> is
+                impossible with the new variable. The closest domain
+                is <m>s \in (-\infty, \infty)</m>. 
               </p>
             </li>
             <li>
-              <m>t = -s</m>
+              <me>t = -s</me>
               <p>
                 The speed will not change, but the direction of
-                movement along the curve will be reversed. 
+                movement along the curve will be reversed. The domain
+                is <m>s \in (-\infty,0]</m>. 
               </p>
             </li>
           </ol>
@@ -679,7 +700,7 @@
               \amp \amp y^\prime(t) = 3
             </mrow>
           </md>
-          I then put the into a pythagorian combination.
+          I then put them into a pythagorian combination.
           <me>
             \sqrt{1^2 + 3^2} = \sqrt{10}
           </me>
@@ -779,8 +800,8 @@
             <li>
               Find a parametric curve which descrives an ellipse with
               semimajor axis <m>a</m> and semiminor axis <m>b</m>.
-              (Its easiest to orient the larger ellipse axis along the
-              <m>x</m> axis.
+              (It is easiest for future stpes to orient the larger
+              ellipse axis along the <m>x</m> axis.)
             </li>
             <li>
               Set up the arclength calculation to find the
@@ -788,15 +809,15 @@
             </li>
             <li>
               Factor <m>a</m> out of the square root and subtract a
-              cosine term to that you can simplify using <m>(\sin^2 t
+              cosine term so that you can simplify using <m>(\sin^2 t
               + \cos^2 t = 1)</m>.
             </li>
             <li>
-              We can define the eccentricity of the ellipse as <m>e =
-              \sqrt{1 - \frac{b^2}{a^2}}</m>. Manipulate the integral
-              so that <m>e</m> shows up under the square root, but
-              <m>a</m> amd <m>b</m> are no longer under the square
-              root.
+              The <em>eccentricity</em> of the ellipse is defined to
+              be the number <m>e = \sqrt{1 - \frac{b^2}{a^2}}</m>.
+              Manipulate the integral so that <m>e</m> shows up under
+              the square root, but <m>a</m> amd <m>b</m> are no longer
+              under the square root.
             </li>
             <li>
                Calculate the integral in the special case <m>e=0</m>.
@@ -819,8 +840,6 @@
               <p>
                 Find a parametric curve which descrives an ellipse with
                 semimajor axis <m>a</m> and semiminor axis <m>b</m>.
-                (It's easiest to orient the larger ellipse axis along the
-                <m>x</m> axis.
               </p>
               <p>
                 I can take the standard curve for the circle and just
@@ -880,11 +899,11 @@
             </li>
             <li>
               <p>
-                We can define the eccentricity of the ellipse as <m>e =
-                \sqrt{1 - \frac{b^2}{a^2}}</m>. Manipulate the integral
-                so that <m>e</m> shows up under the square root, but
-                <m>a</m> amd <m>b</m> are no longer under the square
-                root.
+                The eccentricity of the ellipse is defined to be the
+                number <m>e = \sqrt{1 - \frac{b^2}{a^2}}</m>.
+                Manipulate the integral so that <m>e</m> shows up
+                under the square root, but <m>a</m> amd <m>b</m> are
+                no longer under the square root.
               </p>
               <md>
                 <mrow>
@@ -903,9 +922,6 @@
             <li>
               <p>
                  Calculate the integral in the special case <m>e=0</m>.
-                 (Since this happens only when <m>a=b</m>, this is a
-                 circle with radius <m>a</m>; you should recover the
-                 familiar circumference of a circle).
                </p>
                <me>
                   = \int_0^{2\pi} a \sqrt{ 1 - 0 \cos^2 (t)} dt = 
@@ -920,12 +936,12 @@
               </p>
               <p>
                 This is an impossible integral to solve with the
-                method we are familiar with in this course. Without
-                <m>e=0</m>, we can't make use of a trig identity to
-                remove all the trig functions. We are left with this
-                annoying <m>\cos^2 t</m> function inside the integral.
-                No substitution works, since there are no trig
-                functions outside the integral. 
+                methods in this course, or even with more advanced
+                method. Without <m>e=0</m>, I can't make use of a trig
+                identity to remove all the trig functions. I am left
+                with this annoying <m>\cos^2 t</m> function inside the
+                integral.  No substitution works, since there are no
+                trig functions outside the integral.
               </p>
               <p>
                 This is called an elliptic integral (of the second
@@ -936,9 +952,12 @@
                 curves. These are very important geometric object
                 which seem strangely named, since they don't look like
                 they have anything to do with ellipses. The connection
-                if these integrals. Elliptic curves were invented as
+                is these integrals. Elliptic curves were invented as
                 part of some clever and complicated new methods to
-                approach ellitpic integrals.
+                approach ellitpic integrals. In this sense, elliptic
+                curves are not <dq>curves which are like ellipses</dq>,
+                but rather, <dq>curves that solve some elliptic
+                integrals.</dq>
               </p>
             </li>
           </ol>

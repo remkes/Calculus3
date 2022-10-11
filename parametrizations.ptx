@@ -64,7 +64,7 @@
     <title>Reparametrization</title>
     <p>
       Since the same shape can have many different parametrizations,
-      we want a process to switch between them. This process is
+      I want a process to switch between them. This process is
       called reparametrization.
     </p>
     <definition>
@@ -73,11 +73,13 @@
           Let <m>\gamma(t): [a,b] \rightarrow \RR^n</m> be a
           parametric curve with coordinates <m>(\gamma_1(t), \ldots,
           \gamma_n(t))</m>. A <term>reparametrization</term> of
-          <m>\gamma</m> is a monotonic increasing function <m>t =
-          t(u)</m> expressing the parameter <m>t</m> in terms of a new
-          parameter <m>u</m>. We replace <m>t</m> by the function
-          <m>t(u)</m> to give a parametric curve in terms of <m>u</m>:
-          <m>\gamma(u) = (\gamma_1(t(u)), \gamma_2(t(u)), \ldots,
+          <m>\gamma</m> is the replacement of the variable <m>t</m> by
+          a new variable <m>u</m>. The two variables are related by a
+          monotonic increasing function <m>t = t(u)</m> expressing the
+          parameter <m>t</m> in terms of a new parameter <m>u</m>. I
+          replace <m>t</m> by the function <m>t(u)</m> to give a
+          parametric curve in terms of <m>u</m>: <m>\gamma(u) =
+          (\gamma_1(t(u)), \gamma_2(t(u)), \ldots,
           \gamma_n(t(u)))</m>.
         </p>
       </statement>
@@ -156,34 +158,39 @@
       </image>
     </figure>
     <p>
-      Our goal in this section is to produce a formula describing the
-      length of a parametric curve. We approximate this length by
+      My goal in this section is to produce a formula describing the
+      length of a parametric curve. I approximate this length by
       breaking up a curve <m>\gamma</m> into a series of straight
-      lines. In order to visualize the process, we work in
+      lines. In order to visualize the process, I work in
       <m>\RR^2</m> for the moment, as in <xref
       ref="figure-arclength-approximation" />. 
     </p>
     <p>
-      For each straight line segment, if we know <m>\Delta y</m> and
+      For each straight line segment, the length of the segment is
+      given by using pythagorus on the triange formed by the segment
+      and the changes in each variable. I know <m>\Delta y</m> and
       <m>\Delta x</m>, then the length of the segment is
-      <m>\sqrt{\Delta x^2 + \Delta y^2}</m>. We approximate the total
+      <m>\sqrt{\Delta x^2 + \Delta y^2}</m>. I approximate the total
       length of the curve by adding up the lengths of these segments.
       <me>
         L \cong \sum \sqrt{\Delta x^2 + \Delta y^2}
       </me>
     </p>
     <p>
-      If we take the limit of this process, breaking the curve into
-      smaller and smaller pieces, we get a Riemann sum which defines a
-      definite integral. In the limit, the <m>\Delta</m> terms become
-      the infinitesimals <m>dy</m> and <m>dx</m>.
+      If I take the limit of this process, breaking the curve into
+      smaller and smaller pieces, I produce a Riemann sum which
+      defines a definite integral. In the limit, the <m>\Delta</m>
+      terms become the infinitesimals <m>dy</m> and <m>dx</m>.
       <me>
         L = \int_a^b \sqrt{dx^2 + dy^2}
       </me>
     </p>
     <p>
-      Both <m>x</m> and <m>y</m> depend on <m>t</m>, so we can change
-      this to a integral in <m>t</m>.
+      Both <m>x</m> and <m>y</m> depend on <m>t</m>, so I can change
+      this to a integral in <m>t</m>. (This is is poor notation, I
+      admit, confusiong fractions and derivatives. The deeper
+      situation here is a chain rule replacement, but I don't want to
+      belabour the technical details.) 
       <me>
         L = \int_a^b \sqrt{ \left( \frac{dx}{dt} \right)^2 + \left(
         \frac{dy}{dt} \right)^2 } dt
@@ -197,9 +204,10 @@
       <statement>
         <p>
           Let <m>\gamma(t): [a,b] \rightarrow \RR^n</m> be a
-          parametric curve. Let <m>\gamma_1(t), \gamma_2(t), \ldots,
-          \gamma_n(t)</m> be the components. The length of the
-          parametric curve is calculated by this integral.
+          parametric curve. I'll explicitly write the components of
+          the curve as <m>\gamma_1(t), \gamma_2(t), \ldots,
+          \gamma_n(t)</m>. Then the length of the parametric curve is
+          calculated by this integral.
           <me>
             L = \int_a^b \sqrt{ \left( \frac{d\gamma_1}{dt} \right)^2
             + \left( \frac{d\gamma_2}{dt} \right)^2 + \ldots + +
@@ -213,7 +221,7 @@
         <p>
           In <m>\RR^3</m>, consider the helix <m>\gamma(t) = (\cos t,
           \sin t, t)</m>. On the domain <m>t \in [0, 8\pi]</m>, the
-          helix makes four revolutions. We calculate its arclength.
+          helix makes four revolutions. I calculate its arclength.
           <me>
             L = \int_0^{8\pi} \sqrt{ \sin^2 t + \cos^2 t + 1} dt =
             \int_0^{8\pi} \sqrt{2} dt = 8 \sqrt{2} \pi
@@ -221,12 +229,12 @@
         </p>
       </statement>
     </example>
-    <example>
+    <example xml:id="example-asteroid">
       <statement>
         <p>
           The asteroid is the parametric curve <m>\gamma(t) = (\cos^3
           t, \sin^3 t)</m> for <m>t \in [0,2\pi]</m>, shown in <xref
-          ref="figure-asteroid">Figure</xref>. We want to calculate
+          ref="figure-asteroid">Figure</xref>. I want to calculate
           its arclength.
         </p>
         <figure xml:id="figure-asteroid">
@@ -274,8 +282,8 @@
           The absolute value here causes trouble. A convenient way to
           drop it is to notice that both <m>\sin t</m> and <m>\cos
           t</m> are positive on <m>[0, \pi/2]</m>. That range covers
-          a quarter of the asteroid and the asteroid is symetric, so
-          we can calculate the length of that quarter and multiply by
+          a quarter of the asteroid and the asteroid is symmetric, so
+          I can calculate the length of that quarter and multiply by
           4.
           <me>
             L = 4\int_0^{\frac{\pi}{2}} 3 \sin t \cos t dt = 6
@@ -285,12 +293,22 @@
         </p>
       </statement>
     </example>
+    <p>
+      The symmetric argument in <xref ref="example-asteroid" />
+      deserves some attention. In parametric curves, this kind of
+      symmetry argument can be very valuable. It's often easier to
+      work with a small section of a curve, particularly for
+      integration. If I can argue that the whole curve is just a
+      repetition of a small portion (perhaps reflected or rotated),
+      then I can reasonable use the small portion to calculate
+      information about the whole curve. 
+    </p>
   </subsection>
   <subsection xml:id="subsection-parametrization-by-arclength">
     <title>Parametrization by Arclength</title>
     <p>
-      Our arclength calculation determins the length of the whole
-      curve. However, we can also ask for the length of pieces of the
+      The arclength calculation determins the length of the whole
+      curve. However, I can also ask for the length of sections of the
       curve.
     </p>
     <definition>
@@ -322,30 +340,30 @@
       distance the curve has covered from <m>\gamma(0)</m> to
       <m>\gamma(5)</m>, <m>s(8)</m> is the distance along the curve
       from <m>\gamma(0)</m> to <m>\gamma(8)</m> and so on. Since
-      <m>s</m> depends on <m>t</m> outside the integral, we have to
-      choose a temporary variable <m>u</m> for inside the integral; in
+      <m>s</m> depends on <m>t</m> outside the integral, I have to
+      choose a temporary variable for inside the integral; in
       the integral, <m>t</m> is simply repalced with <m>u</m>.
     </p>
     <p>
-      We want to use the arclength function to reparametrize curve.
+      I want to use the arclength function to reparametrize curve.
       The process has three steps.
       <ol>
         <li>
           <p>
-            We calculate the arclength fuction <m>s(t)</m> by
+            I calculate the arclength fuction <m>s(t)</m> by
             integration.
           </p>
         </li>
         <li>
           <p>
-            We invert the arclength function. Arclength is always an
-            increasing function, so it is always invertible. We write
+            I invert the arclength function. Arclength is always an
+            increasing function, so it is always invertible. I write
             the inverse as <m>t(s)</m>.
           </p>
         </li>
         <li>
           <p>
-            We use the inverse of the arclength function to
+            I use the inverse of the arclength function to
             reparametrize by replacing <m>t</m> with <m>t(s)</m>.
           </p>
         </li>
@@ -396,7 +414,7 @@
           </image>
         </figure>
         <p>
-          We calculate the arclength function.
+          I calculate the arclength function.
           <md>
             <mrow>
               s(t) \amp = \int_0^t \sqrt{x^\prime(u)^2 +
@@ -410,7 +428,7 @@
         </p>
         <p>
           The arclength function is <m>s = t \sqrt{20}</m>; the
-          inverse is <m>t = \frac{s}{\sqrt{20}}</m>. We replace
+          inverse is <m>t = \frac{s}{\sqrt{20}}</m>. I replace
           <m>t</m> with <m>t(s)</m> in <m>\gamma(t)</m>.
           <me>
             \gamma(s) = \left( 2 \cos \left( \frac{s}{\sqrt{20}}

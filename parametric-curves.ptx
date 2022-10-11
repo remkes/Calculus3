@@ -7,14 +7,14 @@
       functions with multiple variable inputs and/or outputs. In the
       review sections in <xref ref="vector-geometry" />, I
       introduced linear transformations, which were <em>linear</em>
-      function <m>\RR^n \rightarrow \RR^m</m>. I would like to also
+      functions <m>\RR^n \rightarrow \RR^m</m>. I would like to also
       investigate non-linear functions. Vector-valued function are the
       first step in that direction: they have a single-input but
       multi-variable non-linear output. The first and most important
       interpretation of vector-valued function is  as parametric curves. 
     </p>
     <p>
-      A parametric curves describes interpret a vector-valued function
+      A parametric curve interprets a vector-valued function
       as a position in some euclidean space depending on time; as
       such, parametric curves are used to talk about motion through
       space. The calculus of parametric curves is a way to understand
@@ -66,10 +66,8 @@
       The continuity condition is important, since a parametric
       curve is a connected path. I could define vector-valued
       functions which jump around, but these don't really fit the
-      notion of a curve. Continuity is also necessary for
-      differentiability and it is part of the definition (in order to
-      avoid restating it multiple times) that all parametric curves
-      are differentiable.
+      notion of a curve <emdash /> they don't describe reasonable
+      motion through space.
     </p>
     <p>
       For visualizing parametric curves, it is conventional to graph
@@ -288,7 +286,7 @@
         </figure>
       <p>
         The curve <m>\gamma(t) = (t\cos t, t\sin t,t)</m> on
-        <m>[0,20]</m> is a spiral in <m>\RR^3</m>,as in <xref
+        <m>[0,20]</m> is a spiral in <m>\RR^3</m>, as in <xref
         ref="figure-parametric-curve6" />.
         </p>
       </statement>

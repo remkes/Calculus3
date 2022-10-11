@@ -3,20 +3,31 @@
   <subsection xml:id="subsection-polar-coordinates">
     <title>Polar Coordinates</title>
     <p>
-      One way of thinking of transformations of <m>\RR^n</m> is as
-      changes of coordinates. In <m>\RR^2</m>, with standard
+      In the linear algebra review, you studied linear transformations
+      of <m>\RR^n</m>, expressed as matrices. In this section, I also
+      want to study transformation of <m>\RR^N</m>, but not
+      necessarily linear transformation. 
+    </p>
+    <p>
+      There are many purposes to transformation of <m>\RR^n</m>.
+      Linear transformation, as expressed through matrices, were
+      consider as manipulations to space: taking the space and
+      reflecting it, rotating it, stretching it, collapsing it. Here,
+      I need a different perspective: I want to leave the space as-is,
+      but simply change my description of is. What I want is a
+      <em>change of coordinates</em>. In <m>\RR^2</m>, with standard
       coordinates <m>x,y</m>, I can think of a linear transformation,
       say <m>u = x+v</m> and <m>v=x-v</m>, as a new system of
-      coordinates. We can describe points, loci, and any other
+      coordinates. I can describe points, loci, and any other
       objects in terms of <m>u</m> and <m>v</m> just as well as in
       terms of <m>x</m> and <m>y</m>. The transformation show how
       to go between the two sets of coordinates.
     </p>
     <p>
-      All the linear transformations mentioned in the previous section
-      (at least those which preserve dimension) are changes of
-      coordinates. In this section, I look at changing to new
-      coordinates in stranger ways; in particular, I look at
+      In linear algebra, all the linear transformations mentioned in
+      the previous section (at least those which preserve dimension)
+      are changes of coordinates. In this section, I look at changing
+      to new coordinates in stranger ways; in particular, I look at
       non-linear transformations.
     </p>
     <p>
@@ -61,27 +72,34 @@
       coordinates. To that end, I need to describe <m>x</m> and
       <m>y</m> in terms of <m>r</m> and <m>\theta</m>, and vice-versa.
       The relationships are just trigonometry.
-      <md>
-        <mrow>
-          x = r \cos \theta 
-        </mrow>
-        <mrow>
-          y = r \sin \theta
-        </mrow>
-      </md>
     </p>
-    <p>
-      The reverse direction is also trigonometry.
-      <md>
-        <mrow>
-          r = \sqrt{x^2 + y^2} 
-        </mrow>
-        <mrow>
-          \tan \theta = \frac{y}{x} \implies \theta = \arctan
-          \frac{y}{x}
-        </mrow>
-      </md>
-    </p>
+    <proposition xml:id="proposition-pc-transformation">
+      <p>
+        The transformations between cartesian and polar coordinates
+        are given by these equations. 
+        <md>
+          <mrow>
+            x = r \cos \theta 
+          </mrow>
+          <mrow>
+            y = r \sin \theta
+          </mrow>
+        </md>
+      </p>
+      <p>
+        Likewise, the reverse transformations are given by these
+        equations.
+        <md>
+          <mrow>
+            r = \sqrt{x^2 + y^2} 
+          </mrow>
+          <mrow>
+            \tan \theta = \frac{y}{x} \implies \theta = \arctan
+            \frac{y}{x}
+          </mrow>
+        </md>
+      </p>
+    </proposition>
     <p>
       If <m>x</m> is zero, then <m>\tan \theta</m> is undefined, but
       <m>\theta</m> will be <m>\pi/2</m> or <m>3\pi/2</m>, depending
@@ -214,7 +232,9 @@
     </example>
     <p>
       To translate between loci in polar coordinates and loci in
-      Cartesian coordinates is simply a matter of replacement. The
+      Cartesian coordinates is simply a matter of replacement,
+      according to the equations in <xref
+      ref="proposition-pc-transformation" />. The
       line <m>x=4</m> in Cartesian coordinates becomes <m>r\cos \theta
       = 4</m> or <m>\cos \theta = \frac{r}{4}</m>. The circle <m>x^2
       + y^2 =1</m> becomes <m>r^2 \cos^2 \theta + r^2 \sin^2 \theta =
@@ -280,7 +300,7 @@
     <p>
       Spherical coordinates uses a sphere the same way that polar
       coordinates uses a circle. There is a radius term <m>r</m>,
-      which measure the distance from a point to the origin in
+      which measures the distance from a point to the origin in
       <m>\RR^3</m>. <m>r</m> determines the size of a sphere on which
       the point is located. After determining a sphere, to find a
       specific point on the sphere, I use a system which is similar

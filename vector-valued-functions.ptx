@@ -3,12 +3,12 @@
   <definition>
     <statement>
       <p>
-        Let <m>A</m> be a subset of <m>\RR</m>. A <term>vector valued
+        Let <m>A</m> be a subset of <m>\RR</m>. A <term>vector-valued
         function</term> is a function <m>f: A \rightarrow \RR^n</m>
         for <m>n \geq 2</m>. It has a single-variable real input, but
-        outputs a vector in some higher dimensional space. A vector
-        valued function can be written as a vector of individual
-        functions.
+        outputs a vector in some higher dimensional space. A 
+        vector-valued function can be written as a vector of
+        individual functions.
         <me>
           f(t) = (f_1(t), f_2(t), \ldots, f_n(t))
         </me>
@@ -90,7 +90,7 @@
     properties, such as slopes of tangent lines. Since the answers
     here are vectors instead of scalars, I will eventually reconsider
     those interpretations. A major challenge in extending calculus to
-    several variables is the need to re-adjust our interpretation and
+    several variables is the need to re-adjust my interpretation and
     intuition concerning derivatives (and eventually integrals). The
     derivative is no longer the slope of a tangent line.
   </p>
