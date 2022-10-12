@@ -3,20 +3,19 @@
 -->
 <section xml:id="section-assignment3">
   <title>Assignment 3</title>
-  <!--
   <p><ol>
     <li>
       <p>
         Write these cartesian loci as polar loci. (6) 
         <ol>
           <li><me>
-            x - 4y = 1
+            4x + 5y = 1 
           </me></li>
           <li><me>
-            x^2 + 2y^2 = 3
+            \frac{1}{3x^2 + 3y^2 + 4} = 7 
           </me></li>
           <li><me>
-            \frac{y}{x} - 3 \frac{y^2}{x^2} = 3
+            \frac{y}{x} + x^2 + y^2 = 7
           </me></li>
         </ol>
       </p>
@@ -26,14 +25,13 @@
         Write these cartesian loci as spherical loci. (6) 
         <ol>
           <li><me>
-            5x - 4y + 6z = 1
+            4x + 3y - 5z = 4
           </me></li>
           <li><me>
-            x^2 + y^2 + z^2 - \sqrt{x^2 + y^2} = 1
+            \frac{1}{x^2 + y^2 + z^2} - \sqrt{x^2 + y^2 + z^2} = 3 
           </me></li>
           <li><me>
-            \left(\frac{\sqrt{x^2+y^2}}{z}\right)^3 - x^2 - y^2 - z^2
-            = 1
+            \frac{5z}{\sqrt{x^2 + y^2}} - x^2 - y^2 - z^2 = 4 
           </me></li>
         </ol>
       </p>
@@ -42,8 +40,7 @@
       <p>
         Consider this parametric curve (in cartesian coordinates). (6) 
         <me>
-          \gamma(t) = (x(t), y(t)) = (\cos 6\pi t, \sin 6\pi
-            t)
+          \gamma(t) = (e^{t+1}, e^{t-1}) 
         </me>
         <ol>
           <li><p>
@@ -53,8 +50,8 @@
             Determine the length of the curve on <m>t \in [0,4]</m>.
           </p></li>
           <li><p>
-            Determine the behaviour of the curve as <m>t \rightarrow
-            \infty</m>. 
+            Qualitatively describe the behaviour of the curve as <m>t
+            \rightarrow \infty</m>.
           </p></li>
         </ol>
       </p>
@@ -63,7 +60,7 @@
       <p>
         Consider this parametric curve (in cartesian coordinates). (6) 
         <me>
-          \gamma(t) = (x(t), y(t)) = \left(4, \frac{1}{(t+1)^2} \right)
+          \gamma(t) = (t-7, 4t+3)
         </me>
         <ol>
           <li><p>
@@ -73,25 +70,8 @@
             Determine the length of the curve on <m>t \in [0,4]</m>.
           </p></li>
           <li><p>
-            Determine the behaviour of the curve as <m>t \rightarrow
-            \infty</m>. 
-          </p></li>
-        </ol>
-      </p>
-    </li>
-    <li>
-      <p>
-        Consider this parametric curve (in polar coordinates). (4) 
-        <me>
-          \gamma(t) = (r(t), \theta(t)) = (t+1,t)
-        </me>
-        <ol>
-          <li><p>
-            Find <m>\gamma(0)</m>.
-          </p></li>
-          <li><p>
-            Determine the behaviour of the curve as <m>t \rightarrow
-            \infty</m>. 
+            Qualitatively describe the behaviour of the curve as <m>t
+            \rightarrow \infty</m>. 
           </p></li>
         </ol>
       </p>
@@ -100,12 +80,38 @@
       <p>
         Consider this parametric curve. (6) 
         <me>
-          \gamma(t) = (x(t), y(t), z(t)) = (t, t^2, t^3)
+          \gamma(t) = (2 \sin t \cos t, \cos 2t) 
         </me>
         <ol>
           <li><p>
+            Find <m>\gamma(0)</m>.
+          </p></li>
+          <li><p>
+            Determine the length of the curve on <m>t \in [0,4]</m>.
+          </p></li>
+          <li><p>
+            Qualitatively describe the behaviour of the curve as <m>t
+            \rightarrow \infty</m>.
+          </p></li>
+        </ol>
+      </p>
+    </li>
+    <li>
+      <p>
+        Consider this parametric curve. (8) 
+        <md>
+          <mrow>
+            \amp \gamma(t) = (t^2, t^2 +1, t^2 +2) 
+            \amp \amp t \in [0, \infty] 
+          </mrow>
+        </md>
+        <ol>
+          <li><p>
+            Calculate <m>\gamma(1)</m>.
+          </p></li>
+          <li><p>
             Determine the intersection (if any) of the curve with the
-            unit sphere.
+            unit sphere. 
           </p></li>
           <li><p>
             Determine the intersection (if any) of the curve the the
@@ -116,15 +122,45 @@
     </li>
     <li>
       <p>
-        Consider this parametric curve. (6) 
-        <me>
-          \gamma(t) = (x(t), y(t), z(t)) = (\sqrt{t^2+1}, t, t^2-2)
-        </me>
+        Consider this parametric curve. (8) 
+        <md>
+          <mrow>
+            \amp \gamma(t) = (\sin (\pi t) + \cos (\pi t), \sin (\pi
+            t) - \cos (\pi t), 2t) 
+            \amp \amp t \in [0, \infty] 
+          </mrow>
+        </md>
         <ol>
           <li><p>
+            Calculate <m>\gamma(1)</m>.
+          </p></li>
+          <li><p>
             Determine the intersection (if any) of the curve with the
-            unit sphere. (Approximate values calculated by computer
-            are fine.) 
+            unit sphere. 
+          </p></li>
+          <li><p>
+            Determine the intersection (if any )of the curve the the
+            cube with vertices <m>(\pm 1, \pm 1, \pm 1)</m>. 
+          </p></li>
+        </ol>
+      </p>
+    </li>
+    <li>
+      <p>
+        Consider this parametric curve. (6) 
+        <md>
+          <mrow>
+            \amp \gamma(t) = (t, \frac{1}{t}, 6) 
+            \amp \amp t \in (0, \infty] 
+          </mrow>
+        </md>
+        <ol>
+          <li><p>
+            Calculate <m>\gamma(1)</m>.
+          </p></li>
+          <li><p>
+            Determine the intersection (if any) of the curve with the
+            unit sphere. 
           </p></li>
           <li><p>
             Determine the intersection (if any )of the curve the the
@@ -138,10 +174,10 @@
         Parametrize the following curve by arclength for <m>t > 0</m>.
         (8)
         <me>
-          \gamma(t) = (t^3, t^3 + t^2, t^3 -t^2)
+          \gamma(t) = \left( t \sin t, t \cos t, \frac{2 \sqrt{2}
+          t^{\frac{3}{2}}}{3} \right) 
         </me>
       </p>
     </li>
   </ol></p>
-  -->
 </section>
