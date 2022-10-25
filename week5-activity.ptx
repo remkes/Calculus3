@@ -26,10 +26,24 @@
           squared). The double spiral result is shown in <xref
           ref="figure-activity-polar-locus-1" />
           <figure xml:id="figure-activity-polar-locus-1">
-            <caption>
-              Polar Locus <m>r = \theta^2</m>
-            </caption>
-            <image width="100%" source="images/figure48" />
+            <caption> Polar Locus <m>r = \theta^2</m> </caption>
+            <image xml:id="figure48" width="90%">
+              <asymptote>
+                import graph;
+                size(5cm,5cm);
+
+                xaxis("$x$");
+                yaxis("$y$");
+
+                real x1(real t) {return (1/8)*(t^2)*cos(t);}
+                real y1(real t) {return (1/8)*(t^2)*sin(t);}
+                draw(graph(x1,y1,0,6*pi));
+
+                real x2(real t) {return (1/8)*(t^2)*cos(t);}
+                real y2(real t) {return (-1)*(1/8)*(t^2)*sin(t);}
+                draw(graph(x2,y2,0,6*pi));
+              </asymptote>
+            </image>
           </figure>
           To do the conversion, I simply replace the various pieces
           (<m>r</m> and <m>\theta</m>) with the corresponding cartesian
@@ -66,10 +80,19 @@
           roots <m>r=2</m> and <m>r=5</m>, so there are two cirles, one
           with radius 2 and one with radius 5. 
           <figure xml:id="figure-activity-polar-locus-2">
-            <caption>
-              Polar Locus <m>r^2 - 7r + 10 = 0</m>
-            </caption>
-            <image width="100%" source="images/figure49" />
+            <caption> Polar Locus <m>r^2 - 7r + 10 = 0</m> </caption>
+            <image xml:id="figure49" width ="90%">
+              <asymptote>
+                import graph;
+                size(5cm,5cm);
+
+                xaxis("$x$");
+                yaxis("$y$");
+
+                draw(Circle((0,0),2.25));
+                draw(Circle((0,0),5));
+              </asymptote>
+            </image>
           </figure>
           To do the converse, I simply replace <m>r</m> with its cartesian
           equivalent.
@@ -107,10 +130,24 @@
           slower than linear growth (which would be an evently spaced
           spiral). 
           <figure xml:id="figure-activity-polar-locus-3">
-            <caption>
-              Polar Locus <m>r^2 = \theta</m>
-            </caption>
-            <image width="100%" source="images/figure50" />
+            <caption> Polar Locus <m>r^2 = \theta</m> </caption>
+            <image xml:id="figure50" width="90%">
+              <asymptote>
+                import graph;
+                size(5cm,5cm);
+
+                xaxis("$x$");
+                yaxis("$y$");
+
+                real x1(real t) {return (1/8)*(sqrt(t))*cos(t);}
+                real y1(real t) {return (1/8)*(sqrt(t))*sin(t);}
+                draw(graph(x1,y1,0,6*pi));
+
+                real x2(real t) {return (-1)*(1/8)*(sqrt(t))*cos(t);}
+                real y2(real t) {return (-1)*(1/8)*(sqrt(t))*sin(t);}
+                draw(graph(x2,y2,0,6*pi));
+              </asymptote>
+            </image>
           </figure>
           To do the converse, I simply replace <m>r</m> and <m>\theta</m>
           with their cartesian equivalents.
@@ -144,10 +181,21 @@
           get a clockwise archimedian spiral. Since the growth is
           linear, the arms of the spiral are equally spaced. 
           <figure xml:id="figure-activity-polar-locus-4">
-            <caption>
-              Polar Locus <m>r + \theta = 0</m>
-            </caption>
-            <image width="100%" source="images/figure51" />
+            <caption> Polar Locus <m>r + \theta = 0</m> </caption>
+            <image xml:id="figure51" width="90%">
+              <asymptote>
+                import graph;
+                size(5cm,5cm);
+
+                xaxis("$x$");
+                yaxis("$y$");
+
+                real x(real t) {return t*cos((-1)*t);}
+                real y(real t) {return t*sin((-1)*t);}
+
+                draw(graph(x,y,0,6*pi));
+              </asymptote>
+            </image>
           </figure>
           To convert, I simply replace <m>r</m> and <m>/theta</m>
           with their cartesian equavalents. 
