@@ -8,7 +8,7 @@
       interpreted as  motion through <m>\RR^n</m>, the derivative has
       a related interpretation.
     </p>
-    <definition>
+    <definition xml:id="definition-pc-tangent">
       <statement>
         <p>
           Let <m>\gamma(t): [a,b] \rightarrow \RR^n</m> be a
@@ -161,7 +161,7 @@
     </p>
     <p>
       For the parametrizations of the graph of the parabola in <xref
-      ref="figure=tangent-lengths" />, I can see this behaviour
+      ref="figure-tangent-lengths" />, I can see this behaviour
       clearly: the direction of the tangent is independent of the
       parametrization, but the length of the tangent is entirely
       dependent on the parametrization. The parametrizations which
@@ -198,8 +198,8 @@
     <example>
       <statement>
         <p>
-          As we say in <xref ref="section-parametric-curves" />, the
-          archimedian spiral is
+          As introducted in <xref ref="section-parametric-curves" />,
+          the archimedian spiral is
           <me>
             \gamma(t) = (t \cos t, t \sin t) 
           </me>.
@@ -211,15 +211,15 @@
           vector is 
           <me>
             \gamma^\prime (\pi) = (-1,-\pi).
-          </me>.
+          </me>
           The length of this vector is 
           <me>
-            |\gamma^\prime (\pi)| = \sqrt{1 + \pi^2} 
-          </me>.
+            |\gamma^\prime (\pi)| = \sqrt{1 + \pi^2}.
+          </me>
           Therefore the unit tangent at this point is 
           <me>
             T (\pi) = \frac{1}{\sqrt{1+\pi^2}} (-1,-\pi).
-          </me>.
+          </me>
         </p>
       </statement>
     </example>
@@ -227,16 +227,16 @@
   <subsection xml:id="subsection-tangents-non-linear-coords">
     <title>Tangents in Non-Linear Coordinates</title>
     <p>
-      Tangents are a Cartesian notion. If our curve is given in a
-      different coordinate systems, we still want the word
+      Tangents are a Cartesian notion. If a curve is given in a
+      different coordinate systems, I still want the word
       <sq>tangent</sq> to mean the Cartesian tangent. Cartesian
-      tangents cary the interepretation we want: the direction of
+      tangents carry the desired interepretation: the direction of
       motion. Therefore, to find tangent in other coordinate systems,
-      we relate them back to Cartesian coordinates. In polar
-      coordinates, we have <m>x = r \cos \theta</m> and <m>y = r \sin
-      \theta</m>. If <m>r</m> and <m>\theta</m> depend on <m>t</m>,
-      then we can differentiation these expressions using the product
-      rule.
+      I relate them back to Cartesian coordinates. In polar
+      coordinates, the coordinate transformations are <m>x = r \cos
+      \theta</m> and <m>y = r \sin \theta</m>. If <m>r</m> and
+      <m>\theta</m> depend on <m>t</m>, then I can differentiation
+      these expressions using the product rule.
       <md>
         <mrow>
           x \amp = r \cos \theta
@@ -258,6 +258,11 @@
           \theta) \theta^\prime)
         </mrow>
       </md>
+      I am not going to make any substantial use of these polar
+      calculations for tangents, since I will develop the calculus of
+      parametric curves almost exclusively in Cartesian coordinates,
+      but I still wanted to briefly mention the behavior of tangents
+      in other coordinate systems.
     </p>
   </subsection>
   <subsection xml:id="subsection-arclength-and-tangents">
@@ -265,7 +270,7 @@
     <p>
       There are some very natural connections between tangents and
       arclength which relate to the intepretation of parametric curves
-      as movement through space. Let's return to the arc length
+      as movement through space. I'll return to the arc length
       formula (in <m>\RR^2</m>, for simplicity).
       <me>
         L = \int_a^b \sqrt{x^\prime(t)^2 + y^\prime(t)^2} dt
@@ -275,7 +280,7 @@
       The tangent vector is <m>\gamma^\prime(t) = (x^\prime(t),
       y^\prime(t))</m>, so this integrand in the arclength formula is
       nothing more than the length of the tangent vector. This lets
-      us rewrite the arclength formula.
+      me rewrite the arclength formula.
       <me>
         L = \int_a^b |\gamma^\prime(t)| dt
       </me>
@@ -283,12 +288,12 @@
     <p>
       This hopefully makes intuitive sense <mdash/> the length of the
       tangent vector measures the speed of the curve. To get length
-      (the distance travelled), we integrate the speed of movement.
+      (the distance travelled), I integrate the speed of movement.
     </p>
     <p>
-      An nice event occurs when we differentiate the arclength
+      An nice event occurs when I differentiate the arclength
       function <m>s(t)</m>. The fundamental theorem of calculus
-      allows us to differentiate an integral.
+      lets me differentiate an integral.
       <me>
         \frac{d}{dt} s(t) = \frac{d}{dt} \int_a^t |\gamma^\prime(u)|
         du = |\gamma^\prime (t)|
@@ -297,16 +302,16 @@
     <p>
       The derivative of the arclength function is the length of the
       tangent vector, which represents the speed of movement along the
-      curve. To get speed, we differentiate length.
+      curve. To get speed, I differentiate length.
     </p>
     <p>
       Both of these observations generalize the relationship between
       distance and speed from single variable calculus. In that
-      forum, the relationship was relatively direct: if <m>d(t)</m>
+      setting, the relationship was relatively direct: if <m>d(t)</m>
       was distance, then <m>d^\prime(t)</m> was speed and if
       <m>v(t)</m> was speed then <m>\int v(t) dt</m> was distance.
       The idea here is exactly the same, but since the movement is
-      much more complicated, going through multi-dimensional space, we
+      much more complicated, going through multi-dimensional space, I
       need more complicated definitions and notations to access the
       idea.
     </p>
@@ -323,7 +328,7 @@
           </me>
         </p>
         <p>
-          Let's calculate the speed in this parametrization by
+          I'll calculate the speed in this parametrization by
           arclength. <m>|\gamma^\prime(s)|</m>:
           <md>
             <mrow>
@@ -346,7 +351,7 @@
           </md>
         </p>
         <p>
-          We find that the speed is constantly one. This turns out to
+          I find that the speed is constantly one. This turns out to
           be generally true.
         </p>
       </statement>
@@ -355,9 +360,9 @@
       <statement>
         <p>
           Let <m>\gamma(t): [a,b] \rightarrow \RR^n</m> be a
-          parametric curve. Our of all the possible
+          parametric curve. Of all the possible 
           reparametrizations of <m>\gamma</m>, the parametrization by
-          arclength has three properties.
+          arclength has three unique properties.
           <ul>
             <li>
               <p>
@@ -383,15 +388,33 @@
     </proposition>
     <p>
       These properties are very useful and convenient. In the
-      remainder of this chapter, we will make frequent use of the
-      parametrization by arclength; it serves as our default
-      parametrization. We can do this since the parametrization by
+      remainder of this chapter, I will make frequent use of the
+      parametrization by arclength; it serves as the default
+      parametrization. I can do this since the parametrization by
       arclength always exists and is unique. Having a special,
-      default parameter allows us to make good definitions which will
+      default parameter allows me to make good definitions which will
       be independent of the choice of parametrization. (In practice,
       the parametrization by arclength can be extremely difficult to
       actually calculate. For theoretical results, however, this
       difficulty isn't relevant).
+    </p>
+    <p>
+      The existence of multiple parametrization for parametric curves
+      is an example of a very general trend in abstract mathematics. A
+      mathematical structure is some kind of pattern or behaviour
+      (such as a curve being a particular path through space). This
+      pattern can be presented in a variety of ways (such as a variety
+      of parametrizations). This always presents a fundamental
+      difficulty: if you want to understand something about the
+      general pattern -- about the mathematical structure in itself --
+      you need to make sure that your observations transcend the
+      particularities of the presentation. Sometimes, there is a
+      special presentation (such as the parametrization by arclength)
+      which serves as the ideal model of the structure. Where there is
+      such a presentation, mathematicians make heavy use of it. Where
+      no such presentation exists (which is usually the case),
+      mathematicians always have to struggle with the tension between 
+      pattern itself and how the pattern is presented. 
     </p>
   </subsection>
   <subsection xml:id="subsection-curvature">
@@ -399,12 +422,12 @@
     <p>
       The tangent vector for a parametric curve measures the speed and
       direction of movement along the curve. Speed and direction are
-      good information, but not enough to complete describe motion in
+      good information, but not enough to completely describe motion in
       multiple dimensions. In particular, the tangent vector gives
       the direction but doesn't say how direction is changing. This
       section builds up the notions of curvature and torsion, which
-      will complete a full description of th echanging directions of
-      movement. In this section, we exclusively work in <m>\RR^3</m>.
+      will complete a full description of the changing directions of
+      movement. In this section, I exclusively work in <m>\RR^3</m>.
     </p>
     <p>
       In <m>\RR^3</m>, I want to classify three types of movement.
@@ -424,27 +447,27 @@
         <li>
           <p>
             Twisting motion: the most general motion, where in
-            addition to curving in a plane, we can also twist away
-            from the plane.
+            addition to curving in a plane, a curve can also twist
+            away from the plane.
           </p>
         </li>
       </ul>
     </p>
     <p>
       Throughout this section, let <m>\gamma(t): [a,b] \rightarrow
-      \RR^3</m> be a curve in three dimensions. Recall we already
-      have the tangent <m>\gamma^\prime(t)</m> and the unit tangent
-      <m>T(t)</m>. If the curve is parametrized by arc length, we
-      will use the parameter <m>s</m> and write <m>\gamma(s)</m>. In
-      this case, the tangent is already a unit vector, so <m>T(s) =
-      \gamma^\prime(s)</m>. We will usually start our definition
-      using the parmetrization by arclength, to ensure they are
-      independent of parametrizations.
+      \RR^3</m> be a curve in three dimensions.  To start with (and to
+      ensure that the following definition does not depend on
+      parametrization), I will assume the curve is parametrized by arc
+      length: I will use the parameter <m>s</m> and write
+      <m>\gamma(s)</m>. In this parametrization, the tangent is a unit
+      vector, so <m>T(s) = \gamma^\prime(s)</m>. 
     </p>
     <definition>
       <statement>
         <p>
-          The <term>curvature</term> of <m>\gamma(s)</m> is a scalar
+          Let <m>\gamma(s): [a,b] \rightarrow \RR^3</m> be a
+          parametric curve parametrized by arclength. The
+          <term>curvature</term> of <m>\gamma(s)</m> is a scalar
           <m>\kappa(s)</m> which measure how quickly the curve is
           turning.
           <me>
@@ -454,22 +477,23 @@
       </statement>
     </definition>
     <p>
-      We can think of turning as a change in the direction of the unit
-      tangent <m>T(s)</m>. It is a scalar, not showing the new
-      direction but just the magnitude of the change.
-    </p>
-    <p>
       There are a couple things to note about this definition. First,
       <m>\kappa</m> is the greek letter kappa, even though it looks
-      like our <sq>k</sq>. Second, <m>T(s)</m> is a vector, so the
-      derivative <m>\frac{dT(s)}{ds}</m> is a vector derivative
+      like the Englith <sq>k</sq>. Second, <m>T(s)</m> is a vector, so
+      the derivative <m>\frac{dT(s)}{ds}</m> is a vector derivative
       <mdash/> the derivative is taken in each component of the
-      vector. Curvature is the scalar length of the resulting
-      vector.
+      vector. Curvature is the scalar length of the resulting vector.
+      Finally, the unit tangent is the direction of motion. Therefore,
+      the derivative of the unit tangent measure the change in
+      direction. The length of this derivative is a scalar measure of
+      how quickly direction is changing. (Note that thought <m>|T(s)|
+      = 1</m>, there is no reason to expect that <m>|T^\prime(s)| =
+      1</m>; the magnitude of the change in a unit vector can be any
+      possible magnitude.) 
     </p>
     <p>
       The given definition of curvatuve only works for parametrization
-      by arclength. We would like to calculate <m>\kappa</m> in terms
+      by arclength. I would like to calculate <m>\kappa</m> in terms
       of an arbitrary parameter <m>t</m>, since arclength can be
       difficult to work with.
     </p>
@@ -487,14 +511,18 @@
     </proposition>
     <proof>
       <p>
-        We have the arclength function <m>s(t)</m>. The chain rule
-        gives the derivative in a general form.
+        Recall the arclength function <m>s(t)</m>. I can write an
+        arbitrary parametrization <m>\gamma(s(t))</m>, where
+        <m>s(t)</m> is the specific arclength function for the
+        parametrization. This composition also applies to the unit
+        tangent: <m>T(s(t)</m>. Then to differentiate in <m>t</m>
+        requires a chain rule.
         <me>
           \frac{dT(t)}{dt} = \frac{dT(s(t))}{ds} \frac{ds}{dt}
         </me>
       </p>
       <p>
-        We can rearrange this equation and then take the lengths of
+        I can rearrange this equation and then take the lengths of
         the vectors.
         <me>
           \frac{dT}{ds} = \frac{\frac{dT}{dt}}{\frac{ds}{dt}} \implies
@@ -519,8 +547,8 @@
           Consider the curve in <m>\RR^3</m>: <m>\gamma(t) = (at, bt,
           ct)</m> for some constants <m>a,b,c,\in \RR</m>. This curve
           is the straight line through <m>(0,0,0)</m> in the direction
-          <m>(a,b,c)</m>. Let's calculate the curvature of this
-          curve. We work in steps, calculating the various pieces in
+          <m>(a,b,c)</m>. I will calculate the curvature of this
+          curve. I work in steps, calculating the various pieces in
           order.
           <md>
             <mrow>
@@ -580,7 +608,7 @@
         </p>
         <p>
           Again unsurprisingly, the unit circle has constant curvature
-          of one; we would expect uniform curvate for a circle. This
+          of one; I would expect uniform curvate for a circle. This
           also give a reference for the scale of curvature: curvature
           of one is exactly the curvature of the unit circle.
         </p>
@@ -591,19 +619,20 @@
         <p>
           A similar calcluation can be done for the circle of radius
           <m>a</m>, which is <m>\gamma(t) = (a \cos t, a \sin t)</m>.
-          If we repeat all the steps for the unit circle, we get
-          <m>\kappa(t) = \frac{1}{a}</m>. Again, this is constant,
-          which makes sense since the circle is equally curved at all
-          points. However, it's interesting to note that the
-          curvature is <em>inversely</em> proportional to the radius.
-          A curvature value of <m>\kappa</m> is interpreted as the
-          curvature of a circle of radius <m>\frac{1}{\kappa}</m>.
+          If I repeat all the steps for the unit circle, I can
+          conclude that <m>\kappa(t) = \frac{1}{a}</m>. Again, this is
+          constant, which makes sense since the circle is equally
+          curved at all points. However, it's interesting to note that
+          the curvature is <em>inversely</em> proportional to the
+          radius.  A curvature value of <m>\kappa</m> is interpreted
+          as the curvature of a circle of radius
+          <m>\frac{1}{\kappa}</m>.
         </p>
         <p>
           This hopefully makes sense <mdash/> a circle with a very
-          large radius doesn't locally have to curve very much. We
+          large radius doesn't locally have to curve very much. I
           know this very well, living on the surface of the earth:
-          since the radius of the earth is large, we don't really see
+          since the radius of the earth is large, I don't really see
           the curvature of its surface. However, for circle with very
           small radius, there is less distance to cover a whole
           revolution, so the curvature must be larger.
@@ -614,9 +643,9 @@
   <subsection xml:id="subsection-normals">
     <title>Normals</title>
     <p>
-      To complete the description of motion in <m>\RR^3</m>, we define
-      the normal and binormal vectors. I apologies, on behalf of
-      mathematicians everywhere, for the use of the word
+      To complete the description of motion in <m>\RR^3</m>, I need to
+      define the normal and binormal vectors. I apologizes, on behalf
+      of mathematicians everywhere, for the use of the word
       <sq>normal</sq> in this definition (and, franktly, everywhere
       else it's used in mathematics.) Unfortunately, it's standard and
       we are stuck with it.
@@ -642,16 +671,16 @@
       </statement>
     </definition>
     <p>
-      The following lemma helps us understand the direction of
+      The following lemma helps to understand the direction of
       <m>N(t)</m> (and will be useful later in the course as well).
     </p>
     <lemma xml:id="lemma-unit-vector-derivative">
       <statement>
         <p>
-          Let <m>\gamma(t)</m> be a differential parametric curve such
-          that <m>|\gamma(t)| = 1</m> for all <m>t</m> in the domain
-          of the curve. (That is, <m>\gamma(t)</m> is always a unit
-          vector.) Then <m>\gamma</m> is perpendicular to its
+          Let <m>\gamma(t)</m> be a differentiable parametric curve
+          such that <m>|\gamma(t)| = 1</m> for all <m>t</m> in the
+          domain of the curve. (That is, <m>\gamma(t)</m> is always a
+          unit vector.) Then <m>\gamma</m> is perpendicular to its
           derivative.
           <me>
             \gamma(t) \cdot \gamma^\prime(t) = 0
@@ -661,13 +690,34 @@
     </lemma>
     <proof>
       <p>
-        Since <m>\gamma(t)</m> is always a unit vector, the path of
-        <m>\gamma(t)</m> is a path on the unit sphere in <m>\RR^3</m>.
-        The tangent direction of this path, therefore, must be a
-        tangent to the unit sphere. Unit vector point directly out of
-        the unit sphere; they are perpendicular to tangent vectors of
-        the unit sphere. Therefore, <m>\gamma</m> and
-        <m>\gamma^\prime</m> must be perpendicular vectors.
+        There are several ways to argue this result. First, I can
+        think about the geometry of the sphere and its tangents
+        (though, I confess, this argument uses some ideas from future
+        weeks in the course.) Since <m>\gamma(t)</m> is always a unit
+        vector, the path of <m>\gamma(t)</m> is a path on the unit
+        sphere in <m>\RR^3</m>.  The tangent direction of this path,
+        therefore, must be a tangent to the unit sphere. Unit vector
+        point directly out of the unit sphere; they are perpendicular
+        to tangent vectors of the unit sphere. Therefore,
+        <m>\gamma</m> and <m>\gamma^\prime</m> must be perpendicular
+        vectors.
+      </p>
+      <p>
+        Alternatively, I could argue more directly from the definition
+        of a unit vector. If <m>\gamma(t)</m> is a unit vector, its
+        length can never change -- the length is fixed at one. If
+        <m>\gamma^\prime(t)</m> share any small direction with
+        <m>\gamma(t)</m> (more formally, if the projection was
+        non-zero), then there would be a portion of the tangent vector
+        pointing in the direction of <m>\gamma(t)</m>. This would
+        indicate that there is change in the direction of the vector.
+        Such a change would necessarily change the length of the
+        vector; increasing it is the growth is aligned with the
+        vector, and decreasing it is the growth is against the vector.
+        Therefore, <m>\gamma(t)</m> and <m>\gamma^\prime(t)</m> cannot
+        share any such small direction.  The projection of the latter
+        onto the former must be zero, which is equivalent to them
+        being perpendicular. 
       </p>
     </proof>
     <p>
@@ -678,8 +728,8 @@
       <m>T</m> was already a unit vector and <m>N</m> was defined
       explicitly as a unit vector. The cross product of two
       perpendicular unit vectors is also a unit vectors, so all three
-      are unit vectors, as seen in <xref
-      ref="figure-three-unit-vectors" />.
+      are unit vectors. An example of the arrangement of the three
+      vrectors is show in  <xref ref="figure-three-unit-vectors" />.
     </p>
     <figure xml:id="figure-three-unit-vectors">
       <caption>
@@ -709,7 +759,7 @@
       </image>
     </figure>
     <p>
-      Let's complete these definitions with interpretation. We've
+      I want to complete these definitions with interpretation. I've
       already spent some time on the unit tangent vector <m>T(t)</m>.
       It represents the direction of movement of the curve at that
       point. The associated scalar is speed, measuring how fast the
@@ -732,15 +782,15 @@
       If a parametric curve isn't twisted, the osculating plane is the
       plane on which the curve travels. The binormal vector
       <m>B(t)</m> is perpendicular to the osculating plane. Since
-      planes are best described by their normals, we use <m>B(t)</m>
+      planes are best described by their normals, I use <m>B(t)</m>
       to keep track of the osculating plane.
     </p>
   </subsection>
   <subsection xml:id="subsection-torsion">
     <title>Torsion</title>
     <p>
-      Our third type of movement was twisting movement, where we
-      allowed a curve path to twist away from its plane of movement.
+      The third type of movement I want to describe is twisting
+      movement, where a curve can twist away from its plane of movement.
       Since the osculating plane is determined by its normal
       <m>B(t)</m>, twisting motion involves the change in
       <m>B(t)</m>.
@@ -760,12 +810,12 @@
     </definition>
     <p>
       Torsion is a scalar that measures the change in <m>B</m>, the
-      change in the normal of the osculating plane. It meausre the
+      change in the normal of the osculating plane. It measures the
       rate of twisting, the tendency of curving paths to change their
       plane of motion.
     </p>
     <p>
-      As with curvature, we want to calculate torsion in an arbitrary
+      As with curvature, I want to calculate torsion in an arbitrary
       parametrization.
     </p>
     <proposition>
@@ -783,34 +833,37 @@
     </proposition>
     <proof>
       <p>
-        The arclength parameter is related to the parameter <m>t</m>
-        by the arlencth function <m>s = s(t)</m>. The chain rule
+        As in the proof for torsion, I can setup an arbitrary
+        parametrization using the arclength function 
+        <m>s = s(t)</m>. Then I can write <m>B(s(t))</m> for the
+        binormal in the arbitrary parametrization. The chain rule
         calculates the derivative of the binormal vector.
         <me>
           \frac{dB(t)}{dt} = \frac{dB(t(s))}{ds} \frac{ds}{dt}
         </me>
       </p>
       <p>
-        We can rearrange this expression.
+        I can rearrange this expression.
         <me>
           \frac{dB(s)}{ds} = \frac{\frac{dB(t)}{dt}}{\frac{dt}{ds}} =
           \frac{B^\prime(t)}{|\gamma^\prime(t)|}
         </me>
       </p>
       <p>
-        Without proof, <m>B^\prime(t)</m> points in the direction of
-        the negative of the normal, <m>-N(t)</m>. To get the torsion,
-        which is the length of the vector in the previous formula, we
-        can take the dot product with the unit vector in this
-        direction, which is simply <m>-N(t)</m>.
+        Omiting the proof here, it is true that <m>B^\prime(t)</m>
+        points in the direction of the negative of the normal,
+        <m>-N(t)</m>. To get the torsion, which is the length of the
+        vector in the previous formula, I can take the dot product
+        with the unit vector in this direction, which is simply
+        <m>-N(t)</m>.
       </p>
     </proof>
     <p>
-      Now we have three scalars (speed, curvature, torsion) and three
-      matching vectors (tangent, normal and binormal). Together, this
-      information completely describes motion in <m>\RR^3</m>. For
-      convenience, the next list collects the definitions of all six
-      of these mathematical objects.
+      Now every curve has three associated scalars (speed, curvature,
+      torsion) and three matching vectors (tangent, normal and
+      binormal). Together, this information completely describes
+      motion in <m>\RR^3</m>. For convenience, the next list collects
+      the definitions of all six of these mathematical objects.
       <md>
         <mrow>
           \gamma(t) \amp = (x(t), y(t), z(y))
@@ -848,7 +901,7 @@
           the helix <m>\gamma(t) = (r\cos t, r\sin t, ht)</m>. In the
           helix, <m>r</m> is the radius of the circular movement of
           the helix, and <m>h</m> is the rate of linear movement along
-          the axis of the helix. Let's calculate all the information
+          the axis of the helix. I'll calculate all the information
           about the motion along the helix: the speed (<m>v</m>),
           curvature (<m>\kappa</m>), torsion (<m>\tau</m>),the
           tangent, the normal and finally the binormal.
@@ -927,7 +980,7 @@
         </p>
         <p>
           All three, speed, curvature and torsion, are constant here.
-          Let's summarize what kind of shapes of curves we get for
+          I can summarize what kind of shapes of curves we get for
           constant and zero values of the three scalars describing the
           motion of parametric curves.
         </p>
@@ -995,7 +1048,7 @@
         <p>
           Like the straight line and the circle, the helix is the
           unique curve which has constant non-zero speed, torsion and
-          cruvature.
+          curvature..
         </p>
       </statement>
     </example>
@@ -1003,8 +1056,8 @@
   <subsection xml:id="subsection-acceleration">
     <title>Acceleration and Movement in Space</title>
     <p>
-      Now that we understand how parametric curves describe motion in
-      <m>\RR^3</m>, we can do some physics. This section tries to
+      Now that I understand how parametric curves describe motion in
+      <m>\RR^3</m>, I can do a little physics. This section tries to
       undertstand what acceleration means in the language of
       parametric curves. The starting point is simple: acceleration
       should be the second derivative of the curve.
@@ -1013,23 +1066,23 @@
       </me>
     </p>
     <p>
-      This means acceleration is a vector. Let's work out its
+      This means acceleration is a vector. I will try to work out its
       direction and magnitude, using <m>T</m>, <m>N</m> and <m>B</m>
-      as reference for direction. Recall the definition of the unit
+      as reference for directions. Recall the definition of the unit
       tangent.
       <me>
         T(t) = \frac{\gamma^\prime(t)}{|\gamma^\prime(t)|}
       </me>
     </p>
     <p>
-      We solve for <m>\gamma^\prime(t)</m>.
+      I solve for <m>\gamma^\prime(t)</m>.
       <me>
         \gamma^\prime(t) = \underbrace{|\gamma^\prime|}_{\text{ scalar
         } } \cdot \underbrace{T(t)}_{\text{ direction } }
       </me>
     </p>
     <p>
-      We differentiate this, using the product rule.
+      I differentiate this, using the product rule.
       <men xml:id="equation-reference2">
           \frac{d}{dt} \gamma^\prime(t) = \left( \frac{d}{dt}
           |\gamma^\prime(t)| \right) T(t) + |\gamma^\prime(t)|
@@ -1043,7 +1096,7 @@
       </me>
     </p>
     <p>
-      We isolate <m>T^\prime(t)</m>.
+      I isolate <m>T^\prime(t)</m>.
       <men xml:id="equation-reference1">
         T^\prime(t) = |T^\prime(t)| N(t)
       </men>
@@ -1056,16 +1109,16 @@
       </me>
     </p>
     <p>
-      We use this expression to replace <m>|T^\prime(t)|</m> in <xref
+      I use this expression to replace <m>|T^\prime(t)|</m> in <xref
       ref="equation-reference1">Equation</xref>.
       <me>
         T^\prime(t) = \kappa(t) |\gamma^\prime(t)| N(t)
       </me>
     </p>
     <p>
-      We put this expression for <m>T^\prime(t)</m> into the second
-      term of <xref ref="equation-reference2">Equation</xref>, then
-      group and label the terms.
+      Finally, I put this expression for <m>T^\prime(t)</m> into the
+      second term of <xref ref="equation-reference2">Equation</xref>,
+      then group and label the terms.
       <me>
         a(t) = \underbrace{\frac{d}{dt} |\gamma^\prime(t)|}_{\text{
         linear acceleration } } T(t) + \underbrace{\kappa(t)
@@ -1080,8 +1133,8 @@
           the vector <m>\frac{d}{dt} |\gamma^\prime(t)| T(t)</m> and
           its <term>angular acceleration</term> is the vector
           <m>\kappa(t) |\gamma^\prime(t)|^2 N(t)</m>. Linear
-          acceleration tells us how quickly the speed changes.
-          Angular acceleration tells us how quickly the direction
+          acceleration described how quickly the speed changes.
+          Angular acceleration describes how quickly the direction
           changes.
         </p>
       </statement>
@@ -1102,5 +1155,17 @@
         </p>
       </statement>
     </example>
+    <p>
+      You might wonder why this little bit of physics didn't include
+      torsion. There is one derivative to get to the tangent and a
+      second derivative to get to the normal and the binormal. To
+      calculate torsion requires the derivative of the binormal: this
+      is three derivatives away from the original curve. Torsion only
+      shows up as a third derivatives. The above discussion of
+      acceleration only used second derivatives; indeed, acceleration
+      can only describe motion in a plane. To get torsion and motion
+      that diverges from its osculating plan requires a third
+      derivative. 
+    </p>
   </subsection>
 </section>
