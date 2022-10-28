@@ -4,9 +4,9 @@
     <title>Tangents</title>
     <p>
       Parametric curves are vector-valued functions, so they have
-      derivatives as defined earlier. Since we consider parametric
-      curves as motion through <m>\RR^n</m>, the derivative has a
-      related interpretation.
+      derivatives as defined earlier. Since parametric curves are
+      interpreted as  motion through <m>\RR^n</m>, the derivative has
+      a related interpretation.
     </p>
     <definition>
       <statement>
@@ -20,43 +20,44 @@
     </definition>
     <p>
       This tangent is no longer the slope of a tangent line from
-      single-variable claculus. It is a vector, which we treat as a
+      single-variable claculus. It is a vector; specifically, 
       local direction vector along the curve. At <m>\gamma(a)</m>,
       <m>\gamma^\prime(a)</m> points in the local direction of
       movement. The notion of a derivative as a tangent direction
       replaces old notion of the derivative as the slope of the
       tangent line.
     </p>
-    <figure xml:id="figure-logarithmic-spiral-tangent">
-      <caption>A tangent vector to the logarithmic spiral</caption>
-      <image xml:id="figure16" width="90%">
-        <asymptote>
-          size(12cm,7cm,IgnoreAspect);
-          import graph;
-
-          xaxis("$x$");
-          yaxis("$y$");
-
-          real x(real t) {return exp(t/4)*sin(t);}
-          real y(real t) {return exp(t/4)*cos(t);}
-
-          draw(graph(x,y,-16,2));
-          draw((-1,1)--(1,1));
-          draw((0,1)--(1,1.25),Arrow());
-
-          label("Tangent Vector $\left(1,\frac{1}{4}\right)$",(1,1.25),N);
-          label("$\gamma(0)$", (0,1),NW);
-
-          dot((0,1));
-        </asymptote>
-      </image>
-    </figure>
     <example>
       <statement>
+        <figure xml:id="figure-logarithmic-spiral-tangent">
+          <caption>A tangent vector to the logarithmic spiral</caption>
+          <image xml:id="figure16" width="90%">
+            <asymptote>
+              size(12cm,7cm,IgnoreAspect);
+              import graph;
+    
+              xaxis("$x$");
+              yaxis("$y$");
+    
+              real x(real t) {return exp(t/4)*sin(t);}
+              real y(real t) {return exp(t/4)*cos(t);}
+    
+              draw(graph(x,y,-16,2));
+              draw((-1,1)--(1,1));
+              draw((0,1)--(1,1.25),Arrow());
+    
+              label("Tangent Vector 
+              $\left(1,\frac{1}{4}\right)$",(1,1.25),N);
+              label("$\gamma(0)$", (0,1),NW);
+    
+              dot((0,1));
+            </asymptote>
+          </image>
+        </figure>
         <p>
           Consider the logarithmic spiral <m>\gamma(t) =
           (e^{\frac{t}{4}}\sin t, e^{\frac{t}{4}}\cos t)</m> on the
-          domain <m>t \in \RR</m>. We calculate its derivative.
+          domain <m>t \in \RR</m>. I calculate its derivative.
           <me>
             \gamma^\prime(t) = \left( e^{\frac{t}{4}} \cos t +
             \frac{1}{4} e^{\frac{t}{4}} \sin t, -e^{\frac{t}{4}} \sin
@@ -69,49 +70,49 @@
           to the curve is <m>\gamma^\prime(0) = (1,\frac{1}{4})</m>. 
         </p>
         <p>
-          This spiral is moving outwards; we can see how the tangent
+          This spiral is moving outwards; I can see how the tangent
           vector points in the direction of movement as the curves
           goes through <m>(0,1)</m>. <xref
           ref="figure-logarithmic-spiral-tangent">Figure</xref> shows
-          how we treat the tangent as a local direction vector: it
+          how I treat the tangent as a local direction vector: it
           points from <m>\gamma(0) = (0,1)</m>, not from the origin.
         </p>
       </statement>
     </example>
-    <figure xml:id="figure-tangent-lengths">
-      <caption>
-        Length of tangent vectors depending on parametrization
-      </caption>
-      <image xml:id="figure18" width="90%">
-        <asymptote>
-          size(12cm,7cm,IgnoreAspect);
-          import graph;
-
-          xaxis("$x$");
-          yaxis("$y$");
-
-          real x(real t) {return t;}
-          real y(real t) {return t^2/2;}
-
-          draw(graph(x,y,0,3));
-
-          draw((1,1/2)--(3,5/2),Arrow());
-          draw((1,1/2)--(2,3/2),Arrow());
-          draw((1,1/2)--(1.5,2/2),Arrow());
-          draw((1,1/2)--(6,11/2),Arrow());
-
-          dot((1,1/2));
-
-          label("$(\frac{1}{2},1)$",(1.5,2/2), SE);
-          label("$(1,2)$",(2,3/2), SE);
-          label("$(2,4)$",(3,5/2), SE);
-          label("$(5,10)$",(6,11/2), SE);
-          label("$\gamma(t)$",(3,9/2), N);
-        </asymptote>
-      </image>
-    </figure>
     <example>
       <statement>
+        <figure xml:id="figure-tangent-lengths">
+          <caption>
+            Length of tangent vectors depending on parametrization
+          </caption>
+          <image xml:id="figure18" width="90%">
+            <asymptote>
+              size(12cm,7cm,IgnoreAspect);
+              import graph;
+    
+              xaxis("$x$");
+              yaxis("$y$");
+    
+              real x(real t) {return t;}
+              real y(real t) {return t^2/2;}
+    
+              draw(graph(x,y,0,3));
+    
+              draw((1,1/2)--(3,5/2),Arrow());
+              draw((1,1/2)--(2,3/2),Arrow());
+              draw((1,1/2)--(1.5,2/2),Arrow());
+              draw((1,1/2)--(6,11/2),Arrow());
+    
+              dot((1,1/2));
+    
+              label("$(\frac{1}{2},1)$",(1.5,2/2), SE);
+              label("$(1,2)$",(2,3/2), SE);
+              label("$(2,4)$",(3,5/2), SE);
+              label("$(5,10)$",(6,11/2), SE);
+              label("$\gamma(t)$",(3,9/2), N);
+            </asymptote>
+          </image>
+        </figure>
         <p>
           Consider the four parametrizations of the graph of the
           parabola introduced in <xref
@@ -150,7 +151,7 @@
       </statement>
     </example>
     <p>
-      We said the tangent vector indicated the instantaneous direction
+      The tangent vector indicates the instantaneous direction
       of motion. The tangent vector also has a length, independent of
       the direction. The length of the tangent vector measures the
       speed of the curve going through that point. If the movement
@@ -159,10 +160,11 @@
       tangent vector will be shorter.
     </p>
     <p>
-      For the parametrizations of the graph of the parabolic, we can
-      see that the direction of the tangent is independent of the
+      For the parametrizations of the graph of the parabola in <xref
+      ref="figure=tangent-lengths" />, I can see this behaviour
+      clearly: the direction of the tangent is independent of the
       parametrization, but the length of the tangent is entirely
-      dependent on the parametrization. The parametrization which
+      dependent on the parametrization. The parametrizations which
       move more quickly along the curve have longer tangents.
     </p>
     <p>
@@ -175,7 +177,7 @@
           parametric curve, the <term>unit tangent vector</term> is
           the unique vector of length one in the same direction as
           <m>\gamma^\prime(t)</m>. It is often written <m>T(t)</m>.
-          To calculate the unit tangent, we simply take the tangent
+          To calculate the unit tangent, I simply take the tangent
           vector and divide by its length.
           <me>
             T(t) = \frac{\gamma^\prime(t)}{|\gamma^\prime(t)|}

@@ -1045,7 +1045,7 @@
               t(s) \amp = \sqrt{(3s + 1)^{\frac{2}{3}} - 4} 
             </mrow>
           </md>
-          Finally, I repalce <m>t</m> with this express to get a
+          Finally, I repalce <m>t</m> with this expression to get a
           parametrization in <m>s</m>, which is the parametrization by
           arclength. 
           <md>
