@@ -1,5 +1,5 @@
 import graph;
-size(10cm,10cm);
+size(12cm);
 
 xaxis("$x$");
 yaxis("$y$");

@@ -1161,7 +1161,7 @@
       second derivative to get to the normal and the binormal. To
       calculate torsion requires the derivative of the binormal: this
       is three derivatives away from the original curve. Torsion only
-      shows up as a third derivatives. The above discussion of
+      shows up as a third derivative. The above discussion of
       acceleration only used second derivatives; indeed, acceleration
       can only describe motion in a plane. To get torsion and motion
       that diverges from its osculating plan requires a third
