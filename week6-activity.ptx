@@ -2,7 +2,7 @@
   <title>Week 6 Activity</title>
   <subsection xml:id="problems-sketching-parametric-curves">
     <title>Examples Parametric Curves</title>
-    <activity>
+    <activity xml:id="activity-pc1">
       <statement>
         <p>
           Give an informal analysis of this curve by looking at its
@@ -55,7 +55,7 @@
         </p>
       </solution>
     </activity>
-    <activity>
+    <activity xml:id="activity-pc2">
       <statement>
         <p>
           Give an informal analysis of this curve by looking at its
@@ -115,7 +115,7 @@
         </p>
       </solution>
     </activity>
-    <activity>
+    <activity xml:id="activity-pc3">
       <statement>
         <p>
           Give an informal analysis of this curve by looking at its
@@ -179,7 +179,7 @@
         </p>
       </solution>
     </activity>
-    <activity>
+    <activity xml:id="activity-pc4">
       <statement>
         <p>
           Give an informal analysis of this curve by looking at its
@@ -235,7 +235,7 @@
         </p>
       </solution>
     </activity>
-    <activity>
+    <activity xml:id="activity-pc5">
       <statement>
         <p>
           Give an informal analysis of this curve by looking at its
@@ -299,7 +299,7 @@
         </p>
       </solution>
     </activity>
-    <activity>
+    <activity xml:id="activity-pc6">
       <statement>
         <p>
           Give an informal analysis of this curve by looking at its

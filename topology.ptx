@@ -13,13 +13,13 @@
       of geometry, it is fundamental to modern mathematics.
     </p>
     <p>
-      We have already seen some topology of <m>\RR</m> in single
+      I have already shown you topology of <m>\RR</m> in single
       variable calculus, mostly notably in the definition of open and
       closed intervals: <m>(a,b)</m> and <m>[a,b]</m>. Open intervals
       did not include their endpoints but closed intervals did.
       Openness and closedness are central to topolgoy. In this brief
-      chapter, we will extend the notions of opennes, closedness and
-      intervals to <m>\RR^n</m>. We will need these notions to
+      chapter, I will extend the notions of opennes, closedness and
+      intervals to <m>\RR^n</m>. I will need these notions to
       understand multivariable functions in the next section.
     </p>
   </subsection>>
@@ -35,7 +35,7 @@
       </statement>
     </definition>
     <p>
-      We need two definitions to allow us to define open and clsoed
+      I need two definitions which help to define open and clsoed
       sets in <m>\RR^n</m>.
     </p>
     <definition>
@@ -50,9 +50,9 @@
     </definition>
     <p>
       A point is an interior point if all nearby points are also in
-      the set. Around an interior point, we can move a little bit in
+      the set. Around an interior point, small movements in 
       any direction and remain inside the set. This <m>\epsilon</m>
-      measures exactly how little the little bit of movement is.
+      measures exactly how small the small bit of movement is.
     </p>
     <definition>
       <statement>
@@ -73,7 +73,7 @@
       small distance, measured by the small positive number
       <m>\epsilon</m>. The two definitions are mutually exclusive: a
       point cannot be both an interior and a boundary point for a set.
-      (It can, of course, be neither). These two definitions allow us
+      (It can, of course, be neither). These two definitions allow me
       to define open and closed sets in <m>\RR^n</m>.
     </p>
     <definition>
@@ -120,13 +120,23 @@
         <p>
           An <term>open interval</term> in <m>\RR^n</m> is a set of
           points <m>(x_1, x_2, \ldots, x_n) \in \RR^n</m> such that
-          <me>
-            a_1 \lt  x_1 \lt  b_1, a_2 \lt  x_2 \lt  b_2,
-            \ldots a_n \lt  x_n \lt  b_n
-          </me>
+          <md>
+            <mrow>
+              \amp a_1 \amp \lt \amp x_1 \lt  b_1 
+            </mrow>
+            <mrow>
+              \amp a_2 \amp \lt \amp x_2 \lt  b_2
+            </mrow>
+            <mrow>
+              \amp \amp \ldots 
+            </mrow>
+            <mrow>
+              \amp a_n \amp \lt \amp x_n \lt  b_n
+            </mrow>
+          </md>
         </p>
         <p>
-          It is written
+          The notation for this interval is 
           <me>
             I = (a_1,b_1)\times (a_2,b_2) \times \ldots \times (a_n,b_n)
           </me>.
@@ -138,13 +148,23 @@
         <p>
           An <term>closed interval</term> in <m>\RR^n</m> is a set of
           points <m>(x_1, x_2, \ldots, x_n) \in \RR^n</m> such that
-          <me>
-            a_1 \leq x_1 \leq b_1, a_2 \leq x_2 \leq b_2,
-            \ldots a_n \leq x_n \leq b_n
-          </me>
+          <md>
+            <mrow>
+              \amp a_1 \amp \leq \amp x_1 \leq  b_1 
+            </mrow>
+            <mrow>
+              \amp a_2 \amp \leq \amp x_2 \leq  b_2
+            </mrow>
+            <mrow>
+              \amp \amp \ldots 
+            </mrow>
+            <mrow>
+              \amp a_n \amp \leq \amp x_n \leq  b_n
+            </mrow>
+          </md>
         </p>
         <p>
-          It is written
+          The notation for this interval is 
           <me>
             I = [a_1,b_1]\times [a_2,b_2] \times \ldots \times [a_n,b_n]
           </me>.
@@ -156,11 +176,11 @@
       filled-in rectangles, including the hollow bounding rectangle if
       the interval is closed and excluding it if the interval is open.
       In <m>\RR^3</m>, intervals are solid rectangular prisms whose
-      boundaries are rectangular boxes. In higher dimensions, we
-      think of intervals are higher-dimensional rectangular prisms.
+      boundaries are rectangular boxes. In higher dimensions, I
+      think of intervals as higher-dimensional rectangular prisms.
     </p>
     <p>
-      Open and closed intervals are basic open and closed sets in
+      Open and closed intervals are the basic open and closed sets in
       <m>\RR^n</m>. I will also define another important pair of
       useful open and closed sets.
     </p>

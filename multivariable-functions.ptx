@@ -3,16 +3,17 @@
   <subsection xml:id="section-multivariable-definitions">
     <title>Definitions</title>
     <p>
-      First year calculus dealt with functions <m>\RR \rightarrow \RR</m>.
-      Parametric curves dealt with functions <m>\RR \rightarrow \RR^n</m>.
-      Multivariable functions are functions <m>\RR^n \rightarrow \RR^m</m>.
-      They having an arbitrary number of inputs and outputs.
-      We can distinguish between two main categories, classified by output.
+      First year calculus dealt with functions <m>\RR \rightarrow
+      \RR</m>. Parametric curves dealt with functions <m>\RR
+      \rightarrow \RR^n</m>. Multivariable functions are functions
+      <m>\RR^n \rightarrow \RR^m</m>. They having an arbitrary number
+      of inputs and outputs. I can distinguish between two main
+      categories, classified by output.
     </p>
     <definition>
       <statement>
         <p>
-          A <term>scalar function</term> of <term>scalar field</term>
+          A <term>scalar function</term> or <term>scalar field</term>
           is a function <m>f: \RR^n \rightarrow \RR</m>.
         </p>
       </statement>
@@ -30,7 +31,7 @@
       Vector functions are the most difficult and complicated, since
       they have both multiple inputs and multiple outputs. The study
       of vector functions is the major topic of Calculus IV. For the
-      remainder of these notes, we will restrict our attention to
+      remainder of these notes, I will restrict my attention to
       scalar functions.
     </p>
     <example>
@@ -94,7 +95,7 @@
     <p>
       Domain has the same kind of restrictions as for single-variable
       functions: no division by zero, no negative even roots, no
-      negative logarithms, etc. However, now that the domain
+      negative logarithms, etc. However, now domain
       restrictions may apply to any of the input variables. The
       domains themselves may be very complicated subsets of
       <m>\RR^n</m>.
@@ -102,9 +103,9 @@
     <example>
       <statement>
         <p>
-          Let's look at the domains of the five explicitly stated
-          functions in the <xref
-          ref="example-multivariable1">Example</xref>
+          I'll start with at the domains of the five explicitly stated
+          functions in the Example <xref ref="example-multivariable1"
+          />.
           <ul>
             <li>
               <p>
@@ -122,17 +123,17 @@
             <li>
               <p>
                 <m>f_5</m> has two square roots, one involving
-                <m>x</m> and one involving <m>y</m>. Therefore, we
-                need <m>x\geq 0</m> and <m>y \geq 0</m> to defined
-                <m>f_5</m>. That domain is the positive <m>x</m> and
-                <m>y</m> quadrant, including the origin and the
-                positive pieces of both axes.
+                <m>x</m> and one involving <m>y</m>. Therefore,
+                <m>x\geq 0</m> and <m>y \geq 0</m> are necessary to
+                define <m>f_5</m>. That domain is the positive
+                <m>x</m> and <m>y</m> quadrant, including the origin
+                and the positive pieces of both axes.
               </p>
             </li>
             <li>
               <p>
                 <m>f_6</m> also has a square root. To ensure that the
-                square root has a positive argument, we need <m>4 -
+                square root has a positive argument, I require <m>4 -
                 x^2 - y^2 \geq 0</m>, or <m>x^2 + y^2 \leq 4</m>.
                 This domain is a a circular disc of radius <m>2</m>,
                 including its boundary.
@@ -144,10 +145,11 @@
                 leads to very strange domain behaviour. If <m>y</m>
                 is an integer, <m>x</m> can be any non-zero real
                 number. If <m>y</m> is a fraction, <m>x</m> must be
-                positive is the denominator of <m>y</m> is even, to
+                positive if the denominator of <m>y</m> is even, to
                 avoid square roots of negative numbers. If <m>y</m>
                 is irrational, <m>x</m> must be positive. This all
-                leads to a very complicated domain in <m>\RR^2</m>.
+                leads to a very complicated domain in <m>\RR^2</m>,
+                something hard to describe directly as a shape. 
               </p>
             </li>
           </ul>
@@ -160,8 +162,8 @@
     <p>
       The graph of a single variable <m>f: \RR \rightarrow \RR</m> was
       a curve in <m>\RR^2</m> where one axis was input and one axis
-      was output. The idea generalizes, so a graph has to show both
-      the inputs and output.
+      was output. The idea generalizes, but in all cases, a graph has
+      to show both the inputs and output.
     </p>
     <definition>
       <statement>
@@ -169,22 +171,22 @@
           Let <m>A \subset \RR^n</m> be the domain of a scalar
           function <m>f: A \rightarrow \RR</m>. The
           <term>graph</term> of the scalar function is the subset of
-          <m>\RR^{n+1}</m> consisting of all point <m>(x_1, x_2,
+          <m>\RR^{n+1}</m> consisting of all points <m>(x_1, x_2,
           \ldots, x_n, f(x_1, x_2, \ldots, x_n))</m> for <m>(x_1, x_2,
           \ldots x_n) \in A</m>.
         </p>
       </statement>
     </definition>
     <p>
-      Since we have to show input and outputs, the graph need many
+      Since the graph must show inputs and outputs, it need many
       dimensions. If <m>n \geq 3</m>, then the graph is in
-      <m>\RR^4</m> or a higher dimensional space. We can only
-      actually see graphs of scalar function on <m>\RR^2</m>.
+      <m>\RR^4</m> or some other higher dimensional space. I can only
+      actually see graphs of scalar function on <m>\RR^2</m>.  
     </p>
     <p>
       The <m>\RR^2</m> case is useful to understand the general
       situation. In this case, <m>x</m> and <m>y</m> are in input
-      (domain) and <m>z</m> is the output (range). We can think of
+      (domain) and <m>z</m> is the output (range). I can think of
       the graph as a height function: over some point <m>(x,y)</m> in
       the domain of <m>f</m>, the graph sits at some height <m>z =
       f(x,y)</m>.
@@ -216,24 +218,24 @@
       </image>
     </figure>
     <p>
-      We used graphs extensively in single-variable calculus to
+      I used graphs extensively in single-variable calculus to
       understand derivatives and integrals: derivative were slopes of
-      tangent lines and integrals were area under curves. We want to
+      tangent lines and integrals were area under curves. I want to
       generalize this to the new higher-dimensional graphs. For
       functions <m>f:\RR^2 \rightarrow \RR</m>, it's not too difficult
-      to extend the notions. Instead of tangent line, we now have
-      <em>tangent planes</em>. Instead of area under the curve, we
-      have volume under the surface. For <m>f: \RR^n \rightarrow
-      \RR</m>, we have tangent n-spaces and (n+1)-hyper-volume under
-      the n-dimensions graph surface.
+      to extend the notions. Instead of tangent line, the graph will
+      now have a <em>tangent plane</em>. Instead of area under the
+      curve, a graph has volume under the surface. For <m>f: \RR^n
+      \rightarrow \RR</m>, there are tangent n-spaces and
+      (n+1)-hyper-volume under the n-dimensions graph surface.
     </p>
   </subsection>
   <subsection xml:id="section-contour-plots">
     <title>Contour Plots</title>
     <p>
       As an alternative to conventional graphs of function, a nice way
-      to visualize height functions is as topological maps. We refer
-      to these visualizations as contour plots.
+      to visualize height functions is as topological maps. These 
+      visualizations are called plots.
     </p>
     <definition>
       <statement>
@@ -250,7 +252,7 @@
       A contour plot has a series of implicit curves at constant
       elevation; the constants <m>c</m> are the elevation. It shows
       curves where the function takes a specific value. By looking at
-      the relationships of the curves, we can intuit how the function
+      the relationships of the curves, I can intuit how the function
       behaves.
     </p>
     <example>
@@ -259,7 +261,7 @@
           Consider <m>f(x,y) = \frac{5}{x^2+y^2+1}</m>. It's graph is
           <xref ref="figure-3d-graph1">Figure</xref>. This function
           has a simple hill at the origin and slopes down in all
-          direction. The contours are loci of the form
+          directions. The contours are loci of the form
           <m>\frac{5}{x^2 + y^2 + 1} = c</m>, which can be rearranged
           as <m>\frac{5}{c} - 1 = x^2 + y^2</m>. These contours are
           all circles, and are shown in <xref
@@ -325,7 +327,7 @@
       </image>
     </figure>
     <p>
-      These contour plots lead us to a general definition.
+      These contour plots lead to a general definition.
     </p>
     <definition>
       <statement>
@@ -341,7 +343,7 @@
       Then a contour plot is just a drawing of a variety of level
       sets of a function <m>\RR^2 \rightarrow \RR</m>. It is useful
       to see where a function is constant. The resulting shapes tell
-      us a great deal about the behaviour of the function. Level sets
+      a great deal about the behaviour of the function. Level sets
       for <m>f: \RR^3 \rightarrow \RR</m> are called level surfaces.
     </p>
   </subsection>

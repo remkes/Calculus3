@@ -193,7 +193,7 @@
           </image>
         </figure>
         <p>
-          The graph looks like a sloped ridges. The ridge goes upward
+          The graph looks like a sloped ridge. The ridge goes upward
           along the positive <m>y</m> axis and slopes down to either
           side in the positive and negative <m>x</m> directions. 
         </p>
@@ -231,10 +231,10 @@
           </image>
         </figure>
         <p>
-          The graph looks like a well with a curve bottomw. Near the
-          origin, we have a slowly growing circular depression. As we
-          move away from the origin, the shape remains circular but
-          the walls get steep very quickly.
+          The graph looks like a well with a curve bottom. Near the
+          origin, there is a slowly growing circular depression. As 
+          the function moves away from the origin, the shape remains
+          circular but the walls get steep very quickly.
         </p>
       </solution>
     </activity>
@@ -274,7 +274,7 @@
           that grow in the positive <m>x</m> direction and ridges that
           grow in the negative <m>x</m> direction. The graph is
           undefined between the ridges due to the zeros of sine in the
-          denoimninator. 
+          denominator. 
         </p>
       </solution>
     </activity>
@@ -335,9 +335,9 @@
           down quickly in all directions. Approaching the lines <m>y =
           \pm 2</m>, the graph descends to <m>-\infty</m>. Away from
           the origin, the graph has very steep walls growing to
-          infinity near the lines <m>y = \pm 2</m>, but they shrinks
-          down to a flat plane as we more farther from the origin in
-          the <m>y</m> direction.
+          infinity near the lines <m>y = \pm 2</m>, but they shrink
+          down to a flat plane as the input moves farther from the
+          origin in the <m>y</m> direction.
         </p>
       </solution>
     </activity>

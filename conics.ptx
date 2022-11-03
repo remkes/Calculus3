@@ -2,9 +2,10 @@
   <title>Conics</title>
   <subsection xml:id="subsection-conics-definition">
     <p>
-      We are going to need conics to talk about orbital mechanics in
-      the next section. Let's first review the classical definitions
-      of the four types of conics.
+      I need conics to talk about orbital mechanics in <xref
+      ref="section-kepler" />. I am going to want parametric
+      descriptions of the conics, but I'll start with their classical
+      definitions.
     </p>
     <definition>
       <statement>
@@ -127,7 +128,7 @@
       of describing all conics in terms of focus and directrix. To
       get to that description, consider first the parabola in more
       detail in the following diagram. In <xref
-      ref="figure-focus-directrix">Figure</xref>, we've labeled the
+      ref="figure-focus-directrix">Figure</xref>, I've labeled the
       conic itself as <m>\gamma</m>, the focus <m>F</m> and the
       directrix <m>L</m> and the distance between the focus and the
       directrix, labeled <m>d</m>.
@@ -177,17 +178,17 @@
       </image>
     </figure>
     <p>
-      We've also labeled an angle <m>\theta</m> and two distances
+      I've also labeled an angle <m>\theta</m> and two distances
       <m>r</m> and <m>l</m> in this diagram. The point <m>P</m> is,
       by definition, on the parabola because the distances from
       <m>P</m> to the focus and to the directrix are equal. In <xref
       ref="figure-focus-directrix" />, <m>r=l</m>.
     </p>
     <p>
-      We can generalize the construction by allowing <m>r</m> and
-      <m>l</m> to be non-equal, but insisting that their ration is
+      I can generalize the construction by allowing <m>r</m> and
+      <m>l</m> to be non-equal, but insisting that their ratio is
       constant. That is, given a focus <m>F</m> and a directrix
-      <m>L</m>, we consider all points <m>P</m>, such
+      <m>L</m>, I consider all points <m>P</m>, such
       <m>\frac{r}{l}</m> is a constant. <m>\frac{r}{l} = 1</m> will
       recover the parabola, but other choices of the constant will
       result, amazingly, in other conics.
@@ -205,8 +206,8 @@
       </statement>
     </definition>
     <p>
-      We would like to get a description of conics as a parametric
-      curves using the focus, directrix and eccentricity. We will use
+      I would like to get a description of conics as a parametric
+      curves using the focus, directrix and eccentricity. I will use
       polar coordinates for this, assuming that <m>F</m> is at the
       origin. In <xref ref="figure-focus-directrix">Figure</xref>,
       putting <m>F</m> at the origin means that <m>r</m> and
@@ -232,7 +233,7 @@
     </proposition>
     <proof>
       <p>
-        From the diagram and some trigonometry, we can see that <m>l =
+        From the diagram and some trigonometry, I can see that <m>l =
         d - r\cos \theta</m>. Eccentricity is the ratio of <m>r</m>
         to <m>l</m>, so eccentricity has this form:
         <me>
@@ -240,14 +241,14 @@
         </me>
       </p>
       <p>
-        If we solve for <m>r</m> in this equaiton we get the desired
+        If I solve for <m>r</m> in this equaiton I get the desired
         polar locus.
         <men xml:id="equation-conic-eccentricity-form">
           r = \frac{ed}{1 + e \cos \theta}
         </men>
       </p>
       <p>
-        Then we simply choose <m>\theta</m> as the parameter for the
+        Then I simply choose <m>\theta</m> as the parameter for the
         polar parametric description.
       </p>
     </proof>
@@ -262,20 +263,20 @@
           eccentricity <m>e>1</m>, the parabola has eccentricity
           <m>e=1</m>, the ellipse has eccentricity <m>e\lt 1</m>. The
           circle is the special limit case <m>e=0</m>, though to
-          realize the shape we have to allow the distance between
-          <m>F</m> and <m>L</m> to approach infinity. 
+          the shape is only realized when distance between
+          <m>F</m> and <m>L</m> to approaches infinity. 
         </p>
       </statement>
     </proposition>
     <proof>
       <p>
-        We will prove all cases except the limit case of the circle.
-        Our approach is to start with the polar locus and try to
+        I will prove all cases except the limit case of the circle.
+        My approach is to start with the polar locus and try to
         recover the standard equations of the conics from the start of
         this section.
       </p>
       <p>
-        We start with the polar locus and change back to Cartesian
+        I start with the polar locus and change back to Cartesian
         coordinates, using the change of coordinates equations: <m>r =
         \sqrt{x^2 + y^2}</m> and <m>r \cos \theta = x</m>.
         <md>
@@ -294,13 +295,13 @@
         </md>
       </p>
       <p>
-        We rearrange this to get a polynomial expression in <m>x</m>.
+        I rearrange this to get a polynomial expression in <m>x</m>.
         <men xml:id="equation-reference3">
           (1-e^2)x^2 + 2de^2 x + y^2 = d^2 e^2
         </men>
       </p>
       <p>
-        If <m>e \neq 1</m>, we divide through by <m>(1-e^2)</m>, then
+        If <m>e \neq 1</m>, I divide through by <m>(1-e^2)</m>, then
         proceed to complete the square in the <m>x</m> term.
         <md>
           <mrow>
@@ -318,7 +319,7 @@
             \frac{d^2e^4}{(1-e^2)^2}
           </mrow>
           <intertext>
-            We take the right-hand side to common denominator.
+            I take the right-hand side to common denominator.
           </intertext>
           <mrow>
             \left( x + \frac{e^2d}{1-e^2} \right)^2 +
@@ -330,7 +331,7 @@
             \frac{y^2}{1-e^2} \amp = \frac{d^2 e^2}{(1-e^2)^2}
           </mrow>
           <intertext>
-            We divide by the right-hand side.
+            I divide by the right-hand side.
           </intertext>
           <mrow>
             \frac{\left( x + \frac{e^2d}{1-e^2}
@@ -346,7 +347,7 @@
           <intertext>
             The sign in from of the <m>y^2</m> term is positive if
             <m>1-e^2 > 1</m>, that is, when <m>e\lt 1</m>. Otherwise,
-            <m>e^2-1</m> is positive. In the positive case, we can
+            <m>e^2-1</m> is positive. In the positive case, I can
             rewrite the expression as a difference of squares.
           </intertext>
           <mrow>
@@ -358,9 +359,9 @@
       </p>
       <p>
         In the case <m>e \lt 1</m>, the expression is the sum of
-        positive squares, so we have an ellipse. In the case
+        positive squares, so it produces an ellipse. In the case
         <m>e>1</m>, the expression is the difference of positive
-        square, so we have a hyperbola. For future convenience, we
+        square, so it produces a hyperbola. For future convenience, I
         define the following constants for the <m>e\lt 1</m> (ellipse)
         case.
         <men xml:id="equation-reference7-1">
@@ -374,17 +375,17 @@
         </men>
       </p>
       <p>
-        Subsituting these cosntant into the previous equation gives an
+        Subsituting these constants into the previous equation gives an
         elegant ellipse equation.
         <me>
           \frac{(x-x_0)^2}{a^2} \pm \frac{y^2}{b^2} = 1
         </me>
       </p>
       <p>
-        Lastly, in <xref ref="equation-reference3">Equation</xref> we
+        Lastly, in <xref ref="equation-reference3">Equation</xref> I
         excluded <m>e = 1</m>. Now assume <m>e=1</m>, which removes
         the <m>(1-e^2)x^2</m> term from <xref
-        ref="equation-reference3">Equation</xref> entirely. We
+        ref="equation-reference3">Equation</xref> entirely. I
         continue the derivation from that point; the calculation is
         much easier in this case.
         <me>
@@ -397,8 +398,8 @@
         <m>e=1</m> does recover the parabola.
       </p>
       <p>
-        For all cases except the circle, we recovered the standard
-        equation of the conic. We found a hyperbola when <m>e>1</m>,
+        For all cases except the circle, I recovered the standard
+        equation of the conic. I found a hyperbola when <m>e>1</m>,
         an ellipse when <m>e\lt 1</m>, and a parabola when <m>e=1</m>.
         As mentioned in the proposition, the circle is a strange limit
         case as <m>e \rightarrow 0</m>, but <m>e \rightarrow 0</m>

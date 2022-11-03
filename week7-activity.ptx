@@ -6,7 +6,7 @@
       <statement>
         <p>
           Calculate the tangent to this parametric curve. (This is the
-          same curve that you drew in the Week 6 activity). Choose
+          same curve from <xref ref="activity-pc1" />). Choose
           some points and draw some tangents to inspect if they fit
           the curve.
           <md>
@@ -20,7 +20,7 @@
         <p>
           The tangent is the derivative calculated termwise.
           <me>
-            \gamma^\prime(t) = 
+            \gamma^\prime(t) = (2t, 3t^2) 
           </me>
           This parametric curve with some example tangents is shown in
           <xref ref="figure-activity-parametric-tangent-1" />
@@ -31,7 +31,7 @@
             <image xml:id="figure61" width="90%">
               <asymptote>
                 import graph;
-                size(12cm)l
+                size(12cm)
 
                 xaxis("$x$");
                 yaxis("$y$");
@@ -56,7 +56,7 @@
       <statement>
         <p>
           Calculate the tangent to this parametric curve. (This is the
-          same curve that you drew in the Week 6 activity). Choose
+          same curve from <xref ref="activity-pc2" />. Choose
           some points and draw some tangents to inspect if they fit
           the curve.
           <md>
@@ -71,7 +71,7 @@
         <p>
           The tangent is the derivative calculated termwise.
           <me>
-            \gamma^\prime(t) = 
+            \gamma^\prime(t) = (\sin t, - 2 \cos t) 
           </me>
           This parametric curve with some example tangents is shown in
           <xref ref="figure-activity-parametric-tangent-2" />
@@ -82,7 +82,7 @@
             <image xml:id="figure62" width="50%">
               <asymptote>
                 import graph;
-                size(10cm,10cm);
+                size(12cm);
 
                 xaxis("$x$");
                 yaxis("$y$");
@@ -119,7 +119,7 @@
       <statement>
         <p>
           Calculate the tangent to this parametric curve. (This is the
-          same curve that you drew in the Week 6 activity). Choose
+          same curve from <xref ref="activity-pc3" />). Choose
           some points and draw some tangents to inspect if they fit
           the curve.
           <md>
@@ -134,7 +134,8 @@
         <p>
           The tangent is the derivative calculated termwise.
           <me>
-            \gamma^\prime(t) = 
+            \gamma^\prime(t) = (-4 \sin t + 2 \cos 2t, 4 \cos t - 2
+            \sin 2t) 
           </me>
           This parametric curve with some example tangents is shown in
           <xref ref="figure-activity-parametric-tangent-3" />
@@ -186,7 +187,7 @@
       <statement>
         <p>
           Calculate the tangent to this parametric curve. (This is the
-          same curve that you drew in the Week 6 activity). Choose
+          same curve from <xref ref="activity-pc4" />). Choose
           some points and draw some tangents to inspect if they fit
           the curve.
           <md>
@@ -200,7 +201,7 @@
         <p>
           The tangent is the derivative calculated termwise.
           <me>
-            \gamma^\prime(t) = 
+            \gamma^\prime(t) = (-t, 1)
           </me>
           This parametric curve with some example tangents is shown in
           <xref ref="figure-activity-parametric-tangent-4" />
@@ -246,7 +247,7 @@
       <statement>
         <p>
           Calculate the tangent to this parametric curve. (This is the
-          same curve that you drew in the Week 6 activity). Choose
+          same curve from <xref ref="activity-pc5" />). Choose
           some points and draw some tangents to inspect if they fit
           the curve.
           <md>
@@ -262,7 +263,9 @@
         <p>
           The tangent is the derivative calculated termwise.
           <me>
-            \gamma^\prime(t) = 
+            \gamma^\prime(t) = \left( \frac{-2\pi^2}{t^3} \cos t -
+            \frac{\pi^2}{t^2} \sin t, \frac{-2\pi^2}{t^3} \sin t +
+            \frac{\pi^2}{t^2} \cos t \right)
           </me>
           This parametric curve with some example tangents is shown in
           <xref ref="figure-activity-parametric-tangent-5" />
@@ -274,7 +277,7 @@
             <image xml:id="figure65" width="90%">
               <asymptote>
                 import graph;
-                size(15cm,15cm);
+                size(12cm);
 
                 xaxis("$x$");
                 yaxis("$y$");
@@ -307,7 +310,7 @@
       <statement>
         <p>
           Calculate the tangent to this parametric curve. (This is the
-          same curve that you drew in the Week 6 activity). Choose
+          same curve from <xref ref="activity-pc6" />). Choose
           some points and draw some tangents to inspect if they fit
           the curve.
           <md>
@@ -322,10 +325,11 @@
         <p>
           The tangent is the derivative calculated termwise.
           <me>
-            \gamma^\prime(t) = 
+            \gamma^\prime(t) = \left( \frac{1}{2\sqrt{t}}, \frac{1}{3
+            \sqrt[3]{t^2}} \right 
           </me>
           This parametric curve with some example tangents is shown in
-          <xref ref="figure-activity-parametric-tangent-6" />
+          <xref ref="figure-activity-parametric-tangent-6" />.
           <figure xml:id="figure-activity-parametric-tangent-6">
             <caption>
               Tangents to <m>\gamma(t) = (\sqrt{t}, \sqrt[3]{t})</m>
@@ -373,20 +377,19 @@
             \gamma(t) = (t^3, 1 - t^2, 1 + t^2)
           </me>
           Interpret the curve using the three scalars, focusing on the
-          asymptotic behaviour.  (The numbers
-          are functions get very hectic in this example -- it is very
-          hard to construct examples where the functions don't quickly
-          grow difficult. Use a computer to do the derivatives and
-          cross product to save yourself some calculation. I used
-          Wolfram Alpha for all the derivatives and cross products,
-          and some of the algebraic simplifications as well. By the
-          time you get to <m>B^\prime</m>, expect some complicated
-          results.) 
+          asymptotic behaviour.  (The expressions get very hectic in
+          this example -- it is very hard to construct examples where
+          the functions don't quickly grow difficult. Use a computer
+          to do the derivatives and cross product to save yourself
+          some calculation. I used Wolfram Alpha for all the
+          derivatives and cross products, and some of the algebraic
+          simplifications as well. By the time you get to
+          <m>B^\prime</m>, expect some complicated results.) 
         </p>
       </statement>
       <solution>
         <p>
-          We follow the lengthy process of calculating speed,
+          I follow the lengthy process of calculating speed,
           curvature, torsion, the tangent vector, the normal vector,
           and the binormal vector. 
           <md>
@@ -469,8 +472,9 @@
               8)^3}} (5832t^4 - 11664t^2 - 4464)
             </mrow>
           </md>
-          As I warned you, this got pretty intense. However, let's
-          look at the asymptotic order of the three scalars. 
+          As I warned you, this got pretty intense. However, I can
+          simplify and gain useful information by just looking 
+          at the asymptotic order of the three scalars. 
           <md>
             <mrow>  
               v \amp \cong t^2 
