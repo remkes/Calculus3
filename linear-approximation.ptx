@@ -4,7 +4,7 @@
     <title>Single Variable Interpretation</title>
     <p>
       Consider a single variable function <m>f: \RR \rightarrow
-      \RR</m>. In Calculus I, we defined the linear approximation of
+      \RR</m>. In Calculus I, I defined the linear approximation of
       <m>f</m> at the point <m>(a,f(a)</m>.
       <me>
         f(x) \approx f(a) + f^\prime(a) (x-a)
@@ -13,23 +13,23 @@
     <p>
       From Calculus II or <xref ref="section-approximation" />
       you might recognize this as simply the first-order Taylor
-      approximation for <m>f</m>, where we truncate after the linear
-      term. The linear approximation is the line that best
+      approximation for <m>f</m>: the Taylor series  truncated after
+      the linear term. The linear approximation is the line that best
       approximates <m>f</m> at this point. Its graph is simply the
       tangent line to <m>f</m> at <m>(a,f(a))</m>.
     </p>
     <p>
-      We can rearrange the linear approximaiton to help us generalize
+      I can rearrange the linear approximaiton to help extent the idea 
       to multivariable functions.
       <men xml:id="equation-single-linear-approx">
         (f(x) - f(a)) \approx f^\prime(a) (x-a)
       </men>
     </p>
     <p>
-      In this course, we have become accustomed to think of points in
+      In this course, I have encouraged you to think of points in
       <m>\RR^n</m> along with local direction vectors: each point can
       be thought of as the origin for a system of local directions.
-      We can do the same here: let <m>(a,f(a))</m> be a local origin
+      I can do the same here: let <m>(a,f(a))</m> be a local origin
       for a system of local directions. Then switching from
       <m>f(x)</m> to <m>f(x) - f(a)</m> and from <m>x</m> to
       <m>x-a</m> is just moving from the usual origin to this new,
@@ -39,7 +39,7 @@
       In this new origin, the function in <xref
       ref="equation-single-linear-approx">Equation</xref> is
       approximated by multiplication by <m>f^\prime(a)</m>. This
-      gives us a new interpretation for the single-variable
+      gives a new interpretation for the single-variable
       derivative: the derivative is the multiplicative factor for the
       local linear approximation of <m>f</m>. Locally, (in
       coordinates pretending that <m>(a,f(a))</m> is the origin), the
@@ -47,20 +47,21 @@
       <m>f^\prime(a)</m>.
     </p>
     <p>
-      Now lets think of function <m>f: \RR^2 \rightarrow \RR</m>. It
-      we want to approximate by linear functions, we need to
+      Now think of a function <m>f: \RR^2 \rightarrow \RR</m>. 
+      To approximate by linear functions, I need to
       understand linear functions: <m>\RR^2 \rightarrow \RR</m>.
-      We look to matrices. Matrices completely describe linear
+      I look to matrices. Matrices completely describe linear
       functions. A <m>1 \times 1</m> matrix is just a number, and the
       linear function <m>\RR \rightarrow \RR</m> is just
       multiplication by that number. But for <m>\RR^2 \rightarrow
-      \RR</m>, we have a <m>1 \times 2</m> matrix.
+      \RR</m>, a <m>1 \times 2</m> matrix describes the linear
+      function. 
     </p>
   </subsection>
   <subsection xml:id="subsection-linear-approximation-definition">
     <title>Linear Approximation in <m>\RR^2</m></title>
     <p>
-      So we ask: what is a linear approximation to the function <m>f:
+      So I ask: what is a linear approximation to the function <m>f:
       \RR^2 \rightarrow \RR</m>. It must be a <m>1 \times 2</m>
       matrix <m>M</m> and fit into a equation mirroring <xref
       ref="equation-single-linear-approx">Equation</xref>.
@@ -72,7 +73,7 @@
       In local coordinates at <m>(a,b,f(a,b))</m>, this is just matrix
       multiplication by <m>M</m>. So a linear approximation is a
       matrix multiplication in local coordintaes. What is the matrix
-      <m>M</m>? Well, if we work with partial derivatives, the linear
+      <m>M</m>? Well, if I work with partial derivatives, the linear
       approximation should be formed of linear approximation in
       <m>x</m> and linear approximation in <m>y</m>. 
      <me>
@@ -81,7 +82,7 @@
       </me>
     </p>
     <p>
-      We put this in matrix form.
+      I put this in matrix form.
       <me>
         f(x,y) - f(a,b) \approx \left( \begin{matrix} \frac{\del
         f}{\del x} \amp \frac{\del f}{\del y} \end{matrix} \right)
@@ -98,8 +99,9 @@
       </statement>
     </definition>
     <p>
-      The graph of the linear approximation is the tangent plane that
-      we've already defined at <m>(a,b,f(a,b))</m>.
+      The graph of the linear approximation is the tangent plane at
+      the point <m>(a,b,f(a,b))</m>. This matches the equation in
+      <xref ref="proposition-tangent-plane" />. 
     </p>
   </subsection>
   <subsection xml:id="subsection-la-examples">
@@ -107,9 +109,9 @@
     <example>
       <statement>
         <p>
-          Let's return to the function in <xref
-          ref="example-tangent-plane">Example</xref>, <m>f(x,y) =
-          \frac{1}{1 + x^2 + y^2}</m>.
+          I'll return to the function in Example <xref
+          ref="example-tangent-plane" />, <m>f(x,y) = \frac{1}{1 + x^2
+          + y^2}</m>.
           <me>
             M = \left( \begin{matrix} \frac{-2x}{(1+x^2+y^2)^2} \amp
             \frac{-2y}{(1+x^2+y^2)^2} \end{matrix} \right)
@@ -182,7 +184,7 @@
   <subsection xml:id="subsection-what-is-a-derivative">
     <title>What Is A Derivative?</title>
     <p>
-      We extended the idea of a derivative with partial derivatives
+      I extended the idea of a derivative with partial derivatives
       and directional derivatives. These are both useful, but neither
       are a universal extension. Both are only pieces of derivatives
       along certain directions. Gradients were a more universal
@@ -191,17 +193,17 @@
       without an algebraic analogue.
     </p>
     <p>
-      The discussion of linear approximation leads us to a much more
+      The discussion of linear approximation leads to a much more
       universal idea to generalize the derivative. The big idea is
       this: derivatives, in any dimension, are linear approximations
       to functions. This idea works in single variables, where
       multiplication by <m>f^\prime(a)</m> was the linear
       approximation. The derivatives calculates that factor. For
-      higher dimensions, we can use matrix multiplication instead of
+      higher dimensions, I can use matrix multiplication instead of
       just multiplication by a number.
     </p>
     <p>
-      Therefore, we could realistically say that <em>the
+      Therefore, I could realistically say that <em>the
       derivative</em> of a function <m>f: \RR^n \rightarrow \RR^m</m>
       is the <em>matrix of partial derivatives</em>, which serves as a
       linear approximation of the function at any point in its domain.

@@ -42,7 +42,7 @@
               <m>(0,5,0)</m> is a bounardy point.
             </li>
             <li>
-              <m>(5,4,-1)</m> is a boundary point. 
+              <m>(5,4,-1)</m> is a neither.
             </li>
             <li>
               <m>(3,2,5)</m> is a boundary point. 
@@ -137,23 +137,23 @@
         <p>
           <ol>
             <li>
-              <m>(2,2,2)</m>
+              <m>(2,2,2)</m> is an interior point.
             </li>
             <li>
-              <m>(1,1,0)</m>
+              <m>(1,1,0)</m> is a boundary point.
             </li>
             <li>
-              <m>(3,2,2)</m>
+              <m>(3,2,2)</m> is a boundary point.
             </li>
             <li>
-              <m>(0,0,0)</m>
+              <m>(0,0,0)</m> is neither. 
             </li>
             <li>
-              <m>(2,1,0)</m>
+              <m>(2,1,0)</m> is a boundary point. 
             </li>
           </ol>
           The interval is neither open or closed. It includes is
-          boundary planes in <m>x</m>, bot not in <m>y</m> and only
+          boundary planes in <m>x</m>, but not in <m>y</m> and only
           partially in <m>z</m>.
         </p>
       </solution>

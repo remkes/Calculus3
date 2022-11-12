@@ -15,9 +15,9 @@
       </statement>
       <solution>
         <p>
-          Our method of calculating directional derivatives is to take
+          The method of calculating directional derivatives is to take
           the dot product of the <emph>unit</emph> direction vector
-          with the gradient of the function. First we calculate the
+          with the gradient of the function. First I calculate the
           gradient.
           <md>
             <mrow>
@@ -25,7 +25,7 @@
               \right) 
             </mrow>
           </md>
-          Then we calculate the unit vector for the given direction.
+          Then I calculate the unit vector for the given direction.
           <md>
             <mrow>
               |v| \amp = \sqrt{(-1)^2 + (-1)^2} = \sqrt{2} 
@@ -35,7 +35,7 @@
               \frac{-1}{\sqrt{2}} \right) 
             </mrow>
           </md>
-          Then we take the dot product to produce the directional
+          Then I take the dot product to produce the directional
           derivative.
           <md>
             <mrow>
@@ -44,14 +44,14 @@
               2y}{\sqrt{2}} = \frac{-8 + 4y}{\sqrt{2}} 
             </mrow>
           </md>
-          Finally, we evaluate at the given point.
+          Finally, I evaluate at the given point.
           <md>
             <mrow>
               D_v f(0,-2) \amp = \frac{-8 - 8}{\sqrt{2}} =
               \frac{-16}{\sqrt{2}} 
             </mrow>
           </md>
-          We could have first evaluated the gradient at the point and
+          I could have first evaluated the gradient at the point and
           then taken the dot product with the unit direction; that
           order of calculations would have produced the same result.
         </p>
@@ -70,9 +70,9 @@
       </statement>
       <solution>
         <p>
-          Our method of calculating directional derivatives is to take
+          The method of calculating directional derivatives is to take
           the dot product of the <emph>unit</emph> direction vector
-          with the gradient of the function. First we calculate the
+          with the gradient of the function. First I calculate the
           gradient.
           <md>
             <mrow>
@@ -80,7 +80,7 @@
               \right) 
             </mrow>
           </md>
-          Then we calculate the unit vector for the given direction.
+          Then I calculate the unit vector for the given direction.
           <md>
             <mrow>
               |v| \amp = \sqrt{2^2 + 1^2} = \sqrt{5} 
@@ -90,7 +90,7 @@
               \frac{1}{\sqrt{5}} \right) 
             </mrow>
           </md>
-          Then we take the dot product to produce the directional
+          Then I take the dot product to produce the directional
           derivative.
           <md>
             <mrow>
@@ -99,7 +99,7 @@
               (x-y)}{\sqrt{2}} = \frac{-\sin (x-y)}{\sqrt{5}} 
             </mrow>
           </md>
-          Finally, we evaluate at the given point.
+          Finally, I evaluate at the given point.
           <md>
             <mrow>
               D_v f\left( \frac{\pi}{2}, \frac{\pi}{2} \right) \amp =
@@ -107,7 +107,7 @@
               \right)}{\sqrt{5}} = \frac{-\sin 0}{\sqrt{5}} = 0 
             </mrow>
           </md>
-          We could have first evaluated the gradient at the point and
+          I could have first evaluated the gradient at the point and
           then taken the dot product with the unit direction; that
           order of calculations would have produced the same result.
         </p>
@@ -126,9 +126,9 @@
       </statement>
       <solution>
         <p>
-          Our method of calculating directional derivatives is to take
+          The method of calculating directional derivatives is to take
           the dot product of the <emph>unit</emph> direction vector
-          with the gradient of the function. First we calculate the
+          with the gradient of the function. First I calculate the
           gradient.
           <md>
             <mrow>
@@ -136,7 +136,7 @@
               2yz \right) 
             </mrow>
           </md>
-          Then we calculate the unit vector for the given direction.
+          Then I calculate the unit vector for the given direction.
           <md>
             <mrow>
               |v| \amp = \sqrt{1^2 + 3^2 +1^2} = \sqrt{11} 
@@ -146,7 +146,7 @@
               \frac{3}{\sqrt{11}} , \frac{1}{\sqrt{11}} \right) 
             </mrow>
           </md>
-          Then we take the dot product to produce the directional
+          Then I take the dot product to produce the directional
           derivative.
           <md>
             <mrow>
@@ -159,14 +159,14 @@
               + y - 4z - 3x^2 + 3z^2 + 2yz}{\sqrt{11}} 
             </mrow>
           </md>
-          Finally, we evaluate at the given point.
+          Finally, I evaluate at the given point.
           <md>
             <mrow>
               D_v f(3,1,-2) \amp = \frac{9 + 1 + 8 - 27 + 12 -
               2}{\sqrt{11}} = \frac{1}{\sqrt{11}}
             </mrow>
           </md>
-          We could have first evaluated the gradient at the point and
+          I could have first evaluated the gradient at the point and
           then taken the dot product with the unit direction; that
           order of calculations would have produced the same result.
         </p>
@@ -185,9 +185,9 @@
       </statement>
       <solution>
         <p>
-          Our method of calculating directional derivatives is to take
+          The method of calculating directional derivatives is to take
           the dot product of the <emph>unit</emph> direction vector
-          with the gradient of the function. First we calculate the
+          with the gradient of the function. First I calculate the
           gradient.
           <md>
             <mrow>
@@ -195,7 +195,7 @@
               xye^{xyz} \right) 
             </mrow>
           </md>
-          Then we calculate the unit vector for the given direction.
+          Then I calculate the unit vector for the given direction.
           <md>
             <mrow>
               |v| \amp = \sqrt{(-1)^2 + 0^2 + (-2)^2} = \sqrt{5}
@@ -205,7 +205,7 @@
               \frac{-2}{\sqrt{5}} \right) 
             </mrow>
           </md>
-          Then we take the dot product to produce the directional
+          Then I take the dot product to produce the directional
           derivative.
           <md>
             <mrow>
@@ -215,13 +215,13 @@
               \frac{-(yz+2xy)e^{xyz}}{\sqrt{5}} 
             </mrow>
           </md>
-          Finally, we evaluate at the given point.
+          Finally, I evaluate at the given point.
           <md>
             <mrow>
               D_v f(0,0,3) \amp = \frac{-(0 + 0)e^0}{\sqrt{5}} = 0 
             </mrow>
           </md>
-          We could have first evaluated the gradient at the point and
+          I could have first evaluated the gradient at the point and
           then taken the dot product with the unit direction; that
           order of calculations would have produced the same result.
         </p>
@@ -240,9 +240,9 @@
       </statement>
       <solution>
         <p>
-          Our method of calculating directional derivatives is to take
+          The method of calculating directional derivatives is to take
           the dot product of the <emph>unit</emph> direction vector
-          with the gradient of the function. First we calculate the
+          with the gradient of the function. First I calculate the
           gradient.
           <md>
             <mrow>
@@ -251,7 +251,7 @@
               \right) 
             </mrow>
           </md>
-          Then we calculate the unit vector for the given direction.
+          Then I calculate the unit vector for the given direction.
           <md>
             <mrow>
               |v| \amp = \sqrt{1^2 + 1^2 + 1^2} = \sqrt{3} 
@@ -261,7 +261,7 @@
               \frac{1}{\sqrt{3}}, \frac{1}{\sqrt{3}} \right) 
             </mrow>
           </md>
-          Then we take the dot product to produce the directional
+          Then I take the dot product to produce the directional
           derivative.
           <md>
             <mrow>
@@ -279,16 +279,19 @@
               2yz^2}{\sqrt{3}(1+z^2)^2} 
             </mrow>
           </md>
-          Finally, we evaluate at the given point.
+          Finally, I evaluate at the given point.
           <md>
             <mrow>
               D_v f(2,0,-2) \amp =\frac{2(2) + 2(0) - 2(2)^2(-2) -
               2(0)^2(2) + 2(2)(-2)^2 +
-              2(0)(-2)^2}{\sqrt{3}(1+(-2)^2)^2} = \frac{4 + 0 + 16 - 0
-              + 16 + 0}{\sqrt{(5)^2}} = \frac{36}{25\sqrt{3}} 
+              2(0)(-2)^2}{\sqrt{3}(1+(-2)^2)^2} 
+            </mrow>
+            <mrow>
+              \amp = \frac{4 + 0 + 16 - 0 + 16 + 0}{\sqrt{(5)^2}} =
+              \frac{36}{25\sqrt{3}}
             </mrow>
           </md>
-          We could have first evaluated the gradient at the point and
+          I could have first evaluated the gradient at the point and
           then taken the dot product with the unit direction; that
           order of calculations would have produced the same result.
         </p>
@@ -312,7 +315,7 @@
       </statement>
       <solution>
         <p>
-          This is a chain rule calculation. We first need the partial
+          This is a chain rule calculation. I first need the partial
           dervatives of the scalar field.
           <md>
             <mrow>
@@ -322,7 +325,7 @@
               \frac{\del }{\del y} f \amp = 3
             </mrow>
           </md>
-          Then we need the derivatives of the components of the
+          Then I need the derivatives of the components of the
           parametric curve. 
           <md>
             <mrow>
@@ -332,7 +335,7 @@
               \frac{d}{dt} \gamma_2 \amp = 3t^2 - 2t + 1 
             </mrow>
           </md>
-          Then we put these into the chain rule form and simplify. 
+          Then I put these into the chain rule form and simplify. 
           <md>
             <mrow>
               \frac{d}{dt} f(\gamma(t)) \amp = 4 (2t+1) + 3(3t^2 - 2t
@@ -360,7 +363,7 @@
       </statement>
       <solution>
         <p>
-          This is a chain rule calculation. We first need the partial
+          This is a chain rule calculation. I first need the partial
           dervatives of the scalar field.
           <md>
             <mrow>
@@ -370,7 +373,7 @@
               \frac{\del }{\del y} f \amp = -2y 
             </mrow>
           </md>
-          Then we need the derivatives of the components of the
+          Then I need the derivatives of the components of the
           parametric curve. 
           <md>
             <mrow>
@@ -380,8 +383,8 @@
               \frac{d}{dt} \gamma_2 \amp = \cos t 
             </mrow>
           </md>
-          Then we put these into the chain rule form and simplify. In
-          the partial derivatives, we replace <m>x</m> and <m>y</m>
+          Then I put these into the chain rule form and simplify. In
+          the partial derivatives, I replace <m>x</m> and <m>y</m>
           with their matching components from the parametric curve. 
           <md>
             <mrow>
@@ -410,7 +413,7 @@
       </statement>
       <solution>
         <p>
-          This is a chain rule calculation. We first need the partial
+          This is a chain rule calculation. I first need the partial
           dervatives of the scalar field.
           <md>
             <mrow>
@@ -420,7 +423,7 @@
               \frac{\del }{\del y} f \amp = \frac{-2y}{(x^2+y^2+1)^2}
             </mrow>
           </md>
-          Then we need the derivatives of the components of the
+          Then I need the derivatives of the components of the
           parametric curve. 
           <md>
             <mrow>
@@ -430,8 +433,8 @@
               \frac{d}{dt} \gamma_2 \amp = 1
             </mrow>
           </md>
-          Then we put these into the chain rule form and simplify. In
-          the partial derivatives, we replace <m>x</m> and <m>y</m>
+          Then I put these into the chain rule form and simplify. In
+          the partial derivatives, I replace <m>x</m> and <m>y</m>
           with their matching components from the parametric curve. 
           <md>
             <mrow>
@@ -462,7 +465,7 @@
       </statement>
       <solution>
         <p>
-          This is a chain rule calculation. We first need the partial
+          This is a chain rule calculation. I first need the partial
           dervatives of the scalar field.
           <md>
             <mrow>
@@ -472,7 +475,7 @@
               \frac{\del }{\del y} f \amp = -2ye^{-(x^2+y^2)} 
             </mrow>
           </md>
-          Then we need the derivatives of the components of the
+          Then I need the derivatives of the components of the
           parametric curve. 
           <md>
             <mrow>
@@ -482,8 +485,8 @@
               \frac{d}{dt} \gamma_2 \amp = \sin t + t \cos t 
             </mrow>
           </md>
-          Then we put these into the chain rule form and simplify. In
-          the partial derivatives, we replace <m>x</m> and <m>y</m>
+          Then I put these into the chain rule form and simplify. In
+          the partial derivatives, I replace <m>x</m> and <m>y</m>
           with their matching components from the parametric curve. 
           <md>
             <mrow>
@@ -492,8 +495,10 @@
             </mrow>
             <mrow>
               \amp = -2(t \cos t) e^{-(t^2 \cos^2 t + t^2 \sin^2 t)} -
-              2(t \sin t) e^{-(t^2 \cos^2 t + t^2 \sin^2 t)} = -(2t
-              \cos t + 2t \sin t) e^{-t^2} 
+              2(t \sin t) e^{-(t^2 \cos^2 t + t^2 \sin^2 t)} 
+            </mrow>
+            <mrow>
+              \amp = -(2t \cos t + 2t \sin t) e^{-t^2} 
             </mrow>
           </md>
         </p>
@@ -509,7 +514,7 @@
           </me>.
           (This is the field per unit mass on an object; by
           convention, potential energy is near zero at very large
-          distances and approches <m>-\infty</m> as we approach the
+          distances and approches <m>-\infty</m> as I approach the
           gravitational source.) For each of these curves, calculate
           the rate of change of potential energy along the curve.
           Describe the shape of the curves and qualitatively argue
@@ -635,10 +640,10 @@
               showing that the potential energy is decreasing. PE
               decreases as an object approach the central massive
               object (recall the convention that PE goes to zero at
-              infinity and approaches <m>-\infty</m> as we approach
+              infinity and approaches <m>-\infty</m> as I approach
               the central mass). This is an inward spiral so it makes
-              sense that potential energy is decreasing as we proceed
-              along the spiral. 
+              sense that potential energy is decreasing along the
+              spiral. 
             </p>
           </li>
           <li>
@@ -667,9 +672,9 @@
             <p>
               The derivative here is always positive, though it is
               getting smaller as <m>t</m> increases. PE increases as
-              we move away from the central mass. This curve diverges
+              I move away from the central mass. This curve diverges
               away to <m>\infty</m>, so it makes sense that potential
-              energy should decrease. As we get further and further
+              energy should decrease. As I get further and further
               away, the changes in PE become very small (even with the
               increasing speed of the curve) to it also makes sense
               that this derivative is getting smaller and smaller.
@@ -693,8 +698,8 @@
       </statement>
       <solution>
         <p>
-          We can use the direct form of the equation. To use that
-          form, we need the value of the function at the point as well
+          I can use the direct form of the equation. To use that
+          form, I need the value of the function at the point as well
           as the value of its partial derivatives at the point.
           <md>
             <mrow>
@@ -710,7 +715,7 @@
               \frac{\del}{\del y} f(x,y) \amp = 3
             </mrow>
             <mrow>
-              \frac{\del}{\del y} f() \amp = 3
+              \frac{\del}{\del y} f(0,0) \amp = 3
             </mrow>
           </md>
           Then the equation of the tangent plane is given by
@@ -733,8 +738,8 @@
       </statement>
       <solution>
         <p>
-          We can use the direct form of the equation. To use that
-          form, we need the value of the function at the point as well
+          I can use the direct form of the equation. To use that
+          form, I need the value of the function at the point as well
           as the value of its partial derivatives at the point.
           <md>
             <mrow>
@@ -773,8 +778,8 @@
       </statement>
       <solution>
         <p>
-          We can use the direct form of the equation. To use that
-          form, we need the value of the function at the point as well
+          I can use the direct form of the equation. To use that
+          form, I need the value of the function at the point as well
           as the value of its partial derivatives at the point.
           <md>
             <mrow>
@@ -813,8 +818,8 @@
       </statement>
       <solution>
         <p>
-          We can use the direct form of the equation. To use that
-          form, we need the value of the function at the point as well
+          I can use the direct form of the equation. To use that
+          form, I need the value of the function at the point as well
           as the value of its partial derivatives at the point.
           <md>
             <mrow>
@@ -853,8 +858,8 @@
       </statement>
       <solution>
         <p>
-          We can use the direct form of the equation. To use that
-          form, we need the value of the function at the point as well
+          I can use the direct form of the equation. To use that
+          form, I need the value of the function at the point as well
           as the value of its partial derivatives at the point.
           <md>
             <mrow>
@@ -896,7 +901,7 @@
       <solution>
         <p>
           The point is not in the domain of the function. There is no
-          trangent plane. 
+          tangent plane. 
         </p>
       </solution>
     </activity>

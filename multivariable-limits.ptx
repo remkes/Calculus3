@@ -5,7 +5,7 @@
     <p>
       I want to re-establish the tools of calculus for multi-variable
       functions. As with single-variable functions, the starting
-      point is limits. Let's start with the full, formal,
+      point is limits. I'll start with the full, formal,
       <m>\epsilon-\delta</m> definition.
     </p>
     <definition>
@@ -71,14 +71,14 @@
     <p>
       This is the first application of a very important technique:
       treating the function as a function of only one variable
-      and ignoring the other, pretending that they are constant. If
-      we do that, we get <m>n</m> different single variable functions.
-      The proposition says that the function is continuous in the new
-      definition if and only if all of the <m>n</m> different single
-      variable functions are continuous.
+      and ignoring the others, pretending that they are constant. If
+      I do that, I end up consider <m>n</m> different single variable
+      functions.  The proposition says that the function is continuous
+      in the new definition if and only if all of the <m>n</m>
+      different single variable functions are continuous.
     </p>
     <p>
-      This proposition tells us how to recognize continuous functions.
+      This proposition tells me how to recognize continuous functions.
       Anything involving polynomials, roots, rational functions, trig,
       exponentials and logarithms is continuous on its domain.
     </p>
@@ -86,10 +86,10 @@
   <subsection xml:id="subsection-evaluating-multivariable-limits">
     <title>Evaluating Multivariable Limits</title>
     <p>
-      As we mentioned before, proving the existence of limits is
+      As I mentioned before, proving the existence of limits is
       difficult. However, the algebraic techniques of first year
       calculus can still work for calculations. Here are some
-      examples where we can use algebraic manipulation to simplify
+      examples where I can use algebraic manipulation to simplify
       limits so that they can be evaluated. 
     </p>
     <example>
@@ -100,15 +100,15 @@
             = \lim_{(x,y) \rightarrow (0,0)} \frac{(x-y)(x+y)}{(x-y)}
           </me>
             The limit cannot be directly evaluated. However, with the
-            factoring of the numerator, we can cancel of the
+            factoring of the numerator, I can cancel of the
             <m>(x-y)</m> term. That removes the division by zero
-            problem and lets us evaluate the limit.
+            problem and lets me evaluate the limit.
           <me>
             = \lim_{(x,y) \rightarrow (0,0)} x+y = 0 + 0 = 0
           </me>
-          This limit means that no matter which direction we approach
-          <m>(0,0)</m> from, the function gets closer and closer to
-          zero. 
+          This limit means that no matter which direction I choose to
+          approach <m>(0,0)</m> from, the function gets closer and
+          closer to zero. 
         </p>
       </statement>
     </example>
@@ -163,7 +163,7 @@
             \frac{(y-x-1)}{(y-x-1)(\sqrt{y} + \sqrt{x+1})}
           </me>
           Then I can cancel off the common term, which removes the
-          division by zero. After tha, I can simply evaluate the
+          division by zero. After that, I can simply evaluate the
           limit. 
           <me>
             = \lim_{(x,y) \rightarrow (1,2)} \frac{1}{\sqrt{y} +
@@ -174,13 +174,13 @@
       </statement>
     </example>
     <p>
-      When a limit doesn't exist, we can prove its non-existence by
+      When a limit doesn't exist, I can prove its non-existence by
       looking at various directions of approach. If the limit along
       different directions is different, then there can be no cohesive
       limit. There are several ways to do this, depending on what kind
-      of approach we want to take. I'll do two examples with different
-      paths of approach, each chosen to suit the function in the
-      limit.
+      of approach I want to take. I'll do two examples with different
+      paths of approach, each chosen to suit the specific function
+      under consideration.
     </p>
     <figure xml:id="figure-3d-graph2">
       <caption>
@@ -216,7 +216,7 @@
         <p>
           I will approach <m>(0,0)</m> along the line <m>y = mx</m>.
           That lets me replace <m>y</m> with <m>mx</m> in the
-          calculation and the limit becuase <m>x \rightarrow 0</m>.
+          calculation and the limit because <m>x \rightarrow 0</m>.
           <md>
             <mrow>
               \lim_{x \rightarrow 0} \frac{(x+mx)^2}{x^2 + m^2x^2}

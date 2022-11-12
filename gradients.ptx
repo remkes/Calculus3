@@ -3,7 +3,7 @@
   <subsection xml:id="subsection-gradient-definition">
     <title>Definition of the Gradient</title>
     <p>
-      After partial derivatives, we want to proceed to define several
+      After partial derivatives, I want to proceed to define several
       other generalizations of the derivative. The first is the
       gradient.
     </p>
@@ -32,7 +32,7 @@
       The best interpretation of the gradient comes from contour
       plots. Like the gradient, countour plots live in <m>\RR^n</m>,
       the domain, and show the level (hyper)surfaces of the function.
-      If, as in <m>\RR^2</m>, we think of the function as a height
+      If, as in <m>\RR^2</m>, I interpret the function as a height
       function and the countour plot as a topographical map, the
       gradient shows direction of greatest increase.
     </p>
@@ -42,8 +42,8 @@
       point in the direction of greatest increase. Rephrased, this is
       a useful result: <m>\nabla f</m> is always the normal to the
       level sets of <m>f</m>. If those level sets are hypersurfaces,
-      their tangent planes can be determined by the normal <m>\nabla
-      f</m>.
+      their tangent (hyper)planes can be determined by the normal
+      <m>\nabla f</m>.
     </p>
   </subsection>
   <subsection xml:id="subsection-gradient-examples">
@@ -53,7 +53,7 @@
         <p>
           A central example of gradients is found by considering the
           gravitational potential energy function caused by a mass
-          <m>m</m> at the the origin. Another object of mass <m>m</m>
+          <m>M</m> at the the origin. Another object of mass <m>m</m>
           and position <m>(x,y,z)</m> has potential gravitational
           energy of
           <me>
@@ -62,9 +62,11 @@
         </p>
         <p>
           By convention, this potential energy is negative. It
-          approaches <m>0</m> in the limit at the origin, and
-          approaches <m>- \infty</m> as we get very far from the
-          origin. The gradient of this is
+          approaches <m>-\infty</m> in the limit at the origin, and
+          approaches <m>0</m> as the distance from the origin grows to
+          <m>\infty</m>. I'll writ the gradient of this potential
+          energy; I seperate it into two pieces, one of magnitude and
+          one of diection (where direction is given by a unit vector). 
           <me>
             \nabla P = \frac{GmM}{\sqrt{(x^2 + y^2 +z^2)^3}} (x, y, z)
             = \frac{GmM}{x^2 + y^2 + z^2} \frac{1}{\sqrt{x^2 + y^2 +
@@ -72,12 +74,17 @@
           </me>.
         </p>
         <p>
-          This is precisely the force of gravity. The gradient point
+          This is precisely the force of gravity. The gradient points
           in the direction of maximum increase in potential energy
-          with magnitude <m>\frac{GmM}{r^2}</m> where <m>r</m> is the
-          distance between the two objects. This is a common
-          situation we will discuss in Calculus IV: many forces are
-          the result of gradients of potential energy functions.
+          (directly outward from the origin) with magnitude
+          <m>\frac{GmM}{r^2}</m> where <m>r</m> is the distance
+          between the two objects. This is a common situation we will
+          discuss in Calculus IV: many forces are the result of
+          gradients of potential energy functions. These forces are
+          called <term>conservative forces</term>. Gravity, like
+          these other forces, can be thought of as the tendency for
+          objects to lower their potential energy as efficiently as
+          possible.
         </p>
       </statement>
     </example>
@@ -108,9 +115,12 @@
         </p>
       </statement>
     </example>
+  </subsection>
+  <subsection xml:id="subsection-gradient-extensions">
+    <title>Extensions of the Gradient</title>
     <p>
-      In addition to the gradient, we can think of <m>\nabla</m>
-      itself as the following differential operator.
+      In addition to the gradient, <m>\nabla</m> itself is the
+      following differential operator.
       <me>
         \nabla = \left( \frac{\del}{\del x_1}, \frac{\del}{\del x_2},
         \frac{\del}{\del x_3}, \ldots, \frac{\del}{\del x_n} \right)
@@ -118,10 +128,10 @@
     </p>
     <p>
       This is a vector-valued differential operator: it outputs the
-      vector of partial derivatives <m>\nabla f</m>. Now that we have
-      this operator, there are other operations we can use it for.
-      Most of those operations come in Calculus IV, but we can define
-      one such operation here.
+      vector of partial derivatives <m>\nabla f</m>. Now that I have
+      defined this operator, there are other operations I can use it
+      for.  Most of those operations come in Calculus IV, but I can
+      define one such operation here.
     </p>
     <definition>
       <statement>
@@ -151,7 +161,7 @@
     </definition>
     <p>
       The Laplacian, as a second derivative, measure some kind of
-      multi-dimensional concavity. We considered the heat equation in
+      multi-dimensional concavity. I considered the heat equation in
       one dimension; in that equation, concavity measured local
       displacement from equilibrium. The Laplacian does the same in
       multiple dimensions. The general Heat Equation is

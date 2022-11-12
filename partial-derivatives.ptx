@@ -4,22 +4,23 @@
     <title>Definition</title>
     <p>
       A major goal of this course is extending the notion of the
-      derivative to multivariable functions. For parametric curve, the
-      previous derivative (measuring the slope of a tangent line)
-      became the tangent vector instead. For scalar fields which
-      depend on multiple inputs, the extension of the derivative is
-      more difficult. In this and the following sections, I'm going to
-      introduce a variety of different ways to extend the derivative,
-      each trying to capture some aspect of the single variable
-      derivative. The first extention is the partial derivative.
+      derivative to multivariable functions. For parametric curves,
+      the previous idea of the derivative (measuring the slope of a
+      tangent line) became the tangent vector instead. For scalar
+      fields which depend on multiple inputs, the extension of the
+      derivative is more difficult. In this and the following
+      sections, I'm going to introduce a variety of different ways to
+      extend the derivative, each trying to capture some aspect of the
+      single variable derivative. The first extention is the partial
+      derivative.
       
     </p>
     <definition>
       <statement>
         <p>
           Let <m>f: \RR^n \rightarrow \RR</m> be a scalar field.
-          If <m>x</m> is one of the variable, then the derivative of
-          <m>f</m> which pretend that all other variables are constant
+          If <m>x</m> is one of the variables, then the derivative of
+          <m>f</m> which pretends that all other variables are constant
           is called the <term>partial derivative</term> of <m>f</m> in
           the variable <m>x</m>.
         </p>
@@ -40,9 +41,9 @@
     </p>
     <p>
       For interpretation, the partial derivative gives the rate of
-      change of <m>f</m> with respect to one of its variables. We
-      don't have a holisitic notion of rate of change, but we can see
-      how it changes in each variable.
+      change of <m>f</m> with respect to one of its variables. There
+      isn't a holisitic notion of rate of change, but this definitions
+      hows how a function changes in each variable.
     </p>
     <p>
       If we wanted to be formal, pretending that all the other
@@ -62,11 +63,12 @@
     </p>
     <p>
       Notice that the value of <m>\frac{\del f}{\del x}</m> still
-      depends on <m>y</m>. Different <m>y</m> values identify
-      different points in the domain, where the rate of change with
-      respect to <m>x</m> may differ. The partial derivative pretends
-      that <m>y</m> is constant, but the value of that constant can
-      have an effect on the partial derivative. 
+      depends on the value of the coordinate <m>y</m>. Different
+      <m>y</m> values identify different points in the domain, where
+      the rate of change with respect to <m>x</m> may differ. The
+      partial derivative pretends that <m>y</m> is constant, but the
+      value of that constant can have an effect on the partial
+      derivative. 
     </p>
     <p>
       As was the case for single-variable calculus, I use
@@ -75,16 +77,16 @@
     </p>
     <p>
       There are various notational conventions for partial
-      derivatives. In addition to <m>\frac{\del f}{\del x}</m>, we
+      derivatives. In addition to <m>\frac{\del f}{\del x}</m>, I
       can also write this as <m>f_x</m>, <m>\del_x f</m> and <m>D_x
-      f</m>. The first of these is a nice short-hand which we will
+      f</m>. The first of these is a nice short-hand which I will
       use frequently.
     </p>
     <example>
       <statement>
         <p>
           Here is a function of two variables. I'll calculate both the
-          partial derivatives. In each partial derivative, I pretent
+          partial derivatives. In each partial derivative, I pretend
           the other variable is constant and use the ordinary rules of
           single-variable derivatives. 
           <md>
@@ -105,7 +107,7 @@
       <statement>
         <p>
           Here is a function of two variables. I'll calculate both the
-          partial derivatives. In each partial derivative, I pretent
+          partial derivatives. In each partial derivative, I pretend
           the other variable is constant and use the ordinary rules of
           single-variable derivatives. 
         </p>
@@ -126,7 +128,7 @@
       <statement>
         <p>
           Here is a function of two variables. I'll calculate both the
-          partial derivatives. In each partial derivative, I pretent
+          partial derivatives. In each partial derivative, I pretend
           the other variable is constant and use the ordinary rules of
           single-variable derivatives. 
         </p>
@@ -149,7 +151,7 @@
   <subsection xml:id="subsection-differentiability">
     <title>Differentiability</title>
     <p>
-      The partial derivative allows us to define a holistic notion of
+      The partial derivative allows me to define a holistic notion of
       the differentiability of a scalar field.
     </p>
     <definition>
@@ -168,7 +170,7 @@
       blocks of all the various extensions of the single-variable
       derivative to scalar fields. If all the partial derivatives
       exists, then any extension of the derivative will work. All of
-      the other extensions we define can be expressed in terms of the
+      the other extensions I define can be expressed in terms of the
       partial derivatives. One could consider the collection of all
       partial derivatives as <sq>the derivative</sq> of a scalar field
       (though I will eventually argue that other extensions have a
@@ -193,17 +195,17 @@
     <p>
       However, I can also iterate partial derivatives in different
       variables. Consider a function of two variables <m>f(x,y)</m>. I
-      can pretend <m>x</m> is contant and take the derivative in
+      can pretend <m>x</m> is constant and take the derivative in
       <m>y</m>. Then, having done that, I can switch and present
       <m>y</m> is constant to take the derivative in <m>x</m>. This is
-      called a mixed partial and is written with this notation.
+      called a mixed partial and is written with the following notation.
       <me>
         \frac{\del^2 f}{\del x \del y}
       </me>
       In the denominator of this notation, <m>\del x \del y</m>, the
       derivative in <m>y</m> happens first and the derivative in
       <m>x</m> happens second. This is like the right-to-left notation
-      for functions. This notation (hopefully) makes sense if we think
+      for functions. This notation (hopefully) makes sense in terms of 
       of differential operators. An operator acts on functions on the
       left, so the piece closest to the function (the <m>y</m>
       derivative in this case) happens first. 
@@ -220,7 +222,7 @@
     </p>
     <p>
       There is a useful piece of notation to refer to the
-      differentiability of multivariables function.
+      differentiability of multivariables functions.
     </p>
     <definition>
       <statement>
@@ -228,11 +230,12 @@
         <m>f</m> is in the class <m>C^n</m> is all of its
         degree <m>n</m> partial derivatives (both pure and mixed)
         exist and are continuous. This property is often written<m>f
-        \in C^n</m>. If I want to specify the domain, say some <m>a
-        \subset \RR^n</m>, I can write <m>f \in C^n(A)</m>, meaning
-        that all the partial derivatives of degree <m>n</m> exist over
-        that domain. If the function is infinitely differentiable,
-        this notation becomes <m>f \in C^{\infty}</m>.
+        \in C^n</m>. If I want to specify the domain, say some subset
+        <m>A \subset \RR^n</m>, I can write <m>f \in C^n(A)</m>,
+        meaning that all the partial derivatives of degree <m>n</m>
+        exist over that domain. If the function is infinitely
+        differentiable, this notation becomes <m>f \in
+        C^{\infty}</m>.
       </statement>
     </definition>
     <example>
@@ -286,7 +289,7 @@
               f}{\del x \del y} = 18x^2y - 4y^3 + 4xy
             </mrow>
           </md>
-          Curiously, we get the same answer from either order of the
+          Curiously, I get the same answer from either order of the
           mixed partial derivatives. 
         </p>
       </statement>
@@ -299,13 +302,15 @@
     <proposition>
       <statement>
         <p>
-          <emph>(Clairaut's Theorem)</emph> Let <m>f(x,y)</m> be a
-          function <m>\RR^n \rightarrow \RR</m> and let <m>x</m> and
-          <m>y</m> represent two of the variables of <m>\RR^n</m>. If
-          all the partial derivatives <m>f_{xx}</m>, <m>f_{yy}</m>,
-          <m>f_{xy}</m> and <m>f_{yx}</m> exists and are continuous on
-          an open set <m>D</m> (that is, <m>f \in C^2(D)</m>, then
-          <m>f_{xy} = f_{yx}</m> on that set.
+          <emph>(Clairaut's Theorem)</emph> Let <m>A \subset \RR^n</m>
+          be an open subset. Let <m>f(x_1, \ldots x_n)</m> be a
+          function <m>A \rightarrow \RR</m> and let <m>x_i</m> and
+          <m>x_j</m> represent any two of the <m>n</m> variables. If
+          <m>f \in C^2(A)</m> (that is, all the second partial
+          derivatives of <m>f</m> exist and are continuous an the  pen
+          set <m>A</m>), then <m>f_{x_ix_j} = f_{x_jx_ix}</m> on that
+          set. Informally. for <m>C^2</m> function, I can do mixed
+          second partial derivatives in any order. 
         </p>
       </statement>
     </proposition>

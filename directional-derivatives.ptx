@@ -4,18 +4,18 @@
     <title>Definition of Directional Derivatives</title>
     <p>
       Partial derivatives took one variable and pretended that all
-      other variables were constant. In that way, we got the rate of
-      change in that variable. We could consider <m>\frac{\del
-      f}{\del x}</m> the derivative of <m>f</m> <em>when we move</em>
-      in the <m>x</m> axis direction. But why do we only need to move
-      in the axis direction? Why can't we move in all directions and
-      consider the rate of change?
+      other variables were constant. In that way, they calculated the
+      rate of change in that variable. I could consider <m>\frac{\del
+      f}{\del x}</m> the derivative of <m>f</m> when moving in the
+      <m>x</m> axis direction. But why do I only consider movement in
+      the axis directions? Why can't I consider movement in all
+      directions and ask about the rate of change?
     </p>
     <definition>
       <statement>
         <p>
           Let <m>f: \RR^n \rightarrow \RR</m> be a differentiable
-          function and <m>u</m> a <term>unit</term> vector in
+          function and <m>u</m> a <em>unit</em> vector in
           <m>\RR^n</m>. The directional derivative of <m>f</m> in the
           direction <m>u</m> is written <m>D_u f</m> and given by a
           limit definition. Let <m>v</m> be a point in the domain of
@@ -28,9 +28,9 @@
     </definition>
     <p>
       The directional derivative, like the partial derivative, uses a
-      single variable limit: we use the line in the direction <m>u</m>
+      single variable limit: I use the line in the direction <m>u</m>
       (as a local direction vector form the point <m>v</m>) to give a
-      one-dimensional domain <mdash/> a copy of <m>\RR^1</m>. Then we
+      one-dimensional domain <mdash/> a copy of <m>\RR^1</m>. Then I
       just differentiate along the line. In <m>\RR^3</m>, if <m>u =
       e_1</m>, the directional derivative is <m>D_{e_1} f =
       \frac{\del f}{\del x}</m>; if <m>u = e_2</m>, the directional
@@ -42,7 +42,7 @@
   <subsection xml:id="subsection-calculating-directional-derivatives">
     <title>Calculating Directional Derivatives</title>
     <p>
-      Instead of calculating this limit every time, we have a nice
+      Instead of calculating this limit every time, there is a nice
       tool for calculating directional derivatives.
     </p>
     <proposition>
@@ -60,7 +60,7 @@
     </proposition>
     <p>
       If <m>(a,b)</m> or <m>(a,b,c)</m> are unit vectors in
-      <m>\RR^2</m> and <m>\RR^3</m>, respectively, we can write the
+      <m>\RR^2</m> and <m>\RR^3</m>, respectively, I can write the
       specific form of the proposition for low dimensions.
       <md>
         <mrow>
@@ -74,9 +74,9 @@
       </md>
     </p>
     <p>
-      As we noted above, the directional derivatives in the axis
-      directions give the partial derivatives, so this is an extension
-      of the idea of partial derivatives.
+      As I noted at the start of this section, the directional
+      derivatives in the axis directions give the partial derivatives,
+      so this is an extension of the idea of partial derivatives.
       <md>
         <mrow>
           D_{(1,0)} f(x,y) \amp = \frac{\del f}{\del x}
@@ -128,9 +128,10 @@
       <statement>
         <p>
           Consider this function: <m>f(x,y) = \sin (x^2 + y^2)</m>,
-          show in <xref ref="figure-3d-graph3">Figure</xref>. These
+          shown in <xref ref="figure-3d-graph3">Figure</xref>. These
           are circular sine waves, like riples on a pond which never
-          decrease in amplitude. We have
+          decrease in amplitude. Here are some direction derivatives
+          for this function. 
           <md>
             <mrow>
               D_{(1,0)} f(x,y) \amp = 2x \cos (x^2 + y^2)
@@ -184,9 +185,10 @@
     <example>
       <statement>
         <p>
-          If we wanted damped ripples instead, as in <xref
-          ref="figure-3d-graph4">Figure</xref>, we would take
-          <m>f(x,y) = e^{-(x^2 + y^2)} \sin(x^2 + y^2)</m>.
+          If I  wanted damped ripples instead, as in <xref
+          ref="figure-3d-graph4">Figure</xref>, I would take
+          <m>f(x,y) = e^{-(x^2 + y^2)} \sin(x^2 + y^2)</m>. Here are
+          some direction derivatives for this function. 
           <md>
             <mrow>
               D_{(a,b)} f(x,y) \amp = \left[ -2xe^{-(x^2+y^2)} \sin
@@ -217,7 +219,7 @@
       </statement>
     </example>
     <p>
-      Finally, look at what happens when we apply the length of a dot
+      Finally, look at what happens when I apply the length of a dot
       product to the directional derivative.
       <me>
         |D_u f| = |\nabla f \cdot u| = |\nabla f||u| \cos \theta
@@ -229,8 +231,9 @@
       as <m>\nabla f</m>. That is, the greatest directional
       derivative, representing the direction of fastest change, is
       found in the direction of the gradient. This established the
-      fact, which we claimed earlier, that the gradient points in the
-      direction of greatest change.
+      fact, which I claimed in <xref
+      ref="subsection-gradient-interpretation" />, that the gradient
+      points in the direction of greatest change.
     </p>
   </subsection>
 </section>

@@ -3,7 +3,6 @@
 -->
 <section xml:id="section-assignment5">
   <title>Assignment 5</title>
-  <!--
   <p><ol>
     <li>
       <p>
@@ -12,13 +11,13 @@
         <ol>
           <li> 
             <me>
-              \lim_{(x,y) \rightarrow (0,0)}  \frac{x^2+y^2}{x^2 -
-              y^2}
+              \lim_{(x,y) \rightarrow (0,0)}  \frac{x^2 + xy -
+              y^2}{|xy|} 
             </me>
           </li>
           <li> 
             <me>
-              \lim_{(x,y) \rightarrow (0,0)} \frac{x}{x^2 + y^2}
+              \lim_{(x,y) \rightarrow (3,3)} \frac{y-3}{x-3}
             </me>
           </li>
         </ol>
@@ -28,16 +27,22 @@
       <p>
         Consider this function. (6)
         <me>
-          f(x,y) = \frac{x^2 - y^2}{x-y}
+          f(x,y) = \frac{x^3 + y^3}{x+y} 
         </me>
-        This function is not defined on the line <m>x=y</m>. What
-        values would you add to the function on that line to make the
-        function continuous?
+        This function is not defined on the line <m>x = -y</m>. What
+        values would you define on that line to make the function
+        continuous?
       </p>
     </li>
     <li>
       <p>
-        Why are limits more difficult in several dimensions?  (4)
+        Let <m>a</m> and <m>b</m> be real numbers. Consider this
+        function. (4)
+        <me>
+          f(x,y) = \frac{x-a}{y-b}
+        </me>
+        For what values of <m>a</m> and <m>b</m> does this limit
+        exist? 
       </p>
     </li>
     <li>
@@ -46,62 +51,48 @@
         functions. (12)
         <ol>
           <li>
-            <m>f(x,y) = x^2 y^2 + (x+y)/e^x</m>
+            <m>f(x,y,z) = z \sin (x + y) + x \cos (y + z)</m>
           </li>
           <li>
-            <m>f(x,y,z) = (xyz)^2</m>
+            <m>f(x,y,z) = x^2yz + y^z + z^2 (x^2 - y^2)</m>
           </li>
           <li>
-            <m>f(x,y,z) = \sin (x+y) - \cos (z-y)</m>
+            <m>f(x,y,z) = \frac{e^{xy} - e^{yz}}{y^2}</m>
           </li>
         </ol>
       </p>
     </li>
     <li>
       <p>
-        Draw a contour graph for the function <m>f(x,y) = \sin x \cos
-        y</m>. Identify some points where both of the partial
-        derivatives vanish. Describe the level curves close to these
-        points (8)
+        Draw a contour graph for the function <m>f(x,y) =
+        \frac{1}{(x^2 + 1)(y^2 + 1)}</m>. Identify some points where
+        both of the partial derivatives vanish. Describe the level
+        curves close to these points. (8)
       </p>
     </li>
     <li>
       <p>
-        Consider a differentiable function <m>f(x,y,z)</m>. Prove
-        that if all the partial derivatives of <m>f</m> are <m>0</m>,
-        then <m>f</m> must be constant. (6)
+        Draw a contour graph for the function <m>f(x,y) =
+        \frac{\sin x}{y^2 + 1}</m>. Identify some points where
+        both of the partial derivatives vanish. Describe the level
+        curves close to these points. (8)
       </p>
     </li>
     <li>
       <p>
-        For the following functions, calculate <m>\nabla f</m>, draw a
-        countour graph and label several of the gradient
-        directions. (12)
-        <ol>
-          <li>
-            <m>f(x,y) = \frac{1}{x^2 + y^2}</m>
-          </li>
-          <li>
-            <m>f(x,y) = e^{x-y}</m>
-          </li>
-        </ol>
+        Let <m>f(x,y)</m> be a differentiable function. Prove that if
+        <m>\frac{\del f}{\del x}</m> and <m>\frac{\del f}{\del y}</m>
+        are constant, then the graph of <m>f</m> must be a plane in
+        <m>\RR^3</m>.
       </p>
     </li>
     <li>
       <p>
-        Let <m>f</m> and <m>g</m> be functions of <m>x</m>
-        and <m>y</m>. Prove that the product rule holds for gradients: (4)
-        <me> 
-          \nabla (fg) = f \nabla g + g \nabla f
-        </me>
-      </p>
-    </li>
-    <li>
-      <p>
-        How can gradients help predict the courses of streams and
-        rivers over a landscape? (4)
+        Let <m>f(x,y)</m> be a differentiable function where 
+        <m>\frac{\del f}{\del x} = g(y)</m> and <m>\frac{\del f}{\del
+        y} = h(x)</m> for some single variable functions <m>g</m> and
+        <m>h</m>. What does this say about the function <m>f</m>? (6) 
       </p>
     </li>
   </ol></p>
-  -->
 </section>

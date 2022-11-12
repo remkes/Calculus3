@@ -3,7 +3,8 @@
   <subsection xml:id="subsection-extreme-values">
     <title>Extreme Values</title>
     <p>
-      Let's first define what we mean by extreme values.
+      I start with the definition of extreme values. This extends the
+      definition from Calculus I for single variable functions. 
     </p>
     <definition>
       <statement>
@@ -23,7 +24,7 @@
       This definition clarifies that if a point is a minimum or
       maximum, is it is a peak or valley in all directions. It needs
       to be above or below nearby function values in any direction in
-      the domain. In two variables, we also want to classify a new
+      the domain. In two variables, I also want to classify a new
       kind of extreme value.
     </p>
     <definition xml:id="def-saddle-point">
@@ -77,9 +78,9 @@
     </p>
     <p>
       The gradient is the vector of partial derivatives, so it is
-      important to note that <em>all</em> the partial derivative must
-      vanish. If only some of them vanish, we get interesting
-      behaviour, but not maxima or minima.
+      important to note that <em>all</em> the partial derivatives must
+      vanish. If only some of them vanish, the graph may have interesting
+      behaviour, but the point is not a maximum or minimum.
     </p>
   </subsection>
   <subsection xml:id="subsection-extrema-examples">
@@ -114,12 +115,12 @@
       <statement>
         <p>
           For example, consider the function <m>f(x,y) = x-y^2+3</m>,
-          shown in <xref ref="figure-3d-graph5">Figure</xref>. We
-          have <m>f_y(x,y) = -2y</m>, which vanishes everywhere along
-          the <m>x</m> axis (when <m>y=0</m>). However, the other
-          partial is <m>f_x = 1</m>, which never vanishes. This means
-          that all points <m>(x,0)</m> are potentiall critical in
-          <m>y</m> but not in <m>x</m>. What you get with this
+          shown in Figure <xref ref="figure-3d-graph5" />. The
+          <m>y</m> partial is <m>f_y(x,y) = -2y</m>, which vanishes
+          everywhere along the <m>x</m> axis (when <m>y=0</m>).
+          However, the other partial is <m>f_x = 1</m>, which never
+          vanishes. This means that all points <m>(x,0)</m> are
+          potentiall critical in <m>y</m> but not in <m>x</m>. This
           function is a ascending/decending ridge (with slope
           <m>1</m>) above the <m>x</m> axis.
         </p>
@@ -154,26 +155,26 @@
     <example>
       <statement>
         <p>
-          Since we work in several dimensions, we can have very
-          complicated sets of maxima/minima. The function <m>f(x,y) =
-          \cos (x+y)</m>, shown in <xref
-          ref="figure-3d-graph6">Figure</xref> has a maximum whenever
+          Since scalar fields are defined in several dimensions, the
+          collection of maxima/minima can be complicated sets.  The
+          function <m>f(x,y) = \cos (x+y)</m>, shown in Figure <xref
+          ref="figure-3d-graph6" /> has a maximum whenever
           <m>x+y</m> is an even multiple of <m>\pi</m>. Each of those
           sets is a whole line, <m>x+y=0</m>, <m>x+y = 2\pi</m> and so
           on. For functions of two variables, its easy to have lines
           or curves of maximum or minimum points. In higher
-          dimensions, we can have surfaces or hypersurfaces of maximum
-          or minimum points.
+          dimensions, there can be surfaces or hypersurfaces of
+          maximum or minimum points.
         </p>
       </statement>
     </example>
     <p>
-      We want to classify critical points: points where <m>\nabla f =
+      I want to classify critical points: points where <m>\nabla f =
       0</m>. We can do this informally by looking at each variable
       individually. If the point is a maximum in all of <m>x_1, x_2,
       \ldots, x_n</m>, then it is a maximum according to our
       definition above. Likewise, if it is a minimum in all the
-      variables, it is a minimum. If it is a maxmum in some of the
+      variables, it is a minimum. If it is a maximum in some of the
       variables and a minimum in others, it is a saddle point.
       However, if even one of the variable has no max/min behvaiour
       (like <m>f(x) = x^3</m> at <m>x=0</m>), then the point is
@@ -185,16 +186,16 @@
     <p>
       This informal approach is reasonable, but it would be nice to
       have a more formal method for determining the behaviour. In
-      single variable calculus, we have the second-derivative test.
-      If <m>a</m> is a critical point, then it is a maximum if
-      <m>f^{\prime \prime}(a)</m> is negative, a minimum if
-      <m>f^{\prime \prime}(a)</m> is positive, and the test is
-      inconclusive if <m>f^{\prime \prime}(a) = 0</m>.
+      single variable calculus, a formal method is the
+      second-derivative test.  If <m>a</m> is a critical point, then
+      it is a maximum if <m>f^{\prime \prime}(a)</m> is negative, a
+      minimum if <m>f^{\prime \prime}(a)</m> is positive, and the test
+      is inconclusive if <m>f^{\prime \prime}(a) = 0</m>.
     </p>
     <p>
-      We'd like to generalize this, but we have many second
+      I'd like to generalize this, but we have many second
       derivatives: all of the possible mixed and non-mixed second
-      partials. One way we can organize all these second partials is
+      partials. One way I can organize all these second partials is
       in a matrix.
     </p>
     <definition>
@@ -209,22 +210,25 @@
     <p>
       Here is the Hessian matrix for <m>f(x,y)</m> in two variables.
       <me>
-        \left( \begin{matrix} \dfrac{\del^2 f}{\del x^2} \amp
-        \dfrac{\del^2 f}{\del y \del x} \\ \dfrac{\del^2
-        f}{\del x \del y} \amp \dfrac{\del^2 f}{\del y^2} \end{matrix}
-        \right)
+        \begin{pmatrix} 
+          \dfrac{\del^2 f}{\del x^2} \amp \dfrac{\del^2 f}{\del y \del
+          x} \\ 
+          \dfrac{\del^2 f}{\del x \del y} \amp \dfrac{\del^2 f}{\del
+          y^2} 
+        \end{pmatrix}
       </me>
     </p>
     <p>
       Here is the Hessian matrix for <m>f(x,y,z)</m> in three variables.
       <me>
-        \left( \begin{matrix} \dfrac{\del^2 f}{\del x^2} \amp
-        \dfrac{\del^2 f}{\del y \del x} \amp \dfrac{\del^2 f}{\del z
-        \del y} \\ \dfrac{\del^2 f}{\del x \del y} \amp
-        \dfrac{\del^2 f}{\del y^2} \amp \dfrac{\del^2 f}{\del z \del
-        y} \\ \dfrac{\del^2 f}{\del x \del z} \amp
-        \dfrac{\del^2 f}{\del y \del z} \amp \dfrac{\del^2 f}{\del
-        z^2} \end{matrix} \right)
+        \begin{pmatrix} 
+          \dfrac{\del^2 f}{\del x^2} \amp \dfrac{\del^2 f}{\del y \del
+          x} \amp \dfrac{\del^2 f}{\del z \del y} \\[1em]
+          \dfrac{\del^2 f}{\del x \del y} \amp \dfrac{\del^2 f}{\del
+          y^2} \amp \dfrac{\del^2 f}{\del z \del y} \\[1em]
+          \dfrac{\del^2 f}{\del x \del z} \amp \dfrac{\del^2 f}{\del y
+          \del z} \amp \dfrac{\del^2 f}{\del z^2} 
+        \end{pmatrix} 
       </me>
     </p>
     <p>
@@ -237,7 +241,7 @@
       The Hessian matrix captures all of the information about the
       second derivative of this function, but it is often too unwieldy
       to be used to determine the behaviour of critical points.
-      However, we have a useful tool from linear algebra to get
+      However, I can use a useful tool from linear algebra to get
       specific information out of a matrix: the determinant. Let
       <m>D</m> be the determinant of the Hessian matrix. For
       <m>f(x,y)</m>, <m>D</m> has the following form (using Clairaut's
@@ -249,14 +253,14 @@
     </p>
     <p>
       For functions of two variables, the determinant of the Hessian
-      tells us most of what we need to know.
+      determines the behaviour. 
     </p>
     <proposition>
       <statement>
         <p>
-          Let <m>f: \RR^2 \rightarrow \RR</m> be a <m>C^2</m> function
-          and let <m>(a,b)</m> be a critical point. Then we have four
-          cases.
+          Let <m>f: \RR^2 \rightarrow \RR</m> be a <m>C^2</m> scalar
+          field and let <m>(a,b)</m> be a critical point. Then there
+          are four cases.
           <ul>
             <li>
               <p>
@@ -296,10 +300,11 @@
     <proposition>
       <statement>
         <p>
-          Let <m>f: \RR^n \rightarrow \RR</m> be a <m>C^2</m> function
-          with <m>H</m> its Hessian matrix. Let <m>u \in \RR^n</m> be
-          a critical point and let <m>H(u)</m> be the Hessian
-          evaluated at the point <m>u</m>. Then we have four cases.
+          Let <m>f: \RR^n \rightarrow \RR</m> be a <m>C^2</m> scalar
+          field with <m>H</m> its Hessian matrix. Let <m>u \in
+          \RR^n</m> be a critical point and let <m>H(u)</m> be the
+          Hessian evaluated at the point <m>u</m>. Then there are four
+          cases.
           <ul>
             <li>
               <p>
@@ -364,8 +369,11 @@
     <example>
       <statement>
         <p>
-          <m>f(x,y) = x^2 y^2 + y^2</m> is shown in <xref
-          ref="figure-3d-graph7">Figure</xref>.
+          <m>f(x,y) = x^2 y^2 + y^2</m> is shown in Figure <xref
+          ref="figure-3d-graph7" />.  I calculate the gradient to find
+          the potential extrema. Then I calculate the second partials
+          and the determinant of the Hessian matrix to classify the
+          extrema. 
           <md>
             <mrow>
               \frac{\del f}{\del x} \amp = 2xy^2 \amp \amp 
@@ -397,13 +405,13 @@
         </p>
         <p>
           At all the critical points <m>(a,0)</m>, the second
-          derivative test has <m>D=0</m>, which is inconclusive. We
-          have to investigate directly. We can see that <m>f(a,0) =
+          derivative test has <m>D=0</m>, which is inconclusive. I
+          have to investigate directly. I can see that <m>f(a,0) =
           0</m>. But <m>f(a,b)</m> for <m>b</m> any small non-zero
           nubmer takes the value <m>a^2 b^2 + b^2</m>, which is always
-          positive. Therefore, we can conclude that all the critical
-          points <m>(a,0)</m> are local minima. In <xref
-          ref="figure-3d-graph7">Figure</xref>, we can see that all
+          positive. Therefore, I can conclude that all the critical
+          points <m>(a,0)</m> are local minima. In Figure <xref
+          ref="figure-3d-graph7" />, I can see that all
           along the <m>y</m> axis the values stay at <m>0</m>, which
           is the lowest output of the function.
         </p>
@@ -438,8 +446,11 @@
     <example>
       <statement>
         <p>
-          <m>f(x,y) = x^2 + 2y^2 - 4x + 4y + 6</m> is shown in <xref
-          ref="figure-3d-graph8">Figure</xref>.
+          <m>f(x,y) = x^2 + 2y^2 - 4x + 4y + 6</m> is shown in Figure 
+          <xref ref="figure-3d-graph8" />.  I calculate the gradient
+          to find the potential extrema. Then I calculate the second
+          partials and the determinant of the Hessian matrix to
+          classify the extrema. 
           <md>
             <mrow>
               \frac{\del f}{\del x} \amp = 2x-4
@@ -500,7 +511,10 @@
       <statement>
         <p>
           <m>f(x,y) = \frac{8}{3} x^3 + 4y^3 - x^4 - y^4</m> is shown
-          in <xref ref="figure-3d-graph9">Figure</xref>
+          in Figure <xref ref="figure-3d-graph9" />.  I calculate the
+          gradient to find the potential extrema. Then I calculate the
+          second partials and the determinant of the Hessian matrix to
+          classify the extrema. 
           <md>
             <mrow>
               \frac{\del f}{\del x} \amp = 8x^2 - 4x^3 = 4x^2 (2-x)
@@ -543,23 +557,23 @@
         </p>
         <p>
           The point <m>(2,3)</m> is a local maximum, but the test is
-          inconclusive at all other points. As we can see in <xref
-          ref="figure-3d-graph9">Figure</xref>, there is a maximum
-          above <m>(2,3)</m>. At the other three critical points, we
-          can observe a momentary flattening of the graph, but we have
-          neither maxima, minima, nor saddle points. The zero Hessian
-          for these points makes sense; they are like the critical
-          point at <m>x=0</m> of the cubic <m>f(x) = x^3</m>, which
-          has a zero derivative, but no extremum.
+          inconclusive at all other points. As can be seen in Figure 
+          <xref ref="figure-3d-graph9" />, there is a maximum
+          above <m>(2,3)</m>. At the other three critical points, I
+          can observe a momentary flattening of the graph, but there
+          are neither maxima, minima, nor saddle points. The zero
+          Hessian for these points makes sense; they are like the
+          critical point at <m>x=0</m> of the cubic <m>f(x) = x^3</m>,
+          which has a zero derivative, but no extremum.
         </p>
       </statement>
     </example>
     <example xml:id="example-box-sphere">
       <statement>
         <p>
-          Let's try a more geometric optimization problem: what is the
-          largest rectangular prism you can fit in a sphere of radius
-          <m>r</m>? We'll assume that the prism is centrally located
+          I'll try a more geometric optimization problem: what is the
+          largest rectangular prism that can fit in a sphere of radius
+          <m>r</m>? I'll assume that the prism is centrally located
           in the sphere, which means that its shape is entirely
           determined by one of its vertices on the edge of the sphere.
           If that vertex is <m>(x,y,z)</m>, then the volume of the
@@ -588,7 +602,7 @@
           </md>
         </p>
         <p>
-          Then we can optimize the function <m>V(\theta, \phi)</m>.
+          Then I can optimize the function <m>V(\theta, \phi)</m>.
           <md>
             <mrow>
               \frac{\del V}{\del \phi} \amp = 4r^3 \sin (2\theta) (-
@@ -610,9 +624,9 @@
           </md>
         </p>
         <p>
-          We didn't do the calcluation, but it is reasonable to check
-          that the critical point represents a maximum. The area we
-          get is the area of cube of side length
+          I didn't do the calcluation, but it is reasonable to check
+          that the critical point represents a maximum. The resulting 
+          area is the area of cube of side length
           <m>\frac{2r}{\sqrt{3}}</m>, which seems, intuitively, like
           the right kind of length.
         </p>
@@ -622,11 +636,11 @@
   <subsection xml:id="subsection-global-extrema">
     <title>Global Extrema</title>
     <p>
-      The above analysis was all about local maxima and minima. We
+      The above analysis was all about local maxima and minima. I
       can also ask for global maxima and minima. Like the single
-      variable case, we do this by looking at all the local extrema as
+      variable case, I do this by looking at all the local extrema as
       well as the boundary. The maximum or minimum might be a
-      boundary point which is not a critical point. We do have an
+      boundary point which is not a critical point. There is an
       existence proposition, which relies on the topology of the
       domain.
     </p>
@@ -642,8 +656,7 @@
     </proposition>
     <p>
       In general, finding the maximum and minimum on the boundary can
-      be quite difficult. In the next section, we'll give another
-      technique for finding such maxima and minima.
+      be quite difficult. 
     </p>
   </subsection>
 </section>

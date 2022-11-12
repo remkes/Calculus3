@@ -3,10 +3,12 @@
   <subsection xml:id="subsection-multivariable-composition">
     <title>Multivariable Composition</title>
     <p>
-     We defined partial derivatives to measure rates of change in a
-     particular variable. We extended this to change in any unit
-     direction with directional derivatives. We can extend this even
-     further, but considering the change in a function as we move
+     I defined partial derivatives in <xref
+     ref="section-partial-derivatives" /> to measure rates of change
+     in a particular variable. I extended this in <xref
+     ref="section-directional-derivatives" /> to change in any unit
+     direction with directional derivatives. I can extend this even
+     further, but considering the change in a function which moves
      along a <em>parametric curve</em> in the domain.
     </p>
     <p>
@@ -18,7 +20,7 @@
       <m>\gamma</m> is <m>f(\gamma(t)) = f(x(t), y(t), z(t))</m>. The
       rate of change is <m>\frac{df}{dt}</m>. But now <m>f</m> is a
       composition, <m>f(\gamma(t))</m>, so this must be a chain rule
-      calculation. What is the chain rule when we have three (or
+      calculation. What is the chain rule when there are three (or
       more) components?.
     </p>
   </subsection>
@@ -59,11 +61,11 @@
       reflection, you could realize that this is really the only
       possibility. If <m>f</m> and <m>g</m> are both functions
       <m>\RR^3 \rightarrow \RR</m>, then the composition <m>f \circ
-      g</m> or <m>g \circ f</m> isn't even defined. The output of one
-      is a scalar, but the input needs to be a vector. The only
-      reasonable composition using the function we already know is to
+      g</m> or <m>g \circ f</m> isn't even defined. The output of the
+      first function is a scalar, but the input needs to be a vector.
+      The only reasonable composition with a scalar field is to
       compose with a parametric curce, since a parametric curve
-      outputs a vector. In Calculus IV, we will work with vector
+      outputs a vector. In Calculus IV, I will introduce  vector
       fields which could allow for other compositions, but for now,
       this is the only possibility.
     </p>
@@ -89,12 +91,11 @@
             </mrow>
           </md>
           The variables are now mixed, so I have to make replacements.
-          I repalce <m>x</m> and <m>y</m> with the matching components
-          of the parametric curve. This matches what we do with the
-          single variable chain rule: we differentiate then we replace
-          the variable. The single variable notation, with the
-          evaluation bar, it not typically used in multivariable
-          situations.
+          I replace  <m>x</m> and <m>y</m> with the matching
+          components of the parametric curve. This matches the single
+          variable chain rule: I differentiate then I replace the
+          variable. The single variable notation, with the evaluation
+          bar, is not typically used in multivariable situations.
           <md>
             <mrow>
               \amp = \left( 2 \frac{t^2}{4} (1-t^3) + 3(1 - t^3) \right)
@@ -121,10 +122,11 @@
           </me>
         </p>
         <p>
-          If we move along a curve <m>\gamma</m>, it is nice to know
-          how the potential energy changes. A helical path out of the
-          gravity well might be <m>\gamma(t) = (\sin t, \cos t,
-          t)</m>. We differentiate along this path using the chain
+          It would be  nice to know how the potential energy changes
+          while moving along a curve <m>\gamma</m>. For a particular
+          example, consider a helical path out of the
+          gravity well:  <m>\gamma(t) = (\sin t, \cos t,
+          t)</m>. I differentiate along this path using the chain
           rule.
           <md>
             <mrow>
@@ -149,8 +151,14 @@
           </md>
         </p>
         <p>
-          Notice that if we let <m>|\gamma(t)| = \sqrt{1 + t^2}</m> at
-          the start, we could have written <m>P(t) =
+          Along this helical path, the potential energy is increases.
+          The rate of increase, however, slows over time. This makes
+          sense for leaving a potential energy well: the first steps
+          are more difficult and later movement is not as difficult. 
+        </p>
+        <p>
+          Notice that if I let <m>|\gamma(t)| = \sqrt{1 + t^2}</m> at
+          the start, I could have written <m>P(t) =
           \frac{-GmM}{|\gamma(t)|} = \frac{-GmM}{\sqrt{1+t^2}}</m> and
           the <m>P^\prime(t) = \frac{GmMt}{\sqrt{(1+t^2)^3}}</m> could
           have been calculated directly. That would have been easier,

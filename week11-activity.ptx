@@ -158,7 +158,7 @@
               -\sin x \sin y  \amp = 0 
             </mrow>
           </md>
-          This is a complicated system. To make both terms vanish, we
+          This is a complicated system. To make both terms vanish, I
           have to use <m>x</m> and <m>y</m> as the zeros of sine or
           cosine in matching pairs. This gives two families of point.
           The first is 
@@ -259,7 +259,7 @@
               + 1)^2 
             </mrow>
           </md>
-          <m>D</m> will always be negative, regardless of where we
+          <m>D</m> will always be negative, regardless of where I
           evaluate it. Therefore, all three points are saddlepoints. 
         </p>
       </solution>
@@ -334,7 +334,7 @@
             </mrow>
           </md>
           The test is inconclusive for <m>(0,0)</m>. By looking at the
-          graph of the function, we could guess that there is a saddle
+          graph of the function, I could guess that there is a saddle
           point at the origin, but it is difficult to see this
           directly from the function. The Hessian determinant is
           negative for the other two critical points, so these are

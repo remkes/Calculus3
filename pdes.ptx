@@ -27,31 +27,32 @@
       </image>
     </figure>
     <p>
-      Now that we have defined partial derivatives, we can introduce
+      Now that I have defined partial derivatives, I can introduce
       what is possibly the most important setting for their use:
-      partial differential equations. We can start with two classic
-      examples. The first is diffusion of heat.
+      partial differential equations. I will start with two classic
+      examples. The first is diffusion of heat (though the same
+      principle apply to any kind of diffusion model). 
     </p>
     <p>
-      Let's say we have a 1-dimensional rod where length is measured
-      with the variable <m>x</m>. Heat can vary along the rod, so we
+      Assume there is a 1-dimensional rod where length is measured
+      with the variable <m>x</m>. Heat can vary along the rod, so I
       measure it by a function <m>u(x)</m>. However, this
-      distribution of heat can also change over time. Therefore, we
+      distribution of heat can also change over time. Therefore, I
       should measure the heat distribution both in terms of position
       <m>x</m> along the rod and time <m>t</m>, <m>u(x,t)</m>.
     </p>
     <p>
-      We need to consider several aspects of the situation to give a
-      full account of how heat will diffuse. First, let's look at the
-      mechanics of heat. We make the assumption that heat wants to
+      I need to consider several aspects of the situation to give a
+      full account of how heat will diffuse. First, I will look at the
+      mechanics of heat. I make the assumption that heat wants to
       equalize; with the absence of external addition of heat, it will
-      diffuse until it equals out everywhere. If addition, we assume
+      diffuse until it equals out everywhere. If addition, I assume
       that the greater the variance in heat between two adjacent
-      points on the rod, the faster the heat will diffuse. How do we
-      translate this assumptions into mathematics? We need to get a
+      points on the rod, the faster the heat will diffuse. How do I
+      translate this assumptions into mathematics? I need to get a
       measure of this variance in heat. The measure is local, since
-      heat only diffuses to points adjacent. So how do we meausre how
-      much local variance there is in heat?
+      heat only diffuses to points adjacent. So how do I measure 
+      the local variance in heat?
     </p>
     <p>
       Consider the heat picture at some fixed time <m>t_0</m>:
@@ -59,8 +60,8 @@
       determines diffusion, since nearby values can be higher or
       lower. It is also not the slope of this graph in <m>x</m> that
       determines the diffusion, since a straight line slope represents
-      and even flow of heat from one end to the other. We can think
-      of heat wanting to return to this even flow, this straight line:
+      and even flow of heat from one end to the other. Instead, 
+      heat wants to return to this even flow, this straight line:
       so it is the curvature of the graph that disrupts the straight
       line. Curvature or concavity is measured by the second
       derivative. Therefore <m>u_{xx}(x,t_0)</m> measures the
@@ -70,12 +71,11 @@
     </p>
     <p>
       Diffusion creates change: heat will leave or enter the point.
-      Change is measured by the time derivatives <m>u_t(x,t)</m>. So
-      convacity, the second space deriavitve, must be related to the
+      Change is measured by the time derivative <m>u_t(x,t)</m>. So
+      concavity, the second space deriavitve, must be related to the
       first time derivative. What is the relationship between these?
-      Let's assume the simpliest case for now and make the
-      relationship linear. That means there is a constant
-      <m>\alpha</m> such that
+      The simpliest relationship is a linear relationship. That means
+      there is a constant <m>\alpha</m> such that
       <me>
         \frac{\del u}{\del t} = \alpha \frac{\del^2 u}{\del x^2}
       </me>.
@@ -86,22 +86,22 @@
       equations.
     </p>
     <p>
-      The equation, however, isn't enough to solve the problem. We
+      The equation, however, isn't enough to solve the problem. I
       also need boundary conditions and initial conditions. The
-      boundary conditions tell us what happens at the end of the rod:
+      boundary conditions determine what happens at the end of the rod:
       <m>u(0,t)</m> and <m>u(l,t)</m>. In principle, these could be
-      anything functions of <m>t</m>. For now, let's assume they are
+      anything functions of <m>t</m>. For now, I will assume they are
       constant <m>u(0,t) = a</m> and <m>u(l,t) = b</m>.
     </p>
     <p>
-      We also need intial conditions. These tells us the starting
-      heat distribution at at particular time, say <m>t=0</m>, That is
-      <m>u(x,0) = f(x)</m>, a single variable function that tells us
-      the original situation.
+      I also need intial conditions. Initial conditions determine the
+      starting heat distribution at at particular time, say
+      <m>t=0</m>, That is <m>u(x,0) = f(x)</m>, a single variable
+      function that shows the original situation.
     </p>
     <p>
       All together, this information determines the physical system.
-      We can then try to find a function <m>u(x,t)</m> which matches
+      I can then try to find a function <m>u(x,t)</m> which matches
       the equation, the boundary conditions and the initial
       conditions. Such a task is often very difficult to do.
       However, if both boundary conditions are constant <m>0</m> and
@@ -120,15 +120,15 @@
     </p>
     <p>
       This example is archtypical of many partial differential
-      equations. We will almost always have a function which depends
+      equations. There will almost always be a function which depends
       on time as well as some other quantities. In physics, these
       other quantities are usually position. Then the equation is
       usually organized by taking a time derivative on one side and a
-      position derivative on the other. Then we posit a relationship
-      between the two two derivatives. In addition, boundary
-      conditions tell us what happens at the edges of our environment
-      and initial conditions give us a snapshot of the situation at a
-      fixed moment in time. Then we try to find a multi-variable
+      position derivative on the other. Then the equation encodes a
+      relationship between the two two derivatives. In addition,
+      boundary conditions determine what happens at the edges of our
+      environment and initial conditions describe  the situation at a
+      fixed moment in time. Finally, I try to find a multi-variable
       function that fits all the information.
     </p>
   </subsection>
@@ -136,7 +136,7 @@
     <title>The Wave Equation</title>
     <p>
       Another very familiar situation is a wave moving through an
-      elastic medium. We'll assume a 1-dimensional elastic medium
+      elastic medium. If there is a 1-dimensional elastic medium
       (think a wire or string), then <m>u(x,t)</m> measures the
       displacement of the medium at position <m>x</m> and time
       <m>t</m>. The physical motivation is similar to the heat
@@ -154,21 +154,37 @@
     <p>
       Again, there are boundary conditions and initial condition and,
       in general, the problem is very difficult to solve. However, if
-      we take the same situation as before, with constant zero
-      boundary conditions at <m>x=0</m> and <m>x=l</m> and initial
-      wave profile <m>f(x) = \sin \left( \frac{ \pi x}{l} \right)</m>,
-      then the solution is
+      I choose the same simplistic options as I did with the heat
+      equation, with constant zero boundary conditions at <m>x=0</m>
+      and <m>x=l</m> and initial wave profile <m>f(x) = \sin \left(
+      \frac{ \pi x}{l} \right)</m>, then the solution is
       <me>
         u(x,t) = \sin \left( \frac{\sqrt{\alpha} \pi t}{l} \right)
         \sin \left( \frac{\pi x}{l} \right)
       </me>.
     </p>
     <p>
-      So, instead of decay to equilibrium, we get an oscillating
+      So, instead of decay to equilibrium, there is an oscillating
       amplitude, resulting is a very simple standing wave on the wire
       or string. This is a very simple version: there are no higher
       harmonics and there is no friction which causes decay over
       time.
+    </p>
+    <p>
+      Without friction, the oscillations of the wave equation continue
+      forever while the heat diffusion in the heat equation quickly
+      decayed to equilibrium. The major difference between the two
+      equations is one of active versus passive response. In the heat
+      equation, the time derivative is a first derivative: the
+      velocity is determined by the physical arrangement. This is a
+      passive situation: some velocity is simply determined by the
+      arrangement. It fades away over time. In the wave equation, the
+      time derivative is a second derivative: the acceleration is
+      determined by the physical arrangmeent. This is an active
+      situation: the acceleration can increase the velociy of the
+      displacement. The result is propogation of waves, an active
+      process, and it will continue until otherwise damped by
+      friction. 
     </p>
   </subsection>
   <subsection xml:id="subsection-other-pdes">
@@ -184,7 +200,7 @@
       measures a wave function <m>\Psi(x,y,z,t)</m> in three
       dimensions and time. The symbol <m>\nabla</m> is a
       3-dimemsional differential operator which will be defined in
-      <xref ref="section-gradients" />;
+      <xref ref="subsection-gradient-extensions" />;
       for now, just know that it is a combination of position
       derivatives. <m>\hbar</m> is a constant, <m>\imath</m> is a
       number with <m>\imath^2 = -1</m>, <m>m</m> is mass and
