@@ -83,7 +83,7 @@
         Let <m>f(x,y)</m> be a differentiable function. Prove that if
         <m>\frac{\del f}{\del x}</m> and <m>\frac{\del f}{\del y}</m>
         are constant, then the graph of <m>f</m> must be a plane in
-        <m>\RR^3</m>.
+        <m>\RR^3</m>. (4)
       </p>
     </li>
     <li>
@@ -91,7 +91,7 @@
         Let <m>f(x,y)</m> be a differentiable function where 
         <m>\frac{\del f}{\del x} = g(y)</m> and <m>\frac{\del f}{\del
         y} = h(x)</m> for some single variable functions <m>g</m> and
-        <m>h</m>. What does this say about the function <m>f</m>? (6) 
+        <m>h</m>. What does this say about the function <m>f</m>? (4) 
       </p>
     </li>
   </ol></p>
