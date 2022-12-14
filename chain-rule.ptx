@@ -21,7 +21,7 @@
       rate of change is <m>\frac{df}{dt}</m>. But now <m>f</m> is a
       composition, <m>f(\gamma(t))</m>, so this must be a chain rule
       calculation. What is the chain rule when there are three (or
-      more) components?.
+      more) components?
     </p>
   </subsection>
   <subsection xml:id="subsection-chain-rule-statement">

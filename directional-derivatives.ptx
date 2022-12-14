@@ -128,7 +128,7 @@
       <statement>
         <p>
           Consider this function: <m>f(x,y) = \sin (x^2 + y^2)</m>,
-          shown in <xref ref="figure-3d-graph3">Figure</xref>. These
+          shown in <xref ref="figure-3d-graph3" />. These
           are circular sine waves, like riples on a pond which never
           decrease in amplitude. Here are some direction derivatives
           for this function. 

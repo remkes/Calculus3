@@ -53,9 +53,9 @@
   <subsection xml:id="subsection-finding-extrema">
     <title>Finding Extrema</title>
     <p>
-      A key obervation from Calculus I is that maxima and minima where
+      A key obervation from Calculus I is that maxima and minima were
       found when <m>f^\prime(x) = 0</m>. (Though <m>f^\prime =0</m>
-      didn't guarantee an exterme value, as in the example of <m>f(x)
+      didn't guarantee an extreme value, as in the example of <m>f(x)
       = x^3</m> at <m>x=0</m>).
     </p>
     <proposition>

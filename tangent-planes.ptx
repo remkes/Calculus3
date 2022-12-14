@@ -91,8 +91,8 @@
         <p>
           At the point <m>(x,y) = (1,1)</m>, the partial derivative
           values are <m>f_x(1,1) = \frac{-2}{9}</m> and <m>f_y(1,1) =
-          \frac{-2}{9}</m>. The normal is <m>\left( \frac{-2}{9},
-          \frac{-2}{9}, 1 \right)</m> and the point is <m>\left(1,1,
+          \frac{-2}{9}</m>. The normal is <m>\left( \frac{2}{9},
+          \frac{2}{9}, 1 \right)</m> and the point is <m>\left(1,1,
           \frac{1}{3} \right)</m>. The tangent plane is
           <md>
             <mrow>
@@ -116,7 +116,7 @@
           At the point <m>(x,y) = (-2,2)</m>, the partial derivative
           values are we have <m>f_x(-2,2) = \frac{4}{81}</m> and
           <m>f_y(-2,2) = \frac{-4}{81}</m>. The normal is <m>\left(
-          \frac{-4}{81}, \frac{4}{81}, 1 \right)</m> and the point is
+          \frac{4}{81}, \frac{-4}{81}, 1 \right)</m> and the point is
           <m>\left(-2,2, \frac{1}{9} \right)</m>. The tangent plane
           is
           <me>

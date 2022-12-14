@@ -341,12 +341,12 @@
       <m>\gamma(5)</m>, <m>s(8)</m> is the distance along the curve
       from <m>\gamma(0)</m> to <m>\gamma(8)</m> and so on. Since
       <m>s</m> depends on <m>t</m> outside the integral, I have to
-      choose a temporary variable for inside the integral; in
+      choose a temporary variable <m>u</m> inside the integral; in
       the integral, <m>t</m> is simply repalced with <m>u</m>.
     </p>
     <p>
       I want to use the arclength function to reparametrize curve.
-      The process has three steps.
+      The process, therefore, has three steps.
       <ol>
         <li>
           <p>
